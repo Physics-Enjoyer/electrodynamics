@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book_notes/Chapter1/1_3';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Formula Sheet" href="../../references/formula-sheet.html" />
     <link rel="prev" title="Section 1.2 Component form" href="1_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -158,6 +159,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Integral Calculus</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
 </ul>
 
     </div>
@@ -378,7 +383,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="integral-calculus">
 <h1>Integral Calculus<a class="headerlink" href="#integral-calculus" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary modules</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -397,12 +407,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
-Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
-</pre></div>
-</div>
-</div>
+</details>
 </div>
 <section id="line-surface-and-volume-integrals">
 <h2>Line, Surface, and Volume Integrals<a class="headerlink" href="#line-surface-and-volume-integrals" title="Permalink to this headline">#</a></h2>
@@ -414,11 +419,11 @@ Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) S
 \int_a^b \textbf{v}\cdot dl
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\(\textbf{v}\)</span> is a vector function and <span class="math notranslate nohighlight">\(d \textbf{l}\)</span> is an infinitesimal distance along a path.</p>
-<p><span class="math notranslate nohighlight">\(\textbf{dl}\)</span> is defined in 3D space as</p>
-<div class="math notranslate nohighlight">
-\[
+<p><span class="math notranslate nohighlight">\(\textbf{dl}\)</span> is defined in 3D space as <a class="reference internal" href="../../references/formula-sheet.html#equation-dl">(1)</a></p>
+<!--
+$$
 d\textbf{l} = dx\hat{\textbf{x}} + dy\hat{\textbf{y}} + dz\hat{\textbf{z}}
-\]</div>
+$$ -->
 <section id="closed-paths">
 <h4>Closed Paths<a class="headerlink" href="#closed-paths" title="Permalink to this headline">#</a></h4>
 <p>If the path is starts and ends at the same point then the integral is notated as</p>
@@ -433,6 +438,13 @@ d\textbf{l} = dx\hat{\textbf{x}} + dy\hat{\textbf{y}} + dz\hat{\textbf{z}}
 <section id="example-1-6">
 <h3>Example 1.6<a class="headerlink" href="#example-1-6" title="Permalink to this headline">#</a></h3>
 <p>Calculate the line integral of the function <span class="math notranslate nohighlight">\(v = y^2 \hat{x} + 2 x (y+y)\hat{y}\)</span> from the point <span class="math notranslate nohighlight">\(\textbf{a}=(1,1,0)\)</span> to the point <span class="math notranslate nohighlight">\(\textbf{b} = (2,2,0)\)</span> along paths (1) and (2) in the figure below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Finish this example</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="surface-integrals">
 <h3>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">#</a></h3>
@@ -461,11 +473,11 @@ da = dxdz\hat{\bf{y}}
 \[
 \int_V Td\tau
 \]</div>
-<p>Here <span class="math notranslate nohighlight">\(T\)</span> is a <em>scaler</em> function and remember that volume is a product of all three sides of a shape so in Cartesian coordinates</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Here <span class="math notranslate nohighlight">\(T\)</span> is a <em>scaler</em> function and remember that volume is a product of all three sides of a shape so in Cartesian coordinates <span class="math notranslate nohighlight">\(d\tau = \)</span><a class="reference internal" href="../../references/formula-sheet.html#equation-dtau">(2)</a></p>
+<!--
+$$
 d\tau = dxdydz
-\]</div>
+$$ -->
 <p>We may encounter volume integrals of <em>vector</em> functions in which case the volume integral is defined as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -537,6 +549,15 @@ d\tau = dxdydz
         <p class="prev-next-title">Section 1.2 Component form</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../../references/formula-sheet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formula Sheet</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -592,7 +613,7 @@ By Physics Enjoyer
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

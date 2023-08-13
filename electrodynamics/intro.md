@@ -1,5 +1,6 @@
 # Classical Electrodynamics
 
+<!--- TODO: add references section and include a formula sheet -->
 Here are my notes for undergraduate classical electrodynamics. This course uses as its primary textbook Introduction to Electrodynamics (*Fourth Edition*) by David J. Griffiths and Engineering Electromagnetics (*Third Edition*) by Nathan Ida.
 
 As with all my notes these will be converted from hand written notes into a format suitable for computational work using Jupyter Notebooks. This is one of the first classes I am taking while trying to keep my notes updated in Jupyter Notebooks so I'm still figuring out much of how I want to write and convert these notes. 
