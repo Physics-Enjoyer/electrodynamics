@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 1 &#8212; Electrodynamics</title>
+    <title>Lecture 1 (8/15/2023) &#8212; Electrodynamics</title>
   
   
   
@@ -60,9 +60,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lecture_notes/lecture1';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Formula Sheet" href="../references/formula-sheet.html" />
+    <link rel="prev" title="Integral Calculus" href="../book_notes/Chapter1/1_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -155,6 +160,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../book_notes/Chapter1/1_3.html">Integral Calculus</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 1 (8/15/2023)</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -329,7 +340,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -340,11 +353,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 1</h1>
+    <h1>Lecture 1 (8/15/2023)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture 1 (8/15/2023)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#math-review">Math Review</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-s-equations">Maxwell’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-scaler-quantities">Vector and Scaler Quantities</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -354,8 +384,116 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-1">
-<h1>Lecture 1<a class="headerlink" href="#lecture-1" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-1-8-15-2023">
+<h1>Lecture 1 (8/15/2023)<a class="headerlink" href="#lecture-1-8-15-2023" title="Permalink to this headline">#</a></h1>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary modules</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span>
+<span class="c1">#set plot resolution</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="c1"># Gets rid of transparent border around images</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<span class="c1"># set default colormap</span>
+<span class="n">default_cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">default_cmap</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="math-review">
+<h1>Math Review<a class="headerlink" href="#math-review" title="Permalink to this headline">#</a></h1>
+<p>Here we will review some of the math that is needed in this course. Specifically we will review some vector analysis because Maxwell’s Equations are all about vector analysis.</p>
+<section id="maxwell-s-equations">
+<h2>Maxwell’s Equations<a class="headerlink" href="#maxwell-s-equations" title="Permalink to this headline">#</a></h2>
+<p>Before we get to the actual math review lets look at why we need it. E&amp;M is all about Maxwell’s Equations and Maxwell’s Equations come in two different “flavors”. The differential form and the Integral Form. Both are shown below.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 sd-border-1 docutils">
+<p>Maxwell’s Equations</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>Differential Form</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>Integral Form</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>Gauss’s Law</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{D} = \rho_v\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\oint_S \vec{D}\cdot d\vec{s} = Q\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>No Magnetic Monopoles</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{B} = 0\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\oint_S \vec{B} \cdot d\vec{s} = 0\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>Faraday’s Law</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\oint_C \vec{E}\cdot d\vec{l} = -\frac{d \phi}{dt}\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<p>Ampere’s Law</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{H} = \vec{J} - \frac{\partial\vec{D}}{\partial t}\]</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 sd-border-1 docutils">
+<div class="math notranslate nohighlight">
+\[\oint_S \vec{H}\cdot d\vec{l} = \oint_S(\vec{J}+\frac{\partial\vec{D}}{\partial t})\cdot d\vec{s}\]</div>
+</div>
+</div>
+</div>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">#</a></h3>
+<p>From these equations the field equations can be derived the different fields in electrostatics. The electric fi</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="vector-and-scaler-quantities">
+<h1>Vector and Scaler Quantities<a class="headerlink" href="#vector-and-scaler-quantities" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>A <strong>scaler</strong> is just a number. No indices (or index of 0)</p></li>
+<li><p>A <strong>vector</strong> is a list of numbers and thus has one index <span class="math notranslate nohighlight">\(A_i\)</span></p></li>
+<li><p>A <strong>tensor</strong> is an array of numbers, a generalization of a vector, and can have 2 or more indices <span class="math notranslate nohighlight">\(A_{i,j}\)</span></p></li>
+</ul>
+<p>A vector is a mathematical object that has both a magnitude and a direction. It will be notated as <span class="math notranslate nohighlight">\(\vec{A}\)</span>. The magnitude of the vector or the size of the vector is notated as <span class="math notranslate nohighlight">\(|\vec{A}|\)</span> or simply <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>Unit vectors</strong> are unitless vectors that have a magnitude of 1 and point in the direction of the vector. <span class="math notranslate nohighlight">\(\hat{A} = \frac{\vec{A}}{|\vec{A}|}\)</span>. Note that they are dimensionless and it just points in the direction of the vector <span class="math notranslate nohighlight">\(\vec{A}\)</span>.</p>
+<p>Now using unit vectors we can notate a vector with its magnitude <span class="math notranslate nohighlight">\(A\)</span> and direction <span class="math notranslate nohighlight">\(\hat{A}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\vec{A} = A\hat{A}\)</span></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -389,6 +527,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../book_notes/Chapter1/1_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Integral Calculus</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../references/formula-sheet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formula Sheet</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -398,6 +554,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture 1 (8/15/2023)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#math-review">Math Review</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-s-equations">Maxwell’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-scaler-quantities">Vector and Scaler Quantities</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

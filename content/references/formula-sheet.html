@@ -63,9 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/references/formula-sheet';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Integral Calculus" href="../book_notes/Chapter1/1_3.html" />
+    <link rel="prev" title="Lecture 1 (8/15/2023)" href="../lecture_notes/lecture1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,6 +159,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../book_notes/Chapter1/1_3.html">Integral Calculus</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="current nav bd-sidenav">
@@ -400,16 +407,31 @@ document.write(`
 </section>
 <section id="divergence">
 <h4>Divergence<a class="headerlink" href="#divergence" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight" id="equation-cart-div">
+<span class="eqno">(4)<a class="headerlink" href="#equation-cart-div" title="Permalink to this equation">#</a></span>\[\nabla \cdot \textbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\]</div>
 </section>
 <section id="curl">
 <h4>Curl<a class="headerlink" href="#curl" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight" id="equation-cart-curl">
+<span class="eqno">(5)<a class="headerlink" href="#equation-cart-curl" title="Permalink to this equation">#</a></span>\[\nabla \times \textbf{v} = (\frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z})\hat{\textbf{x}} + (\frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x})\hat{\textbf{y}} + (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y})\hat{\textbf{z}}\]</div>
+<div class="math notranslate nohighlight" id="equation-cart-curl-mat">
+<span class="eqno">(6)<a class="headerlink" href="#equation-cart-curl-mat" title="Permalink to this equation">#</a></span>\[\begin{split}
+\nabla \times \textbf{v} = \begin{vmatrix}
+\hat{\textbf{x}} &amp; \hat{\textbf{y}} &amp; \hat{\textbf{z}} \\
+\frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y} &amp; \frac{\partial v}{\partial z} \\
+v_x &amp; v_y &amp; v_z \\
+\end{vmatrix}\end{split}\]</div>
 </section>
 <section id="laplacian">
 <h4>Laplacian<a class="headerlink" href="#laplacian" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight" id="equation-cart-laplacian">
+<span class="eqno">(7)<a class="headerlink" href="#equation-cart-laplacian" title="Permalink to this equation">#</a></span>\[\nabla ^2 T = \nabla \cdot (\nabla T) = \frac{\partial^2T}{\partial x} + \frac{\partial^2T}{\partial y} + \frac{\partial^2T}{\partial z}\]</div>
 </section>
 </section>
 <section id="spherical-coordinates">
 <h3>Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight" id="equation-sphere-dl">
+<span class="eqno">(8)<a class="headerlink" href="#equation-sphere-dl" title="Permalink to this equation">#</a></span>\[dl = dr\hat{\textbf{r}} + rd\theta \hat{\bm{\theta}} + r \sin{\bm{\theta}} d\phi \hat{\bm{\phi}}\]</div>
 <section id="id1">
 <h4>Gradient<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 </section>
@@ -421,6 +443,7 @@ document.write(`
 </section>
 <section id="id4">
 <h4>Laplacian<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>$$</p>
 </section>
 </section>
 </section>
@@ -458,12 +481,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../book_notes/Chapter1/1_3.html"
+       href="../lecture_notes/lecture1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Integral Calculus</p>
+        <p class="prev-next-title">Lecture 1 (8/15/2023)</p>
       </div>
     </a>
 </div></div>
