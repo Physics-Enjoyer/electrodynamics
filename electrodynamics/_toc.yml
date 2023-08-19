@@ -10,14 +10,14 @@ parts:
     chapters:
     - file: content/book_notes/Chapter1/1_Chapter1
       sections:
-      - file: content/book_notes/Chapter1/1_1
-      - file: content/book_notes/Chapter1/1_2
-      - file: content/book_notes/Chapter1/1_3
-      # - glob: content/book_notes/Chapter1/*
+      # - file: content/book_notes/Chapter1/1_1
+      # - file: content/book_notes/Chapter1/1_2
+      # - file: content/book_notes/Chapter1/1_3
+      - glob: content/book_notes/Chapter1/*
 
-  # - caption: Lecture Notes
-  #   chapters: 
-  #   - glob: content/lectures_notes/*
+  - caption: Lecture Notes
+    chapters: 
+    - file: content/lecture_notes/lecture1
 
   - caption: References
     chapters: 
