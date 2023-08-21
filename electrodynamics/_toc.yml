@@ -18,6 +18,7 @@ parts:
   - caption: Lecture Notes
     chapters: 
     - file: content/lecture_notes/lecture1
+    - file: content/lecture_notes/lecture2
 
   - caption: References
     chapters: 
