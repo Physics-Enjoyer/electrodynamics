@@ -6,14 +6,53 @@ format: jb-book
 root: intro
 parts:
 
-  - caption: Book Noes
+  - caption: Book Notes
     chapters:
-    - file: content/book_notes/Chapter1/1_Chapter1
+
+    - file: content/book/chapter01/chapter-intro
       sections:
-      # - file: content/book_notes/Chapter1/1_1
-      # - file: content/book_notes/Chapter1/1_2
-      # - file: content/book_notes/Chapter1/1_3
-      - glob: content/book_notes/Chapter1/*
+      - glob: content/book/chapter01/*
+
+    - file: content/book/chapter02/chapter-intro
+      sections:
+      - glob: content/book/chapter02/*
+
+    - file: content/book/chapter03/chapter-intro
+      sections:
+      - glob: content/book/chapter03/*
+
+    - file: content/book/chapter04/chapter-intro
+      sections:
+      - glob: content/book/chapter04/*
+
+    - file: content/book/chapter05/chapter-intro
+      sections:
+      - glob: content/book/chapter05/*
+
+    - file: content/book/chapter06/chapter-intro
+      sections:
+      - glob: content/book/chapter06/*
+
+    - file: content/book/chapter07/chapter-intro
+      sections:
+      - glob: content/book/chapter07/*
+
+    - file: content/book/chapter08/chapter-intro
+      sections:
+      - glob: content/book/chapter08/*
+
+    - file: content/book/chapter09/chapter-intro
+      sections:
+      - glob: content/book/chapter09/*
+
+    - file: content/book/chapter10/chapter-intro
+      sections:
+      - glob: content/book/chapter10/*
+
+    - file: content/book/chapter11/chapter-intro
+      sections:
+      - glob: content/book/chapter11/*
+
 
   - caption: Lecture Notes
     chapters: 

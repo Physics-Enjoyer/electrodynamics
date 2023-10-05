@@ -5,9 +5,8 @@ Here are my notes for undergraduate classical electrodynamics. This course uses 
 
 As with all my notes these will be converted from hand written notes into a format suitable for computational work using Jupyter Notebooks. This is one of the first classes I am taking while trying to keep my notes updated in Jupyter Notebooks so I'm still figuring out much of how I want to write and convert these notes. 
 
-## Format of these notes
+In addition to my class notes there is also a web and mobile friendly version of David J. Griffiths Introduction to Electrodynamics Fourth Edition. This is a nearly complete copy of the notes by [PeppyHare](https://github.com/PeppyHare/r) on GitHub but instead of using [Hugo](https://gohugo.io/) I am using [Jupyter Book](https://jupyterbook.org). Some of the elements of the original notes were not working well on PeppyHare's site so I am simply updating some of the formatting. There are still some issues with the web version of the book that I need to figure out but its mostly complete.
 
-Generally when I start taking a class I begin by reading the chapters and take notes. Then attend lecture and take notes. So there are two main sections here. One for book notes and one for lecture notes. I would like to combine them into one section for notes but thats probably going to come later on. Usually after the first few weeks of class I forego taking notes on the book and just read or skim it and then mostly follow the lectures as in my experience tests and quizzes have generally been on material that is covered in class and many parts of books are skipped so if the Book Notes section is incomplete thats probably why. 
 
 ## Before we begin
 
