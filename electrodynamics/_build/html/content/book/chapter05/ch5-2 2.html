@@ -1,0 +1,733 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5.2: The Biot-Savart Law &#8212; Electrodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter05/ch5-2';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="5.3: The Divergence and Curl of B" href="ch5-3.html" />
+    <link rel="prev" title="5.1: The Lorentz Force Law" href="ch5-1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrodynamics</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Classical Electrodynamics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-1.html">2.1: The Electric Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-3.html">2.3: Electric Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-5.html">2.5: Conductors</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 5</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ch5-1.html">5.1: The Lorentz Force Law</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.2: The Biot-Savart Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch5-4.html">5.4: Magnetic Vector Potential</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics/issues/new?title=Issue%20on%20page%20%2Fcontent/book/chapter05/ch5-2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/book/chapter05/ch5-2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5.2: The Biot-Savart Law</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steady-currents">5.2.1: Steady Currents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnetic-field-of-a-steady-current">5.2.2: The Magnetic Field of a Steady Current</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-biot-savart-law">
+<h1>5.2: The Biot-Savart Law<a class="headerlink" href="#the-biot-savart-law" title="Permalink to this headline">#</a></h1>
+<section id="steady-currents">
+<h2>5.2.1: Steady Currents<a class="headerlink" href="#steady-currents" title="Permalink to this headline">#</a></h2>
+<p>Stationary charges produce electric fields that are constant in time; hence the term <strong>electrostatics</strong>. Steady currents produce magnetic fields that are constant in time; the theory of steady currents is called <strong>magnetostatics</strong>.</p>
+<p>By “<strong>steady current</strong>” I mean a continuous flow that has been going on forever, without change and without piling up anywhere (some people call them “stationary currents”; to my ear, that’s a contradiction in terms). Formally, electro/magnetostatics is the regime</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \rho}{\partial t} = 0, \quad \pdv{\vec{J}}{t} = 0 \tag{5.32}
+\]</div>
+<p>at all places and all times. Of course, there’s no such thing in practice as a truly steady current, any more than there is a <em>truly</em> stationary charge. In this sense, both electrostatics and magnetostatics describe artificial worlds that exist only in textbooks. However, they represent suitable approximations as long as the actual fluctuations are remote, or gradual - in fact, for most purposes magnetostatics applies very well to household currents, which alternate 120 times per second!</p>
+<p>Notice that a moving point charge cannot possibly constitute a steady current. If it’s here one instant, it’s gone the next. This may seem like a minor thing to you, but it’s a major headache for me. I developed each topic in electrostatics by starting out with the simple case of a point charge at rest; then I generalized to an arbitrary charge distribution by invoking the superposition principle. This approach is not open to us in magnetostatics because a moving point charge does not produce a static field in the first place. We are forced to deal with extended current distributions right from the start, and, as a result, the arguments are bound to be more cumbersome.
+When a steady current flows in a wire, its magnitude I must be the same all along the line; otherwise, charge would be piling up somewhere, and it wouldn’t be a steady current. More generally, since <span class="math notranslate nohighlight">\( \partial \rho / \partial t = 0 \)</span> in magnetostatics, the continuity equation (5.29) becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla  \vec{J} = 0 \tag{5.33}
+\]</div>
+</section>
+<section id="the-magnetic-field-of-a-steady-current">
+<h2>5.2.2: The Magnetic Field of a Steady Current<a class="headerlink" href="#the-magnetic-field-of-a-steady-current" title="Permalink to this headline">#</a></h2>
+<p>The magnetic field of a steady line current is given by the <strong>Biot-Savart law</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{I} \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} l' = \frac{ \mu_0}{4 \pi } I \int \frac{\mathrm{d} \vec{l'} \times \hat{\Delta r }}{\Delta r  ^2} \tag{5.34} 
+\]</div>
+<p>The integration is along the current path, in the direction of the flow; <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l'} \)</span> is an element of length along the wire, and <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span>, as always, is the vector from the source to the point <strong>r</strong> (Fig 5.17). The constant <span class="math notranslate nohighlight">\( \mu_0 \)</span> is called the <strong>permeability of free space</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mu_0 = 4 \pi \times 10^{-7} \text{N} / \text{A}^2 \tag{5.35}
+\]</div>
+<p>This is an exact number, not an empirical constant. It serves to <em>define</em> the ampereThese units are such that <strong>B</strong> itself comes out in newtons per ampere-meter (as required by the Lorentz force law), or <strong>teslas</strong> (T):</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{T} = 1 \text{N} / (\text{A} \cdot \text{m}) \tag{5.36}
+\]</div>
+<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+<p>As the starting point for magnetostatics, the Biot-Savart law plays a role analogous to Coulomb’s law in electrostatics. Indeed, the <span class="math notranslate nohighlight">\( 1/ \Delta r  ^2 \)</span> dependence is common to both laws</p>
+<section id="example-5-5">
+<h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+“Q”</label><div class="sd-tab-content docutils">
+<p>Find the magnetic field a distance <em>s</em> from a long straight wire carrying a steady current <em>I</em> (Fig 5.18).</p>
+<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+“A”</label><div class="sd-tab-content docutils">
+<p>In the diagram, <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l'} \times \Delta r  \)</span> points out of the page, and has the magnitude</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} l' \sin \alpha = \mathrm{d} l' \cos \theta
+\]</div>
+<p>Also, <span class="math notranslate nohighlight">\( l' = s \tan \theta \)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} l' = \frac{s}{ \cos ^2 \theta} \mathrm{d} \theta
+\]</div>
+<p>and <span class="math notranslate nohighlight">\( s = \Delta r  \cos \theta \)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\Delta r ^2} = \frac{\cos ^2 \theta}{s^2} 
+\]</div>
+<p>The Biot-Savart law gives the magnetic field as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+B &amp; = \frac{\mu_0 I}{4 \pi} \int _{\theta_1}^{\theta_2} \left( \frac{\cos ^2 \theta}{s^2}  \right) \left( \frac{s}{\cos ^2 \theta} \right) \cos \theta \mathrm{d} \theta \\
+&amp; = \frac{\mu_0}{4 \pi s} \int _{\theta_1}^{\theta_2} \cos \theta \mathrm{d} \theta \\
+&amp; = \frac{\mu_0 I}{4 \pi s} (\sin \theta_2 - \sin \theta_1) \tag{5.37}
+\end{aligned}
+\end{split}\]</div>
+<p>That is the field of any straight segment of wire, in terms of the initial and final angles <span class="math notranslate nohighlight">\( \theta_1 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 \)</span> (Fig 5.19). Of course, a finite segment by itself could never support a steady current (where would the charge go when it got to the end?), but it might be a piece of some closed circuit, and <span class="math notranslate nohighlight">\( \eqref{5.37} \)</span> would then represent its contribution to the total field. In the case of an infinite wire, <span class="math notranslate nohighlight">\( \theta_1 = - \pi / 2 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 = \pi / 2 \)</span> so we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+B = \frac{\mu_0 I}{2 \pi s} \tag{5.38}
+\]</div>
+<p>Notice that the field is inversely proportional to the distance from the wire - just like the electric field of an infinite line charge. In the region below the wire, <strong>B</strong> points into the page, and in general, it “circles around” the wire, in accordance with the right-hand rule</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B} = \frac{\mu_0 I}{2 \pi s} \hat{\phi} \tag{5.39}
+\]</div>
+<p>As an application, let’s find the force of attraction between two long, parallel wires a distance <em>d</em> apart, carrying currents <span class="math notranslate nohighlight">\( I_1 \)</span> and <span class="math notranslate nohighlight">\( I_2 \)</span> (Fig 5.20). The field at (2) due to (1) is</p>
+<div class="math notranslate nohighlight">
+\[
+B = \frac{\mu_0 I_1}{2 \pi d}
+\]</div>
+<p>and it points into the page. The Lorentz force law (in the form appropriate to line currents) predicts a force directed upwards (1), of magnitude</p>
+<div class="math notranslate nohighlight">
+\[
+F = I_2 \left( \frac{\mu_0 I_1}{2 \pi d}  \right) \int \mathrm{d} l
+\]</div>
+<p>The total force, not surprisingly, is infinite, but the force per unit length is</p>
+<div class="math notranslate nohighlight">
+\[
+f = \frac{ \mu_0}{2 \pi } \frac{I_1 I_2}{d} \tag{5.40}
+\]</div>
+<p>If the currents are antiparallel (one up, one down), the force is repulsive - consistent again with the qualitative observations of Sect 5.1.1.</p>
+<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+</div>
+</div>
+</section>
+<section id="example-5-6">
+<h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+“Q”</label><div class="sd-tab-content docutils">
+<p>Find the magnetic field a distance z above the center of a circular loop of radius <em>R</em>, which carries a steady current <em>I</em> (Fig 5.21)</p>
+<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+“A”</label><div class="sd-tab-content docutils">
+<p>The field <span class="math notranslate nohighlight">\( \mathrm{d} \vec{B} \)</span> attributable to the segment <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l'} \)</span> points as shown. As we integrate <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l'} \)</span>  around the loop, <span class="math notranslate nohighlight">\( \mathrm{d} \vec{B} \)</span> sweeps out a cone. The horizontal components cancel, and the vertical components combine, to give</p>
+<div class="math notranslate nohighlight">
+\[
+B(z) = \frac{\mu_0 }{4 \pi} I \int \frac{\mathrm{d} l'}{\Delta r  ^2} \cos \theta
+\]</div>
+<p>(Notice that dl’ and <span class="math notranslate nohighlight">\( \Delta r  \)</span> are perpendicular, in this case; the factor of <span class="math notranslate nohighlight">\( \cos \theta \)</span> projects out the vertical component.) Now, <span class="math notranslate nohighlight">\( \cos \theta \)</span> and <span class="math notranslate nohighlight">\( \Delta r  ^2 \)</span> are constants, and <span class="math notranslate nohighlight">\( \int dl' \)</span> is simply the circumference <span class="math notranslate nohighlight">\( 2 \pi R \)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+B(z) = \frac{\mu_0 I}{4 \pi} \left( \frac{\cos \theta}{\Delta r  ^2} \right) 2 \pi R = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2) ^{3/2}}  \tag{5.41}
+\]</div>
+</div>
+</div>
+<p>For surface and volume currents, the Biot-Savart law becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B}(r) = \frac{\mu_0}{4 \pi } \int \frac{\vec{K}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} a'
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' \tag{5.42}
+\]</div>
+<p>respectively. You might be tempted to write down the corresponding formula for a moving point charge, using the “dictionary”</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B}(r) = \frac{\mu_0}{4 \pi} \frac{q \vec{v} \times \hat{\Delta r }}{\Delta r  ^2} 
+\]</div>
+<p>but this is simply <em>wrong</em>. As I mentioned earlier, a point charge does not constitute a steady current, and the Biot-Savart law, which only holds for steady currents, does <em>not</em> correctly determine its field.</p>
+<p>The superposition principle applies to magnetic fields just as it does to electric firlds: if you have a <em>collection</em> of source currents, the net field is the (vector) sum of the fields due to each of them taken separately.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/book/chapter05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch5-1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5.1: The Lorentz Force Law</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ch5-3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5.3: The Divergence and Curl of B</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steady-currents">5.2.1: Steady Currents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnetic-field-of-a-steady-current">5.2.2: The Magnetic Field of a Steady Current</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Physics Enjoyer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
