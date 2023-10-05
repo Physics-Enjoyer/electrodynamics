@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.2: The Field of a Polarized Object &#8212; Electrodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter04/ch4-2';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.3: The Electric Displacement" href="ch4-3.html" />
+    <link rel="prev" title="4.1: Polarization" href="ch4-1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrodynamics</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Classical Electrodynamics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-1.html">2.1: The Electric Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-3.html">2.3: Electric Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-5.html">2.5: Conductors</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 4</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ch4-1.html">4.1: Polarization</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2: The Field of a Polarized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch4-3.html">4.3: The Electric Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch4-4.html">4.4: Linear Dielectrics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics/issues/new?title=Issue%20on%20page%20%2Fcontent/book/chapter04/ch4-2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/book/chapter04/ch4-2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.2: The Field of a Polarized Object</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-charges">4.2.1: Bound Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-2">Example 4.2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-bound-charges">4.2.2: Physical Interpretation of Bound Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-3">Example 4.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-field-inside-a-dielectric">4.2.3: The Field Inside a Dielectric</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-field-of-a-polarized-object">
+<h1>4.2: The Field of a Polarized Object<a class="headerlink" href="#the-field-of-a-polarized-object" title="Permalink to this headline">#</a></h1>
+<section id="bound-charges">
+<h2>4.2.1: Bound Charges<a class="headerlink" href="#bound-charges" title="Permalink to this headline">#</a></h2>
+<p>Suppose we have a piece of polarized material - that is, an object containing a lot of microscopic dipoles lined up. The dipole moment per unit volume <strong>P</strong> is given. <em>Question</em>: What is the field produced by this object (not the field that may have caused the polarization, but the field the polarization itself causes)? Well, we know what the field of an individual dipole looks like, so why not chop the material up into infinitesimal dipoles and integrate to get the total? As usual, it’s easier to work with the potential. For a single dipole <strong>p</strong> (Eq. 3.99)</p>
+<div class="math notranslate nohighlight">
+\[
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{\Delta r }}{\Delta r  ^2} \tag{4.8}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( \vec{\Delta r } \)</span> is the vector from the dipole to the point at which we are evaluating the potential (Fig 4.8). In the present context, we have a dipole moment <span class="math notranslate nohighlight">\( \vec{p} = \vec{P} \mathrm{d} \tau' \)</span> in each volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau' \)</span>, so the total potential is</p>
+<div class="math notranslate nohighlight">
+\[
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int_{V} \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau'
+\]</div>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" />
+That does it, in principle. But a little sleight of hand casts this integral into a much more illuminating form. Observing that</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla  ' \left( \frac{1}{\Delta r } \right) = \frac{\hat{\Delta r }}{\Delta r  ^2} 
+\]</div>
+<p>where the differentiation is with respect to the <em>source</em> coordinates (r’), we have</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{1}{4 \pi \epsilon_0} \int _V \vec{P} \cdot \nabla  ' \left( \frac{1}{\Delta r } \right) \mathrm{d} \tau'
+\]</div>
+<p>Peeling the <span class="math notranslate nohighlight">\( \nabla  \)</span> leftwards with integration by parts, we have</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{1}{4 \pi \epsilon_0} \left[ \int _V \nabla ' \cdot \left( \frac{\vec{P}}{\Delta r }  \right) \mathrm{d} \tau' - \int _V \frac{1}{\Delta r } ( \nabla ' \cdot \vec{P} ) \mathrm{d} \tau' \right]
+\]</div>
+<p>The left-hand integral is a volume integral of a divergence, so with Gauss’s law</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{1}{4 \pi \epsilon_0 } \oint _S \frac{1}{\Delta r  } \vec{P} \cdot \mathrm{d} \vec{a'} - \frac{1}{4 \pi \epsilon_0} \int _V \frac{1}{\Delta r } ( \nabla ' \cdot \vec{P} ) \mathrm{d} \tau' \tag{4.10}
+\]</div>
+<p>The first term looks like the potential of a surface charge</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_b \equiv \vec{P} \cdot \hat{n} \tag{4.11}
+\]</div>
+<p>while the second term looks like the potential of a volume charge</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_b \equiv - \nabla \cdot  \vec{P} \tag{4.12}
+\]</div>
+<p>With these definitions, <span class="math notranslate nohighlight">\( \eqref{4.10} \)</span> becomes</p>
+<div class="math notranslate nohighlight">
+\[
+V(\vec{r} = \frac{1}{4 \pi \epsilon_0} \oint_S \frac{\sigma_b}{\Delta r } \mathrm{d} a' + \frac{1}{4 \pi \epsilon_0} \int_V \frac{\rho_b}{\Delta r } \mathrm{d} \tau' \tag{4.13}
+\]</div>
+<p>What this means is that the potential (and hence also the field) of a polarized object is the same as that produced by a volume charge density <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a surface charge density <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>. Instead of integrating the contributions of all the infinitesimal dipoles, we could just find those <strong>bound charges</strong>, and then calculate the fields they produce, in the same way we calculate the field of any other volume and surface charges.</p>
+<section id="example-4-2">
+<h3>Example 4.2<a class="headerlink" href="#example-4-2" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+“Q”</label><div class="sd-tab-content docutils">
+<p>Find the electric field produced by a uniformly polarized sphere of radius R</p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+“A”</label><div class="sd-tab-content docutils">
+<p>We may as well choose the z axis to coincide with the direction of polarization (Fig 4.9). The volume bound charge density <span class="math notranslate nohighlight">\( \rho_b \)</span> is zero, since <span class="math notranslate nohighlight">\( \vec{P} \)</span> is uniform. The surface bound charge density is then</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_b = \vec{P} \cdot \hat{n} = P \cos \theta
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( \theta \)</span> is the usual spherical coordinate. What we want, then is the field produced by a charge density <span class="math notranslate nohighlight">\( P \cos \theta \)</span>  plastered over the surface of a sphere. We happen to have already computed that potential in Exercise 3.9:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+V(r, \theta) = \begin{cases}
+\frac{P}{3 \epsilon_0} r \cos \theta, &amp; \qquad \text{ for } r \leq R \\
+\frac{P}{3 \epsilon_0} \frac{R^3}{r^2} \cos \theta, &amp; \qquad \text{ for } r \geq R
+\end{cases}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\( r \cos \theta = z \)</span>, the field inside the sphere is <em>uniform</em>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = - \nabla  V = - \frac{P}{3 \epsilon_0} \hat{z} = - \frac{1}{3 \epsilon_0} \vec{P} , \quad \text{ for } r &lt; R \tag{4.14}
+\]</div>
+<p>This is a pretty remarkable result, and will be very useful in what follows. Outside the sphere the potential is the same as that of a perfect dipole at the origin</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} , \quad \text{ for } r \geq R \tag{4.15}
+\]</div>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" />
+whose dipole moment is, not surprisingly, equal to the total dipole moment of the sphere:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{p} = \frac{4}{3} \pi R^3 \vec{P} \tag{4.16}
+\]</div>
+<p>The field of the uniformly polarized sphere is shown in Fig 4.10.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="physical-interpretation-of-bound-charges">
+<h2>4.2.2: Physical Interpretation of Bound Charges<a class="headerlink" href="#physical-interpretation-of-bound-charges" title="Permalink to this headline">#</a></h2>
+<p>In the last section we found that the field of a polarized object is identical to the field that would be produced by a certain distribution of “bound charges,” <span class="math notranslate nohighlight">\( \sigma_b \)</span> and <span class="math notranslate nohighlight">\( \rho_b \)</span>. But this conclusion emerged in the course of abstract manipulations on the integral in Eq. 4.9, and left us with no clue as to the physical meaning of these bound charges. Indeed, some authors give you the impression that bound charges are in some sense “fictitious” - mere bookkeeping devices used to facilitate the calculation of fields. Nothing could be further from the truth: <span class="math notranslate nohighlight">\( \rho_b \)</span> and <span class="math notranslate nohighlight">\( \sigma_b \)</span> represent perfectly genuine accumulations of charge. In this section I’ll explain how polarization leads to these charge distributions.</p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+<p>The basic idea is very simple: Suppose we have a long string of dipoles, as shown in Fig. 4.11. Along the line, the head of one effectively cancels the tail of its neighbor, but at the ends there are two charges left over: plus at the right end and minus at the left. It is as if we had peeled off an electron at one end and carried it all the way down to the other end, though in fact no single electron made the whole trip - a lot of tiny displacements add up to one large one. We call the net charge at the ends a bound charge to remind ourselves that it cannot be removed; in a dielectric every electron is attached to a specific atom or molecule. But apart from that, bound charge is no different from any other kind.</p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+<p>To calculate the actual amount of bound charge resulting from a given polarization, examine a “tube” of dielectric parallel to P. The dipole moment of the tiny chunk shown in Fig. 4.12 is <span class="math notranslate nohighlight">\( P(Ad) \)</span>, where A is the cross-sectional area of the tube and dis the length of the chunk. In terms of the charge (q) at the end, this same dipole moment can be written <span class="math notranslate nohighlight">\( qd \)</span>. The bound charge that piles up at the right end of the tube is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+q = PA
+\]</div>
+<p>If the ends have been sliced off perpendicularly, the surface charge density is</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_b = \frac{q}{A}  = P
+\]</div>
+<p>For an oblique cut (Fig 4.13), the charge is still the same, but <span class="math notranslate nohighlight">\( A = A_{end} \cos \theta \)</span> so</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_b = \frac{1}{A_{end}}  = P \cos \theta = \vec{P} \cdot \hat{n}
+\]</div>
+<p>The effect of the polarization, then, is to paint a bound charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span> over the surface of the material. This is exactly what we found by more rigorous means in Sect. 4.2.1. But now we know where the bound charge comes from.</p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+<p>If the polarization is nonuniform, we get accumulations of bound charge within the material, as well as on the surface. A glance at Fig. 4.14 suggests that a diverging <strong>P</strong> results in a pileup of negative charge. Indeed, the net bound charge <span class="math notranslate nohighlight">\( \int \rho_b \mathrm{d} \tau \)</span> in a given volume is equal and opposite to the amount that has been pushed out through the surface. The latter (by the same reasoning we used before) is <span class="math notranslate nohighlight">\( \vec{P} \cdot \hat{n} \)</span> per unit area, so</p>
+<div class="math notranslate nohighlight">
+\[
+\int_v \rho_b \mathrm{d} \tau = - \oint _S \vec{P} \cdot \mathrm{d} \vec{a} = - \int_V (\nabla \cdot  \vec{P}) \mathrm{d} \tau
+\]</div>
+<p>Since this is true for any volume, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_b = - \nabla \cdot  \vec{P}
+\]</div>
+<p>confirming, again, the more rigorous conclusion of Sect. 4.2.1.</p>
+<section id="example-4-3">
+<h3>Example 4.3<a class="headerlink" href="#example-4-3" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+“Q”</label><div class="sd-tab-content docutils">
+<p>There is another way of analyzing the uniformly polarized sphere, which nicely illustrates the idea of bound charge. What we have, really, is two spheres of charge: a positive sphere and a negative sphere. Without polarization the two are superimposed and cancel completely. But when the material is uniformly polarized, all the plus charges move slightly upward (the z direction) and all the minus charges move slightly downward (Fig 4.15). The two spheres no longer overlap perfectly: at the top there’s a ‘cap’ of leftover positive charge and at the bottom a cap of negative charge. This ‘leftover’ charge is precisely the bound surface charge <span class="math notranslate nohighlight">\( \sigma_b \)</span></p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+“A”</label><div class="sd-tab-content docutils">
+<p>In Prob 2.18, you calculated the field in the region of overlap between two uniformly charged spheres; the answer was</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = - \frac{1}{4 \pi \epsilon_0}  \frac{1 \vec{d}}{R^3} 
+\]</div>
+<p>where <em>q</em> is the total charge of the positive sphere, <strong>d</strong> is the vector from the negative center to the positive center, and R is the radius of the sphere. We can express this in terms of the polarization of the sphere, <span class="math notranslate nohighlight">\( \vec{p} = q \vec{d} = (\frac{4}{3} \pi R^3  )\vec{P} \)</span>, as</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = - \frac{1}{3 \epsilon_0} \vec{P}
+\]</div>
+<p>Meanwhile, for points outside, it is as though all charge on each sphere were concentrated at the respective center. We have, then, a dipole, with potential</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} 
+\]</div>
+<p>(Remember that <strong>d</strong> is some small fraction of an atomic radius; Fig 4.15 is grossly exaggerated). These answers agree, of course, wtih the results from Ex 4.2.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="the-field-inside-a-dielectric">
+<h2>4.2.3: The Field Inside a Dielectric<a class="headerlink" href="#the-field-inside-a-dielectric" title="Permalink to this headline">#</a></h2>
+<p>I have been sloppy about the distinction between “pure” dipoles and “physical” dipoles. In developing the theory of bound charges, I assumed we were working with the pure kind - indeed, I stated in Eq 4.8 the formula for the potential of a perfect dipole. And yet an actual polarized dielectric consists of physical dipoles, albeit extremely tiny ones. What is more, I presumed to represent discrete molecular dipoles by a continuous density function <strong>P</strong>. How should I justify this method? Outside the dielectric there is no real problem: here we are far away from the molecules (<span class="math notranslate nohighlight">\( \Delta r  \)</span>  is many times greater than the separation distance between plus and minus charges), so the dipole potential dominates overwhelmingly and the detailed “graininess” of the source is blurred by distance. Inside the dielectric, however, we can hardly pretend to be far from all the dipoles, and the procedure I used in Sect. 4.2.1 is open to serious challenge.</p>
+<p>In fact, when you stop to think about it, the electric field inside matter must
+be fantastically complicated, on the microscopic level. If you happen to be very near an electron, the field is gigantic, whereas a short distance away it may be small or may point in a totally different direction. Moreover, an instant later, as the atoms move about, the field will have altered entirely. This true microscopic field would be utterly impossible to calculate, nor would it be of much interest if you could. Just as, for macroscopic purposes, we regard water as a continuous fluid, ignoring its molecular structure, so also we can ignore the microscopic bumps and wrinkles in the electric field inside matter, and concentrate on the macroscopic field. This is defined as the average field over regions large enough to contain many thousands of atoms (so that the uninteresting microscopic fluctuations are smoothed over), and yet small enough to ensure that we do not wash out any significant large-scale variations in the field. (In practice, this means we must average over regions much smaller than the dimensions of the object itself.) Ordinarily, the macroscopic field is what people mean when they speak of “the” field inside matter.</p>
+<p>It remains to show that the macroscopic field is what we actually obtain when
+we use the methods of Sect. 4.2.1. The argument is subtle, so hang on. Suppose I want to calculate the macroscopic field at some point r within a dielectric. I know I must average the true (microscopic) field over an appropriate volume, so let me draw a small sphere about <em>r</em>, of radius, say, a thousand times the size of a molecule. The macroscopic field at r, then, consists of two parts: the average field over the sphere due to all charges outside, plus the average due to all charges inside:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \vec{E}_{out} + \vec{E}_{in}
+\]</div>
+<p>You proved in problem 3.47 that the average field over a sphere produced by charges outside is equal to the field they produce at the center, so <span class="math notranslate nohighlight">\( \vec{E_{out}} \)</span> is the field at <strong>r</strong> due to the dipoles exterior to the sphere. These are far enough away that we can safely use Eq 4.9</p>
+<div class="math notranslate nohighlight">
+\[
+V_{out} = \frac{1}{4 \pi \epsilon_0} \int_{outside} \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' \tag{4.17} 
+\]</div>
+<p>The dipoles inside the sphere are too close to treat in this fashion. But fortunately all we need is their average field, which we already know (Eq 3.105)</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E}_{in} = -\frac{1}{4 \pi \epsilon_0} \frac{\vec{p}}{R^3} 
+\]</div>
+<p>regardless of the details of the charge distribution within the sphere. The only relevant quantity is the total dipole moment, <span class="math notranslate nohighlight">\( \vec{p} = (\frac{4}{3} \pi R^3 )\vec{P} \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E_{in}} = - \frac{1}{3 \epsilon_0} \vec{P} \tag{4.18}
+\]</div>
+<p>Now, by assumption, the sphere is small enough that <strong>P</strong> does not vary significantly over its volume, so the term left out of the integral in <span class="math notranslate nohighlight">\( \eqref{4.17} \)</span> corresponds to the field at the center of a uniformly polarized sphere, to wit: <span class="math notranslate nohighlight">\( -(1/3\epsilon_0 )\vec{P} \eqref{4.14}\)</span> . But this is precisely what <span class="math notranslate nohighlight">\( \vec{E_{in}} \)</span> puts back in! The macroscopic field, then, is given by the potential</p>
+<div class="math notranslate nohighlight">
+\[
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' \tag{4.19} 
+\]</div>
+<p>where the integral runs over the <em>entire</em> volume of the dielectric. This is, of course, what we used under the assumption of perfect dipoles in Sect 4.2.1; without realizing it, we were correctly calculating the averaged, macroscopic field, for points inside the dielectric.</p>
+<p>Notice that this argument all revolves around the curious fact that the average field over any sphere (due to the charge inside) is the same as the field at the center of a <em>uniformly polarized</em> sphere with the same total dipole moment. This means that no matter how crazy the actual microscopic charge configuration, we can replace it with a nice smooth distribution of perfect dipoles, if all we care about is the macroscopic (average) field. Incidentally, while the argument ostensibly relies on the spherical shape I chose to average over, the macroscopic field is certainly independent of the geometry of the averaging region, and this is reflected in the final answer <span class="math notranslate nohighlight">\( \eqref{4.19} \)</span>. Presumably one could reproduce the same argument for a cube or ellipsoid or whatever by performing some more grueling calculations.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/book/chapter04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch4-1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.1: Polarization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ch4-3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4.3: The Electric Displacement</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-charges">4.2.1: Bound Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-2">Example 4.2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-bound-charges">4.2.2: Physical Interpretation of Bound Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-3">Example 4.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-field-inside-a-dielectric">4.2.3: The Field Inside a Dielectric</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Physics Enjoyer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

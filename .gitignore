@@ -30,3 +30,6 @@ db.sqlite3
 # Tex
 *.aux
 *.gz
+rename.ipynb
+replace-image-tag.ipynb
+todo.ipynb

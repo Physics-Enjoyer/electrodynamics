@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.5: Conductors &#8212; Electrodynamics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter02/ch2-5';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Chapter 3" href="../chapter03/chapter-intro.html" />
+    <link rel="prev" title="2.4: Work and Energy in Electrostatics" href="ch2-4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrodynamics</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Classical Electrodynamics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ch2-1.html">2.1: The Electric Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2-3.html">2.3: Electric Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.5: Conductors</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Physics-Enjoyer/electrodynamics/issues/new?title=Issue%20on%20page%20%2Fcontent/book/chapter02/ch2-5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/book/chapter02/ch2-5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2.5: Conductors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties">2.5.1: Basic Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-charges">2.5.2: Induced Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-10">Example 2.10</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-charge-and-the-force-on-a-conductor">2.5.3: Surface Charge and the Force on a Conductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors">2.5.4: Capacitors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-11">Example 2.11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-12">Example 2.12</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="conductors">
+<h1>2.5: Conductors<a class="headerlink" href="#conductors" title="Permalink to this headline">#</a></h1>
+<section id="basic-properties">
+<h2>2.5.1: Basic Properties<a class="headerlink" href="#basic-properties" title="Permalink to this headline">#</a></h2>
+<p>In an <em>insulator</em>, such as glass or rubber, each electron is on a short leash, attached to a particular atom. In a metallic <em>conductor</em>, by contrast, one or more electrons per atom are free to roam. (In liquid conductors such as salt water, it is ions that do the moving). A <em>perfect</em> conductor would contain an unlimited supply of free charges. In real life there are no perfect conductors, but metals come pretty close, for most purposes.</p>
+<p>From this definition, the basic electrostatic properties of ideal conductors immediately follow:</p>
+<p><strong>(i) E = 0 inside a conductor</strong>. Why? Because if there were any field, those free charges would move, and it wouldn’t be <em>electrostatics</em> any more. Hmm… that’s hardly a satisfactory explanation; maybe all it proves is that you can’t have electrostatics when conductors are present. We had better examine what happens when you put a conductor into an external electric field <span class="math notranslate nohighlight">\( \vec{E_0} \)</span> (Fig. 2.42). Initially, the field will drive any free positive charges to the right, and negative ones to the left. (In practice, it’s the negative charges - electrons - that do the moving, but when they depart, the right side is left with a net positive charge - the stationary nuclei - so it doesn’t really matter which charges move; the effect is the same). When they come to the edge of the material, the charges pile up: plus on the right side, minus on the left. Now, these <strong>induced charges</strong> produce a field of their own, <span class="math notranslate nohighlight">\( \vec{E_1} \)</span>, which, as you can see from the figure, is in the opposite direction to <span class="math notranslate nohighlight">\( \vec{E_0} \)</span>. That’s the crucial point, for it means that the field of the induced charges tends to cancel the original field. Charge will continue to flow until this cancellation is complete, and the resultant field inside the conductor is precisely zero. The whole process is practically instantaneous.</p>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><strong>(ii) <span class="math notranslate nohighlight">\( \rho = 0 \)</span> inside a conductor.</strong> This follows from Gauss’s law: if E is zero, so also is <span class="math notranslate nohighlight">\( \rho \)</span>. There is still charge around, but exactly as much plus as minus, so the net charge density in the interior is zero.</p>
+<p><strong>(iii) Any net charge resides on the surface</strong>. That’s the only place left.</p>
+<p><strong>(iv) A conductor is an equipotential</strong>. For if a and b are any two points within (or at the surface of) a given conductor, <span class="math notranslate nohighlight">\( V(b) - V(a) = - \int _{a} ^{b} \vec{E} \cdot \mathrm{d}{\vec{l}} = 0 \)</span>, and hence <span class="math notranslate nohighlight">\( V(a) = V(b) \)</span>.</p>
+<p><strong>(v) E is perpendicular to the surface, just outside a conductor.</strong> Otherwise, as in (i), charge will immediately flow around the surface until it kills off the tangential component (Fig. 2.43). (Perpendicular to the surface, charge cannot flow, of course, since it is confined to the conducting object.)</p>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p>I think it is astonishing that the charge on a conductor flows to the surface. Because of their mutual repulsion, the charges naturally spread out as much as possible, but for <em>all</em> of them to go to the surface seems like a waste of the interior space. Surely we could do better, from the point of view of making each charge as possible from its neighbors, to sprinkle <em>some</em> of them throughout the volume. Well, it simply is not so. You do best to put all the charge on the surface, and this is true regardless of the size or shape of the conductor.</p>
+<p>The problem can also be phrased in terms of energy. Like any other free dynamical system, the charge on a conductor will seek the configuration that minimizes its potential energy. What property (iii) asserts is that the electrostatic energy of a solid object (with specified shape and total charge) is a minimum when that charge is spread over the surface. For instance, the energy of a sphere is <span class="math notranslate nohighlight">\( (1 / 8 \pi \epsilon_0)(q^2 / R) \)</span> if the charge is uniformly distributed over the surface, as we found in Ex 2.9, but it is greater <span class="math notranslate nohighlight">\( (3/20 \pi \epsilon_0)(q^2 / R) \)</span> if the charge is uniformly distributed throughout the volume (Prob. 2.34).</p>
+</section>
+<section id="induced-charges">
+<h2>2.5.2: Induced Charges<a class="headerlink" href="#induced-charges" title="Permalink to this headline">#</a></h2>
+<p>If you hold a charge +q near an uncharged conductor (Fig 2.44), the two will attract one another. The reason for this is that q will pull minus charges over to the near side and repel plus charges to the far side (Another way to think of it is that the charge moves around in such a way as to kill off the field of q for points inside the conductor, where the total field must be zero.) Since the negative induced charge is closer to q, there is a net force of attraction. (In chapter 3 we will calculate this force explicitly, for the case of a spherical conductor.)</p>
+<p>When I speak of the field, charge, or potential “inside” a conductor, I mean in the “meat” of the conductor. If there is some hollow cavity in the conductor, and within that cavity you put some charge, then the field in the cavity will not be zero. But in a remarkable way the cavity and its contents are electrically isolated from the outside world by the surrounding conductor (Fig. 2.45). No external fields penetrate the conductor; they are canceled at the outer surface by the induced charge there. Similarly, the field due to charges within the cavity is canceled, for all exterior points, by the induced charge on the inner surface. However, the compensating charge left over on the <em>outer</em> surface of the conductor effectively “communicates” the presence of q to the outside world. The total charge induced on the cavity wall is equal and opposite to the charge inside, for if we surround the cavity with a Gaussian surface, all points of which are in the conductor (Fig 2.45), <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{a}} = 0 \)</span>, and hence (by Gauss’s law) the net enclosed charge must be zero. But <span class="math notranslate nohighlight">\( Q_{enc} = q + q_{induced} \)</span>, so <span class="math notranslate nohighlight">\( q_{induced} = - q \)</span>. Then if the conductor as a whole is electrically neutral, there must be a charge +q on its outer surface.</p>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<hr class="docutils" />
+<section id="example-2-10">
+<h3>Example 2.10<a class="headerlink" href="#example-2-10" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>An uncharged spherical conductor centered at the origin has a cavity of some weird shape carved out of it (Fig. 2.46). Somewhere within the cavity is a charge q. Question: What is the field outside the sphere?</p>
+</div></blockquote>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><strong>Solution</strong>
+At first glance, it would appear that the answer depends on the shape of the cavity and the location of the charge. But that’s wrong: the answer is</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} \hat{r}
+\]</div>
+<p>regardless. The conductor conceals from us all information concerning the nature of the cavity, revealing only the total charge it contains. How can this be? Well, the charge +q induces an opposite charge -q on the wall of the cavity, which distributes itself in such a way that its field cancels that of q, for all points exterior to the cavity. Since the conductor carries no net charge, this leaves +q to distribute itself uniformly over the surface of the sphere. (It’s <em>uniform</em> because the asymmetrical influence of the point charge +q is negated by that of the induced charge -q on the inner surface.) For points outside the sphere, then, the only thing that survives is the field of the leftover +q, uniformly distributed over the outer surface.</p>
+<p>It may occur to you that in one respect this argument is open to challenge: There are actually <em>three</em> fields at work here: <span class="math notranslate nohighlight">\( \vec{E_q}, \vec{E_{induced}} \)</span>, and <span class="math notranslate nohighlight">\( \vec{E_{leftover}} \)</span>. All we know for certain is that the sum of the three is zero inside the conductor, yet I claimed that the first two alone cancel, while the third is separately zero there. Moreover, even if the first two cancel within the conductor, who is to say they still cancel for points outside? They do not, after all, cancel for points inside the cavity. I cannot give you a completely satisfactory answer at the moment, but this much at least is true: there <em>exists</em> a way of distributing -q over the inner surface so as to cancel the field of q at all exterior points. For that same cavity could have been carved out of a <em>huge</em> spherical conductor with a radius of 27 miles or light years or whatever. In that case, the leftover +q on the outer surface is simply too far away to produce a significant field, and the other two fields would have to accomplish the cancellation by themselves. So we know they can do it… but are we sure they <em>choose</em> to? Perhaps for small spheres nature prefers some complicated three-way cancellation? Nope: As we’ll see in the uniqueness theorems of Chapter 3, electrostatics is very stingy with its options; there is always precisely one way - no more - of distributing the charge on a conductor so as to make the field inside zero. Having found a possible way, we are guaranteed that no alternative exists, even in principle.</p>
+<hr class="docutils" />
+<p>If a cavity surrounded by conducting material is itself empty of charge, then the field within the cavity is zero. For any field line would have to begin and end on the cavity wall, going from a plus charge to a minus charge (Fig 2.47). Letting that field line be part of a closed loop, the rest of which is entirely inside the conductor (where E = 0), the integral <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} \)</span> is distinctly <em>positive</em>, in violation of Eq. 2.19. It follows that <span class="math notranslate nohighlight">\( E = 0 \)</span> within an empty cavity, and there is in vact no charge on the surface of the cavity. (This is why you are relatively safe inside a metal car during a thunderstorm - you may get cooked, if lightning strikes, but you will not be electrocuted. The same principle applies to the placement of sensitive apparatus inside a grounded <strong>Faraday cage</strong>, to shield out stray electric fields. In practice, the enclosure doesn’t even have to be solid conductor - chicken wire will often suffice.)</p>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+</section>
+</section>
+<section id="surface-charge-and-the-force-on-a-conductor">
+<h2>2.5.3: Surface Charge and the Force on a Conductor<a class="headerlink" href="#surface-charge-and-the-force-on-a-conductor" title="Permalink to this headline">#</a></h2>
+<p>Because the field inside a conductor is zero, boundary condition Eq. 2.33 requires that the field immediately outside is</p>
+<div class="math notranslate nohighlight">
+\[
+ \vec{E} = \frac{\sigma}{\epsilon_0} \hat{n} {2.48} \tag{2.48}
+ \]</div>
+<p>consistent with our earlier conclusion that the field is normal to the surface. In terms of potential, Eq. 2.36 yields</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = - \epsilon_0 \frac{\partial V}{\partial n} {2.49} \tag{2.49}
+\]</div>
+<p>These equations enable you to calculate the surface charge on a conductor, if you can determine <span class="math notranslate nohighlight">\( \vec{E} \)</span> or <span class="math notranslate nohighlight">\( V \)</span>; we shall use them frequently in the next chapter.</p>
+<p>In the presence of an electric field, a surface charge will experience a force; the force per unit area, <span class="math notranslate nohighlight">\( \vec{f} \)</span>, is <span class="math notranslate nohighlight">\( \sigma \vec{E} \)</span>. But there’s a problem here, for the electric field is discontinuous at a surface charge, so what are we supposed to use: <span class="math notranslate nohighlight">\( \vec{E}_{above}, \vec{E}_{below} \)</span>, or something in between? The answer is that we should use the <em>average</em> of the two</p>
+<div class="math notranslate nohighlight">
+\[
+ \vec{f} = \sigma \vec{E}_{average} = \frac{1}{2} \sigma (\vec{E}_{above} + \vec{E}_{below}) {2.50} \tag{2.50}
+\]</div>
+<p>Why the average? The reason is very simple, thought the telling makes it sound complicated: Let’s focus our attention on a tiny patch of surface surrounding the point in question (Fig. 2.50). Make it small enough so it is essentially flat and the surface in question is essentially constant. The total field consists of two parts - that attributable to the patch itself, and that due to everything else (other regions of the surface, as well as any external sources that may be present)</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \vec{E}_{patch} + \vec{E}_{other}
+\]</div>
+<p>Now, the patch cannot exert a force on itself, any more than you can lift yourself by standing in a basket and pulling up on the handles. The force on the patch, then, is exclusively due to <span class="math notranslate nohighlight">\( \vec{E}_{other} \)</span>, and this suffers no discontinuity (if we removed the patch, the field in the “hole” would be perfectly smooth). The discontinuity is due entirely to the charge on the patch, which puts out a field <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \)</span> on either side, pointing away from the surface. Thus,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+ \vec{E}_{above} = \vec{E}_{other} + \frac{\sigma}{2 \epsilon_0} \hat{n} \\
+ \vec{E}_{below} = \vec{E}_{other} - \frac{\sigma}{2 \epsilon_0} \hat{n} \\
+ \end{split}\]</div>
+<p>and hence</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E}_{other} = \frac{1}{2} (\vec{E}_{above} + \vec{E}_{below}) = \vec{E}_{average}
+\]</div>
+<p>Averaging is really just a device for removing the contribution of the patch itself.</p>
+<p>That argument applies to any surface charge; in the particular case of a conductor, the field is zero inside and <span class="math notranslate nohighlight">\( (\sigma / \epsilon_0)\hat{n} \)</span> outside (<span class="math notranslate nohighlight">\( \eqref{2.48} \)</span>, so the average is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, and the force per unit area is</p>
+<div class="math notranslate nohighlight">
+\[
+ f = \frac{1}{2 \epsilon_0} \sigma ^2 \hat{n} {2.51} \tag{2.51}
+ \]</div>
+<p>This amounts to an outward <strong>electrostatic pressure</strong> on the surface, tending to draw the conductor into the field, regardless of the sign of <span class="math notranslate nohighlight">\( \sigma \)</span>. Expressing the pressure in terms of the field just outside the surface</p>
+<div class="math notranslate nohighlight">
+\[
+ P = \frac{\epsilon_0}{2} E^2
+ \]</div>
+</section>
+<section id="capacitors">
+<h2>2.5.4: Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">#</a></h2>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p>Suppose we have two conductors, and we put charge +Q on one and -Q on the other (Fig 2.51). Since V is constant over a conductor, we can speak unambiguously of the potential difference between them:</p>
+<div class="math notranslate nohighlight">
+\[
+V = V_{+} - V_{-} = - \int_{(-)}^{(+)} \vec{E} \cdot \mathrm{d}{\vec{l}}
+\]</div>
+<p>We don’t know how the charge distributes itself over the two conductors, and calculating the field would be a nightmare, if their shapes are complicated, but this much we do know: <span class="math notranslate nohighlight">\( \vec{E} \)</span> is proportional to <span class="math notranslate nohighlight">\( Q \)</span>. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> is given by Coulomb’s law:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho}{\Delta r ^2} \hat{\Delta r } \mathrm{d}{\tau}
+\]</div>
+<p>so if you double <span class="math notranslate nohighlight">\( \rho \)</span>, you double <span class="math notranslate nohighlight">\( \vec{E} \)</span>. Wait a minute! How do we know that doubling Q (and also -Q) simply doubles <span class="math notranslate nohighlight">\( \rho \)</span>? Maybe the charge moves around into a completely different configuration, quadrupling <span class="math notranslate nohighlight">\( \rho \)</span> in some places and halving it in others, just so the total charge on the conductor is doubled. The fact is that this concern is unwarranted - doubling Q <em>does</em> double <span class="math notranslate nohighlight">\( \rho \)</span>  everywhere; it doesn’t shift charge around. The proof will come in Chapter 3; for now you’ll have to trust me.</p>
+<p>Since <span class="math notranslate nohighlight">\( \vec{E} \)</span> is proportional to Q, so also is V. The constant of proportionality is called the <strong>capacitance</strong> of the arrangement</p>
+<div class="math notranslate nohighlight">
+\[
+C \equiv \frac{Q}{V}  {2.53} \tag{2.53}
+\]</div>
+<p>Capacitance is a purely geometrical quantity, determined by the sizes, shapes, and separation of the two conductors. In SI units, C is measured in <em>farads</em> (F); a farad is a coulomb-per-volt. Actually this turns out to be inconveniently large; more practical units are the microfarad (<span class="math notranslate nohighlight">\( 10^{-6} F \)</span>) and the picofarad (<span class="math notranslate nohighlight">\( 10^{-12} F \)</span>)</p>
+<p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <span class="math notranslate nohighlight">\( \eqref{2.53} \)</span>, where V is the potential with infinity as the reference point.</p>
+<hr class="docutils" />
+<section id="example-2-11">
+<h3>Example 2.11<a class="headerlink" href="#example-2-11" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+“Q”</label><div class="sd-tab-content docutils">
+<p>Find the capacitance of a parallel-plate capacitor consisting of two metal surfaces of area A held a distance d apart (Fig. 2.52)</p>
+<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+“A”</label><div class="sd-tab-content docutils">
+<p>If we put +Q on the top and -Q on the bottom, they will spread out uniformly over the two surfaces, provided the area is reasonably large and the separation small. The surface charge density, then, is <span class="math notranslate nohighlight">\( \sigma = Q / A \)</span> on the top plate, and so the field, according to Ex. 2.6, is <span class="math notranslate nohighlight">\( (1 / \epsilon_0) Q / A \)</span>. The potential difference between the plates is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{Q}{A \epsilon_0} d
+\]</div>
+<p>and hence</p>
+<div class="math notranslate nohighlight">
+\[
+C = \frac{A \epsilon_0}{d} {2.54} \tag{2.54}
+\]</div>
+<p>If, for instance, the plates are square with sides 1 cm long, and they are held 1 mm apart, then the capacitance is <span class="math notranslate nohighlight">\( 9 \times 10^{-13} F \)</span></p>
+</div>
+</div>
+</section>
+<section id="example-2-12">
+<h3>Example 2.12<a class="headerlink" href="#example-2-12" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+“Q”</label><div class="sd-tab-content docutils">
+<p>Find the capacitance of two concentric spherical metal shells, with radii a and b.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+“A”</label><div class="sd-tab-content docutils">
+<p>Place charge +Q on the inner sphere, and -Q on the outer one. The field between the spheres is</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{1}{4 \pi \epsilon_0} \frac{Q}{r^2} \vec{r}
+\]</div>
+<p>so the potential difference between them is</p>
+<div class="math notranslate nohighlight">
+\[
+V = - \int_{b}^{a} \vec{E} \cdot \mathrm{d}{\vec{l}} = - \frac{Q}{4 \pi \epsilon_0} \int_{b}^a \frac{1}{r^2} \mathrm{d}{r} = \frac{Q}{4 \pi \epsilon_0} \left( \frac{1}{a} - \frac{1}{b}   \right)
+\]</div>
+<p>As promised, V is proportional to Q; the capacitance is</p>
+<div class="math notranslate nohighlight">
+\[
+C = \frac{Q}{V} = 4 \pi \epsilon_0 \frac{ab}{(b - a)} 
+\]</div>
+</div>
+</div>
+<p>To “charge up” a capacitor, you have to remove electrons from the positive plate and carry them to the negative plate. In doing so, you fight against the electric field, which is pulling them back toward the positive conductor and pushing them away from the negative one. How much work does it take, then, to charge the capacitor up to a final amount <span class="math notranslate nohighlight">\( Q \)</span>? Suppose that at some intermediate stage in the process the charge on the positive plate is <span class="math notranslate nohighlight">\( q \)</span>, so that the potential difference is <span class="math notranslate nohighlight">\( q / C \)</span>. According to Eq. 2.38, the work you must do to transport the next piece of charge <span class="math notranslate nohighlight">\( dq \)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}{W} = \left( \frac{q}{C} \right) \mathrm{d}{q}
+\]</div>
+<p>The total work necessary, then, to go from <span class="math notranslate nohighlight">\( q = 0 \)</span> to <span class="math notranslate nohighlight">\( q = Q \)</span>, is</p>
+<div class="math notranslate nohighlight">
+\[
+W = \int_{0} ^Q \left( \frac{q}{C} \mathrm{d}{q} \right) = \frac{1}{2} \frac{Q^2}{C} 
+\]</div>
+<p>or, since <span class="math notranslate nohighlight">\( Q = CV \)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+ W = \frac{1}{2} C V^2 {2.55} \tag{2.55}
+ \]</div>
+<p>where <span class="math notranslate nohighlight">\( V \)</span> is the final potential of the capacitor.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/book/chapter02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch2-4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2.4: Work and Energy in Electrostatics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter03/chapter-intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties">2.5.1: Basic Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-charges">2.5.2: Induced Charges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-10">Example 2.10</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-charge-and-the-force-on-a-conductor">2.5.3: Surface Charge and the Force on a Conductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitors">2.5.4: Capacitors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-11">Example 2.11</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-12">Example 2.12</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Physics Enjoyer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
