@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.2: Divergence and Curl of Electrostatic Fields &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.3: Electric Potential" href="ch2-3.html" />
     <link rel="prev" title="2.1: The Electric Field" href="ch2-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -461,9 +472,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="divergence-and-curl-of-electrostatic-fields">
-<h1>2.2: Divergence and Curl of Electrostatic Fields<a class="headerlink" href="#divergence-and-curl-of-electrostatic-fields" title="Permalink to this headline">#</a></h1>
+<h1>2.2: Divergence and Curl of Electrostatic Fields<a class="headerlink" href="#divergence-and-curl-of-electrostatic-fields" title="Permalink to this heading">#</a></h1>
 <section id="field-lines-flux-and-gauss-law">
-<h2>2.2.1 Field Lines, Flux, and Gauss’ Law<a class="headerlink" href="#field-lines-flux-and-gauss-law" title="Permalink to this headline">#</a></h2>
+<h2>2.2.1 Field Lines, Flux, and Gauss’ Law<a class="headerlink" href="#field-lines-flux-and-gauss-law" title="Permalink to this heading">#</a></h2>
 <p>In principle, we are <em>done</em> with the subject of electrostatics. Eq. 2.8 tells us how to compute the field of a charge distribution, and Eq. 2.3 tells us what the force on a charge Q placed in this field will be. Unfortunately, as you may have discovered, the integrals involved in computing E can be formidable, even for reasonably simple charge distributions. Much of the rest of electrostatics is devoted to assembling a bag of tools and tricks for avoiding these integrals. It all begins with the divergence and curl of <strong>E</strong>. I shall calculate the divergence of <strong>E</strong> directly from Eq. 2.8 in section 2.2.2, but first I want to show you a more qualitative, and perhaps more illuminating, intuitive approach.</p>
 <p>Let’s begin with the simplest possible case: a single point charge <em>q</em>, situated at the origin:</p>
 <div class="math notranslate nohighlight">
@@ -475,16 +486,16 @@ document.write(`
 <p>You might think that I have thereby thrown away information about the <em>strength</em> of the field, which was contained in the length of the arrows. But actually I have not. The magnitude of the field is indicated by the <em>density</em> of the field lines: it’s strong near the center where the field lines are close together, and weak farther out, where they are relatively far apart.</p>
 <p>In truth, the field-line diagram is deceptive, when I draw it on a two-dimensional surface, for the density of lines passing through a circle of radius <em>r</em> is the total number divided by the circumference (<span class="math notranslate nohighlight">\( n / 2 \pi r \)</span>), which goes like <span class="math notranslate nohighlight">\( (1/r) \)</span>, not <span class="math notranslate nohighlight">\( (1/r^2) \)</span>. But if you imagine the model in three dimensions (a pincushion with needles sticking out in all directions), then the density of lines is the total number divided by the area of the sphere <span class="math notranslate nohighlight">\( (n/4 \pi r^2) \)</span>, which <em>does</em> go like <span class="math notranslate nohighlight">\( (1/r^2) \)</span>.</p>
 <p>Such diagrams are also convenient for representing more complicated fields. Of course, the number of lines you draw depends on how lazy you are (and how sharp your pencil is), though you ought to include enough to get an accurate sense of the field, and you must be consistent: if <span class="math notranslate nohighlight">\( q \)</span>  gets 8 lines, then <span class="math notranslate nohighlight">\( 2q \)</span>  deserves 16. And you must space them fairly - they emanate from a point charge symmetrically in all directions. Field lines begin on positive charges and end on negative ones; they cannot simply terminate in midair, though they may extend out to infinity. Moreover, field lines can never cross - at the intersection the field would have two different directions at once! With all this in mind, it is easy to sketch the field of any simple configuration of point charges: Begin by drawing the lines in the neighborhood of each charge, and then connect them up or extend them to infinity (Figs. 2.13 and 2.14)</p>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" />
-<img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.13" src="../../../_images/2.13.png" />
+<img alt="Figure 2.14" src="../../../_images/2.14.png" /></p>
 <p>In this model, the <em>flux</em> of <strong>E</strong> through a surface S,</p>
 <div class="math notranslate nohighlight">
 \[
 \Phi_E \equiv \int _S \vec{E} \cdot \mathrm{d}{\vec{a}} {2.11} \tag{2.11}
 \]</div>
 <p>is a measure of the “number of lines” passing through S. I put this in quotes because of course we can only draw a representative <em>sample</em> of field lines - the total number would be infinite. But for a given sampling rate the flux is <em>proportional</em> to the number of lines drawn, because the field strength, remember, is proportional to the density of field lines (the number per unit area), and hence <span class="math notranslate nohighlight">\( \vec{E} \cdot \mathrm{d}{\vec{a}} \)</span> is proportional to the number of lines passing through the infinitesimal area <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span>. (The dot product picks out the component of <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span> along the direction of <strong>E</strong>, as indicated in Fig 2.15. It is the area in the plane perpendicular to <strong>E</strong> that we have in mind when we say that the density of field lines is the number per unit area).</p>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" />
-<img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.15" src="../../../_images/2.15.png" />
+<img alt="Figure 2.16" src="../../../_images/2.16.png" /></p>
 <p>This suggests that the flux through any <em>closed</em> surface is a measure of the total charge inside. For the field lines that originate on a positive charge must either pass out through the surface or else terminate on a negative charge inside (Fig 2.16a). On the other hand, a charge <em>outside</em> the surface will contribute nothing to the total flux, since its field lines pass in one side and out the other (Fig 2.16b). This is the <em>essence</em> of Gauss’s law. Now let’s make it quantitative.</p>
 <p>In the case of a point charge <em>q</em> at the origin, the flux of <strong>E</strong> through a spherical surface or radius <em>r</em> is</p>
 <div class="math notranslate nohighlight">
@@ -531,7 +542,7 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 <p>Equation <span class="math notranslate nohighlight">\( \eqref{2.14} \)</span> carries the same message as <span class="math notranslate nohighlight">\( \eqref{2.13} \)</span>; it is <strong>Gauss’s law in differential form</strong>. The differential version is tidier, but the integral form has the advantage that it accommodates point, line, and surface charges more naturally.</p>
 </section>
 <section id="the-divergence-of-e">
-<h2>2.2.2: The Divergence of E<a class="headerlink" href="#the-divergence-of-e" title="Permalink to this headline">#</a></h2>
+<h2>2.2.2: The Divergence of E<a class="headerlink" href="#the-divergence-of-e" title="Permalink to this heading">#</a></h2>
 <p>Let’s go back now, and calculate the divergence of <span class="math notranslate nohighlight">\( \vec{E} \)</span> directly from Eq. 2.8:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -559,11 +570,11 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \]</div>
 </section>
 <section id="applications-of-gauss-s-law">
-<h2>2.2.3: Applications of Gauss’s Law<a class="headerlink" href="#applications-of-gauss-s-law" title="Permalink to this headline">#</a></h2>
+<h2>2.2.3: Applications of Gauss’s Law<a class="headerlink" href="#applications-of-gauss-s-law" title="Permalink to this heading">#</a></h2>
 <p>I must interrupt the theoretical development at this point to show you the extraordinary power of Gauss’s law, in integral form. When symmetry permits, it affords <em>by far</em> the quickest and easiest way of computing electric fields. I’ll illustrate the method with a series of examples.</p>
 <hr class="docutils" />
 <section id="example-2-3">
-<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -583,7 +594,7 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \[
 \int_{\mathscr{S}} \vec{E} \cdot \mathrm{d}{\vec{a}} = \int_{\mathscr{S}} | \vec{E} | da
 \]</div>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.18" src="../../../_images/2.18.png" /></p>
 <p>and the magnitude of E is constant over the Gaussian surface, so it comes outside the integral:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -612,13 +623,13 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 <hr class="docutils" />
 </section>
 <section id="example-2-4">
-<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A long cylinder (Fig 2.21) carries a charge density that is proportional to the distance from the axis: <span class="math notranslate nohighlight">\( \rho = ks \)</span> for some constant <span class="math notranslate nohighlight">\( k \)</span>. Find the electric field inside this cylinder.</p>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.21" src="../../../_images/2.21.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -658,7 +669,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 </div>
 </section>
 <section id="example-2-5">
-<h3>Example 2.5<a class="headerlink" href="#example-2-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.5<a class="headerlink" href="#example-2-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
@@ -673,7 +684,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 \[
 \oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc}
 \]</div>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.22" src="../../../_images/2.22.png" /></p>
 <p>In this case, <span class="math notranslate nohighlight">\( Q = \sigma A \)</span>, where A is the area of the lid of the pillbox. By symmetry, <span class="math notranslate nohighlight">\( \vec{E} \)</span> points away from the plane (upward for points above, downward for points below). So the top and bottom surfaces yield</p>
 <div class="math notranslate nohighlight">
 \[
@@ -696,13 +707,13 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 </div>
 </section>
 <section id="example-2-6">
-<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Two infinite parallel planes carry equal but opposite uniform charge densities <span class="math notranslate nohighlight">\( \pm \sigma \)</span> (Fig 2.23). Find the field in each of the three regions: (i) to the left of both, (ii) between them, (iii) to the right of both.</p>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.23" src="../../../_images/2.23.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
@@ -713,7 +724,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 </section>
 </section>
 <section id="the-curl-of-e">
-<h2>2.2.4: The Curl of E<a class="headerlink" href="#the-curl-of-e" title="Permalink to this headline">#</a></h2>
+<h2>2.2.4: The Curl of E<a class="headerlink" href="#the-curl-of-e" title="Permalink to this heading">#</a></h2>
 <p>I’ll calculate the curl of <span class="math notranslate nohighlight">\( \vec{E} \)</span> as I did the divergence in Sect 2.2.1, by studying first the simplest possible configuration: a point charge at the origin. In this case</p>
 <div class="math notranslate nohighlight">
 \[
@@ -729,7 +740,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 \[
 \vec{E} \cdot \mathrm{d}{\vec{l}} = \frac{1}{4 \pi \epsilon_0} \frac{1}{r^2} \mathrm{d}{r}
 \]</div>
-<p><img alt="Figure 2.12" src="../../../_images/2.12.png" /></p>
+<p><img alt="Figure 2.29" src="../../../_images/2.29.png" /></p>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -786,11 +797,10 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch2-1.html"
@@ -810,10 +820,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -885,8 +892,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

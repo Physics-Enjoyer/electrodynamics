@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.3: Separation of Variables &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.4: Multipole Expansion" href="ch3-4.html" />
     <link rel="prev" title="3.2: The Method of Images" href="ch3-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -464,12 +475,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="separation-of-variables">
-<h1>3.3: Separation of Variables<a class="headerlink" href="#separation-of-variables" title="Permalink to this headline">#</a></h1>
+<h1>3.3: Separation of Variables<a class="headerlink" href="#separation-of-variables" title="Permalink to this heading">#</a></h1>
 <p>In this section we shall attack Laplace’s equation directly, using the method of <strong>separation of variables</strong>, which is the physicist’s favorite tool for solving partial differential equations. The method is applicable in circumstances where the potential <span class="math notranslate nohighlight">\( (V) \)</span> or the charge density <span class="math notranslate nohighlight">\( (\sigma) \)</span> is specified on the boundaries of some region, and we are asked to find the potential in the interior. The basic strategy is very simple: We look for solutions that are products of functions, each of which depends on only one of the coordinates. The algebraic details, however, can be formidable, so I’m going to develop the method through a sequence of examples. We’ll start with Cartesian coordinates and then do spherical coordinates (I’ll leave the cylindrical case for you to tackle on your own, in Prob 3.24).</p>
 <section id="cartesian-coordinates">
-<h2>3.3.1: Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>3.3.1: Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this heading">#</a></h2>
 <section id="example-3-3">
-<h3>Example 3.3<a class="headerlink" href="#example-3-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.3<a class="headerlink" href="#example-3-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -597,7 +608,7 @@ C_n = \frac{2V_0}{a} \int_0 ^a \sin (n \pi y / a) \mathrm{d} y \\ = \frac{2 V_0}
 V(x, y) = \frac{4 V_0}{\pi} \sum_{n = 1, 3, 5, \ldots} \frac{1}{n} e^{- n \pi x / a} \sin (n \pi y / a) \tag{3.36}
 \]</div>
 <p>Figure 3.18 is a plot of this potential; Fig. 3.10 shows how the first few terms in the Fourier series combine to make a better and better approximation to the constant <span class="math notranslate nohighlight">\( V_0 \)</span>: (a) is the <span class="math notranslate nohighlight">\( n=1 \)</span> term only, (b) includes n up to 5, (c) is the sum of the first 10 terms, and (d) is the sum of the first 100 terms.
-<img alt="Figure 3.17" src="../../../_images/3.17.png" />
+<img alt="Figure 3.18" src="../../../_images/3.18.png" />
 Incidentally, the infinite series in Eq. 3.36 can be summed explicitly (try your hand at it if you like); the result is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -619,13 +630,13 @@ f(y) = \sum_{n=1} ^{\infty} C_n f_n(y) \tag{3.38}
 <p>The sine functions are orthogonal <span class="math notranslate nohighlight">\( \eqref{3.33} \)</span>; that is the property on which Fourier’s trick is based, allowing us to kill off all terms but one in the infinite series and thereby solve for the coefficients <span class="math notranslate nohighlight">\( C_n \)</span> (Proof of orthogonality is generally quite simple, either by direct integration or by analysis of the differential equation from which the functions came.)</p>
 </section>
 <section id="example-3-4">
-<h3>Example 3.4<a class="headerlink" href="#example-3-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.4<a class="headerlink" href="#example-3-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Two infinitely-long grounded metal plates, again at <span class="math notranslate nohighlight">\( y=0 \)</span> and <span class="math notranslate nohighlight">\( y=a \)</span> are connected at <span class="math notranslate nohighlight">\( x= \pm b \)</span> by metal strips maintained at a constant potential <span class="math notranslate nohighlight">\( V_0 \)</span>, as shown in Fig. 3.20 (a thin layer of insulation at each corner prevents them from shorting out). Find the potential inside the resulting rectangular pipe.</p>
-<p><img alt="Figure 3.17" src="../../../_images/3.17.png" /></p>
+<p><img alt="Figure 3.20" src="../../../_images/3.20.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -686,18 +697,18 @@ C_n \cosh (n \pi b/a) = \begin{cases}
 V(x, y) = \frac{4 V_0}{\pi} \sum_{n=1, 3, 5\ldots} \frac{1}{n} \frac{\cosh(n \pi x/a)}{\cosh(n \pi b/a)} \sin(n \pi y/a) \tag{3.42}
 \]</div>
 <p>This function is shown in Fig. 3.21
-<img alt="Figure 3.17" src="../../../_images/3.17.png" /></p>
+<img alt="Figure 3.21" src="../../../_images/3.21.png" /></p>
 </div>
 </div>
 </section>
 <section id="example-3-5">
-<h3>Example 3.5<a class="headerlink" href="#example-3-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.5<a class="headerlink" href="#example-3-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 “Q”</label><div class="sd-tab-content docutils">
 <p>An infinitely long rectangular metal pipe (sides a and b) is grounded, but one end, at <span class="math notranslate nohighlight">\( x = 0 \)</span>, a ‘hot’ plate is maintained at a specified potential <span class="math notranslate nohighlight">\( V_0(y, z) \)</span>, as indicated in Fig. 3.22. Find the potential inside the pipe.</p>
-<p><img alt="Figure 3.17" src="../../../_images/3.17.png" /></p>
+<p><img alt="Figure 3.22" src="../../../_images/3.22.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
@@ -792,7 +803,7 @@ V(x, y, z) = \frac{16V_0}{\pi^2} \sum_{n,m=1,3,5,\ldots} ^{\infty} \frac{1}{nm} 
 </section>
 </section>
 <section id="spherical-coordinates">
-<h2>3.3.2: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>3.3.2: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>In the examples considered so far, Cartesian coordinates were clearly appropriate, since the boundaries were planes. For round objects, spherical coordinates are more natural. In the spherical system, Laplace’s equation reads:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -880,7 +891,7 @@ V(r, \theta) = \sum_{l=0} ^{\infty} \left( A r^l + \frac{B}{r^{l+1}} \right) P_l
 \]</div>
 <p>The following examples illustrate the power of this important result.</p>
 <section id="example-3-6">
-<h3>Example 3.6<a class="headerlink" href="#example-3-6" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.6<a class="headerlink" href="#example-3-6" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
@@ -941,7 +952,7 @@ V(r, \theta) = \frac{k}{2} \left[ r^0 P_{0}(\cos \theta) - \frac{r^1}{R} P_1 (\c
 </div>
 </section>
 <section id="example-3-7">
-<h3>Example 3.7<a class="headerlink" href="#example-3-7" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.7<a class="headerlink" href="#example-3-7" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
@@ -971,7 +982,7 @@ B_l = \frac{2l + 1}{2} R^{l+1} \int_0 ^\pi V_0(\theta) P_l(\cos \theta) \sin \th
 </div>
 </section>
 <section id="example-3-8">
-<h3>Example 3.8<a class="headerlink" href="#example-3-8" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.8<a class="headerlink" href="#example-3-8" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-10">
@@ -986,7 +997,7 @@ B_l = \frac{2l + 1}{2} R^{l+1} \int_0 ^\pi V_0(\theta) P_l(\cos \theta) \sin \th
 \[
 V \rightarrow - E_0 z + C
 \]</div>
-<p><img alt="Figure 3.17" src="../../../_images/3.17.png" /></p>
+<p><img alt="Figure 3.24" src="../../../_images/3.24.png" /></p>
 <p>Since <span class="math notranslate nohighlight">\( V = 0 \)</span> in the equatorial plane, the constant <em>C</em> must be zero. Accordingly, the boundary conditions for this problem are</p>
 <ul class="simple">
 <li><p>(i) <span class="math notranslate nohighlight">\( V = 0 \)</span> when <span class="math notranslate nohighlight">\( r = R \)</span></p></li>
@@ -1037,7 +1048,7 @@ E_0 \frac{R^3}{r^2} \cos \theta
 </div>
 </section>
 <section id="example-3-9">
-<h3>Example 3.9<a class="headerlink" href="#example-3-9" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.9<a class="headerlink" href="#example-3-9" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-12">
@@ -1150,11 +1161,10 @@ E_0 \frac{R^3}{r^2} \cos \theta
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch3-2.html"
@@ -1174,10 +1184,7 @@ E_0 \frac{R^3}{r^2} \cos \theta
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1252,8 +1259,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

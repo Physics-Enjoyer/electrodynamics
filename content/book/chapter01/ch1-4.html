@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.4: Curvilinear Coordinates &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1.5: The Dirac Delta Function" href="ch1-5.html" />
     <link rel="prev" title="1.3: Integral Calculus" href="ch1-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -456,9 +467,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="curvilinear-coordinates">
-<h1>1.4: Curvilinear Coordinates<a class="headerlink" href="#curvilinear-coordinates" title="Permalink to this headline">#</a></h1>
+<h1>1.4: Curvilinear Coordinates<a class="headerlink" href="#curvilinear-coordinates" title="Permalink to this heading">#</a></h1>
 <section id="spherical-coordinates">
-<h2>1.4.1: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>1.4.1: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>You can label a point P by its Cartesian coordinates (x, y, z), but sometimes it is more convenient to use <strong>spherical</strong> coordinates <span class="math notranslate nohighlight">\( (r, \theta, \phi) \)</span>; <span class="math notranslate nohighlight">\( r \)</span> is the distance from the origin (the magnitude of the position vector <strong>r</strong>), <span class="math notranslate nohighlight">\( \theta \)</span> (the angle down from the z axis) is called the <strong>polar angle</strong>, and <span class="math notranslate nohighlight">\( \phi \)</span> (the angle around from the x axis) is the <strong>azimuthal angle</strong>. Their relation to Cartesian coordinates can be read trigonometrically from Fig 1.36:</p>
 <p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
 <div class="math notranslate nohighlight">
@@ -481,13 +492,13 @@ x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \c
 \end{split}\]</div>
 <p>as you can check for yourself (Prob 1.38).</p>
 <p>There is a poisonous snake lurking here that I’d better warn you about: <span class="math notranslate nohighlight">\( \hat{r} \)</span> , <span class="math notranslate nohighlight">\( \hat{\theta} \)</span>, and <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> are associated with a particular point P, and they <em>change direction</em> as P moves around. For example, <span class="math notranslate nohighlight">\( \hat{r} \)</span> always points radially outward, but “radially outward” can be in the x direction, the y direction, or any other direction, depending on where you are. In Fig. 1.37, <span class="math notranslate nohighlight">\( \vec{A} = \hat{y} \)</span>  and <span class="math notranslate nohighlight">\( \vec{B} = - \hat{y} \)</span>, and yet both of them would be written as <span class="math notranslate nohighlight">\( \hat{r} \)</span>  in spherical coordinates. One could take account of this by explicitly indicating the point of reference: <span class="math notranslate nohighlight">\( \hat{r}(\theta, \phi), \hat{\theta}(\theta, \phi), \hat{\phi}(\theta, \phi) \)</span>, but this would be cumbersome, and as long as you are alert to the problem, I don’t think it will cause difficulties. In particular, do not naively combine the spherical components of vectors associated with different points (in Fig. 1.37, <span class="math notranslate nohighlight">\( \vec{A} + \vec{B} = 0 \)</span>, not <span class="math notranslate nohighlight">\( 2 \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = -1 \)</span> , not <span class="math notranslate nohighlight">\( +1 \)</span>). Beware of differentiating a vector that is expressed in spherical coordinates, since the unit vectors themselves are functions of position (<span class="math notranslate nohighlight">\( \partial \hat{r} / \partial \theta = \hat{\theta} \)</span>, for example). And do not take <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span> outside an integral, as I did with the Cartesian unit vectors. In general, if you’re uncertain about the validity of an operation, rewrite the problem using Cartesian coordinates, for which this difficulty does not arise.</p>
-<p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
+<p><img alt="Figure 1.37" src="../../../_images/1.37.png" /></p>
 <p>An infinitesimal displacement in the <span class="math notranslate nohighlight">\( \hat{r} \)</span>  direction is simply dr (Fig. 1.38a), just as an infinitesimal element of length in the x direction is dx:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathrm{d} l_r = dr \tag{1.65}
 \]</div>
-<p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
+<p><img alt="Figure 1.38" src="../../../_images/1.38.png" /></p>
 <p>On the other hand, an infinitesimal element of length in the <span class="math notranslate nohighlight">\( \hat{\theta} \)</span> direction (Fig 1.38b) is <em>not</em> just <span class="math notranslate nohighlight">\( \mathrm{d} \theta \)</span> - that doesn’t even have the right units for a length! Rather,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -520,9 +531,9 @@ x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \c
 \mathrm{d} \vec{a}_2 = \mathrm{d} l_r \mathrm{d} l_{\phi} \hat{\theta} = r \mathrm{d} r \mathrm{d} \phi \hat{\theta}
 \]</div>
 <p>Notice, finally, that <span class="math notranslate nohighlight">\( r \)</span> ranges from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( \infty \)</span>, <span class="math notranslate nohighlight">\( \phi \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( 2 \pi \)</span>, and <span class="math notranslate nohighlight">\( \theta \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( \pi \)</span>.</p>
-<p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
+<p><img alt="Figure 1.39" src="../../../_images/1.39.png" /></p>
 <section id="example-1-13">
-<h3>Example 1.13<a class="headerlink" href="#example-1-13" title="Permalink to this headline">#</a></h3>
+<h3>Example 1.13<a class="headerlink" href="#example-1-13" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -583,13 +594,13 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 </section>
 </section>
 <section id="cylindrical-coordinates">
-<h2>1.4.2: Cylindrical Coordinates<a class="headerlink" href="#cylindrical-coordinates" title="Permalink to this headline">#</a></h2>
+<h2>1.4.2: Cylindrical Coordinates<a class="headerlink" href="#cylindrical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>The cylindrical coordinates <span class="math notranslate nohighlight">\( (s, \phi, z) \)</span> of a point P are defined in Fig 1.42. Notice that <span class="math notranslate nohighlight">\( \phi \)</span> has the same meaning as in spherical coordinates, and z is the same as Cartesian. <span class="math notranslate nohighlight">\( s \)</span> is the distance to P <em>from the z axis</em>, whereas the spherical coordinate <span class="math notranslate nohighlight">\( r \)</span> is the distance <em>from the origin</em>. The relation to Cartesian coordinates is somewhat cleaner than the spherical sort</p>
 <div class="math notranslate nohighlight">
 \[
 x = s \cos \phi, \qquad y = s \sin \phi, \qquad z = z \tag{1.74}
 \]</div>
-<p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
+<p><img alt="Figure 1.42" src="../../../_images/1.42.png" /></p>
 <p>The unit vectors (Prob 1.42) are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -668,11 +679,10 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch1-3.html"
@@ -692,10 +702,7 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -762,8 +769,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

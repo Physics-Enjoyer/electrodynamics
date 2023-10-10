@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5.2: The Biot-Savart Law &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5.3: The Divergence and Curl of B" href="ch5-3.html" />
     <link rel="prev" title="5.1: The Lorentz Force Law" href="ch5-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -457,9 +468,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-biot-savart-law">
-<h1>5.2: The Biot-Savart Law<a class="headerlink" href="#the-biot-savart-law" title="Permalink to this headline">#</a></h1>
+<h1>5.2: The Biot-Savart Law<a class="headerlink" href="#the-biot-savart-law" title="Permalink to this heading">#</a></h1>
 <section id="steady-currents">
-<h2>5.2.1: Steady Currents<a class="headerlink" href="#steady-currents" title="Permalink to this headline">#</a></h2>
+<h2>5.2.1: Steady Currents<a class="headerlink" href="#steady-currents" title="Permalink to this heading">#</a></h2>
 <p>Stationary charges produce electric fields that are constant in time; hence the term <strong>electrostatics</strong>. Steady currents produce magnetic fields that are constant in time; the theory of steady currents is called <strong>magnetostatics</strong>.</p>
 <p>By “<strong>steady current</strong>” I mean a continuous flow that has been going on forever, without change and without piling up anywhere (some people call them “stationary currents”; to my ear, that’s a contradiction in terms). Formally, electro/magnetostatics is the regime</p>
 <div class="math notranslate nohighlight">
@@ -475,7 +486,7 @@ When a steady current flows in a wire, its magnitude I must be the same all alon
 \]</div>
 </section>
 <section id="the-magnetic-field-of-a-steady-current">
-<h2>5.2.2: The Magnetic Field of a Steady Current<a class="headerlink" href="#the-magnetic-field-of-a-steady-current" title="Permalink to this headline">#</a></h2>
+<h2>5.2.2: The Magnetic Field of a Steady Current<a class="headerlink" href="#the-magnetic-field-of-a-steady-current" title="Permalink to this heading">#</a></h2>
 <p>The magnetic field of a steady line current is given by the <strong>Biot-Savart law</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -494,13 +505,13 @@ When a steady current flows in a wire, its magnitude I must be the same all alon
 <p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
 <p>As the starting point for magnetostatics, the Biot-Savart law plays a role analogous to Coulomb’s law in electrostatics. Indeed, the <span class="math notranslate nohighlight">\( 1/ \Delta r  ^2 \)</span> dependence is common to both laws</p>
 <section id="example-5-5">
-<h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Find the magnetic field a distance <em>s</em> from a long straight wire carrying a steady current <em>I</em> (Fig 5.18).</p>
-<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+<p><img alt="Figure 5.18" src="../../../_images/5.18.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
@@ -555,18 +566,18 @@ F = I_2 \left( \frac{\mu_0 I_1}{2 \pi d}  \right) \int \mathrm{d} l
 f = \frac{ \mu_0}{2 \pi } \frac{I_1 I_2}{d} \tag{5.40}
 \]</div>
 <p>If the currents are antiparallel (one up, one down), the force is repulsive - consistent again with the qualitative observations of Sect 5.1.1.</p>
-<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+<p><img alt="Figure 5.20" src="../../../_images/5.20.png" /></p>
 </div>
 </div>
 </section>
 <section id="example-5-6">
-<h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Find the magnetic field a distance z above the center of a circular loop of radius <em>R</em>, which carries a steady current <em>I</em> (Fig 5.21)</p>
-<p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
+<p><img alt="Figure 5.21" src="../../../_images/5.21.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -629,11 +640,10 @@ B(z) = \frac{\mu_0 I}{4 \pi} \left( \frac{\cos \theta}{\Delta r  ^2} \right) 2 \
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch5-1.html"
@@ -653,10 +663,7 @@ B(z) = \frac{\mu_0 I}{4 \pi} \left( \frac{\cos \theta}{\Delta r  ^2} \right) 2 \
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -724,8 +731,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

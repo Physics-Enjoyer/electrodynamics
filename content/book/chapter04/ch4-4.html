@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4.4: Linear Dielectrics &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Chapter 5" href="../chapter05/chapter-intro.html" />
     <link rel="prev" title="4.3: The Electric Displacement" href="ch4-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -466,9 +477,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="linear-dielectrics">
-<h1>4.4: Linear Dielectrics<a class="headerlink" href="#linear-dielectrics" title="Permalink to this headline">#</a></h1>
+<h1>4.4: Linear Dielectrics<a class="headerlink" href="#linear-dielectrics" title="Permalink to this heading">#</a></h1>
 <section id="susceptibility-permittivity-dielectric-constant">
-<h2>4.4.1: Susceptibility, Permittivity, Dielectric Constant<a class="headerlink" href="#susceptibility-permittivity-dielectric-constant" title="Permalink to this headline">#</a></h2>
+<h2>4.4.1: Susceptibility, Permittivity, Dielectric Constant<a class="headerlink" href="#susceptibility-permittivity-dielectric-constant" title="Permalink to this heading">#</a></h2>
 <p>In the first few sections of this chapter we did not commit ourselves as to the <em>cause</em> of <strong>P</strong>; we dealt only with the effects of polarization. From the qualitative essence of 4.1, though, we know that the polarization of a dielectric ordinarily results from an electric field, which lines up the atomic or molecular dipoles. For many substances, in fact, the polarization is proportional to the field, provided <strong>E</strong> is not too strong:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -502,13 +513,13 @@ In linear media we have</p>
 <p>is called the <strong>relative permittivity</strong>, or <strong>dielectric constant</strong>, of the material. Dielectric constants for some common substances are listed in Table 4.2. (Notice that <span class="math notranslate nohighlight">\( \epsilon_r \)</span> is greater than 1, for all ordinary materials.) Of course, the permittivity and the dielectric constant do not convey any information that was not already available in the susceptibility, nor is there anything essentially new in Eq 4.32: the physics of linear dielectrics is all contained in <span class="math notranslate nohighlight">\( \eqref{4.30} \)</span></p>
 <p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
 <section id="example-4-5">
-<h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A metal sphere of radius <em>a</em> carries a charge <em>Q</em> (Fig 4.20). It is surrounded, out to radius <em>b</em>, by linear dielectric material of permittivity <span class="math notranslate nohighlight">\( \epsilon \)</span>. Find the potential at the center (relative to infinity).</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.20" src="../../../_images/4.20.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
@@ -555,7 +566,7 @@ V = - \int _{\infty} ^0 \vec{E} \cdot \mathrm{d} \vec{l} = \\
 </div>
 </div>
 <p>Since linear dielectrics give us cases where <strong>P</strong> and <strong>D</strong> are proportional to <strong>E</strong>, you might suppose that linear dielectrics escape the defect in the parallel between <strong>E</strong> and <strong>D</strong>. Does it not follow that their curls, like <strong>E</strong>’s, must vanish? Unfortunately, it does not, for the line integral of <strong>P</strong> around a closed path that straddles the boundary between one type of material and another need not be zero, even though the integral of <strong>E</strong> around the same loop <em>must</em> be. The reason is that the proportionality factor <span class="math notranslate nohighlight">\( \epsilon_0 \chi_e \)</span> is different on the two sides. For instance, at the interface between a polarized dielectric and the vacuum (Fig 4.21), <strong>P</strong> is zero on one side but not on the other. Around this loop, <span class="math notranslate nohighlight">\( \oint \vec{P} \cdot \mathrm{d} \vec{l} \neq 0 \)</span>, and hence, by Stokes’ theorem, the curl of <strong>P</strong> cannot vanish everywhere within the loop (in fact, it is infinite at the boundary).</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.21" src="../../../_images/4.21.png" /></p>
 <p>Of course, if space is <em>entirely</em> filled with a homogeneous linear dielectric, then this objection is void; in this rather special circumstance</p>
 <div class="math notranslate nohighlight">
 \[
@@ -578,16 +589,16 @@ V = - \int _{\infty} ^0 \vec{E} \cdot \mathrm{d} \vec{l} = \\
 \vec{E} = \frac{1}{4 \pi \epsilon} \frac{q}{r^2} \hat{r} \tag{4.36}
 \]</div>
 <p>(that’s <span class="math notranslate nohighlight">\( \epsilon \)</span>, not <span class="math notranslate nohighlight">\( \epsilon_0 \)</span>), and the force it exerts on nearby charges is reduced accordingly. But it’s not that there is anything wrong with Coulomb’s law; rather, the polarization of the medium partially “shields” the charge, by surrounding it with bound charge of the opposite sign (Fig 4.22)
-<img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<img alt="Figure 4.22" src="../../../_images/4.22.png" /></p>
 </section>
 <section id="example-4-6">
-<h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A parallel-plate capacitor (Fig 4.23) is filled with insulating material of dielectric constant <span class="math notranslate nohighlight">\( \epsilon_r \)</span>. What effect does this have on its capacitance?</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.23" src="../../../_images/4.23.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -613,7 +624,7 @@ P_z &amp; = \epsilon_0 (\chi_{e,zx} E_x + \chi_{e, zy} E_y + \chi_{e, zz} E_z) \
 </section>
 </section>
 <section id="boundary-value-problems-with-linear-dielectrics">
-<h2>4.4.2: Boundary Value Problems with Linear Dielectrics<a class="headerlink" href="#boundary-value-problems-with-linear-dielectrics" title="Permalink to this headline">#</a></h2>
+<h2>4.4.2: Boundary Value Problems with Linear Dielectrics<a class="headerlink" href="#boundary-value-problems-with-linear-dielectrics" title="Permalink to this heading">#</a></h2>
 <p>In a (homogeneous isotropic) linear dielectric, the bound charge density is proportional to the free charge density</p>
 <div class="math notranslate nohighlight">
 \[
@@ -635,13 +646,13 @@ P_z &amp; = \epsilon_0 (\chi_{e,zx} E_x + \chi_{e, zy} E_y + \chi_{e, zz} E_z) \
 V_{above} = V_{below} \tag{4.42}
 \]</div>
 <section id="example-4-7">
-<h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A sphere of homogeneous linear dielectric material is placed in an otherwise uniform electric field <span class="math notranslate nohighlight">\( \vec{E_0} \)</span> (Fig 4.27). Find the electric field inside the sphere</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.27" src="../../../_images/4.27.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
@@ -714,13 +725,13 @@ V_{in} (r, \theta) = - \frac{3 E_0}{\epsilon_r + 2} r \cos \theta = - \frac{3E_0
 </div>
 </section>
 <section id="example-4-8">
-<h3>Example 4.8<a class="headerlink" href="#example-4-8" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.8<a class="headerlink" href="#example-4-8" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Suppose the entire region below the plane <span class="math notranslate nohighlight">\( z = 0 \)</span> in Fig 4.28 is filled with uniform linear dielectric material of susceptibility <span class="math notranslate nohighlight">\( \chi_e \)</span>. Calculate the force on a point charge <em>q</em> situated a distance <em>d</em> above the origin.</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.28" src="../../../_images/4.28.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
@@ -781,7 +792,7 @@ V = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q + q_b}{\sqrt{x^2 + y^2 + (z - d)^2
 </section>
 </section>
 <section id="energy-in-dielectric-systems">
-<h2>4.4.3: Energy in Dielectric Systems<a class="headerlink" href="#energy-in-dielectric-systems" title="Permalink to this headline">#</a></h2>
+<h2>4.4.3: Energy in Dielectric Systems<a class="headerlink" href="#energy-in-dielectric-systems" title="Permalink to this heading">#</a></h2>
 <p>It takes work to charge up a capacitor (Eq 2.55):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -850,7 +861,7 @@ W = \frac{1}{2} \int \vec{D} \cdot \vec{E} \mathrm{d} \tau \tag{4.58}
 <li><p>With the unpolarized dielectric in place, we bring in the free charges, one by one, allowing the dielectric to respond as it sees fit. If this is what you mean by “assemble the system” (and ordinarily it is, since free charge is what we actually push around), then Eq. 4.58 is the formula you want. In this case the “spring” energy is included, albeit indirectly, because the force you must apply to the free charge depends on the disposition of the bound charge; as you move the free charge, you are automatically stretching those “springs.”</p></li>
 </ol>
 <section id="example-4-9">
-<h3>Example 4.9<a class="headerlink" href="#example-4-9" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.9<a class="headerlink" href="#example-4-9" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
@@ -967,10 +978,10 @@ W_{spring} =  \frac{\rho_f}{6 \epsilon_0 \epsilon_r} \frac{(\epsilon_r - 1) \rho
 </section>
 </section>
 <section id="forces-on-dielectrics">
-<h2>4.4.4: Forces on Dielectrics<a class="headerlink" href="#forces-on-dielectrics" title="Permalink to this headline">#</a></h2>
+<h2>4.4.4: Forces on Dielectrics<a class="headerlink" href="#forces-on-dielectrics" title="Permalink to this heading">#</a></h2>
 <p>Just as a conductor is attracted into an electric field (Eq. 2.51), so too is a dielectric - and for essentially the same reason: the bound charge tends to accumulate near the free charge of the opposite sign. But the calculation of forces on dielectrics can be surprisingly tricky. Consider, for example, the case of a slab of linear dielectric material, partially inserted between the plates of a parallel-plate capacitor (Fig. 4.30). We have always pretended that the field is uniform inside a parallel-plate capacitor, and zero outside. If this were literally true, there would be no net force on the dielectric at all, since the field everywhere would be perpendicular to the plates. However, there is in reality a <strong>fringing field</strong> around the edges, which for most purposes can be ignored but in this case is responsible for the whole effect. (Indeed, the field could not terminate abruptly at the edge of the capacitor, for if it did, the line integral of E around the closed loop shown in Fig. 4.31 would not be zero.) It is this nonuniform fringing field that pulls the dielectric into the capacitor.</p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
-<p><img alt="Figure 4.2" src="../../../_images/4.2.png" /></p>
+<p><img alt="Figure 4.30" src="../../../_images/4.30.png" /></p>
+<p><img alt="Figure 4.31" src="../../../_images/4.31.png" /></p>
 <p>Fringing fields are notoriously difficult to calculate; luckily, we can avoid this altogether, by the following ingenious method. Let W be the energy of the system - it depends, of course, on the amount of overlap. If I pull the dielectric out an infinitesimal distance dx, the energy is changed by an amount equal to the work done:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1059,11 +1070,10 @@ whether you plan to hold <em>Q</em> constant or <em>V</em> constant - it is dete
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch4-3.html"
@@ -1083,10 +1093,7 @@ whether you plan to hold <em>Q</em> constant or <em>V</em> constant - it is dete
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1163,8 +1170,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

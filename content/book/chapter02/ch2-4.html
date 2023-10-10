@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.4: Work and Energy in Electrostatics &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.5: Conductors" href="ch2-5.html" />
     <link rel="prev" title="2.3: Electric Potential" href="ch2-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -458,9 +469,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="work-and-energy-in-electrostatics">
-<h1>2.4: Work and Energy in Electrostatics<a class="headerlink" href="#work-and-energy-in-electrostatics" title="Permalink to this headline">#</a></h1>
+<h1>2.4: Work and Energy in Electrostatics<a class="headerlink" href="#work-and-energy-in-electrostatics" title="Permalink to this heading">#</a></h1>
 <section id="the-work-it-takes-to-move-a-charge">
-<h2>2.4.1: The Work it Takes to Move a Charge<a class="headerlink" href="#the-work-it-takes-to-move-a-charge" title="Permalink to this headline">#</a></h2>
+<h2>2.4.1: The Work it Takes to Move a Charge<a class="headerlink" href="#the-work-it-takes-to-move-a-charge" title="Permalink to this heading">#</a></h2>
 <p>Suppose you have a stationary configuration of source charges, and you want to move a test charge Q from point a to point b (Fig. 2.39). <em>Question</em>: how much work will you have to do? At any point along the path, the electric force on Q is <span class="math notranslate nohighlight">\( \vec{F} = Q \vec{E} \)</span>; the force you must exert, in opposition to the electric force, is <span class="math notranslate nohighlight">\( -Q\vec{E} \)</span>. The work you do is therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -487,7 +498,7 @@ W = Q V(\vec{r}) {2.39} \tag{2.39}
 <p>In this sense, potential is potential <em>energy</em> (the work it takes to create a system) <em>per unit charge</em> (just as the field is force per unit charge).</p>
 </section>
 <section id="the-energy-of-a-point-charge-distribution">
-<h2>2.4.2: The Energy of a Point Charge Distribution<a class="headerlink" href="#the-energy-of-a-point-charge-distribution" title="Permalink to this headline">#</a></h2>
+<h2>2.4.2: The Energy of a Point Charge Distribution<a class="headerlink" href="#the-energy-of-a-point-charge-distribution" title="Permalink to this heading">#</a></h2>
 <p>How much work would it take to assemble an entire collection of point charges? Imagine bringing in the charges, one by one, from far away (Fig 2.40). The first charge <span class="math notranslate nohighlight">\( q_1 \)</span> takes <em>no</em> work, since there is no field to fight against. Now bring in <span class="math notranslate nohighlight">\( q_2 \)</span>. According to <span class="math notranslate nohighlight">\( \eqref{2.39} \)</span> this will cost you <span class="math notranslate nohighlight">\( q_2 V_1(\vec{r}_2) \)</span>, where <span class="math notranslate nohighlight">\( V_1 \)</span> is the potential due to <span class="math notranslate nohighlight">\( q_1 \)</span> , and <span class="math notranslate nohighlight">\( \vec{r}_2 \)</span> is the place we’re putting <span class="math notranslate nohighlight">\( q_2 \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -532,7 +543,7 @@ W = \frac{1}{2} \sum_{i = 1} ^n q_i V(\vec{r_i}) {2.42} \tag{2.42}
 <p>That’s how much work it takes to assemble a configuration of point charges; it’s also the amount of work you’d get back if you dismantled the system. In the meantime, it represents energy stored in the configuration (“potential” energy, if you insist, though for obvious reasons I prefer to avoid that word in this context).</p>
 </section>
 <section id="the-energy-of-a-continuous-charge-distribution">
-<h2>2.4.3: The Energy of a Continuous Charge Distribution<a class="headerlink" href="#the-energy-of-a-continuous-charge-distribution" title="Permalink to this headline">#</a></h2>
+<h2>2.4.3: The Energy of a Continuous Charge Distribution<a class="headerlink" href="#the-energy-of-a-continuous-charge-distribution" title="Permalink to this heading">#</a></h2>
 <p>For a volume charge density <span class="math notranslate nohighlight">\( \rho \)</span>, <span class="math notranslate nohighlight">\( \eqref{2.42} \)</span> becomes</p>
 <div class="math notranslate nohighlight">
 \[
@@ -559,7 +570,7 @@ W = \frac{\epsilon_0}{2} \left[ - \int \vec{E} \cdot (\nabla {V}) \mathrm{d}{\ta
 W = \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau} \quad \text{(all space)} {2.45} \tag{2.45}
 \]</div>
 <section id="example-2-9">
-<h3>Example 2.9<a class="headerlink" href="#example-2-9" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.9<a class="headerlink" href="#example-2-9" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -596,7 +607,7 @@ W_{tot} = \frac{\epsilon_0}{2 (4 \pi \epsilon_0)^2}\int \left( \frac{q^2}{r^4}  
 </section>
 </section>
 <section id="comments-on-electrostatic-energy">
-<h2>2.4.4: Comments on Electrostatic Energy<a class="headerlink" href="#comments-on-electrostatic-energy" title="Permalink to this headline">#</a></h2>
+<h2>2.4.4: Comments on Electrostatic Energy<a class="headerlink" href="#comments-on-electrostatic-energy" title="Permalink to this heading">#</a></h2>
 <p><strong>A perplexing “inconsistency”</strong></p>
 <p>Equation <span class="math notranslate nohighlight">\( \eqref{2.45} \)</span> clearly implies that the energy of a stationary charge distribution is always positive. On the other hand, <span class="math notranslate nohighlight">\( \eqref{2.42} \)</span> (from which <span class="math notranslate nohighlight">\( \eqref{2.45} \)</span> was in fact derived), can be positive or negative. For instance, according to <span class="math notranslate nohighlight">\( \eqref{2.42} \)</span> the energy of two equal but opposite charges a distance <span class="math notranslate nohighlight">\( \Delta r  \)</span> apart is <span class="math notranslate nohighlight">\( -(1/4 \pi \epsilon_0) (q^2/\Delta r ) \)</span>. What’s gone wrong? Which equation is correct?</p>
 <p>The answer is that <em>both</em> are correct, but they speak to slightly different questions. Equation <span class="math notranslate nohighlight">\( \eqref{2.42} \)</span> does not take into account the work necessary to make the point charges in the first place; we started with point charges and simply found the work required to bring them together. This is wise strategy, since <span class="math notranslate nohighlight">\( \eqref{2.45} \)</span> indicates that the energy of a point charge is in fact <em>infinite</em></p>
@@ -650,11 +661,10 @@ W_{tot} &amp; = &amp; \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau} = \frac{\ep
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch2-3.html"
@@ -674,10 +684,7 @@ W_{tot} &amp; = &amp; \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau} = \frac{\ep
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -746,8 +753,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

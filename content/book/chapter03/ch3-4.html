@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.4: Multipole Expansion &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Chapter 4" href="../chapter04/chapter-intro.html" />
     <link rel="prev" title="3.3: Separation of Variables" href="ch3-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -458,12 +469,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="multipole-expansion">
-<h1>3.4: Multipole Expansion<a class="headerlink" href="#multipole-expansion" title="Permalink to this headline">#</a></h1>
+<h1>3.4: Multipole Expansion<a class="headerlink" href="#multipole-expansion" title="Permalink to this heading">#</a></h1>
 <section id="approximate-potentials-at-large-distances">
-<h2>3.4.1: Approximate Potentials at Large Distances<a class="headerlink" href="#approximate-potentials-at-large-distances" title="Permalink to this headline">#</a></h2>
+<h2>3.4.1: Approximate Potentials at Large Distances<a class="headerlink" href="#approximate-potentials-at-large-distances" title="Permalink to this heading">#</a></h2>
 <p>If you are very far away from a localized charge distribution, it “looks” like a point charge, and the potential is - to good approximation - <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) Q/r \)</span>, where <span class="math notranslate nohighlight">\( Q \)</span> is the total charge. We have often used this as a check on formulas for <em>V</em>. But what if <span class="math notranslate nohighlight">\( Q \)</span> is zero? You might reply that the potential is then approximately zero, and of course, you’re right in a sense (indeed, the potential at large <em>r</em> is pretty small even if <em>Q</em> is not zero). But we’re looking for something a bit more informative than that.</p>
 <section id="example-3-10">
-<h3>Example 3.10<a class="headerlink" href="#example-3-10" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.10<a class="headerlink" href="#example-3-10" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -501,7 +512,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\Delta r _{+}} - \frac{q}{\Del
 V(r) \approx \frac{1}{4 \pi \epsilon_0} \frac{qd \cos \theta}{r^2} \tag{3.90} 
 \]</div>
 <p>The potential of a dipole goes like <span class="math notranslate nohighlight">\( 1/r^2 \)</span> at large <em>r</em>; as we might have anticipated, it falls off more rapidly than the potential of a point charge. If we put together a pair of equal and opposite dipoles to make a <strong>quadrupole</strong>, the potential goes like <span class="math notranslate nohighlight">\( 1/r^3 \)</span>; for back-to-back quadrupoles (an <strong>octopole</strong>), it goes like <span class="math notranslate nohighlight">\( 1/r^4 \)</span>, and so on. Figure 3.27 summarizes the hierarchy; for completeness I have included the electric <strong>monopole</strong> (point charge), whose potential, of course, goes like <span class="math notranslate nohighlight">\( 1/r \)</span></p>
-<p><img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<p><img alt="Figure 3.27" src="../../../_images/3.27.png" /></p>
 </div>
 </div>
 <p>Example 3.10 pertains to a very special charge configuration. I propose now to develop a systematic expansion for the potential of <em>any</em> localized charge distribution, in powers of <span class="math notranslate nohighlight">\( 1/r \)</span>. Figure 3.28 defines the relevant variables; the potential at <strong>r</strong> is given by</p>
@@ -509,7 +520,7 @@ V(r) \approx \frac{1}{4 \pi \epsilon_0} \frac{qd \cos \theta}{r^2} \tag{3.90}
 \[
 V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\Delta r } \rho(\vec{r'}) \mathrm{d}{\tau'} \tag{3.91}
 \]</div>
-<p><img alt="Figure 3.26" src="../../../_images/3.26.png" />
+<p><img alt="Figure 3.28" src="../../../_images/3.28.png" />
 Using the law of cosines,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -561,7 +572,7 @@ As it stands, <span class="math notranslate nohighlight">\( \eqref{3.95} \)</spa
 </section>
 </section>
 <section id="the-monopole-and-dipole-terms">
-<h2>3.4.2: The Monopole and Dipole Terms<a class="headerlink" href="#the-monopole-and-dipole-terms" title="Permalink to this headline">#</a></h2>
+<h2>3.4.2: The Monopole and Dipole Terms<a class="headerlink" href="#the-monopole-and-dipole-terms" title="Permalink to this heading">#</a></h2>
 <p>Ordinarily, the multipole expansion is dominated (at large r) by the monopole term:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -604,13 +615,13 @@ V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} 
 \vec{p} = q\vec{r'_+} - q \vec{r_- ' } = q(\vec{r' _+} - \vec{r'_-}) = q \vec{d} \tag{3.101}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{d} \)</span> is the vector from the negative charge to the positive one (Fig. 3.29).
-<img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<img alt="Figure 3.29" src="../../../_images/3.29.png" /></p>
 <p>Is this consistent with what we got in Example 3.10? Yes: If you put <span class="math notranslate nohighlight">\( \eqref{3.101} \)</span> into <span class="math notranslate nohighlight">\( \eqref{3.99} \)</span>, you recover <span class="math notranslate nohighlight">\( \eqref{3.90} \)</span>. Notice, however, that this is only the <em>approximate</em> potential of the physical dipole - evidently there are higher multipole contributions. Of course, as you go farther and farther away, <span class="math notranslate nohighlight">\( V_{dip} \)</span> becomes a better and better approximation, since the higher terms die off more rapidly with increasing <span class="math notranslate nohighlight">\( r \)</span>. By the same token, at a fixed <span class="math notranslate nohighlight">\( r \)</span> the dipole approximation improves as you shrink the separation distance <span class="math notranslate nohighlight">\( d \)</span>. To construct a <strong>perfect dipole</strong> whose potential is given exactly by <span class="math notranslate nohighlight">\( \eqref{3.99} \)</span>, you’d have to let <span class="math notranslate nohighlight">\( d \)</span> approach zero. Unfortunately you then lose the dipole term too, unless you simultaneously arrange for q to go to infinity! A <em>physical</em> dipole becomes a <em>pure</em> dipole, then, in the rather artificial limit <span class="math notranslate nohighlight">\( d \rightarrow 0. q \rightarrow \infty \)</span>, with the product <span class="math notranslate nohighlight">\( qd = p \)</span> held fixed. When someone uses the word “dipole,” you can’t always tell whether they mean a <em>physical</em> dipole (with finite separation between the charges) or an <em>ideal</em> dipole. If in doubt, assume that <em>d</em> is small enough that you can safely apply <span class="math notranslate nohighlight">\( \eqref{3.99} \)</span>.</p>
 <p>Dipole moments are <em>vectors</em>, and they add accordingly: if you have two dipoles <span class="math notranslate nohighlight">\( \vec{p_1} \)</span> and <span class="math notranslate nohighlight">\( \vec{p_2} \)</span>, the total dipole moment is <span class="math notranslate nohighlight">\( \vec{p_1} + \vec{p_2} \)</span>. For instance, with four charges at the corners of a square, as shown in Fig. 3.30, the net dipole moment is zero. You can see this by combining the charges in pairs or by adding up the four contributions individually using <span class="math notranslate nohighlight">\( \eqref{3.100} \)</span>. This is a <em>quadrupole</em>, as I indicated earlier, and its potential is dominated by the quadrupole term in the multipole expansion.
-<img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<img alt="Figure 3.30" src="../../../_images/3.30.png" /></p>
 </section>
 <section id="origin-of-coordinates-in-multipole-expansions">
-<h2>3.4.3: Origin of Coordinates in Multipole Expansions<a class="headerlink" href="#origin-of-coordinates-in-multipole-expansions" title="Permalink to this headline">#</a></h2>
+<h2>3.4.3: Origin of Coordinates in Multipole Expansions<a class="headerlink" href="#origin-of-coordinates-in-multipole-expansions" title="Permalink to this heading">#</a></h2>
 <p>I mentioned earlier that a point charge at the origin constitutes a “pure” monopole. If it is not at the origin, it’s no longer a pure monopole. For instance, the charge in Fig. 3.32 has a dipole moment <span class="math notranslate nohighlight">\( \vec{p} = q d \hat{y} \)</span>, and a corresponding dipole term in its potential. The monopole potential <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q/r \)</span>  is not quite correct for this configuration; rather, the exact potential is <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q/\Delta r  \)</span>. The multipole expansion is, remember, a series in inverse powers of r (the distance to the origin), and when we expand <span class="math notranslate nohighlight">\( 1/\Delta r  \)</span>, we get all powers, not just the first.</p>
 <p>So moving the origin (or, what amounts to the same thing, moving the charge) can radically alter a multipole expansion. The <strong>monopole moment</strong> <span class="math notranslate nohighlight">\( Q \)</span>  does not change, since the total charge is obviously independent of the coordinate system. (In Fig. 3.32, the monopole term was unaffected when we moved q away from the origin - it’s just that it was no longer the whole story: a dipole term - and for that matter all higher poles - appeared as well.) Ordinarily, the dipole moment does change when you shift the origin, but there is an important exception: If the total charge is zero, then the dipole moment is independent of the choice of origin. For suppose we displace the origin by an amount <span class="math notranslate nohighlight">\( \vec{a} \)</span>  (Fig. 3.33). The new dipole moment is then</p>
 <div class="math notranslate nohighlight">
@@ -620,18 +631,18 @@ V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} 
 &amp; = \int \vec{r'} \rho(\vec{r'}) \mathrm{d}{\tau'} - \vec{a} \int \rho(\vec{r'}) \mathrm{d}{\tau'} = \vec{p} - Q \vec{a}
 \end{aligned}
 \end{split}\]</div>
-<p><img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<p><img alt="Figure 3.32" src="../../../_images/3.32.png" /></p>
 <p>In particular, if <span class="math notranslate nohighlight">\( Q = 0 \)</span>, the <span class="math notranslate nohighlight">\( \vec{p_2} = \vec{p} \)</span>. So if someone asks for the dipole moment in Fig 3.34(a), you can answer with confidence “<span class="math notranslate nohighlight">\( q \vec{d} \)</span>,” but if you’re asked for the dipole moment in Fig 3.34(b), the appropriate response would be “With respect to what origin?”</p>
-<p><img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<p><img alt="Figure 3.34" src="../../../_images/3.34.png" /></p>
 </section>
 <section id="the-electric-field-of-a-dipole">
-<h2>3.4.4: The Electric Field of a Dipole<a class="headerlink" href="#the-electric-field-of-a-dipole" title="Permalink to this headline">#</a></h2>
+<h2>3.4.4: The Electric Field of a Dipole<a class="headerlink" href="#the-electric-field-of-a-dipole" title="Permalink to this heading">#</a></h2>
 <p>So far we have only worked with <em>potentials</em>. Now I would like to calculate the electric field of a (perfect) dipole. If we choose coordinates so that <span class="math notranslate nohighlight">\( \vec{p} \)</span> is at the origin and points in the z direction (Fig. 3.36), then the potential at <span class="math notranslate nohighlight">\( r, \theta \)</span> is <span class="math notranslate nohighlight">\( \eqref{3.99} \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 V_{dip} (r, \theta) = \frac{\hat{r} \cdot \vec{p}}{4 \pi \epsilon_0 r^2} = \frac{p \cos \theta}{4 \pi \epsilon_0 r^2} \tag{3.102} 
 \]</div>
-<p><img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<p><img alt="Figure 3.36" src="../../../_images/3.36.png" /></p>
 <p>To get the field, we take the negative gradient of <span class="math notranslate nohighlight">\( V \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -649,7 +660,7 @@ E_\phi &amp; = - \frac{1}{r \sin \theta} \frac{\partial V}{\partial \phi} = 0
 <p>This formula makes explicit reference to a particular coordinate system (spherical) and assumes a particular orientation for <span class="math notranslate nohighlight">\( \vec{p} \)</span> (along z). It can be recast in a coordinate-free form, analogous to the potential in <span class="math notranslate nohighlight">\( \eqref{3.99} \)</span>  - See problem 3.36.</p>
 <p>Notice that the dipole falls off as the inverse cube of r; the monopole field <span class="math notranslate nohighlight">\( (Q / 4 \pi \epsilon_0 r^2) \hat{r} \)</span> goes as the inverse square, of course. Quadrupole fields go like <span class="math notranslate nohighlight">\( 1/r^4 \)</span>, octopole like <span class="math notranslate nohighlight">\( 1/r^5 \)</span>, and so on. (This merely reflects how the respective potentials fall off - the gradient introduces another factor of <span class="math notranslate nohighlight">\( 1/r \)</span> ).</p>
 <p>Figure 3.37(a) shows the field lines of a “pure” dipole <span class="math notranslate nohighlight">\( \eqref{3.103} \)</span>. For comparison, I have also sketched the field lines for a “physical” dipole, in Fig 3.37(b). Notice how similar the two pictures become if you blot out the central region; up close, however, they are entirely different. Only for points <span class="math notranslate nohighlight">\( r \gg d \)</span> does <span class="math notranslate nohighlight">\( \eqref{3.103} \)</span> represent a valid approximation to the field of a physical dipole. As I mentioned earlier, this regime can be reached either by going to large <span class="math notranslate nohighlight">\( r \)</span> or by squeezing the charges very close together.
-<img alt="Figure 3.26" src="../../../_images/3.26.png" /></p>
+<img alt="Figure 3.37" src="../../../_images/3.37.png" /></p>
 </section>
 </section>
 
@@ -678,11 +689,10 @@ E_\phi &amp; = - \frac{1}{r \sin \theta} \frac{\partial V}{\partial \phi} = 0
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch3-3.html"
@@ -702,10 +712,7 @@ E_\phi &amp; = - \frac{1}{r \sin \theta} \frac{\partial V}{\partial \phi} = 0
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -774,8 +781,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

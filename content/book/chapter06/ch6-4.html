@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>6.4: Linear and Nonlinear Media &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Chapter 7" href="../chapter07/chapter-intro.html" />
     <link rel="prev" title="6.3: The Auxiliary Field H" href="ch6-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -456,9 +467,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="linear-and-nonlinear-media">
-<h1>6.4: Linear and Nonlinear Media<a class="headerlink" href="#linear-and-nonlinear-media" title="Permalink to this headline">#</a></h1>
+<h1>6.4: Linear and Nonlinear Media<a class="headerlink" href="#linear-and-nonlinear-media" title="Permalink to this heading">#</a></h1>
 <section id="magnetic-susceptibility-and-permeability">
-<h2>6.4.1: Magnetic Susceptibility and Permeability<a class="headerlink" href="#magnetic-susceptibility-and-permeability" title="Permalink to this headline">#</a></h2>
+<h2>6.4.1: Magnetic Susceptibility and Permeability<a class="headerlink" href="#magnetic-susceptibility-and-permeability" title="Permalink to this heading">#</a></h2>
 <p>In paramagnetic and diamagnetic materials, the magnetization is sustained by the field; when <strong>B</strong> is removed, <strong>M</strong> disappears. In fact, for most substances the magnetization is proportional to the field, provided the field is not too strong. For notational consistency with the electrical case (Eq. 4.30), I should express the proportionality thus</p>
 <div class="math notranslate nohighlight">
 \[
@@ -488,7 +499,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\( \mu \)</span> is called the <strong>permeability</strong> of the material. In a vacuum, where there is no matter to magnetize, the susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span> vanishes, and the permeability is <span class="math notranslate nohighlight">\( \mu_0 \)</span>. That’s why <span class="math notranslate nohighlight">\( \mu_0 \)</span> is called the <strong>permeability of free space</strong>.</p>
 <p align="center"> <img alt="Figure 6.t1" src="/r/img/griffiths/6.t1.png" /> </p>
 <section id="example-6-3">
-<h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -518,7 +529,7 @@ document.write(`
 </div>
 </div>
 <p>You might suppose that linear media escape the defect in the parallel between <strong>B</strong> and <strong>H</strong>: since <strong>M</strong> and <strong>H</strong> are now proportional to <strong>B</strong>, does it not follow that their divergence, like <strong>B</strong>’s, must always vanish? Unfortunately, it does not; at the boundary between two materials of different permeability, the divergence of <strong>M</strong> can actually be infinite. For instance, at the end of a cylinder of linear paramagnetic material, <strong>M</strong> is zero on one side but not on the other. For the “Gaussian pillbox” shown in Fig 6.23, <span class="math notranslate nohighlight">\( \oint \vec{M} \cdot \mathrm{d} \vec{a} \neq 0 \)</span>, and hence, by the divergence theorem, <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{M} \)</span> cannot vanish everywhere within it.</p>
-<p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
+<p><img alt="Figure 6.23" src="../../../_images/6.23.png" /></p>
 <p>Incidentally, the volume bound current density in a homogeneous linear material is proportional to the <em>free</em> current density:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -528,20 +539,20 @@ document.write(`
 </section>
 </section>
 <section id="ferromagnetism">
-<h2>6.4.2: Ferromagnetism<a class="headerlink" href="#ferromagnetism" title="Permalink to this headline">#</a></h2>
+<h2>6.4.2: Ferromagnetism<a class="headerlink" href="#ferromagnetism" title="Permalink to this heading">#</a></h2>
 <p>In a linear medium, the alignment of atomic dipoles is maintained by a magnetic field imposed from the outside. Ferromagnets - which are emphatically not linear - require no external fields to sustain magnetization; the alignment is “frozen in.” Like paramagnetism, ferromagnetism involves the magnetic dipoles associated with the spins of unpaired electrons. The new feature, which makes ferromagnetism so different from paramagnetism, is the interaction between nearby dipoles: In a ferromagnet, each dipole “likes” to point in the same direction as its neighbors. The reason for this preference is essentially quantum mechanical, and I won’t try to explain it here; it is enough to know that the correlation is so strong as to align virtually 100% of the unpaired electron spins. If you could somehow magnify a piece of iron and “see” the individual dipoles as tiny arrows, it would look something like Fig. 6.25, with all the spins pointing the same way.</p>
 <p>But if that is true, why isn’t every wrench and nail a powerful magnet? The answer is that the alignment occurs in relatively small patches, called <strong>domains</strong>. Each domain contains billions of dipoles, all lined up (these domains are actually visible under a microscope, given suitable etching techniques - see Fig 6.26), but the domains themselves are randomly oriented. The household wrench contains an enormous number of domains, and their magnetic fields cancel, so the wrench as a whole is not magnetized. (Actually, the orientation of domains is not completely random; within a given crystal, there may be some preferential alignment along the crystal axes. But there will be just as many domains pointing one way as the other, so there is still no large-scale magnetization. Moreover, the crystals themselves are randomly oriented within any sizable chunk of metal.)</p>
 <p>How, then, would you produce a permanent magnet, such as they sell in toy stores? If you put a piece of iron into a strong magnetic field, the torque <span class="math notranslate nohighlight">\( \vec{N} = \vec{m} \times \vec{B} \)</span> tends to align the dipoles parallel to the field. Since they like to stay parallel to their neighbors, most of the dipoles will resist this torque. However, at the boundary between two domains, there are competing neighbors, and the torque will throw its weight on the side of the domain most nearly parallel to the field; this domain will win some converts, at the expense of the less favorably oriented one. The net effect of the magnetic field, then, is to move the domain boundaries. Domains parallel to the field grow, and the others shrink. If the field is strong enough, one domain takes over entirely, and the iron is said to be saturated.</p>
-<p><img alt="Figure 6.22" src="../../../_images/6.22.png" />
-<img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
+<p><img alt="Figure 6.25" src="../../../_images/6.25.png" />
+<img alt="Figure 6.26" src="../../../_images/6.26.png" /></p>
 <p>It turns out that this process (the shifting of domain boundaries in response to an external field) is not entirely reversible: When the field is switched off, there will be some return to randomly oriented domains, but it is far from complete; there remains a preponderance of domains in the original direction. You now have a permanent magnet.</p>
 <p>A simple way to accomplish this, in practice, is to wrap a coil of wire around the object to be magnetized (Fig. 6.27). Run a current I through the coil; this provides the external magnetic field (pointing to the left in the diagram). As you increase the current, the field increases, the domain boundaries move, and the magnetization grows. Eventually, you reach the saturation point, with all the dipoles aligned, and a further increase in current has no effect on M (Fig. 6.28, point b).</p>
 <p>Now suppose you <em>reduce</em> the current. Instead of retracing the path back to <span class="math notranslate nohighlight">\( \vec{M} = 0 \)</span>, there is only a partial return to randomly oriented domains; M decreases, but even with the current off there is some residual magnetization (point c). The wrench is now a permanent magnet. If you want to eliminate the remaining magnetization, you’ll have to run a current backwards through the coil (a negative <em>I</em>). Now the external field points to the right, and as you increase I (negatively), M drops down to zero (point d). If you turn I still higher, you soon reach saturation in the other direction-all the dipoles now pointing to the right (e). At this stage, switching off the current will leave the wrench with a permanent magnetization to the right (point f). To complete the story, turn I on again in the positive sense: M returns to zero (point g), and eventually to the forward saturation point (b).</p>
-<p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
+<p><img alt="Figure 6.27" src="../../../_images/6.27.png" /></p>
 <p>The path we have traced out is called a hysteresis loop. Notice that the magnetization of the wrench depends not only on the applied field (that is, on/), but also on its previous magnetic “history.” For instance, at three different times in our experiment the current was zero (a, c, and f), yet the magnetization was different for each of them. Actually, it is customary to draw hysteresis loops as plots of <strong>B</strong> against <strong>H</strong>, rather than <em>M</em> against <em>I</em>. (If our coil is approximated by a long solenoid, with <em>n</em> turns per unit length, then <span class="math notranslate nohighlight">\( H = nI \)</span>, so H and I are proportional. Meanwhile, <span class="math notranslate nohighlight">\( \vec{B} = \mu_0 (\vec{H} + \vec{M}) \)</span>, but in practice <strong>M</strong> is huge compared to <strong>H</strong>, so to all intents and purposes <strong>B</strong> is proportional to <strong>M</strong>.)</p>
-<p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
+<p><img alt="Figure 6.28" src="../../../_images/6.28.png" /></p>
 <p>To make the units consistent (teslas), I have plotted <span class="math notranslate nohighlight">\( (\mu_0 H) \)</span>  horizontally (Fig. 6.29); notice, however, that the vertical scale is <span class="math notranslate nohighlight">\( 10^4 \)</span> times greater than the horizontal one. Roughly speaking, <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span> is the field our coil would have produced in the absence of any iron; <strong>B</strong> is what we actually got, and compared to <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span>, it is gigantic. A little current goes a long way, when you have ferromagnetic materials around. That’s why anyone who wants to make a powerful electromagnet will wrap the coil around an iron core. It doesn’t take much of an external field to move the domain boundaries, and when you do that, you have all the dipoles in the iron working with you.</p>
-<p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
+<p><img alt="Figure 6.29" src="../../../_images/6.29.png" /></p>
 <p>One final point about ferromagnetism: It all follows, remember, from the fact that the dipoles within a given domain line up parallel to one another. Random thermal motions compete with this ordering, but as long as the temperature doesn’t get too high, they cannot budge the dipoles out of line. It’s not surprising, though, that very high temperatures do destroy the alignment. What is surprising is that this occurs at a precise temperature (<span class="math notranslate nohighlight">\( 770^\circ C \)</span>, for iron). Below this temperature (called the Curie point), iron is ferromagnetic; above, it is paramagnetic. The Curie point is rather like the boiling point or the freezing point in that there is no gradual transition from ferro- to para-magnetic behavior, any more than there is between water and ice. These abrupt changes in the properties of a substance, occurring at sharply defined temperatures, are known in statistical mechanics as phase transitions.</p>
 </section>
 </section>
@@ -571,11 +582,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch6-3.html"
@@ -595,10 +605,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -665,8 +672,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

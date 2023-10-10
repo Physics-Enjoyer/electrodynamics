@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>9.4.1 Electromagnetic Waves in Conductors &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="9.5.1 Guided Waves" href="ch9-5.html" />
     <link rel="prev" title="9.3: Electromagnetic Waves in Matter" href="ch9-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -455,7 +466,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="electromagnetic-waves-in-conductors">
-<h1>9.4.1 Electromagnetic Waves in Conductors<a class="headerlink" href="#electromagnetic-waves-in-conductors" title="Permalink to this headline">#</a></h1>
+<h1>9.4.1 Electromagnetic Waves in Conductors<a class="headerlink" href="#electromagnetic-waves-in-conductors" title="Permalink to this heading">#</a></h1>
 <p>When we formulated our description of how electromagnetic waves move through linear media, we relied on the stipulation that the free charge density <span class="math notranslate nohighlight">\( \rho_f \)</span>  and free current density <span class="math notranslate nohighlight">\( \vec J _f \)</span> were zero. In the case of conductors, we’re going to need to re-visit that assumption.</p>
 <p>As a refresher, when we last took a good look at conductors we had just moved beyond the electrostatic picture. In statics, we could assume that the field within a conductor is always zero, because any field would eventually (quickly) cause the free changes to arrange in such a way as to cancel the field. Now, we want to see how the conductor responds when we have a varying electric field.</p>
 <p>So, what do we already know about electric fields in matter?</p>
@@ -607,7 +618,7 @@ k \approx \kappa \rightarrow \omega \sqrt{\frac{\epsilon \mu}{2}} \left[ \frac{\
 <p>!!! info “In conductors, there is a phase difference between the <span class="math notranslate nohighlight">\( \vec E \)</span> and <span class="math notranslate nohighlight">\( \vec B \)</span> fields. For a good conductor, the phase shift is <span class="math notranslate nohighlight">\( 45 ^\circ \)</span>“</p>
 </section>
 <section id="reflection-at-a-conducting-surface">
-<h1>9.4.2: Reflection at a Conducting Surface<a class="headerlink" href="#reflection-at-a-conducting-surface" title="Permalink to this headline">#</a></h1>
+<h1>9.4.2: Reflection at a Conducting Surface<a class="headerlink" href="#reflection-at-a-conducting-surface" title="Permalink to this heading">#</a></h1>
 <p>In this situation, we consider a wave traveling through a linear medium (or vacuum) impinging on a conducting surface at a normal to the surface. We can go ahead and write down the general boundary conditions:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -685,7 +696,7 @@ E_1 ^\perp = E_2 ^\perp = 0 \rightarrow \sigma_f   = 0
 <p>Which is to say, a perfect conductor is a perfect reflector with a <span class="math notranslate nohighlight">\( 180^\circ \)</span> phase change at the interface. The obvious applications are silvered mirrors and fully metal mirrors.</p>
 </section>
 <section id="the-frequency-dependence-of-permittivity">
-<h1>9.4.3: The Frequency Dependence of Permittivity<a class="headerlink" href="#the-frequency-dependence-of-permittivity" title="Permalink to this headline">#</a></h1>
+<h1>9.4.3: The Frequency Dependence of Permittivity<a class="headerlink" href="#the-frequency-dependence-of-permittivity" title="Permalink to this heading">#</a></h1>
 <p>For electromagnetic radiation, dispersion is a measure of the frequency response of a propagating wave on the permittivity, permeability, and conductivity of the medium it is propagating through.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -824,11 +835,10 @@ n = \tilde{n} = 1 + \frac{Nq^2}{2m\epsilon_0} \sum_j \frac{f_j}{(\omega _j ^2 - 
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch9-3.html"
@@ -848,10 +858,7 @@ n = \tilde{n} = 1 + \frac{Nq^2}{2m\epsilon_0} \sum_j \frac{f_j}{(\omega _j ^2 - 
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -917,8 +924,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

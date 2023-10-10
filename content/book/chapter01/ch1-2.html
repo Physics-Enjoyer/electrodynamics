@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.2: Differential Calculus &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1.3: Integral Calculus" href="ch1-3.html" />
     <link rel="prev" title="1.1 Vector Algebra" href="ch1-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -469,9 +480,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="differential-calculus">
-<h1>1.2: Differential Calculus<a class="headerlink" href="#differential-calculus" title="Permalink to this headline">#</a></h1>
+<h1>1.2: Differential Calculus<a class="headerlink" href="#differential-calculus" title="Permalink to this heading">#</a></h1>
 <section id="ordinary-derivatives">
-<h2>1.2.1: “Ordinary” Derivatives<a class="headerlink" href="#ordinary-derivatives" title="Permalink to this headline">#</a></h2>
+<h2>1.2.1: “Ordinary” Derivatives<a class="headerlink" href="#ordinary-derivatives" title="Permalink to this heading">#</a></h2>
 <p>Suppose we have a function of one variable, <span class="math notranslate nohighlight">\( f(x) \)</span>. <em>Question</em>: what does the derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> do for us? <em>Answer</em>: It tells us how rapidly the function <span class="math notranslate nohighlight">\( f(x) \)</span> varies when we change the argument x by a tiny amount, <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -481,7 +492,7 @@ document.write(`
 <em>Geometrical interpretation</em>: The derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> is the slope of the graph of <em>f</em> versus <em>x</em>.</p>
 </section>
 <section id="gradient">
-<h2>1.2.2: Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">#</a></h2>
+<h2>1.2.2: Gradient<a class="headerlink" href="#gradient" title="Permalink to this heading">#</a></h2>
 <p>Suppose, now, that we have a function of three variables-say, the temperature T (x, y, z) in this room. (Start out in one comer, and set up a system of axes; then for each point (x, y, z) in the room, T gives the temperature at that spot.) We want to generalize the notion of “derivative” to functions like T, which depend not on one but on three variables.</p>
 <p>A derivative is supposed to tell us how fast the function varies, if we move a little distance. But this time the situation is more complicated, because it depends on what direction we move: If we go straight up, then the temperature will prob- ably increase fairly rapidly, but if we move horizontally, it may not change much at all. In fact, the question “How fast does T vary?” has an infinite number of answers, one for each direction we might choose to explore.</p>
 <p>Fortunately, the problem is not as bad as it looks. A theorem on partial derivatives states that</p>
@@ -494,7 +505,7 @@ document.write(`
 <span class="math notranslate nohighlight">\( \eqref{1.34} \)</span> is reminiscent of a dot product:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\mathrm{d}{T} = \left( \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} \right)\cdot ( \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} )\\
+\mathrm{d}{T} = \left( \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} \right)\cdot ( \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} \\
 = (\nabla {T}) \cdot (\mathrm{d}{\vec{l}}) \tag{1.35}
 \end{split}\]</div>
 <p>where</p>
@@ -517,7 +528,7 @@ document.write(`
 <p>Imagine you are standing on a hillside. Look all around you, and find the direction of steepest ascent. That is the direction of the gradient. Now measure the slope in that direction (rise over run). That is the magnitude of the gradient. (Here the function we’re talking about is the height of the hill, and the coordinates it depends on are positions-latitude and longitude, say. This function depends on only two variables, not three, but the geometrical meaning of the gradient is easier to grasp in two dimensions.) Notice from Eq. 1.37 that the direction of maximum descent is opposite to the direction of maximum ascent, while at right angles <span class="math notranslate nohighlight">\( (\theta = 90^{\circ}) \)</span> the slope is zero (the gradient is perpendicular to the contour lines). You can conceive of surfaces that do not have these properties, but they always have “kinks” in them, and correspond to non-differentiable functions.</p>
 <p>What would it mean for the gradient to vanish? If <span class="math notranslate nohighlight">\( \nabla {T} = 0 \)</span>  at (x, y, z), then <span class="math notranslate nohighlight">\( \mathrm{d}{T} = 0 \)</span>  for small displacements about the point (x, y, z). This is, then, a stationary point of the function T(x, y, z). It could be a maximum (a summit), a minimum (a valley), a saddle point (a pass), or a “shoulder.” This is analogous to the situation for functions of one variable, where a vanishing derivative signals a maximum, a minimum, or an inflection. In particular, if you want to locate the extrema of a function of three variables, set its gradient equal to zero.</p>
 <section id="example-1-3">
-<h3>Example 1.3<a class="headerlink" href="#example-1-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 1.3<a class="headerlink" href="#example-1-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -541,7 +552,7 @@ document.write(`
 </section>
 </section>
 <section id="the-del-operator">
-<h2>1.2.3: The Del Operator<a class="headerlink" href="#the-del-operator" title="Permalink to this headline">#</a></h2>
+<h2>1.2.3: The Del Operator<a class="headerlink" href="#the-del-operator" title="Permalink to this heading">#</a></h2>
 <p>The gradient has the formal appearance of a vector, <span class="math notranslate nohighlight">\( \nabla \)</span>, “multiplying” a scalar T:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -569,7 +580,7 @@ document.write(`
 <p>We have already discussed the gradient. In the following sections we examine the other two vector derivatives: divergence and curl.</p>
 </section>
 <section id="the-divergence">
-<h2>1.2.4: The Divergence<a class="headerlink" href="#the-divergence" title="Permalink to this headline">#</a></h2>
+<h2>1.2.4: The Divergence<a class="headerlink" href="#the-divergence" title="Permalink to this heading">#</a></h2>
 <p>From the definition of <span class="math notranslate nohighlight">\( \nabla {} \)</span> we construct the divergence:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -583,9 +594,9 @@ document.write(`
 only draw the arrows at a few representative locations.)</p>
 <p>Imagine standing at the edge of a pond. Sprinkle some sawdust or pine needles
 on the surface. If the material spreads out, then you dropped it at a point of positive divergence; if it collects together, you dropped it at a point of negative divergence. (The vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>  in this model is the velocity of the water at the surface - this is a two-dimensional example, but it helps give one a “feel” for what the divergence means. A point of positive divergence is a source, or “faucet”; a point of negative divergence is a sink, or “drain.”)</p>
-<p><img alt="Figure 1.17" src="../../../_images/1.17.png" /></p>
+<p><img alt="Figure 1.18" src="../../../_images/1.18.png" /></p>
 <section id="example-1-4">
-<h3>Example 1.4<a class="headerlink" href="#example-1-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 1.4<a class="headerlink" href="#example-1-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
@@ -614,7 +625,7 @@ on the surface. If the material spreads out, then you dropped it at a point of p
 </section>
 </section>
 <section id="the-curl">
-<h2>1.2.5: The Curl<a class="headerlink" href="#the-curl" title="Permalink to this headline">#</a></h2>
+<h2>1.2.5: The Curl<a class="headerlink" href="#the-curl" title="Permalink to this heading">#</a></h2>
 <p>From the definition of <span class="math notranslate nohighlight">\( \nabla {} \)</span> we construct the curl:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -627,12 +638,12 @@ v_x &amp; v_y &amp; v_z
 &amp; + \hat{x} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) + \hat{y} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) + \hat{z} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) \tag{1.41}
 \end{aligned}
 \end{split}\]</div>
-<p><img alt="Figure 1.17" src="../../../_images/1.17.png" /></p>
+<p><img alt="Figure 1.19" src="../../../_images/1.19.png" /></p>
 <p>Notice that the curl of a vector function is, like any cross product, a vector.</p>
 <p><em>Geometrical Interpretation</em>:  The name curl is also well chosen, for <span class="math notranslate nohighlight">\( \nabla \times {\vec{v}} \)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span>  swirls around the point in question. Thus the three functions in Fig. 1.18 all have zero curl (as you can easily check for yourself), whereas the functions in Fig. 1.19 have a substantial curl, pointing in the z direction, as the natural right-hand rule would suggest. Imagine (again) you are standing at the edge of a pond. Float a small paddlewheel (a cork with toothpicks pointing out radially would do); if it starts to rotate, then you placed it at a point
 of nonzero curl. A whirlpool would be a region of large curl.</p>
 <section id="example-1-5">
-<h3>Example 1.5<a class="headerlink" href="#example-1-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 1.5<a class="headerlink" href="#example-1-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
@@ -665,7 +676,7 @@ of nonzero curl. A whirlpool would be a region of large curl.</p>
 </section>
 </section>
 <section id="product-rules">
-<h2>1.2.6: Product Rules<a class="headerlink" href="#product-rules" title="Permalink to this headline">#</a></h2>
+<h2>1.2.6: Product Rules<a class="headerlink" href="#product-rules" title="Permalink to this heading">#</a></h2>
 <p>The calculation of ordinary derivatives is facilitated by a number of rules, such as the sum rule</p>
 <div class="math notranslate nohighlight">
 \[
@@ -763,7 +774,7 @@ f \vec{A} \quad \text{(scalar times vector),} \\
 \]</div>
 <p>However, since these can be obtained quickly from the corresponding product rules, there is no point in listing them separately.</p>
 <section id="second-derivatives">
-<h3>1.2.7: Second Derivatives<a class="headerlink" href="#second-derivatives" title="Permalink to this headline">#</a></h3>
+<h3>1.2.7: Second Derivatives<a class="headerlink" href="#second-derivatives" title="Permalink to this heading">#</a></h3>
 <p>The gradient, the divergence, and the curl are the only first derivatives we can make with <span class="math notranslate nohighlight">\( \nabla  \)</span>; by applying <span class="math notranslate nohighlight">\( \nabla  \)</span> twice, we can construct five species of second derivatives. The gradient <span class="math notranslate nohighlight">\( \nabla {T} \)</span> is a vector, so we can take the divergence and curl of it:</p>
 <ol class="arabic simple">
 <li><p>Divergence of gradient: <span class="math notranslate nohighlight">\( \nabla \cdot  (\nabla {T}) \)</span></p></li>
@@ -846,11 +857,10 @@ f \vec{A} \quad \text{(scalar times vector),} \\
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch1-1.html"
@@ -858,7 +868,7 @@ f \vec{A} \quad \text{(scalar times vector),} \\
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1.1 Vector Algebra</p>
+        <p class="prev-next-title"><em>1.1</em> Vector Algebra</p>
       </div>
     </a>
     <a class="right-next"
@@ -870,10 +880,7 @@ f \vec{A} \quad \text{(scalar times vector),} \\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -953,8 +960,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

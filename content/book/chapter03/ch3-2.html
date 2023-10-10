@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.2: The Method of Images &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.3: Separation of Variables" href="ch3-3.html" />
     <link rel="prev" title="3.1: Laplace’s Equation" href="ch3-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -458,9 +469,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-method-of-images">
-<h1>3.2: The Method of Images<a class="headerlink" href="#the-method-of-images" title="Permalink to this headline">#</a></h1>
+<h1>3.2: The Method of Images<a class="headerlink" href="#the-method-of-images" title="Permalink to this heading">#</a></h1>
 <section id="the-classic-image-problem">
-<h2>3.1.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Permalink to this headline">#</a></h2>
+<h2>3.1.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Permalink to this heading">#</a></h2>
 <p>Suppose a point charge <em>q</em> is held a distance <em>d</em> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \Delta r  \)</span>, for <em>q</em> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <em>q</em> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
 <p><img alt="Figure 3.10" src="../../../_images/3.10.png" /></p>
 <p>From a mathematical point of view, our problem is to solve Poisson’s equation in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>, with a single point charge <em>q</em> at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>, subject to the boundary conditions</p>
@@ -483,7 +494,7 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 <p>Notice the crucial role played by the uniqueness theorem in this argument: without it, no one would believe this solution, since it was obtained for a completely different charge distribution. But the uniqueness theorem certifies it: If it satisfies Poisson’s equation in the region of interest, and assumes the correct value at the boundaries, then it must be right.</p>
 </section>
 <section id="induced-surface-charge">
-<h2>3.2.2: Induced Surface Charge<a class="headerlink" href="#induced-surface-charge" title="Permalink to this headline">#</a></h2>
+<h2>3.2.2: Induced Surface Charge<a class="headerlink" href="#induced-surface-charge" title="Permalink to this heading">#</a></h2>
 <p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to Eq. 2.49,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -523,7 +534,7 @@ Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \
 <p>The total charge induced on the plane is <span class="math notranslate nohighlight">\( -q \)</span>, as (with benefit of hindsight) you can perhaps convince yourself it <em>had</em> to be.</p>
 </section>
 <section id="force-and-energy">
-<h2>3.2.3: Force and Energy<a class="headerlink" href="#force-and-energy" title="Permalink to this headline">#</a></h2>
+<h2>3.2.3: Force and Energy<a class="headerlink" href="#force-and-energy" title="Permalink to this heading">#</a></h2>
 <p>The charge <span class="math notranslate nohighlight">\( q \)</span> is attracted toward the plane, because of the negative induced charge. Let’s calculate the force of attraction. Since the potential in the vicinity of <span class="math notranslate nohighlight">\( q \)</span> is the same as in the analog problem (the one with <span class="math notranslate nohighlight">\( +q \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span> but no conductor), so also is the field and, therefore, the force</p>
 <div class="math notranslate nohighlight">
 \[
@@ -556,16 +567,16 @@ W &amp; = &amp; \int _{\infty} ^{d} \vec{F} \cdot \mathrm{d}{\vec{l}} = \frac{1}
 <p>As I move <span class="math notranslate nohighlight">\( q \)</span> toward the conductor, I do work only on q. It is true that induced charge is moving in over the conductor, but this costs me nothing, since the whole conductor is at potential zero. By contrast, if I simultaneously bring in two point charges (with no conductor), I do work on both of them, and the total is (again) twice as great.</p>
 </section>
 <section id="other-image-problems">
-<h2>3.2.4: Other Image Problems<a class="headerlink" href="#other-image-problems" title="Permalink to this headline">#</a></h2>
+<h2>3.2.4: Other Image Problems<a class="headerlink" href="#other-image-problems" title="Permalink to this heading">#</a></h2>
 <p>The method just described is not limited to a single point charge; any stationary charge distribution near a grounded conducting plane can be treated in the same way, by introducing its mirror image - hence the name method of images. (Remember that the image charges have the <em>opposite</em> sign; this is what guarantees that the xy plane will be at potential zero.) There are also some exotic problems that can be handled in similar fashion; the nicest of these is the following.</p>
 <section id="example-3-2">
-<h3>Example 3.2<a class="headerlink" href="#example-3-2" title="Permalink to this headline">#</a></h3>
+<h3>Example 3.2<a class="headerlink" href="#example-3-2" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A point charge <em>q</em> is situated a distance <em>a</em> from the center of a grounded conducting sphere of radius <em>R</em> (Fig. 3.12). Find the potential outside the sphere</p>
-<p><img alt="Figure 3.10" src="../../../_images/3.10.png" /></p>
+<p><img alt="Figure 3.12" src="../../../_images/3.12.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
@@ -623,11 +634,10 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch3-1.html"
@@ -647,10 +657,7 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -719,8 +726,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
