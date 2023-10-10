@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.5: Conductors &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Chapter 3" href="../chapter03/chapter-intro.html" />
     <link rel="prev" title="2.4: Work and Energy in Electrostatics" href="ch2-4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -462,9 +473,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conductors">
-<h1>2.5: Conductors<a class="headerlink" href="#conductors" title="Permalink to this headline">#</a></h1>
+<h1>2.5: Conductors<a class="headerlink" href="#conductors" title="Permalink to this heading">#</a></h1>
 <section id="basic-properties">
-<h2>2.5.1: Basic Properties<a class="headerlink" href="#basic-properties" title="Permalink to this headline">#</a></h2>
+<h2>2.5.1: Basic Properties<a class="headerlink" href="#basic-properties" title="Permalink to this heading">#</a></h2>
 <p>In an <em>insulator</em>, such as glass or rubber, each electron is on a short leash, attached to a particular atom. In a metallic <em>conductor</em>, by contrast, one or more electrons per atom are free to roam. (In liquid conductors such as salt water, it is ions that do the moving). A <em>perfect</em> conductor would contain an unlimited supply of free charges. In real life there are no perfect conductors, but metals come pretty close, for most purposes.</p>
 <p>From this definition, the basic electrostatic properties of ideal conductors immediately follow:</p>
 <p><strong>(i) E = 0 inside a conductor</strong>. Why? Because if there were any field, those free charges would move, and it wouldn’t be <em>electrostatics</em> any more. Hmm… that’s hardly a satisfactory explanation; maybe all it proves is that you can’t have electrostatics when conductors are present. We had better examine what happens when you put a conductor into an external electric field <span class="math notranslate nohighlight">\( \vec{E_0} \)</span> (Fig. 2.42). Initially, the field will drive any free positive charges to the right, and negative ones to the left. (In practice, it’s the negative charges - electrons - that do the moving, but when they depart, the right side is left with a net positive charge - the stationary nuclei - so it doesn’t really matter which charges move; the effect is the same). When they come to the edge of the material, the charges pile up: plus on the right side, minus on the left. Now, these <strong>induced charges</strong> produce a field of their own, <span class="math notranslate nohighlight">\( \vec{E_1} \)</span>, which, as you can see from the figure, is in the opposite direction to <span class="math notranslate nohighlight">\( \vec{E_0} \)</span>. That’s the crucial point, for it means that the field of the induced charges tends to cancel the original field. Charge will continue to flow until this cancellation is complete, and the resultant field inside the conductor is precisely zero. The whole process is practically instantaneous.</p>
@@ -473,22 +484,22 @@ document.write(`
 <p><strong>(iii) Any net charge resides on the surface</strong>. That’s the only place left.</p>
 <p><strong>(iv) A conductor is an equipotential</strong>. For if a and b are any two points within (or at the surface of) a given conductor, <span class="math notranslate nohighlight">\( V(b) - V(a) = - \int _{a} ^{b} \vec{E} \cdot \mathrm{d}{\vec{l}} = 0 \)</span>, and hence <span class="math notranslate nohighlight">\( V(a) = V(b) \)</span>.</p>
 <p><strong>(v) E is perpendicular to the surface, just outside a conductor.</strong> Otherwise, as in (i), charge will immediately flow around the surface until it kills off the tangential component (Fig. 2.43). (Perpendicular to the surface, charge cannot flow, of course, since it is confined to the conducting object.)</p>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><img alt="Figure 2.43" src="../../../_images/2.43.png" /></p>
 <p>I think it is astonishing that the charge on a conductor flows to the surface. Because of their mutual repulsion, the charges naturally spread out as much as possible, but for <em>all</em> of them to go to the surface seems like a waste of the interior space. Surely we could do better, from the point of view of making each charge as possible from its neighbors, to sprinkle <em>some</em> of them throughout the volume. Well, it simply is not so. You do best to put all the charge on the surface, and this is true regardless of the size or shape of the conductor.</p>
 <p>The problem can also be phrased in terms of energy. Like any other free dynamical system, the charge on a conductor will seek the configuration that minimizes its potential energy. What property (iii) asserts is that the electrostatic energy of a solid object (with specified shape and total charge) is a minimum when that charge is spread over the surface. For instance, the energy of a sphere is <span class="math notranslate nohighlight">\( (1 / 8 \pi \epsilon_0)(q^2 / R) \)</span> if the charge is uniformly distributed over the surface, as we found in Ex 2.9, but it is greater <span class="math notranslate nohighlight">\( (3/20 \pi \epsilon_0)(q^2 / R) \)</span> if the charge is uniformly distributed throughout the volume (Prob. 2.34).</p>
 </section>
 <section id="induced-charges">
-<h2>2.5.2: Induced Charges<a class="headerlink" href="#induced-charges" title="Permalink to this headline">#</a></h2>
+<h2>2.5.2: Induced Charges<a class="headerlink" href="#induced-charges" title="Permalink to this heading">#</a></h2>
 <p>If you hold a charge +q near an uncharged conductor (Fig 2.44), the two will attract one another. The reason for this is that q will pull minus charges over to the near side and repel plus charges to the far side (Another way to think of it is that the charge moves around in such a way as to kill off the field of q for points inside the conductor, where the total field must be zero.) Since the negative induced charge is closer to q, there is a net force of attraction. (In chapter 3 we will calculate this force explicitly, for the case of a spherical conductor.)</p>
 <p>When I speak of the field, charge, or potential “inside” a conductor, I mean in the “meat” of the conductor. If there is some hollow cavity in the conductor, and within that cavity you put some charge, then the field in the cavity will not be zero. But in a remarkable way the cavity and its contents are electrically isolated from the outside world by the surrounding conductor (Fig. 2.45). No external fields penetrate the conductor; they are canceled at the outer surface by the induced charge there. Similarly, the field due to charges within the cavity is canceled, for all exterior points, by the induced charge on the inner surface. However, the compensating charge left over on the <em>outer</em> surface of the conductor effectively “communicates” the presence of q to the outside world. The total charge induced on the cavity wall is equal and opposite to the charge inside, for if we surround the cavity with a Gaussian surface, all points of which are in the conductor (Fig 2.45), <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{a}} = 0 \)</span>, and hence (by Gauss’s law) the net enclosed charge must be zero. But <span class="math notranslate nohighlight">\( Q_{enc} = q + q_{induced} \)</span>, so <span class="math notranslate nohighlight">\( q_{induced} = - q \)</span>. Then if the conductor as a whole is electrically neutral, there must be a charge +q on its outer surface.</p>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><img alt="Figure 2.44" src="../../../_images/2.44.png" /></p>
 <hr class="docutils" />
 <section id="example-2-10">
-<h3>Example 2.10<a class="headerlink" href="#example-2-10" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.10<a class="headerlink" href="#example-2-10" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>An uncharged spherical conductor centered at the origin has a cavity of some weird shape carved out of it (Fig. 2.46). Somewhere within the cavity is a charge q. Question: What is the field outside the sphere?</p>
 </div></blockquote>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><img alt="Figure 2.46" src="../../../_images/2.46.png" /></p>
 <p><strong>Solution</strong>
 At first glance, it would appear that the answer depends on the shape of the cavity and the location of the charge. But that’s wrong: the answer is</p>
 <div class="math notranslate nohighlight">
@@ -499,11 +510,11 @@ At first glance, it would appear that the answer depends on the shape of the cav
 <p>It may occur to you that in one respect this argument is open to challenge: There are actually <em>three</em> fields at work here: <span class="math notranslate nohighlight">\( \vec{E_q}, \vec{E_{induced}} \)</span>, and <span class="math notranslate nohighlight">\( \vec{E_{leftover}} \)</span>. All we know for certain is that the sum of the three is zero inside the conductor, yet I claimed that the first two alone cancel, while the third is separately zero there. Moreover, even if the first two cancel within the conductor, who is to say they still cancel for points outside? They do not, after all, cancel for points inside the cavity. I cannot give you a completely satisfactory answer at the moment, but this much at least is true: there <em>exists</em> a way of distributing -q over the inner surface so as to cancel the field of q at all exterior points. For that same cavity could have been carved out of a <em>huge</em> spherical conductor with a radius of 27 miles or light years or whatever. In that case, the leftover +q on the outer surface is simply too far away to produce a significant field, and the other two fields would have to accomplish the cancellation by themselves. So we know they can do it… but are we sure they <em>choose</em> to? Perhaps for small spheres nature prefers some complicated three-way cancellation? Nope: As we’ll see in the uniqueness theorems of Chapter 3, electrostatics is very stingy with its options; there is always precisely one way - no more - of distributing the charge on a conductor so as to make the field inside zero. Having found a possible way, we are guaranteed that no alternative exists, even in principle.</p>
 <hr class="docutils" />
 <p>If a cavity surrounded by conducting material is itself empty of charge, then the field within the cavity is zero. For any field line would have to begin and end on the cavity wall, going from a plus charge to a minus charge (Fig 2.47). Letting that field line be part of a closed loop, the rest of which is entirely inside the conductor (where E = 0), the integral <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} \)</span> is distinctly <em>positive</em>, in violation of Eq. 2.19. It follows that <span class="math notranslate nohighlight">\( E = 0 \)</span> within an empty cavity, and there is in vact no charge on the surface of the cavity. (This is why you are relatively safe inside a metal car during a thunderstorm - you may get cooked, if lightning strikes, but you will not be electrocuted. The same principle applies to the placement of sensitive apparatus inside a grounded <strong>Faraday cage</strong>, to shield out stray electric fields. In practice, the enclosure doesn’t even have to be solid conductor - chicken wire will often suffice.)</p>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><img alt="Figure 2.47" src="../../../_images/2.47.png" /></p>
 </section>
 </section>
 <section id="surface-charge-and-the-force-on-a-conductor">
-<h2>2.5.3: Surface Charge and the Force on a Conductor<a class="headerlink" href="#surface-charge-and-the-force-on-a-conductor" title="Permalink to this headline">#</a></h2>
+<h2>2.5.3: Surface Charge and the Force on a Conductor<a class="headerlink" href="#surface-charge-and-the-force-on-a-conductor" title="Permalink to this heading">#</a></h2>
 <p>Because the field inside a conductor is zero, boundary condition Eq. 2.33 requires that the field immediately outside is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -549,8 +560,8 @@ At first glance, it would appear that the answer depends on the shape of the cav
  \]</div>
 </section>
 <section id="capacitors">
-<h2>2.5.4: Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">#</a></h2>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<h2>2.5.4: Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this heading">#</a></h2>
+<p><img alt="Figure 2.51" src="../../../_images/2.51.png" /></p>
 <p>Suppose we have two conductors, and we put charge +Q on one and -Q on the other (Fig 2.51). Since V is constant over a conductor, we can speak unambiguously of the potential difference between them:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -571,13 +582,13 @@ C \equiv \frac{Q}{V}  {2.53} \tag{2.53}
 <p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <span class="math notranslate nohighlight">\( \eqref{2.53} \)</span>, where V is the potential with infinity as the reference point.</p>
 <hr class="docutils" />
 <section id="example-2-11">
-<h3>Example 2.11<a class="headerlink" href="#example-2-11" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.11<a class="headerlink" href="#example-2-11" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Find the capacitance of a parallel-plate capacitor consisting of two metal surfaces of area A held a distance d apart (Fig. 2.52)</p>
-<p><img alt="Figure 2.42" src="../../../_images/2.42.png" /></p>
+<p><img alt="Figure 2.52" src="../../../_images/2.52.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
@@ -597,7 +608,7 @@ C = \frac{A \epsilon_0}{d} {2.54} \tag{2.54}
 </div>
 </section>
 <section id="example-2-12">
-<h3>Example 2.12<a class="headerlink" href="#example-2-12" title="Permalink to this headline">#</a></h3>
+<h3>Example 2.12<a class="headerlink" href="#example-2-12" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
@@ -669,11 +680,10 @@ W = \int_{0} ^Q \left( \frac{q}{C} \mathrm{d}{q} \right) = \frac{1}{2} \frac{Q^2
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch2-4.html"
@@ -693,10 +703,7 @@ W = \int_{0} ^Q \left( \frac{q}{C} \mathrm{d}{q} \right) = \frac{1}{2} \frac{Q^2
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -769,8 +776,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

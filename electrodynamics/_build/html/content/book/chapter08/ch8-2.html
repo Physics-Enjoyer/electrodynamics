@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8.2: Momentum &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Chapter 9" href="../chapter09/chapter-intro.html" />
     <link rel="prev" title="8.1: Charge and Energy" href="ch8-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -461,7 +472,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="momentum">
-<h1>8.2: Momentum<a class="headerlink" href="#momentum" title="Permalink to this headline">#</a></h1>
+<h1>8.2: Momentum<a class="headerlink" href="#momentum" title="Permalink to this heading">#</a></h1>
 <p>In this chapter we talk about:</p>
 <ul class="simple">
 <li><p>Electromagnetic momentum</p></li>
@@ -470,13 +481,13 @@ document.write(`
 <li><p>Angular momentum in EM fields</p></li>
 </ul>
 <section id="electromagnetic-momentum">
-<h2>8.2.1: Electromagnetic Momentum<a class="headerlink" href="#electromagnetic-momentum" title="Permalink to this headline">#</a></h2>
+<h2>8.2.1: Electromagnetic Momentum<a class="headerlink" href="#electromagnetic-momentum" title="Permalink to this heading">#</a></h2>
 <p>As it turns out, if you disregard the momentum associated with electromagnetic fields, Newton’s laws appear not to work out! Consider a basic system in cartesian coordinates of two moving point charges:</p>
 <p><img alt="Figure 8.3" src="../../../_images/8.3.png" /></p>
 <p>What happens between the two charges? Well, the magnetic field of <span class="math notranslate nohighlight">\( q_1 \)</span>  points into the page at <span class="math notranslate nohighlight">\( q_2 \)</span>, so the magnetic force on <span class="math notranslate nohighlight">\( q_2 \)</span> is to the right, and the magnetic field of <span class="math notranslate nohighlight">\( q_2 \)</span>  is out of the page at <span class="math notranslate nohighlight">\( q_1 \)</span> , so the magnetic force on <span class="math notranslate nohighlight">\( q_1 \)</span> is upward. The net electric force between the two charges is repulsive and opposite, but the magnetic forces aren’t, so <em>the electromagnetic force on <span class="math notranslate nohighlight">\( q_1 \)</span> on <span class="math notranslate nohighlight">\( q_2 \)</span> is equal but not opposite to the force of <span class="math notranslate nohighlight">\( q_2 \)</span> on <span class="math notranslate nohighlight">\( q_1 \)</span>, in violation of Newton’s third law!</em> We’ve got a problem, and we’re going to solve it by invoking the momentum of the EM field.</p>
 </section>
 <section id="the-maxwell-stress-tensor">
-<h2>8.2.2 The Maxwell Stress Tensor<a class="headerlink" href="#the-maxwell-stress-tensor" title="Permalink to this headline">#</a></h2>
+<h2>8.2.2 The Maxwell Stress Tensor<a class="headerlink" href="#the-maxwell-stress-tensor" title="Permalink to this heading">#</a></h2>
 <p>The way to recover conservation of momentum proceeds the same way we recovered the conservation of energy via the Poynting vector. Starting with the basic Coulomb/Lorentz laws, we’ll write down an expression for the electromagnetic force on charges in a volume. We’re going to integrate that over all space, which can have any distribution of charge, and relate that expression for force to an expression which only involves the field. In the interest of brevity, we’ll skip around a bit and leave the full derivations for the real textbook.</p>
 <p>Suppose we have a volume <span class="math notranslate nohighlight">\( V \)</span> containing some distribution of charge, current, and electromagnetic fields. The total force on that volume is</p>
 <div class="math notranslate nohighlight">
@@ -529,7 +540,7 @@ T_{ij} \equiv \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + 
 \end{split}\]</div>
 </section>
 <section id="conservation-of-electromagnetic-momentum">
-<h2>8.2.3 Conservation of Electromagnetic Momentum<a class="headerlink" href="#conservation-of-electromagnetic-momentum" title="Permalink to this headline">#</a></h2>
+<h2>8.2.3 Conservation of Electromagnetic Momentum<a class="headerlink" href="#conservation-of-electromagnetic-momentum" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \vec F = \dv{\vec{p}_{mech}}{t} = - \epsilon_0 \mu_0 \dv{}{t} \int_V \vec S \mathrm{d} \tau + \oint \overline{\vec T} \cdot \mathrm{d} \vec a
@@ -552,7 +563,7 @@ T_{ij} \equiv \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + 
 - \frac{\partial \vec g}{\partial t} + \nabla \cdot  \overline{\vec T} = 0
 \]</div>
 <section id="example-problem-8-7">
-<h3>Example: Problem 8.7<a class="headerlink" href="#example-problem-8-7" title="Permalink to this headline">#</a></h3>
+<h3>Example: Problem 8.7<a class="headerlink" href="#example-problem-8-7" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -606,7 +617,7 @@ T_{ij} \equiv \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + 
 </section>
 </section>
 <section id="angular-momentum-in-em-fields">
-<h2>8.2.4 Angular Momentum in EM Fields<a class="headerlink" href="#angular-momentum-in-em-fields" title="Permalink to this headline">#</a></h2>
+<h2>8.2.4 Angular Momentum in EM Fields<a class="headerlink" href="#angular-momentum-in-em-fields" title="Permalink to this heading">#</a></h2>
 <p>As a reminder, we associate with the electromagnetic fields an energy density</p>
 <div class="math notranslate nohighlight">
 \[
@@ -624,13 +635,13 @@ u_{em} = \frac{1}{2} \epsilon_0 E^2 + \frac{\mu_0}{2} B^2
 \]</div>
 <p>where the presence of <span class="math notranslate nohighlight">\( \vec r \)</span> means it’s defined about some point or axis.</p>
 <section id="example-8-4">
-<h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Imagine a very long solenoid with radius <span class="math notranslate nohighlight">\( R \)</span>, <span class="math notranslate nohighlight">\( n \)</span> turns per unit length, and current <span class="math notranslate nohighlight">\( I \)</span>. Coaxial with the solenoid are two long cylindrical (non-conducting) shells of length <span class="math notranslate nohighlight">\( l \)</span> - one inside the solenoid at radius <span class="math notranslate nohighlight">\( a \)</span> carries a charge <span class="math notranslate nohighlight">\( +Q \)</span> distributed uniformly over its surface; the other outside the solenoid at radius <span class="math notranslate nohighlight">\( b \)</span> carries charge <span class="math notranslate nohighlight">\( -Q \)</span> . When the current in the solenoid is gradually reduced to nothing, the cylinders begin to rotate. Question: where does the angular momentum come from?</p>
-<p><img alt="Figure 8.3" src="../../../_images/8.3.png" /></p>
+<p><img alt="Figure 8.7" src="../../../_images/8.7.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -750,11 +761,10 @@ E_a 2 \pi a = - \mu_0 n \frac{\mathrm{d} I}{\mathrm{d} t} \pi a^2 \rightarrow \v
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch8-1.html"
@@ -774,10 +784,7 @@ E_a 2 \pi a = - \mu_0 n \frac{\mathrm{d} I}{\mathrm{d} t} \pi a^2 \rightarrow \v
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -849,8 +856,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

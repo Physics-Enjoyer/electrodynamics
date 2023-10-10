@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>7.2: Electromagnetic Induction &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="7.3: Maxwell’s Equations" href="ch7-3.html" />
     <link rel="prev" title="7.1 Electromotive Force" href="ch7-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -472,9 +483,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="electromagnetic-induction">
-<h1>7.2: Electromagnetic Induction<a class="headerlink" href="#electromagnetic-induction" title="Permalink to this headline">#</a></h1>
+<h1>7.2: Electromagnetic Induction<a class="headerlink" href="#electromagnetic-induction" title="Permalink to this heading">#</a></h1>
 <section id="faraday-s-law">
-<h2>7.2.1: Faraday’s Law<a class="headerlink" href="#faraday-s-law" title="Permalink to this headline">#</a></h2>
+<h2>7.2.1: Faraday’s Law<a class="headerlink" href="#faraday-s-law" title="Permalink to this heading">#</a></h2>
 <p>In 1831 Michael Faraday reported on a series of experiments, including three that (with some violence to history) can be characterized as follows:</p>
 <p><strong>Experiment 1:</strong>. He pulled a loop of wire to the right through a magnetic field (Fig 7.21a). A current flowed in the loop.</p>
 <p><strong>Experiment 2:</strong> He moved the magnet to the left, holding the loop still (Fig 7.21b). Again, a current flowed in the loop.</p>
@@ -516,19 +527,19 @@ document.write(`
 <p>will appear in the loop.</p>
 <p>Many people call this “Faraday’s law.” Maybe I’m overly fastidious, but I find this confusing. There are really two totally different mechanisms underlying Eq. 7.17, and to identify them both as “Faraday’s law” is a little like saying that because identical twins look alike we ought to call them by the same name. In Faraday’s first experiment, it’s the Lorentz force law at work; the emf is magnetic. But in the other two it’s an electric field (induced by the changing magnetic field) that does the job. Viewed in this light, it is quite astonishing that all three processes yield the same formula for the emf. In fact, it was precisely this “coincidence” that led Einstein to the special theory of relativity - he sought a deeper understanding of what is, in classical electrodynamics, a peculiar accident. But that’s a story for chapter 12. In the meantime, I shall reserve the term “Faraday’s law” for electric fields induced by changing magnetic fields, and I do not regard Experiment 1 as an instance of Faraday’s law.</p>
 <section id="example-7-5">
-<h3>Example 7.5<a class="headerlink" href="#example-7-5" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.5<a class="headerlink" href="#example-7-5" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A long cylindrical magnet of length <span class="math notranslate nohighlight">\( L \)</span>  and radius <span class="math notranslate nohighlight">\( a \)</span>  carries a uniform magnetization <span class="math notranslate nohighlight">\( \vec{M} \)</span>  parallel to its axis. It passes at constant velocity <span class="math notranslate nohighlight">\( \vec{v} \)</span>  through a circular wire ring of slightly larger diameter (Fig. 7.22). Graph the emf induced in the ring, as a function of time.</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.22" src="../../../_images/7.22.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 “A”</label><div class="sd-tab-content docutils">
 <p>The magnetic field is the same as that of a long solenoid with surface current <span class="math notranslate nohighlight">\( \vec{K}_b = M \hat{\phi} \)</span> . So the field inside is <span class="math notranslate nohighlight">\( \vec{B} = \mu_0 \vec{M} \)</span> , except near the ends, where it starts to spread out. The flux through the ring is zero when the magnet is far away; it builds up to a maximum of <span class="math notranslate nohighlight">\( \mu_0 M \pi a^2 \)</span>  as the leading end passes through; and it drops back to zero as the trailing end emerges (Fig. 7.23a). The emf is (minus) the derivative of <span class="math notranslate nohighlight">\( \Phi \)</span>  with respect to time, so it consists of two spikes, as shown in Fig. 7.23b.</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.23" src="../../../_images/7.23.png" /></p>
 </div>
 </div>
 <p>Keeping track of the signs in Faraday’s law can be a real headache. For instance, in Ex. 7.5 we would like to know which way around the ring the induced current flows. In principle, the right-hand rule does the job (we called <span class="math notranslate nohighlight">\( \Phi \)</span>  positive to the left, in Fig. 7.22, so the positive direction for current in the ring is counter-clockwise, as viewed from the left; since the first spike in Fig. 7.23b is negative, the first current pulse flows clockwise, and the second counterclockwise). But there’s a handy rule, called Lenz’s law, whose sole purpose is to help you get the directions right:</p>
@@ -537,13 +548,13 @@ document.write(`
 <p>The induced current will flow in such a direction that the flux it produces tends to cancel the change. (As the front end of the magnet in Ex. 7.5 enters the ring, the flux increases, so the current in the ring must generate a field to the right - it therefore flows clockwise.) Notice that it is the change in flux, not the flux itself, that nature abhors (when the tail end of the magnet exits the ring, the flux drops, so the induced current flows counterclockwise, in an effort to restore it). Faraday induction is a kind of “inertial” phenomenon: A conducting loop “likes” to maintain a constant flux through it; if you try to change the flux, the loop responds by sending a current around in such a direction as to frustrate your efforts. (It doesn’t succeed completely; the flux produced by the induced current is typically only a tiny fraction of the original. All Lenz’s law tells you is the direction of the flow.)</p>
 </section>
 <section id="example-7-6">
-<h3>Example 7.6<a class="headerlink" href="#example-7-6" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.6<a class="headerlink" href="#example-7-6" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 “Q”</label><div class="sd-tab-content docutils">
 <p>The ‘jumping ring’ demonstration. If you wind a solenoidal coil around an iron core (the iron is there to beef up the magnetic field), place a metal ring on top, and plug it in, the ring will jump several feet in the air (Fig 7.24). Why?</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.24" src="../../../_images/7.24.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -554,7 +565,7 @@ document.write(`
 </section>
 </section>
 <section id="the-induced-electric-field">
-<h2>7.2.2: The Induced Electric Field<a class="headerlink" href="#the-induced-electric-field" title="Permalink to this headline">#</a></h2>
+<h2>7.2.2: The Induced Electric Field<a class="headerlink" href="#the-induced-electric-field" title="Permalink to this heading">#</a></h2>
 <p>Faraday’s law generalizes the electrostatic rule <span class="math notranslate nohighlight">\( \nabla \times  \vec{E} = 0 \)</span>  to the time-dependent regime. The divergence of <span class="math notranslate nohighlight">\( \vec{E} \)</span>  is still given by Gauss’s law (<span class="math notranslate nohighlight">\( \nabla \cdot  \vec{E} = \frac{1}{\epsilon_0} \rho \)</span> ). If <span class="math notranslate nohighlight">\( \vec{E} \)</span>  is a pure Faraday field (due exclusively to a changing <span class="math notranslate nohighlight">\( \vec{B} \)</span> , with <span class="math notranslate nohighlight">\( \rho = 0 \)</span> ), then</p>
 <div class="math notranslate nohighlight">
 \[
@@ -577,13 +588,13 @@ document.write(`
 \]</div>
 <p>The rate of change of (magnetic) flux through the Amperian loop plays the role formerly assigned to <span class="math notranslate nohighlight">\( \mu_0 I_{enc} \)</span>.</p>
 <section id="example-7-7">
-<h3>Example 7.7<a class="headerlink" href="#example-7-7" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.7<a class="headerlink" href="#example-7-7" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A uniform magnetic field <span class="math notranslate nohighlight">\( \vec{B}(t) \)</span>, pointing straight up, fills the shaded circular region of Fig. 7.25. If <span class="math notranslate nohighlight">\( \vec{B} \)</span> is changing with time, what is the induced electric field?</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.25" src="../../../_images/7.25.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
@@ -603,7 +614,7 @@ document.write(`
 </div>
 </section>
 <section id="example-7-8">
-<h3>Example 7.8<a class="headerlink" href="#example-7-8" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.8<a class="headerlink" href="#example-7-8" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
@@ -641,13 +652,13 @@ N = b \lambda \left( - \dv{\Phi}{t} = - \pi ^2 \frac{\mathrm{d} B}{\mathrm{d} t}
 <p>I must warn you, now, of a small fraud that tarnishes many applications of Faraday’s law: Electromagnetic induction, of course, occurs only when the magnetic fields are changing, and yet we would like to use the apparatus of magnetostatics (Ampere’s law, the Biot-Savart law, and the rest) to calculate those magnetic fields. Technically, any result derived in this way is only approximately correct. But in practice the error is usually negligible, unless the field fluctuates extremely rapidly, or you are interested in points very far from the source. Even the case of a wire snipped by a pair of scissors (Prob. 7.18) is static enough for Ampere’s law to apply. This regime, in which magnetostatic rules can be used to calculate the magnetic field on the right hand side of Faraday’s law, is called quasistatic. Generally speaking, it is only when we come to electromagnetic waves and radiation that we must worry seriously about the breakdown of magnetostatics itself.</p>
 </section>
 <section id="example-7-9">
-<h3>Example 7.9<a class="headerlink" href="#example-7-9" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.9<a class="headerlink" href="#example-7-9" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
 “Q”</label><div class="sd-tab-content docutils">
 <p>An infinitely long straight wire carries a slowly varying current <span class="math notranslate nohighlight">\( I(t) \)</span>. Determine the induced electric field, as a function of the distance <span class="math notranslate nohighlight">\( s \)</span> from the wire</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.27" src="../../../_images/7.27.png" /></p>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-9">
@@ -679,7 +690,7 @@ s \ll c \tau \tag{7.21}
 </section>
 </section>
 <section id="inductance">
-<h2>7.2.3: Inductance<a class="headerlink" href="#inductance" title="Permalink to this headline">#</a></h2>
+<h2>7.2.3: Inductance<a class="headerlink" href="#inductance" title="Permalink to this heading">#</a></h2>
 <p>Suppose you have two loops of wire, at rest (Fig 7.30). If you run a steady current <span class="math notranslate nohighlight">\( I_1 \)</span> around loop 1, it produces a magnetic field <span class="math notranslate nohighlight">\( \vec{B}_1 \)</span> . Some of the field lines pass through loop 2; let <span class="math notranslate nohighlight">\( \Phi_2 \)</span> be the flux of <span class="math notranslate nohighlight">\( \vec{B}_1 \)</span> through 2. You might have a tough time actually calculating <span class="math notranslate nohighlight">\( \vec{B_1} \)</span>, but a glance at the Biot-Savart law,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -696,7 +707,7 @@ s \ll c \tau \tag{7.21}
 \Phi_2 = M_{21} I_1 \tag{7.22}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( M_{21} \)</span> is the constant of proportionality; it is known as the <strong>mutual inductance</strong> of the two loops.</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.30" src="../../../_images/7.30.png" /></p>
 <p>There is a cute formula for the mutual inductance, which you can derive by expressing the flux in terms of the vector potential, and invoking Stokes’ theorem:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -728,13 +739,13 @@ M_{21} = M_{12} \tag{7.24}
 \]</div>
 <p>This is an astonishing conclusion: Whatever the shapes and positions of the loops, the flux through 2 when we run a current I around 1 is identical to the flux through 1 when we send the same current I around 2. We may as well drop the subscripts and call them both M.</p>
 <section id="example-7-10">
-<h3>Example 7.10<a class="headerlink" href="#example-7-10" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.10<a class="headerlink" href="#example-7-10" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-10">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A short solenoid (length <span class="math notranslate nohighlight">\( l \)</span> and radius <span class="math notranslate nohighlight">\( a \)</span>, with <span class="math notranslate nohighlight">\( n_1 \)</span> turns per unit length) lies on the axis of a very long solenoid (radius <span class="math notranslate nohighlight">\( b \)</span> , <span class="math notranslate nohighlight">\( n_2 \)</span> turns per unit length) as shown in Fig 7.32. Current <span class="math notranslate nohighlight">\( I \)</span> flows in the short solenoid. What is the flux through the long solenoid?</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.32" src="../../../_images/7.32.png" /></p>
 </div>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-11">
@@ -780,7 +791,7 @@ M = \mu_0 \pi a^2 n_1 n_2 l
 <p>Inductance is measured in henries (H); a henry is a volt-second per ampere.</p>
 </section>
 <section id="example-7-11">
-<h3>Example 7.11<a class="headerlink" href="#example-7-11" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.11<a class="headerlink" href="#example-7-11" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-12">
@@ -795,7 +806,7 @@ M = \mu_0 \pi a^2 n_1 n_2 l
 \[
 B = \frac{\mu_0 N I}{2 \pi s} 
 \]</div>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" />
+<p><img alt="Figure 7.34" src="../../../_images/7.34.png" />
 The flux through a single turn (Fig 7.34) is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -811,13 +822,13 @@ L = \frac{\mu_0 N^2 h}{2 \pi} \ln \left( \frac{b}{a}  \right) \tag{7.28}
 <p>Inductance (like capacitance) is an intrinsically positive quantity. Lenz’s law, which is enforced by the minus sign in Eq. 7.27, dictates that the emf is in such a direction as to oppose any change in current. For this reason, it is called a <strong>back emf</strong>. Whenever you try to alter the current in a wire, you must fight against this back emf. Inductance plays somewhat the same role in electric currents that mass plays in mechanical systems: The greater <span class="math notranslate nohighlight">\( L \)</span>, the harder it is to change the current, just as the larger the mass, the harder it is to change an object’s velocity.</p>
 </section>
 <section id="example-7-12">
-<h3>Example 7.12<a class="headerlink" href="#example-7-12" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.12<a class="headerlink" href="#example-7-12" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-14">
 “Q”</label><div class="sd-tab-content docutils">
 <p>Suppose a current <span class="math notranslate nohighlight">\( I \)</span> is flowing around a loop, when someone suddenly cuts the wire. The current drops “instantaneously” to zero. This generates a whopping back emf, for although <span class="math notranslate nohighlight">\( I \)</span>  may be small, <span class="math notranslate nohighlight">\( d I / d t \)</span>  is enormous. (That’s why you sometimes draw a spark when you unplug an iron or toaster - electromagnetic induction is desperately trying to keep the current going, even if it has to jump the gap in the circuit.) Nothing so dramatic occurs when you plug in a toaster or iron. In this case induction opposes the sudden increase in current, prescribing instead a smooth and continuous buildup. Suppose, for instance, that a battery (which supplies a constant emf <span class="math notranslate nohighlight">\( \mathcal{E}_0 \)</span> ) is connected to a circuit of resistance <span class="math notranslate nohighlight">\( R \)</span>  and inductance <span class="math notranslate nohighlight">\( L \)</span>  (Fig. 7.35). What current flows?</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.35" src="../../../_images/7.35.png" /></p>
 </div>
 <input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-15">
@@ -838,13 +849,13 @@ I(t) = \frac{\mathcal{E}_0}{R} + k e^{-(R/L) t}
 I(t) = \frac{\mathcal{E}_0}{R} \left( 1 - e^{-(R/L) t} \right) \tag{7.29}
 \]</div>
 <p>This function is plotted in Fig 7.36. Had there been no inductance in the circuit, the current would have jumped immediately to <span class="math notranslate nohighlight">\( \mathcal{E}_0 / R \)</span>. In practice, every circuit has some self-inductance, and the current approaches <span class="math notranslate nohighlight">\( \mathcal{E}_0 / R \)</span> asymptotically. The quantity <span class="math notranslate nohighlight">\( \tau = L / R \)</span> is the <strong>time constant</strong> for an LR circuit; it tells you how long the current takes to reach a substantial fraction <span class="math notranslate nohighlight">\( (1 - 1/e) \)</span> of its final value.</p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.36" src="../../../_images/7.36.png" /></p>
 </div>
 </div>
 </section>
 </section>
 <section id="energy-in-magnetic-fields">
-<h2>7.2.4: Energy in Magnetic Fields<a class="headerlink" href="#energy-in-magnetic-fields" title="Permalink to this headline">#</a></h2>
+<h2>7.2.4: Energy in Magnetic Fields<a class="headerlink" href="#energy-in-magnetic-fields" title="Permalink to this heading">#</a></h2>
 <p>It takes a certain amount of energy to start a current flowing in a circuit. I’m not talking about the energy delivered to the resistors and converted into heat - that is irretrievably lost, as far as the circuit is concerned, and can be large or small, depending on how long you let the current run. What I am concerned with, rather, is the work you must do against the back emf to get the current going. This is fixed amount, and it is recoverable: you get it back when the current is turned off. In the meantime, it represents energy latent in the circuit; as we’ll see in a moment, it can be regarded as energy stored in the magnetic field.</p>
 <p>The work done on a unit charge, against the back emf, in one trip around the circuit is <span class="math notranslate nohighlight">\( - \mathcal{E} \)</span>  (the minus sign records the fact that this is the work done by you against the emf, not the work done by the emf). The amount of charge per unit time passing down the wire is I. So the total work done per unit time is</p>
 <div class="math notranslate nohighlight">
@@ -907,13 +918,13 @@ W = \frac{1}{2 \mu_0} \int _{\text{all space}} B^2 \mathrm{d} \tau \tag{7.35}
 <p>In view of this result, we say the energy is “stored in the magnetic field,” in the amount <span class="math notranslate nohighlight">\( (B^2 / 2 \mu_0) \)</span>  per unit volume. This is a nice way to think of it, though someone looking at Eq. 7.32 might prefer to say that the energy is stored in the current distribution, in the amount <span class="math notranslate nohighlight">\( \frac{1}{2} (\vec{A} \cdot \vec{J}) \)</span>  per unit volume. The distinction is one of bookkeeping; the important quantity is the total energy <span class="math notranslate nohighlight">\( W \)</span> , and we need not worry about where (if anywhere) the energy is “located.”</p>
 <p>You might find it strange that it takes energy to set up a magnetic field - after all, magnetic fields themselves do no work. The point is that producing a magnetic field, where previously there was none, requires changing the field, and a changing B-field, according to Faraday, induces an electric field. The latter, of course, can do work. In the beginning, there is no <span class="math notranslate nohighlight">\( \vec{E} \)</span> , and at the end there is no <span class="math notranslate nohighlight">\( \vec{E} \)</span> ; but in between, while <span class="math notranslate nohighlight">\( \vec{B} \)</span>  is building up, there is an <span class="math notranslate nohighlight">\( \vec{E} \)</span> , and it is against this that the work is done. (You see why I could not calculate the energy stored in a magnetostatic field back in Chapter 5.) In the light of this, it is extraordinary how similar the magnetic energy formulas are to their electrostatic counterparts:</p>
 <section id="example-7-13">
-<h3>Example 7.13<a class="headerlink" href="#example-7-13" title="Permalink to this headline">#</a></h3>
+<h3>Example 7.13<a class="headerlink" href="#example-7-13" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-16" name="sd-tab-set-8" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-16">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A long coaxial cable carries current <span class="math notranslate nohighlight">\( I \)</span> (the current flows down the surface of the inner cylinder, radius <span class="math notranslate nohighlight">\( a \)</span> , and back along the outer cylinder, radius <span class="math notranslate nohighlight">\( b \)</span> ) as shown in Fig 7.40. Find the magnetic energy stored in a section of length <span class="math notranslate nohighlight">\( l \)</span></p>
-<p><img alt="Figure 7.21" src="../../../_images/7.21.png" /></p>
+<p><img alt="Figure 7.40" src="../../../_images/7.40.png" /></p>
 </div>
 <input id="sd-tab-item-17" name="sd-tab-set-8" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-17">
@@ -975,11 +986,10 @@ L = \frac{\mu_0 l}{2 \pi} \ln \left( \frac{b}{a} \right)
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch7-1.html"
@@ -999,10 +1009,7 @@ L = \frac{\mu_0 l}{2 \pi} \ln \left( \frac{b}{a} \right)
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1085,8 +1092,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

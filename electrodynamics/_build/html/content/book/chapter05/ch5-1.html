@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5.1: The Lorentz Force Law &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5.2: The Biot-Savart Law" href="ch5-2.html" />
     <link rel="prev" title="Chapter 5" href="chapter-intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,18 +474,18 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-lorentz-force-law">
-<h1>5.1: The Lorentz Force Law<a class="headerlink" href="#the-lorentz-force-law" title="Permalink to this headline">#</a></h1>
+<h1>5.1: The Lorentz Force Law<a class="headerlink" href="#the-lorentz-force-law" title="Permalink to this heading">#</a></h1>
 <section id="magnetic-fields">
-<h2>5.1.1: Magnetic Fields<a class="headerlink" href="#magnetic-fields" title="Permalink to this headline">#</a></h2>
+<h2>5.1.1: Magnetic Fields<a class="headerlink" href="#magnetic-fields" title="Permalink to this heading">#</a></h2>
 <p>Remember the basic problem of classical electrodynamics: We have a collection of charges <span class="math notranslate nohighlight">\( q_1, q_2, q_3, \ldots \)</span> (the “source” charges), and we want to calculate the force they exert on some other charge <em>Q</em> (the “test” charge). According to the principle of superposition, it is sufficient to find the force of a single source charge - the total is then the vector sum of all the individual forces. Up to now, we have confined our attention to the simplest case, electrostatics, in which the source charge is at rest (though the test charge need not be). The time has come to consider the forces between charges in motion.</p>
 <p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
 <p>To give you some sense of what is in store, imagine that I set up the following demonstration: Two wires hang from the ceiling, a few centimeters apart; when I turn on a current, so that it passes up one wire and back down the other, the wires jump apart - they evidently repel one another (Fig. 5.2(a)). How do we explain this? You might suppose that the battery (or whatever drives the current) is actually charging up the wire, and that the force is simply due to the electrical repulsion of like charges. But this is incorrect. I could hold up a test charge near these wires, and there would be no force on it, for the wires are in fact electrically neutral. (It’s true that electrons are flowing down the line - that’s what a current is - but there are just as many stationary plus charges as moving minus charges on any given segment.) Moreover, if I hook up my demonstration so as to make the current flow up both wires (Fig. 5.2(b)), they are found to attract! What’s going on here?</p>
 <p>Whatever force accounts for the attraction of parallel currents and the repulsion of anti-parallel ones is not electrostatic in nature. It is our first encounter with a magnetic force. Whereas a stationary charge produces only an electric field E in the space around it, a moving charge generates, in addition, a magnetic field <strong>B</strong>. In fact, magnetic fields are a lot easier to detect, in practice - all you need is a Boy Scout compass. How these devices work is irrelevant at the moment; it is enough to know that the needle points in the direction of the local magnetic field. Ordinarily, this means north, in response to the earth’s magnetic field, but in the laboratory, where typical fields may be hundreds of times stronger than that, the compass indicates the direction of whatever magnetic field is present.</p>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.3" src="../../../_images/5.3.png" /></p>
 <p>Now, if you hold up a tiny compass in the vicinity of a current-carrying wire, you quickly discover a very peculiar thing: The field does not point toward the wire, nor away from it, but rather it circles around the wire. In fact, if you grab the wire with your right hand-thumb in the direction of the current-your fingers curl around in the direction of the magnetic field (Fig. 5.3). How can such a field lead to a force of attraction on a nearby parallel current? At the second wire, the magnetic field points into the page (Fig. 5.4), the current is upward, and yet the resulting force is to the left! It’s going to take a strange law to account for these directions.</p>
 </section>
 <section id="magnetic-forces">
-<h2>5.1.2: Magnetic Forces<a class="headerlink" href="#magnetic-forces" title="Permalink to this headline">#</a></h2>
+<h2>5.1.2: Magnetic Forces<a class="headerlink" href="#magnetic-forces" title="Permalink to this heading">#</a></h2>
 <p>In fact, this contribution of directions is just right for a cross product: the magnetic force on a charge <em>Q</em>, moving with velocity <strong>v</strong> in a magnetic field <strong>B</strong> is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -488,13 +499,13 @@ document.write(`
 <p>I do not pretend to have derived <span class="math notranslate nohighlight">\( \eqref{5.1} \)</span>, of course; it is a fundamental axiom of the theory, whose justification is to be found in experiments such as those I described in the previous section.</p>
 <p>Our main job now is to calculate the magnetic field <strong>B</strong> (and for that matter the electric field <strong>E</strong> as well; the rules are more complicated when the source charges are in motion). But before we proceed, it is worthwhile to take a closer look at the Lorentz force law itself; it is a peculiar law, and it leads to some truly bizarre particle trajectories.</p>
 <section id="example-5-1-cyclotron-motion">
-<h3>Example 5.1: Cyclotron Motion<a class="headerlink" href="#example-5-1-cyclotron-motion" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.1: Cyclotron Motion<a class="headerlink" href="#example-5-1-cyclotron-motion" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 “Q”</label><div class="sd-tab-content docutils">
 <p>We have a charged particle moving in a constant magnetic field. What is the general form of the trajectory?</p>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.5" src="../../../_images/5.5.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
@@ -510,7 +521,7 @@ QvB = m \frac{v^2}{R} \quad \text{ or } \quad p = Q B R \tag{5.3}
 </div>
 </section>
 <section id="example-5-2-cycloid-motion">
-<h3>Example 5.2: Cycloid Motion<a class="headerlink" href="#example-5-2-cycloid-motion" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.2: Cycloid Motion<a class="headerlink" href="#example-5-2-cycloid-motion" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
@@ -587,7 +598,7 @@ u = \omega R = \frac{E}{B} \tag{5.10}
 </div>
 </section>
 <section id="example-5-2b-mass-spectrometer">
-<h3>Example 5.2b: Mass Spectrometer<a class="headerlink" href="#example-5-2b-mass-spectrometer" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.2b: Mass Spectrometer<a class="headerlink" href="#example-5-2b-mass-spectrometer" title="Permalink to this heading">#</a></h3>
 <p><strong>Mass Spectrometer</strong></p>
 <p>Suppose we have particles of several isotopes of a known element, and we wish to know exactly which mass isotopes are present (and separate them out) A mass spectrometer is an instrument which can measure the masses and relative concentrations of atoms and molecules. It makes use of the basic magnetic force on a moving charged particle. First, we ionize the particle, giving it a known net charge. We accelerate the particles through a known voltage into a constant magnetic field perpendicular to the velocity of the particle. The charged particles now undergo cyclotron motion (as we just described) of radius given by</p>
 <div class="math notranslate nohighlight">
@@ -610,13 +621,13 @@ q | \Delta V| = \frac{1}{2} m v^2 \rightarrow v^2 = \frac{2 q | \Delta V|}{m}
 </section>
 </section>
 <section id="currents">
-<h2>5.1.3: Currents<a class="headerlink" href="#currents" title="Permalink to this headline">#</a></h2>
+<h2>5.1.3: Currents<a class="headerlink" href="#currents" title="Permalink to this heading">#</a></h2>
 <p>The current in a wire is the charge per unit time passing a given point. By definition, negative charges moving to the left count the same as positive ones to the right. This conveniently reflects the physical fact that almost all phenomena involving moving charges depend on the product of charge and velocity - if you reverse the signs of <em>q</em> and <em>v</em>, you get the same answer, so it doesn’t really matter which you have. (The Lorentz force law is a case in point; the Hall effect (Prob. 5.41) is a notorious exception.) In practice, it is ordinarily the negatively charged electrons that do the moving - in the direction opposite to the electric current. To avoid the petty complications this entails, I shall often pretend it’s the positive charges that move, as in fact everyone assumed they did for a century or so after Benjamin Franklin established his unfortunate convention. Current is measured in coulombs-per-second, or amperes (A):</p>
 <div class="math notranslate nohighlight">
 \[
 1 \text{ A} = 1 \text{ C/s} \tag{5.12}
 \]</div>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.9" src="../../../_images/5.9.png" /></p>
 <p>A line charge <span class="math notranslate nohighlight">\( \lambda \)</span> traveling down a wire at speed <em>v</em> (Fig 5.9) constitutes a current</p>
 <div class="math notranslate nohighlight">
 \[
@@ -644,13 +655,13 @@ The magnetic force on a segment of current-carrying wire is</p>
 \vec{F}_B = I \int ( \mathrm{d} \vec{l} \times \vec{B}) \tag{5.17}
 \]</div>
 <section id="example-5-3">
-<h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A rectangular loop of wire, supporting mass m, hangs vertically with one end in a uniform magnetic field <strong>B</strong>, which points into the page in the shaded region of Fig 5.10. For what current I, in the loop, would the magnetic force upward exactly balance the gravitational force downward?</p>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.10" src="../../../_images/5.10.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
@@ -678,7 +689,7 @@ W_{mag} = F_{mag} h = I B a h \tag{5.19}
 F_{vert} = \lambda a w B = I B a \tag{5.20}
 \]</div>
 <p>(as before); but now it also has a horizontal component <span class="math notranslate nohighlight">\( (q u B) \)</span> which opposes the flow of current. Whoever is in charge of maintaining that current, therefore, must now push those charges along, against the backward component of the magnetic force.
-<img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<img alt="Figure 5.11" src="../../../_images/5.11.png" /></p>
 <p>The total horizontal force on the top segment is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -690,11 +701,11 @@ F_{horiz} = \lambda a u B \tag{5.21}
 W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 \]</div>
 <p>which is precisely what we naively attributed to the magnetic force in <span class="math notranslate nohighlight">\( \eqref{5.19} \)</span>. Was work done in this process? Absolutely! Who did it? The battery! What, then, was the role of the magnetic force? Well, it redirected the horizontal force of the battery into the vertical motion of the loop and the weight.
-<img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<img alt="Figure 5.12" src="../../../_images/5.12.png" /></p>
 <p>It may help to consider a mechanical analogy. Imagine you’re sliding a trunk up a frictionless ramp, by pushing on it horizontally with a mop (Fig 5.12). The normal force (N) does no work, because it is perpendicular to the displacement. But it does have a vertical component (which in fact is what lifts the trunk), and a (backward) horizontal component (which you have to overcome by pushing on the mop). Who is doing the work here? You are, obviously - and yet your force (which is purely horizontal) is not (at least, directly) what lifts the box. The normal force plays the same passive (but crucial) role as the magnetic force in Ex 5.3: while doing no work itself, it redirects the efforts of the active agent (you, or the battery, as the case may be), from horizontal to vertical.</p>
 </div>
 </div>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.13" src="../../../_images/5.13.png" /></p>
 <p>When charge flows over a surface, we describe it by the <strong>surface current density, K</strong>, defined as follows: Consider a “ribbon” of infinitesimal width <span class="math notranslate nohighlight">\( \mathrm{d} l_{\perp} \)</span>, running parallel to the flow (Fig 5.13). If the current in this ribbon is <span class="math notranslate nohighlight">\( \mathrm{d} \vec{I} \)</span>, the surface current density is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -721,7 +732,7 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 \[
 \vec{J} = \rho \vec{v} \tag{5.26}
 \]</div>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.14" src="../../../_images/5.14.png" /></p>
 <p>The magnetic force on a volume current is therefore</p>
 <div class="math notranslate nohighlight">
 \[
@@ -729,13 +740,13 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 \]</div>
 </section>
 <section id="example-5-4">
-<h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 “Q”</label><div class="sd-tab-content docutils">
 <p>A current <em>I</em> is uniformly distributed over a wire of circular cross section, with radius a (Fig 5.15). Find the volume current density <em>J</em>.</p>
-<p><img alt="Figure 5.2" src="../../../_images/5.2.png" /></p>
+<p><img alt="Figure 5.15" src="../../../_images/5.15.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
@@ -815,11 +826,10 @@ I = \int_S J \mathrm{d} a_{\perp} = \int_S \vec{J} \cdot \mathrm{d} \vec{a} \tag
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter-intro.html"
@@ -839,10 +849,7 @@ I = \int_S J \mathrm{d} a_{\perp} = \int_S \vec{J} \cdot \mathrm{d} \vec{a} \tag
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -916,8 +923,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

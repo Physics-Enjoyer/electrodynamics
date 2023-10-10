@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.3: Electric Potential &#8212; Electrodynamics</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.4: Work and Energy in Electrostatics" href="ch2-4.html" />
     <link rel="prev" title="2.2: Divergence and Curl of Electrostatic Fields" href="ch2-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -245,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formula Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
 </ul>
 
     </div>
@@ -401,10 +412,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -412,7 +423,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -456,9 +467,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="electric-potential">
-<h1>2.3: Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this headline">#</a></h1>
+<h1>2.3: Electric Potential<a class="headerlink" href="#electric-potential" title="Permalink to this heading">#</a></h1>
 <section id="introduction-to-potential">
-<h2>2.3.1: Introduction to Potential<a class="headerlink" href="#introduction-to-potential" title="Permalink to this headline">#</a></h2>
+<h2>2.3.1: Introduction to Potential<a class="headerlink" href="#introduction-to-potential" title="Permalink to this heading">#</a></h2>
 <p>The electric field <strong>E</strong> is not just <em>any</em> old vector function. It is a very special <em>kind</em> of vector function: one whose curl id zero. <span class="math notranslate nohighlight">\( \vec{E} = y \hat{x} \)</span> , for example, could not possibly be an electrostatic field; <em>no</em> set of charges, regardless of their sizes and positions, could ever produce such a field. We’re going to exploit this special property of electric fields to reduce a <em>vector</em> problem (finding <strong>E</strong>) to a much simpler <em>scalar</em> problem. The first theorem in Sect 1.6.2 asserts that any vector whose curl is zero is equal to the gradient of some scalar. What I’m going to do now amounts to a proof of that claim, in the context of electrostatics.</p>
 <p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
 <p>Because <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0\)</span> , the line integral of <strong>E</strong> around any closed loop is zero (that follows from Stokes’ theorem). Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} = 0 \)</span>, the line integral of <strong>E</strong> from point <strong>a</strong> to point <strong>b</strong> is the same for all paths (otherwise you could go <em>out</em> along path (i) and return along path (ii) - Fig 2.30 - and obtain <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} \neq 0 \)</span> ). Because the line integral is independent of path, we can define a function</p>
@@ -496,7 +507,7 @@ V(\vec{b}) - V(\vec{a}) = \int_{\vec{a}} ^{\vec{b}} (\nabla {V}) \cdot \mathrm{d
 <p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <strong>E</strong> depended on the path taken, then the “definition” of V <span class="math notranslate nohighlight">\( \eqref{2.21} \)</span> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <span class="math notranslate nohighlight">\( \eqref{2.23} \)</span> distract you; it carries over from <span class="math notranslate nohighlight">\( \eqref{2.21} \)</span> and is largely a matter of convention.</p>
 </section>
 <section id="comments-on-potential">
-<h2>2.3.2: Comments on Potential<a class="headerlink" href="#comments-on-potential" title="Permalink to this headline">#</a></h2>
+<h2>2.3.2: Comments on Potential<a class="headerlink" href="#comments-on-potential" title="Permalink to this heading">#</a></h2>
 <p><strong>The name</strong>. The word “potential” is a hideous misnomer because it inevitably reminds you of potential <em>energy</em>. This is particularly insidious, because there <em>is</em> a connection between “potential” and “potential energy,” as you will see in Sect 2.4. I’m sorry that it is impossible to escape this word. The best I can do is to insist once and for all that “potential” and “potential energy” are completely different terms and should, by all rights, have different names. Incidentially, a surface over which the potential is constant is called an <strong>equipotential</strong>.</p>
 <p><strong>Advantage of the potential formulation</strong>. If you know V, you can easily get <strong>E</strong> - just take the gradient: <span class="math notranslate nohighlight">\( \vec{E} =- \nabla {V} \)</span>. This is quite extraordinary when you stop to think about it, for <strong>E</strong> is a <em>vector</em> quantity (three components), but V is a <strong>scalar</strong> (one component). How can one function possibly contain all the information that three independent functions carry? The answer is that the three components of <strong>E</strong> are not really as independent as they look; in fact, they are explicitly interrelated by the very condition we started with,<span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span>. In terms of components,</p>
 <div class="math notranslate nohighlight">
@@ -543,7 +554,7 @@ V = V_1 + V_2 + \ldots
 <p><strong>Units of Potential</strong>. In our units, force is measured in newtons and charge in coulombs, so electric fields are in newtons per coulomb. Accordingly, potential is newton-meters per coulomb, or joules per coulomb. A joule per coulomb is a <strong>volt</strong>.</p>
 </section>
 <section id="poisson-s-equation-and-laplace-s-equation">
-<h2>2.3.3: Poisson’s Equation and Laplace’s Equation<a class="headerlink" href="#poisson-s-equation-and-laplace-s-equation" title="Permalink to this headline">#</a></h2>
+<h2>2.3.3: Poisson’s Equation and Laplace’s Equation<a class="headerlink" href="#poisson-s-equation-and-laplace-s-equation" title="Permalink to this heading">#</a></h2>
 <p>We found in Sect 2.3.1 that the electric field can be written as the gradient of a scalar potential</p>
 <div class="math notranslate nohighlight">
 \[
@@ -573,7 +584,7 @@ V = V_1 + V_2 + \ldots
 <p>But that’s no condition on V - curl of gradient is <em>always</em> zero. Of course, we used the curl law to show that <strong>E</strong> could be expressed as the gradient of a scalar, so it’s not really surprising that this works out: <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span> permits our definition of V; in return, <span class="math notranslate nohighlight">\( \vec{E} = - \nabla {V} \)</span> guarantees <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span>. It only takes one differential equation (Poisson’s) to determine V, because V is a scalar. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> we needed two, the divergence and the curl.</p>
 </section>
 <section id="the-potential-of-a-localized-charge-distribution">
-<h2>2.3.4: The potential of a Localized Charge Distribution<a class="headerlink" href="#the-potential-of-a-localized-charge-distribution" title="Permalink to this headline">#</a></h2>
+<h2>2.3.4: The potential of a Localized Charge Distribution<a class="headerlink" href="#the-potential-of-a-localized-charge-distribution" title="Permalink to this heading">#</a></h2>
 <p>I defined V in terms of <span class="math notranslate nohighlight">\( \vec{E} \eqref{2.21} \)</span>. Ordinarily, though, it’s <strong>E</strong> that we’re looking for (if we already knew <strong>E</strong>, there wouldn’t be much point in calculating V). The idea is that it might be easier to get V first, and then calculate <strong>E</strong> by taking the gradient. Typically, then, we know where the charge is (that is, we know <span class="math notranslate nohighlight">\( \rho \)</span>), and we want to find V. Now, Poisson’s equation relates V and <span class="math notranslate nohighlight">\( \rho \)</span>, but unfortunately it’s “the wrong way round”: it would give us <span class="math notranslate nohighlight">\( \rho \)</span> if we knew V, whereas we want V, knowing <span class="math notranslate nohighlight">\( \rho \)</span>. What we must do, then, is “invert” Poisson’s equation. That’s the program for this section, although I shall do it by roundabout means, beginning, as always, with a point charge at the origin.</p>
 <p>The electric field is <span class="math notranslate nohighlight">\( \vec{E} = (1 / 4 \pi \epsilon_0)(1 / r^2) \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r}  \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r} + r \mathrm{d}{\theta} \hat{\theta} + r \sin \theta \mathrm{d}{\theta} \hat{\phi} \)</span>, so</p>
 <div class="math notranslate nohighlight">
@@ -588,7 +599,7 @@ V(r) = - \int_{\mathscr{O}} ^r \vec{E} \cdot \mathrm{d}{\vec{l}} \\
  = \left.\frac{1}{4 \pi \epsilon_0} \frac{q}{r'} \right| ^r _{\infty} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r} 
 \end{split}\]</div>
 <p>(You see here the advantage of using infinity for the reference point: it kills the lower limit on the integral.) Notice the sign of V; presumably the conventional minus sign in the definition was chosen in order to make the potential of a positive charge come out positive. It is useful to remember that regions of positive charge are potential “hills,” and electric field points “downhill” from plus toward minus.</p>
-<p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
+<p><img alt="Figure 2.32" src="../../../_images/2.32.png" /></p>
 <p>In general, the potential of a point charge q is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -617,15 +628,15 @@ V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } \mathrm{
 <p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <span class="math notranslate nohighlight">\( \eqref{2.29} \)</span>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathscr{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
 </section>
 <section id="boundary-conditions">
-<h2>2.3.5: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">#</a></h2>
+<h2>2.3.5: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this heading">#</a></h2>
 <p>In the typical electrostatic problem you are given a source charge distribution <span class="math notranslate nohighlight">\( \rho \)</span>, and you want to find the electric field <span class="math notranslate nohighlight">\( \vec{E} \)</span> it produces. Unless the symmetry of the problem allows a solution by Gauss’s law, it is generally to your advantage to calculate the potential first, as an intermediate step. These are the three fundamental quantities of electrostatics: <span class="math notranslate nohighlight">\( \rho \)</span>, <span class="math notranslate nohighlight">\( \vec{E} \)</span>, and <span class="math notranslate nohighlight">\( V \)</span>. We have, in the course of our discussion, derived all six formulas interrelating them. These equations are neatly summarized in Fig. 2.35. We began with just two experimental observations: (1) the principle of superposition - a broad general rule applying to all electromagnetic forces, and (2) Coulomb’s law - the fundamental law of electrostatics. From these, all else followed.</p>
-<p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
+<p><img alt="Figure 2.35" src="../../../_images/2.35.png" /></p>
 <p>You may have noticed, in studying the exercises in this chapter, that the electric field always undergoes a discontinuity when you cross a surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. In fact, it is a simple matter to find the <em>amount</em> by which E changes at such a boundary. Suppose we draw a wafer-thin Gaussian pillbox, extending just barely over the edge in each direction (Fig. 2.36). Gauss’s law says that</p>
 <div class="math notranslate nohighlight">
 \[
 \oint _{S} \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} = \frac{1}{\epsilon_0} \sigma A
 \]</div>
-<p><img alt="Figure 2.30" src="../../../_images/2.30.png" />
+<p><img alt="Figure 2.36" src="../../../_images/2.36.png" />
 where A is the area of the pillbox lid. If <span class="math notranslate nohighlight">\( \sigma \)</span>  varies from point to point or the surface is curved, we can simply pick A to be extremely small. Now, the sides of the pillbox contribute nothing to the flux, in the limit as the thickness <span class="math notranslate nohighlight">\( \epsilon \)</span>  goes to zero, so we are left with</p>
 <div class="math notranslate nohighlight">
 \[
@@ -643,15 +654,15 @@ E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma {2.31} \tag
 \vec{E}_{above} ^{\parallel} = \vec{E}_{below} ^{\parallel} {2.32} \tag{2.32}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{E}^{\parallel} \)</span> stands for the components of <span class="math notranslate nohighlight">\( \vec{E} \)</span> parallel to the surface.</p>
-<p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
+<p><img alt="Figure 2.36" src="../../../_images/2.36.png" /></p>
 <p>The boundary conditions on <span class="math notranslate nohighlight">\( \vec{E} \)</span> (Eqs. <span class="math notranslate nohighlight">\( \eqref{2.31} \)</span> and <span class="math notranslate nohighlight">\( \eqref{2.32} \)</span>) can be combined into a single formula:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E}_{above} - \vec{E}_{below} = \frac{\sigma}{\epsilon_0} \hat{n} {2.33}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector perpendicular to the surface, pointing from “below” to “above.”</p>
-<p><img alt="Figure 2.30" src="../../../_images/2.30.png" />
-<img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
+<p><img alt="Figure 2.37" src="../../../_images/2.37.png" />
+<img alt="Figure 2.38" src="../../../_images/2.38.png" /></p>
 <p>The potential, meanwhile, is continuous across any boundary (Fig 2.38), since</p>
 <div class="math notranslate nohighlight">
 \[
@@ -707,11 +718,10 @@ V_{above} = V_{below} {2.34} \tag{2.34}
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch2-2.html"
@@ -731,10 +741,7 @@ V_{above} = V_{below} {2.34} \tag{2.34}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -801,8 +808,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
