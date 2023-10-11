@@ -471,19 +471,19 @@ document.write(`
 <h2>7.1.1: Ohm’s Law<a class="headerlink" href="#ohm-s-law" title="Permalink to this heading">#</a></h2>
 <p>To make a current flow, you have to push on the charges. How fast they move, in response to a given push, depends on the nature of the material. For most sub- stances, the current density <span class="math notranslate nohighlight">\( \vec{J} \)</span>  is proportional to the force per unit charge, <span class="math notranslate nohighlight">\( \vec{f} \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-1">
-<span class="eqno">(376)<a class="headerlink" href="#equation-eq7-1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(394)<a class="headerlink" href="#equation-eq7-1" title="Permalink to this equation">#</a></span>\[
 \vec{J} = \sigma \vec{f} 
 \]</div>
 <p>The proportionality factor <span class="math notranslate nohighlight">\( \sigma \)</span> (not to be confused with surface charge) is an empirical constant that varies from one material to another; it’s called the conductivity of the medium. Actually, the handbooks usually list the reciprocal of <span class="math notranslate nohighlight">\( \sigma \)</span>, called the resistivity: <span class="math notranslate nohighlight">\( \rho = 1 / \sigma \)</span> (not to be confused with charge density - I’m sorry, but we’re running out of Greek letters, and this is the standard notation). Some typical values are listed in Table 7.1. Notice that even insulators conduct slightly, though the conductivity of a metal is astronomically greater; in fact, for most purposes metals can be regarded as perfect conductors, with <span class="math notranslate nohighlight">\( \sigma = \infty \)</span> , while for insulators we can pretend <span class="math notranslate nohighlight">\( \sigma = 0 \)</span>.</p>
 <p align="center"> <img alt="Figure 7.t1" src="/r/img/griffiths/7.t1.png" /> </p>
-<p>In principle, the force that drives the charges to produce the current could be anything - chemical, gravitational, or trained ants with tiny harnesses. For our purposes, though, it’s usually an electromagnetic force that does the job. In this case <a class="reference internal" href="#equation-eq7-1">(376)</a> becomes</p>
+<p>In principle, the force that drives the charges to produce the current could be anything - chemical, gravitational, or trained ants with tiny harnesses. For our purposes, though, it’s usually an electromagnetic force that does the job. In this case <a class="reference internal" href="#equation-eq7-1">(394)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq7-2">
-<span class="eqno">(377)<a class="headerlink" href="#equation-eq7-2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(395)<a class="headerlink" href="#equation-eq7-2" title="Permalink to this equation">#</a></span>\[
 \vec{J} = \sigma (\vec{E} + \vec{v} \times \vec{B}) 
 \]</div>
 <p>Ordinarily, the velocity of the charges is sufficiently small that the second term can be ignored:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-3">
-<span class="eqno">(378)<a class="headerlink" href="#equation-eq7-3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(396)<a class="headerlink" href="#equation-eq7-3" title="Permalink to this equation">#</a></span>\[
 \vec{J} = \sigma \vec{E} 
 \]</div>
 <p>(However, in plasmas, for instance, the magnetic contribution to <span class="math notranslate nohighlight">\( \vec{f} \)</span> can be significant.) Equation 7.3 is called <strong>Ohm’s law</strong>, thought the physics behind it is really contained in Eq. 7.1, of which 7.3 is just a special case.</p>
@@ -544,13 +544,13 @@ I = \frac{2 \pi \sigma L}{\ln (b / a)} V
 </div>
 <p>As these examples illustrate, the total current flowing from one electrode to the other is proportional to the potential difference between them:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-4">
-<span class="eqno">(379)<a class="headerlink" href="#equation-eq7-4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(397)<a class="headerlink" href="#equation-eq7-4" title="Permalink to this equation">#</a></span>\[
 V = I R 
 \]</div>
 <p>This, of course, is the more familiar version of Ohm’s law. The constant of proportionality <span class="math notranslate nohighlight">\( R \)</span> is called the resistance; it’s a function of the geometry of the arrangement and the conductivity of the medium between the electrodes. (In Ex. 7.1, <span class="math notranslate nohighlight">\( R = L / \sigma A \)</span>; in Ex. 7.2, <span class="math notranslate nohighlight">\( R = \ln (b /a ) / 2 \pi \sigma L \)</span>) Resistance is measured in ohms (<span class="math notranslate nohighlight">\( \Omega \)</span>): an ohm is a volt per ampere. Notice that the proportionality between <span class="math notranslate nohighlight">\( V \)</span> and <span class="math notranslate nohighlight">\( I \)</span> is a direct consequence of Eq. 7.3: if you want to double <span class="math notranslate nohighlight">\( V \)</span>, you simply double the charge on the electrodes - that doubles <span class="math notranslate nohighlight">\( \vec{E} \)</span>, which (for an ohmic material) doubles <span class="math notranslate nohighlight">\( \vec{J} \)</span>, which doubles <span class="math notranslate nohighlight">\( \vec{I} \)</span>.</p>
 <p>For <em>steady</em> currents and <em>uniform</em> conductivity,</p>
 <div class="math notranslate nohighlight" id="equation-eq7-5">
-<span class="eqno">(380)<a class="headerlink" href="#equation-eq7-5" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(398)<a class="headerlink" href="#equation-eq7-5" title="Permalink to this equation">#</a></span>\[
 \nabla \cdot  \vec{E} = \frac{1}{\sigma} \nabla \cdot  \vec{J} = 0 
 \]</div>
 <p>and therefore the charge density is zero; any unbalanced charge resides on the surface. (We proved this long ago, for the case of stationary charges, using the fact that <span class="math notranslate nohighlight">\( \vec{E} = 0 \)</span>; evidently, it is still true when the charges are allowed to move.) It follows, in particular, that Laplace’s equation holds within a homogeneous ohmic material carrying a steady current, so all the tools and tricks of Chapter 3 are available for calculating the potential.</p>
@@ -603,13 +603,13 @@ v_{ave} = \frac{1}{2} a t = \frac{a \lambda}{2 v_{th}}
 \]</div>
 <p>If there are <span class="math notranslate nohighlight">\( n \)</span> molecules per unit volume, and <span class="math notranslate nohighlight">\( f \)</span> free electrons per molecule, each with charge <span class="math notranslate nohighlight">\( q \)</span> and mass <span class="math notranslate nohighlight">\( m \)</span>, the current density is</p>
 <div class="math notranslate nohighlight" id="equation-eq7-6">
-<span class="eqno">(381)<a class="headerlink" href="#equation-eq7-6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(399)<a class="headerlink" href="#equation-eq7-6" title="Permalink to this equation">#</a></span>\[
 \vec{J} = n f q \vec{v}_{ave} = \frac{n f q \lambda}{2 v_{th}} \frac{\vec{F}}{m} = \left( \frac{n f \lambda q^2}{2 m v_{th}}  \right) \vec{E} 
 \]</div>
 <p>We can’t claim that Eq. 7.6 is an accurate formula for the conductivity, but it does have all the basic ingredients, and it correctly predicts that conductivity is proportional to the density of the moving charges, and (ordinarily), decreases with increasing temperature.</p>
 <p>As a result of all the collisions, the work done by the electrical force is converted into heat in the resistor. Since the work done per unit charge is <span class="math notranslate nohighlight">\( V \)</span>  and the charge flowing per unit time is <span class="math notranslate nohighlight">\( I \)</span> , the power delivered is</p>
 <div class="math notranslate nohighlight" id="equation-eq7-7">
-<span class="eqno">(382)<a class="headerlink" href="#equation-eq7-7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(400)<a class="headerlink" href="#equation-eq7-7" title="Permalink to this equation">#</a></span>\[
 P = V I = I^2 R 
 \]</div>
 <p>This is the <strong>Joule heating law</strong>. With <span class="math notranslate nohighlight">\( I \)</span> in amperes and <span class="math notranslate nohighlight">\( R \)</span> in ohms, <span class="math notranslate nohighlight">\( P \)</span> comes out in watts (joules per second).</p>
@@ -622,18 +622,18 @@ P = V I = I^2 R
 <p><img alt="Figure 7.7" src="../../../_images/7.7.png" /></p>
 <p>There are really two forces involved in driving current around a circuit: the source, <span class="math notranslate nohighlight">\( \vec{f}_S \)</span>  , which is ordinarily confined to one portion of the loop (a battery, say), and an electrostatic force, which serves to smooth out the flow and communicate the influence of the source to distant parts of the circuit:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-8">
-<span class="eqno">(383)<a class="headerlink" href="#equation-eq7-8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(401)<a class="headerlink" href="#equation-eq7-8" title="Permalink to this equation">#</a></span>\[
 \vec{f} = \vec{f}_S + \vec{E} 
 \]</div>
 <p>The physical agency responsible for <span class="math notranslate nohighlight">\( \vec{f}_S \)</span>  can be many different things: in a battery it’s a chemical force; in a piezoelectric crystal mechanical pressure is converted into an electrical impulse; in a thermocouple it’s a temperature gradient that does the job; in a photoelectric cell it’s light; and in a Van de Graaff generator the electrons are literally loaded onto a conveyor belt and swept along. Whatever the mechanism, its net effect is determined by the line integral off around the circuit:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-9">
-<span class="eqno">(384)<a class="headerlink" href="#equation-eq7-9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(402)<a class="headerlink" href="#equation-eq7-9" title="Permalink to this equation">#</a></span>\[
 \mathcal{E} = \oint \vec{f} \cdot \mathrm{d} \vec{l} = \oint \vec{f}_S \cdot \mathrm{d} \vec{l} 
 \]</div>
 <p>( Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d} \vec{l} = 0 \)</span> for electrostatic fields, it doesn’t matter whether you use <span class="math notranslate nohighlight">\( \vec{f} \)</span> or <span class="math notranslate nohighlight">\( \vec{f}_S \)</span>). <span class="math notranslate nohighlight">\( \mathcal{E} \)</span> is called the electromotive force, or <strong>emf</strong>, of the circuit. It’s a lousy term, since this is not a force at all - it’s the integral of a force per unit charge. Some people would prefer the word <strong>electromotance</strong>, but emf is so established that I think we’d better stick with it.</p>
 <p>Within an ideal source of emf (a resistanceless battery, for instance), the net force on the charges is zero (Eq. 7.1 with <span class="math notranslate nohighlight">\( \sigma = \infty \)</span> ), so <span class="math notranslate nohighlight">\( \vec{E} = - \vec{f}_S \)</span>.  The potential difference between the terminals (a and b) is therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq7-10">
-<span class="eqno">(385)<a class="headerlink" href="#equation-eq7-10" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(403)<a class="headerlink" href="#equation-eq7-10" title="Permalink to this equation">#</a></span>\[
 V = - \int _a ^b \vec{E} \cdot \mathrm{d} \vec{l} = \int_a ^b \vec{f}_S \cdot \mathrm{d} \vec{l} = \oint \vec{f}_S \cdot \mathrm{d} \vec{l} = \mathcal{E} 
 \]</div>
 <p>(we can extend the integral to the entire loop because <span class="math notranslate nohighlight">\( \vec{f}_s = 0 \)</span>  outside the source). The function of a battery, then, is to establish and maintain a voltage difference equal to the electromotive force (a 6V battery, for example, holds the positive terminal 6V above the negative terminal). The resulting electrostatic field drives current around the rest of the circuit (notice, however, that inside the battery <span class="math notranslate nohighlight">\( \vec{f}_S \)</span>  drives current in the direction opposite to <span class="math notranslate nohighlight">\( \vec{E} \)</span> ).</p>
@@ -643,7 +643,7 @@ V = - \int _a ^b \vec{E} \cdot \mathrm{d} \vec{l} = \int_a ^b \vec{f}_S \cdot \m
 <h2>7.1.3: Motional emf<a class="headerlink" href="#motional-emf" title="Permalink to this heading">#</a></h2>
 <p>In the last section, I listed several possible sources of electromotive force, batteries being the most familiar. But I did not mention the commonest one of all: the generator. Generators exploit motional emfs, which arise when you move a wire through a magnetic field. Figure 7.10 suggests a primitive model for a generator. In the shaded region there is a uniform magnetic field <span class="math notranslate nohighlight">\( \vec{B} \)</span> , pointing into the page, and the resistor <span class="math notranslate nohighlight">\( R \)</span>  represents whatever it is (maybe a light bulb or a toaster) we’re trying to drive current through. If the entire loop is pulled to the right with speed <span class="math notranslate nohighlight">\( v \)</span> , the charges in segment <em>ab</em> experience a magnetic force whose vertical component <span class="math notranslate nohighlight">\( q v B \)</span>  drives current around the loop, in the clockwise direction. The emf is</p>
 <div class="math notranslate nohighlight" id="equation-eq7-11">
-<span class="eqno">(386)<a class="headerlink" href="#equation-eq7-11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(404)<a class="headerlink" href="#equation-eq7-11" title="Permalink to this equation">#</a></span>\[
 \mathcal{E} = \oint \vec{f}_{mag} \cdot \mathrm{d} \vec{l} = v B h 
 \]</div>
 <p>Notice that the integral you perform to calculate <span class="math notranslate nohighlight">\( \mathcal{E} \)</span> (Eq. 7.9 or 7.11) is carried out at one instance in time - take a “snapshot” of the loop, if you like, and work from that. Thus <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l} \)</span>, for the segment <em>ab</em> in Fig 7.10, points straight up, even though the loop is moving to the right. You can’t quarrel with this - it’s simply the way emf is defined - but it’s important to be clear about it.</p>
@@ -664,7 +664,7 @@ f_{pull} = u B
 <img alt="Figure 7.12" src="../../../_images/7.12.png" /></p>
 <p>There is a particularly nice way of expressing the emf generated in a moving loop. Let <span class="math notranslate nohighlight">\( \Phi \)</span> be the flux of <span class="math notranslate nohighlight">\( \vec{B}  \)</span> through the loop:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-12">
-<span class="eqno">(387)<a class="headerlink" href="#equation-eq7-12" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(405)<a class="headerlink" href="#equation-eq7-12" title="Permalink to this equation">#</a></span>\[
 \Phi \equiv \int \vec{B} \cdot \mathrm{d} \vec{a} 
 \]</div>
 <p>For the rectangular loop in Fig 7.10,</p>
@@ -679,7 +679,7 @@ f_{pull} = u B
 \]</div>
 <p>(The minus sign accounts for the fact that dx/dt is negative.) But this is precisely the emf (Eq. 7.11); evidently the emf generated in the loop is minus the rate of change of flux through the loop:</p>
 <div class="math notranslate nohighlight" id="equation-eq7-13">
-<span class="eqno">(388)<a class="headerlink" href="#equation-eq7-13" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(406)<a class="headerlink" href="#equation-eq7-13" title="Permalink to this equation">#</a></span>\[
 \mathcal{E} = - \dv{\Phi}{t} 
 \]</div>
 <p>This is the <strong>flux rule</strong> for motional emf.</p>

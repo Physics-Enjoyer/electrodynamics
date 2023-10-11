@@ -474,7 +474,7 @@ document.write(`
 \]</div>
 <p>Unfortunately, integrals of this type can be difficult to calculate for any but the simplest charge configurations. Occasionally we can get around this by exploiting symmetry and using Gauss’s law, but ordinarily the best strategy is first to calculate the <em>potential</em>, V, which is given by the somewhat more tractable</p>
 <div class="math notranslate nohighlight" id="equation-eq3-2">
-<span class="eqno">(119)<a class="headerlink" href="#equation-eq3-2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(137)<a class="headerlink" href="#equation-eq3-2" title="Permalink to this equation">#</a></span>\[
 V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'} 
 \]</div>
 <p>Still, even <em>this</em> integral is often too tough to handle analytically. Moreover, in problems involving conductors <span class="math notranslate nohighlight">\( \rho \)</span> itself may not be known in advance; since charge is free to move around, the only thing we control directly is the total charge (or perhaps the potential) of each conductor.</p>
@@ -483,7 +483,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{
 \[
 \nabla^2{V} = - \frac{1}{\epsilon_0} \rho {3.3}
 \]</div>
-<p>which, together with appropriate boundary conditions, is equivalent to <a class="reference internal" href="#equation-eq3-2">(119)</a>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
+<p>which, together with appropriate boundary conditions, is equivalent to <a class="reference internal" href="#equation-eq3-2">(137)</a>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla^2{V} = 0 {3.4}
@@ -504,7 +504,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{
 \]</div>
 <p>The general solution is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-6">
-<span class="eqno">(120)<a class="headerlink" href="#equation-eq3-6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(138)<a class="headerlink" href="#equation-eq3-6" title="Permalink to this equation">#</a></span>\[
 V(x) = mx + b {3.6} 
 \]</div>
 <p>the equation for a straight line. It contains two undetermined constants (m and b), as is appropriate for a second-order (ordinary) differential equation. They are fixed, in any particular case, by the boundary conditions of that problem. For instance, it might be specified that <span class="math notranslate nohighlight">\( V = 4 \)</span>  at <span class="math notranslate nohighlight">\( x = 1 \)</span> and <span class="math notranslate nohighlight">\( V = 0 \)</span> at <span class="math notranslate nohighlight">\( x = 5 \)</span>. In that case, <span class="math notranslate nohighlight">\( m = -1 \)</span> and <span class="math notranslate nohighlight">\( b = 5 \)</span>, so <span class="math notranslate nohighlight">\( V = - x + 5 \)</span>  (See Fig. 3.1)</p>
@@ -529,7 +529,7 @@ V(x) = \frac{1}{2} [V(x + a) + V(x-a)]
 \[
 \frac{\partial^2{V}}{\partial{x^2}} + \frac{\partial^2{V}}{\partial{y^2}} = 0 
 \]</div>
-<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <a class="reference internal" href="#equation-eq3-6">(120)</a>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
+<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <a class="reference internal" href="#equation-eq3-6">(138)</a>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
 <p><img alt="Figure 3.2" src="../../../_images/3.2.png" /></p>
 <p>It may help to have a physical example in mind. Picture a thin rubber sheet (or a soap film) stretched over some support. For definiteness, suppose you take a cardboard box, cut a wavy line all the way around, and remove the top part (Fig. 3.2). Now glue a tightly stretched rubber membrane over the box, so that it fits like a drum head (it won’t be a flat drumhead, of course, unless you choose to cut the edges off straight). Now, if you lay out the coordinates (x, y) on the bottom of the box, the height V(x, y) of the sheet above the point (x, y) will satisfy Laplace’s equation. (The one-dimensional analog would be a rubber band stretched between two points. Of course, it would form a straight line.)</p>
 <blockquote>
@@ -687,12 +687,12 @@ And both obey Gauss’s law in integral form for a Gaussian surface enclosing ea
 \]</div>
 <p>which obeys</p>
 <div class="math notranslate nohighlight" id="equation-eq3-7">
-<span class="eqno">(121)<a class="headerlink" href="#equation-eq3-7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(139)<a class="headerlink" href="#equation-eq3-7" title="Permalink to this equation">#</a></span>\[
 \nabla \cdot {\vec{E_3}} = 0 {3.7} 
 \]</div>
 <p>in the region between the conductors, and</p>
 <div class="math notranslate nohighlight" id="equation-eq3-8">
-<span class="eqno">(122)<a class="headerlink" href="#equation-eq3-8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(140)<a class="headerlink" href="#equation-eq3-8" title="Permalink to this equation">#</a></span>\[
 \oint \vec{E_3} \cdot \mathrm{d}{\vec{a}} = 0 {3.8} 
 \]</div>
 <p>over each boundary surface.
@@ -701,12 +701,12 @@ Now there is one final piece of information we must exploit: Although we do not 
 \[
 \nabla \cdot {(V_3 \vec{E_3})} = V_3 (\nabla \cdot {\vec{E_3}}) + \vec{E_3} \cdot (\nabla {V_3}) = - (E_3)^2
 \]</div>
-<p>Here I have used <a class="reference internal" href="#equation-eq3-7">(121)</a> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
+<p>Here I have used <a class="reference internal" href="#equation-eq3-7">(139)</a> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathscr{V}} \nabla \cdot {(V_3 \vec{E_3})} \mathrm{d}{\tau} = \oint_{S} V_3 \vec{E_3} \cdot \mathrm{d}{\vec{a}} = - \int_{\mathscr{V}} (E_3)^2 \mathrm{d}{\tau}
 \]</div>
-<p>The surface integral covers all boundaries of the region in question - the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is invinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <a class="reference internal" href="#equation-eq3-8">(122)</a>. Therefore</p>
+<p>The surface integral covers all boundaries of the region in question - the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is invinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <a class="reference internal" href="#equation-eq3-8">(140)</a>. Therefore</p>
 <div class="math notranslate nohighlight">
 \[
     \int_{\mathscr{V}}(E_3)^2 \mathrm{d}{\tau} = 0

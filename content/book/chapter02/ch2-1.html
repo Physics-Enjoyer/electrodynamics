@@ -482,7 +482,7 @@ document.write(`
 <p>What is the force on a test charge Q due to a single point charge q, that is at <em>rest</em> a distance <span class="math notranslate nohighlight">\( \Delta r  \)</span> away? The answer (based on experiments) is given by <em>Coulomb’s Law</em>:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-1">
 <span class="eqno">(87)<a class="headerlink" href="#equation-eq2-1" title="Permalink to this equation">#</a></span>\[
-\vec{F} = \frac{1}{4 \pi \epsilon_0}\frac{q Q}{\Delta r ^2} \hat{\vec{\Delta r }}   {2.1} 
+\vec{F} = \frac{1}{4 \pi \epsilon_0}\frac{q Q}{\Delta r ^2} \hat{\vec{\Delta r }}
 \]</div>
 <p>The constant <span class="math notranslate nohighlight">\( \epsilon_0 \)</span>  is called (ludicrously) the <em>permittivity of free space</em>. In SI units, where force is in newtons (N), distance in meters (m), and charge in coulombs (C),</p>
 <div class="math notranslate nohighlight">
@@ -490,8 +490,8 @@ document.write(`
 \epsilon_0 = 8.85 \times 10^{-12} \frac{C^2}{N \cdot m ^2} 
 \]</div>
 <p>In words, the force is proportional to the product of the charges and inversely proportional to the square of the separation distance. As always (Sect 1.1.4), <span class="math notranslate nohighlight">\( \vec{\Delta r } \)</span> is the separation vector from <span class="math notranslate nohighlight">\( \vec{r'} \)</span> (the location of q) to <span class="math notranslate nohighlight">\( \vec{r} \)</span> (the location of Q):</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-2">
+<span class="eqno">(88)<a class="headerlink" href="#equation-eq2-2" title="Permalink to this equation">#</a></span>\[
 \vec{\Delta r } = \vec{r} - \vec{r}'
 \]</div>
 <p><span class="math notranslate nohighlight">\( \Delta r  \)</span> is its magnitude, and <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is its direction. The force points along the line from q to Q; it is repulsive if <em>q</em> and <em>Q</em> have the same sign, and attractive if their signs are opposite.</p>
@@ -510,13 +510,13 @@ document.write(`
 \end{split}\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq2-3">
-<span class="eqno">(88)<a class="headerlink" href="#equation-eq2-3" title="Permalink to this equation">#</a></span>\[
-\vec{F} = Q \vec{E} {2.3} 
+<span class="eqno">(89)<a class="headerlink" href="#equation-eq2-3" title="Permalink to this equation">#</a></span>\[
+\vec{F} = Q \vec{E}
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight" id="equation-eq2-4">
-<span class="eqno">(89)<a class="headerlink" href="#equation-eq2-4" title="Permalink to this equation">#</a></span>\[
-\vec{E}(\vec{r}) \equiv \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^n \frac{q_i}{\Delta r _{i}^2} \hat{\Delta r _i} {2.4} 
+<span class="eqno">(90)<a class="headerlink" href="#equation-eq2-4" title="Permalink to this equation">#</a></span>\[
+\vec{E}(\vec{r}) \equiv \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^n \frac{q_i}{\Delta r _{i}^2} \hat{\Delta r _i}
 \]</div>
 <p><strong>E</strong> is called the <strong>electric field</strong> of the source charges. Notice that it is a function of position (<strong>r</strong>), because the separation vectors <span class="math notranslate nohighlight">\( \Delta r _i \)</span> depend on the location of the field point P (Fig 2.3). But it makes no reference to the test charge Q. The electric field is a vector quantity that varies from point to point and is determined by the configuration of source charges; physically, <span class="math notranslate nohighlight">\( \vec{E}(\vec{r}) \)</span> is the force per unit charge that would be exerted on a test charge, if you were to place one at P.</p>
 <p><img alt="Figure 2.3" src="../../../_images/2.3.png" /></p>
@@ -551,9 +551,9 @@ E_z = 2 \frac{1}{4 \pi \epsilon_0} \frac{1}{\Delta r  ^2} \cos \theta
 </section>
 <section id="continuous-charge-distributions">
 <h2>2.1.4: Continuous Charge Distributions<a class="headerlink" href="#continuous-charge-distributions" title="Permalink to this heading">#</a></h2>
-<p>Our definition of the electric field (Eq. <a class="reference internal" href="#equation-eq2-4">(89)</a> ) assumes that the source of the field is a collection of discrete point charges <span class="math notranslate nohighlight">\( q_i \)</span>. If, instead, the charge is distributed continuously over some region, the sum becomes an integral (Fig 2.5a):</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Our definition of the electric field (Eq. <a class="reference internal" href="#equation-eq2-4">(90)</a> ) assumes that the source of the field is a collection of discrete point charges <span class="math notranslate nohighlight">\( q_i \)</span>. If, instead, the charge is distributed continuously over some region, the sum becomes an integral (Fig 2.5a):</p>
+<div class="math notranslate nohighlight" id="equation-eq2-5">
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq2-5" title="Permalink to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{q}
 \]</div>
 <p>If the charge is spread out along a <em>line</em> (Fig. 2.5b), with charge-per-unit-length <span class="math notranslate nohighlight">\( \lambda \)</span> then <span class="math notranslate nohighlight">\( \mathrm{d}{q} = \lambda \mathrm{d}{l}' \)</span> (where <span class="math notranslate nohighlight">\( \mathrm{d}{l}' \)</span> ) is an element of length along the line); if the charge is smeared out over a surface (Fig. 2.5c) with charge-per-unit-area <span class="math notranslate nohighlight">\( \sigma \)</span>, then <span class="math notranslate nohighlight">\( \mathrm{d}{q} = \sigma \mathrm{d}{a}' \)</span>  (where <span class="math notranslate nohighlight">\( \mathrm{d}{a'} \)</span> ) is an element of area on the surface); and if the charge fills a <em>volume</em> (Fig 2.5d), with charge-per-unit-volume <span class="math notranslate nohighlight">\( \rho \)</span>, then <span class="math notranslate nohighlight">\( \mathrm{d}{q} = \rho\mathrm{d}{\tau'} \)</span> (where <span class="math notranslate nohighlight">\( \mathrm{d}{\tau'} \)</span> is an element of volume):</p>
@@ -563,24 +563,25 @@ dq \rightarrow \lambda \mathrm{d}{l'} \sim \sigma \mathrm{d}{a'} \sim \rho \math
 \]</div>
 <p><img alt="Figure 2.5" src="../../../_images/2.5.png" /></p>
 <p>Thus the electric field of a line charge is</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-6">
+<span class="eqno">(92)<a class="headerlink" href="#equation-eq2-6" title="Permalink to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{l'}
 \]</div>
 <p>for a surface charge,</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-7">
+<span class="eqno">(93)<a class="headerlink" href="#equation-eq2-7" title="Permalink to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{a'}
 \]</div>
 <p>and for a volume charge,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-8">
-<span class="eqno">(90)<a class="headerlink" href="#equation-eq2-8" title="Permalink to this equation">#</a></span>\[
-\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'} {2.8} 
+<span class="eqno">(94)<a class="headerlink" href="#equation-eq2-8" title="Permalink to this equation">#</a></span>\[
+\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'}
 \]</div>
-<p>Equation <a class="reference internal" href="#equation-eq2-8">(90)</a> itself is often referred to as “Coulomb’s law,” because it is such a short step from the original, and because a volume charge is in a sense the most general and realistic case. Please note carefully the meaning of <span class="math notranslate nohighlight">\( \Delta r  \)</span> in these formulas. Originally, in <a class="reference internal" href="#equation-eq2-4">(89)</a>, <span class="math notranslate nohighlight">\( \Delta r _i \)</span> stood for the vector from the source charge <span class="math notranslate nohighlight">\( q_i \)</span> to the field point <strong>r</strong>. Correspondingly, in Eq.s 9-11, <span class="math notranslate nohighlight">\( \Delta r  \)</span> is the vector from <span class="math notranslate nohighlight">\( \mathrm{d}{q} \)</span> to the field point <span class="math notranslate nohighlight">\( \vec{r} \)</span>.</p>
-<blockquote>
-<div><p>Warning: the unit vector <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is not constant: its direction depends on the source point <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, and hence it cannot be taken outside the integrals (9-11). In practice, you must work with Cartesian components (<span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span> are constant, and do come out) , even if you use curvilinear coordinates to perform the integration.</p>
-</div></blockquote>
+<p>Equation <a class="reference internal" href="#equation-eq2-8">(94)</a> itself is often referred to as “Coulomb’s law,” because it is such a short step from the original, and because a volume charge is in a sense the most general and realistic case. Please note carefully the meaning of <span class="math notranslate nohighlight">\( \Delta r  \)</span> in these formulas. Originally, in <a class="reference internal" href="#equation-eq2-4">(90)</a>, <span class="math notranslate nohighlight">\( \Delta r _i \)</span> stood for the vector from the source charge <span class="math notranslate nohighlight">\( q_i \)</span> to the field point <strong>r</strong>. Correspondingly, in Eq.s 9-11, <span class="math notranslate nohighlight">\( \Delta r  \)</span> is the vector from <span class="math notranslate nohighlight">\( \mathrm{d}{q} \)</span> to the field point <span class="math notranslate nohighlight">\( \vec{r} \)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The unit vector <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is not constant: its direction depends on the source point <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, and hence it cannot be taken outside the integrals (9-11). In practice, you must work with Cartesian components (<span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span> are constant, and do come out) , even if you use curvilinear coordinates to perform the integration.</p>
+</div>
 <hr class="docutils" />
 <section id="example-2-2">
 <h3>Example 2.2<a class="headerlink" href="#example-2-2" title="Permalink to this heading">#</a></h3>

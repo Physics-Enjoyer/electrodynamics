@@ -467,14 +467,14 @@ document.write(`
 <p>Stationary charges produce electric fields that are constant in time; hence the term <strong>electrostatics</strong>. Steady currents produce magnetic fields that are constant in time; the theory of steady currents is called <strong>magnetostatics</strong>.</p>
 <p>By “<strong>steady current</strong>” I mean a continuous flow that has been going on forever, without change and without piling up anywhere (some people call them “stationary currents”; to my ear, that’s a contradiction in terms). Formally, electro/magnetostatics is the regime</p>
 <div class="math notranslate nohighlight" id="equation-eq5-32">
-<span class="eqno">(298)<a class="headerlink" href="#equation-eq5-32" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(316)<a class="headerlink" href="#equation-eq5-32" title="Permalink to this equation">#</a></span>\[
 \frac{\partial \rho}{\partial t} = 0, \quad \pdv{\vec{J}}{t} = 0 
 \]</div>
 <p>at all places and all times. Of course, there’s no such thing in practice as a truly steady current, any more than there is a <em>truly</em> stationary charge. In this sense, both electrostatics and magnetostatics describe artificial worlds that exist only in textbooks. However, they represent suitable approximations as long as the actual fluctuations are remote, or gradual - in fact, for most purposes magnetostatics applies very well to household currents, which alternate 120 times per second!</p>
 <p>Notice that a moving point charge cannot possibly constitute a steady current. If it’s here one instant, it’s gone the next. This may seem like a minor thing to you, but it’s a major headache for me. I developed each topic in electrostatics by starting out with the simple case of a point charge at rest; then I generalized to an arbitrary charge distribution by invoking the superposition principle. This approach is not open to us in magnetostatics because a moving point charge does not produce a static field in the first place. We are forced to deal with extended current distributions right from the start, and, as a result, the arguments are bound to be more cumbersome.
 When a steady current flows in a wire, its magnitude I must be the same all along the line; otherwise, charge would be piling up somewhere, and it wouldn’t be a steady current. More generally, since <span class="math notranslate nohighlight">\( \partial \rho / \partial t = 0 \)</span> in magnetostatics, the continuity equation (5.29) becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq5-33">
-<span class="eqno">(299)<a class="headerlink" href="#equation-eq5-33" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(317)<a class="headerlink" href="#equation-eq5-33" title="Permalink to this equation">#</a></span>\[
 \nabla  \vec{J} = 0 
 \]</div>
 </section>
@@ -482,17 +482,17 @@ When a steady current flows in a wire, its magnitude I must be the same all alon
 <h2>5.2.2: The Magnetic Field of a Steady Current<a class="headerlink" href="#the-magnetic-field-of-a-steady-current" title="Permalink to this heading">#</a></h2>
 <p>The magnetic field of a steady line current is given by the <strong>Biot-Savart law</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-34">
-<span class="eqno">(300)<a class="headerlink" href="#equation-eq5-34" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(318)<a class="headerlink" href="#equation-eq5-34" title="Permalink to this equation">#</a></span>\[
 \vec{B}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{I} \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} l' = \frac{ \mu_0}{4 \pi } I \int \frac{\mathrm{d} \vec{l'} \times \hat{\Delta r }}{\Delta r  ^2}
 \]</div>
 <p>The integration is along the current path, in the direction of the flow; <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l'} \)</span> is an element of length along the wire, and <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span>, as always, is the vector from the source to the point <strong>r</strong> (Fig 5.17). The constant <span class="math notranslate nohighlight">\( \mu_0 \)</span> is called the <strong>permeability of free space</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-35">
-<span class="eqno">(301)<a class="headerlink" href="#equation-eq5-35" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(319)<a class="headerlink" href="#equation-eq5-35" title="Permalink to this equation">#</a></span>\[
 \mu_0 = 4 \pi \times 10^{-7} \text{N} / \text{A}^2 
 \]</div>
 <p>This is an exact number, not an empirical constant. It serves to <em>define</em> the ampereThese units are such that <strong>B</strong> itself comes out in newtons per ampere-meter (as required by the Lorentz force law), or <strong>teslas</strong> (T):</p>
 <div class="math notranslate nohighlight" id="equation-eq5-36">
-<span class="eqno">(302)<a class="headerlink" href="#equation-eq5-36" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(320)<a class="headerlink" href="#equation-eq5-36" title="Permalink to this equation">#</a></span>\[
 1 \text{T} = 1 \text{N} / (\text{A} \cdot \text{m}) 
 \]</div>
 <p><img alt="Figure 5.17" src="../../../_images/5.17.png" /></p>
@@ -526,21 +526,21 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>The Biot-Savart law gives the magnetic field as</p>
 <div class="math notranslate nohighlight" id="equation-eq5-37">
-<span class="eqno">(303)<a class="headerlink" href="#equation-eq5-37" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(321)<a class="headerlink" href="#equation-eq5-37" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 B &amp; = \frac{\mu_0 I}{4 \pi} \int _{\theta_1}^{\theta_2} \left( \frac{\cos ^2 \theta}{s^2}  \right) \left( \frac{s}{\cos ^2 \theta} \right) \cos \theta \mathrm{d} \theta \\
 &amp; = \frac{\mu_0}{4 \pi s} \int _{\theta_1}^{\theta_2} \cos \theta \mathrm{d} \theta \\
 &amp; = \frac{\mu_0 I}{4 \pi s} (\sin \theta_2 - \sin \theta_1)
 \end{aligned}
 \end{split}\]</div>
-<p>That is the field of any straight segment of wire, in terms of the initial and final angles <span class="math notranslate nohighlight">\( \theta_1 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 \)</span> (Fig 5.19). Of course, a finite segment by itself could never support a steady current (where would the charge go when it got to the end?), but it might be a piece of some closed circuit, and <a class="reference internal" href="#equation-eq5-37">(303)</a> would then represent its contribution to the total field. In the case of an infinite wire, <span class="math notranslate nohighlight">\( \theta_1 = - \pi / 2 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 = \pi / 2 \)</span> so we obtain</p>
+<p>That is the field of any straight segment of wire, in terms of the initial and final angles <span class="math notranslate nohighlight">\( \theta_1 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 \)</span> (Fig 5.19). Of course, a finite segment by itself could never support a steady current (where would the charge go when it got to the end?), but it might be a piece of some closed circuit, and <a class="reference internal" href="#equation-eq5-37">(321)</a> would then represent its contribution to the total field. In the case of an infinite wire, <span class="math notranslate nohighlight">\( \theta_1 = - \pi / 2 \)</span> and <span class="math notranslate nohighlight">\( \theta_2 = \pi / 2 \)</span> so we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq5-38">
-<span class="eqno">(304)<a class="headerlink" href="#equation-eq5-38" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(322)<a class="headerlink" href="#equation-eq5-38" title="Permalink to this equation">#</a></span>\[
 B = \frac{\mu_0 I}{2 \pi s} 
 \]</div>
 <p>Notice that the field is inversely proportional to the distance from the wire - just like the electric field of an infinite line charge. In the region below the wire, <strong>B</strong> points into the page, and in general, it “circles around” the wire, in accordance with the right-hand rule</p>
 <div class="math notranslate nohighlight" id="equation-eq5-39">
-<span class="eqno">(305)<a class="headerlink" href="#equation-eq5-39" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(323)<a class="headerlink" href="#equation-eq5-39" title="Permalink to this equation">#</a></span>\[
 \vec{B} = \frac{\mu_0 I}{2 \pi s} \hat{\phi} 
 \]</div>
 <p>As an application, let’s find the force of attraction between two long, parallel wires a distance <em>d</em> apart, carrying currents <span class="math notranslate nohighlight">\( I_1 \)</span> and <span class="math notranslate nohighlight">\( I_2 \)</span> (Fig 5.20). The field at (2) due to (1) is</p>
@@ -555,7 +555,7 @@ F = I_2 \left( \frac{\mu_0 I_1}{2 \pi d}  \right) \int \mathrm{d} l
 \]</div>
 <p>The total force, not surprisingly, is infinite, but the force per unit length is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-40">
-<span class="eqno">(306)<a class="headerlink" href="#equation-eq5-40" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(324)<a class="headerlink" href="#equation-eq5-40" title="Permalink to this equation">#</a></span>\[
 f = \frac{ \mu_0}{2 \pi } \frac{I_1 I_2}{d} 
 \]</div>
 <p>If the currents are antiparallel (one up, one down), the force is repulsive - consistent again with the qualitative observations of Sect 5.1.1.</p>
@@ -582,7 +582,7 @@ B(z) = \frac{\mu_0 }{4 \pi} I \int \frac{\mathrm{d} l'}{\Delta r  ^2} \cos \thet
 \]</div>
 <p>(Notice that dl’ and <span class="math notranslate nohighlight">\( \Delta r  \)</span> are perpendicular, in this case; the factor of <span class="math notranslate nohighlight">\( \cos \theta \)</span> projects out the vertical component.) Now, <span class="math notranslate nohighlight">\( \cos \theta \)</span> and <span class="math notranslate nohighlight">\( \Delta r  ^2 \)</span> are constants, and <span class="math notranslate nohighlight">\( \int dl' \)</span> is simply the circumference <span class="math notranslate nohighlight">\( 2 \pi R \)</span>, so</p>
 <div class="math notranslate nohighlight" id="equation-eq5-41">
-<span class="eqno">(307)<a class="headerlink" href="#equation-eq5-41" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(325)<a class="headerlink" href="#equation-eq5-41" title="Permalink to this equation">#</a></span>\[
 B(z) = \frac{\mu_0 I}{4 \pi} \left( \frac{\cos \theta}{\Delta r  ^2} \right) 2 \pi R = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2) ^{3/2}}  
 \]</div>
 </div>
@@ -594,7 +594,7 @@ B(z) = \frac{\mu_0 I}{4 \pi} \left( \frac{\cos \theta}{\Delta r  ^2} \right) 2 \
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq5-42">
-<span class="eqno">(308)<a class="headerlink" href="#equation-eq5-42" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(326)<a class="headerlink" href="#equation-eq5-42" title="Permalink to this equation">#</a></span>\[
 \vec{B}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' 
 \]</div>
 <p>respectively. You might be tempted to write down the corresponding formula for a moving point charge, using the “dictionary”</p>

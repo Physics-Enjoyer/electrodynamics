@@ -467,18 +467,19 @@ document.write(`
 <p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
 <p>Because <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0\)</span> , the line integral of <strong>E</strong> around any closed loop is zero (that follows from Stokes’ theorem). Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} = 0 \)</span>, the line integral of <strong>E</strong> from point <strong>a</strong> to point <strong>b</strong> is the same for all paths (otherwise you could go <em>out</em> along path (i) and return along path (ii) - Fig 2.30 - and obtain <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} \neq 0 \)</span> ). Because the line integral is independent of path, we can define a function</p>
 <div class="math notranslate nohighlight" id="equation-eq2-21">
-<span class="eqno">(98)<a class="headerlink" href="#equation-eq2-21" title="Permalink to this equation">#</a></span>\[
-V(\vec{r}) \equiv - \int _{O} ^{\vec{r}} \vec{E} \cdot \mathrm{d}{\vec{l}} {2.21} 
+<span class="eqno">(104)<a class="headerlink" href="#equation-eq2-21" title="Permalink to this equation">#</a></span>\[
+V(\vec{r}) \equiv - \int _{O} ^{\vec{r}} \vec{E} \cdot \mathrm{d}{\vec{l}}
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\( O \)</span> is some standard reference point on which we have agreed beforehand; V then depends only on the point <span class="math notranslate nohighlight">\( \vec{r} \)</span>. It is called the <strong>electric potential</strong>.</p>
 <p>The potential <em>difference</em> between two points <strong>a</strong> and <strong>b</strong> is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-22">
-<span class="eqno">(99)<a class="headerlink" href="#equation-eq2-22" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(105)<a class="headerlink" href="#equation-eq2-22" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 V(\vec{b}) - V(\vec{a}) &amp; = &amp; -\int_{O}^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}} + \int_{O}^{\vec{a}} \vec{E} \cdot \mathrm{d}{\vec{l}} \\
 &amp; = &amp; -\int_{O}^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}} - \int_{\vec{a}}^{O} \vec{E}\cdot \mathrm{d}{\vec{l}} \\
 &amp; = &amp; - \int_{\vec{a}} ^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}}
-\end{aligned}\end{split}\]</div>
+\end{aligned}
+\end{split}\]</div>
 <p>Now, the fundamental theorem for gradients states that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -491,11 +492,11 @@ V(\vec{b}) - V(\vec{a}) = \int_{\vec{a}} ^{\vec{b}} (\nabla {V}) \cdot \mathrm{d
 \]</div>
 <p>Since, finally, this is true for <em>any</em> points <strong>a</strong> and <strong>b</strong>, the integrands must be equal:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-23">
-<span class="eqno">(100)<a class="headerlink" href="#equation-eq2-23" title="Permalink to this equation">#</a></span>\[
-\vec{E} = - \nabla {V} {2.23} 
+<span class="eqno">(106)<a class="headerlink" href="#equation-eq2-23" title="Permalink to this equation">#</a></span>\[
+\vec{E} = - \nabla {V}
 \]</div>
-<p>Equation <a class="reference internal" href="#equation-eq2-23">(100)</a> is the differential version of <a class="reference internal" href="#equation-eq2-21">(98)</a>; it says that the electric field is the gradient of a scalar potential, which is what we set out to prove.</p>
-<p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <strong>E</strong> depended on the path taken, then the “definition” of V <a class="reference internal" href="#equation-eq2-21">(98)</a> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <a class="reference internal" href="#equation-eq2-23">(100)</a> distract you; it carries over from <a class="reference internal" href="#equation-eq2-21">(98)</a> and is largely a matter of convention.</p>
+<p>Equation <a class="reference internal" href="#equation-eq2-23">(106)</a> is the differential version of <a class="reference internal" href="#equation-eq2-21">(104)</a>; it says that the electric field is the gradient of a scalar potential, which is what we set out to prove.</p>
+<p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <strong>E</strong> depended on the path taken, then the “definition” of V <a class="reference internal" href="#equation-eq2-21">(104)</a> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <a class="reference internal" href="#equation-eq2-23">(106)</a> distract you; it carries over from <a class="reference internal" href="#equation-eq2-21">(104)</a> and is largely a matter of convention.</p>
 </section>
 <section id="comments-on-potential">
 <h2>2.3.2: Comments on Potential<a class="headerlink" href="#comments-on-potential" title="Permalink to this heading">#</a></h2>
@@ -534,7 +535,7 @@ V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma \mathrm{d}{z} = - \frac{1
 <p>Dividing through by Q, we see that the electric field, too, obeys the superposition principle:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{E} = \vec{E_1} + \vec{E_2} + \ldots {2.38}
+\vec{E} = \vec{E_1} + \vec{E_2} + \ldots
 \]</div>
 <p>Integrating from the common reference point to <span class="math notranslate nohighlight">\( \vec{r} \)</span>, it follows that the potential also satisfies such a principle:</p>
 <div class="math notranslate nohighlight">
@@ -557,14 +558,14 @@ V = V_1 + V_2 + \ldots
 \nabla \cdot {\vec{E}} = \frac{\rho}{\epsilon_0} \qquad \text{ and } \qquad \nabla \times {\vec{E}} = 0
 \]</div>
 <p>look like, in terms of V? Well, <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{E}} = \nabla \cdot (-\nabla {V}) = -\nabla^2{V} \)</span>, so, apart from that persistent minus sign, the divergence of <strong>E</strong> is the Laplacian of V. Gauss’s law, then, says</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla^2{V} = -\frac{\rho}{\epsilon_0} {2.24}
+<div class="math notranslate nohighlight" id="equation-eq2-24">
+<span class="eqno">(107)<a class="headerlink" href="#equation-eq2-24" title="Permalink to this equation">#</a></span>\[
+\nabla^2{V} = -\frac{\rho}{\epsilon_0}
 \]</div>
 <p>This is known as <strong>Poisson’s equation</strong>. In regions where there is no charge, so <span class="math notranslate nohighlight">\( \rho = 0 \)</span>, Poisson’s equation reduces to Laplace’s equation,</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla^2{V} = 0 {2.25}
+<div class="math notranslate nohighlight" id="equation-eq2-25">
+<span class="eqno">(108)<a class="headerlink" href="#equation-eq2-25" title="Permalink to this equation">#</a></span>\[
+\nabla^2{V} = 0
 \]</div>
 <p>We’ll explore this equation more fully in Chapter 3.</p>
 <p>So much for Gauss’s law. What about the curl law? This says that</p>
@@ -576,7 +577,7 @@ V = V_1 + V_2 + \ldots
 </section>
 <section id="the-potential-of-a-localized-charge-distribution">
 <h2>2.3.4: The potential of a Localized Charge Distribution<a class="headerlink" href="#the-potential-of-a-localized-charge-distribution" title="Permalink to this heading">#</a></h2>
-<p>I defined V in terms of <span class="math notranslate nohighlight">\( \vec{E} \eqref{2.21} \)</span>. Ordinarily, though, it’s <strong>E</strong> that we’re looking for (if we already knew <strong>E</strong>, there wouldn’t be much point in calculating V). The idea is that it might be easier to get V first, and then calculate <strong>E</strong> by taking the gradient. Typically, then, we know where the charge is (that is, we know <span class="math notranslate nohighlight">\( \rho \)</span>), and we want to find V. Now, Poisson’s equation relates V and <span class="math notranslate nohighlight">\( \rho \)</span>, but unfortunately it’s “the wrong way round”: it would give us <span class="math notranslate nohighlight">\( \rho \)</span> if we knew V, whereas we want V, knowing <span class="math notranslate nohighlight">\( \rho \)</span>. What we must do, then, is “invert” Poisson’s equation. That’s the program for this section, although I shall do it by roundabout means, beginning, as always, with a point charge at the origin.</p>
+<p>I defined V in terms of <span class="math notranslate nohighlight">\( \vec{E}\)</span> <a class="reference internal" href="#equation-eq2-21">(104)</a> . Ordinarily, though, it’s <strong>E</strong> that we’re looking for (if we already knew <strong>E</strong>, there wouldn’t be much point in calculating V). The idea is that it might be easier to get V first, and then calculate <strong>E</strong> by taking the gradient. Typically, then, we know where the charge is (that is, we know <span class="math notranslate nohighlight">\( \rho \)</span>), and we want to find V. Now, Poisson’s equation relates V and <span class="math notranslate nohighlight">\( \rho \)</span>, but unfortunately it’s “the wrong way round”: it would give us <span class="math notranslate nohighlight">\( \rho \)</span> if we knew V, whereas we want V, knowing <span class="math notranslate nohighlight">\( \rho \)</span>. What we must do, then, is “invert” Poisson’s equation. That’s the program for this section, although I shall do it by roundabout means, beginning, as always, with a point charge at the origin.</p>
 <p>The electric field is <span class="math notranslate nohighlight">\( \vec{E} = (1 / 4 \pi \epsilon_0)(1 / r^2) \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r}  \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r} + r \mathrm{d}{\theta} \hat{\theta} + r \sin \theta \mathrm{d}{\theta} \hat{\phi} \)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[
@@ -592,31 +593,31 @@ V(r) = - \int_{\mathscr{O}} ^r \vec{E} \cdot \mathrm{d}{\vec{l}} \\
 <p>(You see here the advantage of using infinity for the reference point: it kills the lower limit on the integral.) Notice the sign of V; presumably the conventional minus sign in the definition was chosen in order to make the potential of a positive charge come out positive. It is useful to remember that regions of positive charge are potential “hills,” and electric field points “downhill” from plus toward minus.</p>
 <p><img alt="Figure 2.32" src="../../../_images/2.32.png" /></p>
 <p>In general, the potential of a point charge q is</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-26">
+<span class="eqno">(109)<a class="headerlink" href="#equation-eq2-26" title="Permalink to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{q}{\Delta r } 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span>, as always, is the distance from <span class="math notranslate nohighlight">\( q \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> (Fig 2.32). Invoking the superposition principle, then, the potential of a collection of charges is</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-27">
+<span class="eqno">(110)<a class="headerlink" href="#equation-eq2-27" title="Permalink to this equation">#</a></span>\[
 V(r) = \frac{1}{4\pi \epsilon_0} \sum_{i=1} ^n \frac{q_i}{\Delta r  _i} 
 \]</div>
 <p>or, for a continuous distribution,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-29">
-<span class="eqno">(101)<a class="headerlink" href="#equation-eq2-29" title="Permalink to this equation">#</a></span>\[
-V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'} {2.29} 
+<span class="eqno">(111)<a class="headerlink" href="#equation-eq2-29" title="Permalink to this equation">#</a></span>\[
+V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'}
 \]</div>
-<p>This is the equation we were looking for, telling us how to compute V when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(101)</a> with the corresponding formula for the electric field in terms of <span class="math notranslate nohighlight">\( \rho \)</span>:</p>
+<p>This is the equation we were looking for, telling us how to compute V when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(111)</a> with the corresponding formula for the electric field in terms of <span class="math notranslate nohighlight">\( \rho \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'}
 \]</div>
 <p>The main point is that the pesky unit vector <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is gone, so there is no need to fuss with components. The potentials of line and surface charges are</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-30">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq2-30" title="Permalink to this equation">#</a></span>\[
 V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } \mathrm{d}{l'} \qquad \text{ and } \qquad V = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\Delta r } \mathrm{d}{a'}
 \]</div>
-<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(101)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathscr{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
+<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(111)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathscr{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
 </section>
 <section id="boundary-conditions">
 <h2>2.3.5: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this heading">#</a></h2>
@@ -630,26 +631,26 @@ V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } \mathrm{
 <p><img alt="Figure 2.36" src="../../../_images/2.36.png" />
 where A is the area of the pillbox lid. If <span class="math notranslate nohighlight">\( \sigma \)</span>  varies from point to point or the surface is curved, we can simply pick A to be extremely small. Now, the sides of the pillbox contribute nothing to the flux, in the limit as the thickness <span class="math notranslate nohighlight">\( \epsilon \)</span>  goes to zero, so we are left with</p>
 <div class="math notranslate nohighlight" id="equation-eq2-31">
-<span class="eqno">(102)<a class="headerlink" href="#equation-eq2-31" title="Permalink to this equation">#</a></span>\[
-E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma {2.31} 
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq2-31" title="Permalink to this equation">#</a></span>\[
+E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( E_{above}^{\perp} \)</span> denotes the component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> that is perpendicular to the surface immediately above, and <span class="math notranslate nohighlight">\(  E_{below} ^{\perp} \)</span> is the same, only just below the surface. For consistency, let “upward” be the positive direction for both. <em>Conclusion: the normal component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> is discontinuous by an amount <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span> at any boundary.</em> In particular, where there is <em>no</em> surface charge, <span class="math notranslate nohighlight">\( \vec{E}^{\perp} \)</span> is continuous, as for instance at the surface of a uniformly charged solid sphere.</p>
-<p>The <em>tangential</em> component of <span class="math notranslate nohighlight">\( \vec{E} \)</span>, by contrast, is always continuous. For if we apply Eq. 2.19,</p>
+<p>The <em>tangential</em> component of <span class="math notranslate nohighlight">\( \vec{E} \)</span>, by contrast, is always continuous. For if we apply <a class="reference internal" href="ch2-2.html#equation-eq2-19">(102)</a>.</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{E} \cdot \mathrm{d}{\vec{l}} = 0
 \]</div>
 <p>to the thin rectangular loop of Fig 2.37, the ends give nothing (as <span class="math notranslate nohighlight">\( \epsilon \rightarrow 0 \)</span>), and the sides give <span class="math notranslate nohighlight">\( (E_{above} ^{\parallel} l - E_{below} ^{\parallel} l) \)</span>, so</p>
 <div class="math notranslate nohighlight" id="equation-eq2-32">
-<span class="eqno">(103)<a class="headerlink" href="#equation-eq2-32" title="Permalink to this equation">#</a></span>\[
-\vec{E}_{above} ^{\parallel} = \vec{E}_{below} ^{\parallel} {2.32} 
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq2-32" title="Permalink to this equation">#</a></span>\[
+\vec{E}_{above} ^{\parallel} = \vec{E}_{below} ^{\parallel}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{E}^{\parallel} \)</span> stands for the components of <span class="math notranslate nohighlight">\( \vec{E} \)</span> parallel to the surface.</p>
 <p><img alt="Figure 2.36" src="../../../_images/2.36.png" /></p>
-<p>The boundary conditions on <span class="math notranslate nohighlight">\( \vec{E} \)</span> (Eqs. <a class="reference internal" href="#equation-eq2-31">(102)</a> and <a class="reference internal" href="#equation-eq2-32">(103)</a>) can be combined into a single formula:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{E}_{above} - \vec{E}_{below} = \frac{\sigma}{\epsilon_0} \hat{n} {2.33}
+<p>The boundary conditions on <span class="math notranslate nohighlight">\( \vec{E} \)</span> (Eqs. <a class="reference internal" href="#equation-eq2-31">(113)</a> and <a class="reference internal" href="#equation-eq2-32">(114)</a>) can be combined into a single formula:</p>
+<div class="math notranslate nohighlight" id="equation-eq2-33">
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq2-33" title="Permalink to this equation">#</a></span>\[
+\vec{E}_{above} - \vec{E}_{below} = \frac{\sigma}{\epsilon_0} \hat{n}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector perpendicular to the surface, pointing from “below” to “above.”</p>
 <p><img alt="Figure 2.37" src="../../../_images/2.37.png" />
@@ -661,18 +662,18 @@ V_{above} - V_{below} = -\int_{a}^{b} \vec{E} \cdot \mathrm{d}{\vec{l}}
 \]</div>
 <p>as the path length shrinks to zero, so too does the integral</p>
 <div class="math notranslate nohighlight" id="equation-eq2-34">
-<span class="eqno">(104)<a class="headerlink" href="#equation-eq2-34" title="Permalink to this equation">#</a></span>\[
-V_{above} = V_{below} {2.34} 
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq2-34" title="Permalink to this equation">#</a></span>\[
+V_{above} = V_{below}
 \]</div>
 <p>However, the <em>gradient</em> of V inherits the discontinuity in <span class="math notranslate nohighlight">\( \vec{E} \)</span>, since <span class="math notranslate nohighlight">\( \vec{E} - \nabla {V} \)</span>, so</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-35">
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq2-35" title="Permalink to this equation">#</a></span>\[
 \nabla {V}_{above} - \nabla {V}_{below} = - \frac{\sigma}{\epsilon_0} \hat{n}
 \]</div>
 <p>or more conveniently</p>
 <div class="math notranslate nohighlight" id="equation-eq2-36">
-<span class="eqno">(105)<a class="headerlink" href="#equation-eq2-36" title="Permalink to this equation">#</a></span>\[
-\pdv{V_{above}}{n} - \pdv{V_{below}}{n} = - \frac{1}{\epsilon_0} \sigma {2.36} 
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq2-36" title="Permalink to this equation">#</a></span>\[
+\frac{\partial {V_{above}}}{\partial n} - \frac{\partial {V_{below}}}{\partial n} = - \frac{1}{\epsilon_0} \sigma
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
@@ -680,7 +681,7 @@ V_{above} = V_{below} {2.34}
 \frac{\partial V}{\partial n} = \nabla {V} \cdot \hat{n}
 \]</div>
 <p>denotes the normal derivative of V (that is, the rate of change in the direction perpendicular to the surface).</p>
-<p>Please note that these boundary conditions relate the fields and potentials <em>just</em> above and <em>just</em> below the surface. For example, the derivatives in <a class="reference internal" href="#equation-eq2-36">(105)</a> are the limiting values as we approach the surface from either side.</p>
+<p>Please note that these boundary conditions relate the fields and potentials <em>just</em> above and <em>just</em> below the surface. For example, the derivatives in <a class="reference internal" href="#equation-eq2-36">(118)</a> are the limiting values as we approach the surface from either side.</p>
 </section>
 </section>
 

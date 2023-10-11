@@ -466,7 +466,7 @@ document.write(`
 <h2>6.3.1: Ampere’s Law in Magnetized Materials<a class="headerlink" href="#ampere-s-law-in-magnetized-materials" title="Permalink to this heading">#</a></h2>
 <p>In Section 6.2, we found that the effect of magnetization is to establish bound currents <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span> within the material and <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span> on the surface. The field due to magnetization of the medium is just the field produced by these bound currents. We are now ready to put everything together: the field attributable to bound currents, plus the field due to everything else - which I will call the <strong>free current</strong>. The free current might flow through wires embedded in the magnetized substance or, if the latter is a conductor, through the material itself. In any event, the total current can be written as</p>
 <div class="math notranslate nohighlight" id="equation-eq6-17">
-<span class="eqno">(362)<a class="headerlink" href="#equation-eq6-17" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(380)<a class="headerlink" href="#equation-eq6-17" title="Permalink to this equation">#</a></span>\[
 \vec{J} = \vec{J_b} + \vec{J_f} 
 \]</div>
 <p>There is no new physics in Eq. 6.17; it is simply a convenience to separate the current into these two parts, because they got there by quite different means: the free current is there because somebody hooked up a wire to a battery - it involves actual transport of charge; the bound current is there because of magnetization - it results from the conspiracy of many aligned atomic dipoles.</p>
@@ -482,17 +482,17 @@ document.write(`
 \]</div>
 <p>The quantity in parentheses is designated by the letter <strong>H</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq6-18">
-<span class="eqno">(363)<a class="headerlink" href="#equation-eq6-18" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(381)<a class="headerlink" href="#equation-eq6-18" title="Permalink to this equation">#</a></span>\[
 \vec{H} \equiv \frac{1}{\mu_0} \vec{B} - \vec{M} 
 \]</div>
 <p>In terms of <strong>H</strong>, then, Ampere’s law reads</p>
 <div class="math notranslate nohighlight" id="equation-eq6-19">
-<span class="eqno">(364)<a class="headerlink" href="#equation-eq6-19" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(382)<a class="headerlink" href="#equation-eq6-19" title="Permalink to this equation">#</a></span>\[
 \nabla \times  \vec{H} = \vec{J_f} 
 \]</div>
 <p>or, in integral form,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-20">
-<span class="eqno">(365)<a class="headerlink" href="#equation-eq6-20" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(383)<a class="headerlink" href="#equation-eq6-20" title="Permalink to this equation">#</a></span>\[
 \oint \vec{H} \cdot \mathrm{d} \vec{l} = I _{f, enc} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( I_{f, enc} \)</span> is the total free current passing through the Amperian loop.</p>
@@ -521,7 +521,7 @@ H (2 \pi s) = I_{f, enc} = I \frac{\pi s^2}{\pi R^2}
 \]</div>
 <p>Outside the wire,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-22">
-<span class="eqno">(366)<a class="headerlink" href="#equation-eq6-22" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(384)<a class="headerlink" href="#equation-eq6-22" title="Permalink to this equation">#</a></span>\[
 \vec{H} = \frac{I}{2 \pi s} \hat{\phi} \quad (s \geq R) 
 \]</div>
 <p>Outside of the wire (as always in empty space) <span class="math notranslate nohighlight">\( \vec{M} = 0 \)</span>, so</p>
@@ -540,7 +540,7 @@ H (2 \pi s) = I_{f, enc} = I \frac{\pi s^2}{\pi R^2}
 <h2>6.3.2: A Deceptive Parallel<a class="headerlink" href="#a-deceptive-parallel" title="Permalink to this heading">#</a></h2>
 <p>Equation 6.19 looks just like Ampere’s original law, except that the total current is replaced by the free current, and <span class="math notranslate nohighlight">\( \vec{B} \)</span> is replaced by <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span>. As in the case of <strong>D</strong>, however, I must warn you against reading too much into this correspondence. It does not say that <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span> is “just like <span class="math notranslate nohighlight">\( \vec{B} \)</span>, only its source is <span class="math notranslate nohighlight">\( \vec{J_f} \)</span> instead of <span class="math notranslate nohighlight">\( \vec{J} \)</span>.” For the curl alone does not determine a vector field - you must also know the divergence. And whereas <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{B} = 0 \)</span>, the divergence of <strong>H</strong> is not, in general, zero. In fact, from Eq. 6.18,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-23">
-<span class="eqno">(367)<a class="headerlink" href="#equation-eq6-23" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(385)<a class="headerlink" href="#equation-eq6-23" title="Permalink to this equation">#</a></span>\[
 \nabla \cdot  \vec{H} = - \nabla \cdot  \vec{M} 
 \]</div>
 <p>Only when the divergence of <strong>M</strong> vanishes is the parallel between <span class="math notranslate nohighlight">\( \vec{B} \)</span> and <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span> faithful.</p>
@@ -550,22 +550,22 @@ H (2 \pi s) = I_{f, enc} = I \frac{\pi s^2}{\pi R^2}
 <h2>6.3.3: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this heading">#</a></h2>
 <p>The magnetostatic boundary conditions of Section 5.4.2 can be rewritten in terms of <strong>H</strong> and the free current. From Eq. 6.23 it follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq6-24">
-<span class="eqno">(368)<a class="headerlink" href="#equation-eq6-24" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(386)<a class="headerlink" href="#equation-eq6-24" title="Permalink to this equation">#</a></span>\[
 H_{above} ^\perp - H_{below} ^\perp = -(M_{above} ^\perp - M_{below} ^\perp) 
 \]</div>
 <p>while Eq. 6.19 says</p>
 <div class="math notranslate nohighlight" id="equation-eq6-25">
-<span class="eqno">(369)<a class="headerlink" href="#equation-eq6-25" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(387)<a class="headerlink" href="#equation-eq6-25" title="Permalink to this equation">#</a></span>\[
 \vec{H}_{above} ^\parallel - \vec{H}_{below} ^\parallel = \vec{K}_f \times \hat{n} 
 \]</div>
 <p>In the presence of materials, these are sometimes more useful than the corresponding boundary conditions on <strong>B</strong> (Eqs. 5.74 and 5.76)</p>
 <div class="math notranslate nohighlight" id="equation-eq6-26">
-<span class="eqno">(370)<a class="headerlink" href="#equation-eq6-26" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(388)<a class="headerlink" href="#equation-eq6-26" title="Permalink to this equation">#</a></span>\[
 B_{above} ^\perp -  B_{below} ^\perp = 0 
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq6-27">
-<span class="eqno">(371)<a class="headerlink" href="#equation-eq6-27" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(389)<a class="headerlink" href="#equation-eq6-27" title="Permalink to this equation">#</a></span>\[
 \vec{B}_{above} ^\parallel - \vec{B}_{below} ^\parallel = \mu_0 (\vec{K} \times \hat{n} ) 
 \]</div>
 </section>

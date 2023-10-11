@@ -475,17 +475,17 @@ document.write(`
 \]</div>
 <p>so <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{B} = 0 \)</span> invites the introduction of a vector potential <strong>A</strong> in magnetostatics</p>
 <div class="math notranslate nohighlight" id="equation-eq5-61">
-<span class="eqno">(325)<a class="headerlink" href="#equation-eq5-61" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(343)<a class="headerlink" href="#equation-eq5-61" title="Permalink to this equation">#</a></span>\[
 \vec{B} = \nabla \times  \vec{A} 
 \]</div>
 <p>We were allowed to define these potentials based on our extended proof of the Helmholtz theorem (back in Section 1.6). The potential formulation automatically takes care of <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{B} = 0 \)</span> since the divergence of a curl is always zero; there remains Ampere’s law:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-62">
-<span class="eqno">(326)<a class="headerlink" href="#equation-eq5-62" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(344)<a class="headerlink" href="#equation-eq5-62" title="Permalink to this equation">#</a></span>\[
 \nabla \times  \vec{B} = \nabla \times  (\nabla \times  \vec{A}) = \nabla  (\nabla \cdot  \vec{A}) - \nabla  ^2 \vec{A} = \mu_0 \vec{J} 
 \]</div>
 <p>Now, the electric potential had a built-in ambiguity: you can add to V any function whose gradient is zero (which is to say, a constant), without altering the physical quantity <strong>E</strong>. Likewise, you can add to <strong>A</strong> any function whose curl vanishes (which is to say, the gradient of any scalar), with no effect on <strong>B</strong>. We can exploit this freedom to eliminate the divergence of <strong>A</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-63">
-<span class="eqno">(327)<a class="headerlink" href="#equation-eq5-63" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(345)<a class="headerlink" href="#equation-eq5-63" title="Permalink to this equation">#</a></span>\[
 \nabla \cdot  \vec{A} = 0 
 \]</div>
 <p>To prove that this is always possible, suppose that our original potential <span class="math notranslate nohighlight">\( \vec{A_0} \)</span> is <em>not</em> divergenceless. If we add to it the gradient of <span class="math notranslate nohighlight">\( \lambda \)</span> <span class="math notranslate nohighlight">\( (\vec{A} = \vec{A}_0 + \nabla  \lambda) \)</span>, the new divergence is</p>
@@ -516,17 +516,17 @@ V = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho}{\Delta r } \mathrm{d} \tau'
 <p>If <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{A}_0 \)</span> does not go to zero at infinity, then we’ll have to use other means to discover the appropriate <span class="math notranslate nohighlight">\( \lambda \)</span>, just as we get the electric potential by other means when the charge distribution extends to infinity. But the essential point remains: It is always possible to make the vector potential divergenceless. To put it the other way round,: the definition <span class="math notranslate nohighlight">\( \vec{B} = \nabla \times  \vec{A} \)</span> specifies the curl of <strong>A</strong>, but it doesn’t say anything about the divergence - we are at liberty to pick that as we see fit, and zero is ordinarily the simplest choice.</p>
 <p>With this condition on <strong>A</strong>, Ampere’s law becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq5-64">
-<span class="eqno">(328)<a class="headerlink" href="#equation-eq5-64" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(346)<a class="headerlink" href="#equation-eq5-64" title="Permalink to this equation">#</a></span>\[
 \nabla  ^2 \vec{A} = - \mu_0 \vec{J} 
 \]</div>
 <p>This again is nothing but Poisson’s equation, or rather it is three of them, one for each Cartesian coordinate. In Cartesian coordinates, <span class="math notranslate nohighlight">\( \nabla  ^2 \vec{A} = (\nabla  ^2 A_x) \hat{x} + (\nabla  ^2 A_y) \hat{y} + (\nabla  ^2 A_z) \hat{z} \)</span>, so 5.64 reduces to <span class="math notranslate nohighlight">\( \nabla  ^2 A_x = - \mu_0 J_x \)</span>, <span class="math notranslate nohighlight">\( \nabla  ^2 A_y = - \mu_0 J_y \)</span>, and <span class="math notranslate nohighlight">\( \nabla  ^2 A_z = - \mu_0 J_z \)</span>. In curvilinear coordinates, the unit vectors themselves are functions of position, and must be differentiated, so it is <em>not</em> the case, for example, that <span class="math notranslate nohighlight">\( \nabla  ^2 A_r = - \mu_0 J_r \)</span>. Remember that even if you plan to evaluate integrals such as 5.65 using curvilinear coordinates, you must first express <span class="math notranslate nohighlight">\( \vec{J} \)</span> in terms of its Cartesian components. Assuming <strong>J</strong> goes to zero at infinity, we can read off the solution</p>
 <div class="math notranslate nohighlight" id="equation-eq5-65">
-<span class="eqno">(329)<a class="headerlink" href="#equation-eq5-65" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(347)<a class="headerlink" href="#equation-eq5-65" title="Permalink to this equation">#</a></span>\[
 \vec{A} (\vec{r}) = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(r')}{\Delta r } \mathrm{d} \tau' 
 \]</div>
 <p>For line and surface currents,</p>
 <div class="math notranslate nohighlight" id="equation-eq5-66">
-<span class="eqno">(330)<a class="headerlink" href="#equation-eq5-66" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(348)<a class="headerlink" href="#equation-eq5-66" title="Permalink to this equation">#</a></span>\[
 \vec{A} = \frac{\mu_0}{4 \pi} \int \frac{\vec{I}}{\Delta r  } \mathrm{d} l' = \frac{\mu_0 \vec{I}}{4 \pi} \int \frac{1}{\Delta r } \mathrm{d} \vec{l}'; \qquad \vec{A} = \frac{\mu_0}{4\pi} \int \frac{\vec{K}}{\Delta r } \mathrm{d} a' 
 \]</div>
 <p>(If the current does not go to zero at infinity, we have to find other ways to get <strong>A</strong>; some of these are explored in Exercise 5.12 and in the problems at the end of the section.)</p>
@@ -586,7 +586,7 @@ R \sin \theta' \cos \phi' &amp; R \sin \theta' \sin \phi' &amp; R \cos \theta'
 \end{split}\]</div>
 <p>If the point <strong>r</strong> lies inside the sphere, then <span class="math notranslate nohighlight">\( R &gt; r \)</span> and this expression reduces to <span class="math notranslate nohighlight">\( (2r / 3R^2) \)</span>; if <strong>r</strong> lies outside the sphere, so that <span class="math notranslate nohighlight">\( R &lt; r \)</span>, it reduces to <span class="math notranslate nohighlight">\( (2R / 3r^2) \)</span>. Noting that <span class="math notranslate nohighlight">\( (\vec{\omega} \times \vec{r}) = - \omega r \sin \psi \hat{y} \)</span>, we have finally</p>
 <div class="math notranslate nohighlight" id="equation-eq5-68">
-<span class="eqno">(331)<a class="headerlink" href="#equation-eq5-68" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(349)<a class="headerlink" href="#equation-eq5-68" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A}(r) = \begin{cases}
 \frac{\mu_0 R \sigma}{3} (\vec{\omega} \times \vec{r}), \qquad &amp; \text{ for points inside the sphere} \\
 \frac{\mu_0 R^4 \sigma}{3 r^3} (\vec{\omega} \times \vec{r}, \qquad &amp; \text{ for points outside the sphere} 
@@ -594,7 +594,7 @@ R \sin \theta' \cos \phi' &amp; R \sin \theta' \sin \phi' &amp; R \cos \theta'
 \end{split}\]</div>
 <p>Having evaluated the integral, I revert to the “natural” coordinates of Fig. 5.45, in which <span class="math notranslate nohighlight">\( \vec{\omega} \)</span> coincides with the z axis and the point <strong>r</strong> is at <span class="math notranslate nohighlight">\( (r, \theta, \phi) \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-69">
-<span class="eqno">(332)<a class="headerlink" href="#equation-eq5-69" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(350)<a class="headerlink" href="#equation-eq5-69" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A}(r, \theta, \phi) =  \begin{cases}
 \frac{\mu_0 R \sigma \omega }{3} r \sin \theta \hat{\phi}, \qquad &amp; (r \leq R) \\
 \frac{\mu_0 R^4 \omega \sigma}{3 r^3} \frac{\sin \theta}{r^2} \hat{\phi} , \qquad &amp; (r \geq R)
@@ -602,7 +602,7 @@ R \sin \theta' \cos \phi' &amp; R \sin \theta' \sin \phi' &amp; R \cos \theta'
 \end{split}\]</div>
 <p>Curiously, the field inside this spherical shell is uniform:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-70">
-<span class="eqno">(333)<a class="headerlink" href="#equation-eq5-70" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(351)<a class="headerlink" href="#equation-eq5-70" title="Permalink to this equation">#</a></span>\[
 \vec{B} = \nabla \times  \vec{A} = \frac{2 \mu_0 R \omega \sigma}{3} (\cos \theta \hat{r} - \sin \theta \hat{\theta}) = \frac{2}{3} \mu_0 R \omega \hat{z} = \frac{2}{3} \mu_0 \sigma R \vec{\omega} 
 \]</div>
 </div>
@@ -621,7 +621,7 @@ Q</label><div class="sd-tab-content docutils">
 A</label><div class="sd-tab-content docutils">
 <p>This time we cannot use Eq 5.66, since the current itself extends to infinity. But there is a cute method that does the job. Notice that</p>
 <div class="math notranslate nohighlight" id="equation-eq5-71">
-<span class="eqno">(334)<a class="headerlink" href="#equation-eq5-71" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(352)<a class="headerlink" href="#equation-eq5-71" title="Permalink to this equation">#</a></span>\[
 \oint \vec{A} \cdot \mathrm{d} \vec{l} = \int (\nabla \times  \vec{A}) \cdot \mathrm{d} \vec{a} = \int \vec{B} \cdot \mathrm{d} \vec{a} = \Phi 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \Phi \)</span> is the flux of <strong>B</strong> through the loop in question. This is reminiscent of Ampere’s law in integral form (Eq. 5.57)</p>
@@ -636,7 +636,7 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-eq5-72">
-<span class="eqno">(335)<a class="headerlink" href="#equation-eq5-72" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(353)<a class="headerlink" href="#equation-eq5-72" title="Permalink to this equation">#</a></span>\[
 \vec{A} = \frac{\mu_0 n I}{2} s \hat{\phi}, \quad \text{ for } s \leq R 
 \]</div>
 <p>For an Amperian loop outside the solenoid, the flux is</p>
@@ -646,7 +646,7 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>since the field only extends out to R. Thus</p>
 <div class="math notranslate nohighlight" id="equation-eq5-73">
-<span class="eqno">(336)<a class="headerlink" href="#equation-eq5-73" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(354)<a class="headerlink" href="#equation-eq5-73" title="Permalink to this equation">#</a></span>\[
 \vec{A} = \frac{\mu_0 n I}{2} \frac{R^2}{s} \hat{\phi} \quad \text{ for } s \geq R 
 \]</div>
 <p>To check our work, we can make sure that <span class="math notranslate nohighlight">\( \nabla \times  \vec{A} = \vec{B} \)</span> and <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{A} = 0 \)</span>. Inside the solenoid,</p>
@@ -692,7 +692,7 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>to a wafer-thin pillbox straddling the surface (Fig 5.49), we get</p>
 <div class="math notranslate nohighlight" id="equation-eq5-74">
-<span class="eqno">(337)<a class="headerlink" href="#equation-eq5-74" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(355)<a class="headerlink" href="#equation-eq5-74" title="Permalink to this equation">#</a></span>\[
 B_{above} ^\perp =  B_{below} ^\perp 
 \]</div>
 <p>As for the tangential components, an Amperian loop running perpendicular to the current (Fig 5.50) yields</p>
@@ -702,20 +702,20 @@ B_{above} ^\perp =  B_{below} ^\perp
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq5-75">
-<span class="eqno">(338)<a class="headerlink" href="#equation-eq5-75" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(356)<a class="headerlink" href="#equation-eq5-75" title="Permalink to this equation">#</a></span>\[
 B_{above}^\parallel - B_{below} ^{\parallel} = \mu_0 K 
 \]</div>
 <p><img alt="Figure 5.49" src="../../../_images/5.49.png" />
 <img alt="Figure 5.50" src="../../../_images/5.50.png" />
 Thus the component of <strong>B</strong> that is parallel to the surface but perpendicular to the current is discontinuous in the amount <span class="math notranslate nohighlight">\( \mu_0 L \)</span>. A similar Amperian loop running parallel to the current reveals that the parallel component is continuous. These results can be summarized in a single formula</p>
 <div class="math notranslate nohighlight" id="equation-eq5-76">
-<span class="eqno">(339)<a class="headerlink" href="#equation-eq5-76" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(357)<a class="headerlink" href="#equation-eq5-76" title="Permalink to this equation">#</a></span>\[
 \vec{B}_{above} - \vec{B}_{below} = \mu_0 ( \vec{K} \times \hat{n} ) 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is perpendicular to the surface, pointing “upward.”</p>
 <p>Like the scalar potential in electrostatics, the vector potential is continuous across any boundary:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-77">
-<span class="eqno">(340)<a class="headerlink" href="#equation-eq5-77" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(358)<a class="headerlink" href="#equation-eq5-77" title="Permalink to this equation">#</a></span>\[
 \vec{A}_{above} = \vec{A}_{below} 
 \]</div>
 <p>for <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{A} = 0 \)</span> guarantees that the normal component is continuous, and <span class="math notranslate nohighlight">\( \nabla \times  \vec{A} = \vec{B} \)</span> in the form</p>
@@ -725,7 +725,7 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
 \]</div>
 <p>means that the tangential components are continuous (the flux through an Amperian loop of vanishing thickness is zero). But the derivative of <strong>A</strong> inherits the discontinuity of <strong>B</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-78">
-<span class="eqno">(341)<a class="headerlink" href="#equation-eq5-78" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(359)<a class="headerlink" href="#equation-eq5-78" title="Permalink to this equation">#</a></span>\[
 \pdv{A_{above}}{n} - \pdv{A_{below}}{n} = - \mu_0 \vec{K} 
 \]</div>
 </section>
@@ -733,7 +733,7 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
 <h2>5.4.3: Multipole Expansion of the Vector Potential<a class="headerlink" href="#multipole-expansion-of-the-vector-potential" title="Permalink to this heading">#</a></h2>
 <p>If you want an approximate formula for the vector potential of a localized current distribution, valid at distant points, a multipole expansion is in order. Remember: the idea of a multipole expansion is to write the potential in the form of a power series in <span class="math notranslate nohighlight">\( 1/r \)</span>, where <em>r</em> is the distance to the point in question (Fig 5.51); if <em>r</em> is sufficiently large, the series will be dominated by the lowest nonvanishing contribution, and the higher terms can be ignored. As we found in Section 3.4.1,</p>
 <div class="math notranslate nohighlight" id="equation-eq5-79">
-<span class="eqno">(342)<a class="headerlink" href="#equation-eq5-79" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(360)<a class="headerlink" href="#equation-eq5-79" title="Permalink to this equation">#</a></span>\[
 \frac{1}{\Delta r } = \frac{1}{r} \sum_{n=0}^\infty \left( \frac{r'}{r}  \right)^n P_n (\cos \alpha) 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <strong>r</strong> and <strong>r’</strong>. Accordingly, the vector potential of a current loop can be written</p>
@@ -743,7 +743,7 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
 \]</div>
 <p>or, more explicitly,</p>
 <div class="math notranslate nohighlight" id="equation-eq5-81">
-<span class="eqno">(343)<a class="headerlink" href="#equation-eq5-81" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(361)<a class="headerlink" href="#equation-eq5-81" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \vec{A}(r) &amp; = \frac{\mu_0 I}{4 \pi} \left[ \frac{1}{r} \oint \mathrm{d} \vec{l'} + \frac{1}{r^2} \oint r' \cos \alpha \mathrm{d} \vec{l'} \right. \\
  &amp; \left. \quad + \frac{1}{r^3} \oint (r')^2 \left( \frac{3}{2} \cos ^2 \alpha - \frac{1}{2} \right) \mathrm{d} \vec{l'} + \ldots \right]
@@ -753,13 +753,13 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
 <p><img alt="Figure 5.51" src="../../../_images/5.51.png" /></p>
 <p>Now, the magnetic monopole term is always zero, for the integral is just the total vector displacement around a closed loop</p>
 <div class="math notranslate nohighlight" id="equation-eq5-82">
-<span class="eqno">(344)<a class="headerlink" href="#equation-eq5-82" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(362)<a class="headerlink" href="#equation-eq5-82" title="Permalink to this equation">#</a></span>\[
 \oint \mathrm{d} \vec{l'} = 0 
 \]</div>
 <p>This reflects the fact that there are no magnetic monopoles in nature (an assumption contained in Maxwell’s equation <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{B} = 0 \)</span>, on which the entire theory of vector potential is predicated).</p>
 <p>In the absence of any monopole contribution, the dominant term is the dipole (except in the rare case where it, too, vanishes):</p>
 <div class="math notranslate nohighlight" id="equation-eq5-83">
-<span class="eqno">(345)<a class="headerlink" href="#equation-eq5-83" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(363)<a class="headerlink" href="#equation-eq5-83" title="Permalink to this equation">#</a></span>\[
 \vec{A}_{dip} = \frac{\mu_0 I}{4 \pi r^2} \oint r' \cos \alpha \mathrm{d} \vec{l'} = \frac{\mu_0 I}{4 \pi r^2} \oint (\hat{r} \cdot \vec{r'} ) \mathrm{d} \vec{l'} 
 \]</div>
 <p>This integral can be rewritten in a more illuminating way if we invoke Eq. 1.108 with <span class="math notranslate nohighlight">\( \vec{c} = \hat{r} \)</span>:</p>
@@ -769,12 +769,12 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
  \]</div>
 <p>Then</p>
 <div class="math notranslate nohighlight" id="equation-eq5-85">
-<span class="eqno">(346)<a class="headerlink" href="#equation-eq5-85" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(364)<a class="headerlink" href="#equation-eq5-85" title="Permalink to this equation">#</a></span>\[
 \vec{A}_{dip} (r) = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \hat{r}}{r^2} 
 \]</div>
 <p>where we define the <strong>magnetic dipole moment m</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-86">
-<span class="eqno">(347)<a class="headerlink" href="#equation-eq5-86" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(365)<a class="headerlink" href="#equation-eq5-86" title="Permalink to this equation">#</a></span>\[
 \vec{m} \equiv I \int \mathrm{d} \vec{a} = I \vec{a} 
 \]</div>
 <p>Here <strong>a</strong> is the “vector area” of the loop (Problem 1.62); if the loop is flat, <strong>a</strong> is the ordinary area enclosed, with the direction assigned by the usual right-hand rule (fingers in the direction of the current).</p>
@@ -803,12 +803,12 @@ A</label><div class="sd-tab-content docutils">
 <p>Although the dipole term dominates the multipole expansion (unless <span class="math notranslate nohighlight">\( \vec{m} = 0 \)</span>) and thus offers a good approximation to the true potential, it is not ordinarily the exact potential; there will be quadrupole, octopole, and higher contributions. You might ask, is it possible to devise a current distribution whose potential is “pure” dipole - for which Eq. 5.85 is exact? Well, yes and no: like the electrical analog, it can be done, but the model is a bit contrived. To begin with, you must take an infinitesimally small loop at the origin, but then, in order to keep the dipole moment finite, you have to crank the current up to infinity, with the product <span class="math notranslate nohighlight">\( m = I a \)</span> held fixed. In practice, the dipole potential is a suitable approximation whenever the distance <span class="math notranslate nohighlight">\( r \)</span>  greatly exceeds the size of the loop.</p>
 <p>The magnetic field of a (perfect) dipole is easiest to calculate if we put <span class="math notranslate nohighlight">\( \vec{m} \)</span> at the origin and let it point in the z-direction (Fig 5.54). According to Eq. 5.85, the potential at point <span class="math notranslate nohighlight">\( (r, \theta, \phi) \)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-87">
-<span class="eqno">(348)<a class="headerlink" href="#equation-eq5-87" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(366)<a class="headerlink" href="#equation-eq5-87" title="Permalink to this equation">#</a></span>\[
 \vec{A}_{dip} = \frac{\mu_0}{4 \pi} \frac{m \sin \theta}{r^2} \hat{\phi} 
 \]</div>
 <p>and hence</p>
 <div class="math notranslate nohighlight" id="equation-eq5-88">
-<span class="eqno">(349)<a class="headerlink" href="#equation-eq5-88" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(367)<a class="headerlink" href="#equation-eq5-88" title="Permalink to this equation">#</a></span>\[
 \vec{B}_{dip} = \nabla \times  \vec{A} = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \hat{r} + \sin \theta \hat{\theta}) 
 \]</div>
 <p><img alt="Figure 5.54" src="../../../_images/5.54.png" />
