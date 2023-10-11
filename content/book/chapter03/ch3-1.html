@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -480,9 +473,9 @@ document.write(`
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'} {3.1}
 \]</div>
 <p>Unfortunately, integrals of this type can be difficult to calculate for any but the simplest charge configurations. Occasionally we can get around this by exploiting symmetry and using Gauss’s law, but ordinarily the best strategy is first to calculate the <em>potential</em>, V, which is given by the somewhat more tractable</p>
-<div class="math notranslate nohighlight">
-\[
-V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'} \tag{3.2}
+<div class="math notranslate nohighlight" id="equation-eq3-2">
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq3-2" title="Permalink to this equation">#</a></span>\[
+V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'} 
 \]</div>
 <p>Still, even <em>this</em> integral is often too tough to handle analytically. Moreover, in problems involving conductors <span class="math notranslate nohighlight">\( \rho \)</span> itself may not be known in advance; since charge is free to move around, the only thing we control directly is the total charge (or perhaps the potential) of each conductor.</p>
 <p>In such cases, it is fruitful to recast the problem in differential form, using Poisson’s equation</p>
@@ -490,7 +483,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{
 \[
 \nabla^2{V} = - \frac{1}{\epsilon_0} \rho {3.3}
 \]</div>
-<p>which, together with appropriate boundary conditions, is equivalent to <span class="math notranslate nohighlight">\( \eqref{3.2} \)</span>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
+<p>which, together with appropriate boundary conditions, is equivalent to <a class="reference internal" href="#equation-eq3-2">(119)</a>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla^2{V} = 0 {3.4}
@@ -510,9 +503,9 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{
 \frac{d^2 V}{dx^2} = 0
 \]</div>
 <p>The general solution is</p>
-<div class="math notranslate nohighlight">
-\[
-V(x) = mx + b {3.6} \tag{3.6}
+<div class="math notranslate nohighlight" id="equation-eq3-6">
+<span class="eqno">(120)<a class="headerlink" href="#equation-eq3-6" title="Permalink to this equation">#</a></span>\[
+V(x) = mx + b {3.6} 
 \]</div>
 <p>the equation for a straight line. It contains two undetermined constants (m and b), as is appropriate for a second-order (ordinary) differential equation. They are fixed, in any particular case, by the boundary conditions of that problem. For instance, it might be specified that <span class="math notranslate nohighlight">\( V = 4 \)</span>  at <span class="math notranslate nohighlight">\( x = 1 \)</span> and <span class="math notranslate nohighlight">\( V = 0 \)</span> at <span class="math notranslate nohighlight">\( x = 5 \)</span>. In that case, <span class="math notranslate nohighlight">\( m = -1 \)</span> and <span class="math notranslate nohighlight">\( b = 5 \)</span>, so <span class="math notranslate nohighlight">\( V = - x + 5 \)</span>  (See Fig. 3.1)</p>
 <p><img alt="Figure 3.1" src="../../../_images/3.1.png" /></p>
@@ -536,7 +529,7 @@ V(x) = \frac{1}{2} [V(x + a) + V(x-a)]
 \[
 \frac{\partial^2{V}}{\partial{x^2}} + \frac{\partial^2{V}}{\partial{y^2}} = 0 
 \]</div>
-<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <span class="math notranslate nohighlight">\( \eqref{3.6} \)</span>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
+<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <a class="reference internal" href="#equation-eq3-6">(120)</a>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
 <p><img alt="Figure 3.2" src="../../../_images/3.2.png" /></p>
 <p>It may help to have a physical example in mind. Picture a thin rubber sheet (or a soap film) stretched over some support. For definiteness, suppose you take a cardboard box, cut a wavy line all the way around, and remove the top part (Fig. 3.2). Now glue a tightly stretched rubber membrane over the box, so that it fits like a drum head (it won’t be a flat drumhead, of course, unless you choose to cut the edges off straight). Now, if you lay out the coordinates (x, y) on the bottom of the box, the height V(x, y) of the sheet above the point (x, y) will satisfy Laplace’s equation. (The one-dimensional analog would be a rubber band stretched between two points. Of course, it would form a straight line.)</p>
 <blockquote>
@@ -575,6 +568,8 @@ V(\vec{r}) = \frac{1}{4 \pi R^2} \oint_{\text{sphere}} V \mathrm{d}{a}
 <ol class="arabic simple" start="2">
 <li><p>As a consequence, V can have no local maxima or minima; the extreme values of V must occur at the boundaries (For if V had a local maximum at <strong>r</strong>, then by the very nature of the maximum I could draw a sphere around <strong>r</strong> over which all the values of V - and a fortiori the average - would be less than at <strong>r</strong>.)</p></li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>Proof: V is a solution to the three-dimensional Laplace’s equation. Then the value of V at point <strong>r</strong> is the average value of V over a spherical surface of radius R centered at <strong>r</strong></strong></p>
 <p>Let’s begin by calculating the average potential over a spherical surface of radius R due to a <em>single</em> point charge q located outside the sphere. We may as well center the sphere at the origin and choose coordinates so that q lies on the z-axis (Fig 3.3).</p>
 <p><img alt="Figure 3.3" src="../../../_images/3.3.png" /></p>
@@ -596,11 +591,14 @@ V_{\text{ave}} = \frac{1}{4\pi R^2} \frac{1}{4 \pi \epsilon_0} \int [z^2 + R^2 -
     = \frac{q}{4 \pi \epsilon_0} \frac{1}{2zR} [(z + R) - (z-R)] = \frac{1}{4 \pi \epsilon_0} \frac{q}{z}  
 \end{split}\]</div>
 <p>But this is precisely the potential due to q at the <em>center</em> of the sphere! By the superposition principle, the same goes for any collection of charges outside the sphere: their average potential over the sphere is equal to the net potential they produce at the center</p>
+</div>
 </section>
 <section id="boundary-conditions-and-uniqueness-theorems">
 <h2>3.1.5: Boundary Conditions and Uniqueness Theorems<a class="headerlink" href="#boundary-conditions-and-uniqueness-theorems" title="Permalink to this heading">#</a></h2>
 <p>Laplace’s equation does not by itself determine V; in addition, suitable boundary conditions must be supplied. This raises a delicate question: What are appropriate boundary conditions, sufficient to determine the answer and yet not so strong as to generate inconsistencies? The one-dimensional case is easy, for here the general solution <span class="math notranslate nohighlight">\( V = mx + b \)</span> contains two arbitrary constants, and we therefore require two boundary conditions. We might, for instance, specify the value of the function at each end, or we might give the value of the function and its derivative at one end, or the value at one end and the derivative at the other, and so on. But we cannot get away with <em>just</em> the value or <em>just</em> the derivative at <em>one</em> end - this is insufficient information. Nor would it do to specify the derivatives at both ends - this would be either redundant (if the two are equal) or inconsistent (if they are not).</p>
 <p>In two or three dimensions we are confronted by a <em>partial</em> differential equation, and it is not so obvious what would constitute acceptable boundary conditions. Is the shape of a taut rubber membrane, for instance, uniquely determined by the frame over which it is stretched, or, like a canning jar lid, can it snap from one stable configuration to another? The answer, as I think your intuition would suggest, that V is uniquely determined by its value at the boundary (canning jars evidently do not obey Laplace’s equation). However, other boundary conditions can also be used (see Prob. 3.5). The <em>proof</em> that a proposed set of boundary conditions will suffice is usually presented in the form of a uniqueness theorem. There are many such theorems for electrostatics, all sharing the same basic format - I’ll show you the two most useful ones:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>First Uniqueness Theorem: The solution to Laplace’s equation in some volume <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> is uniquely determined if V is specified on the boundary surface <span class="math notranslate nohighlight">\( \mathscr{S} \)</span>.</strong></p>
 <p>In Fig. 3.5 I have drawn such a region and its boundary. (There could also be “islands” inside, so long as V is given on all their surfaces; also, the outer boundary could be at infinity, where V is ordinarily taken to be zero.)</p>
 <p><img alt="Figure 3.5" src="../../../_images/3.5.png" /></p>
@@ -624,22 +622,25 @@ V_3 \equiv V_1 - V_2
 \[
 V_1 = V_2
 \]</div>
+</div>
 <section id="example-3-1">
 <h3>Example 3.1<a class="headerlink" href="#example-3-1" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Show that the potential is <em>constant</em> inside an enclosure completely surrounded by conducting material, provided there is no charge within the enclosure.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>The potential on the cavity wall is some constant <span class="math notranslate nohighlight">\( V_0 \)</span> (that’s item (iv) in Sect. 2.5.1), so the potential inside is a function that satisfies Laplace’s equation and has the constant value <span class="math notranslate nohighlight">\( V_0 \)</span> at the boundary. It doesn’t take a genius to think of <em>one</em> solution to this problem: <span class="math notranslate nohighlight">\( V = V_0 \)</span> everywhere. The uniqueness theorem guarantees that this is the <em>only</em> solution. (It follows that the field inside an empty cavity is zero - the same result we found in Sect. 2.5.2 on rather different grounds.)</p>
 </div>
 </div>
 <p>The uniqueness theorem is a license to your imagination. It doesn’t matter how you come by your solution; if (a) it satisfies Laplace’s equation and (b) it has the correct value on the boundaries, then it’s <em>right</em>. You’ll see the power of this argument when we come to the method of images.</p>
 <p>Incidentally, it is easy to improve on the first uniqueness theorem: I assumed there was no charge inside the region in question, so the potential obeyed Laplace’s equation, but we may as well throw in some charge (in which case V obeys Poisson’s equation).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong><strong>Corollary:</strong> The potential in a volume <span class="math notranslate nohighlight">\( \mathscr{V}  \)</span> is uniquely determined if (a) the charge density throughout the region, and (b) the value of V on all boundaries, are specified</strong></p>
 <p>The argument is the same, only this time</p>
 <div class="math notranslate nohighlight">
@@ -652,11 +653,14 @@ V_1 = V_2
 \nabla^2{V_3} = \nabla^2{V_1} - \nabla^2{V_2} = - \frac{1}{\epsilon_0} \rho + \frac{1}{\epsilon_0} \rho = 0
 \]</div>
 <p>Once again the <em>difference</em> <span class="math notranslate nohighlight">\( (V_3 \equiv V_1 - V_2) \)</span> satisfies Laplace’s equation and has the value zero on all boundaries, so <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> and hence <span class="math notranslate nohighlight">\( V_1 = V_2 \)</span></p>
+</div>
 </section>
 </section>
 <section id="conductors-and-the-second-uniqueness-theorem">
 <h2>3.1.6: Conductors and the Second Uniqueness Theorem<a class="headerlink" href="#conductors-and-the-second-uniqueness-theorem" title="Permalink to this heading">#</a></h2>
 <p>The <em>simplest</em> way to set the boundary conditions for an electrostatic problem is to specify the value of V on all surfaces surrounding the region of interest. And this situation often occurs in practice: In the laboratory, we have conductors connected to batteries, which maintain a given potential, or to <strong>ground</strong>, which is the experimentalist’s word for <span class="math notranslate nohighlight">\( V = 0 \)</span>. However, there are other circumstances in which we do not know the <em>potential</em> at the boundary, but rather the <em>charges</em> on various conducting surfaces. Suppose I put <span class="math notranslate nohighlight">\( Q_a \)</span> on the first conductor, <span class="math notranslate nohighlight">\( Q_b \)</span> on the second conductor, and so on - I’m not telling you how the charge distributes itself over each conducting surface, because as soon as I put it on, it moves around in a way I do not control. And for good measure, let’s say there is some specified charge density <span class="math notranslate nohighlight">\( \rho \)</span> in the region between the conductors. Is the electric field now uniquely determined? Or are there perhaps a number of different ways the charges could arrange themselves on their respective conductors, each leading to a different field?</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong><strong>Second uniqueness theorem</strong>: In a volume <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> surrounded by conductors and containing a specified charge density <span class="math notranslate nohighlight">\( \rho \)</span>, the electric field is uniquely determined if the total charge on each conductor is given (Fig. 3.6). (The region as a whole can be bounded by another conductor, or else unbounded.)</strong></p>
 <p><strong>Proof</strong>: Suppose there are two fields satisfying the conditions of the problem. Both obey Gauss’s law in differential form in the space betwen the conductors:</p>
 <div class="math notranslate nohighlight">
@@ -682,14 +686,14 @@ And both obey Gauss’s law in integral form for a Gaussian surface enclosing ea
 \vec{E_3} \equiv \vec{E_1} - \vec{E_2}
 \]</div>
 <p>which obeys</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot {\vec{E_3}} = 0 {3.7} \tag{3.7}
+<div class="math notranslate nohighlight" id="equation-eq3-7">
+<span class="eqno">(121)<a class="headerlink" href="#equation-eq3-7" title="Permalink to this equation">#</a></span>\[
+\nabla \cdot {\vec{E_3}} = 0 {3.7} 
 \]</div>
 <p>in the region between the conductors, and</p>
-<div class="math notranslate nohighlight">
-\[
-\oint \vec{E_3} \cdot \mathrm{d}{\vec{a}} = 0 {3.8} \tag{3.8}
+<div class="math notranslate nohighlight" id="equation-eq3-8">
+<span class="eqno">(122)<a class="headerlink" href="#equation-eq3-8" title="Permalink to this equation">#</a></span>\[
+\oint \vec{E_3} \cdot \mathrm{d}{\vec{a}} = 0 {3.8} 
 \]</div>
 <p>over each boundary surface.
 Now there is one final piece of information we must exploit: Although we do not know how the charge <span class="math notranslate nohighlight">\( Q_i \)</span> distributes itself over the _i_th conductor, we do know that each conductor is an equipotential, and hence <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant (not necessarily the same constant) over each conducting surface. (It need not be zero, for the potentials <span class="math notranslate nohighlight">\( V_1 \)</span> and <span class="math notranslate nohighlight">\( V_2 \)</span> may not be equal - all we know for sure is that both are constant over any given conductor.) Next comes a trick. Invoking the product rule</p>
@@ -697,17 +701,18 @@ Now there is one final piece of information we must exploit: Although we do not 
 \[
 \nabla \cdot {(V_3 \vec{E_3})} = V_3 (\nabla \cdot {\vec{E_3}}) + \vec{E_3} \cdot (\nabla {V_3}) = - (E_3)^2
 \]</div>
-<p>Here I have used <span class="math notranslate nohighlight">\( \eqref{3.7} \)</span> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
+<p>Here I have used <a class="reference internal" href="#equation-eq3-7">(121)</a> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathscr{V}} \nabla \cdot {(V_3 \vec{E_3})} \mathrm{d}{\tau} = \oint_{S} V_3 \vec{E_3} \cdot \mathrm{d}{\vec{a}} = - \int_{\mathscr{V}} (E_3)^2 \mathrm{d}{\tau}
 \]</div>
-<p>The surface integral covers all boundaries of the region in question - the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is invinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <span class="math notranslate nohighlight">\( \eqref{3.8} \)</span>. Therefore</p>
+<p>The surface integral covers all boundaries of the region in question - the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is invinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <a class="reference internal" href="#equation-eq3-8">(122)</a>. Therefore</p>
 <div class="math notranslate nohighlight">
 \[
     \int_{\mathscr{V}}(E_3)^2 \mathrm{d}{\tau} = 0
     \]</div>
 <p>The integrand is never negative, so the only way the integral can vanish is if <span class="math notranslate nohighlight">\( E_3 = 0 \)</span> everywhere. Consequently, <span class="math notranslate nohighlight">\( \vec{E_1} = \vec{E_2} \)</span> and the theorem is proved.</p>
+</div>
 <p>This proof was not easy, and there is a real danger that the theorem itself will seem more plausible to you than the proof. In case you think the second uniqueness theorem is “obvious,” consider this example of Purcell’s: Figure 3.7 shows a simple electrostatic configuration, consisting of four conductors with charges <span class="math notranslate nohighlight">\( \pm Q \)</span>, situated so that the plusses are near the minuses. It all looks very comfortable. Now, what happens if we join them in pairs, by tiny wires, as indicated in Fig. 3.8? Since the positive charges are very near negative charges (which is where they like to be) you might well guess that nothing will happen - the configuration looks stable.</p>
 <p><img alt="Figure 3.7" src="../../../_images/3.7.png" /></p>
 <p>Well, that sounds reasonable, but it’s wrong. The configuration in Fig. 3.8 is impossible. For there are now effectively two conductors, and the total charge on each is zero. One possible way to distribute zero charge over these conductors is to have no accumulation of charge anywhere, and hence zero field everywhere (Fig. 3.9). By the second uniqueness theorem, this must be <em>the</em> solution: The charge will flow down the tiny wires, canceling itself off.</p>

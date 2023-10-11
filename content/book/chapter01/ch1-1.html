@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -502,9 +495,9 @@ document.write(`
 a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 \]</div>
 <p><strong>(iii) Dot product of two vectors.</strong> The dot product of two vectors is defined by</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \cdot \vec{B} = A B \cos \theta \tag{1.1}
+<div class="math notranslate nohighlight" id="equation-eq1-1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq1-1" title="Permalink to this equation">#</a></span>\[
+\vec{A} \cdot \vec{B} = A B \cos \theta 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \theta \)</span>  is the angle they form when placed tail-to-tail (Fig. 1.6). Note that <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is itself a scalar (hence the alternative name <em>scalar product</em>). The dot product is commutative,</p>
 <div class="math notranslate nohighlight">
@@ -512,14 +505,14 @@ a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 \vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A}
 \]</div>
 <p>and distributive</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C} \tag{1.2}
+<div class="math notranslate nohighlight" id="equation-eq1-2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq1-2" title="Permalink to this equation">#</a></span>\[
+\vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C} 
 \]</div>
 <p>Geometrically, <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is the product of A times the projection of B along A (or the product of B times the projection of A along B). If the two vectors are parallel, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = AB \)</span>. In particular, for any vector A</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \cdot \vec{A} = A^2 \tag{1.3}
+<div class="math notranslate nohighlight" id="equation-eq1-3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq1-3" title="Permalink to this equation">#</a></span>\[
+\vec{A} \cdot \vec{A} = A^2 
 \]</div>
 <p>If A and B are perpendicular, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = 0 \)</span></p>
 <p><img alt="Figure 1.5" src="../../../_images/1.5.png" /></p>
@@ -529,12 +522,12 @@ a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Let <span class="math notranslate nohighlight">\( \vec{C} = \vec{A} - \vec{B} \)</span> (Fig 1.7), and calculate the dot product of <span class="math notranslate nohighlight">\( \vec{C} \)</span> with itself.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[
 \vec{C} \cdot \vec{C} = ( \vec{A} - \vec{B} ) \cdot (\vec{A} - \vec{B}) = \vec{A} \cdot \vec{A} - \vec{A} \cdot \vec{B} - \vec{B} \cdot \vec{A} + \vec{B} \cdot \vec{B}
@@ -548,9 +541,9 @@ C^2 = A^2 + B^2 - 2AB\cos \theta
 </div>
 </div>
 <p><strong>(iv) Cross product of two vectors.</strong> The cross product of two vectors is defined by</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \times \vec{B} = AB \sin \theta \hat{n} \tag{1.4}
+<div class="math notranslate nohighlight" id="equation-eq1-4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq1-4" title="Permalink to this equation">#</a></span>\[
+\vec{A} \times \vec{B} = AB \sin \theta \hat{n} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector (vector of magnitude 1) pointing perpendicular to the plane of A and B. (I shall use a hat <span class="math notranslate nohighlight">\( \hat{} \)</span> to denote unit vectors.) Of course, there are two directions perpendicular to any plane: “in” and “out.” The ambiguity is resolved by the right-hand rule: let your fingers point in the direction of the first vector and curl around (via the smaller angle) toward the second; then your thumb indicates the direction of <span class="math notranslate nohighlight">\( \hat{n} \)</span>. (In Fig. 1.8, <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span> points into the page; <span class="math notranslate nohighlight">\( \vec{B} \times \vec{A} \)</span>  points out of the page.) Note that <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span>  is itself a vector (hence the alternative name
 vector product). The cross product is distributive</p>
@@ -559,9 +552,9 @@ vector product). The cross product is distributive</p>
 \vec{A} \times ( \vec{B} + \vec{C}) = ( \vec{A} \times \vec{B}) + (\vec{A} \times \vec{C})
 \]</div>
 <p>but not <em>commutative</em>. In fact,</p>
-<div class="math notranslate nohighlight">
-\[
-(\vec{B} \times \vec{A}) = - (\vec{A} \times \vec{B}) \tag{1.6}
+<div class="math notranslate nohighlight" id="equation-eq1-6">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq1-6" title="Permalink to this equation">#</a></span>\[
+(\vec{B} \times \vec{A}) = - (\vec{A} \times \vec{B}) 
 \]</div>
 <p>Geometrically, <span class="math notranslate nohighlight">\( | \vec{A} \times \vec{B} | \)</span> is the area of the parallelogram generated by <span class="math notranslate nohighlight">\( \vec{A} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> (Fig 1.8). If two vectors are parallel, their cross product is zero. In particular,</p>
 <div class="math notranslate nohighlight">
@@ -579,27 +572,27 @@ vector product). The cross product is distributive</p>
 \vec{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}
 \]</div>
 <p>The numbers <span class="math notranslate nohighlight">\( A_x \)</span>, <span class="math notranslate nohighlight">\( A_y \)</span>, and <span class="math notranslate nohighlight">\( A_z \)</span> are the “components” of A; geometrically, they are the projections of A along the three coordinate axes (<span class="math notranslate nohighlight">\( A_x = \vec{A} \cdot \hat{x}, A_y = \vec{A} \cdot \hat{y}, A_z = \vec{A} \cdot \hat{z} \)</span> ). We can now reformulate each of the four vector operations as a rule for manipulating components:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-7">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq1-7" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A} + \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) + (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
- = (A_x + B_x) \hat{x} + (A_y + B_y) \hat{y} + (A_z + B_z) \hat{z} \tag{1.7}
+ = (A_x + B_x) \hat{x} + (A_y + B_y) \hat{y} + (A_z + B_z) \hat{z} 
 \end{split}\]</div>
 <p><strong>Rule (i):</strong> To add vectors, add like components.</p>
-<div class="math notranslate nohighlight">
-\[
-a\vec{A} = (a A_x) \hat{x} + (a A_y) \hat{y} + (a A_z)\hat{z} \tag{1.8}
+<div class="math notranslate nohighlight" id="equation-eq1-8">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq1-8" title="Permalink to this equation">#</a></span>\[
+a\vec{A} = (a A_x) \hat{x} + (a A_y) \hat{y} + (a A_z)\hat{z} 
 \]</div>
 <p><strong>Rule (ii):</strong> To multiply by a scalar, multiply each component.</p>
 <p>Because <span class="math notranslate nohighlight">\( \hat{x}, \hat{y} \)</span>, and <span class="math notranslate nohighlight">\( \hat{z} \)</span> are mutually perpendicular unit vectors</p>
-<div class="math notranslate nohighlight">
-\[
-\hat{x} \cdot \hat{x} = \hat{y} \cdot \hat{y} = \hat{z} \cdot \hat{z} = 1; \qquad \hat{x} \cdot \hat{y} = \hat{x} \cdot \hat{z} = \hat{y} \cdot \hat{z} = 0 \tag{1.9}
+<div class="math notranslate nohighlight" id="equation-eq1-9">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq1-9" title="Permalink to this equation">#</a></span>\[
+\hat{x} \cdot \hat{x} = \hat{y} \cdot \hat{y} = \hat{z} \cdot \hat{z} = 1; \qquad \hat{x} \cdot \hat{y} = \hat{x} \cdot \hat{z} = \hat{y} \cdot \hat{z} = 0 
 \]</div>
 <p>Accordingly,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-10">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq1-10" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A} \cdot \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \cdot (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
- = A_x B_x + A_y B_y + A_z B_z \tag{1.10}
+ = A_x B_x + A_y B_y + A_z B_z 
 \end{split}\]</div>
 <p><strong>Rule (iii):</strong> To calculate the dot product, multiply like components and add. In particular,</p>
 <div class="math notranslate nohighlight">
@@ -607,9 +600,9 @@ a\vec{A} = (a A_x) \hat{x} + (a A_y) \hat{y} + (a A_z)\hat{z} \tag{1.8}
 \vec{A} \cdot \vec{A} = A_x ^2 + A_y ^2 + A_z ^2
 \]</div>
 <p>so</p>
-<div class="math notranslate nohighlight">
-\[
-A = \sqrt{A_x ^2 + A_y ^2 + A_z ^2} \tag{1.11}
+<div class="math notranslate nohighlight" id="equation-eq1-11">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq1-11" title="Permalink to this equation">#</a></span>\[
+A = \sqrt{A_x ^2 + A_y ^2 + A_z ^2} 
 \]</div>
 <p>Similarly,</p>
 <div class="math notranslate nohighlight">
@@ -622,10 +615,10 @@ A = \sqrt{A_x ^2 + A_y ^2 + A_z ^2} \tag{1.11}
 \end{aligned}
 \end{split}\]</div>
 <p>Therefore,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-13">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq1-13" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A} \times \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \times (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
- = (A_y B_z - A_z B_y) \hat{x} + (A_z B_x - A_x B_z)\hat{y} + (A_x B_y - A_y B_x) \hat{z} \tag{1.13}
+ = (A_y B_z - A_z B_y) \hat{x} + (A_z B_x - A_x B_z)\hat{y} + (A_x B_y - A_y B_x) \hat{z} 
 \end{split}\]</div>
 <p>This cumbersome expression can be written more neatly as a determinant:</p>
 <div class="math notranslate nohighlight">
@@ -642,12 +635,12 @@ B_x &amp; B_y &amp; B_z
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Find the angle between the face diagonals of a cube.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p><strong>Solution</strong>
 We might as well use a cube of side 1, and place it as shown in Fig 1.10, with one corner at the origin. The face diagonals <span class="math notranslate nohighlight">\( \vec{A} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> are</p>
 <div class="math notranslate nohighlight">
@@ -679,23 +672,23 @@ So, in component form,</p>
 <h2>1.1.3: Triple Products<a class="headerlink" href="#triple-products" title="Permalink to this heading">#</a></h2>
 <p>Since the cross product of two vectors is itself a vector, it can be dotted or crossed with a third vector to form a triple product.</p>
 <p><strong>(i) Scalar triple product:</strong> <span class="math notranslate nohighlight">\( \vec{A} \cdot (\vec{B} \times \vec{C}) \)</span>. Geometrically, <span class="math notranslate nohighlight">\( |\vec{A} \cdot (\vec{B} \times \vec{C}) | \)</span> is the volume of the parallelpiped generated by <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>, since <span class="math notranslate nohighlight">\( |\vec{B} \times \vec{C}| \)</span> is the area of the base, and <span class="math notranslate nohighlight">\( | \vec{A} \cos \theta | \)</span> is the altitude (Fig. 1.12). Evidently,</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \cdot(\vec{B} \times \vec{C}) = \vec{B} \cdot (\vec{C} \times \vec{A}) = \vec{C} \cdot (\vec{A} \times \vec{B}) \tag{1.15}
+<div class="math notranslate nohighlight" id="equation-eq1-15">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq1-15" title="Permalink to this equation">#</a></span>\[
+\vec{A} \cdot(\vec{B} \times \vec{C}) = \vec{B} \cdot (\vec{C} \times \vec{A}) = \vec{C} \cdot (\vec{A} \times \vec{B}) 
 \]</div>
-<p>for they all correspond to the same figure. Note that “alphabetical” order is preserved - in view of <span class="math notranslate nohighlight">\( \eqref{1.6} \)</span>, the “nonalphabetical” triple products</p>
+<p>for they all correspond to the same figure. Note that “alphabetical” order is preserved - in view of <a class="reference internal" href="#equation-eq1-6">(5)</a>, the “nonalphabetical” triple products</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A} \cdot(\vec{C} \times \vec{B}) = \vec{B} \cdot (\vec{A} \times \vec{C}) = \vec{C} \cdot (\vec{B} \times \vec{A}) 
 \]</div>
 <p>have the opposite sign. In component form,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-16">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq1-16" title="Permalink to this equation">#</a></span>\[\begin{split}
 \vec{A} \cdot (\vec{B} \times \vec{C}) = \begin{vmatrix}
 A_x &amp; A_y &amp; A_z \\
 B_x &amp; B_y &amp; B_z \\
 C_x &amp; C_y &amp; C_z
-\end{vmatrix} \tag{1.16}
+\end{vmatrix} 
 \end{split}\]</div>
 <p>Note that the dot and cross can be interchanged:</p>
 <div class="math notranslate nohighlight">
@@ -705,58 +698,58 @@ C_x &amp; C_y &amp; C_z
 <p>(this follows immediately from Eq. 1.15); however, the placement of the parentheses is critical: <span class="math notranslate nohighlight">\( (\vec{A} \cdot \vec{B}) \cdot \vec{C} \)</span> is a meaningless expression - you can’t make a cross product from a scalar and a vector.
 <img alt="Figure 1.11" src="../../../_images/1.11.png" /></p>
 <p><strong>(ii) Vector triple product:</strong> <span class="math notranslate nohighlight">\( \vec{A} \times (\vec{B} \times \vec{C}) \)</span>. The vector triple product can be simplified by the so-called <strong>BAC-CAB</strong> rule:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B}) \tag{1.17}
+<div class="math notranslate nohighlight" id="equation-eq1-17">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq1-17" title="Permalink to this equation">#</a></span>\[
+\vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B}) 
 \]</div>
 <p>Notice that</p>
 <div class="math notranslate nohighlight">
 \[
 (\vec{A} \times \vec{B}) \times \vec{C} = - \vec{C} \times (\vec{A} \times \vec{B}) = -\vec{A}(\vec{B} \cdot \vec{C}) + \vec{B}(\vec{A} \cdot \vec{C})
 \]</div>
-<p>is an entirely different vector (cross-products are not associative). All higher vector products can be similarly reduced, often by repeated application of <span class="math notranslate nohighlight">\( \eqref{1.17} \)</span>, so it is never necessary for an expression to contain more than one cross product in any term. For instance,</p>
+<p>is an entirely different vector (cross-products are not associative). All higher vector products can be similarly reduced, often by repeated application of <a class="reference internal" href="#equation-eq1-17">(14)</a>, so it is never necessary for an expression to contain more than one cross product in any term. For instance,</p>
 <div class="math notranslate nohighlight">
 \[
 (\vec{A} \times \vec{B}) \cdot (\vec{C} \times \vec{D}) = (\vec{A} \cdot \vec{C})(\vec{B} \cdot \vec{D}) - (\vec{A} \cdot \vec{D}) (\vec{B} \cdot \vec{C})
 \]</div>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} \times [\vec{B} \times (\vec{C} \times \vec{D})] = \vec{B}[ \vec{A} \cdot (\vec{C} \times \vec{D})] - (\vec{A} \cdot \vec{B})(\vec{C} \times \vec{D}) \tag{1.18}
+<div class="math notranslate nohighlight" id="equation-eq1-18">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq1-18" title="Permalink to this equation">#</a></span>\[
+\vec{A} \times [\vec{B} \times (\vec{C} \times \vec{D})] = \vec{B}[ \vec{A} \cdot (\vec{C} \times \vec{D})] - (\vec{A} \cdot \vec{B})(\vec{C} \times \vec{D}) 
 \]</div>
 </section>
 <section id="position-displacement-and-separation-vectors">
 <h2>1.1.4: Position, Displacement, and Separation Vectors<a class="headerlink" href="#position-displacement-and-separation-vectors" title="Permalink to this heading">#</a></h2>
 <p>The location of a point in three dimensions can be described by listing its Cartesian coordinates (x, y, z). The vector to that point from the origin (<span class="math notranslate nohighlight">\( \mathscr{O} \)</span>) is called the <em>position vector</em> (Fig 1.13):</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{r} \equiv x \hat{x} + y \hat{y} + z \hat{z} \tag{1.19}
+<div class="math notranslate nohighlight" id="equation-eq1-19">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq1-19" title="Permalink to this equation">#</a></span>\[
+\vec{r} \equiv x \hat{x} + y \hat{y} + z \hat{z} 
 \]</div>
 <p><img alt="Figure 1.13" src="../../../_images/1.13.png" /></p>
 <p>I will reserve the letter <span class="math notranslate nohighlight">\( \vec{r} \)</span> for this purpose. Its magnitude,</p>
-<div class="math notranslate nohighlight">
-\[
-r = \sqrt{x^2 + y^2 + z^2} \tag{1.20}
+<div class="math notranslate nohighlight" id="equation-eq1-20">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq1-20" title="Permalink to this equation">#</a></span>\[
+r = \sqrt{x^2 + y^2 + z^2} 
 \]</div>
 <p>is the distance from the origin, and</p>
-<div class="math notranslate nohighlight">
-\[
-\hat{r} = \frac{\vec{r}}{r}  = \frac{x \hat{x} + y \hat{y} + z \hat{z}}{ \sqrt{x^2 + y^2 + z^2}} \tag{1.21}
+<div class="math notranslate nohighlight" id="equation-eq1-21">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq1-21" title="Permalink to this equation">#</a></span>\[
+\hat{r} = \frac{\vec{r}}{r}  = \frac{x \hat{x} + y \hat{y} + z \hat{z}}{ \sqrt{x^2 + y^2 + z^2}} 
 \]</div>
 <p>is a unit vector pointing radially outward. The infinitesimal displacement vector from <span class="math notranslate nohighlight">\( (x, y, z) \)</span> to <span class="math notranslate nohighlight">\( x + \mathrm{d}{x}, y + \mathrm{d}{y}, z + \mathrm{d}{z} \)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d}{\vec{l}} = \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} \tag{1.22}
+<div class="math notranslate nohighlight" id="equation-eq1-22">
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq1-22" title="Permalink to this equation">#</a></span>\[
+\mathrm{d}{\vec{l}} = \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} 
 \]</div>
 <p>(We could call this <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{r}} \)</span>, since that’s what it is, but it is useful to have a special notation for infinitesimal displacements.)</p>
 <p>In electrodynamics, one frequently encounters problems involving <em>two</em> points - typically a <strong>source point</strong>, <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, where an electric charge is located, and a <strong>field point</strong> <span class="math notranslate nohighlight">\( \vec{r} \)</span> at which you are calculating the electric or magnetic field (Fig 1.14). It pays to adopt right from the start some short-hand notation for the <strong>separation vector</strong> from the source point to the field point. I shall use for this purpose the letter <span class="math notranslate nohighlight">\( \Delta r  \)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{\Delta r } \equiv \vec{r} - \vec{r'} \tag{1.23}
+<div class="math notranslate nohighlight" id="equation-eq1-23">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq1-23" title="Permalink to this equation">#</a></span>\[
+\vec{\Delta r } \equiv \vec{r} - \vec{r'} 
 \]</div>
 <p>Its magnitude is</p>
-<div class="math notranslate nohighlight">
-\[
-|\Delta r | = | \hat{r} - \hat{r'} | \tag{1.24}
+<div class="math notranslate nohighlight" id="equation-eq1-24">
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq1-24" title="Permalink to this equation">#</a></span>\[
+|\Delta r | = | \hat{r} - \hat{r'} | 
 \]</div>
 <p>and a unit vector in the direction from <span class="math notranslate nohighlight">\( \vec{r'}  \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> is</p>
 <div class="math notranslate nohighlight">
@@ -764,13 +757,13 @@ r = \sqrt{x^2 + y^2 + z^2} \tag{1.20}
 \hat{\Delta r } = \frac{\Delta r }{|\Delta r |} = \frac{\vec{r} - \vec{r'}}{|\vec{r} - \vec{r'}|} \tag{1.25}  
 \]</div>
 <p>In Cartesian coordinates,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta r  = (x - x') \hat{x} + (y-y') \hat{y} + (z-z') \hat{z} \tag{1.26}
+<div class="math notranslate nohighlight" id="equation-eq1-26">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq1-26" title="Permalink to this equation">#</a></span>\[
+\Delta r  = (x - x') \hat{x} + (y-y') \hat{y} + (z-z') \hat{z} 
 \]</div>
-<div class="math notranslate nohighlight">
-\[
-|\Delta r | = \sqrt{(x - x')^2 + (y-y')^2 + (z-z')^2  } \tag{1.27}
+<div class="math notranslate nohighlight" id="equation-eq1-27">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq1-27" title="Permalink to this equation">#</a></span>\[
+|\Delta r | = \sqrt{(x - x')^2 + (y-y')^2 + (z-z')^2  } 
 \]</div>
 <div class="math notranslate nohighlight">
 \[
@@ -799,8 +792,8 @@ A_y = A \cos \theta, \qquad A_z = A \sin \theta
 \end{split}\]</div>
 <p><img alt="Figure 1.15" src="../../../_images/1.15.png" /></p>
 <p>We might express this conclusion in matrix notation:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-29">
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq1-29" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
  \overline{A_y} \\
  \overline{A_z}
@@ -812,11 +805,11 @@ A_y = A \cos \theta, \qquad A_z = A \sin \theta
 \begin{pmatrix}
 A_y \\
 A_z
-\end{pmatrix} \tag{1.29}
+\end{pmatrix} 
 \end{split}\]</div>
 <p>More generally, for rotation about an <em>arbitrary</em> axis in three dimensions, the transformation law takes the form</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-30">
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq1-30" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
  \overline{A_x} \\
  \overline{A_y} \\
@@ -831,12 +824,12 @@ A_z
 A_x \\
 A_y \\
 A_z
-\end{pmatrix} \tag{1.30}
+\end{pmatrix} 
 \end{split}\]</div>
 <p>or, more compactly,</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{A_i} = \sum_{j=1}^3 R_{ij} A_j \tag{1.31}
+<div class="math notranslate nohighlight" id="equation-eq1-31">
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq1-31" title="Permalink to this equation">#</a></span>\[
+\overline{A_i} = \sum_{j=1}^3 R_{ij} A_j 
 \]</div>
 <p>where index 1 stands for x, 2 for y, and 3 for z. The elements of the matrix R can be ascertained, for a given rotation, by the same sort of trigonometric arguments as we used for a rotation about the x axis.
 Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} \)</span> transform this way? Of course not - it doesn’t matter what coordinates you use to represent positions in space; there are still just as many apples in the barrel. You can’t convert a pear into a banana by choosing a different set of axes, but you can turn in <span class="math notranslate nohighlight">\( A_x \)</span> into <span class="math notranslate nohighlight">\( \overline{A_y} \)</span>. Formally, then, <em>a vector is any set of three components that transforms in the same manner as a displacement when you change coordinates</em>. As always, displacement is the <em>model</em> for the behavior of vectors.</p>
@@ -850,9 +843,9 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
 \end{aligned}
 \end{split}\]</div>
 <p>or, more compactly,</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{T}_{ij} = \sum_{k=1}^3 \sum_{l=1} ^3 R_{ik} R_{jl} T_{kl} \tag{1.32}
+<div class="math notranslate nohighlight" id="equation-eq1-32">
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq1-32" title="Permalink to this equation">#</a></span>\[
+\overline{T}_{ij} = \sum_{k=1}^3 \sum_{l=1} ^3 R_{ik} R_{jl} T_{kl} 
 \]</div>
 <p>In general, an n-th rank tensor has <span class="math notranslate nohighlight">\( n \)</span> indices and <span class="math notranslate nohighlight">\( 3^n \)</span> components, and transforms with <span class="math notranslate nohighlight">\( n \)</span> factors of <span class="math notranslate nohighlight">\( R \)</span>. In this hierarchy, a vector is a tensor of rank 1, and a scalar is a tensor of rank zero.</p>
 </section>

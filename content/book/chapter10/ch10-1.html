@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>10.0.1 Presentation/Paper notes &#8212; Electrodynamics</title>
+    <title>10.1 The Potential Formulation &#8212; Electrodynamics</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="10.2.1 Retarded Potentials" href="ch10-2.html" />
+    <link rel="next" title="10.2 Potentials and Fields" href="ch10-2.html" />
     <link rel="prev" title="Chapter 10" href="chapter-intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 10</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -440,7 +433,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10.0.1 Presentation/Paper notes</h1>
+    <h1>10.1  The Potential Formulation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -450,10 +443,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.0.1 Presentation/Paper notes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-and-vector-potentials">10.1.1 Scalar and Vector Potentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-and-vector-potentials">10.1.1 Scalar and Vector Potentials</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -464,45 +455,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="presentation-paper-notes">
-<h1>10.0.1 Presentation/Paper notes<a class="headerlink" href="#presentation-paper-notes" title="Permalink to this heading">#</a></h1>
-<p>A few words about the paper/presentation</p>
-<ul class="simple">
-<li><p>It’s supposed to be on a topic related to the class (classical electromagnetism)</p></li>
-<li><p>The topic can be wide-ranging. Some sample topics will be put it. It should be thematically related to what we’ve been talking about, and you should be making connections to things we’ve been talking about (waveguides, waves, generation of waves, etc.)</p></li>
-<li><p>There will be two class periods in the last week which are reserved for presentations of about 15 minutes each.</p></li>
-</ul>
-<p>Examples of possible topics:</p>
-<ul class="simple">
-<li><p>Applications of X-ray radiation</p>
-<ul>
-<li><p>Advanced light source</p></li>
-<li><p>Advanced photon source</p></li>
-</ul>
-</li>
-<li><p>Waveguiding</p>
-<ul>
-<li><p>Optical fibers</p></li>
-<li><p>Applications of coaxial cables</p></li>
-</ul>
-</li>
-<li><p>Microwave cavities</p>
-<ul>
-<li><p>ADMX experiment</p></li>
-<li><p>Atom-photon entanglement with Rydberg atoms in high finesse cavities</p></li>
-</ul>
-</li>
-<li><p>Optical interferometry</p>
-<ul>
-<li><p>Fabry-Perot interferometer / cavity and applications</p></li>
-<li><p>LIGO and gravitational waves</p></li>
-</ul>
-</li>
-<li><p>Microcavities, Photonic crystal cavities</p></li>
-</ul>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-potential-formulation">
+<h1><em>10.1</em>  The Potential Formulation<a class="headerlink" href="#the-potential-formulation" title="Permalink to this heading">#</a></h1>
 <section id="scalar-and-vector-potentials">
-<h1>10.1.1 Scalar and Vector Potentials<a class="headerlink" href="#scalar-and-vector-potentials" title="Permalink to this heading">#</a></h1>
+<h2>10.1.1 Scalar and Vector Potentials<a class="headerlink" href="#scalar-and-vector-potentials" title="Permalink to this heading">#</a></h2>
 <p>Ultimately the question of electromagnetism is given some sources <span class="math notranslate nohighlight">\( \rho(\vec r, t) \)</span> and <span class="math notranslate nohighlight">\( \vec J ( \vec r, t) \)</span>, what are the resulting fields <span class="math notranslate nohighlight">\( \vec E( \vec r, t) \)</span> and <span class="math notranslate nohighlight">\( \vec B ( \vec r, t) \)</span>? In the static case, Coulomb’s law and the Biot-Savart law provide deterministic answers, so how do we then generalize to time-dependent configurations?</p>
 <p>It turns out that once again, it will pay to represent the fields in terms of potentials. Just like in electrostatics, <span class="math notranslate nohighlight">\( \nabla \times  \vec E = 0 \)</span> allowed us to write <span class="math notranslate nohighlight">\( \vec E \)</span> as the gradient of a scalar potential. We can’t do that any more, but we do still have a divergenceless <span class="math notranslate nohighlight">\( \vec B \)</span>, so</p>
 <div class="math notranslate nohighlight">
@@ -560,6 +516,7 @@ document.write(`
 \end{split}\]</div>
 <p>The result is an inhomogeneous wave equation with a “source” term on the right. It’s quite similar to the wave equations we’ve been solving for the past couple of chapters, but the sources have been re-introduced, and it’s important to remember that now the sources <span class="math notranslate nohighlight">\( \rho \)</span> and <span class="math notranslate nohighlight">\( \vec J \)</span> are allowed to vary in both space and time.</p>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -605,7 +562,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">10.2.1 Retarded Potentials</p>
+        <p class="prev-next-title"><em>10.2</em> Potentials and Fields</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -624,10 +581,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.0.1 Presentation/Paper notes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-and-vector-potentials">10.1.1 Scalar and Vector Potentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-and-vector-potentials">10.1.1 Scalar and Vector Potentials</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

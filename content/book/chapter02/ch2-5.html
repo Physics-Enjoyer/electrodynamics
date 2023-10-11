@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -516,20 +509,20 @@ At first glance, it would appear that the answer depends on the shape of the cav
 <section id="surface-charge-and-the-force-on-a-conductor">
 <h2>2.5.3: Surface Charge and the Force on a Conductor<a class="headerlink" href="#surface-charge-and-the-force-on-a-conductor" title="Permalink to this heading">#</a></h2>
 <p>Because the field inside a conductor is zero, boundary condition Eq. 2.33 requires that the field immediately outside is</p>
-<div class="math notranslate nohighlight">
-\[
- \vec{E} = \frac{\sigma}{\epsilon_0} \hat{n} {2.48} \tag{2.48}
- \]</div>
+<div class="math notranslate nohighlight" id="equation-eq2-48">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq2-48" title="Permalink to this equation">#</a></span>\[
+ \vec{E} = \frac{\sigma}{\epsilon_0} \hat{n}
+\]</div>
 <p>consistent with our earlier conclusion that the field is normal to the surface. In terms of potential, Eq. 2.36 yields</p>
-<div class="math notranslate nohighlight">
-\[
-\sigma = - \epsilon_0 \frac{\partial V}{\partial n} {2.49} \tag{2.49}
+<div class="math notranslate nohighlight" id="equation-eq2-49">
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq2-49" title="Permalink to this equation">#</a></span>\[
+\sigma = - \epsilon_0 \frac{\partial V}{\partial n}
 \]</div>
 <p>These equations enable you to calculate the surface charge on a conductor, if you can determine <span class="math notranslate nohighlight">\( \vec{E} \)</span> or <span class="math notranslate nohighlight">\( V \)</span>; we shall use them frequently in the next chapter.</p>
 <p>In the presence of an electric field, a surface charge will experience a force; the force per unit area, <span class="math notranslate nohighlight">\( \vec{f} \)</span>, is <span class="math notranslate nohighlight">\( \sigma \vec{E} \)</span>. But there’s a problem here, for the electric field is discontinuous at a surface charge, so what are we supposed to use: <span class="math notranslate nohighlight">\( \vec{E}_{above}, \vec{E}_{below} \)</span>, or something in between? The answer is that we should use the <em>average</em> of the two</p>
-<div class="math notranslate nohighlight">
-\[
- \vec{f} = \sigma \vec{E}_{average} = \frac{1}{2} \sigma (\vec{E}_{above} + \vec{E}_{below}) {2.50} \tag{2.50}
+<div class="math notranslate nohighlight" id="equation-eq2-50">
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq2-50" title="Permalink to this equation">#</a></span>\[
+ \vec{f} = \sigma \vec{E}_{average} = \frac{1}{2} \sigma (\vec{E}_{above} + \vec{E}_{below})
 \]</div>
 <p>Why the average? The reason is very simple, thought the telling makes it sound complicated: Let’s focus our attention on a tiny patch of surface surrounding the point in question (Fig. 2.50). Make it small enough so it is essentially flat and the surface in question is essentially constant. The total field consists of two parts - that attributable to the patch itself, and that due to everything else (other regions of the surface, as well as any external sources that may be present)</p>
 <div class="math notranslate nohighlight">
@@ -548,16 +541,16 @@ At first glance, it would appear that the answer depends on the shape of the cav
 \vec{E}_{other} = \frac{1}{2} (\vec{E}_{above} + \vec{E}_{below}) = \vec{E}_{average}
 \]</div>
 <p>Averaging is really just a device for removing the contribution of the patch itself.</p>
-<p>That argument applies to any surface charge; in the particular case of a conductor, the field is zero inside and <span class="math notranslate nohighlight">\( (\sigma / \epsilon_0)\hat{n} \)</span> outside (<span class="math notranslate nohighlight">\( \eqref{2.48} \)</span>, so the average is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, and the force per unit area is</p>
-<div class="math notranslate nohighlight">
-\[
- f = \frac{1}{2 \epsilon_0} \sigma ^2 \hat{n} {2.51} \tag{2.51}
- \]</div>
+<p>That argument applies to any surface charge; in the particular case of a conductor, the field is zero inside and <span class="math notranslate nohighlight">\( (\sigma / \epsilon_0)\hat{n} \)</span> outside (<a class="reference internal" href="#equation-eq2-48">(112)</a>, so the average is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, and the force per unit area is</p>
+<div class="math notranslate nohighlight" id="equation-eq2-51">
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq2-51" title="Permalink to this equation">#</a></span>\[
+f = \frac{1}{2 \epsilon_0} \sigma ^2 \hat{n}
+\]</div>
 <p>This amounts to an outward <strong>electrostatic pressure</strong> on the surface, tending to draw the conductor into the field, regardless of the sign of <span class="math notranslate nohighlight">\( \sigma \)</span>. Expressing the pressure in terms of the field just outside the surface</p>
 <div class="math notranslate nohighlight">
 \[
- P = \frac{\epsilon_0}{2} E^2
- \]</div>
+P = \frac{\epsilon_0}{2} E^2
+\]</div>
 </section>
 <section id="capacitors">
 <h2>2.5.4: Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this heading">#</a></h2>
@@ -574,34 +567,34 @@ V = V_{+} - V_{-} = - \int_{(-)}^{(+)} \vec{E} \cdot \mathrm{d}{\vec{l}}
 \]</div>
 <p>so if you double <span class="math notranslate nohighlight">\( \rho \)</span>, you double <span class="math notranslate nohighlight">\( \vec{E} \)</span>. Wait a minute! How do we know that doubling Q (and also -Q) simply doubles <span class="math notranslate nohighlight">\( \rho \)</span>? Maybe the charge moves around into a completely different configuration, quadrupling <span class="math notranslate nohighlight">\( \rho \)</span> in some places and halving it in others, just so the total charge on the conductor is doubled. The fact is that this concern is unwarranted - doubling Q <em>does</em> double <span class="math notranslate nohighlight">\( \rho \)</span>  everywhere; it doesn’t shift charge around. The proof will come in Chapter 3; for now you’ll have to trust me.</p>
 <p>Since <span class="math notranslate nohighlight">\( \vec{E} \)</span> is proportional to Q, so also is V. The constant of proportionality is called the <strong>capacitance</strong> of the arrangement</p>
-<div class="math notranslate nohighlight">
-\[
-C \equiv \frac{Q}{V}  {2.53} \tag{2.53}
+<div class="math notranslate nohighlight" id="equation-eq2-53">
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq2-53" title="Permalink to this equation">#</a></span>\[
+C \equiv \frac{Q}{V}
 \]</div>
 <p>Capacitance is a purely geometrical quantity, determined by the sizes, shapes, and separation of the two conductors. In SI units, C is measured in <em>farads</em> (F); a farad is a coulomb-per-volt. Actually this turns out to be inconveniently large; more practical units are the microfarad (<span class="math notranslate nohighlight">\( 10^{-6} F \)</span>) and the picofarad (<span class="math notranslate nohighlight">\( 10^{-12} F \)</span>)</p>
-<p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <span class="math notranslate nohighlight">\( \eqref{2.53} \)</span>, where V is the potential with infinity as the reference point.</p>
+<p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <a class="reference internal" href="#equation-eq2-53">(116)</a>, where V is the potential with infinity as the reference point.</p>
 <hr class="docutils" />
 <section id="example-2-11">
 <h3>Example 2.11<a class="headerlink" href="#example-2-11" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Find the capacitance of a parallel-plate capacitor consisting of two metal surfaces of area A held a distance d apart (Fig. 2.52)</p>
 <p><img alt="Figure 2.52" src="../../../_images/2.52.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>If we put +Q on the top and -Q on the bottom, they will spread out uniformly over the two surfaces, provided the area is reasonably large and the separation small. The surface charge density, then, is <span class="math notranslate nohighlight">\( \sigma = Q / A \)</span> on the top plate, and so the field, according to Ex. 2.6, is <span class="math notranslate nohighlight">\( (1 / \epsilon_0) Q / A \)</span>. The potential difference between the plates is therefore</p>
 <div class="math notranslate nohighlight">
 \[
 V = \frac{Q}{A \epsilon_0} d
 \]</div>
 <p>and hence</p>
-<div class="math notranslate nohighlight">
-\[
-C = \frac{A \epsilon_0}{d} {2.54} \tag{2.54}
+<div class="math notranslate nohighlight" id="equation-eq2-54">
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq2-54" title="Permalink to this equation">#</a></span>\[
+C = \frac{A \epsilon_0}{d}
 \]</div>
 <p>If, for instance, the plates are square with sides 1 cm long, and they are held 1 mm apart, then the capacitance is <span class="math notranslate nohighlight">\( 9 \times 10^{-13} F \)</span></p>
 </div>
@@ -612,12 +605,12 @@ C = \frac{A \epsilon_0}{d} {2.54} \tag{2.54}
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Find the capacitance of two concentric spherical metal shells, with radii a and b.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Place charge +Q on the inner sphere, and -Q on the outer one. The field between the spheres is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -646,10 +639,10 @@ C = \frac{Q}{V} = 4 \pi \epsilon_0 \frac{ab}{(b - a)}
 W = \int_{0} ^Q \left( \frac{q}{C} \mathrm{d}{q} \right) = \frac{1}{2} \frac{Q^2}{C} 
 \]</div>
 <p>or, since <span class="math notranslate nohighlight">\( Q = CV \)</span>,</p>
-<div class="math notranslate nohighlight">
-\[
- W = \frac{1}{2} C V^2 {2.55} \tag{2.55}
- \]</div>
+<div class="math notranslate nohighlight" id="equation-eq2-55">
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq2-55" title="Permalink to this equation">#</a></span>\[
+W = \frac{1}{2} C V^2 {2.55} 
+\]</div>
 <p>where <span class="math notranslate nohighlight">\( V \)</span> is the final potential of the capacitor.</p>
 </section>
 </section>

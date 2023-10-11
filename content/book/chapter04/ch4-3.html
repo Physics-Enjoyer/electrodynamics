@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -472,9 +465,9 @@ document.write(`
 <section id="gauss-s-law-in-the-presence-of-dielectrics">
 <h2>4.3.1: Gauss’s Law in the Presence of Dielectrics<a class="headerlink" href="#gauss-s-law-in-the-presence-of-dielectrics" title="Permalink to this heading">#</a></h2>
 <p>In Section 4.2 we found that the effect of polarization is to produce accumulations of (bound) charge, <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> within the dielectric and <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span> on the surface. The field due to polarization of the medium is just the field of this bound charge. We are now ready to put it all together: the field attributable to bound charge plus the field due to everything <em>else</em> (which, for want of a better term, we call <strong>free charge</strong>, <span class="math notranslate nohighlight">\( \rho_f \)</span>). The free charge might consist of electrons on a conductor or ions embedded in the dielectric material or whatever; any charge, in other words, that is <em>not</em> a result of polarization. Within the dielectric, the total charge density can be written</p>
-<div class="math notranslate nohighlight">
-\[
-\rho = \rho_b + \rho_f \tag{4.20}
+<div class="math notranslate nohighlight" id="equation-eq4-20">
+<span class="eqno">(222)<a class="headerlink" href="#equation-eq4-20" title="Permalink to this equation">#</a></span>\[
+\rho = \rho_b + \rho_f 
 \]</div>
 <p>and Gauss’s law reads</p>
 <div class="math notranslate nohighlight">
@@ -488,42 +481,42 @@ document.write(`
 \nabla \cdot  (\epsilon_0 \vec{E} + \vec{P}) = \rho_f
 \]</div>
 <p>The expression in parentheses is known as the <strong>electric displacement</strong> and is designated by the letter <strong>D</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{D} \equiv \epsilon_0 \vec{E} + \vec{P} \tag{4.21}
+<div class="math notranslate nohighlight" id="equation-eq4-21">
+<span class="eqno">(223)<a class="headerlink" href="#equation-eq4-21" title="Permalink to this equation">#</a></span>\[
+\vec{D} \equiv \epsilon_0 \vec{E} + \vec{P} 
 \]</div>
 <p>In terms of <strong>D</strong>, Gauss’s law then reads</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot  \vec{D} = \rho_f \tag{4.22}
+<div class="math notranslate nohighlight" id="equation-eq4-22">
+<span class="eqno">(224)<a class="headerlink" href="#equation-eq4-22" title="Permalink to this equation">#</a></span>\[
+\nabla \cdot  \vec{D} = \rho_f 
 \]</div>
 <p>or in integral form</p>
-<div class="math notranslate nohighlight">
-\[
-\oint \vec{D} \cdot \mathrm{d} \vec{a} = Q_{f_{enc}} \tag{4.23}
+<div class="math notranslate nohighlight" id="equation-eq4-23">
+<span class="eqno">(225)<a class="headerlink" href="#equation-eq4-23" title="Permalink to this equation">#</a></span>\[
+\oint \vec{D} \cdot \mathrm{d} \vec{a} = Q_{f_{enc}} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( Q_{f_{enc}} \)</span> denotes the total free charge enclosed in the volume. This is a particularly useful way to express Gauss’s law, in the context of dielectrics, because it <em>makes reference only to the free charges</em>, and free charge is the stuff we control. Bound charge comes along for the ride: when we put the free charge in place, a certain polarization automatically arises, by the mechanisms of Sect 4.1, and this polarization produces the bound charge. In a typical problem, therefore, we know <span class="math notranslate nohighlight">\( \rho_f \)</span>, but we do not (initially) know <span class="math notranslate nohighlight">\( \rho_b \)</span>; <span class="math notranslate nohighlight">\( \eqref{4.23} \)</span> lets us go right to work with the information at hand. In particular, whenever the requisite symmetry is present, we can immediately calculate \vec D$$ by the standard Gauss’s law methods.</p>
+<p>where <span class="math notranslate nohighlight">\( Q_{f_{enc}} \)</span> denotes the total free charge enclosed in the volume. This is a particularly useful way to express Gauss’s law, in the context of dielectrics, because it <em>makes reference only to the free charges</em>, and free charge is the stuff we control. Bound charge comes along for the ride: when we put the free charge in place, a certain polarization automatically arises, by the mechanisms of Sect 4.1, and this polarization produces the bound charge. In a typical problem, therefore, we know <span class="math notranslate nohighlight">\( \rho_f \)</span>, but we do not (initially) know <span class="math notranslate nohighlight">\( \rho_b \)</span>; <a class="reference internal" href="#equation-eq4-23">(225)</a> lets us go right to work with the information at hand. In particular, whenever the requisite symmetry is present, we can immediately calculate <span class="math notranslate nohighlight">\(\vec{D}\)</span> by the standard Gauss’s law methods.</p>
 <section id="example-4-4">
 <h3>Example 4.4<a class="headerlink" href="#example-4-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A long straight wire, carrying uniform line charge <span class="math notranslate nohighlight">\( \lambda \)</span>, is surrounded by rubber insulation out to a radius <em>a</em> (Fig 4.17). Find the electric displacement.</p>
 <p><img alt="Figure 4.17" src="../../../_images/4.17.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
-<p>Drawing a cylindrical Gaussian surface, of radius <em>s</em> and length <em>L</em>, and applying <span class="math notranslate nohighlight">\( \eqref{4.23} \)</span> we find</p>
+A</label><div class="sd-tab-content docutils">
+<p>Drawing a cylindrical Gaussian surface, of radius <em>s</em> and length <em>L</em>, and applying <a class="reference internal" href="#equation-eq4-23">(225)</a> we find</p>
 <div class="math notranslate nohighlight">
 \[
 D( 2\pi s L) = \lambda L
 \]</div>
 <p>Therefore</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{D} = \frac{\lambda}{2 \pi s} \hat{s} \tag{4.24}
+<div class="math notranslate nohighlight" id="equation-eq4-24">
+<span class="eqno">(226)<a class="headerlink" href="#equation-eq4-24" title="Permalink to this equation">#</a></span>\[
+\vec{D} = \frac{\lambda}{2 \pi s} \hat{s} 
 \]</div>
 <p>Notice that this formula holds both within the insulation and outside it. In the latter region, <span class="math notranslate nohighlight">\( \vec{P} = 0 \)</span> so</p>
 <div class="math notranslate nohighlight">
@@ -533,7 +526,7 @@ D( 2\pi s L) = \lambda L
 <p>Inside the rubber, the electric field cannot be determined, since we do not know <strong>P</strong>.</p>
 </div>
 </div>
-<p>Hold on a tick! We got all the way to a field we can calculate by Gauss’s law, but we have left out the surface bound charge <span class="math notranslate nohighlight">\( \sigma_b \)</span>. What happened to it? To be more precise, <span class="math notranslate nohighlight">\( \eqref{4.22} \)</span> works within a dielectric, but we cannot apply Gauss’s law precisely <em>at</em> the boundary of the dielectric, because the local <span class="math notranslate nohighlight">\( \rho_b \)</span> blows up there, taking <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{E} \)</span> with it. The polarization drops abruptly to zero outside the material, so its <em>derivative</em> is a delta function. The surface bound charge is precisely this term, so in this sense it is actually included in <span class="math notranslate nohighlight">\( \rho_b \)</span>, but we ordinarily prefer to handle it separately as <span class="math notranslate nohighlight">\( \sigma_b \)</span>. We could even picture the edge of the dielectric as having some finite thickness, within which the polarization drops off to zero (which is probably a more realistic model anyway), in which case there is no <span class="math notranslate nohighlight">\( \sigma_b \)</span>, <span class="math notranslate nohighlight">\( \rho_b \)</span> varies rapidly but smoothly, and Gauss’s law can safely be applied everywhere. In any case, we can use <span class="math notranslate nohighlight">\( \eqref{4.23} \)</span> safely without fear of this “defect.”</p>
+<p>Hold on a tick! We got all the way to a field we can calculate by Gauss’s law, but we have left out the surface bound charge <span class="math notranslate nohighlight">\( \sigma_b \)</span>. What happened to it? To be more precise, <a class="reference internal" href="#equation-eq4-22">(224)</a> works within a dielectric, but we cannot apply Gauss’s law precisely <em>at</em> the boundary of the dielectric, because the local <span class="math notranslate nohighlight">\( \rho_b \)</span> blows up there, taking <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{E} \)</span> with it. The polarization drops abruptly to zero outside the material, so its <em>derivative</em> is a delta function. The surface bound charge is precisely this term, so in this sense it is actually included in <span class="math notranslate nohighlight">\( \rho_b \)</span>, but we ordinarily prefer to handle it separately as <span class="math notranslate nohighlight">\( \sigma_b \)</span>. We could even picture the edge of the dielectric as having some finite thickness, within which the polarization drops off to zero (which is probably a more realistic model anyway), in which case there is no <span class="math notranslate nohighlight">\( \sigma_b \)</span>, <span class="math notranslate nohighlight">\( \rho_b \)</span> varies rapidly but smoothly, and Gauss’s law can safely be applied everywhere. In any case, we can use <a class="reference internal" href="#equation-eq4-23">(225)</a> safely without fear of this “defect.”</p>
 </section>
 </section>
 <section id="a-deceptive-parallel">
@@ -544,34 +537,34 @@ D( 2\pi s L) = \lambda L
 \vec{D}(\vec{r}) \neq \frac{1}{4 \pi} \int \frac{\hat{\Delta r }}{\Delta r  ^2} \rho_f(\vec{r'}) \mathrm{d} \tau'
 \]</div>
 <p>This is because the divergence alone is insufficient to determine a vector field; you need to know its curl as well. One tends to forget this in the case of electrostatics because we usually don’t care about the curl of <strong>E</strong> anyway. But the curl of <strong>D</strong> is <em>not</em> always zero, even in electrostatics, since there is no reason, in general, to suppose that the curl of <strong>P</strong> vanishes:</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times  \vec{D} = \epsilon_0 (\nabla \times  \vec{E}) + (\nabla \times  \vec{P}) = \nabla \times  \vec{P} \tag{4.25}
+<div class="math notranslate nohighlight" id="equation-eq4-25">
+<span class="eqno">(227)<a class="headerlink" href="#equation-eq4-25" title="Permalink to this equation">#</a></span>\[
+\nabla \times  \vec{D} = \epsilon_0 (\nabla \times  \vec{E}) + (\nabla \times  \vec{P}) = \nabla \times  \vec{P} 
 \]</div>
 <p>Sometimes it does, but more often it does not. The bar electret of Prob 4.11 is one example of this: here there is no free charge anywhere, so if you really believe that the only source of <strong>D</strong> is <span class="math notranslate nohighlight">\( \rho_f \)</span> you will be forced to conclude that <span class="math notranslate nohighlight">\( \vec{D} = 0 \)</span> everywhere, and hence that <span class="math notranslate nohighlight">\( \vec{E} = (-1 / \epsilon_0) \vec{P} \)</span> inside and <span class="math notranslate nohighlight">\( \vec{E} = 0 \)</span> outside the electret, which is obviously wrong. And because <span class="math notranslate nohighlight">\( \nabla \times  \vec{D} \neq 0 \)</span> in general, <strong>D</strong> cannot be expressed as the gradient of a scalar - there is no “potential” for <strong>D</strong>.</p>
 <p><em>Advice</em>: When you are asked to compute the electric displacement, first look for symmetry. If the problem exhibits spherical, cylindrical, or plane symmetry, then you can get <strong>D</strong> directly from Eq. 4.23 by the usual Gauss’s law methods. (Evidently in such cases <span class="math notranslate nohighlight">\( \nabla \times  \vec{P} \)</span>  is automatically zero, but since symmetry alone dictates the answer, you’re not really obliged to worry about the curl.) If the requisite symmetry is absent, you’ll have to think of another approach, and, in particular, you must not assume that <strong>D</strong> is determined exclusively by the free charge.</p>
 </section>
 <section id="boundary-conditions">
 <h2>4.3.3: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this heading">#</a></h2>
-<p>The electrostatic boundary conditions we had in Sect 2.3 can be re-cast in terms of <strong>D</strong>. <span class="math notranslate nohighlight">\( \eqref{4.23} \)</span> tells us the discontinuity in the component perpendicular to an interface:</p>
-<div class="math notranslate nohighlight">
-\[
-D_{above} ^{\perp} - D_{below} ^{\perp} = \sigma_f \tag{4.26}
+<p>The electrostatic boundary conditions we had in Sect 2.3 can be re-cast in terms of <strong>D</strong>. <a class="reference internal" href="#equation-eq4-23">(225)</a> tells us the discontinuity in the component perpendicular to an interface:</p>
+<div class="math notranslate nohighlight" id="equation-eq4-26">
+<span class="eqno">(228)<a class="headerlink" href="#equation-eq4-26" title="Permalink to this equation">#</a></span>\[
+D_{above} ^{\perp} - D_{below} ^{\perp} = \sigma_f 
 \]</div>
-<p>while <span class="math notranslate nohighlight">\( \eqref{4.25} \)</span> gives the discontinuity in parallel components:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{D}_{above} ^{\parallel} - \vec{D}_{below} ^{\parallel} = \vec{P}_{above} ^{\parallel} - \vec{P}_{below} ^{\parallel} \tag{4.27}
+<p>while <a class="reference internal" href="#equation-eq4-25">(227)</a> gives the discontinuity in parallel components:</p>
+<div class="math notranslate nohighlight" id="equation-eq4-27">
+<span class="eqno">(229)<a class="headerlink" href="#equation-eq4-27" title="Permalink to this equation">#</a></span>\[
+\vec{D}_{above} ^{\parallel} - \vec{D}_{below} ^{\parallel} = \vec{P}_{above} ^{\parallel} - \vec{P}_{below} ^{\parallel} 
 \]</div>
 <p>In the presence of dielectrics, these are sometimes more useful than the corresponding boundary conditions on <strong>E</strong> (Eqs 2.31 and 2.32):</p>
-<div class="math notranslate nohighlight">
-\[
-E_{above} ^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma \tag{4.28}
+<div class="math notranslate nohighlight" id="equation-eq4-28">
+<span class="eqno">(230)<a class="headerlink" href="#equation-eq4-28" title="Permalink to this equation">#</a></span>\[
+E_{above} ^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma 
 \]</div>
 <p>and</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{E}_{above} ^{\parallel} - \vec{E}_{below} ^{\parallel} = 0 \tag{4.29}
+<div class="math notranslate nohighlight" id="equation-eq4-29">
+<span class="eqno">(231)<a class="headerlink" href="#equation-eq4-29" title="Permalink to this equation">#</a></span>\[
+\vec{E}_{above} ^{\parallel} - \vec{E}_{below} ^{\parallel} = 0 
 \]</div>
 </section>
 </section>

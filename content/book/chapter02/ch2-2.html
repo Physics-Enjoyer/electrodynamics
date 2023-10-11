@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -489,18 +482,18 @@ document.write(`
 <p><img alt="Figure 2.13" src="../../../_images/2.13.png" />
 <img alt="Figure 2.14" src="../../../_images/2.14.png" /></p>
 <p>In this model, the <em>flux</em> of <strong>E</strong> through a surface S,</p>
-<div class="math notranslate nohighlight">
-\[
-\Phi_E \equiv \int _S \vec{E} \cdot \mathrm{d}{\vec{a}} {2.11} \tag{2.11}
+<div class="math notranslate nohighlight" id="equation-eq2-11">
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq2-11" title="Permalink to this equation">#</a></span>\[
+\Phi_E \equiv \int _S \vec{E} \cdot \mathrm{d}{\vec{a}} {2.11} 
 \]</div>
 <p>is a measure of the “number of lines” passing through S. I put this in quotes because of course we can only draw a representative <em>sample</em> of field lines - the total number would be infinite. But for a given sampling rate the flux is <em>proportional</em> to the number of lines drawn, because the field strength, remember, is proportional to the density of field lines (the number per unit area), and hence <span class="math notranslate nohighlight">\( \vec{E} \cdot \mathrm{d}{\vec{a}} \)</span> is proportional to the number of lines passing through the infinitesimal area <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span>. (The dot product picks out the component of <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span> along the direction of <strong>E</strong>, as indicated in Fig 2.15. It is the area in the plane perpendicular to <strong>E</strong> that we have in mind when we say that the density of field lines is the number per unit area).</p>
 <p><img alt="Figure 2.15" src="../../../_images/2.15.png" />
 <img alt="Figure 2.16" src="../../../_images/2.16.png" /></p>
 <p>This suggests that the flux through any <em>closed</em> surface is a measure of the total charge inside. For the field lines that originate on a positive charge must either pass out through the surface or else terminate on a negative charge inside (Fig 2.16a). On the other hand, a charge <em>outside</em> the surface will contribute nothing to the total flux, since its field lines pass in one side and out the other (Fig 2.16b). This is the <em>essence</em> of Gauss’s law. Now let’s make it quantitative.</p>
 <p>In the case of a point charge <em>q</em> at the origin, the flux of <strong>E</strong> through a spherical surface or radius <em>r</em> is</p>
-<div class="math notranslate nohighlight">
-\[
-\oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \int \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{r^2} \hat{r} \right) \cdot \left( r^2 \sin \theta \mathrm{d}{\theta} \mathrm{d}{\phi} \hat{r} \right) = \frac{1}{\epsilon_0} q {2.12} \tag{2.12}
+<div class="math notranslate nohighlight" id="equation-eq2-12">
+<span class="eqno">(92)<a class="headerlink" href="#equation-eq2-12" title="Permalink to this equation">#</a></span>\[
+\oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \int \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{r^2} \hat{r} \right) \cdot \left( r^2 \sin \theta \mathrm{d}{\theta} \mathrm{d}{\phi} \hat{r} \right) = \frac{1}{\epsilon_0} q {2.12} 
 \]</div>
 <p>Notice that the radius of the sphere cancels out, for while the surface area goes <em>up</em> as <span class="math notranslate nohighlight">\( r^2 \)</span>, the field goes <em>down</em> as <span class="math notranslate nohighlight">\( 1/r^2 \)</span>, so the product is constant. In terms of the field-line picture, this makes good sense, since the same number of field lines pass through any sphere centered at the origin, regardless of its size. In fact, it didn’t have to be a sphere - any closed surface, whatever its shape, would be pierced by the same number of field lines. Evidently, the flux through any surface enclosing the charge is <span class="math notranslate nohighlight">\( q / \epsilon_0 \)</span>.</p>
 <p>Now suppose that instead of a single charge at the origin, we have a bunch of charges scattered about. According to the principle of superposition, the total field is the (vector) sum of all the individual fields:</p>
@@ -514,11 +507,11 @@ document.write(`
 \oint \vec{E} \cdot \mathrm{d}{\vec{l}} = \sum _{i = 1}^n \left( \oint \vec{E_i} \cdot \mathrm{d}{\vec{a}} \right) = \sum_{i = 1}^n \left( \frac{1}{\epsilon_0} q_i  \right)
 \]</div>
 <p>For any closed surface, then</p>
-<div class="math notranslate nohighlight">
-\[
-\oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} {2.13} \tag{2.13}
+<div class="math notranslate nohighlight" id="equation-eq2-13">
+<span class="eqno">(93)<a class="headerlink" href="#equation-eq2-13" title="Permalink to this equation">#</a></span>\[
+\oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} {2.13} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( Q_{enc} \)</span> is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. Although it contains no information that was not already present in Coulomb’s law plus the principle of superposition, it is of almost magical power, as you will see in Sect. 2.2.3. Notice that it all hinges on the <span class="math notranslate nohighlight">\( 1/r^2 \)</span> character of Coulomb’s law; without that, the crucial cancellation of the <em>r</em>’s in <span class="math notranslate nohighlight">\( \eqref{2.12} \)</span> would not take place, and the total flux of <strong>E</strong> would depend on the surface chosen, not merely on the total charge enclosed. Other <span class="math notranslate nohighlight">\( 1/r^2 \)</span> forces (I am thinking particularly of Newton’s law of universal gravitation) will obey “Gauss’s laws” of their own, and the applications we develop here carry over directly.</p>
+<p>where <span class="math notranslate nohighlight">\( Q_{enc} \)</span> is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. Although it contains no information that was not already present in Coulomb’s law plus the principle of superposition, it is of almost magical power, as you will see in Sect. 2.2.3. Notice that it all hinges on the <span class="math notranslate nohighlight">\( 1/r^2 \)</span> character of Coulomb’s law; without that, the crucial cancellation of the <em>r</em>’s in <a class="reference internal" href="#equation-eq2-12">(92)</a> would not take place, and the total flux of <strong>E</strong> would depend on the surface chosen, not merely on the total charge enclosed. Other <span class="math notranslate nohighlight">\( 1/r^2 \)</span> forces (I am thinking particularly of Newton’s law of universal gravitation) will obey “Gauss’s laws” of their own, and the applications we develop here carry over directly.</p>
 <p>As it stands, Gauss’s law is an <em>integral</em> equation, but we can easily turn it into a differential one by applying the divergence theorem:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -535,11 +528,11 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \int_{\mathscr{V}} (\nabla \cdot {\vec{E}}) \mathrm{d}{\tau} = \int_{\mathscr{V}} \left( \frac{\rho}{\epsilon_0} \mathrm{d}{\tau} \right)
 \]</div>
 <p>And since this holds for <em>any</em> volume, the integrands must be equal:</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho {2.14} \tag{2.14}
+<div class="math notranslate nohighlight" id="equation-eq2-14">
+<span class="eqno">(94)<a class="headerlink" href="#equation-eq2-14" title="Permalink to this equation">#</a></span>\[
+\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho {2.14} 
 \]</div>
-<p>Equation <span class="math notranslate nohighlight">\( \eqref{2.14} \)</span> carries the same message as <span class="math notranslate nohighlight">\( \eqref{2.13} \)</span>; it is <strong>Gauss’s law in differential form</strong>. The differential version is tidier, but the integral form has the advantage that it accommodates point, line, and surface charges more naturally.</p>
+<p>Equation <a class="reference internal" href="#equation-eq2-14">(94)</a> carries the same message as <a class="reference internal" href="#equation-eq2-13">(93)</a>; it is <strong>Gauss’s law in differential form</strong>. The differential version is tidier, but the integral form has the advantage that it accommodates point, line, and surface charges more naturally.</p>
 </section>
 <section id="the-divergence-of-e">
 <h2>2.2.2: The Divergence of E<a class="headerlink" href="#the-divergence-of-e" title="Permalink to this heading">#</a></h2>
@@ -559,11 +552,11 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \nabla \cdot {\left( \frac{\hat{\Delta r }}{\Delta r ^2}  \right)} = 4 \pi \delta ^3(\Delta r )
 \]</div>
 <p>Thus</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot {\vec{E}} = \frac{1}{4\pi\epsilon_0} \int 4 \pi \delta^3(\vec{r} - \vec{r'}) \rho(\vec{r'}) \mathrm{d}{\tau'} = \frac{1}{\epsilon_0} \rho(\vec{r}) {2.16} \tag{2.16}
+<div class="math notranslate nohighlight" id="equation-eq2-16">
+<span class="eqno">(95)<a class="headerlink" href="#equation-eq2-16" title="Permalink to this equation">#</a></span>\[
+\nabla \cdot {\vec{E}} = \frac{1}{4\pi\epsilon_0} \int 4 \pi \delta^3(\vec{r} - \vec{r'}) \rho(\vec{r'}) \mathrm{d}{\tau'} = \frac{1}{\epsilon_0} \rho(\vec{r}) {2.16} 
 \]</div>
-<p>which is Gauss’s law in differential form <span class="math notranslate nohighlight">\( \eqref{2.14} \)</span>. To recover the integral form <span class="math notranslate nohighlight">\( \eqref{2.13} \)</span> we run the previous argument in reverse - integrate over a volume and apply the divergence theorem:</p>
+<p>which is Gauss’s law in differential form <a class="reference internal" href="#equation-eq2-14">(94)</a>. To recover the integral form <a class="reference internal" href="#equation-eq2-13">(93)</a> we run the previous argument in reverse - integrate over a volume and apply the divergence theorem:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathscr{V}} \nabla \cdot {\vec{E}} \mathrm{d}{\tau} = \oint_{\mathscr{S}} \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} \int_{\mathscr{V}} \rho \mathrm{d}{\tau} = \frac{1}{\epsilon_0} Q_{enc}
@@ -578,12 +571,12 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Find the field outside a uniformly charged solid sphere of radius R and total charge q</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Imagine a spherical surface at radius <span class="math notranslate nohighlight">\( r &gt; R \)</span> (Fig. 2.18). This is called a <strong>Gaussian surface</strong> in the trade. Gauss’s law says that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -620,20 +613,20 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 <li><p>Plane symmetry. Use a Gaussian “pillbox” that straddles the surface.</p></li>
 </ol>
 <p>Although 2 and 3 technically require infinitely long cylinders, and planes extending to infinity, we shall often use them to get approximate answers for “long” cylinders or “large” planes, at points far from the edges.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="example-2-4">
 <h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A long cylinder (Fig 2.21) carries a charge density that is proportional to the distance from the axis: <span class="math notranslate nohighlight">\( \rho = ks \)</span> for some constant <span class="math notranslate nohighlight">\( k \)</span>. Find the electric field inside this cylinder.</p>
 <p><img alt="Figure 2.21" src="../../../_images/2.21.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Draw a Gaussian cylinder of length l and radius s. For this surface, Gauss’s law states</p>
 <div class="math notranslate nohighlight">
 \[
@@ -673,12 +666,12 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>An infinite plane carries a uniform surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. Find its electric field.</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Draw a Gaussian pillbox, extending equal distances above and below the plane (Fig. 2.22). Apply Gauss’s law to this surface:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -711,13 +704,13 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Two infinite parallel planes carry equal but opposite uniform charge densities <span class="math notranslate nohighlight">\( \pm \sigma \)</span> (Fig 2.23). Find the field in each of the three regions: (i) to the left of both, (ii) between them, (iii) to the right of both.</p>
 <p><img alt="Figure 2.23" src="../../../_images/2.23.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>The left plate produces a field <span class="math notranslate nohighlight">\( (1/2 \epsilon_0)\sigma \)</span>, which points away from it (Fig. 2.24) to the left in region in (i) and to the right in regions (ii) and (iii). The right plate, being negatively charged, produces a field <span class="math notranslate nohighlight">\( (1/2 \epsilon_0)\sigma \)</span> which points <em>toward</em> it - to the right in regions (i) and (ii) and to the left in region (iii). The two fields cancel in regions (i) and (iii); they conspire in region (ii). Conclusion: The field between the plates is <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span>, and points to the right; elsewhere it is zero.</p>
 </div>
 </div>
@@ -749,16 +742,16 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{r_a} - \frac{q}{r_b}  \right)
 \end{split}\]</div>
 <p>The integral around a <em>closed</em> path is evidently zero (for then <span class="math notranslate nohighlight">\( r_a = r_b \)</span> ):</p>
-<div class="math notranslate nohighlight">
-\[
-\oint \vec{E} \cdot \mathrm{d}\vec{l} = 0 {2.19} \tag{2.19}
+<div class="math notranslate nohighlight" id="equation-eq2-19">
+<span class="eqno">(96)<a class="headerlink" href="#equation-eq2-19" title="Permalink to this equation">#</a></span>\[
+\oint \vec{E} \cdot \mathrm{d}\vec{l} = 0 {2.19} 
 \]</div>
 <p>and hence, applying Stokes’ theorem</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times {\vec{E}} = 0 {2.20} \tag{2.20}
+<div class="math notranslate nohighlight" id="equation-eq2-20">
+<span class="eqno">(97)<a class="headerlink" href="#equation-eq2-20" title="Permalink to this equation">#</a></span>\[
+\nabla \times {\vec{E}} = 0 {2.20} 
 \]</div>
-<p>Now, I proved eqs. <span class="math notranslate nohighlight">\( \eqref{2.19} \)</span> and <span class="math notranslate nohighlight">\( \eqref{2.20} \)</span> only for the field of a single point charge at the origin, but these results make no reference to what is, after all, a perfectly arbitrary choice of coordinates; they hold no matter where the charge is located. Moreover, if we have many charges, the principle of superposition states that the total field is a vector sum of their individual fields:</p>
+<p>Now, I proved eqs. <a class="reference internal" href="#equation-eq2-19">(96)</a> and <a class="reference internal" href="#equation-eq2-20">(97)</a> only for the field of a single point charge at the origin, but these results make no reference to what is, after all, a perfectly arbitrary choice of coordinates; they hold no matter where the charge is located. Moreover, if we have many charges, the principle of superposition states that the total field is a vector sum of their individual fields:</p>
 <div class="math notranslate nohighlight">
 \[
  \vec{E} = \vec{E_1} + \vec{E_2} + \ldots
@@ -768,7 +761,7 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 \[
 \nabla \times {\vec{E}} = \nabla \times {(\vec{E_1} + \vec{E_2} + \ldots)} = (\nabla \times {\vec{E_1}}) + (\nabla \times {\vec{E_2}}) + \ldots = 0
 \]</div>
-<p>Thus, Eqs.  <span class="math notranslate nohighlight">\( \eqref{2.19} \)</span> and <span class="math notranslate nohighlight">\( \eqref{2.20} \)</span> hold for any <em>static</em> charge distribution whatever.</p>
+<p>Thus, Eqs.  <a class="reference internal" href="#equation-eq2-19">(96)</a> and <a class="reference internal" href="#equation-eq2-20">(97)</a> hold for any <em>static</em> charge distribution whatever.</p>
 </section>
 </section>
 

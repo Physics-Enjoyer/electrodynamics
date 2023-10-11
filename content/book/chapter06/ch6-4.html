@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -482,19 +475,19 @@ document.write(`
 \]</div>
 <p>The constant of proportionality <span class="math notranslate nohighlight">\( \chi_m \)</span> is called the <strong>magnetic susceptibility</strong>; it is a dimensionless quantity that varies from one substance to another - positive for paramagnets and negative for diamagnets. Typical values are around <span class="math notranslate nohighlight">\( 10^{-5} \)</span>.</p>
 <p>Materials that obey Eq. 6.29 are called <strong>linear media</strong>. In view of Eq. 6.18,</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{B} = \mu_0 (\vec{H} + \vec{M}) = \mu_0 (1 + \chi_m) \vec{H} \tag{6.30}
+<div class="math notranslate nohighlight" id="equation-eq6-30">
+<span class="eqno">(372)<a class="headerlink" href="#equation-eq6-30" title="Permalink to this equation">#</a></span>\[
+\vec{B} = \mu_0 (\vec{H} + \vec{M}) = \mu_0 (1 + \chi_m) \vec{H} 
 \]</div>
 <p>for linear media. Thus <strong>B</strong> is also proportional to <strong>H</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{B} = \mu \vec{H} \tag{6.31}
+<div class="math notranslate nohighlight" id="equation-eq6-31">
+<span class="eqno">(373)<a class="headerlink" href="#equation-eq6-31" title="Permalink to this equation">#</a></span>\[
+\vec{B} = \mu \vec{H} 
 \]</div>
 <p>where</p>
-<div class="math notranslate nohighlight">
-\[
-\mu \equiv \mu_0 (1 + \chi_m) \tag{6.32}
+<div class="math notranslate nohighlight" id="equation-eq6-32">
+<span class="eqno">(374)<a class="headerlink" href="#equation-eq6-32" title="Permalink to this equation">#</a></span>\[
+\mu \equiv \mu_0 (1 + \chi_m) 
 \]</div>
 <p><span class="math notranslate nohighlight">\( \mu \)</span> is called the <strong>permeability</strong> of the material. In a vacuum, where there is no matter to magnetize, the susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span> vanishes, and the permeability is <span class="math notranslate nohighlight">\( \mu_0 \)</span>. That’s why <span class="math notranslate nohighlight">\( \mu_0 \)</span> is called the <strong>permeability of free space</strong>.</p>
 <p align="center"> <img alt="Figure 6.t1" src="/r/img/griffiths/6.t1.png" /> </p>
@@ -503,13 +496,13 @@ document.write(`
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>An infinite solenoid (n turns per unit length, current <em>I</em>), is filled with linear material of susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span>. Find the magnetic field inside the solenoid.</p>
 <p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Since <strong>B</strong> is due in part to the bound currents (which we don’t yet know), we cannot compute it directly. However, this is one of those symmetrical cases in which we can get <strong>H</strong> from the free current alone, using Ampere’s law in the form of Eq. 6.20</p>
 <div class="math notranslate nohighlight">
 \[
@@ -531,9 +524,9 @@ document.write(`
 <p>You might suppose that linear media escape the defect in the parallel between <strong>B</strong> and <strong>H</strong>: since <strong>M</strong> and <strong>H</strong> are now proportional to <strong>B</strong>, does it not follow that their divergence, like <strong>B</strong>’s, must always vanish? Unfortunately, it does not; at the boundary between two materials of different permeability, the divergence of <strong>M</strong> can actually be infinite. For instance, at the end of a cylinder of linear paramagnetic material, <strong>M</strong> is zero on one side but not on the other. For the “Gaussian pillbox” shown in Fig 6.23, <span class="math notranslate nohighlight">\( \oint \vec{M} \cdot \mathrm{d} \vec{a} \neq 0 \)</span>, and hence, by the divergence theorem, <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{M} \)</span> cannot vanish everywhere within it.</p>
 <p><img alt="Figure 6.23" src="../../../_images/6.23.png" /></p>
 <p>Incidentally, the volume bound current density in a homogeneous linear material is proportional to the <em>free</em> current density:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{J}_b = \nabla \times  \vec{M} = \nabla \times  (\chi_m \vec{H}) = \chi_m \vec{J_f} \tag{6.33}
+<div class="math notranslate nohighlight" id="equation-eq6-33">
+<span class="eqno">(375)<a class="headerlink" href="#equation-eq6-33" title="Permalink to this equation">#</a></span>\[
+\vec{J}_b = \nabla \times  \vec{M} = \nabla \times  (\chi_m \vec{H}) = \chi_m \vec{J_f} 
 \]</div>
 <p>In particular, unless free current actually flows through the material, all bound current will be at the surface.</p>
 </section>

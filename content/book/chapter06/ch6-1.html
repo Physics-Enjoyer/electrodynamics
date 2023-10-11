@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -491,9 +484,9 @@ F = I b B
 \vec{N} = I a b B \sin \theta \hat{x} = m B \sin \theta \hat{x}
 \]</div>
 <p>or</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{N} = \vec{m} \times \vec{B} \tag{6.1}
+<div class="math notranslate nohighlight" id="equation-eq6-1">
+<span class="eqno">(350)<a class="headerlink" href="#equation-eq6-1" title="Permalink to this equation">#</a></span>\[
+\vec{N} = \vec{m} \times \vec{B} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( m = I a b \)</span> is the magnetic dipole moment of the loop. Equation 6.1 gives the torque on any localized current distribution, in the presence of a uniform field; in a non-uniform field it is the exact torque (about the center) for a perfect dipole of infinitesimal size.
 <img alt="Figure 6.2" src="../../../_images/6.2.png" /></p>
@@ -504,14 +497,14 @@ F = I b B
 \vec{F} = I \oint ( \mathrm{d} \vec{l} \times \vec{B}) = I \left( \oint \mathrm{d} \vec{l} \right) \times \vec{B} = 0
 \]</div>
 <p>the constant <strong>B</strong> comes outside the integral, and the net displacement <span class="math notranslate nohighlight">\( \oint \mathrm{d} \vec{l} \)</span> around a closed loop vanishes. In a nonuniform field, this is no longer the case. For example, suppose a circular wire ring of radius R, carrying a current <em>I</em>, is suspended above a short solenoid in the “fringing” region (Fig 6.3). Here <strong>B</strong> has a radial component, and there is a net downward force on the loop (Fig 6.4)</p>
-<div class="math notranslate nohighlight">
-\[
-F = 2 \pi I R B \cos \theta \tag{6.2}
+<div class="math notranslate nohighlight" id="equation-eq6-2">
+<span class="eqno">(351)<a class="headerlink" href="#equation-eq6-2" title="Permalink to this equation">#</a></span>\[
+F = 2 \pi I R B \cos \theta 
 \]</div>
 <p>For an infinitesimal loop, with dipole moment <strong>m</strong>, in a field <strong>B</strong>, the force is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F} = \nabla  (\vec{m} \cdot \vec{B}) \tag{6.3}
+<div class="math notranslate nohighlight" id="equation-eq6-3">
+<span class="eqno">(352)<a class="headerlink" href="#equation-eq6-3" title="Permalink to this equation">#</a></span>\[
+\vec{F} = \nabla  (\vec{m} \cdot \vec{B}) 
 \]</div>
 <p><img alt="Figure 6.3" src="../../../_images/6.3.png" /></p>
 <p>Once again the magnetic formula is identical to its electrical “twin,” if we write the latter in the form <span class="math notranslate nohighlight">\( \vec{F} = \nabla  ( \vec{p} \cdot \vec{E}) \)</span>.</p>
@@ -526,9 +519,9 @@ F = 2 \pi I R B \cos \theta \tag{6.2}
 I = \frac{-e}{T}  = - \frac{ev}{2 \pi R} 
 \]</div>
 <p>(The minus sign accounts for the negative charge of the electron.) Accordingly, the orbital dipole moment <span class="math notranslate nohighlight">\( (I \pi R^2) \)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{m} = - \frac{1}{2} e v R \hat{z} \tag{6.4}
+<div class="math notranslate nohighlight" id="equation-eq6-4">
+<span class="eqno">(353)<a class="headerlink" href="#equation-eq6-4" title="Permalink to this equation">#</a></span>\[
+\vec{m} = - \frac{1}{2} e v R \hat{z} 
 \]</div>
 <p>Like any other magnetic dipole, this one is subject to a torque <span class="math notranslate nohighlight">\( \vec{m} \times \vec{B} \)</span> when you turn on a magnetic field. But it’s a lot harder to tilt the entire orbit than it is the spin, so the orbital contribution to paramagnetism is small. There is, however, a more significant effect on the orbital motion: The electron speeds up or slows down, depending on the orientation of <strong>B</strong>. For whereas the centripetal acceleration <span class="math notranslate nohighlight">\( v^2 / R \)</span>  is ordinarily sustained by electrical forces alone,</p>
 <div class="math notranslate nohighlight">
@@ -554,9 +547,9 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
 \]</div>
 <p>When <strong>B</strong> is turned on, then, the electron speeds up.</p>
 <p>A change in orbital speed means a change in the dipole moment (Eq. 6.4):</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta \vec{m} = - \frac{1}{2} e (\Delta v) R \hat{z} = - \frac{e^2 R^2}{4 m_e} \vec{B} \tag{6.8}
+<div class="math notranslate nohighlight" id="equation-eq6-8">
+<span class="eqno">(354)<a class="headerlink" href="#equation-eq6-8" title="Permalink to this equation">#</a></span>\[
+\Delta \vec{m} = - \frac{1}{2} e (\Delta v) R \hat{z} = - \frac{e^2 R^2}{4 m_e} \vec{B} 
 \]</div>
 <p>Notice that the change in <strong>m</strong> is opposite to the direction of <strong>B</strong>. (An electron circling the other way would have a dipole moment pointing upward, but such an orbit would be slowed down by the field, so the change is still opposite to <strong>B</strong>.) Ordinarily, the electron orbits are randomly oriented, and the orbital dipole moments cancel out. But in the presence of a magnetic field, each atom picks up a little “extra” dipole moment, and these increments are all anti-parallel to the field. This is the mechanism responsible for diamagnetism. It is a universal phenomenon, affecting all atoms. However, it is typically much weaker than paramagnetism, and is therefore observed mainly in atoms with even numbers of electrons, where paramagnetism is usually absent.</p>
 <p>In deriving Eq. 6.8, I assumed that the orbit remains circular, with its original radius <em>R</em>. I cannot offer a justification for this at the present stage. If the atom is stationary while the field is turned on, then my assumption can be proved - this is not magnetostatics, however, and the details will have to await Chapter 7 (see Prob. 7.52). If the atom is moved into the field, the situation is enormously more complicated. But never mind - I’m only trying to give you a qualitative account of diamagnetism. Assume, if you prefer, that the velocity remains the same while the radius changes - the formula (Eq. 6.8) is altered (by a factor of 2), but the qualitative conclusion is unaffected. The truth is that this classical model is fundamentally flawed (diamagnetism is really a quantum phenomenon), so there’s not much point in refining the details. What is important is the empirical fact that in diamagnetic materials the induced dipole moments point opposite to the magnetic field.</p>
@@ -564,9 +557,9 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
 <section id="id1">
 <h2>6.1.4: Magnetization<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>In the presence of a magnetic field, matter becomes <em>magnetized</em>; that is, upon microscopic examination, it will be found to contain many tiny dipoles, with a net alignment along some direction. We have discussed two mechanisms that account for this magnetic polarization: (1) paramagnetism (the dipoles associated with the spins of unpaired electrons experience a torque tending to line them up parallel to the field) and (2) diamagnetism (the orbital speed of the electrons is altered in such a way as to change the orbital dipole moment in a direction opposite to the field). Whatever the cause, we describe the state of magnetic polarization by the vector quantity</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{M} \equiv \text{ magnetic dipole moment per unit volume } \tag{6.9}
+<div class="math notranslate nohighlight" id="equation-eq6-9">
+<span class="eqno">(355)<a class="headerlink" href="#equation-eq6-9" title="Permalink to this equation">#</a></span>\[
+\vec{M} \equiv \text{ magnetic dipole moment per unit volume } 
 \]</div>
 <p><strong>M</strong> is called the <strong>magnetization</strong>; it plays a role analogous to the polarization <strong>P</strong> in electrostatics. In the following section, we will not worry about how the magnetization got there - it could be paramagnetism, diamagnetism, or even ferromagnetism - we shall take <strong>M</strong> as a given, and calculate the field this magnetization itself produces.</p>
 <p>Incidentally, it may have surprised you to learn that materials other than the famous ferromagnetic trio (iron, nickel, and cobalt) are affected by a magnetic field at all. You cannot, of course, pick up a piece of wood or aluminum with a magnet. The reason is that diamagnetism and paramagnetism are extremely weak: It takes a delicate experiment and a powerful magnet to detect them at all. If you were to suspend a piece of paramagnetic material above a solenoid, as in Fig. 6.3, the induced magnetization would be upward, and hence the force downward. By contrast, the magnetization of a diamagnetic object would be downward and the force upward. In general, when a sample is placed in a region of nonuniform field, the paramagnet is attracted into the field, whereas the diamagnet is repelled away. But the actual forces are pitifully weak - in a typical experimental arrangement the force on a comparable sample of iron would be <span class="math notranslate nohighlight">\( 10^4 \)</span>  or <span class="math notranslate nohighlight">\( 10^5 \)</span>  times as great. That’s why it was reasonable for us to calculate the field inside a piece of copper wire, say, in Chapter 5, without worrying about the effects of magnetization.</p>

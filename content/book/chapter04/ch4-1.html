@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -477,9 +470,9 @@ document.write(`
 <section id="induced-dipoles">
 <h2>4.1.2: Induced Dipoles<a class="headerlink" href="#induced-dipoles" title="Permalink to this heading">#</a></h2>
 <p>Say we have a totally neutral atom and place it in an electric field <strong>E</strong>? What happens? At first guess, you might think “Nothing at all! The atom is not charged, so the field has no effect on it.” That’s incorrect. Although the atom as a whole is electrically neutral (just like the dipoles we looked at in the last chapter), there <em>is</em> a positively charged core (the nucleus) and negatively charged electron(s) surrounding it. These two regions of charge within the atom are influenced by the field: the nucleus is pushed in the direction of the field, and the electrons the opposite way. In principle, if the field is large enough, it can pull the atom apart completely, “ionizing” it (the substance then becomes a conductor). With less extreme fields, however, an equilibrium is soon established, for if the center of the electron cloud does not coincide with the nucleus, these positive and negative charges attract one another, and that holds the atom together. The two opposing forces - <strong>E</strong> pulling the electrons and nucleus apart, and their mutual attraction drawing them back together - reach a balance, leaving the atom <strong>polarized</strong>, with plus charge shifted slightly one way, and minus the other. The atom now has a tiny dipole moment <strong>p</strong>, which points in the same direction as <strong>E</strong>. Typically, this induced dipole moment is approximately proportional to the field (as long as the latter is not too strong):</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{p} = \alpha \vec{E} \tag{4.1}
+<div class="math notranslate nohighlight" id="equation-eq4-1">
+<span class="eqno">(207)<a class="headerlink" href="#equation-eq4-1" title="Permalink to this equation">#</a></span>\[
+\vec{p} = \alpha \vec{E} 
 \]</div>
 <p>The constant of proportionality <span class="math notranslate nohighlight">\( \alpha \)</span> is called <strong>atomic polarizability</strong>. Its value depends on the detailed structure of the atom in question. Table 4.1 lists some experimentally determined atomic polarizabilities.</p>
 <p><img alt="Figure 4.1" src="../../../_images/4.1.png" /></p>
@@ -488,13 +481,13 @@ document.write(`
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A primitive model for an atom consists of a point nucleus (+q) surrounded by a uniformly charged spherical cloud (-q) of radius <em>a</em> (Fig 4.1). Calculate the atomic polarizability of such an atom.</p>
 <p align="center"> <img alt="Figure 4.1a" src="/r/img/griffiths/4.1a.png" /> </p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>In the presence of an external field <strong>E</strong>, the nucleus will be shifted slightly to the right and the electron cloud to the left, as shown in Fig 4.2. (Because the actual displacements involved are extremely small, as you’ll see in Prob 4.1, it is reasonable to assume that the electron cloud retains its spherical shape.) Say that equilibrium occurs when the nucleus is displaced a distance <em>d</em> from the center of the sphere. At that point, the external field pushing the nucleus to the right exactly balances the internal field pulling it to the left: <span class="math notranslate nohighlight">\( E = E_e \)</span>, where <span class="math notranslate nohighlight">\( E_e \)</span> is the field produced by the electron cloud. Now the field at a distance <em>d</em> from the center of a uniformly charged sphere is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -506,11 +499,11 @@ E_e = \frac{1}{4 \pi \epsilon_0} \frac{qd}{a^3}
 E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \pi \epsilon_0 a^3 ) E 
 \]</div>
 <p>The atomic polarizability is therefore</p>
-<div class="math notranslate nohighlight">
-\[
-\alpha = 4 \pi \epsilon_0 a^3 = 3 \epsilon_0 v \tag{4.2}
+<div class="math notranslate nohighlight" id="equation-eq4-2">
+<span class="eqno">(208)<a class="headerlink" href="#equation-eq4-2" title="Permalink to this equation">#</a></span>\[
+\alpha = 4 \pi \epsilon_0 a^3 = 3 \epsilon_0 v 
 \]</div>
-<p>where <em>v</em> is the volume of the atom. Although this atomic model is extremely crude, the result <span class="math notranslate nohighlight">\( \eqref{4.2} \)</span> is not too bad - it’s accurate to within a factor of four or so for many simple atoms.</p>
+<p>where <em>v</em> is the volume of the atom. Although this atomic model is extremely crude, the result <a class="reference internal" href="#equation-eq4-2">(208)</a> is not too bad - it’s accurate to within a factor of four or so for many simple atoms.</p>
 </div>
 </div>
 <p>For molecules the situation is not quite so simple, because frequently they polarize more readily in some directions than in others. Carbon dioxide (Fig 4.3), for instance, has a polarizability of <span class="math notranslate nohighlight">\( 4.5 \times 10^{-40} \)</span> when you apply the field along the axis of the molecule, but only <span class="math notranslate nohighlight">\( 2 \times 10^{-40} \)</span> for fields perpendicular to this direction. When the field is at some angle to the axis, you must first resolve it into parallel and perpendicular components, and multiply each component by the pertinent polarizability</p>
@@ -519,7 +512,7 @@ E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \p
 \vec{p} = a_{\perp} E_{\perp} + \alpha_{\parallel} E_{\parallel} 
 \]</div>
 <p><img alt="Figure 4.3" src="../../../_images/4.3.png" /></p>
-<p>In this case, the induced dipole moment may not even be in the same <em>direction</em> as <strong>E</strong>. And <span class="math notranslate nohighlight">\( CO_2 \)</span> is relatively simple, as molecules go, since at least the atoms arrange themselves in a straight line; for a completely asymmetrical molecule, <span class="math notranslate nohighlight">\( \eqref{4.1} \)</span> is replaced by the most general linear relation between <strong>E</strong> and <strong>p</strong>:</p>
+<p>In this case, the induced dipole moment may not even be in the same <em>direction</em> as <strong>E</strong>. And <span class="math notranslate nohighlight">\( CO_2 \)</span> is relatively simple, as molecules go, since at least the atoms arrange themselves in a straight line; for a completely asymmetrical molecule, <a class="reference internal" href="#equation-eq4-1">(207)</a> is replaced by the most general linear relation between <strong>E</strong> and <strong>p</strong>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
  \begin{aligned}
@@ -543,9 +536,9 @@ E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \p
 \end{split}\]</div>
 <p><img alt="Figure 4.4" src="../../../_images/4.4.png" /></p>
 <p>Thus a dipole <span class="math notranslate nohighlight">\( \vec{p} = q \vec{d} \)</span> in a uniform field <span class="math notranslate nohighlight">\( \vec{E} \)</span> experiences a torque</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{N} = \vec{p} \times \vec{E} \tag{4.4}
+<div class="math notranslate nohighlight" id="equation-eq4-4">
+<span class="eqno">(209)<a class="headerlink" href="#equation-eq4-4" title="Permalink to this equation">#</a></span>\[
+\vec{N} = \vec{p} \times \vec{E} 
 \]</div>
 <p>Notice that <strong>N</strong> is in such a direction as to line <strong>p</strong> up <em>parallel</em> to <strong>E</strong>; a polar molecule that is free to rotate will swing around until it points in the direction of the applied field.</p>
 <p>If the field is nonuniform, so that <span class="math notranslate nohighlight">\( \vec{F_{+}} \)</span> does not exactly balance <span class="math notranslate nohighlight">\( \vec{F_-} \)</span>, there will be a net force on the dipole, in addition to the torque. Of course, <strong>E</strong> must change rather abruptly for there to be significant variation in the space of one molecule, so this is not ordinarily a major consideration in discussing the behavior of dielectrics. Nevertheless, the formula for the force on a dipole in a nonuniform field is of some interest:</p>
@@ -559,11 +552,11 @@ E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \p
 \Delta \vec{E} = (\vec{d} \cdot \nabla  ) \vec{E}
 \]</div>
 <p>and therefore</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F} = ( \vec{p} \cdot \nabla ) \vec{E} \tag{4.5}
+<div class="math notranslate nohighlight" id="equation-eq4-5">
+<span class="eqno">(210)<a class="headerlink" href="#equation-eq4-5" title="Permalink to this equation">#</a></span>\[
+\vec{F} = ( \vec{p} \cdot \nabla ) \vec{E} 
 \]</div>
-<p>For a “perfect” dipole of infinitesimal length, <span class="math notranslate nohighlight">\( \eqref{4.4} \)</span> gives the torque about the center of the dipole even in a nonuniform field; about any other point, <span class="math notranslate nohighlight">\( \vec{N} = ( \vec{p} \times \vec{E}) + (\vec{r} \times \vec{F}) \)</span>.</p>
+<p>For a “perfect” dipole of infinitesimal length, <a class="reference internal" href="#equation-eq4-4">(209)</a> gives the torque about the center of the dipole even in a nonuniform field; about any other point, <span class="math notranslate nohighlight">\( \vec{N} = ( \vec{p} \times \vec{E}) + (\vec{r} \times \vec{F}) \)</span>.</p>
 </section>
 <section id="id1">
 <h2>4.1.4: Polarization<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>

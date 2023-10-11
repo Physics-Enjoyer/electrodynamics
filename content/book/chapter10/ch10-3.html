@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Chapter 11" href="../chapter11/chapter-intro.html" />
-    <link rel="prev" title="10.2.1 Retarded Potentials" href="ch10-2.html" />
+    <link rel="prev" title="10.2 Potentials and Fields" href="ch10-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 10</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -487,6 +480,8 @@ V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r', t_r)}{\Delta 
 \[
 \int \rho ( \vec r ', t_r) \mathrm{d} \tau' = \frac{q}{1 - \hat \Delta r  \cdot \vec v / c}
 \]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>Theorem:</strong> <span class="math notranslate nohighlight">\( \int \rho ( \vec r \', t_r) \mathrm{d} \tau\' = \frac{q}{1 - \hat \Delta r  \cdot \vec v / c} \)</span></p>
 <p>This is a purely geometrical effect, and it may help to tell the story in a less abstract context. You will not have noticed it, for obvious reasons, the the fact is that a train coming towards you looks a little longer than it really is, because the light you receive from the caboose left earlier than the light you receive simultaneously from the engine, and at that earlier time the train was farther away (Fig 10.6). In the interval it takes light from the caboose to travel the extra distance <span class="math notranslate nohighlight">\( L' \)</span>, the train itself moves a distance <span class="math notranslate nohighlight">\( L' - L \)</span></p>
 <div class="math notranslate nohighlight">
@@ -510,6 +505,7 @@ L' = \frac{l}{1 - \hat \Delta r  \cdot \vec v / c}
 \tau' = \frac{\tau}{1 - \hat \Delta r  \cdot \vec v / c} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat \Delta r  \)</span> is a unit vector from the train to the observer.</p>
+</div>
 <p>Back to our moving point charge, the retarded time is determined implicitly by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -593,7 +589,7 @@ V( \vec r, t) = \frac{1}{4 \pi \epsilon_0} \frac{qc}{(\Delta r  c - \vec \Delta 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10.2.1 Retarded Potentials</p>
+        <p class="prev-next-title"><em>10.2</em> Potentials and Fields</p>
       </div>
     </a>
     <a class="right-next"

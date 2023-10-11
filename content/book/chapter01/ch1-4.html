@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -472,53 +465,53 @@ document.write(`
 <h2>1.4.1: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>You can label a point P by its Cartesian coordinates (x, y, z), but sometimes it is more convenient to use <strong>spherical</strong> coordinates <span class="math notranslate nohighlight">\( (r, \theta, \phi) \)</span>; <span class="math notranslate nohighlight">\( r \)</span> is the distance from the origin (the magnitude of the position vector <strong>r</strong>), <span class="math notranslate nohighlight">\( \theta \)</span> (the angle down from the z axis) is called the <strong>polar angle</strong>, and <span class="math notranslate nohighlight">\( \phi \)</span> (the angle around from the x axis) is the <strong>azimuthal angle</strong>. Their relation to Cartesian coordinates can be read trigonometrically from Fig 1.36:</p>
 <p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
-<div class="math notranslate nohighlight">
-\[
-x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \cos \theta \tag{1.62}
+<div class="math notranslate nohighlight" id="equation-eq1-62">
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq1-62" title="Permalink to this equation">#</a></span>\[
+x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \cos \theta 
 \]</div>
 <p>Figure 1.36 also shows three unit vectors, <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span>, pointing in the direction of increase of the corresponding coordinates. They constitute an orthogonal (mutually perpendicular) basis set (just like <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span>), and any vector <strong>A</strong> can be expressed in terms of them, in the usual way:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{A} = A_r \hat{r} + A_\theta \hat{\theta} + A_\phi \hat{\phi} \tag{1.63}
+<div class="math notranslate nohighlight" id="equation-eq1-63">
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq1-63" title="Permalink to this equation">#</a></span>\[
+\vec{A} = A_r \hat{r} + A_\theta \hat{\theta} + A_\phi \hat{\phi} 
 \]</div>
 <p><span class="math notranslate nohighlight">\( A_r, A_{\theta}, A_{\phi} \)</span> are the radial, polar, and azimuthal components of <strong>A</strong>. In terms of the Cartesian unit vectors,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-64">
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq1-64" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \hat{r} &amp; = \sin \theta \cos \phi \hat{x} + \sin \theta \sin \phi \hat{y} + \cos \theta \hat{z} \\
 \hat{\theta} &amp; = \cos \theta \cos \phi \hat{x} + \cos \theta \sin \phi \hat{y} - \sin \theta \hat{z} \\
 \hat{\phi} &amp; = - \sin \phi \hat{x} + \cos \phi \hat{y} 
-\end{aligned} \tag{1.64}
+\end{aligned} 
 \end{split}\]</div>
 <p>as you can check for yourself (Prob 1.38).</p>
 <p>There is a poisonous snake lurking here that I’d better warn you about: <span class="math notranslate nohighlight">\( \hat{r} \)</span> , <span class="math notranslate nohighlight">\( \hat{\theta} \)</span>, and <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> are associated with a particular point P, and they <em>change direction</em> as P moves around. For example, <span class="math notranslate nohighlight">\( \hat{r} \)</span> always points radially outward, but “radially outward” can be in the x direction, the y direction, or any other direction, depending on where you are. In Fig. 1.37, <span class="math notranslate nohighlight">\( \vec{A} = \hat{y} \)</span>  and <span class="math notranslate nohighlight">\( \vec{B} = - \hat{y} \)</span>, and yet both of them would be written as <span class="math notranslate nohighlight">\( \hat{r} \)</span>  in spherical coordinates. One could take account of this by explicitly indicating the point of reference: <span class="math notranslate nohighlight">\( \hat{r}(\theta, \phi), \hat{\theta}(\theta, \phi), \hat{\phi}(\theta, \phi) \)</span>, but this would be cumbersome, and as long as you are alert to the problem, I don’t think it will cause difficulties. In particular, do not naively combine the spherical components of vectors associated with different points (in Fig. 1.37, <span class="math notranslate nohighlight">\( \vec{A} + \vec{B} = 0 \)</span>, not <span class="math notranslate nohighlight">\( 2 \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = -1 \)</span> , not <span class="math notranslate nohighlight">\( +1 \)</span>). Beware of differentiating a vector that is expressed in spherical coordinates, since the unit vectors themselves are functions of position (<span class="math notranslate nohighlight">\( \partial \hat{r} / \partial \theta = \hat{\theta} \)</span>, for example). And do not take <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span> outside an integral, as I did with the Cartesian unit vectors. In general, if you’re uncertain about the validity of an operation, rewrite the problem using Cartesian coordinates, for which this difficulty does not arise.</p>
 <p><img alt="Figure 1.37" src="../../../_images/1.37.png" /></p>
 <p>An infinitesimal displacement in the <span class="math notranslate nohighlight">\( \hat{r} \)</span>  direction is simply dr (Fig. 1.38a), just as an infinitesimal element of length in the x direction is dx:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} l_r = dr \tag{1.65}
+<div class="math notranslate nohighlight" id="equation-eq1-65">
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq1-65" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} l_r = dr 
 \]</div>
 <p><img alt="Figure 1.38" src="../../../_images/1.38.png" /></p>
 <p>On the other hand, an infinitesimal element of length in the <span class="math notranslate nohighlight">\( \hat{\theta} \)</span> direction (Fig 1.38b) is <em>not</em> just <span class="math notranslate nohighlight">\( \mathrm{d} \theta \)</span> - that doesn’t even have the right units for a length! Rather,</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} l_{\theta} = r \mathrm{d} \theta \tag{1.66}
+<div class="math notranslate nohighlight" id="equation-eq1-66">
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq1-66" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} l_{\theta} = r \mathrm{d} \theta 
 \]</div>
 <p>Similarly, an infinitesimal element of length in the <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> direction (Fig 1.38c) is</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} l_{\phi} = r \sin \theta \mathrm{d} \phi \tag{1.67}
+<div class="math notranslate nohighlight" id="equation-eq1-67">
+<span class="eqno">(58)<a class="headerlink" href="#equation-eq1-67" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} l_{\phi} = r \sin \theta \mathrm{d} \phi 
 \]</div>
 <p>so that we can write the general infinitesimal displacement as</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} \vec{l} = \mathrm{d} r \hat{r} + r \mathrm{d} \theta \hat{\theta} + r \sin \theta \mathrm{d} \phi \hat{\phi} \tag{1.68}
+<div class="math notranslate nohighlight" id="equation-eq1-68">
+<span class="eqno">(59)<a class="headerlink" href="#equation-eq1-68" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} \vec{l} = \mathrm{d} r \hat{r} + r \mathrm{d} \theta \hat{\theta} + r \sin \theta \mathrm{d} \phi \hat{\phi} 
 \]</div>
 <p>This plays the role that <span class="math notranslate nohighlight">\( \mathrm{d} x \hat{x} + \mathrm{d} y \hat{y} + \mathrm{d} z \hat{z} \)</span> played in Cartesian coordinates.</p>
 <p>The infinitesimal volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau \)</span> in spherical coordinates, is the product of the three infinitesimal displacements:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} \tau = \mathrm{d} l_r \mathrm{d} l_{\theta} \mathrm{d} l_{\phi} = r^2 \sin \theta \mathrm{d} r \mathrm{d} \theta \mathrm{d} \phi \tag{1.69}
+<div class="math notranslate nohighlight" id="equation-eq1-69">
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq1-69" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} \tau = \mathrm{d} l_r \mathrm{d} l_{\theta} \mathrm{d} l_{\phi} = r^2 \sin \theta \mathrm{d} r \mathrm{d} \theta \mathrm{d} \phi 
 \]</div>
 <p>I cannot give you a general expression for surface elements <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> , since these depend on the orientation of the surface. You simply have to analyze the geometry for any given case (this goes for Cartesian and curvilinear coordinates alike). If you are integrating over the surface of a sphere, for instance, then <span class="math notranslate nohighlight">\( r \)</span>  is constant, whereas <span class="math notranslate nohighlight">\( \theta \)</span> and <span class="math notranslate nohighlight">\( \phi \)</span>  change (Fig. 1.39), so</p>
 <div class="math notranslate nohighlight">
@@ -537,12 +530,12 @@ x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \c
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>Find the volume of a sphere of radius R</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Well, we know that we <em>should</em> get <span class="math notranslate nohighlight">\( \frac{4}{3} \pi R^3 \)</span>. Let’s see what happens…</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -565,12 +558,12 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 \[
 \frac{\partial T}{\partial x} = \frac{\partial T}{\partial r} \left( \frac{\partial r}{\partial x} \right) + \frac{\partial T}{\partial \theta} \left( \frac{\partial \theta}{\partial x} \right) + \frac{\partial T}{\partial \phi} \left( \frac{\partial \phi}{\partial x} \right)
 \]</div>
-<p>The terms in parentheses could be worked out from <span class="math notranslate nohighlight">\( \eqref{1.62} \)</span> - or rather, their inverse. Then we’d do the same for y and z, and then substitute in the formulas for <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span> in terms of <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span>. It would take an hour to carry out this very brute-force approach, and I suppose this is how it was originally done, but there is a much more efficient indirect approach, which has the extra advantage of treating all coordinate systems at once. I describe the “straightforward” method only to show you that there is nothing subtle or mysterious about transforming to spherical coordinates: you’re expressing the <em>same quantity</em> in different notation, that’s all. The indirect method is relegated to one of the appendices, which I may add later.</p>
+<p>The terms in parentheses could be worked out from <a class="reference internal" href="#equation-eq1-62">(53)</a> - or rather, their inverse. Then we’d do the same for y and z, and then substitute in the formulas for <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span> in terms of <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span>. It would take an hour to carry out this very brute-force approach, and I suppose this is how it was originally done, but there is a much more efficient indirect approach, which has the extra advantage of treating all coordinate systems at once. I describe the “straightforward” method only to show you that there is nothing subtle or mysterious about transforming to spherical coordinates: you’re expressing the <em>same quantity</em> in different notation, that’s all. The indirect method is relegated to one of the appendices, which I may add later.</p>
 <p>Here, then, are the vector derivatives in spherical coordinates:</p>
 <p><strong>Gradient</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla  T = \frac{\partial T}{\partial r} \hat{r} + \frac{1}{r} \frac{\partial T}{\partial \theta} \hat{\theta} + \frac{1}{r \sin \theta} \frac{\partial T}{\partial \phi} \hat{\phi} \tag{1.70}
+<div class="math notranslate nohighlight" id="equation-eq1-70">
+<span class="eqno">(61)<a class="headerlink" href="#equation-eq1-70" title="Permalink to this equation">#</a></span>\[
+\nabla  T = \frac{\partial T}{\partial r} \hat{r} + \frac{1}{r} \frac{\partial T}{\partial \theta} \hat{\theta} + \frac{1}{r \sin \theta} \frac{\partial T}{\partial \phi} \hat{\phi} 
 \]</div>
 <p><strong>Divergence</strong>:</p>
 <div class="math notranslate nohighlight">
@@ -578,13 +571,13 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 \nabla \cdot  \vec{v} = \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 v_r) + \frac{1}{r\sin \theta} \frac{\partial}{\partial \theta} (\sin \theta v_{\theta}) + \frac{1}{r \sin \theta} \pdv{v_{\phi}}{\phi} \tag{1.71} 
 \]</div>
 <p><strong>Curl</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-72">
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq1-72" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \times  \vec{v} = &amp; \frac{1}{r \sin \theta} \left[ \frac{\partial}{\partial \theta} (\sin \theta V_{\phi}) - \pdv{v_{\theta}}{\phi} \right] \hat{r} \\
 &amp; \quad + \frac{1}{r} \left[ \frac{1}{\sin \theta} \frac{\partial v_r}{\partial \phi} - \frac{\partial}{\partial r} (r v_{\phi}) \right] \hat{\theta} \\
 &amp; \quad + \frac{1}{r} \left[ \frac{\partial}{\partial r} (r v_{\theta}) - \frac{\partial v_r}{\partial \theta} \right] \hat{\phi}
-\end{aligned} \tag{1.72}
+\end{aligned} 
 \end{split}\]</div>
 <p><strong>Laplacian</strong>:</p>
 <div class="math notranslate nohighlight">
@@ -596,19 +589,19 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 <section id="cylindrical-coordinates">
 <h2>1.4.2: Cylindrical Coordinates<a class="headerlink" href="#cylindrical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>The cylindrical coordinates <span class="math notranslate nohighlight">\( (s, \phi, z) \)</span> of a point P are defined in Fig 1.42. Notice that <span class="math notranslate nohighlight">\( \phi \)</span> has the same meaning as in spherical coordinates, and z is the same as Cartesian. <span class="math notranslate nohighlight">\( s \)</span> is the distance to P <em>from the z axis</em>, whereas the spherical coordinate <span class="math notranslate nohighlight">\( r \)</span> is the distance <em>from the origin</em>. The relation to Cartesian coordinates is somewhat cleaner than the spherical sort</p>
-<div class="math notranslate nohighlight">
-\[
-x = s \cos \phi, \qquad y = s \sin \phi, \qquad z = z \tag{1.74}
+<div class="math notranslate nohighlight" id="equation-eq1-74">
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq1-74" title="Permalink to this equation">#</a></span>\[
+x = s \cos \phi, \qquad y = s \sin \phi, \qquad z = z 
 \]</div>
 <p><img alt="Figure 1.42" src="../../../_images/1.42.png" /></p>
 <p>The unit vectors (Prob 1.42) are</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-75">
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq1-75" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \hat{s} &amp; = \cos \phi \hat{x} + \sin \phi \hat{y} \\
 \hat{\phi} &amp; = - \sin \phi \hat{x} + \cos \phi \hat{y} \\
 \hat{z} &amp; = \hat{z}
-\end{aligned} \tag{1.75}
+\end{aligned} 
 \end{split}\]</div>
 <p>The infinitesimal displacements are</p>
 <div class="math notranslate nohighlight">
@@ -616,21 +609,21 @@ x = s \cos \phi, \qquad y = s \sin \phi, \qquad z = z \tag{1.74}
 dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76} 
 \]</div>
 <p>so</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} \vec{l} = ds \hat{s} + s \mathrm{d} \phi \hat{\phi} + dz \hat{z} \tag{1.77}
+<div class="math notranslate nohighlight" id="equation-eq1-77">
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq1-77" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} \vec{l} = ds \hat{s} + s \mathrm{d} \phi \hat{\phi} + dz \hat{z} 
 \]</div>
 <p>and the volume element is</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d} \tau = s \, \mathrm{d} s \, \mathrm{d} \phi \, \mathrm{d} z \tag{1.78}
+<div class="math notranslate nohighlight" id="equation-eq1-78">
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq1-78" title="Permalink to this equation">#</a></span>\[
+\mathrm{d} \tau = s \, \mathrm{d} s \, \mathrm{d} \phi \, \mathrm{d} z 
 \]</div>
 <p>The range of s is <span class="math notranslate nohighlight">\( 0 \rightarrow \infty \)</span>, <span class="math notranslate nohighlight">\( \phi \)</span> goes from <span class="math notranslate nohighlight">\( 0 \rightarrow 2\pi \)</span>, and <span class="math notranslate nohighlight">\( z \)</span> from <span class="math notranslate nohighlight">\( -\infty \rightarrow \infty \)</span>.</p>
 <p>The vector derivatives in cylindrical coordinates are:</p>
 <p><strong>Gradient</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla  T = \frac{\partial T}{\partial s} \hat{s} + \frac{1}{s} \frac{\partial T}{\partial \phi} \hat{\phi} + \frac{\partial T}{\partial z} \hat{z} \tag{1.79}
+<div class="math notranslate nohighlight" id="equation-eq1-79">
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq1-79" title="Permalink to this equation">#</a></span>\[
+\nabla  T = \frac{\partial T}{\partial s} \hat{s} + \frac{1}{s} \frac{\partial T}{\partial \phi} \hat{\phi} + \frac{\partial T}{\partial z} \hat{z} 
 \]</div>
 <p><strong>Divergence</strong>:</p>
 <div class="math notranslate nohighlight">
@@ -638,13 +631,13 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
 \nabla \cdot  \vec{v} = \frac{1}{s} \frac{\partial}{\partial s} (s v_s) + \frac{1}{s} \frac{\partial v_\phi}{\partial \phi} + \frac{\partial v_z}{\partial z} \tag{1.80} 
 \]</div>
 <p><strong>Curl</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-81">
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq1-81" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \times  \vec{v} = &amp; \left( \frac{1}{s} \frac{\partial v_z}{\partial \phi} - \pdv{v_{\phi}}{z} \right) \hat{s} \\
 &amp; + \left( \frac{\partial v_s}{\partial z} - \frac{\partial v_z}{\partial s} \right) \hat{\phi} \\
 &amp; + \frac{1}{s} \left[ \frac{\partial}{\partial s} (s v_{\phi}) - \frac{\partial v_s}{\partial \phi} \right] \hat{z}
-\end{aligned} \tag{1.81}
+\end{aligned} 
 \end{split}\]</div>
 <p><strong>Laplacian</strong>:</p>
 <div class="math notranslate nohighlight">

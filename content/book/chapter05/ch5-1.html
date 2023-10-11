@@ -217,33 +217,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-0.html">8.0: Phys 544 Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1: Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2.1 Wave Equation for <strong>E</strong> and <strong>B</strong></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3: Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4.1 Electromagnetic Waves in Conductors</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5.1 Guided Waves</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html">10.0.1 Presentation/Paper notes</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html">10.2.1 Retarded Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/formula-sheet.html">Formulas</a></li>
 </ul>
 
     </div>
@@ -487,33 +480,33 @@ document.write(`
 <section id="magnetic-forces">
 <h2>5.1.2: Magnetic Forces<a class="headerlink" href="#magnetic-forces" title="Permalink to this heading">#</a></h2>
 <p>In fact, this contribution of directions is just right for a cross product: the magnetic force on a charge <em>Q</em>, moving with velocity <strong>v</strong> in a magnetic field <strong>B</strong> is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_{mag} = Q(\vec{v} \times \vec{B}) \tag{5.1}
+<div class="math notranslate nohighlight" id="equation-eq5-1">
+<span class="eqno">(269)<a class="headerlink" href="#equation-eq5-1" title="Permalink to this equation">#</a></span>\[
+\vec{F}_{mag} = Q(\vec{v} \times \vec{B}) 
 \]</div>
 <p>This is known as the <strong>Lorentz force law</strong>. In the presence of both electric and magnetic fields, the net force on Q would be</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F} = q[ \vec{E} + ( \vec{V} \times \vec{B} ) ] \tag{5.2}
+<div class="math notranslate nohighlight" id="equation-eq5-2">
+<span class="eqno">(270)<a class="headerlink" href="#equation-eq5-2" title="Permalink to this equation">#</a></span>\[
+\vec{F} = q[ \vec{E} + ( \vec{V} \times \vec{B} ) ] 
 \]</div>
-<p>I do not pretend to have derived <span class="math notranslate nohighlight">\( \eqref{5.1} \)</span>, of course; it is a fundamental axiom of the theory, whose justification is to be found in experiments such as those I described in the previous section.</p>
+<p>I do not pretend to have derived <a class="reference internal" href="#equation-eq5-1">(269)</a>, of course; it is a fundamental axiom of the theory, whose justification is to be found in experiments such as those I described in the previous section.</p>
 <p>Our main job now is to calculate the magnetic field <strong>B</strong> (and for that matter the electric field <strong>E</strong> as well; the rules are more complicated when the source charges are in motion). But before we proceed, it is worthwhile to take a closer look at the Lorentz force law itself; it is a peculiar law, and it leads to some truly bizarre particle trajectories.</p>
 <section id="example-5-1-cyclotron-motion">
 <h3>Example 5.1: Cyclotron Motion<a class="headerlink" href="#example-5-1-cyclotron-motion" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>We have a charged particle moving in a constant magnetic field. What is the general form of the trajectory?</p>
 <p><img alt="Figure 5.5" src="../../../_images/5.5.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>The archetypical motion of a charged particle in a magnetic field is circular, with the magnetic force providing the centripetal acceleration. In Fig 5.5, a uniform magnetic field points into the page; if the charge Q moves counterclockwise, with speed <em>v</em>, around a circle of radius <em>R</em>, the magnetic force points inward, and has a fixed magnitude <em>QvB</em> - just right to sustain uniform circular motion:</p>
-<div class="math notranslate nohighlight">
-\[
-QvB = m \frac{v^2}{R} \quad \text{ or } \quad p = Q B R \tag{5.3}
+<div class="math notranslate nohighlight" id="equation-eq5-3">
+<span class="eqno">(271)<a class="headerlink" href="#equation-eq5-3" title="Permalink to this equation">#</a></span>\[
+QvB = m \frac{v^2}{R} \quad \text{ or } \quad p = Q B R 
 \]</div>
 <p>where <em>m</em> is the particle’s mass, and <span class="math notranslate nohighlight">\( p = mv \)</span> is its momentum. Equation 5.3 is known as the <strong>cyclotron formula</strong> because it describes the motion of a particle in a cyclotron - the first of the modern particle accelerators. It also suggests a simple experimental technique for finding the momentum of a charged particle: send it through a region of known magnetic field, and measure the radius of its trajectory. This is in fact the standard means for determining the momenta of elementary particles.</p>
 <p>I assumed that the charge moves in a plane perpendicular to <span class="math notranslate nohighlight">\( \vec B \)</span>. If it starts out with some additional speed <span class="math notranslate nohighlight">\( v_{\parallel} \)</span> parallel to <span class="math notranslate nohighlight">\( \vec B \)</span> , this component of the motion is unaffected by the magnetic field, and the particle moves in a <em>helix</em> (Fig 5.6). The radius is given by Eq 5.3, but the velocity in question is now the component perpendicular to <span class="math notranslate nohighlight">\( \vec B \)</span>, <span class="math notranslate nohighlight">\( v_{\perp} \)</span></p>
@@ -525,12 +518,12 @@ QvB = m \frac{v^2}{R} \quad \text{ or } \quad p = Q B R \tag{5.3}
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A more exotic trajectory occurs if we include a uniform electric field, at right angles to the magnetic one. Suppose, for instance, that <strong>B</strong> points in the x-direction, and E in the z-direction, as shown in Fig. 5.7. A positive charge is released from the origin; what path will it follow?</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>Let’s think it through qualitatively, first. Initially, the particle is at rest, so the magnetic force is zero, and the electric field accelerates the charge in the z-direction. As it picks up speed, a magnetic force develops which, according to Eq. 5.1, pulls the charge around to the right. The faster it goes, the stronger <span class="math notranslate nohighlight">\( F_{B} \)</span> becomes; eventually, it curves the particle back around towards the y axis. At this point the charge is moving against the electrical force, so it begins to slow down - the magnetic force then decreases, and the electrical force takes over, bringing the particle to rest at point a, in Fig. 5.7. There the entire process commences anew, carrying the particle over to point b, and so on.
 Now let’s do it quantitatively. There being no force in the x-direction, the position of the particle at any time <em>t</em> can be described by the vector <span class="math notranslate nohighlight">\( (0, y(t), z(t) ) \)</span>; the velocity is therefore</p>
 <div class="math notranslate nohighlight">
@@ -556,42 +549,42 @@ B &amp; 0 &amp; 0
 QB \dot{z} = m \mathrm{d}ot{y} \qquad Q E - Q B \dot{y} = m \mathrm{d}ot{z}
 \]</div>
 <p>Let’s define a frequency</p>
-<div class="math notranslate nohighlight">
-\[
-\omega = \frac{Q B}{m} \tag{5.4}
+<div class="math notranslate nohighlight" id="equation-eq5-4">
+<span class="eqno">(272)<a class="headerlink" href="#equation-eq5-4" title="Permalink to this equation">#</a></span>\[
+\omega = \frac{Q B}{m} 
 \]</div>
 <p>(This is the <strong>cyclotron frequency</strong>, at which the particle would revolve in the absence of any electric field.) Then the equations of motion take the form</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d}ot{y} = \omega \dot{z} \qquad \mathrm{d}ot{z} = \omega \left( \frac{E}{B}  - \dot{y} \right) \tag{5.5}
+<div class="math notranslate nohighlight" id="equation-eq5-5">
+<span class="eqno">(273)<a class="headerlink" href="#equation-eq5-5" title="Permalink to this equation">#</a></span>\[
+\mathrm{d}ot{y} = \omega \dot{z} \qquad \mathrm{d}ot{z} = \omega \left( \frac{E}{B}  - \dot{y} \right) 
 \]</div>
 <p>We’re left with a straightforward ODE, with solution</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq5-6">
+<span class="eqno">(274)<a class="headerlink" href="#equation-eq5-6" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 y(t) &amp; = C_1 \cos \omega t + C_2 \sin \omega t + (E / B) t + C_3 \\
 z(t) &amp; = C_2 \cos \omega t - C_1 \sin \omega t + C_4
-\end{aligned} \tag{5.6}
+\end{aligned} 
 \end{split}\]</div>
 <p>But the particle started from rest (<span class="math notranslate nohighlight">\( \dot{y}(0) = \dot{z}(0) = 0 ) \)</span> at the origin <span class="math notranslate nohighlight">\( ( y(0) = z(0) = 0) \)</span>; these four conditions determine the constants <span class="math notranslate nohighlight">\( C_1, C_2, C_3, C_4 \)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-y(t) = \frac{E}{\omega B} (\omega t - \sin \omega t) \qquad z(t) = \frac{E}{\omega B} (1 - \cos \omega t) \tag{5.7}
+<div class="math notranslate nohighlight" id="equation-eq5-7">
+<span class="eqno">(275)<a class="headerlink" href="#equation-eq5-7" title="Permalink to this equation">#</a></span>\[
+y(t) = \frac{E}{\omega B} (\omega t - \sin \omega t) \qquad z(t) = \frac{E}{\omega B} (1 - \cos \omega t) 
 \]</div>
 <p>In this form, the answer is not terribly enlightening, but if we let</p>
-<div class="math notranslate nohighlight">
-\[
-R \equiv \frac{E}{\omega B} \tag{5.8}
+<div class="math notranslate nohighlight" id="equation-eq5-8">
+<span class="eqno">(276)<a class="headerlink" href="#equation-eq5-8" title="Permalink to this equation">#</a></span>\[
+R \equiv \frac{E}{\omega B} 
 \]</div>
 <p>and eliminate the sines and cosines by exploiting the trigonometric identity <span class="math notranslate nohighlight">\( \sin ^2 \omega t + \cos ^2 \omega t = 1 \)</span>, we find that</p>
-<div class="math notranslate nohighlight">
-\[
-(y - R \omega t)^2 + (z - R)^2 = R^2 \tag{5.9}
+<div class="math notranslate nohighlight" id="equation-eq5-9">
+<span class="eqno">(277)<a class="headerlink" href="#equation-eq5-9" title="Permalink to this equation">#</a></span>\[
+(y - R \omega t)^2 + (z - R)^2 = R^2 
 \]</div>
 <p>This is the formula for a circle, of radius R, whose center <span class="math notranslate nohighlight">\( (0, R \omega t, R) \)</span> travels in the y-direction at constant speed</p>
-<div class="math notranslate nohighlight">
-\[
-u = \omega R = \frac{E}{B} \tag{5.10} 
+<div class="math notranslate nohighlight" id="equation-eq5-10">
+<span class="eqno">(278)<a class="headerlink" href="#equation-eq5-10" title="Permalink to this equation">#</a></span>\[
+u = \omega R = \frac{E}{B}
 \]</div>
 <p>The particle moves as though it were a spot on the rim of a wheel rolling along the y-axis. The curve generated in this way is called a <strong>cycloid</strong>. Notice that the overall motion is not in the direction of <strong>E</strong>, as you might suppose, but perpendicular to it.</p>
 </div>
@@ -599,6 +592,8 @@ u = \omega R = \frac{E}{B} \tag{5.10}
 </section>
 <section id="example-5-2b-mass-spectrometer">
 <h3>Example 5.2b: Mass Spectrometer<a class="headerlink" href="#example-5-2b-mass-spectrometer" title="Permalink to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>Mass Spectrometer</strong></p>
 <p>Suppose we have particles of several isotopes of a known element, and we wish to know exactly which mass isotopes are present (and separate them out) A mass spectrometer is an instrument which can measure the masses and relative concentrations of atoms and molecules. It makes use of the basic magnetic force on a moving charged particle. First, we ionize the particle, giving it a known net charge. We accelerate the particles through a known voltage into a constant magnetic field perpendicular to the velocity of the particle. The charged particles now undergo cyclotron motion (as we just described) of radius given by</p>
 <div class="math notranslate nohighlight">
@@ -615,6 +610,7 @@ q | \Delta V| = \frac{1}{2} m v^2 \rightarrow v^2 = \frac{2 q | \Delta V|}{m}
 \[
 \frac{m}{q} = \frac{B^2 R^2}{2 | \Delta V|} 
 \]</div>
+</div>
 <p>One implication of the Lorentz force law deserves special attention:</p>
 <p><strong>Magnetic forces do no work</strong></p>
 <p>For the magnetic force is, by definition, always perpendicular to the path of motion. Magnetic forces may alter the direction in which a particle moves, but they cannot speed it up or slow it down. The fact that magnetic forces do no work is an elementary and direct consequence of the Lorentz force law, but there are many situations where it appears so manifestly false that one’s confidence is bound to waver. When a magnetic crane lifts the carcass of a junked car, for instance, <em>something</em> is obviously doing work, and it seems perverse to deny that the magnetic force is responsible. Well, perverse or not, deny it we must, and it can be a very subtle matter to figure out who does deserve the credit in such circumstances. We’ll see a cute example in the next section, but the full story will have to wait until we hit the key conservation laws much later.</p>
@@ -623,120 +619,120 @@ q | \Delta V| = \frac{1}{2} m v^2 \rightarrow v^2 = \frac{2 q | \Delta V|}{m}
 <section id="currents">
 <h2>5.1.3: Currents<a class="headerlink" href="#currents" title="Permalink to this heading">#</a></h2>
 <p>The current in a wire is the charge per unit time passing a given point. By definition, negative charges moving to the left count the same as positive ones to the right. This conveniently reflects the physical fact that almost all phenomena involving moving charges depend on the product of charge and velocity - if you reverse the signs of <em>q</em> and <em>v</em>, you get the same answer, so it doesn’t really matter which you have. (The Lorentz force law is a case in point; the Hall effect (Prob. 5.41) is a notorious exception.) In practice, it is ordinarily the negatively charged electrons that do the moving - in the direction opposite to the electric current. To avoid the petty complications this entails, I shall often pretend it’s the positive charges that move, as in fact everyone assumed they did for a century or so after Benjamin Franklin established his unfortunate convention. Current is measured in coulombs-per-second, or amperes (A):</p>
-<div class="math notranslate nohighlight">
-\[
-1 \text{ A} = 1 \text{ C/s} \tag{5.12}
+<div class="math notranslate nohighlight" id="equation-eq5-12">
+<span class="eqno">(279)<a class="headerlink" href="#equation-eq5-12" title="Permalink to this equation">#</a></span>\[
+1 \text{ A} = 1 \text{ C/s} 
 \]</div>
 <p><img alt="Figure 5.9" src="../../../_images/5.9.png" /></p>
 <p>A line charge <span class="math notranslate nohighlight">\( \lambda \)</span> traveling down a wire at speed <em>v</em> (Fig 5.9) constitutes a current</p>
-<div class="math notranslate nohighlight">
-\[
-I = \lambda v \tag{5.13}
+<div class="math notranslate nohighlight" id="equation-eq5-13">
+<span class="eqno">(280)<a class="headerlink" href="#equation-eq5-13" title="Permalink to this equation">#</a></span>\[
+I = \lambda v 
 \]</div>
 <p>because a segment of length <span class="math notranslate nohighlight">\( v \Delta t \)</span>, carrying charge <span class="math notranslate nohighlight">\( \lambda v \Delta t \)</span>, passes point P in a time interval <span class="math notranslate nohighlight">\( \Delta t \)</span>. Current is actually a vector</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{I} = \lambda \vec{v} \tag{5.14}
+<div class="math notranslate nohighlight" id="equation-eq5-14">
+<span class="eqno">(281)<a class="headerlink" href="#equation-eq5-14" title="Permalink to this equation">#</a></span>\[
+\vec{I} = \lambda \vec{v} 
 \]</div>
 <p>Because the path of the flow is dictated by the shape of the wire, one doesn’t ordinarily bother to display the direction of I explicitly, but when it comes to surface and volume currents we cannot afford to be so casual, and for the sake of notational consistency it is a good idea to acknowledge the vectorial character of currents right from the start. A neutral wire, of course, contains as many stationary positive charges as mobile negative ones. The former do not contribute to the current-the charge density <span class="math notranslate nohighlight">\( \lambda \)</span> in Eq. 5.13 refers only to the moving charges. In the unusual situation where both types move, I = <span class="math notranslate nohighlight">\( \lambda_{+} \vec{v}_{+} + \lambda_{-}\vec{v}_{-}  \)</span> .
 The magnetic force on a segment of current-carrying wire is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_B = \int (\vec{v} \times \vec{B}) \mathrm{d} q = \int (\vec{v} \times \vec{B}) \lambda \mathrm{d} l = \int (\vec{I} \times \vec{B}) \mathrm{d} l \tag{5.15}
+<div class="math notranslate nohighlight" id="equation-eq5-15">
+<span class="eqno">(282)<a class="headerlink" href="#equation-eq5-15" title="Permalink to this equation">#</a></span>\[
+\vec{F}_B = \int (\vec{v} \times \vec{B}) \mathrm{d} q = \int (\vec{v} \times \vec{B}) \lambda \mathrm{d} l = \int (\vec{I} \times \vec{B}) \mathrm{d} l 
 \]</div>
 <p>Inasmuch as <strong>I</strong> and dl both point in the same direction, we can just as well write this as</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_B = \int I ( \mathrm{d} \vec{l} \times \vec{B}) \tag{5.16}
+<div class="math notranslate nohighlight" id="equation-eq5-16">
+<span class="eqno">(283)<a class="headerlink" href="#equation-eq5-16" title="Permalink to this equation">#</a></span>\[
+\vec{F}_B = \int I ( \mathrm{d} \vec{l} \times \vec{B}) 
 \]</div>
 <p>Typically, the current is constant (in magnitude) along the wire, and in that case, I comes outside the integral:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_B = I \int ( \mathrm{d} \vec{l} \times \vec{B}) \tag{5.17}
+<div class="math notranslate nohighlight" id="equation-eq5-17">
+<span class="eqno">(284)<a class="headerlink" href="#equation-eq5-17" title="Permalink to this equation">#</a></span>\[
+\vec{F}_B = I \int ( \mathrm{d} \vec{l} \times \vec{B}) 
 \]</div>
 <section id="example-5-3">
 <h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A rectangular loop of wire, supporting mass m, hangs vertically with one end in a uniform magnetic field <strong>B</strong>, which points into the page in the shaded region of Fig 5.10. For what current I, in the loop, would the magnetic force upward exactly balance the gravitational force downward?</p>
 <p><img alt="Figure 5.10" src="../../../_images/5.10.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>First of all, the current must circulate clockwise, in order for <span class="math notranslate nohighlight">\( (\vec{I} \times \vec{b}) \)</span> in the horizontal segment to point upward. The force is</p>
 <div class="math notranslate nohighlight">
 \[
 F_B = I B a
 \]</div>
 <p>where <em>a</em> is the width of the loop. The magnetic forces on the two vertical segments cancel. For <span class="math notranslate nohighlight">\( F_{mag} \)</span> to balance the weight (mg), we must therefore have</p>
-<div class="math notranslate nohighlight">
-\[
-I = \frac{mg}{Ba} \tag{5.18}
+<div class="math notranslate nohighlight" id="equation-eq5-18">
+<span class="eqno">(285)<a class="headerlink" href="#equation-eq5-18" title="Permalink to this equation">#</a></span>\[
+I = \frac{mg}{Ba} 
 \]</div>
 <p>The weight just hangs there, suspended in mid-air!</p>
 <p>What happens if we now increase the current? Then the upward force exceeds the downward force of gravity, and the loop rises, lifting the weight. Somebody’s doing work, and it sure looks as though the magnetic force is responsible. Indeed, one is tempted to write</p>
-<div class="math notranslate nohighlight">
-\[
-W_{mag} = F_{mag} h = I B a h \tag{5.19}
+<div class="math notranslate nohighlight" id="equation-eq5-19">
+<span class="eqno">(286)<a class="headerlink" href="#equation-eq5-19" title="Permalink to this equation">#</a></span>\[
+W_{mag} = F_{mag} h = I B a h 
 \]</div>
 <p>where <em>h</em> is the distance the loop rises. But we know that magnetic forces never do work, so what’s going on here?</p>
 <p>Well, when the loop starts to rise, the charges in the wire are no longer moving horizontally - their velocity now acquires an upward component <em>u</em>, the speed of the loop (Fig 5.11), in addition to the horizontal component <em>w</em> associated with the current (<span class="math notranslate nohighlight">\( I = \lambda w \)</span>). The magnetic force, which is always perpendicular to the velocity, no longer points straight up, but tilts back. It is perpendicular to the net displacement of the charge (which is in the direction of <em>v</em>), and therefore it does no work on <em>q</em>. It does have a vertical component (<span class="math notranslate nohighlight">\( q w B \)</span>); indeed, the net vertical force on the charge <span class="math notranslate nohighlight">\( (\lambda a) \)</span> in the upper segment of the loop is</p>
-<div class="math notranslate nohighlight">
-\[
-F_{vert} = \lambda a w B = I B a \tag{5.20}
+<div class="math notranslate nohighlight" id="equation-eq5-20">
+<span class="eqno">(287)<a class="headerlink" href="#equation-eq5-20" title="Permalink to this equation">#</a></span>\[
+F_{vert} = \lambda a w B = I B a 
 \]</div>
 <p>(as before); but now it also has a horizontal component <span class="math notranslate nohighlight">\( (q u B) \)</span> which opposes the flow of current. Whoever is in charge of maintaining that current, therefore, must now push those charges along, against the backward component of the magnetic force.
 <img alt="Figure 5.11" src="../../../_images/5.11.png" /></p>
 <p>The total horizontal force on the top segment is</p>
-<div class="math notranslate nohighlight">
-\[
-F_{horiz} = \lambda a u B \tag{5.21}
+<div class="math notranslate nohighlight" id="equation-eq5-21">
+<span class="eqno">(288)<a class="headerlink" href="#equation-eq5-21" title="Permalink to this equation">#</a></span>\[
+F_{horiz} = \lambda a u B 
 \]</div>
 <p>In a time <span class="math notranslate nohighlight">\( dt \)</span>, the charges move a (horizontal) distance <span class="math notranslate nohighlight">\( w \mathrm{d} t \)</span>, so the work done by this agency (presumably a battery or a generator) is</p>
 <div class="math notranslate nohighlight">
 \[
 W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 \]</div>
-<p>which is precisely what we naively attributed to the magnetic force in <span class="math notranslate nohighlight">\( \eqref{5.19} \)</span>. Was work done in this process? Absolutely! Who did it? The battery! What, then, was the role of the magnetic force? Well, it redirected the horizontal force of the battery into the vertical motion of the loop and the weight.
+<p>which is precisely what we naively attributed to the magnetic force in <a class="reference internal" href="#equation-eq5-19">(286)</a>. Was work done in this process? Absolutely! Who did it? The battery! What, then, was the role of the magnetic force? Well, it redirected the horizontal force of the battery into the vertical motion of the loop and the weight.
 <img alt="Figure 5.12" src="../../../_images/5.12.png" /></p>
 <p>It may help to consider a mechanical analogy. Imagine you’re sliding a trunk up a frictionless ramp, by pushing on it horizontally with a mop (Fig 5.12). The normal force (N) does no work, because it is perpendicular to the displacement. But it does have a vertical component (which in fact is what lifts the trunk), and a (backward) horizontal component (which you have to overcome by pushing on the mop). Who is doing the work here? You are, obviously - and yet your force (which is purely horizontal) is not (at least, directly) what lifts the box. The normal force plays the same passive (but crucial) role as the magnetic force in Ex 5.3: while doing no work itself, it redirects the efforts of the active agent (you, or the battery, as the case may be), from horizontal to vertical.</p>
 </div>
 </div>
 <p><img alt="Figure 5.13" src="../../../_images/5.13.png" /></p>
 <p>When charge flows over a surface, we describe it by the <strong>surface current density, K</strong>, defined as follows: Consider a “ribbon” of infinitesimal width <span class="math notranslate nohighlight">\( \mathrm{d} l_{\perp} \)</span>, running parallel to the flow (Fig 5.13). If the current in this ribbon is <span class="math notranslate nohighlight">\( \mathrm{d} \vec{I} \)</span>, the surface current density is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{K} = \frac{\mathrm{d} \vec{I}}{\mathrm{d} l _{\perp}} \tag{5.22} 
+<div class="math notranslate nohighlight" id="equation-eq5-22">
+<span class="eqno">(289)<a class="headerlink" href="#equation-eq5-22" title="Permalink to this equation">#</a></span>\[
+\vec{K} = \frac{\mathrm{d} \vec{I}}{\mathrm{d} l _{\perp}}
 \]</div>
 <p>In words, K is the current per unit width. In particular, if the (mobile) surface charge density is <span class="math notranslate nohighlight">\( sigma \)</span> and its velocity is <span class="math notranslate nohighlight">\( \vec{v} \)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{K} = \sigma \vec{v} \tag{5.23}
+<div class="math notranslate nohighlight" id="equation-eq5-23">
+<span class="eqno">(290)<a class="headerlink" href="#equation-eq5-23" title="Permalink to this equation">#</a></span>\[
+\vec{K} = \sigma \vec{v} 
 \]</div>
 <p>In general, <span class="math notranslate nohighlight">\( \vec{K} \)</span> will vary from point to point over the surface, as <span class="math notranslate nohighlight">\( \sigma \)</span> and/or <span class="math notranslate nohighlight">\( \vec{v} \)</span> changes. The magnetic force on the surface current is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_{mag} = \int ( \vec{v} \times \vec{B}) \sigma \mathrm{d} a = \int (\vec{K} \times \vec{B}) \mathrm{d} a \tag{5.24}
+<div class="math notranslate nohighlight" id="equation-eq5-24">
+<span class="eqno">(291)<a class="headerlink" href="#equation-eq5-24" title="Permalink to this equation">#</a></span>\[
+\vec{F}_{mag} = \int ( \vec{v} \times \vec{B}) \sigma \mathrm{d} a = \int (\vec{K} \times \vec{B}) \mathrm{d} a 
 \]</div>
-<p>Caveat: Just as <strong>E</strong> suffers a discontinuity at a surface charge, so <strong>B</strong> is discontinuous at a surface <em>current</em>. In <span class="math notranslate nohighlight">\( \eqref{5.24} \)</span>, you must be careful to use the average field, just as we did in Sect 2.5.3.</p>
+<p>Caveat: Just as <strong>E</strong> suffers a discontinuity at a surface charge, so <strong>B</strong> is discontinuous at a surface <em>current</em>. In <a class="reference internal" href="#equation-eq5-24">(291)</a>, you must be careful to use the average field, just as we did in Sect 2.5.3.</p>
 <p>When the flow of charge is distributed throughout a three-dimensional region, we describe it by the volume current density, <strong>J</strong>, defined as follows: consider a “tube” of infinitesimal cross section <span class="math notranslate nohighlight">\( \mathrm{d} a_{\perp} \)</span>, running parallel to the flow (Fig 5.14). If the current in this tube is <span class="math notranslate nohighlight">\( \mathrm{d} \vec{I} \)</span>, the volume current density is</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{J} \equiv \dv{\vec{I}}{a_{\perp}} \tag{5.25}
+<div class="math notranslate nohighlight" id="equation-eq5-25">
+<span class="eqno">(292)<a class="headerlink" href="#equation-eq5-25" title="Permalink to this equation">#</a></span>\[
+\vec{J} \equiv \dv{\vec{I}}{a_{\perp}} 
 \]</div>
 <p>In words, <strong>J</strong> is the current per unit area. If the (mobile) volume charge density is <span class="math notranslate nohighlight">\( \rho \)</span>  and the velocity is <span class="math notranslate nohighlight">\( \vec{v} \)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{J} = \rho \vec{v} \tag{5.26}
+<div class="math notranslate nohighlight" id="equation-eq5-26">
+<span class="eqno">(293)<a class="headerlink" href="#equation-eq5-26" title="Permalink to this equation">#</a></span>\[
+\vec{J} = \rho \vec{v} 
 \]</div>
 <p><img alt="Figure 5.14" src="../../../_images/5.14.png" /></p>
 <p>The magnetic force on a volume current is therefore</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{F}_{mag} = \int (\vec{v} \times \vec{B}) \rho \mathrm{d} \tau = \int (\vec{J} \times \vec{B} ) \mathrm{d} \tau \tag{5.27}
+<div class="math notranslate nohighlight" id="equation-eq5-27">
+<span class="eqno">(294)<a class="headerlink" href="#equation-eq5-27" title="Permalink to this equation">#</a></span>\[
+\vec{F}_{mag} = \int (\vec{v} \times \vec{B}) \rho \mathrm{d} \tau = \int (\vec{J} \times \vec{B} ) \mathrm{d} \tau 
 \]</div>
 </section>
 <section id="example-5-4">
@@ -744,13 +740,13 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
-“Q”</label><div class="sd-tab-content docutils">
+Q</label><div class="sd-tab-content docutils">
 <p>A current <em>I</em> is uniformly distributed over a wire of circular cross section, with radius a (Fig 5.15). Find the volume current density <em>J</em>.</p>
 <p><img alt="Figure 5.15" src="../../../_images/5.15.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
-“A”</label><div class="sd-tab-content docutils">
+A</label><div class="sd-tab-content docutils">
 <p>The area perpendicular to the flow is <span class="math notranslate nohighlight">\( \pi a^2 \)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[
@@ -763,7 +759,7 @@ J = \frac{I}{\pi a^2}
 J = k s
 \]</div>
 <p>for some constant <em>k</em>. Find the total current in the wire.</p>
-<p>Because <strong>J</strong> varies with <em>s</em>, we must integrate <span class="math notranslate nohighlight">\( \eqref{5.25} \)</span>. The current through the shaded patch (Fig 5.16) is <span class="math notranslate nohighlight">\( J \mathrm{d} a_{\perp} \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d} a_{\perp} = s \mathrm{d} s \mathrm{d} \phi \)</span> so</p>
+<p>Because <strong>J</strong> varies with <em>s</em>, we must integrate <a class="reference internal" href="#equation-eq5-25">(292)</a>. The current through the shaded patch (Fig 5.16) is <span class="math notranslate nohighlight">\( J \mathrm{d} a_{\perp} \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d} a_{\perp} = s \mathrm{d} s \mathrm{d} \phi \)</span> so</p>
 <div class="math notranslate nohighlight">
 \[
 I = \int (ks) (s \mathrm{d} s \mathrm{d} \phi) = 2 \pi k \int _0 ^a s^2 \mathrm{d} s = \frac{2 \pi k a^3}{3} 
@@ -771,9 +767,9 @@ I = \int (ks) (s \mathrm{d} s \mathrm{d} \phi) = 2 \pi k \int _0 ^a s^2 \mathrm{
 </div>
 </div>
 <p>According to Eq. 5.25, the total current crossing a surface <em>S</em> can be written as</p>
-<div class="math notranslate nohighlight">
-\[
-I = \int_S J \mathrm{d} a_{\perp} = \int_S \vec{J} \cdot \mathrm{d} \vec{a} \tag{5.28}
+<div class="math notranslate nohighlight" id="equation-eq5-28">
+<span class="eqno">(295)<a class="headerlink" href="#equation-eq5-28" title="Permalink to this equation">#</a></span>\[
+I = \int_S J \mathrm{d} a_{\perp} = \int_S \vec{J} \cdot \mathrm{d} \vec{a} 
 \]</div>
 <p>(The dot product serves to pick out the appropriate component of <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span>). In particular, the charge per unit time leaving a volume <em>V</em> is</p>
 <div class="math notranslate nohighlight">
@@ -786,15 +782,15 @@ I = \int_S J \mathrm{d} a_{\perp} = \int_S \vec{J} \cdot \mathrm{d} \vec{a} \tag
 \int_V (\nabla \cdot  \vec{J} ) \mathrm{d} \tau = - \dv{}{t} \int_V \rho \mathrm{d} \tau = - \int _V \left( \frac{\partial \rho}{\partial t} \right)\mathrm{d} \tau
 \]</div>
 <p>(The minus sign reflects the fact that an outward flow decreases the charge left in <em>V</em>). Since this applies to any volume, we conclude that</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot  \vec{J} = - \frac{\partial \rho}{\partial t} \tag{5.29}
+<div class="math notranslate nohighlight" id="equation-eq5-29">
+<span class="eqno">(296)<a class="headerlink" href="#equation-eq5-29" title="Permalink to this equation">#</a></span>\[
+\nabla \cdot  \vec{J} = - \frac{\partial \rho}{\partial t} 
 \]</div>
 <p>This is the precise mathematical statement of local charge conservation; it is called the <strong>continuity equation</strong>.</p>
 <p>For future reference, let us summarize the “dictionary” we have implicitly developed for translating equations into the forms appropriate to point, line, surface, and volume currents</p>
-<div class="math notranslate nohighlight">
-\[
-\sum_{i = 1} ^n ( ) q_i \vec{v}_i \sim \int_{line} () \vec{I} \mathrm{d} l \sim \int_{surf} ( ) \vec{K} \mathrm{d} a \sim \int_{vol} ( ) \vec{J} \mathrm{d} \tau \tag{5.30}
+<div class="math notranslate nohighlight" id="equation-eq5-30">
+<span class="eqno">(297)<a class="headerlink" href="#equation-eq5-30" title="Permalink to this equation">#</a></span>\[
+\sum_{i = 1} ^n ( ) q_i \vec{v}_i \sim \int_{line} () \vec{I} \mathrm{d} l \sim \int_{surf} ( ) \vec{K} \mathrm{d} a \sim \int_{vol} ( ) \vec{J} \mathrm{d} \tau 
 \]</div>
 <p>This correspondence, which is analogous to <span class="math notranslate nohighlight">\( q \sim \lambda \mathrm{d} l \sim \sigma \mathrm{d} a \sim \rho \mathrm{d} \tau \)</span> for the various charge distributions, generates Eqs. 5.15, 5.24, and 5.27 from the original Lorentz force law (5.1).</p>
 </section>
