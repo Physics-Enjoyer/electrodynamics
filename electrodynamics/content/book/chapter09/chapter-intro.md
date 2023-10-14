@@ -1,4 +1,4 @@
-# Chapter 9
+# Chapter 9: Electromagnetic Waves
 
 :::{tableofcontents}
 :::
