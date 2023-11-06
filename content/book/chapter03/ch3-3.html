@@ -821,13 +821,13 @@ V(r, \theta) = R(r) \Theta (\theta)
 <p>Since the first term depends only on <em>r</em>, and the second only on <span class="math notranslate nohighlight">\( \theta \)</span>, it follows that each must be a constant:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-57">
 <span class="eqno">(187)<a class="headerlink" href="#equation-eq3-57" title="Permalink to this equation">#</a></span>\[
- \frac{1}{R} \frac{\mathrm{d}}{r} \left( r^2 \frac{\mathrm{d} R}{\mathrm{d} r} \right) = l(l+1), \quad \frac{1}{\Theta \sin \theta} \frac{\mathrm{d}}{\theta} \left( \sin \theta \frac{\mathrm{d}\Theta}{\mathrm{d}\theta} \right) = -l(l+1) 
+ \frac{1}{R} \frac{\mathrm{d}}{\mathrm{d}r} \left( r^2 \frac{\mathrm{d} R}{\mathrm{d} r} \right) = l(l+1), \quad \frac{1}{\Theta \sin \theta} \frac{\mathrm{d}}{\mathrm{d}\theta} \left( \sin \theta \frac{\mathrm{d}\Theta}{\mathrm{d}\theta} \right) = -l(l+1) 
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\( l(l+1) \)</span> is just a fancy way of writing the separation constant, whose convenience will appear shortly.
 As always, separation of variables has converted a <em>partial</em> differential equation into ordinary differential equations. The radial equation,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-58">
 <span class="eqno">(188)<a class="headerlink" href="#equation-eq3-58" title="Permalink to this equation">#</a></span>\[
-\frac{\mathrm{d}}{r} \left( r^2 \frac{\mathrm{d} R}{\mathrm{d} r} \right) = l(l+1)R 
+\frac{\mathrm{d}}{\mathrm{d}r} \left( r^2 \frac{\mathrm{d} R}{\mathrm{d} r} \right) = l(l+1)R 
 \]</div>
 <p>has the general solution</p>
 <div class="math notranslate nohighlight">
@@ -837,7 +837,7 @@ R(r) = A r^l + \frac{B}{r^{l+1}} \tag{3.59}
 <p>as you can easily check; A and B are the two arbitrary constants to be expected in the solution of a second-order differential equation. But the angular equation,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-60">
 <span class="eqno">(189)<a class="headerlink" href="#equation-eq3-60" title="Permalink to this equation">#</a></span>\[
-\frac{\mathrm{d}}{\theta} \left( \sin \theta \frac{\mathrm{d}\Theta}{\mathrm{d}\theta} \right) = -l(l+1) \sin \theta \Theta 
+\frac{\mathrm{d}}{\mathrm{d}\theta} \left( \sin \theta \frac{\mathrm{d}\Theta}{\mathrm{d}\theta} \right) = -l(l+1) \sin \theta \Theta 
 \]</div>
 <p>is not so simple. The solutions are <strong>Legendre polynomials</strong> in the variable <span class="math notranslate nohighlight">\( \cos \theta \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-61">
@@ -851,9 +851,8 @@ P_l(x) \equiv \frac{1}{2^l l!}\left( \frac{\mathrm{d}}{\mathrm{d}x} \right)^l (x
 \]</div>
 <p>The first few Legendre polynomials are listed:</p>
 <!-- TODO: Change from :::{tip} to something else -->
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>Legendre Polynomials <span class="math notranslate nohighlight">\( P_0 \)</span> -  <span class="math notranslate nohighlight">\(P_5 \)</span></strong></p>
+<div class="admonition-legendre-polynomials-p-0-p-5 admonition">
+<p class="admonition-title"><strong>Legendre Polynomials <span class="math notranslate nohighlight">\( P_0 \)</span> -  <span class="math notranslate nohighlight">\(P_5 \)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
