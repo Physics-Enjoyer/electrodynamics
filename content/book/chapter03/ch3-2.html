@@ -444,7 +444,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.1.1: The Classic Image Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.2.1: The Classic Image Problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-surface-charge">3.2.2: Induced Surface Charge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-and-energy">3.2.3: Force and Energy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a><ul class="nav section-nav flex-column">
@@ -465,13 +465,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="the-method-of-images">
 <h1>3.2: The Method of Images<a class="headerlink" href="#the-method-of-images" title="Permalink to this heading">#</a></h1>
 <section id="the-classic-image-problem">
-<h2>3.1.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Permalink to this heading">#</a></h2>
+<h2>3.2.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Permalink to this heading">#</a></h2>
 <p>Suppose a point charge <em>q</em> is held a distance <em>d</em> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \Delta r  \)</span>, for <em>q</em> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <em>q</em> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
 <p><img alt="Figure 3.10" src="../../../_images/3.10.png" /></p>
 <p>From a mathematical point of view, our problem is to solve Poisson’s equation in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>, with a single point charge <em>q</em> at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>, subject to the boundary conditions</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\( V = 0 \)</span> when <span class="math notranslate nohighlight">\( z = 0 \)</span> (since the conducting plane is grounded)</p></li>
-<li><p><span class="math notranslate nohighlight">\( V \rightarrow 0 \)</span> far from the charge (that is, for <span class="math notranslate nohighlight">\( x^2 + y^2 + z^2 \gg d^2 \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( V \rightarrow 0 \)</span> far from the charge (that is, for <span class="math notranslate nohighlight">\( x^2 + y^2 + z^2 \gg d^2 \)</span> )</p></li>
 </ol>
 <p>The first uniqueness theorem (actually, its corollary) guarantees that there is only one function that meets these requirements. If by trick or clever guess we can discover such a function, it’s got to be the answer.
 <em>Trick:</em> Forget about the actual problem; we’re going to study a completely different situation. This new configuration consists of two point charges, <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, -d) \)</span>, and no conducting plane (Fig. 3.11). For this configuration I can easily write down the potential:</p>
@@ -591,7 +591,7 @@ b = \frac{R^2}{a}
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\Delta r } + \frac{q'}{\Delta r  '}  \right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span> and <span class="math notranslate nohighlight">\( \Delta r ' \)</span> are the distances from <em>q</em> and <em>q’</em>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
-<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(152)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <em>b</em> is less than <em>R</em>, so the “image” charge <em>q’</em> is safely inside the sphere - you cannot put image charges in the region where you are calculating <em>V</em>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
+<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(152)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <em>b</em> is less than <em>R</em>, so the “image” charge <em>q’</em> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-18">
 <span class="eqno">(153)<a class="headerlink" href="#equation-eq3-18" title="Permalink to this equation">#</a></span>\[
 F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon_0} \frac{q^2 R a}{(a^2 - R^2)^2}
@@ -666,7 +666,7 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.1.1: The Classic Image Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.2.1: The Classic Image Problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-surface-charge">3.2.2: Induced Surface Charge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-and-energy">3.2.3: Force and Energy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a><ul class="nav section-nav flex-column">
