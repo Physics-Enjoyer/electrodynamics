@@ -481,7 +481,7 @@ document.write(`
 </section>
 <section id="magnetic-forces">
 <h2>5.1.2: Magnetic Forces<a class="headerlink" href="#magnetic-forces" title="Permalink to this heading">#</a></h2>
-<p>In fact, this contribution of directions is just right for a cross product: the magnetic force on a charge <em>Q</em>, moving with velocity <strong>v</strong> in a magnetic field <strong>B</strong> is</p>
+<p>In fact, this contribution of directions is just right for a cross product: the magnetic force on a charge <span class="math notranslate nohighlight">\(Q\)</span>, moving with velocity <span class="math notranslate nohighlight">\(v\)</span> in a magnetic field <span class="math notranslate nohighlight">\(\vec{B}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-1">
 <span class="eqno">(292)<a class="headerlink" href="#equation-eq5-1" title="Permalink to this equation">#</a></span>\[
 \vec{F}_{mag} = Q(\vec{v} \times \vec{B}) 
@@ -592,10 +592,9 @@ u = \omega R = \frac{E}{B}
 </div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="example-5-2b-mass-spectrometer">
 <h3>Example 5.2b: Mass Spectrometer<a class="headerlink" href="#example-5-2b-mass-spectrometer" title="Permalink to this heading">#</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
 <p><strong>Mass Spectrometer</strong></p>
 <p>Suppose we have particles of several isotopes of a known element, and we wish to know exactly which mass isotopes are present (and separate them out) A mass spectrometer is an instrument which can measure the masses and relative concentrations of atoms and molecules. It makes use of the basic magnetic force on a moving charged particle. First, we ionize the particle, giving it a known net charge. We accelerate the particles through a known voltage into a constant magnetic field perpendicular to the velocity of the particle. The charged particles now undergo cyclotron motion (as we just described) of radius given by</p>
 <div class="math notranslate nohighlight">
@@ -612,7 +611,7 @@ q | \Delta V| = \frac{1}{2} m v^2 \rightarrow v^2 = \frac{2 q | \Delta V|}{m}
 \[
 \frac{m}{q} = \frac{B^2 R^2}{2 | \Delta V|} 
 \]</div>
-</div>
+<hr class="docutils" />
 <p>One implication of the Lorentz force law deserves special attention:</p>
 <p><strong>Magnetic forces do no work</strong></p>
 <p>For the magnetic force is, by definition, always perpendicular to the path of motion. Magnetic forces may alter the direction in which a particle moves, but they cannot speed it up or slow it down. The fact that magnetic forces do no work is an elementary and direct consequence of the Lorentz force law, but there are many situations where it appears so manifestly false that one’s confidence is bound to waver. When a magnetic crane lifts the carcass of a junked car, for instance, <em>something</em> is obviously doing work, and it seems perverse to deny that the magnetic force is responsible. Well, perverse or not, deny it we must, and it can be a very subtle matter to figure out who does deserve the credit in such circumstances. We’ll see a cute example in the next section, but the full story will have to wait until we hit the key conservation laws much later.</p>
@@ -626,7 +625,7 @@ q | \Delta V| = \frac{1}{2} m v^2 \rightarrow v^2 = \frac{2 q | \Delta V|}{m}
 1 \text{ A} = 1 \text{ C/s} 
 \]</div>
 <p><img alt="Figure 5.9" src="../../../_images/5.9.png" /></p>
-<p>A line charge <span class="math notranslate nohighlight">\( \lambda \)</span> traveling down a wire at speed <em>v</em> (Fig 5.9) constitutes a current</p>
+<p>A line charge <span class="math notranslate nohighlight">\( \lambda \)</span> traveling down a wire at speed <span class="math notranslate nohighlight">\(v\)</span> (Fig 5.9) constitutes a current</p>
 <div class="math notranslate nohighlight" id="equation-eq5-13">
 <span class="eqno">(303)<a class="headerlink" href="#equation-eq5-13" title="Permalink to this equation">#</a></span>\[
 I = \lambda v 
@@ -636,13 +635,13 @@ I = \lambda v
 <span class="eqno">(304)<a class="headerlink" href="#equation-eq5-14" title="Permalink to this equation">#</a></span>\[
 \vec{I} = \lambda \vec{v} 
 \]</div>
-<p>Because the path of the flow is dictated by the shape of the wire, one doesn’t ordinarily bother to display the direction of I explicitly, but when it comes to surface and volume currents we cannot afford to be so casual, and for the sake of notational consistency it is a good idea to acknowledge the vectorial character of currents right from the start. A neutral wire, of course, contains as many stationary positive charges as mobile negative ones. The former do not contribute to the current-the charge density <span class="math notranslate nohighlight">\( \lambda \)</span> in Eq. 5.13 refers only to the moving charges. In the unusual situation where both types move, I = <span class="math notranslate nohighlight">\( \lambda_{+} \vec{v}_{+} + \lambda_{-}\vec{v}_{-}  \)</span> .
-The magnetic force on a segment of current-carrying wire is</p>
+<p>Because the path of the flow is dictated by the shape of the wire, one doesn’t ordinarily bother to display the direction of <span class="math notranslate nohighlight">\(\vec{I}\)</span> explicitly, but when it comes to surface and volume currents we cannot afford to be so casual, and for the sake of notational consistency it is a good idea to acknowledge the vectorial character of currents right from the start. A neutral wire, of course, contains as many stationary positive charges as mobile negative ones. The former do not contribute to the current-the charge density <span class="math notranslate nohighlight">\( \lambda \)</span> in Eq. 5.13 refers only to the moving charges. In the unusual situation where both types move, <span class="math notranslate nohighlight">\( \vec{I} =  \lambda_{+} \vec{v}_{+} + \lambda_{-}\vec{v}_{-} \)</span>.</p>
+<p>The magnetic force on a segment of current-carrying wire is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-15">
 <span class="eqno">(305)<a class="headerlink" href="#equation-eq5-15" title="Permalink to this equation">#</a></span>\[
 \vec{F}_B = \int (\vec{v} \times \vec{B}) \mathrm{d} q = \int (\vec{v} \times \vec{B}) \lambda \mathrm{d} l = \int (\vec{I} \times \vec{B}) \mathrm{d} l 
 \]</div>
-<p>Inasmuch as <strong>I</strong> and dl both point in the same direction, we can just as well write this as</p>
+<p>Inasmuch as <span class="math notranslate nohighlight">\( \vec{I} \)</span> and <span class="math notranslate nohighlight">\( \mathrm{d}\vec{l}\)</span> both point in the same direction, we can just as well write this as</p>
 <div class="math notranslate nohighlight" id="equation-eq5-16">
 <span class="eqno">(306)<a class="headerlink" href="#equation-eq5-16" title="Permalink to this equation">#</a></span>\[
 \vec{F}_B = \int I ( \mathrm{d} \vec{l} \times \vec{B}) 
@@ -652,24 +651,25 @@ The magnetic force on a segment of current-carrying wire is</p>
 <span class="eqno">(307)<a class="headerlink" href="#equation-eq5-17" title="Permalink to this equation">#</a></span>\[
 \vec{F}_B = I \int ( \mathrm{d} \vec{l} \times \vec{B}) 
 \]</div>
+<hr class="docutils" />
 <section id="example-5-3">
 <h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 Q</label><div class="sd-tab-content docutils">
-<p>A rectangular loop of wire, supporting mass m, hangs vertically with one end in a uniform magnetic field <strong>B</strong>, which points into the page in the shaded region of Fig 5.10. For what current I, in the loop, would the magnetic force upward exactly balance the gravitational force downward?</p>
+<p>A rectangular loop of wire, supporting mass <span class="math notranslate nohighlight">\(m\)</span>, hangs vertically with one end in a uniform magnetic field <span class="math notranslate nohighlight">\(\vec{B}\)</span>, which points into the page in the shaded region of Fig 5.10. For what current <span class="math notranslate nohighlight">\(I\)</span>, in the loop, would the magnetic force upward exactly balance the gravitational force downward?</p>
 <p><img alt="Figure 5.10" src="../../../_images/5.10.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 A</label><div class="sd-tab-content docutils">
-<p>First of all, the current must circulate clockwise, in order for <span class="math notranslate nohighlight">\( (\vec{I} \times \vec{b}) \)</span> in the horizontal segment to point upward. The force is</p>
+<p>First of all, the current must circulate clockwise, in order for <span class="math notranslate nohighlight">\( (\vec{I} \times \vec{B}) \)</span> in the horizontal segment to point upward. The force is</p>
 <div class="math notranslate nohighlight">
 \[
 F_B = I B a
 \]</div>
-<p>where <em>a</em> is the width of the loop. The magnetic forces on the two vertical segments cancel. For <span class="math notranslate nohighlight">\( F_{mag} \)</span> to balance the weight (mg), we must therefore have</p>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the width of the loop. The magnetic forces on the two vertical segments cancel. For <span class="math notranslate nohighlight">\( F_{mag} \)</span> to balance the weight (<span class="math notranslate nohighlight">\(mg\)</span>), we must therefore have</p>
 <div class="math notranslate nohighlight" id="equation-eq5-18">
 <span class="eqno">(308)<a class="headerlink" href="#equation-eq5-18" title="Permalink to this equation">#</a></span>\[
 I = \frac{mg}{Ba} 
@@ -680,8 +680,8 @@ I = \frac{mg}{Ba}
 <span class="eqno">(309)<a class="headerlink" href="#equation-eq5-19" title="Permalink to this equation">#</a></span>\[
 W_{mag} = F_{mag} h = I B a h 
 \]</div>
-<p>where <em>h</em> is the distance the loop rises. But we know that magnetic forces never do work, so what’s going on here?</p>
-<p>Well, when the loop starts to rise, the charges in the wire are no longer moving horizontally - their velocity now acquires an upward component <em>u</em>, the speed of the loop (Fig 5.11), in addition to the horizontal component <em>w</em> associated with the current (<span class="math notranslate nohighlight">\( I = \lambda w \)</span>). The magnetic force, which is always perpendicular to the velocity, no longer points straight up, but tilts back. It is perpendicular to the net displacement of the charge (which is in the direction of <em>v</em>), and therefore it does no work on <em>q</em>. It does have a vertical component (<span class="math notranslate nohighlight">\( q w B \)</span>); indeed, the net vertical force on the charge <span class="math notranslate nohighlight">\( (\lambda a) \)</span> in the upper segment of the loop is</p>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the distance the loop rises. But we know that magnetic forces never do work, so what’s going on here?</p>
+<p>Well, when the loop starts to rise, the charges in the wire are no longer moving horizontally - their velocity now acquires an upward component <span class="math notranslate nohighlight">\(u\)</span>, the speed of the loop (Fig 5.11), in addition to the horizontal component <span class="math notranslate nohighlight">\(w\)</span> associated with the current (<span class="math notranslate nohighlight">\( I = \lambda w \)</span>). The magnetic force, which is always perpendicular to the velocity, no longer points straight up, but tilts back. It is perpendicular to the net displacement of the charge (which is in the direction of <span class="math notranslate nohighlight">\(v\)</span>), and therefore it does no work on <span class="math notranslate nohighlight">\(q\)</span>. It does have a vertical component (<span class="math notranslate nohighlight">\( q w B \)</span>); indeed, the net vertical force on the charge <span class="math notranslate nohighlight">\( (\lambda a) \)</span> in the upper segment of the loop is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-20">
 <span class="eqno">(310)<a class="headerlink" href="#equation-eq5-20" title="Permalink to this equation">#</a></span>\[
 F_{vert} = \lambda a w B = I B a 
@@ -703,7 +703,6 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 <p>It may help to consider a mechanical analogy. Imagine you’re sliding a trunk up a frictionless ramp, by pushing on it horizontally with a mop (Fig 5.12). The normal force (N) does no work, because it is perpendicular to the displacement. But it does have a vertical component (which in fact is what lifts the trunk), and a (backward) horizontal component (which you have to overcome by pushing on the mop). Who is doing the work here? You are, obviously - and yet your force (which is purely horizontal) is not (at least, directly) what lifts the box. The normal force plays the same passive (but crucial) role as the magnetic force in Ex 5.3: while doing no work itself, it redirects the efforts of the active agent (you, or the battery, as the case may be), from horizontal to vertical.</p>
 </div>
 </div>
-<p><img alt="Figure 5.13" src="../../../_images/5.13.png" /></p>
 <p>When charge flows over a surface, we describe it by the <strong>surface current density, K</strong>, defined as follows: Consider a “ribbon” of infinitesimal width <span class="math notranslate nohighlight">\( \mathrm{d} l_{\perp} \)</span>, running parallel to the flow (Fig 5.13). If the current in this ribbon is <span class="math notranslate nohighlight">\( \mathrm{d} \vec{I} \)</span>, the surface current density is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-22">
 <span class="eqno">(312)<a class="headerlink" href="#equation-eq5-22" title="Permalink to this equation">#</a></span>\[
@@ -723,13 +722,14 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 <p>When the flow of charge is distributed throughout a three-dimensional region, we describe it by the volume current density, <strong>J</strong>, defined as follows: consider a “tube” of infinitesimal cross section <span class="math notranslate nohighlight">\( \mathrm{d} a_{\perp} \)</span>, running parallel to the flow (Fig 5.14). If the current in this tube is <span class="math notranslate nohighlight">\( \mathrm{d} \vec{I} \)</span>, the volume current density is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-25">
 <span class="eqno">(315)<a class="headerlink" href="#equation-eq5-25" title="Permalink to this equation">#</a></span>\[
-\vec{J} \equiv \dv{\vec{I}}{a_{\perp}} 
+\vec{J} \equiv \frac{\mathrm{d}{\vec{I}}}{\mathrm{d}a_{\perp}}
 \]</div>
 <p>In words, <strong>J</strong> is the current per unit area. If the (mobile) volume charge density is <span class="math notranslate nohighlight">\( \rho \)</span>  and the velocity is <span class="math notranslate nohighlight">\( \vec{v} \)</span>, then</p>
 <div class="math notranslate nohighlight" id="equation-eq5-26">
 <span class="eqno">(316)<a class="headerlink" href="#equation-eq5-26" title="Permalink to this equation">#</a></span>\[
 \vec{J} = \rho \vec{v} 
 \]</div>
+<p>*<img alt="Figure 5.13" src="../../../_images/5.13.png" /></p>
 <p><img alt="Figure 5.14" src="../../../_images/5.14.png" /></p>
 <p>The magnetic force on a volume current is therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq5-27">
@@ -737,6 +737,7 @@ W_{battery} = \lambda a B \int u w \mathrm{d} t = I B a h
 \vec{F}_{mag} = \int (\vec{v} \times \vec{B}) \rho \mathrm{d} \tau = \int (\vec{J} \times \vec{B} ) \mathrm{d} \tau 
 \]</div>
 </section>
+<hr class="docutils" />
 <section id="example-5-4">
 <h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
