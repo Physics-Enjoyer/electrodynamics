@@ -657,7 +657,7 @@ A</label><div class="sd-tab-content docutils">
 \begin{aligned}
 \nabla \cdot  \vec{A} &amp; = \frac{1}{s} \frac{\partial}{\partial s} (s A_s) + \frac{1}{s} \frac{\partial A_\phi}{\partial \phi} + \frac{\partial A_z}{\partial z} \\
 &amp; = \frac{1}{s} \frac{\partial}{\partial \phi} \frac{\mu_0 n I}{2} s = 0 \\
-\nabla \times  \vec{A} &amp; = \left( \frac{1}{s} \frac{\partial A_z}{\partial \phi} - \pdv{A_{\phi}}{z} \right) \hat{s} \\
+\nabla \times  \vec{A} &amp; = \left( \frac{1}{s} \frac{\partial A_z}{\partial \phi} - \frac{\partial A_{\phi}}{\partial z} \right) \hat{s} \\
 &amp; + \left( \frac{\partial A_s}{\partial z} - \frac{\partial A_z}{\partial s} \right) \hat{\phi} \\
 &amp; + \frac{1}{s} \left[ \frac{\partial}{\partial s} (s A_{\phi}) - \frac{\partial A_s}{\partial \phi} \right] \hat{z} \\
 &amp; = \frac{\mu_0 n I}{2} \frac{1}{s} \left( \frac{\partial}{\partial s} s^2 \right) \\
@@ -670,7 +670,7 @@ A</label><div class="sd-tab-content docutils">
 \begin{aligned}
 \nabla \cdot  \vec{A} &amp; = \frac{1}{s} \frac{\partial}{\partial s} (s A_s) + \frac{1}{s} \frac{\partial A_\phi}{\partial \phi} + \frac{\partial A_z}{\partial z} \\
 &amp; = \frac{1}{s} \frac{\partial}{\partial \phi} \frac{\mu_0 n I}{2} \frac{R^2}{s} = 0 \\
-\nabla \times  \vec{A} &amp; = \left( \frac{1}{s} \frac{\partial A_z}{\partial \phi} - \pdv{A_{\phi}}{z} \right) \hat{s} \\
+\nabla \times  \vec{A} &amp; = \left( \frac{1}{s} \frac{\partial A_z}{\partial \phi} - \frac{\partial A_{\phi}}{\partial z} \right) \hat{s} \\
 &amp; + \left( \frac{\partial A_s}{\partial z} - \frac{\partial A_z}{\partial s} \right) \hat{\phi} \\
 &amp; + \frac{1}{s} \left[ \frac{\partial}{\partial s} (s A_{\phi}) - \frac{\partial A_s}{\partial \phi} \right] \hat{z} \\
 &amp; = \frac{\mu_0 n I}{2} \frac{1}{s} \left( \frac{\partial}{\partial s} R^2 \right) \\
@@ -728,7 +728,7 @@ Thus the component of <strong>B</strong> that is parallel to the surface but per
 <p>means that the tangential components are continuous (the flux through an Amperian loop of vanishing thickness is zero). But the derivative of <strong>A</strong> inherits the discontinuity of <strong>B</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-78">
 <span class="eqno">(364)<a class="headerlink" href="#equation-eq5-78" title="Permalink to this equation">#</a></span>\[
-\pdv{A_{above}}{n} - \pdv{A_{below}}{n} = - \mu_0 \vec{K} 
+\frac{\partial A_{above}}{\partial n} - \frac{\partial A_{below}}{\partial n} = - \mu_0 \vec{K} 
 \]</div>
 </section>
 <section id="multipole-expansion-of-the-vector-potential">
