@@ -168,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1: Vector Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em>1.1</em> Vector Algebra</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1 Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-4.html">1.4: Curvilinear Coordinates</a></li>
@@ -445,7 +445,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-operations"><em>1.1.1</em> Vector Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-operations">1.1.1 Vector Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-1">Example 1.1</a></li>
 </ul>
 </li>
@@ -468,14 +468,19 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vector-algebra">
-<h1><em>1.1</em> Vector Algebra<a class="headerlink" href="#vector-algebra" title="Permalink to this heading">#</a></h1>
+<h1>1.1 Vector Algebra<a class="headerlink" href="#vector-algebra" title="Permalink to this heading">#</a></h1>
 <section id="vector-operations">
-<h2><em>1.1.1</em> Vector Operations<a class="headerlink" href="#vector-operations" title="Permalink to this heading">#</a></h2>
+<h2>1.1.1 Vector Operations<a class="headerlink" href="#vector-operations" title="Permalink to this heading">#</a></h2>
 <p>If you walk 4 miles due north and then 3 miles due east (Fig. 1.1), you will have gone a total of 7 miles, but you’re <em>not</em> 7 miles from where you set out-you’re only 5. We need an arithmetic to describe quantities like this, which evidently do not add in the ordinary way. The reason they don’t, of course, is that <strong>displacements</strong> (straight line segments going from one point to another) have <em>direction</em> as well as <em>magnitude</em> (length), and it is essential to take both into account when you combine them. Such objects are called vectors: velocity, acceleration, force and momentum are other examples. By contrast, quantities that have magnitude but no direction are called scalars: examples include mass, charge, density, and temperature.</p>
-<p>I shall use boldface (<span class="math notranslate nohighlight">\( \vec{A} \)</span> , <span class="math notranslate nohighlight">\( \vec{B} \)</span> , and so on) for vectors and ordinary type for scalars. The magnitude of a vector <span class="math notranslate nohighlight">\( \vec{A} \)</span>  is written <span class="math notranslate nohighlight">\( |\vec{A}| \)</span>  or, more simply, <span class="math notranslate nohighlight">\( A \)</span> . In diagrams, vectors are denoted by arrows: the length of the arrow is proportional to the magnitude of the vector, and the arrowhead indicates its direction. Minus <span class="math notranslate nohighlight">\( \vec{A} \)</span>  (<span class="math notranslate nohighlight">\( - \vec{A} \)</span> ) is a vector with the same magnitude as A but of opposite direction (Fig. 1.2). Note that vectors have magnitude and direction but not location: a displacement of 4 miles due north from Washington is represented by the same vector as a displacement 4 miles north from Baltimore (neglecting, of course, the curvature of the earth). On a diagram, therefore, you can slide the arrow around at will, as long as you don’t change its length or direction.</p>
-<p><img alt="Figure 1.1" src="../../../_images/1.1.png" /></p>
+<p>I shall use boldface (<span class="math notranslate nohighlight">\( \vec{A} \)</span> , <span class="math notranslate nohighlight">\( \vec{B} \)</span> , and so on) for vectors and ordinary type for scalars. The magnitude of a vector <span class="math notranslate nohighlight">\( \vec{A} \)</span>  is written <span class="math notranslate nohighlight">\( |\vec{A}| \)</span>  or, more simply, <span class="math notranslate nohighlight">\( A \)</span> . In diagrams, vectors are denoted by arrows: the length of the arrow is proportional to the magnitude of the vector, and the arrowhead indicates its direction. Minus <span class="math notranslate nohighlight">\( \vec{A} \)</span>  (<span class="math notranslate nohighlight">\( - \vec{A} \)</span> ) is a vector with the same magnitude as <span class="math notranslate nohighlight">\(A\)</span> but of opposite direction (Fig. 1.2). Note that vectors have magnitude and direction but not location: a displacement of 4 miles due north from Washington is represented by the same vector as a displacement 4 miles north from Baltimore (neglecting, of course, the curvature of the earth). On a diagram, therefore, you can slide the arrow around at will, as long as you don’t change its length or direction.</p>
+<figure class="align-default" id="figure-1-1">
+<img alt="" src="../../../_images/1.1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Figures 1.1 and 1.2</span><a class="headerlink" href="#figure-1-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We define four vector operations: addition and three kinds of multiplication.</p>
-<p><strong>(i) Addition of two vectors.</strong>. Place the tail of <span class="math notranslate nohighlight">\( \vec{B} \)</span> at the head of <span class="math notranslate nohighlight">\( \vec{A} \)</span>; the sum, <span class="math notranslate nohighlight">\( \vec{A} + \vec{B} \)</span>, is the vector from the tail of <span class="math notranslate nohighlight">\( \vec{A} \)</span> to the head of <span class="math notranslate nohighlight">\( \vec{B} \)</span> (Fig 1.3). This rule generalizes the obvious procedure for combining two displacements. Addition is <em>commutative</em>:</p>
+<p><strong>(i) Addition of two vectors.</strong>. Place the tail of <span class="math notranslate nohighlight">\( \vec{B} \)</span> at the head of <span class="math notranslate nohighlight">\( \vec{A} \)</span>; the sum, <span class="math notranslate nohighlight">\( \vec{A} + \vec{B} \)</span>, is the vector from the tail of <span class="math notranslate nohighlight">\( \vec{A} \)</span> to the head of <span class="math notranslate nohighlight">\( \vec{B} \)</span> <a class="reference internal" href="#figure-1-3"><span class="std std-ref">Fig 1.3</span></a>. This rule generalizes the obvious procedure for combining two displacements. Addition is <em>commutative</em>:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A} + \vec{B} = \vec{B} + \vec{A}
@@ -485,12 +490,17 @@ document.write(`
 \[
 (\vec{A} + \vec{B}) + \vec{C} = \vec{A} + (\vec{B} + \vec{C})
 \]</div>
-<p>To subtract a vector, add its opposite (Fig. 1.4):</p>
+<p>To subtract a vector, add its opposite <a class="reference internal" href="#figure-1-3"><span class="std std-ref">Fig. 1.4</span></a>:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A} - \vec{B} = \vec{A} + (- \vec{B})
 \]</div>
-<p><img alt="Figure 1.3" src="../../../_images/1.3.png" /></p>
+<figure class="align-default" id="figure-1-3">
+<img alt="" src="../../../_images/1.3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Figures 1.3 and 1.4</span><a class="headerlink" href="#figure-1-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>(ii) Multiplication by a scalar.</strong> Multiplication of a vector by a positive scalar a multiplies the magnitude but leaves the direction unchanged (Fig. 1.5). (If a is negative, the direction is reversed.) Scalar multiplication is distributive:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -916,7 +926,7 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-operations"><em>1.1.1</em> Vector Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-operations">1.1.1 Vector Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-1">Example 1.1</a></li>
 </ul>
 </li>
