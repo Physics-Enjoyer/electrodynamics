@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1.1 Vector Algebra &#8212; Electrodynamics</title>
   
@@ -15,58 +14,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter01/ch1-1';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="1.2: Differential Calculus" href="ch1-2.html" />
@@ -80,28 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -123,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../intro.html">
@@ -155,7 +156,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Electrodynamics</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -167,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1: Vector Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1: Vector Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1 Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-3.html">1.3: Integral Calculus</a></li>
@@ -175,79 +187,72 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="ch1-5.html">1.5: The Dirac Delta Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-6.html">1.6: The Theory of Vector Fields</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-1.html">2.1: The Electric Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-3.html">2.3: Electric Potential</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-5.html">2.5: Conductors</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -267,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -276,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -405,26 +410,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -465,18 +472,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vector-algebra">
-<h1>1.1 Vector Algebra<a class="headerlink" href="#vector-algebra" title="Permalink to this heading">#</a></h1>
+<h1>1.1 Vector Algebra<a class="headerlink" href="#vector-algebra" title="Link to this heading">#</a></h1>
 <section id="vector-operations">
-<h2>1.1.1 Vector Operations<a class="headerlink" href="#vector-operations" title="Permalink to this heading">#</a></h2>
+<h2>1.1.1 Vector Operations<a class="headerlink" href="#vector-operations" title="Link to this heading">#</a></h2>
 <p>If you walk 4 miles due north and then 3 miles due east (Fig. 1.1), you will have gone a total of 7 miles, but you’re <em>not</em> 7 miles from where you set out-you’re only 5. We need an arithmetic to describe quantities like this, which evidently do not add in the ordinary way. The reason they don’t, of course, is that <strong>displacements</strong> (straight line segments going from one point to another) have <em>direction</em> as well as <em>magnitude</em> (length), and it is essential to take both into account when you combine them. Such objects are called vectors: velocity, acceleration, force and momentum are other examples. By contrast, quantities that have magnitude but no direction are called scalars: examples include mass, charge, density, and temperature.</p>
 <p>I shall use boldface (<span class="math notranslate nohighlight">\( \vec{A} \)</span> , <span class="math notranslate nohighlight">\( \vec{B} \)</span> , and so on) for vectors and ordinary type for scalars. The magnitude of a vector <span class="math notranslate nohighlight">\( \vec{A} \)</span>  is written <span class="math notranslate nohighlight">\( |\vec{A}| \)</span>  or, more simply, <span class="math notranslate nohighlight">\( A \)</span> . In diagrams, vectors are denoted by arrows: the length of the arrow is proportional to the magnitude of the vector, and the arrowhead indicates its direction. Minus <span class="math notranslate nohighlight">\( \vec{A} \)</span>  (<span class="math notranslate nohighlight">\( - \vec{A} \)</span> ) is a vector with the same magnitude as <span class="math notranslate nohighlight">\(A\)</span> but of opposite direction (Fig. 1.2). Note that vectors have magnitude and direction but not location: a displacement of 4 miles due north from Washington is represented by the same vector as a displacement 4 miles north from Baltimore (neglecting, of course, the curvature of the earth). On a diagram, therefore, you can slide the arrow around at will, as long as you don’t change its length or direction.</p>
 <figure class="align-default" id="figure-1-1">
 <img alt="" src="../../../_images/1.1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Figures 1.1 and 1.2</span><a class="headerlink" href="#figure-1-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Figures 1.1 and 1.2</span><a class="headerlink" href="#figure-1-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We define four vector operations: addition and three kinds of multiplication.</p>
@@ -498,7 +505,7 @@ document.write(`
 <figure class="align-default" id="figure-1-3">
 <img alt="" src="../../../_images/1.3.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Figures 1.3 and 1.4</span><a class="headerlink" href="#figure-1-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Figures 1.3 and 1.4</span><a class="headerlink" href="#figure-1-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>(ii) Multiplication by a scalar.</strong> Multiplication of a vector by a positive scalar a multiplies the magnitude but leaves the direction unchanged (Fig. 1.5). (If a is negative, the direction is reversed.) Scalar multiplication is distributive:</p>
@@ -508,7 +515,7 @@ a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 \]</div>
 <p><strong>(iii) Dot product of two vectors.</strong> The dot product of two vectors is defined by</p>
 <div class="math notranslate nohighlight" id="equation-eq1-1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq1-1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq1-1" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot \vec{B} = A B \cos \theta 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \theta \)</span>  is the angle they form when placed tail-to-tail (Fig. 1.6). Note that <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is itself a scalar (hence the alternative name <em>scalar product</em>). The dot product is commutative,</p>
@@ -518,27 +525,27 @@ a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 \]</div>
 <p>and distributive</p>
 <div class="math notranslate nohighlight" id="equation-eq1-2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq1-2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq1-2" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C} 
 \]</div>
 <p>Geometrically, <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is the product of A times the projection of B along A (or the product of B times the projection of A along B). If the two vectors are parallel, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = AB \)</span>. In particular, for any vector A</p>
 <div class="math notranslate nohighlight" id="equation-eq1-3">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq1-3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq1-3" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot \vec{A} = A^2 
 \]</div>
 <p>If A and B are perpendicular, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = 0 \)</span></p>
 <p><img alt="Figure 1.5" src="../../../_images/1.5.png" /></p>
 <hr class="docutils" />
 <section id="example-1-1">
-<h3>Example 1.1<a class="headerlink" href="#example-1-1" title="Permalink to this heading">#</a></h3>
+<h3>Example 1.1<a class="headerlink" href="#example-1-1" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
 <p>Let <span class="math notranslate nohighlight">\( \vec{C} = \vec{A} - \vec{B} \)</span> (Fig 1.7), and calculate the dot product of <span class="math notranslate nohighlight">\( \vec{C} \)</span> with itself.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[
@@ -554,7 +561,7 @@ C^2 = A^2 + B^2 - 2AB\cos \theta
 </div>
 <p><strong>(iv) Cross product of two vectors.</strong> The cross product of two vectors is defined by</p>
 <div class="math notranslate nohighlight" id="equation-eq1-4">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq1-4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq1-4" title="Link to this equation">#</a></span>\[
 \vec{A} \times \vec{B} = AB \sin \theta \hat{n} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector (vector of magnitude 1) pointing perpendicular to the plane of A and B. (I shall use a hat <span class="math notranslate nohighlight">\( \hat{} \)</span> to denote unit vectors.) Of course, there are two directions perpendicular to any plane: “in” and “out.” The ambiguity is resolved by the right-hand rule: let your fingers point in the direction of the first vector and curl around (via the smaller angle) toward the second; then your thumb indicates the direction of <span class="math notranslate nohighlight">\( \hat{n} \)</span>. (In Fig. 1.8, <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span> points into the page; <span class="math notranslate nohighlight">\( \vec{B} \times \vec{A} \)</span>  points out of the page.) Note that <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span>  is itself a vector (hence the alternative name
@@ -565,7 +572,7 @@ vector product). The cross product is distributive</p>
 \]</div>
 <p>but not <em>commutative</em>. In fact,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-6">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq1-6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq1-6" title="Link to this equation">#</a></span>\[
 (\vec{B} \times \vec{A}) = - (\vec{A} \times \vec{B}) 
 \]</div>
 <p>Geometrically, <span class="math notranslate nohighlight">\( | \vec{A} \times \vec{B} | \)</span> is the area of the parallelogram generated by <span class="math notranslate nohighlight">\( \vec{A} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> (Fig 1.8). If two vectors are parallel, their cross product is zero. In particular,</p>
@@ -577,7 +584,7 @@ vector product). The cross product is distributive</p>
 </section>
 </section>
 <section id="vector-algebra-component-form">
-<h2>1.1.2: Vector Algebra: Component Form<a class="headerlink" href="#vector-algebra-component-form" title="Permalink to this heading">#</a></h2>
+<h2>1.1.2: Vector Algebra: Component Form<a class="headerlink" href="#vector-algebra-component-form" title="Link to this heading">#</a></h2>
 <p>In the previous section, I defined the four vector operations (addition, scalar multiplication, dot product, and cross product) in “abstract” form-that is, without reference to any particular coordinate system. In practice, it is often easier to set up Cartesian coordinates x, y, z and work with vector components. Let <span class="math notranslate nohighlight">\( \hat{x} \)</span>, <span class="math notranslate nohighlight">\( \hat{y} \)</span> , and <span class="math notranslate nohighlight">\( \hat{z} \)</span> be unit vectors parallel to the x, y, and z axes, respectively (Fig. 1.9(a)). An arbitrary vector A can be expanded in terms ofthese basis vectors (Fig. 1.9(b)):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -585,24 +592,24 @@ vector product). The cross product is distributive</p>
 \]</div>
 <p>The numbers <span class="math notranslate nohighlight">\( A_x \)</span>, <span class="math notranslate nohighlight">\( A_y \)</span>, and <span class="math notranslate nohighlight">\( A_z \)</span> are the “components” of A; geometrically, they are the projections of A along the three coordinate axes (<span class="math notranslate nohighlight">\( A_x = \vec{A} \cdot \hat{x}, A_y = \vec{A} \cdot \hat{y}, A_z = \vec{A} \cdot \hat{z} \)</span> ). We can now reformulate each of the four vector operations as a rule for manipulating components:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-7">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq1-7" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq1-7" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{A} + \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) + (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
  = (A_x + B_x) \hat{x} + (A_y + B_y) \hat{y} + (A_z + B_z) \hat{z} 
 \end{split}\]</div>
 <p><strong>Rule (i):</strong> To add vectors, add like components.</p>
 <div class="math notranslate nohighlight" id="equation-eq1-8">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq1-8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq1-8" title="Link to this equation">#</a></span>\[
 a\vec{A} = (a A_x) \hat{x} + (a A_y) \hat{y} + (a A_z)\hat{z} 
 \]</div>
 <p><strong>Rule (ii):</strong> To multiply by a scalar, multiply each component.</p>
 <p>Because <span class="math notranslate nohighlight">\( \hat{x}, \hat{y} \)</span>, and <span class="math notranslate nohighlight">\( \hat{z} \)</span> are mutually perpendicular unit vectors</p>
 <div class="math notranslate nohighlight" id="equation-eq1-9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq1-9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq1-9" title="Link to this equation">#</a></span>\[
 \hat{x} \cdot \hat{x} = \hat{y} \cdot \hat{y} = \hat{z} \cdot \hat{z} = 1; \qquad \hat{x} \cdot \hat{y} = \hat{x} \cdot \hat{z} = \hat{y} \cdot \hat{z} = 0 
 \]</div>
 <p>Accordingly,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-10">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq1-10" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq1-10" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{A} \cdot \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \cdot (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
  = A_x B_x + A_y B_y + A_z B_z 
 \end{split}\]</div>
@@ -613,7 +620,7 @@ a\vec{A} = (a A_x) \hat{x} + (a A_y) \hat{y} + (a A_z)\hat{z}
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-eq1-11">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq1-11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq1-11" title="Link to this equation">#</a></span>\[
 A = \sqrt{A_x ^2 + A_y ^2 + A_z ^2} 
 \]</div>
 <p>Similarly,</p>
@@ -628,7 +635,7 @@ A = \sqrt{A_x ^2 + A_y ^2 + A_z ^2}
 \end{split}\]</div>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-13">
-<span class="eqno">(11)<a class="headerlink" href="#equation-eq1-13" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq1-13" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{A} \times \vec{B} = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \times (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}) \\
  = (A_y B_z - A_z B_y) \hat{x} + (A_z B_x - A_x B_z)\hat{y} + (A_x B_y - A_y B_x) \hat{z} 
 \end{split}\]</div>
@@ -643,15 +650,15 @@ B_x &amp; B_y &amp; B_z
 \end{split}\]</div>
 <p><strong>Rule (iv):</strong> To calculate the cross product, form the determinant whose first row is <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span>, whose second row is A, and whose third row is B.</p>
 <section id="example-1-2">
-<h3>Example 1.2<a class="headerlink" href="#example-1-2" title="Permalink to this heading">#</a></h3>
+<h3>Example 1.2<a class="headerlink" href="#example-1-2" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Q</label><div class="sd-tab-content docutils">
 <p>Find the angle between the face diagonals of a cube.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<label class="sd-tab-label" for="sd-tab-item-3">
 A</label><div class="sd-tab-content docutils">
 <p><strong>Solution</strong>
 We might as well use a cube of side 1, and place it as shown in Fig 1.10, with one corner at the origin. The face diagonals <span class="math notranslate nohighlight">\( \vec{A} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> are</p>
@@ -681,11 +688,11 @@ So, in component form,</p>
 </section>
 </section>
 <section id="triple-products">
-<h2>1.1.3: Triple Products<a class="headerlink" href="#triple-products" title="Permalink to this heading">#</a></h2>
+<h2>1.1.3: Triple Products<a class="headerlink" href="#triple-products" title="Link to this heading">#</a></h2>
 <p>Since the cross product of two vectors is itself a vector, it can be dotted or crossed with a third vector to form a triple product.</p>
 <p><strong>(i) Scalar triple product:</strong> <span class="math notranslate nohighlight">\( \vec{A} \cdot (\vec{B} \times \vec{C}) \)</span>. Geometrically, <span class="math notranslate nohighlight">\( |\vec{A} \cdot (\vec{B} \times \vec{C}) | \)</span> is the volume of the parallelpiped generated by <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>, since <span class="math notranslate nohighlight">\( |\vec{B} \times \vec{C}| \)</span> is the area of the base, and <span class="math notranslate nohighlight">\( | \vec{A} \cos \theta | \)</span> is the altitude (Fig. 1.12). Evidently,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-15">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eq1-15" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq1-15" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot(\vec{B} \times \vec{C}) = \vec{B} \cdot (\vec{C} \times \vec{A}) = \vec{C} \cdot (\vec{A} \times \vec{B}) 
 \]</div>
 <p>for they all correspond to the same figure. Note that “alphabetical” order is preserved - in view of <a class="reference internal" href="#equation-eq1-6">(5)</a>, the “nonalphabetical” triple products</p>
@@ -695,7 +702,7 @@ So, in component form,</p>
 \]</div>
 <p>have the opposite sign. In component form,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-16">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq1-16" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq1-16" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{A} \cdot (\vec{B} \times \vec{C}) = \begin{vmatrix}
 A_x &amp; A_y &amp; A_z \\
 B_x &amp; B_y &amp; B_z \\
@@ -711,7 +718,7 @@ C_x &amp; C_y &amp; C_z
 <img alt="Figure 1.11" src="../../../_images/1.11.png" /></p>
 <p><strong>(ii) Vector triple product:</strong> <span class="math notranslate nohighlight">\( \vec{A} \times (\vec{B} \times \vec{C}) \)</span>. The vector triple product can be simplified by the so-called <strong>BAC-CAB</strong> rule:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-17">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq1-17" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq1-17" title="Link to this equation">#</a></span>\[
 \vec{A} \times (\vec{B} \times \vec{C}) = \vec{B}(\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B}) 
 \]</div>
 <p>Notice that</p>
@@ -725,42 +732,42 @@ C_x &amp; C_y &amp; C_z
 (\vec{A} \times \vec{B}) \cdot (\vec{C} \times \vec{D}) = (\vec{A} \cdot \vec{C})(\vec{B} \cdot \vec{D}) - (\vec{A} \cdot \vec{D}) (\vec{B} \cdot \vec{C})
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq1-18">
-<span class="eqno">(15)<a class="headerlink" href="#equation-eq1-18" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq1-18" title="Link to this equation">#</a></span>\[
 \vec{A} \times [\vec{B} \times (\vec{C} \times \vec{D})] = \vec{B}[ \vec{A} \cdot (\vec{C} \times \vec{D})] - (\vec{A} \cdot \vec{B})(\vec{C} \times \vec{D}) 
 \]</div>
 </section>
 <section id="position-displacement-and-separation-vectors">
-<h2>1.1.4: Position, Displacement, and Separation Vectors<a class="headerlink" href="#position-displacement-and-separation-vectors" title="Permalink to this heading">#</a></h2>
+<h2>1.1.4: Position, Displacement, and Separation Vectors<a class="headerlink" href="#position-displacement-and-separation-vectors" title="Link to this heading">#</a></h2>
 <p>The location of a point in three dimensions can be described by listing its Cartesian coordinates (x, y, z). The vector to that point from the origin (<span class="math notranslate nohighlight">\( \mathscr{O} \)</span>) is called the <em>position vector</em> (Fig 1.13):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-19">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq1-19" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq1-19" title="Link to this equation">#</a></span>\[
 \vec{r} \equiv x \hat{x} + y \hat{y} + z \hat{z} 
 \]</div>
 <p><img alt="Figure 1.13" src="../../../_images/1.13.png" /></p>
 <p>I will reserve the letter <span class="math notranslate nohighlight">\( \vec{r} \)</span> for this purpose. Its magnitude,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-20">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq1-20" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq1-20" title="Link to this equation">#</a></span>\[
 r = \sqrt{x^2 + y^2 + z^2} 
 \]</div>
 <p>is the distance from the origin, and</p>
 <div class="math notranslate nohighlight" id="equation-eq1-21">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eq1-21" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq1-21" title="Link to this equation">#</a></span>\[
 \hat{r} = \frac{\vec{r}}{r}  = \frac{x \hat{x} + y \hat{y} + z \hat{z}}{ \sqrt{x^2 + y^2 + z^2}} 
 \]</div>
 <p>is a unit vector pointing radially outward. The infinitesimal displacement vector from <span class="math notranslate nohighlight">\( (x, y, z) \)</span> to <span class="math notranslate nohighlight">\( x + \mathrm{d}{x}, y + \mathrm{d}{y}, z + \mathrm{d}{z} \)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-22">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eq1-22" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq1-22" title="Link to this equation">#</a></span>\[
 \mathrm{d}{\vec{l}} = \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} 
 \]</div>
 <p>(We could call this <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{r}} \)</span>, since that’s what it is, but it is useful to have a special notation for infinitesimal displacements.)</p>
 <p>In electrodynamics, one frequently encounters problems involving <em>two</em> points - typically a <strong>source point</strong>, <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, where an electric charge is located, and a <strong>field point</strong> <span class="math notranslate nohighlight">\( \vec{r} \)</span> at which you are calculating the electric or magnetic field (Fig 1.14). It pays to adopt right from the start some short-hand notation for the <strong>separation vector</strong> from the source point to the field point. I shall use for this purpose the letter <span class="math notranslate nohighlight">\( \Delta r  \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-23">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq1-23" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq1-23" title="Link to this equation">#</a></span>\[
 \vec{\Delta r } \equiv \vec{r} - \vec{r'} 
 \]</div>
 <p>Its magnitude is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-24">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq1-24" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq1-24" title="Link to this equation">#</a></span>\[
 |\Delta r | = | \hat{r} - \hat{r'} | 
 \]</div>
 <p>and a unit vector in the direction from <span class="math notranslate nohighlight">\( \vec{r'}  \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> is</p>
@@ -770,11 +777,11 @@ r = \sqrt{x^2 + y^2 + z^2}
 \]</div>
 <p>In Cartesian coordinates,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-26">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq1-26" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq1-26" title="Link to this equation">#</a></span>\[
 \Delta r  = (x - x') \hat{x} + (y-y') \hat{y} + (z-z') \hat{z} 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq1-27">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq1-27" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq1-27" title="Link to this equation">#</a></span>\[
 |\Delta r | = \sqrt{(x - x')^2 + (y-y')^2 + (z-z')^2  } 
 \]</div>
 <div class="math notranslate nohighlight">
@@ -784,7 +791,7 @@ r = \sqrt{x^2 + y^2 + z^2}
 <p>(from which you can appreciate the economy of the <span class="math notranslate nohighlight">\( \Delta r  \)</span> notation).</p>
 </section>
 <section id="how-vectors-transform">
-<h2>1.1.5: How Vectors Transform<a class="headerlink" href="#how-vectors-transform" title="Permalink to this heading">#</a></h2>
+<h2>1.1.5: How Vectors Transform<a class="headerlink" href="#how-vectors-transform" title="Link to this heading">#</a></h2>
 <p>The definition of a vector as “a quantity with a magnitude and direction” is not altogether satisfactory: What precisely does “direction” mean? This may seem a pedantic question, but we shall soon encounter a species of derivative that looks rather like a vector, and we’ll want to know for sure whether it is one.</p>
 <p>You might be inclined to say that a vector is anything that has three components that combine properly under addition. Well, how about this: We have a barrel of fruit that contains <span class="math notranslate nohighlight">\( N_x \)</span>  pears, <span class="math notranslate nohighlight">\( N_y \)</span>  apples, and <span class="math notranslate nohighlight">\( N_z \)</span>  bananas. Is <span class="math notranslate nohighlight">\( \vec{N} = N_x \hat{x} + N_y \hat{y} + N_z \hat{z} \)</span>  a vector? It has three components, and when you add another barrel with <span class="math notranslate nohighlight">\( M_x \)</span>  pears, <span class="math notranslate nohighlight">\( M_y \)</span>  apples, and <span class="math notranslate nohighlight">\( M_z \)</span>  bananas the result is <span class="math notranslate nohighlight">\( N_x + M_x \)</span> pears, <span class="math notranslate nohighlight">\( N_y + M_y \)</span> apples, <span class="math notranslate nohighlight">\( N_z + M_z \)</span> bananas. So it does add like a vector. Yet it’s obviously not a vector, in the physicist’s sense of the word, because it doesn’t really have a direction. What exactly is wrong with it?</p>
 <p>The answer is that <span class="math notranslate nohighlight">\( \vec{N} \)</span> <em>does not transform properly when you change coordinates</em>. The coordinate frame we use to describe positions in space is of course entirely arbitrary, but there is a specific geometrical transformation law for converting vector components from one frame to another. Suppose, for instance, the <span class="math notranslate nohighlight">\( \overline{x}, \overline{y}, \overline{z} \)</span> system is rotated by angle <span class="math notranslate nohighlight">\( \phi \)</span>, relative to <span class="math notranslate nohighlight">\( x, y, z \)</span>, about the common <span class="math notranslate nohighlight">\( x = \overline{x} \)</span> axes. From Fig. 1.15,</p>
@@ -805,7 +812,7 @@ A_y = A \cos \theta, \qquad A_z = A \sin \theta
 <p><img alt="Figure 1.15" src="../../../_images/1.15.png" /></p>
 <p>We might express this conclusion in matrix notation:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-29">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq1-29" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq1-29" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
  \overline{A_y} \\
  \overline{A_z}
@@ -821,7 +828,7 @@ A_z
 \end{split}\]</div>
 <p>More generally, for rotation about an <em>arbitrary</em> axis in three dimensions, the transformation law takes the form</p>
 <div class="math notranslate nohighlight" id="equation-eq1-30">
-<span class="eqno">(25)<a class="headerlink" href="#equation-eq1-30" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq1-30" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
  \overline{A_x} \\
  \overline{A_y} \\
@@ -840,7 +847,7 @@ A_z
 \end{split}\]</div>
 <p>or, more compactly,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-31">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq1-31" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq1-31" title="Link to this equation">#</a></span>\[
 \overline{A_i} = \sum_{j=1}^3 R_{ij} A_j 
 \]</div>
 <p>where index 1 stands for x, 2 for y, and 3 for z. The elements of the matrix R can be ascertained, for a given rotation, by the same sort of trigonometric arguments as we used for a rotation about the x axis.
@@ -856,7 +863,7 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
 \end{split}\]</div>
 <p>or, more compactly,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-32">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq1-32" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq1-32" title="Link to this equation">#</a></span>\[
 \overline{T}_{ij} = \sum_{k=1}^3 \sum_{l=1} ^3 R_{ik} R_{jl} T_{kl} 
 \]</div>
 <p>In general, an n-th rank tensor has <span class="math notranslate nohighlight">\( n \)</span> indices and <span class="math notranslate nohighlight">\( 3^n \)</span> components, and transforms with <span class="math notranslate nohighlight">\( n \)</span> factors of <span class="math notranslate nohighlight">\( R \)</span>. In this hierarchy, a vector is a tensor of rank 1, and a scalar is a tensor of rank zero.</p>
@@ -890,8 +897,8 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter-intro.html"
@@ -919,6 +926,7 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -958,6 +966,7 @@ By Physics Enjoyer
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -984,8 +993,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

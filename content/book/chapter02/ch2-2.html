@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2.2: Divergence and Curl of Electrostatic Fields &#8212; Electrodynamics</title>
   
@@ -15,58 +14,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter02/ch2-2';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="2.3: Electric Potential" href="ch2-3.html" />
@@ -80,28 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -123,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../intro.html">
@@ -155,7 +156,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Electrodynamics</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -167,87 +179,80 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1: Vector Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1: Vector Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 2: Electrostatics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 2: Electrostatics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ch2-1.html">2.1: The Electric Field</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2: Divergence and Curl of Electrostatic Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch2-3.html">2.3: Electric Potential</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch2-5.html">2.5: Conductors</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -267,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -276,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -405,26 +410,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -464,16 +471,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="divergence-and-curl-of-electrostatic-fields">
-<h1>2.2: Divergence and Curl of Electrostatic Fields<a class="headerlink" href="#divergence-and-curl-of-electrostatic-fields" title="Permalink to this heading">#</a></h1>
+<h1>2.2: Divergence and Curl of Electrostatic Fields<a class="headerlink" href="#divergence-and-curl-of-electrostatic-fields" title="Link to this heading">#</a></h1>
 <section id="field-lines-flux-and-gauss-law">
-<h2>2.2.1 Field Lines, Flux, and Gauss’ Law<a class="headerlink" href="#field-lines-flux-and-gauss-law" title="Permalink to this heading">#</a></h2>
+<h2>2.2.1 Field Lines, Flux, and Gauss’ Law<a class="headerlink" href="#field-lines-flux-and-gauss-law" title="Link to this heading">#</a></h2>
 <p>In principle, we are <em>done</em> with the subject of electrostatics. Eq. 2.8 tells us how to compute the field of a charge distribution, and Eq. 2.3 tells us what the force on a charge Q placed in this field will be. Unfortunately, as you may have discovered, the integrals involved in computing E can be formidable, even for reasonably simple charge distributions. Much of the rest of electrostatics is devoted to assembling a bag of tools and tricks for avoiding these integrals. It all begins with the divergence and curl of <strong>E</strong>. I shall calculate the divergence of <strong>E</strong> directly from Eq. 2.8 in section 2.2.2, but first I want to show you a more qualitative, and perhaps more illuminating, intuitive approach.</p>
 <p>Let’s begin with the simplest possible case: a single point charge <em>q</em>, situated at the origin:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-10">
-<span class="eqno">(95)<a class="headerlink" href="#equation-eq2-10" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(95)<a class="headerlink" href="#equation-eq2-10" title="Link to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} \hat{\vec{r}}
 \]</div>
 <p>To get a “feel” for this field, I might sketch a few representative vectors, as in Fig. 2.12a. Because the field falls off like <span class="math notranslate nohighlight">\( 1/r^2 \)</span>, the vectors get shorter as you go farther away from the origin; they always point radially outward. But there is a nicer way to represent this field, and that’s to connect up the arrows, to form <strong>field lines</strong> (Fig. 2.12b).</p>
@@ -485,7 +492,7 @@ document.write(`
 <img alt="Figure 2.14" src="../../../_images/2.14.png" /></p>
 <p>In this model, the <em>flux</em> of <strong>E</strong> through a surface S,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-11">
-<span class="eqno">(96)<a class="headerlink" href="#equation-eq2-11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(96)<a class="headerlink" href="#equation-eq2-11" title="Link to this equation">#</a></span>\[
 \Phi_E \equiv \int _S \vec{E} \cdot \mathrm{d}{\vec{a}}
 \]</div>
 <p>is a measure of the “number of lines” passing through S. I put this in quotes because of course we can only draw a representative <em>sample</em> of field lines - the total number would be infinite. But for a given sampling rate the flux is <em>proportional</em> to the number of lines drawn, because the field strength, remember, is proportional to the density of field lines (the number per unit area), and hence <span class="math notranslate nohighlight">\( \vec{E} \cdot \mathrm{d}{\vec{a}} \)</span> is proportional to the number of lines passing through the infinitesimal area <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span>. (The dot product picks out the component of <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{a}} \)</span> along the direction of <strong>E</strong>, as indicated in Fig 2.15. It is the area in the plane perpendicular to <strong>E</strong> that we have in mind when we say that the density of field lines is the number per unit area).</p>
@@ -494,7 +501,7 @@ document.write(`
 <p>This suggests that the flux through any <em>closed</em> surface is a measure of the total charge inside. For the field lines that originate on a positive charge must either pass out through the surface or else terminate on a negative charge inside (Fig 2.16a). On the other hand, a charge <em>outside</em> the surface will contribute nothing to the total flux, since its field lines pass in one side and out the other (Fig 2.16b). This is the <em>essence</em> of Gauss’s law. Now let’s make it quantitative.</p>
 <p>In the case of a point charge <em>q</em> at the origin, the flux of <strong>E</strong> through a spherical surface or radius <em>r</em> is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-12">
-<span class="eqno">(97)<a class="headerlink" href="#equation-eq2-12" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(97)<a class="headerlink" href="#equation-eq2-12" title="Link to this equation">#</a></span>\[
 \oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \int \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{r^2} \hat{r} \right) \cdot \left( r^2 \sin \theta \mathrm{d}{\theta} \mathrm{d}{\phi} \hat{r} \right) = \frac{1}{\epsilon_0} q
 \]</div>
 <p>Notice that the radius of the sphere cancels out, for while the surface area goes <em>up</em> as <span class="math notranslate nohighlight">\( r^2 \)</span>, the field goes <em>down</em> as <span class="math notranslate nohighlight">\( 1/r^2 \)</span>, so the product is constant. In terms of the field-line picture, this makes good sense, since the same number of field lines pass through any sphere centered at the origin, regardless of its size. In fact, it didn’t have to be a sphere - any closed surface, whatever its shape, would be pierced by the same number of field lines. Evidently, the flux through any surface enclosing the charge is <span class="math notranslate nohighlight">\( q / \epsilon_0 \)</span>.</p>
@@ -510,7 +517,7 @@ document.write(`
 \]</div>
 <p>For any closed surface, then</p>
 <div class="math notranslate nohighlight" id="equation-eq2-13">
-<span class="eqno">(98)<a class="headerlink" href="#equation-eq2-13" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(98)<a class="headerlink" href="#equation-eq2-13" title="Link to this equation">#</a></span>\[
 \oint \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( Q_{enc} \)</span> is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. Although it contains no information that was not already present in Coulomb’s law plus the principle of superposition, it is of almost magical power, as you will see in Sect. 2.2.3. Notice that it all hinges on the <span class="math notranslate nohighlight">\( 1/r^2 \)</span> character of Coulomb’s law; without that, the crucial cancellation of the <em>r</em>’s in <a class="reference internal" href="#equation-eq2-12">(97)</a> would not take place, and the total flux of <strong>E</strong> would depend on the surface chosen, not merely on the total charge enclosed. Other <span class="math notranslate nohighlight">\( 1/r^2 \)</span> forces (I am thinking particularly of Newton’s law of universal gravitation) will obey “Gauss’s laws” of their own, and the applications we develop here carry over directly.</p>
@@ -531,16 +538,16 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \]</div>
 <p>And since this holds for <em>any</em> volume, the integrands must be equal:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-14">
-<span class="eqno">(99)<a class="headerlink" href="#equation-eq2-14" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq2-14" title="Link to this equation">#</a></span>\[
 \nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho
 \]</div>
 <p>Equation <a class="reference internal" href="#equation-eq2-14">(99)</a> carries the same message as <a class="reference internal" href="#equation-eq2-13">(98)</a>; it is <strong>Gauss’s law in differential form</strong>. The differential version is tidier, but the integral form has the advantage that it accommodates point, line, and surface charges more naturally.</p>
 </section>
 <section id="the-divergence-of-e">
-<h2>2.2.2: The Divergence of E<a class="headerlink" href="#the-divergence-of-e" title="Permalink to this heading">#</a></h2>
+<h2>2.2.2: The Divergence of E<a class="headerlink" href="#the-divergence-of-e" title="Link to this heading">#</a></h2>
 <p>Let’s go back now, and calculate the divergence of <span class="math notranslate nohighlight">\( \vec{E} \)</span> directly from Eq. 2.8:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-15">
-<span class="eqno">(100)<a class="headerlink" href="#equation-eq2-15" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq2-15" title="Link to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int_{\text{all space}} \frac{\hat{\Delta r }}{\Delta r  ^2} \rho(\vec{r}') \mathrm{d}{\tau'}
 \]</div>
 <p>(Originally the integration was over the volume occupied by the charge, but I may as well extend it to all space, since <span class="math notranslate nohighlight">\( \rho = 0 \)</span> in the exterior region anyway.) Noting that the r-dependence is contained in <span class="math notranslate nohighlight">\( \Delta r  = r - r' \)</span>, we have</p>
@@ -555,7 +562,7 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \]</div>
 <p>Thus</p>
 <div class="math notranslate nohighlight" id="equation-eq2-16">
-<span class="eqno">(101)<a class="headerlink" href="#equation-eq2-16" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(101)<a class="headerlink" href="#equation-eq2-16" title="Link to this equation">#</a></span>\[
 \nabla \cdot {\vec{E}} = \frac{1}{4\pi\epsilon_0} \int 4 \pi \delta^3(\vec{r} - \vec{r'}) \rho(\vec{r'}) \mathrm{d}{\tau'} = \frac{1}{\epsilon_0} \rho(\vec{r})
 \]</div>
 <p>which is Gauss’s law in differential form <a class="reference internal" href="#equation-eq2-14">(99)</a>. To recover the integral form <a class="reference internal" href="#equation-eq2-13">(98)</a> we run the previous argument in reverse - integrate over a volume and apply the divergence theorem:</p>
@@ -565,19 +572,19 @@ Q_{enc} = \int_{\mathscr{V}} \rho \mathrm{d}{\tau}
 \]</div>
 </section>
 <section id="applications-of-gauss-s-law">
-<h2>2.2.3: Applications of Gauss’s Law<a class="headerlink" href="#applications-of-gauss-s-law" title="Permalink to this heading">#</a></h2>
+<h2>2.2.3: Applications of Gauss’s Law<a class="headerlink" href="#applications-of-gauss-s-law" title="Link to this heading">#</a></h2>
 <p>I must interrupt the theoretical development at this point to show you the extraordinary power of Gauss’s law, in integral form. When symmetry permits, it affords <em>by far</em> the quickest and easiest way of computing electric fields. I’ll illustrate the method with a series of examples.</p>
 <hr class="docutils" />
 <section id="example-2-3">
-<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this heading">#</a></h3>
+<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
 <p>Find the field outside a uniformly charged solid sphere of radius R and total charge q</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
 <p>Imagine a spherical surface at radius <span class="math notranslate nohighlight">\( r &gt; R \)</span> (Fig. 2.18). This is called a <strong>Gaussian surface</strong> in the trade. Gauss’s law says that</p>
 <div class="math notranslate nohighlight">
@@ -618,16 +625,16 @@ A</label><div class="sd-tab-content docutils">
 </section>
 <hr class="docutils" />
 <section id="example-2-4">
-<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this heading">#</a></h3>
+<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Q</label><div class="sd-tab-content docutils">
 <p>A long cylinder (Fig 2.21) carries a charge density that is proportional to the distance from the axis: <span class="math notranslate nohighlight">\( \rho = ks \)</span> for some constant <span class="math notranslate nohighlight">\( k \)</span>. Find the electric field inside this cylinder.</p>
 <p><img alt="Figure 2.21" src="../../../_images/2.21.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<label class="sd-tab-label" for="sd-tab-item-3">
 A</label><div class="sd-tab-content docutils">
 <p>Draw a Gaussian cylinder of length l and radius s. For this surface, Gauss’s law states</p>
 <div class="math notranslate nohighlight">
@@ -664,15 +671,15 @@ Q_{enc} &amp; = &amp; \int \rho \mathrm{d}{\tau} \\
 </div>
 </section>
 <section id="example-2-5">
-<h3>Example 2.5<a class="headerlink" href="#example-2-5" title="Permalink to this heading">#</a></h3>
+<h3>Example 2.5<a class="headerlink" href="#example-2-5" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<label class="sd-tab-label" for="sd-tab-item-4">
 Q</label><div class="sd-tab-content docutils">
 <p>An infinite plane carries a uniform surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. Find its electric field.</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<label class="sd-tab-label" for="sd-tab-item-5">
 A</label><div class="sd-tab-content docutils">
 <p>Draw a Gaussian pillbox, extending equal distances above and below the plane (Fig. 2.22). Apply Gauss’s law to this surface:</p>
 <div class="math notranslate nohighlight">
@@ -702,16 +709,16 @@ A</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="example-2-6">
-<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this heading">#</a></h3>
+<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<label class="sd-tab-label" for="sd-tab-item-6">
 Q</label><div class="sd-tab-content docutils">
 <p>Two infinite parallel planes carry equal but opposite uniform charge densities <span class="math notranslate nohighlight">\( \pm \sigma \)</span> (Fig 2.23). Find the field in each of the three regions: (i) to the left of both, (ii) between them, (iii) to the right of both.</p>
 <p><img alt="Figure 2.23" src="../../../_images/2.23.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<label class="sd-tab-label" for="sd-tab-item-7">
 A</label><div class="sd-tab-content docutils">
 <p>The left plate produces a field <span class="math notranslate nohighlight">\( (1/2 \epsilon_0)\sigma \)</span>, which points away from it (Fig. 2.24) to the left in region in (i) and to the right in regions (ii) and (iii). The right plate, being negatively charged, produces a field <span class="math notranslate nohighlight">\( (1/2 \epsilon_0)\sigma \)</span> which points <em>toward</em> it - to the right in regions (i) and (ii) and to the left in region (iii). The two fields cancel in regions (i) and (iii); they conspire in region (ii). Conclusion: The field between the plates is <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span>, and points to the right; elsewhere it is zero.</p>
 </div>
@@ -719,7 +726,7 @@ A</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="the-curl-of-e">
-<h2>2.2.4: The Curl of E<a class="headerlink" href="#the-curl-of-e" title="Permalink to this heading">#</a></h2>
+<h2>2.2.4: The Curl of E<a class="headerlink" href="#the-curl-of-e" title="Link to this heading">#</a></h2>
 <p>I’ll calculate the curl of <span class="math notranslate nohighlight">\( \vec{E} \)</span> as I did the divergence in Sect 2.2.1, by studying first the simplest possible configuration: a point charge at the origin. In this case</p>
 <div class="math notranslate nohighlight">
 \[
@@ -745,12 +752,12 @@ A</label><div class="sd-tab-content docutils">
 \end{split}\]</div>
 <p>The integral around a <em>closed</em> path is evidently zero (for then <span class="math notranslate nohighlight">\( r_a = r_b \)</span> ):</p>
 <div class="math notranslate nohighlight" id="equation-eq2-19">
-<span class="eqno">(102)<a class="headerlink" href="#equation-eq2-19" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(102)<a class="headerlink" href="#equation-eq2-19" title="Link to this equation">#</a></span>\[
 \oint \vec{E} \cdot \mathrm{d}\vec{l} = 0
 \]</div>
 <p>and hence, applying Stokes’ theorem</p>
 <div class="math notranslate nohighlight" id="equation-eq2-20">
-<span class="eqno">(103)<a class="headerlink" href="#equation-eq2-20" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(103)<a class="headerlink" href="#equation-eq2-20" title="Link to this equation">#</a></span>\[
 \nabla \times {\vec{E}} = 0
 \]</div>
 <p>Now, I proved eqs. <a class="reference internal" href="#equation-eq2-19">(102)</a> and <a class="reference internal" href="#equation-eq2-20">(103)</a> only for the field of a single point charge at the origin, but these results make no reference to what is, after all, a perfectly arbitrary choice of coordinates; they hold no matter where the charge is located. Moreover, if we have many charges, the principle of superposition states that the total field is a vector sum of their individual fields:</p>
@@ -794,8 +801,8 @@ A</label><div class="sd-tab-content docutils">
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch2-1.html"
@@ -823,6 +830,7 @@ A</label><div class="sd-tab-content docutils">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -861,6 +869,7 @@ By Physics Enjoyer
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -887,8 +896,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

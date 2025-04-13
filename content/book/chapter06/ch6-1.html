@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6.1: Magnetization &#8212; Electrodynamics</title>
   
@@ -15,58 +14,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter06/ch6-1';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="6.2: The Field of a Magnetized Object" href="ch6-2.html" />
@@ -80,28 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -123,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../intro.html">
@@ -155,7 +156,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Electrodynamics</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -167,87 +179,80 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1: Vector Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter-intro.html">Chapter 1: Vector Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-1.html">2.1: The Electric Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-3.html">2.3: Electric Potential</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-5.html">2.5: Conductors</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1: Magnetization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch6-3.html">6.3: The Auxiliary Field H</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -267,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -276,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -405,26 +410,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -458,17 +465,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="magnetization">
-<h1>6.1: Magnetization<a class="headerlink" href="#magnetization" title="Permalink to this heading">#</a></h1>
+<h1>6.1: Magnetization<a class="headerlink" href="#magnetization" title="Link to this heading">#</a></h1>
 <section id="diamagnets-paramagnets-ferromagnets">
-<h2>6.1.1: Diamagnets, Paramagnets, Ferromagnets<a class="headerlink" href="#diamagnets-paramagnets-ferromagnets" title="Permalink to this heading">#</a></h2>
+<h2>6.1.1: Diamagnets, Paramagnets, Ferromagnets<a class="headerlink" href="#diamagnets-paramagnets-ferromagnets" title="Link to this heading">#</a></h2>
 <p>If you ask the average person what “magnetism” is, you will probably be told about refrigerator decorations, compass needles, and the North Pole - none of which has any obvious connection with moving charges or current-carrying wires. Yet all magnetic phenomena are due to electric charges in motion, and in fact, if you could examine a piece of magnetic material on an atomic scale you would find tiny currents: electrons orbiting around nuclei and spinning about their axes. For macroscopic purposes, these current loops are so small that we may treat them as magnetic dipoles. Ordinarily, they cancel each other out because of the random orientation of the atoms. But when a magnetic field is applied, a net alignment of these magnetic dipoles occurs, and the medium becomes magnetically polarized, or magnetized.</p>
 <p>Unlike electric polarization, which is almost always in the same direction as <strong>E</strong>, some materials acquire a magnetization parallel to <strong>B</strong> (paramagnets) and some opposite to <strong>B</strong> (diamagnets). A few substances (called ferromagnets, in deference to the most common example, iron) retain their magnetization even after the external field has been removed - for these, the magnetization is not determined by the present field but by the whole magnetic “history” of the object. Permanent magnets made of iron are the most familiar examples of magnetism, but from a theoretical point of view they are the most complicated; I’ll save ferromagnetism for the end of the chapter, and begin with qualitative models of paramagnetism and diamagnetism.</p>
 </section>
 <section id="torques-and-forces-on-magnetic-dipoles">
-<h2>6.1.2: Torques and Forces on Magnetic Dipoles<a class="headerlink" href="#torques-and-forces-on-magnetic-dipoles" title="Permalink to this heading">#</a></h2>
+<h2>6.1.2: Torques and Forces on Magnetic Dipoles<a class="headerlink" href="#torques-and-forces-on-magnetic-dipoles" title="Link to this heading">#</a></h2>
 <p>A magnetic dipole experiences a torque in a magnetic field, just as an electric dipole does in an electric field. Let’s calculate the torque on a rectangular current loop in a uniform field <strong>B</strong>. (Since any current loop could be built up from infinitesimal rectangles, with all the “internal” sides canceling, as indicated in Fig. 6.1, there is no real loss of generality here; but if you prefer to start from scratch with an arbitrary shape, see Prob. 6.2.) Center the loop at the origin, and tilt it an angle <span class="math notranslate nohighlight">\( \theta \)</span> from the z axis towards the y axis (Fig. 6.2). Let <strong>B</strong> point in the z direction. The forces on the two sloping sides cancel (they tend to stretch the loop, but they don’t rotate it). The forces on the “horizontal” sides are likewise equal and opposite (so the net force on the loop is zero), but they do generate a torque:
 <img alt="Figure 6.1" src="../../../_images/6.1.png" /></p>
 <div class="math notranslate nohighlight">
@@ -487,7 +494,7 @@ F = I b B
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq6-1">
-<span class="eqno">(375)<a class="headerlink" href="#equation-eq6-1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(375)<a class="headerlink" href="#equation-eq6-1" title="Link to this equation">#</a></span>\[
 \vec{N} = \vec{m} \times \vec{B} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( m = I a b \)</span> is the magnetic dipole moment of the loop. Equation 6.1 gives the torque on any localized current distribution, in the presence of a uniform field; in a non-uniform field it is the exact torque (about the center) for a perfect dipole of infinitesimal size.
@@ -500,12 +507,12 @@ F = I b B
 \]</div>
 <p>the constant <strong>B</strong> comes outside the integral, and the net displacement <span class="math notranslate nohighlight">\( \oint \mathrm{d} \vec{l} \)</span> around a closed loop vanishes. In a nonuniform field, this is no longer the case. For example, suppose a circular wire ring of radius R, carrying a current <em>I</em>, is suspended above a short solenoid in the “fringing” region (Fig 6.3). Here <strong>B</strong> has a radial component, and there is a net downward force on the loop (Fig 6.4)</p>
 <div class="math notranslate nohighlight" id="equation-eq6-2">
-<span class="eqno">(376)<a class="headerlink" href="#equation-eq6-2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(376)<a class="headerlink" href="#equation-eq6-2" title="Link to this equation">#</a></span>\[
 F = 2 \pi I R B \cos \theta 
 \]</div>
 <p>For an infinitesimal loop, with dipole moment <strong>m</strong>, in a field <strong>B</strong>, the force is</p>
 <div class="math notranslate nohighlight" id="equation-eq6-3">
-<span class="eqno">(377)<a class="headerlink" href="#equation-eq6-3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(377)<a class="headerlink" href="#equation-eq6-3" title="Link to this equation">#</a></span>\[
 \vec{F} = \nabla  (\vec{m} \cdot \vec{B}) 
 \]</div>
 <p><img alt="Figure 6.3" src="../../../_images/6.3.png" /></p>
@@ -514,7 +521,7 @@ F = 2 \pi I R B \cos \theta
 <p><img alt="Figure 6.5" src="../../../_images/6.5.png" /></p>
 </section>
 <section id="effect-of-a-magnetic-field-on-atomic-orbits">
-<h2>6.1.3: Effect of a Magnetic Field on Atomic Orbits<a class="headerlink" href="#effect-of-a-magnetic-field-on-atomic-orbits" title="Permalink to this heading">#</a></h2>
+<h2>6.1.3: Effect of a Magnetic Field on Atomic Orbits<a class="headerlink" href="#effect-of-a-magnetic-field-on-atomic-orbits" title="Link to this heading">#</a></h2>
 <p>Electrons not only spin; they also revolve around the nucleus - for simplicity, let’s assume the orbit is a circle of radius <em>R</em> (Fig. 6.9). Although technically this orbital motion does not constitute a steady current, in practice the period <span class="math notranslate nohighlight">\( T = 2 \pi R / v \)</span> is so short that unless you blink awfully fast, it’s going to look like a steady current:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -522,17 +529,17 @@ I = \frac{-e}{T}  = - \frac{ev}{2 \pi R}
 \]</div>
 <p>(The minus sign accounts for the negative charge of the electron.) Accordingly, the orbital dipole moment <span class="math notranslate nohighlight">\( (I \pi R^2) \)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq6-4">
-<span class="eqno">(378)<a class="headerlink" href="#equation-eq6-4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(378)<a class="headerlink" href="#equation-eq6-4" title="Link to this equation">#</a></span>\[
 \vec{m} = - \frac{1}{2} e v R \hat{z} 
 \]</div>
 <p>Like any other magnetic dipole, this one is subject to a torque <span class="math notranslate nohighlight">\( \vec{m} \times \vec{B} \)</span> when you turn on a magnetic field. But it’s a lot harder to tilt the entire orbit than it is the spin, so the orbital contribution to paramagnetism is small. There is, however, a more significant effect on the orbital motion: The electron speeds up or slows down, depending on the orientation of <strong>B</strong>. For whereas the centripetal acceleration <span class="math notranslate nohighlight">\( v^2 / R \)</span>  is ordinarily sustained by electrical forces alone,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-5">
-<span class="eqno">(379)<a class="headerlink" href="#equation-eq6-5" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(379)<a class="headerlink" href="#equation-eq6-5" title="Link to this equation">#</a></span>\[
 \frac{1}{4 \pi \epsilon_0} \frac{e^2}{R^2}  = m_e \frac{v^2}{R}
 \]</div>
 <p>in the presence of a magnetic field there is an additional force, <span class="math notranslate nohighlight">\( -e (\vec{v} \times \vec{B}) \)</span>. (To avoid confusion with the magnetic dipole moment <em>m</em>, we write the mass of the electron as <span class="math notranslate nohighlight">\( m_e \)</span>.) For the sake of argument, let’s say that <strong>B</strong> is perpendicular to the plane of orbit, as shown in Fig 6.10; then</p>
 <div class="math notranslate nohighlight" id="equation-eq6-6">
-<span class="eqno">(380)<a class="headerlink" href="#equation-eq6-6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(380)<a class="headerlink" href="#equation-eq6-6" title="Link to this equation">#</a></span>\[
 \frac{1}{4 \pi \epsilon_0} \frac{e^2}{R^2} + e \overline{v} B = m_e \frac{\overline{v}^2}{R}
 \]</div>
 <p>Under these conditions, the new speed <span class="math notranslate nohighlight">\( \overline{v} \)</span> is greater than <em>v</em></p>
@@ -544,23 +551,23 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
 <p><img alt="Figure 6.10" src="../../../_images/6.10.png" /></p>
 <p>or, assuming the change in <span class="math notranslate nohighlight">\( \Delta v = \overline{v} - v \)</span> is small,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-7">
-<span class="eqno">(381)<a class="headerlink" href="#equation-eq6-7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(381)<a class="headerlink" href="#equation-eq6-7" title="Link to this equation">#</a></span>\[
 \Delta v = \frac{e R B}{2 m_e}
 \]</div>
 <p>When <strong>B</strong> is turned on, then, the electron speeds up.</p>
 <p>A change in orbital speed means a change in the dipole moment (Eq. 6.4):</p>
 <div class="math notranslate nohighlight" id="equation-eq6-8">
-<span class="eqno">(382)<a class="headerlink" href="#equation-eq6-8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(382)<a class="headerlink" href="#equation-eq6-8" title="Link to this equation">#</a></span>\[
 \Delta \vec{m} = - \frac{1}{2} e (\Delta v) R \hat{z} = - \frac{e^2 R^2}{4 m_e} \vec{B} 
 \]</div>
 <p>Notice that the change in <strong>m</strong> is opposite to the direction of <strong>B</strong>. (An electron circling the other way would have a dipole moment pointing upward, but such an orbit would be slowed down by the field, so the change is still opposite to <strong>B</strong>.) Ordinarily, the electron orbits are randomly oriented, and the orbital dipole moments cancel out. But in the presence of a magnetic field, each atom picks up a little “extra” dipole moment, and these increments are all anti-parallel to the field. This is the mechanism responsible for diamagnetism. It is a universal phenomenon, affecting all atoms. However, it is typically much weaker than paramagnetism, and is therefore observed mainly in atoms with even numbers of electrons, where paramagnetism is usually absent.</p>
 <p>In deriving Eq. 6.8, I assumed that the orbit remains circular, with its original radius <em>R</em>. I cannot offer a justification for this at the present stage. If the atom is stationary while the field is turned on, then my assumption can be proved - this is not magnetostatics, however, and the details will have to await Chapter 7 (see Prob. 7.52). If the atom is moved into the field, the situation is enormously more complicated. But never mind - I’m only trying to give you a qualitative account of diamagnetism. Assume, if you prefer, that the velocity remains the same while the radius changes - the formula (Eq. 6.8) is altered (by a factor of 2), but the qualitative conclusion is unaffected. The truth is that this classical model is fundamentally flawed (diamagnetism is really a quantum phenomenon), so there’s not much point in refining the details. What is important is the empirical fact that in diamagnetic materials the induced dipole moments point opposite to the magnetic field.</p>
 </section>
 <section id="id1">
-<h2>6.1.4: Magnetization<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>6.1.4: Magnetization<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>In the presence of a magnetic field, matter becomes <em>magnetized</em>; that is, upon microscopic examination, it will be found to contain many tiny dipoles, with a net alignment along some direction. We have discussed two mechanisms that account for this magnetic polarization: (1) paramagnetism (the dipoles associated with the spins of unpaired electrons experience a torque tending to line them up parallel to the field) and (2) diamagnetism (the orbital speed of the electrons is altered in such a way as to change the orbital dipole moment in a direction opposite to the field). Whatever the cause, we describe the state of magnetic polarization by the vector quantity</p>
 <div class="math notranslate nohighlight" id="equation-eq6-9">
-<span class="eqno">(383)<a class="headerlink" href="#equation-eq6-9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(383)<a class="headerlink" href="#equation-eq6-9" title="Link to this equation">#</a></span>\[
 \vec{M} \equiv \text{ magnetic dipole moment per unit volume } 
 \]</div>
 <p><strong>M</strong> is called the <strong>magnetization</strong>; it plays a role analogous to the polarization <strong>P</strong> in electrostatics. In the following section, we will not worry about how the magnetization got there - it could be paramagnetism, diamagnetism, or even ferromagnetism - we shall take <strong>M</strong> as a given, and calculate the field this magnetization itself produces.</p>
@@ -595,8 +602,8 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter-intro.html"
@@ -624,6 +631,7 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -656,6 +664,7 @@ By Physics Enjoyer
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -682,8 +691,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

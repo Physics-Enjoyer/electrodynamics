@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1.4: Curvilinear Coordinates &#8212; Electrodynamics</title>
   
@@ -15,58 +14,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter01/ch1-4';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="1.5: The Dirac Delta Function" href="ch1-5.html" />
@@ -80,28 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -123,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../intro.html">
@@ -155,7 +156,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Electrodynamics</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -167,87 +179,80 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1: Vector Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch1-1.html"><em>1.1</em> Vector Algebra</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 1: Vector Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ch1-1.html">1.1 Vector Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-2.html">1.2: Differential Calculus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-3.html">1.3: Integral Calculus</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4: Curvilinear Coordinates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-5.html">1.5: The Dirac Delta Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch1-6.html">1.6: The Theory of Vector Fields</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-1.html">2.1: The Electric Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-3.html">2.3: Electric Potential</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/ch2-5.html">2.5: Conductors</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter-intro.html">Chapter 3: Potentials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-2.html">3.2: The Method of Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-1.html">4.1: Polarization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-1.html">6.1: Magnetization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-1.html"><em>10.1</em>  The Potential Formulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-2.html"><em>10.2</em> Potentials and Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter-intro.html">Chapter 11: Radiation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/ch11-1.html"><em>11.1</em> Dipole Radiation</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture1.html">Lecture 1 (8/15/2023)</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../lecture_notes/lecture2.html">Lecture 2 (8/17/2023)</a></li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -267,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -276,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -405,26 +410,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -459,26 +466,26 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="curvilinear-coordinates">
-<h1>1.4: Curvilinear Coordinates<a class="headerlink" href="#curvilinear-coordinates" title="Permalink to this heading">#</a></h1>
+<h1>1.4: Curvilinear Coordinates<a class="headerlink" href="#curvilinear-coordinates" title="Link to this heading">#</a></h1>
 <section id="spherical-coordinates">
-<h2>1.4.1: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Permalink to this heading">#</a></h2>
+<h2>1.4.1: Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Link to this heading">#</a></h2>
 <p>You can label a point P by its Cartesian coordinates (x, y, z), but sometimes it is more convenient to use <strong>spherical</strong> coordinates <span class="math notranslate nohighlight">\( (r, \theta, \phi) \)</span>; <span class="math notranslate nohighlight">\( r \)</span> is the distance from the origin (the magnitude of the position vector <strong>r</strong>), <span class="math notranslate nohighlight">\( \theta \)</span> (the angle down from the z axis) is called the <strong>polar angle</strong>, and <span class="math notranslate nohighlight">\( \phi \)</span> (the angle around from the x axis) is the <strong>azimuthal angle</strong>. Their relation to Cartesian coordinates can be read trigonometrically from Fig 1.36:</p>
 <p><img alt="Figure 1.36" src="../../../_images/1.36.png" /></p>
 <div class="math notranslate nohighlight" id="equation-eq1-62">
-<span class="eqno">(53)<a class="headerlink" href="#equation-eq1-62" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq1-62" title="Link to this equation">#</a></span>\[
 x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \cos \theta 
 \]</div>
 <p>Figure 1.36 also shows three unit vectors, <span class="math notranslate nohighlight">\( \hat{r}, \hat{\theta}, \hat{\phi} \)</span>, pointing in the direction of increase of the corresponding coordinates. They constitute an orthogonal (mutually perpendicular) basis set (just like <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span>), and any vector <strong>A</strong> can be expressed in terms of them, in the usual way:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-63">
-<span class="eqno">(54)<a class="headerlink" href="#equation-eq1-63" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq1-63" title="Link to this equation">#</a></span>\[
 \vec{A} = A_r \hat{r} + A_\theta \hat{\theta} + A_\phi \hat{\phi} 
 \]</div>
 <p><span class="math notranslate nohighlight">\( A_r, A_{\theta}, A_{\phi} \)</span> are the radial, polar, and azimuthal components of <strong>A</strong>. In terms of the Cartesian unit vectors,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-64">
-<span class="eqno">(55)<a class="headerlink" href="#equation-eq1-64" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq1-64" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \hat{r} &amp; = \sin \theta \cos \phi \hat{x} + \sin \theta \sin \phi \hat{y} + \cos \theta \hat{z} \\
 \hat{\theta} &amp; = \cos \theta \cos \phi \hat{x} + \cos \theta \sin \phi \hat{y} - \sin \theta \hat{z} \\
@@ -490,29 +497,29 @@ x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \c
 <p><img alt="Figure 1.37" src="../../../_images/1.37.png" /></p>
 <p>An infinitesimal displacement in the <span class="math notranslate nohighlight">\( \hat{r} \)</span>  direction is simply dr (Fig. 1.38a), just as an infinitesimal element of length in the x direction is dx:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-65">
-<span class="eqno">(56)<a class="headerlink" href="#equation-eq1-65" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq1-65" title="Link to this equation">#</a></span>\[
 \mathrm{d} l_r = dr 
 \]</div>
 <p><img alt="Figure 1.38" src="../../../_images/1.38.png" /></p>
 <p>On the other hand, an infinitesimal element of length in the <span class="math notranslate nohighlight">\( \hat{\theta} \)</span> direction (Fig 1.38b) is <em>not</em> just <span class="math notranslate nohighlight">\( \mathrm{d} \theta \)</span> - that doesn’t even have the right units for a length! Rather,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-66">
-<span class="eqno">(57)<a class="headerlink" href="#equation-eq1-66" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq1-66" title="Link to this equation">#</a></span>\[
 \mathrm{d} l_{\theta} = r \mathrm{d} \theta 
 \]</div>
 <p>Similarly, an infinitesimal element of length in the <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> direction (Fig 1.38c) is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-67">
-<span class="eqno">(58)<a class="headerlink" href="#equation-eq1-67" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(58)<a class="headerlink" href="#equation-eq1-67" title="Link to this equation">#</a></span>\[
 \mathrm{d} l_{\phi} = r \sin \theta \mathrm{d} \phi 
 \]</div>
 <p>so that we can write the general infinitesimal displacement as</p>
 <div class="math notranslate nohighlight" id="equation-eq1-68">
-<span class="eqno">(59)<a class="headerlink" href="#equation-eq1-68" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(59)<a class="headerlink" href="#equation-eq1-68" title="Link to this equation">#</a></span>\[
 \mathrm{d} \vec{l} = \mathrm{d} r \hat{r} + r \mathrm{d} \theta \hat{\theta} + r \sin \theta \mathrm{d} \phi \hat{\phi} 
 \]</div>
 <p>This plays the role that <span class="math notranslate nohighlight">\( \mathrm{d} x \hat{x} + \mathrm{d} y \hat{y} + \mathrm{d} z \hat{z} \)</span> played in Cartesian coordinates.</p>
 <p>The infinitesimal volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau \)</span> in spherical coordinates, is the product of the three infinitesimal displacements:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-69">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq1-69" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq1-69" title="Link to this equation">#</a></span>\[
 \mathrm{d} \tau = \mathrm{d} l_r \mathrm{d} l_{\theta} \mathrm{d} l_{\phi} = r^2 \sin \theta \mathrm{d} r \mathrm{d} \theta \mathrm{d} \phi 
 \]</div>
 <p>I cannot give you a general expression for surface elements <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> , since these depend on the orientation of the surface. You simply have to analyze the geometry for any given case (this goes for Cartesian and curvilinear coordinates alike). If you are integrating over the surface of a sphere, for instance, then <span class="math notranslate nohighlight">\( r \)</span>  is constant, whereas <span class="math notranslate nohighlight">\( \theta \)</span> and <span class="math notranslate nohighlight">\( \phi \)</span>  change (Fig. 1.39), so</p>
@@ -528,15 +535,15 @@ x = r \sin \theta \cos \phi, \qquad y = r \sin \theta \sin \phi, \qquad z = r \c
 <p>Notice, finally, that <span class="math notranslate nohighlight">\( r \)</span> ranges from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( \infty \)</span>, <span class="math notranslate nohighlight">\( \phi \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( 2 \pi \)</span>, and <span class="math notranslate nohighlight">\( \theta \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( \pi \)</span>.</p>
 <p><img alt="Figure 1.39" src="../../../_images/1.39.png" /></p>
 <section id="example-1-13">
-<h3>Example 1.13<a class="headerlink" href="#example-1-13" title="Permalink to this heading">#</a></h3>
+<h3>Example 1.13<a class="headerlink" href="#example-1-13" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
 <p>Find the volume of a sphere of radius R</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
 <p>Well, we know that we <em>should</em> get <span class="math notranslate nohighlight">\( \frac{4}{3} \pi R^3 \)</span>. Let’s see what happens…</p>
 <div class="math notranslate nohighlight">
@@ -564,7 +571,7 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 <p>Here, then, are the vector derivatives in spherical coordinates:</p>
 <p><strong>Gradient</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-70">
-<span class="eqno">(61)<a class="headerlink" href="#equation-eq1-70" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(61)<a class="headerlink" href="#equation-eq1-70" title="Link to this equation">#</a></span>\[
 \nabla  T = \frac{\partial T}{\partial r} \hat{r} + \frac{1}{r} \frac{\partial T}{\partial \theta} \hat{\theta} + \frac{1}{r \sin \theta} \frac{\partial T}{\partial \phi} \hat{\phi} 
 \]</div>
 <p><strong>Divergence</strong>:</p>
@@ -574,7 +581,7 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 \]</div>
 <p><strong>Curl</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-72">
-<span class="eqno">(62)<a class="headerlink" href="#equation-eq1-72" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq1-72" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \times  \vec{v} = &amp; \frac{1}{r \sin \theta} \left[ \frac{\partial}{\partial \theta} (\sin \theta V_{\phi}) - \pdv{v_{\theta}}{\phi} \right] \hat{r} \\
 &amp; \quad + \frac{1}{r} \left[ \frac{1}{\sin \theta} \frac{\partial v_r}{\partial \phi} - \frac{\partial}{\partial r} (r v_{\phi}) \right] \hat{\theta} \\
@@ -589,16 +596,16 @@ V &amp; = \int \mathrm{d} \tau = \int_{r = 0} ^R \mathrm{d} r \int_{\theta = 0} 
 </section>
 </section>
 <section id="cylindrical-coordinates">
-<h2>1.4.2: Cylindrical Coordinates<a class="headerlink" href="#cylindrical-coordinates" title="Permalink to this heading">#</a></h2>
+<h2>1.4.2: Cylindrical Coordinates<a class="headerlink" href="#cylindrical-coordinates" title="Link to this heading">#</a></h2>
 <p>The cylindrical coordinates <span class="math notranslate nohighlight">\( (s, \phi, z) \)</span> of a point P are defined in Fig 1.42. Notice that <span class="math notranslate nohighlight">\( \phi \)</span> has the same meaning as in spherical coordinates, and z is the same as Cartesian. <span class="math notranslate nohighlight">\( s \)</span> is the distance to P <em>from the z axis</em>, whereas the spherical coordinate <span class="math notranslate nohighlight">\( r \)</span> is the distance <em>from the origin</em>. The relation to Cartesian coordinates is somewhat cleaner than the spherical sort</p>
 <div class="math notranslate nohighlight" id="equation-eq1-74">
-<span class="eqno">(63)<a class="headerlink" href="#equation-eq1-74" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq1-74" title="Link to this equation">#</a></span>\[
 x = s \cos \phi, \qquad y = s \sin \phi, \qquad z = z 
 \]</div>
 <p><img alt="Figure 1.42" src="../../../_images/1.42.png" /></p>
 <p>The unit vectors (Prob 1.42) are</p>
 <div class="math notranslate nohighlight" id="equation-eq1-75">
-<span class="eqno">(64)<a class="headerlink" href="#equation-eq1-75" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq1-75" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \hat{s} &amp; = \cos \phi \hat{x} + \sin \phi \hat{y} \\
 \hat{\phi} &amp; = - \sin \phi \hat{x} + \cos \phi \hat{y} \\
@@ -612,19 +619,19 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-eq1-77">
-<span class="eqno">(65)<a class="headerlink" href="#equation-eq1-77" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq1-77" title="Link to this equation">#</a></span>\[
 \mathrm{d} \vec{l} = ds \hat{s} + s \mathrm{d} \phi \hat{\phi} + dz \hat{z} 
 \]</div>
 <p>and the volume element is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-78">
-<span class="eqno">(66)<a class="headerlink" href="#equation-eq1-78" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq1-78" title="Link to this equation">#</a></span>\[
 \mathrm{d} \tau = s \, \mathrm{d} s \, \mathrm{d} \phi \, \mathrm{d} z 
 \]</div>
 <p>The range of s is <span class="math notranslate nohighlight">\( 0 \rightarrow \infty \)</span>, <span class="math notranslate nohighlight">\( \phi \)</span> goes from <span class="math notranslate nohighlight">\( 0 \rightarrow 2\pi \)</span>, and <span class="math notranslate nohighlight">\( z \)</span> from <span class="math notranslate nohighlight">\( -\infty \rightarrow \infty \)</span>.</p>
 <p>The vector derivatives in cylindrical coordinates are:</p>
 <p><strong>Gradient</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-79">
-<span class="eqno">(67)<a class="headerlink" href="#equation-eq1-79" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq1-79" title="Link to this equation">#</a></span>\[
 \nabla  T = \frac{\partial T}{\partial s} \hat{s} + \frac{1}{s} \frac{\partial T}{\partial \phi} \hat{\phi} + \frac{\partial T}{\partial z} \hat{z} 
 \]</div>
 <p><strong>Divergence</strong>:</p>
@@ -634,7 +641,7 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
 \]</div>
 <p><strong>Curl</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-81">
-<span class="eqno">(68)<a class="headerlink" href="#equation-eq1-81" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq1-81" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \times  \vec{v} = &amp; \left( \frac{1}{s} \frac{\partial v_z}{\partial \phi} - \pdv{v_{\phi}}{z} \right) \hat{s} \\
 &amp; + \left( \frac{\partial v_s}{\partial z} - \frac{\partial v_z}{\partial s} \right) \hat{\phi} \\
@@ -676,8 +683,8 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="ch1-3.html"
@@ -705,6 +712,7 @@ dl_s = ds, \qquad dl_{\phi} = s \mathrm{d} \phi, \qquad dl_z = dz \tag{1.76}
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -738,6 +746,7 @@ By Physics Enjoyer
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -764,8 +773,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
