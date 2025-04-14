@@ -54,10 +54,10 @@ parts:
       - glob: content/book/chapter11/*
 
 
-  - caption: Lecture Notes
-    chapters: 
-    - file: content/lecture_notes/lecture1
-    - file: content/lecture_notes/lecture2
+  # - caption: Lecture Notes
+  #   chapters: 
+  #   - file: content/lecture_notes/lecture1
+  #   - file: content/lecture_notes/lecture2
 
   - caption: References
     chapters: 
