@@ -61,5 +61,5 @@ sphinx:
     mathjax3_config:
       tex:
         macros:
-          "rcurs": "\\Delta"
+          "rcurs": "\\Delta r"
   extra_extensions: sphinx_proof
