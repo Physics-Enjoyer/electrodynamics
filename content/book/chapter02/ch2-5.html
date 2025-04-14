@@ -58,7 +58,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"rcurs": "\\Delta r"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter02/ch2-5';</script>
     <link rel="icon" href="../../../_static/favicon.ico"/>
@@ -527,18 +527,18 @@ At first glance, it would appear that the answer depends on the shape of the cav
 <h2>2.5.3: Surface Charge and the Force on a Conductor<a class="headerlink" href="#surface-charge-and-the-force-on-a-conductor" title="Link to this heading">#</a></h2>
 <p>Because the field inside a conductor is zero, boundary condition Eq. 2.33 requires that the field immediately outside is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-48">
-<span class="eqno">(129)<a class="headerlink" href="#equation-eq2-48" title="Link to this equation">#</a></span>\[
+<span class="eqno">(130)<a class="headerlink" href="#equation-eq2-48" title="Link to this equation">#</a></span>\[
  \vec{E} = \frac{\sigma}{\epsilon_0} \hat{n}
 \]</div>
 <p>consistent with our earlier conclusion that the field is normal to the surface. In terms of potential, Eq. 2.36 yields</p>
 <div class="math notranslate nohighlight" id="equation-eq2-49">
-<span class="eqno">(130)<a class="headerlink" href="#equation-eq2-49" title="Link to this equation">#</a></span>\[
+<span class="eqno">(131)<a class="headerlink" href="#equation-eq2-49" title="Link to this equation">#</a></span>\[
 \sigma = - \epsilon_0 \frac{\partial V}{\partial n}
 \]</div>
 <p>These equations enable you to calculate the surface charge on a conductor, if you can determine <span class="math notranslate nohighlight">\( \vec{E} \)</span> or <span class="math notranslate nohighlight">\( V \)</span>; we shall use them frequently in the next chapter.</p>
 <p>In the presence of an electric field, a surface charge will experience a force; the force per unit area, <span class="math notranslate nohighlight">\( \vec{f} \)</span>, is <span class="math notranslate nohighlight">\( \sigma \vec{E} \)</span>. But there’s a problem here, for the electric field is discontinuous at a surface charge, so what are we supposed to use: <span class="math notranslate nohighlight">\( \vec{E}_{above}, \vec{E}_{below} \)</span>, or something in between? The answer is that we should use the <em>average</em> of the two</p>
 <div class="math notranslate nohighlight" id="equation-eq2-50">
-<span class="eqno">(131)<a class="headerlink" href="#equation-eq2-50" title="Link to this equation">#</a></span>\[
+<span class="eqno">(132)<a class="headerlink" href="#equation-eq2-50" title="Link to this equation">#</a></span>\[
 \vec{f} = \sigma \vec{E}_{average} = \frac{1}{2} \sigma (\vec{E}_{above} + \vec{E}_{below})
 \]</div>
 <p><img alt="Figure 2.50" src="../../../_images/2.50.png" /></p>
@@ -559,14 +559,14 @@ At first glance, it would appear that the answer depends on the shape of the cav
 \vec{E}_{other} = \frac{1}{2} (\vec{E}_{above} + \vec{E}_{below}) = \vec{E}_{average}
 \]</div>
 <p>Averaging is really just a device for removing the contribution of the patch itself.</p>
-<p>That argument applies to any surface charge; in the particular case of a conductor, the field is zero inside and <span class="math notranslate nohighlight">\( (\sigma / \epsilon_0)\hat{n} \)</span> outside <a class="reference internal" href="#equation-eq2-48">(129)</a>, so the average is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, and the force per unit area is</p>
+<p>That argument applies to any surface charge; in the particular case of a conductor, the field is zero inside and <span class="math notranslate nohighlight">\( (\sigma / \epsilon_0)\hat{n} \)</span> outside <a class="reference internal" href="#equation-eq2-48">(130)</a>, so the average is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, and the force per unit area is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-51">
-<span class="eqno">(132)<a class="headerlink" href="#equation-eq2-51" title="Link to this equation">#</a></span>\[
+<span class="eqno">(133)<a class="headerlink" href="#equation-eq2-51" title="Link to this equation">#</a></span>\[
 f = \frac{1}{2 \epsilon_0} \sigma ^2 \hat{n}
 \]</div>
 <p>This amounts to an outward <strong>electrostatic pressure</strong> on the surface, tending to draw the conductor into the field, regardless of the sign of <span class="math notranslate nohighlight">\( \sigma \)</span>. Expressing the pressure in terms of the field just outside the surface</p>
 <div class="math notranslate nohighlight" id="equation-eq2-52">
-<span class="eqno">(133)<a class="headerlink" href="#equation-eq2-52" title="Link to this equation">#</a></span>\[
+<span class="eqno">(134)<a class="headerlink" href="#equation-eq2-52" title="Link to this equation">#</a></span>\[
 P = \frac{\epsilon_0}{2} E^2
 \]</div>
 </section>
@@ -586,11 +586,11 @@ V = V_{+} - V_{-} = - \int_{(-)}^{(+)} \vec{E} \cdot \mathrm{d}{\vec{l}}
 <p>so if you double <span class="math notranslate nohighlight">\( \rho \)</span>, you double <span class="math notranslate nohighlight">\( \vec{E} \)</span>. Wait a minute! How do we know that doubling Q (and also -Q) simply doubles <span class="math notranslate nohighlight">\( \rho \)</span>? Maybe the charge moves around into a completely different configuration, quadrupling <span class="math notranslate nohighlight">\( \rho \)</span> in some places and halving it in others, just so the total charge on the conductor is doubled. The fact is that this concern is unwarranted - doubling Q <em>does</em> double <span class="math notranslate nohighlight">\( \rho \)</span>  everywhere; it doesn’t shift charge around. The proof will come in Chapter 3; for now you’ll have to trust me.</p>
 <p>Since <span class="math notranslate nohighlight">\( \vec{E} \)</span> is proportional to Q, so also is V. The constant of proportionality is called the <strong>capacitance</strong> of the arrangement</p>
 <div class="math notranslate nohighlight" id="equation-eq2-53">
-<span class="eqno">(134)<a class="headerlink" href="#equation-eq2-53" title="Link to this equation">#</a></span>\[
+<span class="eqno">(135)<a class="headerlink" href="#equation-eq2-53" title="Link to this equation">#</a></span>\[
 C \equiv \frac{Q}{V}
 \]</div>
 <p>Capacitance is a purely geometrical quantity, determined by the sizes, shapes, and separation of the two conductors. In SI units, C is measured in <em>farads</em> (F); a farad is a coulomb-per-volt. Actually this turns out to be inconveniently large; more practical units are the microfarad (<span class="math notranslate nohighlight">\( 10^{-6} F \)</span>) and the picofarad (<span class="math notranslate nohighlight">\( 10^{-12} F \)</span>)</p>
-<p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <a class="reference internal" href="#equation-eq2-53">(134)</a>, where V is the potential with infinity as the reference point.</p>
+<p>Notice that V is, by definition, the potential of the positive conductor less that of the negative one; likewise, Q is the charge of the positive conductor. Accordingly, capacitance is an intrinsically positive quantity. By the way, you will occasionally hear someone speak of the capacitance of a single conductor. In this case the “second conductor” is an imaginary spherical shell of infinite radius surrounding the one conductor. It contributes nothing to the field, so the capacitance is given by <a class="reference internal" href="#equation-eq2-53">(135)</a>, where V is the potential with infinity as the reference point.</p>
 <hr class="docutils" />
 <section id="example-2-11">
 <h3>Example 2.11<a class="headerlink" href="#example-2-11" title="Link to this heading">#</a></h3>
@@ -611,7 +611,7 @@ V = \frac{Q}{A \epsilon_0} d
 \]</div>
 <p>and hence</p>
 <div class="math notranslate nohighlight" id="equation-eq2-54">
-<span class="eqno">(135)<a class="headerlink" href="#equation-eq2-54" title="Link to this equation">#</a></span>\[
+<span class="eqno">(136)<a class="headerlink" href="#equation-eq2-54" title="Link to this equation">#</a></span>\[
 C = \frac{A \epsilon_0}{d}
 \]</div>
 <p>If, for instance, the plates are square with sides 1 cm long, and they are held 1 mm apart, then the capacitance is <span class="math notranslate nohighlight">\( 9 \times 10^{-13} F \)</span></p>
@@ -658,7 +658,7 @@ W = \int_{0} ^Q \left( \frac{q}{C} \mathrm{d}{q} \right) = \frac{1}{2} \frac{Q^2
 \]</div>
 <p>or, since <span class="math notranslate nohighlight">\( Q = CV \)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-55">
-<span class="eqno">(136)<a class="headerlink" href="#equation-eq2-55" title="Link to this equation">#</a></span>\[
+<span class="eqno">(137)<a class="headerlink" href="#equation-eq2-55" title="Link to this equation">#</a></span>\[
 W = \frac{1}{2} C V^2
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( V \)</span> is the final potential of the capacitor.</p>

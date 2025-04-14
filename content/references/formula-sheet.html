@@ -58,7 +58,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"rcurs": "\\Delta r"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/references/formula-sheet';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -486,30 +486,30 @@ document.write(`
 <section id="cartesian-coordinates">
 <h3>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight" id="equation-dl">
-<span class="eqno">(470)<a class="headerlink" href="#equation-dl" title="Link to this equation">#</a></span>\[
+<span class="eqno">(471)<a class="headerlink" href="#equation-dl" title="Link to this equation">#</a></span>\[
 dl = dx\hat{\textbf{x}} + dy\hat{\textbf{y}} + dz\hat{\textbf{z}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-dtau">
-<span class="eqno">(471)<a class="headerlink" href="#equation-dtau" title="Link to this equation">#</a></span>\[d\tau = dxdydz\]</div>
+<span class="eqno">(472)<a class="headerlink" href="#equation-dtau" title="Link to this equation">#</a></span>\[d\tau = dxdydz\]</div>
 <section id="gradient">
 <h4>Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-grad">
-<span class="eqno">(472)<a class="headerlink" href="#equation-cart-grad" title="Link to this equation">#</a></span>\[
+<span class="eqno">(473)<a class="headerlink" href="#equation-cart-grad" title="Link to this equation">#</a></span>\[
 \nabla t = \frac{\partial t}{\partial x}\hat{\textbf{x}} +\frac{\partial t}{\partial y}\hat{\textbf{y}} + \frac{\partial t}{\partial z}\hat{\textbf{z}}
 \]</div>
 </section>
 <section id="divergence">
 <h4>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-div">
-<span class="eqno">(473)<a class="headerlink" href="#equation-cart-div" title="Link to this equation">#</a></span>\[\nabla \cdot \textbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\]</div>
+<span class="eqno">(474)<a class="headerlink" href="#equation-cart-div" title="Link to this equation">#</a></span>\[\nabla \cdot \textbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\]</div>
 </section>
 <section id="curl">
 <h4>Curl<a class="headerlink" href="#curl" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-curl">
-<span class="eqno">(474)<a class="headerlink" href="#equation-cart-curl" title="Link to this equation">#</a></span>\[\nabla \times \textbf{v} = (\frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z})\hat{\textbf{x}} + (\frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x})\hat{\textbf{y}} + (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y})\hat{\textbf{z}}
+<span class="eqno">(475)<a class="headerlink" href="#equation-cart-curl" title="Link to this equation">#</a></span>\[\nabla \times \textbf{v} = (\frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z})\hat{\textbf{x}} + (\frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x})\hat{\textbf{y}} + (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y})\hat{\textbf{z}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-cart-curl-mat">
-<span class="eqno">(475)<a class="headerlink" href="#equation-cart-curl-mat" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(476)<a class="headerlink" href="#equation-cart-curl-mat" title="Link to this equation">#</a></span>\[\begin{split}
 \nabla \times \textbf{v} = \begin{vmatrix}
 \hat{\textbf{x}} &amp; \hat{\textbf{y}} &amp; \hat{\textbf{z}} \\
 \frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y} &amp; \frac{\partial v}{\partial z} \\
@@ -520,7 +520,7 @@ v_x &amp; v_y &amp; v_z \\
 <section id="laplacian">
 <h4>Laplacian<a class="headerlink" href="#laplacian" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-laplacian">
-<span class="eqno">(476)<a class="headerlink" href="#equation-cart-laplacian" title="Link to this equation">#</a></span>\[
+<span class="eqno">(477)<a class="headerlink" href="#equation-cart-laplacian" title="Link to this equation">#</a></span>\[
 \nabla ^2 T = \nabla \cdot (\nabla T) = \frac{\partial^2T}{\partial x} + \frac{\partial^2T}{\partial y} + \frac{\partial^2T}{\partial z}
 \]</div>
 </section>
@@ -528,7 +528,7 @@ v_x &amp; v_y &amp; v_z \\
 <section id="spherical-coordinates">
 <h3>Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight" id="equation-sphere-dl">
-<span class="eqno">(477)<a class="headerlink" href="#equation-sphere-dl" title="Link to this equation">#</a></span>\[
+<span class="eqno">(478)<a class="headerlink" href="#equation-sphere-dl" title="Link to this equation">#</a></span>\[
 dl = dr\hat{\textbf{r}} + rd\theta \hat{\bm{\theta}} + r \sin{\bm{\theta}} d\phi \hat{\bm{\phi}}
 \]</div>
 <section id="id1">

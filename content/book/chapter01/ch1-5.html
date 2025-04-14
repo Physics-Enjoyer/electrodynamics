@@ -58,7 +58,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"rcurs": "\\Delta r"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter01/ch1-5';</script>
     <link rel="icon" href="../../../_static/favicon.ico"/>
@@ -529,12 +529,12 @@ f(x) \delta(x) = f(0) \delta(x)
 \]</div>
 <p>Under an integral, then, the delta function “picks out” the value of f(x) at a particular point. Of course, the limits of integration need not be all space, as long as the origin is included. We can also shift the spike from x = 0 to some other point, x = a, as well (Fig 1.47)</p>
 <p><img alt="Figure 1.47" src="../../../_images/1.47.png" /></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq1-90">
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq1-90" title="Link to this equation">#</a></span>\[\begin{split}
 \delta(x - a) = \begin{cases}
 0, &amp; \text{ if } x \neq a \\
 \infty , &amp; \text{ if } x = a
-\end{cases} \quad  \text{ with } \quad \int_{-\infty} ^{\infty} \delta(x - a) \mathrm{d} x = 1 \tag{1.90} 
+\end{cases} \quad  \text{ with } \quad \int_{-\infty} ^{\infty} \delta(x - a) \mathrm{d} x = 1 
 \end{split}\]</div>
 <p>Equation <a class="reference internal" href="#equation-eq1-88">(74)</a> becomes</p>
 <div class="math notranslate nohighlight">
@@ -543,7 +543,7 @@ f(x) \delta(x - a) = f(a) \delta(x - a)
 \]</div>
 <p>and <a class="reference internal" href="#equation-eq1-89">(75)</a> generalizes to</p>
 <div class="math notranslate nohighlight" id="equation-eq1-92">
-<span class="eqno">(76)<a class="headerlink" href="#equation-eq1-92" title="Link to this equation">#</a></span>\[
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq1-92" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} f(x) \delta(x - a) \mathrm{d} x = f(a) 
 \]</div>
 <section id="example-1-14">
@@ -561,12 +561,12 @@ Q</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
-<p>Easy peasy. The delta function picks out the value of <span class="math notranslate nohighlight">\( x^3 \)</span> at the point x = 2, so the integral is <span class="math notranslate nohighlight">\( 2^3 = 8 \)</span>. Notice that if the limits of integration had not included x = 2, then the answer would be 0.</p>
+<p>The delta function picks out the value of <span class="math notranslate nohighlight">\( x^3 \)</span> at the point x = 2, so the integral is <span class="math notranslate nohighlight">\( 2^3 = 8 \)</span>. Notice that if the limits of integration had not included x = 2, then the answer would be 0.</p>
 </div>
 </div>
 <p>Although <span class="math notranslate nohighlight">\( \delta(x) \)</span> itself is not a legitimate function, integrals over <span class="math notranslate nohighlight">\( \delta \)</span> are perfectly acceptable. In fact, it’s best to think of the delta function as something that is <em>always intended for use under an integral sign</em>. In particular, two expressions involving delta functions are considered equal if</p>
 <div class="math notranslate nohighlight" id="equation-eq1-93">
-<span class="eqno">(77)<a class="headerlink" href="#equation-eq1-93" title="Link to this equation">#</a></span>\[
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq1-93" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} f(x) D_1 (x) \mathrm{d} x = \int_{-\infty} ^{\infty} f(x) D_2 (x) \mathrm{d} x 
 \]</div>
 <p>for all (“ordinary”) functions f(x).</p>
@@ -602,7 +602,7 @@ A</label><div class="sd-tab-content docutils">
 \[
 \int_{-\infty} ^{\infty} f(x) \delta(kx) \mathrm{d} x = \int_{-\infty} ^{\infty} f(x) \left[ \frac{1}{|k|} \delta(x) \right] \mathrm{d} x
 \]</div>
-<p>According to our criterion <a class="reference internal" href="#equation-eq1-93">(77)</a>, therefore, <span class="math notranslate nohighlight">\( \delta(kx) \)</span> and <span class="math notranslate nohighlight">\( (1/|k|)\delta(x) \)</span> are equal.</p>
+<p>According to our criterion <a class="reference internal" href="#equation-eq1-93">(78)</a>, therefore, <span class="math notranslate nohighlight">\( \delta(kx) \)</span> and <span class="math notranslate nohighlight">\( (1/|k|)\delta(x) \)</span> are equal.</p>
 </div>
 </div>
 </section>
@@ -611,39 +611,40 @@ A</label><div class="sd-tab-content docutils">
 <h2>The Three-Dimensional Delta Function<a class="headerlink" href="#the-three-dimensional-delta-function" title="Link to this heading">#</a></h2>
 <p>It is easy to generalize the delta function to three dimensions:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-96">
-<span class="eqno">(78)<a class="headerlink" href="#equation-eq1-96" title="Link to this equation">#</a></span>\[
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq1-96" title="Link to this equation">#</a></span>\[
 \delta ^3 (\vec{r}) = \delta(x) \delta(y) \delta(z) 
 \]</div>
 <p>This three-dimensional delta function is zero everywhere except at (0, 0, 0), where it blows up. Its volume integral is 1.</p>
 <div class="math notranslate nohighlight" id="equation-eq1-97">
-<span class="eqno">(79)<a class="headerlink" href="#equation-eq1-97" title="Link to this equation">#</a></span>\[
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1-97" title="Link to this equation">#</a></span>\[
 \int_{\text{all space}} \delta ^3 (\vec{r}) \mathrm{d} \tau = \int_{-\infty} ^{\infty} \mathrm{d} x \int_{-\infty} ^{\infty} \mathrm{d} y \int_{-\infty} ^{\infty} \mathrm{d} z \delta(x) \delta(y) \delta(z) = 1 
 \]</div>
-<p>And, generalizing <a class="reference internal" href="#equation-eq1-92">(76)</a></p>
+<p>And, generalizing <a class="reference internal" href="#equation-eq1-92">(77)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq1-98">
-<span class="eqno">(80)<a class="headerlink" href="#equation-eq1-98" title="Link to this equation">#</a></span>\[
+<span class="eqno">(81)<a class="headerlink" href="#equation-eq1-98" title="Link to this equation">#</a></span>\[
 \int_{\text{all space}} f(\vec{r}) \delta^3(\vec{r} - \vec{a}) \mathrm{d} \tau = f(\vec{a}) 
 \]</div>
 <p>As in the one-dimensional case, integration with <span class="math notranslate nohighlight">\( \delta \)</span>  picks out the value of the function f at the location of the spike.</p>
 <p>We are now in a position to resolve the paradox introduced in Sect. 1.5.1. As you will recall, we found that the divergence of <span class="math notranslate nohighlight">\( \hat{r}/r^2 \)</span>  is zero everywhere except at the origin, and yet its integral over any volume containing the origin is a constant (to wit: <span class="math notranslate nohighlight">\( 4\pi \)</span> ). These are precisely the defining conditions for the Dirac delta function; evidently</p>
 <div class="math notranslate nohighlight" id="equation-eq1-99">
-<span class="eqno">(81)<a class="headerlink" href="#equation-eq1-99" title="Link to this equation">#</a></span>\[
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq1-99" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \left( \frac{\hat{r}}{r^2} \right) = 4 \pi \delta^3(\vec{r}) 
 \]</div>
 <p>More generally,</p>
+<!-- TODO: Figure out how to add the cursive r  -->
 <div class="math notranslate nohighlight" id="equation-eq1-100">
-<span class="eqno">(82)<a class="headerlink" href="#equation-eq1-100" title="Link to this equation">#</a></span>\[
-\nabla \cdot  \left( \frac{\hat{\Delta r }}{\Delta r ^2} \right) = 4 \pi \delta^3(\Delta r ) 
+<span class="eqno">(83)<a class="headerlink" href="#equation-eq1-100" title="Link to this equation">#</a></span>\[
+\nabla \cdot  \left( \frac{\hat{\rcurs }}{\rcurs ^2} \right) = 4 \pi \delta^3(\rcurs ) 
 \]</div>
-<p>where, as always, <span class="math notranslate nohighlight">\( \vec{\Delta r } \)</span> is the separation vector <span class="math notranslate nohighlight">\( \vec{\Delta r } \equiv \vec{r} - \vec{r'} \)</span>. Note that differentiation here is with respect to <span class="math notranslate nohighlight">\( \vec{r} \)</span>, while <span class="math notranslate nohighlight">\( \vec{r'} \)</span> is held constant. Incidentally, since</p>
+<p>where, as always, <span class="math notranslate nohighlight">\( \vec{\rcurs } \)</span> is the separation vector <span class="math notranslate nohighlight">\( \vec{\rcurs } \equiv \vec{r} - \vec{r'} \)</span>. Note that differentiation here is with respect to <span class="math notranslate nohighlight">\( \vec{r} \)</span>, while <span class="math notranslate nohighlight">\( \vec{r'} \)</span> is held constant. Incidentally, since</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla  \left( \frac{1}{\Delta r } \right) = - \frac{\hat{\Delta r }}{\Delta r  ^2} 
+\nabla  \left( \frac{1}{\rcurs } \right) = - \frac{\hat{\rcurs }}{\rcurs  ^2} 
 \]</div>
 <p>(from Problem 1.13), it follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-102">
-<span class="eqno">(83)<a class="headerlink" href="#equation-eq1-102" title="Link to this equation">#</a></span>\[
-\nabla^2 \frac{1}{\Delta r } = - 4 \pi \delta^3 (\vec{\Delta r }) 
+<span class="eqno">(84)<a class="headerlink" href="#equation-eq1-102" title="Link to this equation">#</a></span>\[
+\nabla^2 \frac{1}{\rcurs } = - 4 \pi \delta^3 (\vec{\rcurs }) 
 \]</div>
 <section id="example-1-16">
 <h3>Example 1.16<a class="headerlink" href="#example-1-16" title="Link to this heading">#</a></h3>
@@ -662,7 +663,7 @@ J = \int_V (r^2 + 2) \nabla \cdot  \left( \frac{\hat{r}}{r^2} \right) \mathrm{d}
 <label class="sd-tab-label" for="sd-tab-item-5">
 A</label><div class="sd-tab-content docutils">
 <p><strong>Solution 1</strong>
-Use <a class="reference internal" href="#equation-eq1-99">(81)</a> to rewrite the divergence, and <a class="reference internal" href="#equation-eq1-98">(80)</a> to do the integral:</p>
+Use <a class="reference internal" href="#equation-eq1-99">(82)</a> to rewrite the divergence, and <a class="reference internal" href="#equation-eq1-98">(81)</a> to do the integral:</p>
 <div class="math notranslate nohighlight">
 \[
 J = \int_V (r^2 + 2) 4 \pi \delta ^3(\vec{r}) \mathrm{d} \tau = 4 \pi (0 + 2) = 8 \pi

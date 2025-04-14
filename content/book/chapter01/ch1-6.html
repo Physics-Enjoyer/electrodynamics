@@ -58,7 +58,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"rcurs": "\\Delta r"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter01/ch1-6';</script>
     <link rel="icon" href="../../../_static/favicon.ico"/>
@@ -487,7 +487,7 @@ document.write(`
 <h2>1.6.2: Potentials<a class="headerlink" href="#potentials" title="Link to this heading">#</a></h2>
 <p>If the curl of a vector field (<strong>F</strong>) vanishes (everywhere), then <strong>F</strong> can be written as the gradient of a <strong>scalar potential</strong> (V):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-103">
-<span class="eqno">(84)<a class="headerlink" href="#equation-eq1-103" title="Link to this equation">#</a></span>\[
+<span class="eqno">(85)<a class="headerlink" href="#equation-eq1-103" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{F} = 0 \Longleftrightarrow \vec{F} = - \nabla  V 
 \]</div>
 <p>(The minus sign is purely conventional.) That’s the essential burden of the following theorem:</p>
@@ -514,7 +514,7 @@ document.write(`
 <p>The potential is not unique, and any constant can be added to V with impunity, since this will not affect its gradient.</p>
 <p>If the divergence of a vector field (<strong>F</strong>) vanishes (everywhere), then <strong>F</strong> can be expressed as the curl of a <strong>vector potential</strong> (<strong>A</strong>):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-104">
-<span class="eqno">(85)<a class="headerlink" href="#equation-eq1-104" title="Link to this equation">#</a></span>\[
+<span class="eqno">(86)<a class="headerlink" href="#equation-eq1-104" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{F} = 0 \Longleftrightarrow \vec{F} = \nabla \times  \vec{A} 
 \]</div>
 <p>That’s the main conclusion of the following theorem:</p>
@@ -541,7 +541,7 @@ document.write(`
 <p>The vector potential is not unique - the gradient of any scalar function can be added to <strong>A</strong> without affecting the curl, since the curl of a gradient is zero.</p>
 <p>Incidentally, in <em>all</em> cases (whatever its curl and divergence may be), a vector field <strong>F</strong> can be written as the gradient of a scalar plus the curl of a vector:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-105">
-<span class="eqno">(86)<a class="headerlink" href="#equation-eq1-105" title="Link to this equation">#</a></span>\[
+<span class="eqno">(87)<a class="headerlink" href="#equation-eq1-105" title="Link to this equation">#</a></span>\[
 \vec{F} = - \nabla  V + \nabla \times  \vec{A} \quad \text{(always)} 
 \]</div>
 <blockquote>

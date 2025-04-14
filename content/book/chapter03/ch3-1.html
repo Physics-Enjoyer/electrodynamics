@@ -58,7 +58,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"rcurs": "\\Delta r"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/book/chapter03/ch3-1';</script>
     <link rel="icon" href="../../../_static/favicon.ico"/>
@@ -478,28 +478,28 @@ document.write(`
 <h2>3.1.1: Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>The primary task of electrostatics is to find the electric field of a given stationary charge distribution. In principle, this purpose is accomplished by Coulomb’s law, in the form of</p>
 <div class="math notranslate nohighlight" id="equation-eq3-1">
-<span class="eqno">(137)<a class="headerlink" href="#equation-eq3-1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(138)<a class="headerlink" href="#equation-eq3-1" title="Link to this equation">#</a></span>\[
 \vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'}
 \]</div>
 <p>Unfortunately, integrals of this type can be difficult to calculate for any but the simplest charge configurations. Occasionally we can get around this by exploiting symmetry and using Gauss’s law, but ordinarily the best strategy is first to calculate the <em>potential</em>, V, which is given by the somewhat more tractable</p>
 <div class="math notranslate nohighlight" id="equation-eq3-2">
-<span class="eqno">(138)<a class="headerlink" href="#equation-eq3-2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(139)<a class="headerlink" href="#equation-eq3-2" title="Link to this equation">#</a></span>\[
 V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'} 
 \]</div>
 <p>Still, even <em>this</em> integral is often too tough to handle analytically. Moreover, in problems involving conductors <span class="math notranslate nohighlight">\( \rho \)</span> itself may not be known in advance; since charge is free to move around, the only thing we control directly is the total charge (or perhaps the potential) of each conductor.</p>
 <p>In such cases, it is fruitful to recast the problem in differential form, using Poisson’s equation</p>
 <div class="math notranslate nohighlight" id="equation-eq3-3">
-<span class="eqno">(139)<a class="headerlink" href="#equation-eq3-3" title="Link to this equation">#</a></span>\[
+<span class="eqno">(140)<a class="headerlink" href="#equation-eq3-3" title="Link to this equation">#</a></span>\[
 \nabla^2{V} = - \frac{1}{\epsilon_0} \rho
 \]</div>
-<p>which, together with appropriate boundary conditions, is equivalent to <a class="reference internal" href="#equation-eq3-2">(138)</a>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
+<p>which, together with appropriate boundary conditions, is equivalent to <a class="reference internal" href="#equation-eq3-2">(139)</a>. Very often, in fact, we are interested in finding the potential in a region where <span class="math notranslate nohighlight">\( \rho = 0 \)</span>. (If <span class="math notranslate nohighlight">\( \rho = 0 \)</span> everywhere, of course, then <span class="math notranslate nohighlight">\( V = 0  \)</span>, and there is nothing further to say - that’s not what I mean. There may be plenty of charge elsewhere, but we’re confining our attention to places where there is no charge.) In this case, Poisson’s equation reduces to Laplace’s equation</p>
 <div class="math notranslate nohighlight" id="equation-eq3-4">
-<span class="eqno">(140)<a class="headerlink" href="#equation-eq3-4" title="Link to this equation">#</a></span>\[
+<span class="eqno">(141)<a class="headerlink" href="#equation-eq3-4" title="Link to this equation">#</a></span>\[
 \nabla^2{V} = 0
 \]</div>
 <p>or, written out in Cartesian coordinates,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-5">
-<span class="eqno">(141)<a class="headerlink" href="#equation-eq3-5" title="Link to this equation">#</a></span>\[
+<span class="eqno">(142)<a class="headerlink" href="#equation-eq3-5" title="Link to this equation">#</a></span>\[
 \frac{\partial^2{V}}{\partial{x^2}} + \frac{\partial^2 V}{\partial{y^2}} + \frac{\partial^2{V}}{\partial{z^2}}  = 0
 \]</div>
 <p>This formula is so fundamental to the subject that one might almost say electrostatics is the study of Laplace’s equation. At the same time, it is a ubiquitous equation, appearing in such diverse branches of physics as gravitation and magnetism, the theory of heat, and the study of soap bubbles. In mathematics, it plays a major role in analytic function theory. To get a feel for Laplace’s equation and its solutions (which are called <strong>harmonic functions</strong>), we shall begin with the one- and two-dimensional versions, which are easier to picture, and illustrate all the essential properties of the three-dimensional case.</p>
@@ -513,7 +513,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{
 \]</div>
 <p>The general solution is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-6">
-<span class="eqno">(142)<a class="headerlink" href="#equation-eq3-6" title="Link to this equation">#</a></span>\[
+<span class="eqno">(143)<a class="headerlink" href="#equation-eq3-6" title="Link to this equation">#</a></span>\[
 V(x) = mx + b
 \]</div>
 <p>the equation for a straight line. It contains two undetermined constants (m and b), as is appropriate for a second-order (ordinary) differential equation. They are fixed, in any particular case, by the boundary conditions of that problem. For instance, it might be specified that <span class="math notranslate nohighlight">\( V = 4 \)</span>  at <span class="math notranslate nohighlight">\( x = 1 \)</span> and <span class="math notranslate nohighlight">\( V = 0 \)</span> at <span class="math notranslate nohighlight">\( x = 5 \)</span>. In that case, <span class="math notranslate nohighlight">\( m = -1 \)</span> and <span class="math notranslate nohighlight">\( b = 5 \)</span>, so <span class="math notranslate nohighlight">\( V = - x + 5 \)</span>  (See Fig. 3.1)</p>
@@ -538,7 +538,7 @@ V(x) = \frac{1}{2} [V(x + a) + V(x-a)]
 \[
 \frac{\partial^2{V}}{\partial{x^2}} + \frac{\partial^2{V}}{\partial{y^2}} = 0 
 \]</div>
-<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <a class="reference internal" href="#equation-eq3-6">(142)</a>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
+<p>This is no longer an <em>ordinary</em> differential equation (that is, one involving ordinary derivatives only); it is a partial differential equation. As a consequence, some of the simple rules you may be familiar with do not apply. For instance, the general solution to this equation doesn’t contain just two arbitrary constants - or, for that matter, any finite number - despite the fact that it’s a second order equation. Indeed, one cannot write down a “general solution” (at least, not in a closed form like <a class="reference internal" href="#equation-eq3-6">(143)</a>). Nevertheless, it is possible to deduce certain properties common to all solutions.</p>
 <p><img alt="Figure 3.2" src="../../../_images/3.2.png" /></p>
 <p>It may help to have a physical example in mind. Picture a thin rubber sheet (or a soap film) stretched over some support. For definiteness, suppose you take a cardboard box, cut a wavy line all the way around, and remove the top part (Fig. 3.2). Now glue a tightly stretched rubber membrane over the box, so that it fits like a drum head (it won’t be a flat drumhead, of course, unless you choose to cut the edges off straight). Now, if you lay out the coordinates (x, y) on the bottom of the box, the height V(x, y) of the sheet above the point (x, y) will satisfy Laplace’s equation. (The one-dimensional analog would be a rubber band stretched between two points. Of course, it would form a straight line.)</p>
 <!-- TODO: Fill in equation for rubber sheet -->
@@ -698,12 +698,12 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>which obeys</p>
 <div class="math notranslate nohighlight" id="equation-eq3-7">
-<span class="eqno">(143)<a class="headerlink" href="#equation-eq3-7" title="Link to this equation">#</a></span>\[
+<span class="eqno">(144)<a class="headerlink" href="#equation-eq3-7" title="Link to this equation">#</a></span>\[
 \nabla \cdot {\vec{E_3}} = 0
 \]</div>
 <p>in the region between the conductors, and</p>
 <div class="math notranslate nohighlight" id="equation-eq3-8">
-<span class="eqno">(144)<a class="headerlink" href="#equation-eq3-8" title="Link to this equation">#</a></span>\[
+<span class="eqno">(145)<a class="headerlink" href="#equation-eq3-8" title="Link to this equation">#</a></span>\[
 \oint \vec{E_3} \cdot \mathrm{d}{\vec{a}} = 0
 \]</div>
 <p>over each boundary surface.
@@ -712,12 +712,12 @@ Now there is one final piece of information we must exploit: Although we do not 
 \[
 \nabla \cdot {(V_3 \vec{E_3})} = V_3 (\nabla \cdot {\vec{E_3}}) + \vec{E_3} \cdot (\nabla {V_3}) = - (E_3)^2
 \]</div>
-<p>Here I have used <a class="reference internal" href="#equation-eq3-7">(143)</a> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
+<p>Here I have used <a class="reference internal" href="#equation-eq3-7">(144)</a> and <span class="math notranslate nohighlight">\( \vec{E_3} = - \nabla {V_3} \)</span>. Integrating this over <span class="math notranslate nohighlight">\( \mathscr{V} \)</span> and applying the divergence theorem to the left side:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathscr{V}} \nabla \cdot {(V_3 \vec{E_3})} \mathrm{d}{\tau} = \oint_{S} V_3 \vec{E_3} \cdot \mathrm{d}{\vec{a}} = - \int_{\mathscr{V}} (E_3)^2 \mathrm{d}{\tau}
 \]</div>
-<p>The surface integral covers all boundaries of the region in question  the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is infinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <a class="reference internal" href="#equation-eq3-8">(144)</a>. Therefore</p>
+<p>The surface integral covers all boundaries of the region in question  the conductors and outer boundary. Now <span class="math notranslate nohighlight">\( V_3 \)</span> is a constant over each surface (if the outer boundary is infinity, <span class="math notranslate nohighlight">\( V_3 = 0 \)</span> there), so it comes outside each integral, and what remains is zero, according to <a class="reference internal" href="#equation-eq3-8">(145)</a>. Therefore</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathscr{V}}(E_3)^2 \mathrm{d}{\tau} = 0
