@@ -472,68 +472,68 @@ document.write(`
 <h1>2.3: Electric Potential<a class="headerlink" href="#electric-potential" title="Link to this heading">#</a></h1>
 <section id="introduction-to-potential">
 <h2>2.3.1: Introduction to Potential<a class="headerlink" href="#introduction-to-potential" title="Link to this heading">#</a></h2>
-<p>The electric field <strong>E</strong> is not just <em>any</em> old vector function. It is a very special <em>kind</em> of vector function: one whose curl is zero. <span class="math notranslate nohighlight">\( \vec{E} = y \hat{x} \)</span> , for example, could not possibly be an electrostatic field; <em>no</em> set of charges, regardless of their sizes and positions, could ever produce such a field. We’re going to exploit this special property of electric fields to reduce a <em>vector</em> problem (finding <strong>E</strong>) to a much simpler <em>scalar</em> problem. The first theorem in Sect 1.6.2 asserts that any vector whose curl is zero is equal to the gradient of some scalar. What I’m going to do now amounts to a proof of that claim, in the context of electrostatics.</p>
+<p>The electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span> is not just <em>any</em> old vector function. It is a very special <em>kind</em> of vector function: one whose curl is zero. <span class="math notranslate nohighlight">\( \vec{E} = y \hat{x} \)</span> , for example, could not possibly be an electrostatic field; <em>no</em> set of charges, regardless of their sizes and positions, could ever produce such a field. We’re going to exploit this special property of electric fields to reduce a <em>vector</em> problem (finding <span class="math notranslate nohighlight">\(\vec{E}\)</span>) to a much simpler <em>scalar</em> problem. The first theorem in Sect 1.6.2 asserts that any vector whose curl is zero is equal to the gradient of some scalar. What I’m going to do now amounts to a proof of that claim, in the context of electrostatics.</p>
 <p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
-<p>Because <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0\)</span> , the line integral of <strong>E</strong> around any closed loop is zero (that follows from Stokes’ theorem). Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} = 0 \)</span>, the line integral of <strong>E</strong> from point <strong>a</strong> to point <strong>b</strong> is the same for all paths (otherwise you could go <em>out</em> along path (i) and return along path (ii) - Fig 2.30 - and obtain <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot \mathrm{d}{\vec{l}} \neq 0 \)</span> ). Because the line integral is independent of path, we can define a function</p>
+<p>Because <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0\)</span> , the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> around any closed loop is zero (that follows from Stokes’ theorem). Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot d{\vec{l}} = 0 \)</span>, the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> from point <span class="math notranslate nohighlight">\(a\)</span> to point <span class="math notranslate nohighlight">\(b\)</span> is the same for all paths (otherwise you could go <em>out</em> along path (i) and return along path (ii) - Fig 2.30 - and obtain <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot d{\vec{l}} \neq 0 \)</span> ). Because the line integral is independent of path, we can define a function</p>
 <div class="math notranslate nohighlight" id="equation-eq2-21">
 <span class="eqno">(105)<a class="headerlink" href="#equation-eq2-21" title="Link to this equation">#</a></span>\[
-V(\vec{r}) \equiv - \int _{O} ^{\vec{r}} \vec{E} \cdot \mathrm{d}{\vec{l}}
+V(\vec{r}) \equiv - \int _{\mathcal{O}} ^{\vec{r}} \vec{E} \cdot d{\vec{l}}
 \]</div>
-<p>Here <span class="math notranslate nohighlight">\( O \)</span> is some standard reference point on which we have agreed beforehand; V then depends only on the point <span class="math notranslate nohighlight">\( \vec{r} \)</span>. It is called the <strong>electric potential</strong>.</p>
-<p>The potential <em>difference</em> between two points <strong>a</strong> and <strong>b</strong> is</p>
+<p>Here <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> is some standard reference point on which we have agreed beforehand; <span class="math notranslate nohighlight">\(V\)</span> then depends only on the point <span class="math notranslate nohighlight">\( \vec{r} \)</span>. It is called the <strong>electric potential</strong>.</p>
+<p>The potential <em>difference</em> between two points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-22">
 <span class="eqno">(106)<a class="headerlink" href="#equation-eq2-22" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
-V(\vec{b}) - V(\vec{a}) &amp; = &amp; -\int_{O}^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}} + \int_{O}^{\vec{a}} \vec{E} \cdot \mathrm{d}{\vec{l}} \\
-&amp; = &amp; -\int_{O}^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}} - \int_{\vec{a}}^{O} \vec{E}\cdot \mathrm{d}{\vec{l}} \\
-&amp; = &amp; - \int_{\vec{a}} ^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}}
+V(\vec{b}) - V(\vec{a}) &amp; = &amp; -\int_{\mathcal{O}}^{\vec{b}} \vec{E}\cdot d{\vec{l}} + \int_{\mathcal{O}}^{\vec{a}} \vec{E} \cdot d{\vec{l}} \\
+&amp; = &amp; -\int_{\mathcal{O}}^{\vec{b}} \vec{E}\cdot d{\vec{l}} - \int_{\vec{a}}^{\mathcal{O}} \vec{E}\cdot d{\vec{l}} \\
+&amp; = &amp; - \int_{\vec{a}} ^{\vec{b}} \vec{E}\cdot d{\vec{l}}
 \end{aligned}
 \end{split}\]</div>
 <p>Now, the fundamental theorem for gradients states that</p>
 <div class="math notranslate nohighlight">
 \[
-V(\vec{b}) - V(\vec{a}) = \int_{\vec{a}} ^{\vec{b}} (\nabla {V}) \cdot \mathrm{d}{\vec{l}}
+V(\vec{b}) - V(\vec{a}) = \int_{\vec{a}} ^{\vec{b}} (\nabla {V}) \cdot d{\vec{l}}
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[
-\int_{\vec{a}}^{\vec{b}} (\nabla {V})\cdot \mathrm{d}{\vec{l}} = - \int_{\vec{a}}^{\vec{b}} \vec{E}\cdot \mathrm{d}{\vec{l}}
+\int_{\vec{a}}^{\vec{b}} (\nabla {V})\cdot d{\vec{l}} = - \int_{\vec{a}}^{\vec{b}} \vec{E}\cdot d{\vec{l}}
 \]</div>
-<p>Since, finally, this is true for <em>any</em> points <strong>a</strong> and <strong>b</strong>, the integrands must be equal:</p>
+<p>Since, finally, this is true for <em>any</em> points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, the integrands must be equal:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-23">
 <span class="eqno">(107)<a class="headerlink" href="#equation-eq2-23" title="Link to this equation">#</a></span>\[
 \vec{E} = - \nabla {V}
 \]</div>
 <p>Equation <a class="reference internal" href="#equation-eq2-23">(107)</a> is the differential version of <a class="reference internal" href="#equation-eq2-21">(105)</a>; it says that the electric field is the gradient of a scalar potential, which is what we set out to prove.</p>
-<p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <strong>E</strong> depended on the path taken, then the “definition” of V <a class="reference internal" href="#equation-eq2-21">(105)</a> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <a class="reference internal" href="#equation-eq2-23">(107)</a> distract you; it carries over from <a class="reference internal" href="#equation-eq2-21">(105)</a> and is largely a matter of convention.</p>
+<p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> depended on the path taken, then the “definition” of <span class="math notranslate nohighlight">\(V\)</span> <a class="reference internal" href="#equation-eq2-21">(105)</a> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <a class="reference internal" href="#equation-eq2-23">(107)</a> distract you; it carries over from <a class="reference internal" href="#equation-eq2-21">(105)</a> and is largely a matter of convention.</p>
 </section>
 <section id="comments-on-potential">
 <h2>2.3.2: Comments on Potential<a class="headerlink" href="#comments-on-potential" title="Link to this heading">#</a></h2>
-<p><strong>The name</strong>. The word “potential” is a hideous misnomer because it inevitably reminds you of potential <em>energy</em>. This is particularly insidious, because there <em>is</em> a connection between “potential” and “potential energy,” as you will see in Sect 2.4. I’m sorry that it is impossible to escape this word. The best I can do is to insist once and for all that “potential” and “potential energy” are completely different terms and should, by all rights, have different names. Incidentially, a surface over which the potential is constant is called an <strong>equipotential</strong>.</p>
-<p><strong>Advantage of the potential formulation</strong>. If you know V, you can easily get <strong>E</strong> - just take the gradient: <span class="math notranslate nohighlight">\( \vec{E} =- \nabla {V} \)</span>. This is quite extraordinary when you stop to think about it, for <strong>E</strong> is a <em>vector</em> quantity (three components), but V is a <strong>scalar</strong> (one component). How can one function possibly contain all the information that three independent functions carry? The answer is that the three components of <strong>E</strong> are not really as independent as they look; in fact, they are explicitly interrelated by the very condition we started with,<span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span>. In terms of components,</p>
+<p><strong>The name</strong>. The word “potential” is a hideous misnomer because it inevitably reminds you of potential <em>energy</em>. This is particularly insidious, because there <em>is</em> a connection between “potential” and “potential energy,” as you will see in Sect 2.4. I’m sorry that it is impossible to escape this word. The best I can do is to insist once and for all that “potential” and “potential energy” are completely different terms and should, by all rights, have different names. Incidentally, a surface over which the potential is constant is called an <strong>equipotential</strong>.</p>
+<p><strong>Advantage of the potential formulation</strong>. If you know <span class="math notranslate nohighlight">\(V\)</span>, you can easily get <span class="math notranslate nohighlight">\(\vec{E}\)</span> - just take the gradient: <span class="math notranslate nohighlight">\( \vec{E} =- \nabla {V} \)</span>. This is quite extraordinary when you stop to think about it, for <span class="math notranslate nohighlight">\(\vec{E}\)</span> is a <em>vector</em> quantity (three components), but <span class="math notranslate nohighlight">\(V\)</span> is a <strong>scalar</strong> (one component). How can one function possibly contain all the information that three independent functions carry? The answer is that the three components of <span class="math notranslate nohighlight">\(\vec{E}\)</span> are not really as independent as they look; in fact, they are explicitly interrelated by the very condition we started with, <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span>. In terms of components,</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial E_x}{\partial y} = \frac{\partial E_y}{\partial x}, \qquad \frac{\partial E_z}{\partial y} = \frac{\partial E_y}{\partial z}, \qquad \frac{\partial E_x}{\partial z} = \frac{\partial E_z}{\partial x}
 \]</div>
-<p>This brings us back to my observation at the beginning of Sect 2.3.1: <strong>E</strong> is a very special kind of vector.What the potential formulation does is to exploit this feature to maximum advantage, reducing a vector problem to a scalar one, in which there is no need to fuss with components.</p>
-<p><strong>The reference point <span class="math notranslate nohighlight">\( \mathscr{O} \)</span></strong>. There is an essential ambiguity in the definition of potential, since the choice of reference point <span class="math notranslate nohighlight">\( \mathscr{O} \)</span> was arbitrary. Changing reference points amounts to adding a constant K to the potential:</p>
+<p>This brings us back to my observation at the beginning of Sect 2.3.1: <span class="math notranslate nohighlight">\(\vec{E}\)</span> is a very special kind of vector. What the potential formulation does is to exploit this feature to maximum advantage, reducing a vector problem to a scalar one, in which there is no need to fuss with components.</p>
+<p><strong>The reference point</strong> <span class="math notranslate nohighlight">\( \mathcal{O} \)</span>. There is an essential ambiguity in the definition of potential, since the choice of reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> was arbitrary. Changing reference points amounts to adding a constant K to the potential:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-V'(r) =  -\int_{\mathscr{O}'}^{\vec{r}} \vec{E} \cdot \mathrm{d}{\vec{l}} \\ 
-= - \int_{\mathscr{O}'} ^{\mathscr{O}} \vec{E} \cdot \mathrm{d}{\vec{l}} - \int_{\mathscr{O}}^{\vec{r}} \vec{E} \cdot \mathrm{d}{\vec{l}} \\
+V'(r) =  -\int_{\mathcal{O}'}^{\vec{r}} \vec{E} \cdot d{\vec{l}} \\ 
+= - \int_{\mathcal{O}'} ^{\mathcal{O}} \vec{E} \cdot d{\vec{l}} - \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d{\vec{l}} \\
 =  K + V(\vec{r})
 \end{split}\]</div>
-<p>where K is the line integral of <strong>E</strong> from the old reference point <span class="math notranslate nohighlight">\( \mathscr{O} \)</span> to the new one <span class="math notranslate nohighlight">\( \mathscr{O}' \)</span>. Of course, adding a constant to V will not affect the potential <em>difference</em> between two points, since the K’s cancel out. Nor does the ambiguity affect the gradient of V:</p>
+<p>where K is the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> from the old reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> to the new one <span class="math notranslate nohighlight">\( \mathcal{O}' \)</span>. Of course, adding a constant to <span class="math notranslate nohighlight">\(V\)</span> will not affect the potential <em>difference</em> between two points, since the K’s cancel out. Nor does the ambiguity affect the gradient of <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla {V'} = \nabla {V} 
 \]</div>
-<p>since the derivative of a constant is zero. That’s why all such V’s, differing only in their choice of reference point, correspond to the same field <strong>E</strong></p>
-<p>Potential as such carries no real physical significance, for at any given point we can adjust its value at will by suitable relocation of <span class="math notranslate nohighlight">\( \mathscr{O} \)</span>. In this sense, it is rather like altitude: if I ask you how high Denver is, you will probably tell me its height above sea level, because that is a convenient and traditional reference point. But we could as well agree to measure altitude above Washington, DC, or Greenwich, or wherever. That would add (or rather, subtract) a fixed amount from all our sea-level readings, but it wouldn’t change anything about the real world. The only quantity of interest is the <em>difference</em> in altitude between two points, and that is the same whatever your reference level.</p>
-<p>Having said this, however, there is a “natural” spot to use for <span class="math notranslate nohighlight">\( \mathscr{O} \)</span> in electrostatics - analogous to sea level for altitude - and that is a point infinitely far from the charge. Ordinarily, then, we “set the zero of potential at infinity.” (Since <span class="math notranslate nohighlight">\( V(\mathscr{O}) = 0 \)</span>, choosing a reference point is equivalent to selecting a place where <span class="math notranslate nohighlight">\( V \)</span> is to be zero.) But I must warn you that there is one special circumstance in which this convention fails: when the charge distribution itself extends to infinity. The symptom of trouble, in such cases, is that the potential blows up. For instance, the field of a uniformly charged plane is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, as we found in Ex 2.5; if we naively put <span class="math notranslate nohighlight">\( \mathscr{O} = \infty \)</span>, then the potential at height <em>z</em> above the plane becomes</p>
+<p>since the derivative of a constant is zero. That’s why all such <span class="math notranslate nohighlight">\(V\)</span>’s, differing only in their choice of reference point, correspond to the same field <span class="math notranslate nohighlight">\(\vec{E}\)</span></p>
+<p>Potential as such carries no real physical significance, for at any given point we can adjust its value at will by suitable relocation of <span class="math notranslate nohighlight">\( \mathcal{O} \)</span>. In this sense, it is rather like altitude: if I ask you how high Denver is, you will probably tell me its height above sea level, because that is a convenient and traditional reference point. But we could as well agree to measure altitude above Washington, DC, or Greenwich, or wherever. That would add (or rather, subtract) a fixed amount from all our sea-level readings, but it wouldn’t change anything about the real world. The only quantity of interest is the <em>difference</em> in altitude between two points, and that is the same whatever your reference level.</p>
+<p>Having said this, however, there is a “natural” spot to use for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> in electrostatics - analogous to sea level for altitude - and that is a point infinitely far from the charge. Ordinarily, then, we “set the zero of potential at infinity.” (Since <span class="math notranslate nohighlight">\( V(\mathcal{O}) = 0 \)</span>, choosing a reference point is equivalent to selecting a place where <span class="math notranslate nohighlight">\(V\)</span> is to be zero.) But I must warn you that there is one special circumstance in which this convention fails: when the charge distribution itself extends to infinity. The symptom of trouble, in such cases, is that the potential blows up. For instance, the field of a uniformly charged plane is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, as we found in Ex 2.5; if we naively put <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>, then the potential at height <em>z</em> above the plane becomes</p>
 <div class="math notranslate nohighlight">
 \[
-V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma \mathrm{d}{z} = - \frac{1}{2\epsilon_0} \sigma(z - \infty)
+V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma d{z} = - \frac{1}{2\epsilon_0} \sigma(z - \infty)
 \]</div>
 <p>The remedy is simply to choose some other reference point (in this example you might use a point on the plane). Notice that the difficulty occurs only in textbook problems; in “real life” there is no such thing as a charge distribution that goes on forever, and we can <em>always</em> use infinity as our reference point.</p>
 <p><strong>Potential obeys the superposition principle</strong>. The original superposition principle pertains to the force on a test charge Q. It says that the total force on <em>Q</em> is the vector sum of the forces attributable to the source charges individually:</p>
@@ -541,7 +541,7 @@ V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma \mathrm{d}{z} = - \frac{1
 \[
 \vec{F} = \vec{F_1} + \vec{F_2} + \ldots
 \]</div>
-<p>Dividing through by Q, we see that the electric field, too, obeys the superposition principle:</p>
+<p>Dividing through by <span class="math notranslate nohighlight">\(Q\)</span>, we see that the electric field, too, obeys the superposition principle:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E} = \vec{E_1} + \vec{E_2} + \ldots
@@ -552,7 +552,7 @@ V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma \mathrm{d}{z} = - \frac{1
 V = V_1 + V_2 + \ldots
 \]</div>
 <p>That is, the potential at any given point is the sum of the potentials due to all the source charges separately. Only this time it is an <em>ordinary</em> sum, not a vector sum, which makes it a lot easier to work with.</p>
-<p><strong>Units of Potential</strong>. In our units, force is measured in newtons and charge in coulombs, so electric fields are in newtons per coulomb. Accordingly, potential is newton-meters per coulomb, or joules per coulomb. A joule per coulomb is a <strong>volt</strong>.</p>
+<p><strong>Units of Potential</strong>. In our units, force is measured in newtons and charge in coulombs, so electric fields are in newtons per coulomb. Accordingly, potential is newton-meters per coulomb, or joules per coulomb. A joule per coulomb is a <strong>Volt</strong>.</p>
 </section>
 <section id="poisson-s-equation-and-laplace-s-equation">
 <h2>2.3.3: Poisson’s Equation and Laplace’s Equation<a class="headerlink" href="#poisson-s-equation-and-laplace-s-equation" title="Link to this heading">#</a></h2>
@@ -561,12 +561,12 @@ V = V_1 + V_2 + \ldots
 \[
 \vec{E} = - \nabla {V}
 \]</div>
-<p>The question arises, what do the divergence and curl of <strong>E</strong>,</p>
+<p>The question arises, what do the divergence and curl of <span class="math notranslate nohighlight">\(\vec{E}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot {\vec{E}} = \frac{\rho}{\epsilon_0} \qquad \text{ and } \qquad \nabla \times {\vec{E}} = 0
 \]</div>
-<p>look like, in terms of V? Well, <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{E}} = \nabla \cdot (-\nabla {V}) = -\nabla^2{V} \)</span>, so, apart from that persistent minus sign, the divergence of <strong>E</strong> is the Laplacian of V. Gauss’s law, then, says</p>
+<p>look like, in terms of <span class="math notranslate nohighlight">\(V\)</span>? Well, <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{E}} = \nabla \cdot (-\nabla {V}) = -\nabla^2{V} \)</span>, so, apart from that persistent minus sign, the divergence of <span class="math notranslate nohighlight">\(\vec{E}\)</span> is the Laplacian of <span class="math notranslate nohighlight">\(V\)</span>. Gauss’s law, then, says</p>
 <div class="math notranslate nohighlight" id="equation-eq2-24">
 <span class="eqno">(108)<a class="headerlink" href="#equation-eq2-24" title="Link to this equation">#</a></span>\[
 \nabla^2{V} = -\frac{\rho}{\epsilon_0}
@@ -582,24 +582,26 @@ V = V_1 + V_2 + \ldots
 \[
 \nabla \times {\vec{E}} = \nabla \times (-\nabla {V}) = 0
 \]</div>
-<p>But that’s no condition on V - curl of gradient is <em>always</em> zero. Of course, we used the curl law to show that <strong>E</strong> could be expressed as the gradient of a scalar, so it’s not really surprising that this works out: <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span> permits our definition of V; in return, <span class="math notranslate nohighlight">\( \vec{E} = - \nabla {V} \)</span> guarantees <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span>. It only takes one differential equation (Poisson’s) to determine V, because V is a scalar. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> we needed two, the divergence and the curl.</p>
+<p>But that’s no condition on <span class="math notranslate nohighlight">\(V\)</span> - curl of gradient is <em>always</em> zero. Of course, we used the curl law to show that <span class="math notranslate nohighlight">\(\vec{E}\)</span> could be expressed as the gradient of a scalar, so it’s not really surprising that this works out: <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span> permits our definition of <span class="math notranslate nohighlight">\(V\)</span>; in return, <span class="math notranslate nohighlight">\( \vec{E} = - \nabla {V} \)</span> guarantees <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span>. It only takes one differential equation (Poisson’s) to determine <span class="math notranslate nohighlight">\(V\)</span>, because <span class="math notranslate nohighlight">\(V\)</span> is a scalar. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> we needed two, the divergence and the curl.</p>
 </section>
 <section id="the-potential-of-a-localized-charge-distribution">
 <h2>2.3.4: The potential of a Localized Charge Distribution<a class="headerlink" href="#the-potential-of-a-localized-charge-distribution" title="Link to this heading">#</a></h2>
-<p>I defined V in terms of <span class="math notranslate nohighlight">\( \vec{E}\)</span> <a class="reference internal" href="#equation-eq2-21">(105)</a> . Ordinarily, though, it’s <strong>E</strong> that we’re looking for (if we already knew <strong>E</strong>, there wouldn’t be much point in calculating V). The idea is that it might be easier to get V first, and then calculate <strong>E</strong> by taking the gradient. Typically, then, we know where the charge is (that is, we know <span class="math notranslate nohighlight">\( \rho \)</span>), and we want to find V. Now, Poisson’s equation relates V and <span class="math notranslate nohighlight">\( \rho \)</span>, but unfortunately it’s “the wrong way round”: it would give us <span class="math notranslate nohighlight">\( \rho \)</span> if we knew V, whereas we want V, knowing <span class="math notranslate nohighlight">\( \rho \)</span>. What we must do, then, is “invert” Poisson’s equation. That’s the program for this section, although I shall do it by roundabout means, beginning, as always, with a point charge at the origin.</p>
-<p>The electric field is <span class="math notranslate nohighlight">\( \vec{E} = (1 / 4 \pi \epsilon_0)(1 / r^2) \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r}  \)</span>, and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} = \mathrm{d}{r} \hat{r} + r \mathrm{d}{\theta} \hat{\theta} + r \sin \theta \mathrm{d}{\theta} \hat{\phi} \)</span>, so</p>
+<p>I defined <span class="math notranslate nohighlight">\(V\)</span> in terms of <span class="math notranslate nohighlight">\( \vec{E}\)</span> <a class="reference internal" href="#equation-eq2-21">(105)</a> . Ordinarily, though, it’s <span class="math notranslate nohighlight">\(\vec{E}\)</span> that we’re looking for (if we already knew <span class="math notranslate nohighlight">\(\vec{E}\)</span>, there wouldn’t be much point in calculating <span class="math notranslate nohighlight">\(V\)</span>). The idea is that it might be easier to get <span class="math notranslate nohighlight">\(V\)</span> first, and then calculate <span class="math notranslate nohighlight">\(\vec{E}\)</span> by taking the gradient. Typically, then, we know where the charge is (that is, we know <span class="math notranslate nohighlight">\( \rho \)</span>), and we want to find <span class="math notranslate nohighlight">\(V\)</span>. Now, Poisson’s equation relates <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\( \rho \)</span>, but unfortunately it’s “the wrong way round”: it would give us <span class="math notranslate nohighlight">\( \rho \)</span> if we knew <span class="math notranslate nohighlight">\(V\)</span>, whereas we want <span class="math notranslate nohighlight">\(V\)</span>, knowing <span class="math notranslate nohighlight">\( \rho \)</span>. What we must do, then, is “invert” Poisson’s equation. That’s the program for this section, although I shall do it by roundabout means, beginning, as always, with a point charge at the origin.</p>
+<p>The electric field is <span class="math notranslate nohighlight">\( \vec{E} = (1 / 4 \pi \epsilon_0)(1 / r^2) \hat{r} \)</span>, and <span class="math notranslate nohighlight">\( d{\vec{l}} = d{r} \hat{r} + r d{\theta} \hat{\theta} + r \sin \theta d{\theta} \hat{\phi} \)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{E} \cdot \mathrm{d}{\vec{l}} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} \mathrm{d}{r} 
+\vec{E} \cdot d{\vec{l}} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} d{r} 
 \]</div>
 <p>Setting the reference point at infinity, the potential of a point charge <em>q</em> at the origin is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-V(r) = - \int_{\mathscr{O}} ^r \vec{E} \cdot \mathrm{d}{\vec{l}} \\
- = \frac{-1}{4 \pi \epsilon_0} \int_{\infty}^r \frac{q}{(r') ^2} \mathrm{d}{r'} \\
- = \left.\frac{1}{4 \pi \epsilon_0} \frac{q}{r'} \right| ^r _{\infty} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r} 
+\begin{aligned}
+V(r) &amp;= - \int_{\mathcal{O}} ^r \vec{E} \cdot d{\vec{l}} \\
+&amp;= \frac{-1}{4 \pi \epsilon_0} \int_{\infty}^r \frac{q}{(r') ^2} d{r'} \\
+&amp;= \left.\frac{1}{4 \pi \epsilon_0} \frac{q}{r'} \right| ^r _{\infty} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r} 
+\end{aligned}
 \end{split}\]</div>
-<p>(You see here the advantage of using infinity for the reference point: it kills the lower limit on the integral.) Notice the sign of V; presumably the conventional minus sign in the definition was chosen in order to make the potential of a positive charge come out positive. It is useful to remember that regions of positive charge are potential “hills,” and electric field points “downhill” from plus toward minus.</p>
+<p>(You see here the advantage of using infinity for the reference point: it kills the lower limit on the integral.) Notice the sign of <span class="math notranslate nohighlight">\(V\)</span>; presumably the conventional minus sign in the definition was chosen in order to make the potential of a positive charge come out positive. It is useful to remember that regions of positive charge are potential “hills,” and electric field points “downhill” from plus toward minus.</p>
 <p><img alt="Figure 2.32" src="../../../_images/2.32.png" /></p>
 <p>In general, the potential of a point charge q is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-26">
@@ -614,28 +616,28 @@ V(r) = \frac{1}{4\pi \epsilon_0} \sum_{i=1} ^n \frac{q_i}{\Delta r  _i}
 <p>or, for a continuous distribution,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-29">
 <span class="eqno">(112)<a class="headerlink" href="#equation-eq2-29" title="Link to this equation">#</a></span>\[
-V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } \mathrm{d}{\tau'}
+V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } d{\tau'}
 \]</div>
-<p>This is the equation we were looking for, telling us how to compute V when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(112)</a> with the corresponding formula for the electric field in terms of <span class="math notranslate nohighlight">\( \rho \)</span>:</p>
+<p>This is the equation we were looking for, telling us how to compute <span class="math notranslate nohighlight">\(V\)</span> when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(112)</a> with the corresponding formula for the electric field in terms of <span class="math notranslate nohighlight">\( \rho \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } \mathrm{d}{\tau'}
+\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } d{\tau'}
 \]</div>
 <p>The main point is that the pesky unit vector <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is gone, so there is no need to fuss with components. The potentials of line and surface charges are</p>
 <div class="math notranslate nohighlight" id="equation-eq2-30">
 <span class="eqno">(113)<a class="headerlink" href="#equation-eq2-30" title="Link to this equation">#</a></span>\[
-V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } \mathrm{d}{l'} \qquad \text{ and } \qquad V = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\Delta r } \mathrm{d}{a'}
+V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } d{l'} \qquad \text{ and } \qquad V = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\Delta r } d{a'}
 \]</div>
-<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(112)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathscr{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
+<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(112)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
 </section>
 <section id="boundary-conditions">
 <h2>2.3.5: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h2>
-<p>In the typical electrostatic problem you are given a source charge distribution <span class="math notranslate nohighlight">\( \rho \)</span>, and you want to find the electric field <span class="math notranslate nohighlight">\( \vec{E} \)</span> it produces. Unless the symmetry of the problem allows a solution by Gauss’s law, it is generally to your advantage to calculate the potential first, as an intermediate step. These are the three fundamental quantities of electrostatics: <span class="math notranslate nohighlight">\( \rho \)</span>, <span class="math notranslate nohighlight">\( \vec{E} \)</span>, and <span class="math notranslate nohighlight">\( V \)</span>. We have, in the course of our discussion, derived all six formulas interrelating them. These equations are neatly summarized in Fig. 2.35. We began with just two experimental observations: (1) the principle of superposition - a broad general rule applying to all electromagnetic forces, and (2) Coulomb’s law - the fundamental law of electrostatics. From these, all else followed.</p>
+<p>In the typical electrostatic problem you are given a source charge distribution <span class="math notranslate nohighlight">\( \rho \)</span>, and you want to find the electric field <span class="math notranslate nohighlight">\( \vec{E} \)</span> it produces. Unless the symmetry of the problem allows a solution by Gauss’s law, it is generally to your advantage to calculate the potential first, as an intermediate step. These are the three fundamental quantities of electrostatics: <span class="math notranslate nohighlight">\( \rho \)</span>, <span class="math notranslate nohighlight">\( \vec{E} \)</span>, and <span class="math notranslate nohighlight">\(V\)</span>. We have, in the course of our discussion, derived all six formulas interrelating them. These equations are neatly summarized in Fig. 2.35. We began with just two experimental observations: (1) the principle of superposition - a broad general rule applying to all electromagnetic forces, and (2) Coulomb’s law - the fundamental law of electrostatics. From these, all else followed.</p>
 <p><img alt="Figure 2.35" src="../../../_images/2.35.png" /></p>
 <p>You may have noticed, in studying the exercises in this chapter, that the electric field always undergoes a discontinuity when you cross a surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. In fact, it is a simple matter to find the <em>amount</em> by which E changes at such a boundary. Suppose we draw a wafer-thin Gaussian pillbox, extending just barely over the edge in each direction (Fig. 2.36). Gauss’s law says that</p>
 <div class="math notranslate nohighlight">
 \[
-\oint _{S} \vec{E} \cdot \mathrm{d}{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} = \frac{1}{\epsilon_0} \sigma A
+\oint _{S} \vec{E} \cdot d{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} = \frac{1}{\epsilon_0} \sigma A
 \]</div>
 <p><img alt="Figure 2.36" src="../../../_images/2.36.png" />
 where A is the area of the pillbox lid. If <span class="math notranslate nohighlight">\( \sigma \)</span>  varies from point to point or the surface is curved, we can simply pick A to be extremely small. Now, the sides of the pillbox contribute nothing to the flux, in the limit as the thickness <span class="math notranslate nohighlight">\( \epsilon \)</span>  goes to zero, so we are left with</p>
@@ -643,16 +645,16 @@ where A is the area of the pillbox lid. If <span class="math notranslate nohighl
 <span class="eqno">(114)<a class="headerlink" href="#equation-eq2-31" title="Link to this equation">#</a></span>\[
 E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( E_{above}^{\perp} \)</span> denotes the component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> that is perpendicular to the surface immediately above, and <span class="math notranslate nohighlight">\(  E_{below} ^{\perp} \)</span> is the same, only just below the surface. For consistency, let “upward” be the positive direction for both. <em>Conclusion: the normal component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> is discontinuous by an amount <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span> at any boundary.</em> In particular, where there is <em>no</em> surface charge, <span class="math notranslate nohighlight">\( \vec{E}^{\perp} \)</span> is continuous, as for instance at the surface of a uniformly charged solid sphere.</p>
+<p>where <span class="math notranslate nohighlight">\( E_{above}^{\perp} \)</span> denotes the component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> that is perpendicular to the surface immediately above, and <span class="math notranslate nohighlight">\(  E_{below}^{\perp} \)</span> is the same, only just below the surface. For consistency, let “upward” be the positive direction for both. <em>Conclusion: the normal component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> is discontinuous by an amount <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span> at any boundary.</em> In particular, where there is <em>no</em> surface charge, <span class="math notranslate nohighlight">\( \vec{E}^{\perp} \)</span> is continuous, as for instance at the surface of a uniformly charged solid sphere.</p>
 <p>The <em>tangential</em> component of <span class="math notranslate nohighlight">\( \vec{E} \)</span>, by contrast, is always continuous. For if we apply <a class="reference internal" href="ch2-2.html#equation-eq2-19">(103)</a>.</p>
 <div class="math notranslate nohighlight">
 \[
-\oint \vec{E} \cdot \mathrm{d}{\vec{l}} = 0
+\oint \vec{E} \cdot d{\vec{l}} = 0
 \]</div>
-<p>to the thin rectangular loop of Fig 2.37, the ends give nothing (as <span class="math notranslate nohighlight">\( \epsilon \rightarrow 0 \)</span>), and the sides give <span class="math notranslate nohighlight">\( (E_{above} ^{\parallel} l - E_{below} ^{\parallel} l) \)</span>, so</p>
+<p>to the thin rectangular loop of Fig 2.37, the ends give nothing (as <span class="math notranslate nohighlight">\( \epsilon \rightarrow 0 \)</span>), and the sides give <span class="math notranslate nohighlight">\( (E_{above}^{\parallel} l - E_{below}^{\parallel} l) \)</span>, so</p>
 <div class="math notranslate nohighlight" id="equation-eq2-32">
 <span class="eqno">(115)<a class="headerlink" href="#equation-eq2-32" title="Link to this equation">#</a></span>\[
-\vec{E}_{above} ^{\parallel} = \vec{E}_{below} ^{\parallel}
+\vec{E}_{above}^{\parallel} = \vec{E}_{below}^{\parallel}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{E}^{\parallel} \)</span> stands for the components of <span class="math notranslate nohighlight">\( \vec{E} \)</span> parallel to the surface.</p>
 <p><img alt="Figure 2.36" src="../../../_images/2.36.png" /></p>
@@ -667,14 +669,14 @@ E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
 <p>The potential, meanwhile, is continuous across any boundary (Fig 2.38), since</p>
 <div class="math notranslate nohighlight">
 \[
-V_{above} - V_{below} = -\int_{a}^{b} \vec{E} \cdot \mathrm{d}{\vec{l}}
+V_{above} - V_{below} = -\int_{a}^{b} \vec{E} \cdot d{\vec{l}}
 \]</div>
 <p>as the path length shrinks to zero, so too does the integral</p>
 <div class="math notranslate nohighlight" id="equation-eq2-34">
 <span class="eqno">(117)<a class="headerlink" href="#equation-eq2-34" title="Link to this equation">#</a></span>\[
 V_{above} = V_{below}
 \]</div>
-<p>However, the <em>gradient</em> of V inherits the discontinuity in <span class="math notranslate nohighlight">\( \vec{E} \)</span>, since <span class="math notranslate nohighlight">\( \vec{E} - \nabla {V} \)</span>, so</p>
+<p>However, the <em>gradient</em> of <span class="math notranslate nohighlight">\(V\)</span> inherits the discontinuity in <span class="math notranslate nohighlight">\( \vec{E} \)</span>, since <span class="math notranslate nohighlight">\( \vec{E} - \nabla {V} \)</span>, so</p>
 <div class="math notranslate nohighlight" id="equation-eq2-35">
 <span class="eqno">(118)<a class="headerlink" href="#equation-eq2-35" title="Link to this equation">#</a></span>\[
 \nabla {V}_{above} - \nabla {V}_{below} = - \frac{\sigma}{\epsilon_0} \hat{n}
@@ -689,7 +691,7 @@ V_{above} = V_{below}
 \[
 \frac{\partial V}{\partial n} = \nabla {V} \cdot \hat{n}
 \]</div>
-<p>denotes the normal derivative of V (that is, the rate of change in the direction perpendicular to the surface).</p>
+<p>denotes the normal derivative of <span class="math notranslate nohighlight">\(V\)</span> (that is, the rate of change in the direction perpendicular to the surface).</p>
 <p>Please note that these boundary conditions relate the fields and potentials <em>just</em> above and <em>just</em> below the surface. For example, the derivatives in <a class="reference internal" href="#equation-eq2-36">(119)</a> are the limiting values as we approach the surface from either side.</p>
 </section>
 </section>
