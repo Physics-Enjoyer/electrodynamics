@@ -474,9 +474,9 @@ document.write(`
 <h1>3.2: The Method of Images<a class="headerlink" href="#the-method-of-images" title="Link to this heading">#</a></h1>
 <section id="the-classic-image-problem">
 <h2>3.2.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Link to this heading">#</a></h2>
-<p>Suppose a point charge <em>q</em> is held a distance <em>d</em> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \Delta r  \)</span>, for <em>q</em> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <em>q</em> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
+<p>Suppose a point charge <span class="math notranslate nohighlight">\(q\)</span> is held a distance <span class="math notranslate nohighlight">\(d\)</span> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \Delta r  \)</span>, for <span class="math notranslate nohighlight">\(q\)</span> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <span class="math notranslate nohighlight">\(q\)</span> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
 <p><img alt="Figure 3.10" src="../../../_images/3.10.png" /></p>
-<p>From a mathematical point of view, our problem is to solve Poisson’s equation in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>, with a single point charge <em>q</em> at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>, subject to the boundary conditions</p>
+<p>From a mathematical point of view, our problem is to solve Poisson’s equation in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>, with a single point charge <span class="math notranslate nohighlight">\(q\)</span> at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>, subject to the boundary conditions</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\( V = 0 \)</span> when <span class="math notranslate nohighlight">\( z = 0 \)</span> (since the conducting plane is grounded)</p></li>
 <li><p><span class="math notranslate nohighlight">\( V \rightarrow 0 \)</span> far from the charge (that is, for <span class="math notranslate nohighlight">\( x^2 + y^2 + z^2 \gg d^2 \)</span> )</p></li>
@@ -497,17 +497,17 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 </section>
 <section id="induced-surface-charge">
 <h2>3.2.2: Induced Surface Charge<a class="headerlink" href="#induced-surface-charge" title="Link to this heading">#</a></h2>
-<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to Eq. 2.49,</p>
+<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to <a class="reference internal" href="../chapter02/ch2-5.html#equation-eq2-49">(131)</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma = - \epsilon_0 \frac{\partial V}{\partial n}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \partial V / \partial n \)</span> is the normal derivative of V at the surface. In this case the normal direction is the z direction, so</p>
+<p>where <span class="math notranslate nohighlight">\( \partial V / \partial n \)</span> is the normal derivative of <span class="math notranslate nohighlight">\(V\)</span> at the surface. In this case the normal direction is the <span class="math notranslate nohighlight">\(z\)</span> direction, so</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma =  \left. - \epsilon_0 \frac{\partial V}{\partial z} \right|_{z = 0}
 \]</div>
-<p>From Eq. 3.9</p>
+<p>From <a class="reference internal" href="#equation-eq3-9">(146)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial V}{\partial z} = \frac{1}{4 \pi \epsilon_0} \left[ \frac{-q (z - d)}{[x^2 + y^2 + (z - d)^2]^{3/2}} + \frac{q(z + d)}{[x^2 + y^2 + (z + d)^2 ]^{3/2}} \right]
@@ -517,13 +517,13 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 <span class="eqno">(147)<a class="headerlink" href="#equation-eq3-10" title="Link to this equation">#</a></span>\[
 \sigma(x, y) = \frac{-qd}{2 \pi (x^2 + y^2 + d^2)^{3/2}}
 \]</div>
-<p>As expected, the induced charge is negative (assuming <em>q</em> is positive) and greatest at <span class="math notranslate nohighlight">\( x = y = 0 \)</span>.</p>
+<p>As expected, the induced charge is negative (assuming <span class="math notranslate nohighlight">\(q\)</span> is positive) and greatest at <span class="math notranslate nohighlight">\( x = y = 0 \)</span>.</p>
 <p>While we’re at it, let’s compute the <em>total</em> induced charge</p>
 <div class="math notranslate nohighlight">
 \[
 Q = \int \sigma \mathrm{d}{a}
 \]</div>
-<p>This integral, over the xy plane, could be done in Cartesian coordinates, with <span class="math notranslate nohighlight">\( \mathrm{d}{a} = \mathrm{d}{x} \mathrm{d}{y} \)</span>, but it’s easier to use polar coordinates <span class="math notranslate nohighlight">\( (r, \phi) \)</span>, with <span class="math notranslate nohighlight">\( r^2 = x^2 + y^2 \)</span> and <span class="math notranslate nohighlight">\( \mathrm{d}{a} = r \mathrm{d}{r} \mathrm{d}{\phi} \)</span>. Then</p>
+<p>This integral, over the <span class="math notranslate nohighlight">\(xy\)</span> plane, could be done in Cartesian coordinates, with <span class="math notranslate nohighlight">\( \mathrm{d}{a} = \mathrm{d}{x} \mathrm{d}{y} \)</span>, but it’s easier to use polar coordinates <span class="math notranslate nohighlight">\( (r, \phi) \)</span>, with <span class="math notranslate nohighlight">\( r^2 = x^2 + y^2 \)</span> and <span class="math notranslate nohighlight">\( \mathrm{d}{a} = r \mathrm{d}{r} \mathrm{d}{\phi} \)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma(r) = \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} 
@@ -542,7 +542,7 @@ Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \
 <span class="eqno">(149)<a class="headerlink" href="#equation-eq3-12" title="Link to this equation">#</a></span>\[
 \vec{F} = -\frac{1}{4 \pi \epsilon_0} \frac{q^2}{(2d)^2} \hat{z}
 \]</div>
-<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, Eq. 2.42 gives</p>
+<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, <a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-42">(124)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{2d} 
@@ -552,7 +552,7 @@ W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{2d}
 <span class="eqno">(150)<a class="headerlink" href="#equation-eq3-14" title="Link to this equation">#</a></span>\[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{4d}
 \]</div>
-<p>Why half? Think of the energy stored in the fields (Eq. 2.45):</p>
+<p>Why half? Think of the energy stored in the fields (<a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-45">(127)</a>):</p>
 <div class="math notranslate nohighlight">
 \[
 W = \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau}
@@ -566,24 +566,24 @@ W &amp; = &amp; \int _{\infty} ^{d} \vec{F} \cdot \mathrm{d}{\vec{l}} = \frac{1}
 &amp; = &amp; \frac{1}{4 \pi \epsilon_0} \left. \left( - \frac{q^2}{4z}  \right) \right|_{\infty} ^d = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{4d} 
 \end{aligned}
 \end{split}\]</div>
-<p>As I move <span class="math notranslate nohighlight">\( q \)</span> toward the conductor, I do work only on q. It is true that induced charge is moving in over the conductor, but this costs me nothing, since the whole conductor is at potential zero. By contrast, if I simultaneously bring in two point charges (with no conductor), I do work on both of them, and the total is (again) twice as great.</p>
+<p>As I move <span class="math notranslate nohighlight">\( q \)</span> toward the conductor, I do work only on <span class="math notranslate nohighlight">\(q\)</span>. It is true that induced charge is moving in over the conductor, but this costs me nothing, since the whole conductor is at potential zero. By contrast, if I simultaneously bring in two point charges (with no conductor), I do work on both of them, and the total is (again) twice as great.</p>
 </section>
 <section id="other-image-problems">
 <h2>3.2.4: Other Image Problems<a class="headerlink" href="#other-image-problems" title="Link to this heading">#</a></h2>
-<p>The method just described is not limited to a single point charge; any stationary charge distribution near a grounded conducting plane can be treated in the same way, by introducing its mirror image - hence the name method of images. (Remember that the image charges have the <em>opposite</em> sign; this is what guarantees that the xy plane will be at potential zero.) There are also some exotic problems that can be handled in similar fashion; the nicest of these is the following.</p>
+<p>The method just described is not limited to a single point charge; any stationary charge distribution near a grounded conducting plane can be treated in the same way, by introducing its mirror image - hence the name method of images. (Remember that the image charges have the <em>opposite</em> sign; this is what guarantees that the <span class="math notranslate nohighlight">\(xy\)</span> plane will be at potential zero.) There are also some exotic problems that can be handled in similar fashion; the nicest of these is the following.</p>
 <section id="example-3-2">
 <h3>Example 3.2<a class="headerlink" href="#example-3-2" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
-<p>A point charge <em>q</em> is situated a distance <em>a</em> from the center of a grounded conducting sphere of radius <em>R</em> (Fig. 3.12). Find the potential outside the sphere</p>
+<p>A point charge <span class="math notranslate nohighlight">\(q\)</span> is situated a distance <span class="math notranslate nohighlight">\(a\)</span> from the center of a grounded conducting sphere of radius <span class="math notranslate nohighlight">\(R\)</span> (Fig. 3.12). Find the potential outside the sphere</p>
 <p><img alt="Figure 3.12" src="../../../_images/3.12.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
-<p>Examine the completely different configuration, consisting of the point charge <em>q</em> together with another point charge</p>
+<p>Examine the completely different configuration, consisting of the point charge <span class="math notranslate nohighlight">\(q\)</span> together with another point charge</p>
 <div class="math notranslate nohighlight" id="equation-eq3-15">
 <span class="eqno">(151)<a class="headerlink" href="#equation-eq3-15" title="Link to this equation">#</a></span>\[
 q' = - \frac{R}{a} q
@@ -598,8 +598,8 @@ b = \frac{R^2}{a}
 <span class="eqno">(153)<a class="headerlink" href="#equation-eq3-17" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\Delta r } + \frac{q'}{\Delta r  '}  \right)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span> and <span class="math notranslate nohighlight">\( \Delta r ' \)</span> are the distances from <em>q</em> and <em>q’</em>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
-<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(153)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <em>b</em> is less than <em>R</em>, so the “image” charge <em>q’</em> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
+<p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span> and <span class="math notranslate nohighlight">\( \Delta r ' \)</span> are the distances from <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(q'\)</span>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
+<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(153)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <span class="math notranslate nohighlight">\(b\)</span> is less than <span class="math notranslate nohighlight">\(R\)</span>, so the “image” charge <span class="math notranslate nohighlight">\(q'\)</span> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-18">
 <span class="eqno">(154)<a class="headerlink" href="#equation-eq3-18" title="Link to this equation">#</a></span>\[
 F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon_0} \frac{q^2 R a}{(a^2 - R^2)^2}
