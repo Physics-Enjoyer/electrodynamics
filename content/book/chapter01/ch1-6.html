@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="1.5: The Dirac Delta Function" href="ch1-5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -469,23 +455,23 @@ document.write(`
 <h1>1.6: The Theory of Vector Fields<a class="headerlink" href="#the-theory-of-vector-fields" title="Link to this heading">#</a></h1>
 <section id="the-helmholtz-theorem">
 <h2>1.6.1: The Helmholtz Theorem<a class="headerlink" href="#the-helmholtz-theorem" title="Link to this heading">#</a></h2>
-<p>Ever since Faraday, the laws of electricity and magnetism have been expressed in terms of <em>electric</em> and <em>magnetic</em> fields, <strong>E</strong> and <strong>B</strong>. Like many physical laws, these are most compactly expressed as differential equations. Since <strong>E</strong> and <strong>B</strong> are vectors, the differential equations naturally involve vector derivatives: divergence and curl. Indeed, Maxwell reduced the entire theory to four equations, specifying respectively the divergence and the curl of <strong>E</strong> and <strong>B</strong>.</p>
-<p>Maxwell’s formulation raises an important mathematical question: To what extent is a vector function determined by its divergence and curl? In other words, if I tell you that the divergence of <strong>F</strong> (which stands for <strong>E</strong> or <strong>B</strong>, as the case may be) is a specified (scalar) function D,</p>
+<p>Ever since Faraday, the laws of electricity and magnetism have been expressed in terms of <em>electric</em> and <em>magnetic</em> fields, <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>. Like many physical laws, these are most compactly expressed as differential equations. Since <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> are vectors, the differential equations naturally involve vector derivatives: divergence and curl. Indeed, Maxwell reduced the entire theory to four equations, specifying respectively the divergence and the curl of <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
+<p>Maxwell’s formulation raises an important mathematical question: To what extent is a vector function determined by its divergence and curl? In other words, if I tell you that the divergence of <span class="math notranslate nohighlight">\(\vec{F}\)</span> (which stands for <span class="math notranslate nohighlight">\(\vec{E}\)</span> or <span class="math notranslate nohighlight">\(\vec{B}\)</span>, as the case may be) is a specified (scalar) function D,</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot  \vec{F} = D
 \]</div>
-<p>and the curl of <strong>F</strong> is a specified (vector) function <strong>C</strong>,</p>
+<p>and the curl of <span class="math notranslate nohighlight">\(\vec{F}\)</span> is a specified (vector) function <span class="math notranslate nohighlight">\(\vec{C}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \times  \vec{F} = \vec{C}
 \]</div>
-<p>can you then determine the function <strong>F</strong>?</p>
+<p>can you then determine the function <span class="math notranslate nohighlight">\(\vec{F}\)</span>?</p>
 <p>Well… not quite. For example, as you may have discovered in Prob. 1.20, there are many functions whose divergence and curl are both zero everywhere - the trivial case <span class="math notranslate nohighlight">\( \vec{F} = 0 \)</span>, of course, but also <span class="math notranslate nohighlight">\( \vec{F} = yz \hat{x} + zx \hat{y} + xy \hat{z}, \vec{F} = \sin x \cosh y \hat{x} - \cos x \sinh y \hat{y} \)</span>, etc. To solve a differential equation you must also be supplied with appropriate <strong>boundary conditions</strong>. In electrodynamics we typically require that the fields go to zero “at infinity” (far away from all charges). With that extra information, the Helmholtz theorem guarantees that the field is uniquely determined by its divergence and curl. (The Helmholtz theorem is discussed in Appendix B.)</p>
 </section>
 <section id="potentials">
 <h2>1.6.2: Potentials<a class="headerlink" href="#potentials" title="Link to this heading">#</a></h2>
-<p>If the curl of a vector field (<strong>F</strong>) vanishes (everywhere), then <strong>F</strong> can be written as the gradient of a <strong>scalar potential</strong> (V):</p>
+<p>If the curl of a vector field (<span class="math notranslate nohighlight">\(\vec{F}\)</span>) vanishes (everywhere), then <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be written as the gradient of a <strong>scalar potential</strong> (V):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-103">
 <span class="eqno">(85)<a class="headerlink" href="#equation-eq1-103" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{F} = 0 \Longleftrightarrow \vec{F} = - \nabla  V 
@@ -493,7 +479,7 @@ document.write(`
 <p>(The minus sign is purely conventional.) That’s the essential burden of the following theorem:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong><strong>Theorem 1</strong>. Curl-less (or ‘irrotational’) fields. The following conditions are equivalent (that is, <strong>F</strong> satisfies one if and only if it satisfies all the others):</strong></p>
+<p><strong><strong>Theorem 1</strong>. Curl-less (or ‘irrotational’) fields. The following conditions are equivalent (that is, <span class="math notranslate nohighlight">\(\vec{F}\)</span> satisfies one if and only if it satisfies all the others):</strong></p>
 <div class="math notranslate nohighlight">
 \[
 \tag{a} \nabla \times  \vec{F} = 0 \text{ everywhere }
@@ -512,7 +498,7 @@ document.write(`
 \]</div>
 </div>
 <p>The potential is not unique, and any constant can be added to V with impunity, since this will not affect its gradient.</p>
-<p>If the divergence of a vector field (<strong>F</strong>) vanishes (everywhere), then <strong>F</strong> can be expressed as the curl of a <strong>vector potential</strong> (<strong>A</strong>):</p>
+<p>If the divergence of a vector field (<span class="math notranslate nohighlight">\(\vec{F}\)</span>) vanishes (everywhere), then <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be expressed as the curl of a <strong>vector potential</strong> (<span class="math notranslate nohighlight">\(\vec{A}\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-104">
 <span class="eqno">(86)<a class="headerlink" href="#equation-eq1-104" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{F} = 0 \Longleftrightarrow \vec{F} = \nabla \times  \vec{A} 
@@ -538,14 +524,14 @@ document.write(`
 \tag{d} \vec{F} \text{ is the curl of some vector function: } \vec{F} = \nabla \times  \vec{A}
 \]</div>
 </div>
-<p>The vector potential is not unique - the gradient of any scalar function can be added to <strong>A</strong> without affecting the curl, since the curl of a gradient is zero.</p>
-<p>Incidentally, in <em>all</em> cases (whatever its curl and divergence may be), a vector field <strong>F</strong> can be written as the gradient of a scalar plus the curl of a vector:</p>
+<p>The vector potential is not unique - the gradient of any scalar function can be added to <span class="math notranslate nohighlight">\(\vec{A}\)</span> without affecting the curl, since the curl of a gradient is zero.</p>
+<p>Incidentally, in <em>all</em> cases (whatever its curl and divergence may be), a vector field <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be written as the gradient of a scalar plus the curl of a vector:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-105">
 <span class="eqno">(87)<a class="headerlink" href="#equation-eq1-105" title="Link to this equation">#</a></span>\[
 \vec{F} = - \nabla  V + \nabla \times  \vec{A} \quad \text{(always)} 
 \]</div>
 <blockquote>
-<div><p>In physics, the word field denotes generically any function of position (x, y, z) and time (t). But in electrodynamics two particular fields (<strong>E</strong> and <strong>B</strong>) are of such paramount importance as to preempt the term. Thus technically the potentials are also “fields,” but we never call them that.</p>
+<div><p>In physics, the word field denotes generically any function of position (x, y, z) and time (t). But in electrodynamics two particular fields (<span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>) are of such paramount importance as to preempt the term. Thus technically the potentials are also “fields,” but we never call them that.</p>
 </div></blockquote>
 </section>
 </section>
@@ -605,14 +591,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-helmholtz-theorem">1.6.1: The Helmholtz Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentials">1.6.2: Potentials</a></li>
@@ -664,8 +652,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

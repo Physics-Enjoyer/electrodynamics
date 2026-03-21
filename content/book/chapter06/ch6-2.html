@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="6.1: Magnetization" href="ch6-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -476,14 +462,14 @@ document.write(`
 <h1>6.2: The Field of a Magnetized Object<a class="headerlink" href="#the-field-of-a-magnetized-object" title="Link to this heading">#</a></h1>
 <section id="bound-currents">
 <h2>6.2.1: Bound Currents<a class="headerlink" href="#bound-currents" title="Link to this heading">#</a></h2>
-<p>Suppose we have a piece of magnetized material; the magnetic dipole moment per unit volume, <strong>M</strong>, is given. What field does this object produce? Well, the vector potential of a single dipole <strong>m</strong> is given by Eq. 5.85</p>
+<p>Suppose we have a piece of magnetized material; the magnetic dipole moment per unit volume, <span class="math notranslate nohighlight">\(\vec{M}\)</span>, is given. What field does this object produce? Well, the vector potential of a single dipole <span class="math notranslate nohighlight">\(\vec{m}\)</span> is given by <a class="reference internal" href="../chapter05/ch5-4.html#equation-eq5-85">(375)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A}_{dip} (r) = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \hat{r}}{r^2}
 \]</div>
 <p>In the magnetized object, each volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau' \)</span> carries a dipole moment <span class="math notranslate nohighlight">\( M \mathrm{d} \tau' \)</span>, so the total vector potential is (Fig 6.11)</p>
 <div class="math notranslate nohighlight" id="equation-eq6-11">
-<span class="eqno">(385)<a class="headerlink" href="#equation-eq6-11" title="Link to this equation">#</a></span>\[
+<span class="eqno">(388)<a class="headerlink" href="#equation-eq6-11" title="Link to this equation">#</a></span>\[
 \vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{M}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' 
 \]</div>
 <p>That does it, in principle. But, as in the electrical case, the integral can be cast in a more illuminating form by exploiting the identity</p>
@@ -504,25 +490,25 @@ document.write(`
 <p><img alt="Figure 6.11" src="../../../_images/6.11.png" />
 Problem 1.61 invites us to express the latter as a surface integral</p>
 <div class="math notranslate nohighlight" id="equation-eq6-12">
-<span class="eqno">(386)<a class="headerlink" href="#equation-eq6-12" title="Link to this equation">#</a></span>\[
+<span class="eqno">(389)<a class="headerlink" href="#equation-eq6-12" title="Link to this equation">#</a></span>\[
 \vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{1}{\Delta r } [ \nabla ' \times \vec{M}(r')] \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint \frac{1}{\Delta r } [ \vec{M}(r') \times \mathrm{d} \vec{a'} ] 
 \]</div>
 <p>The first term looks just like the potential of a volume current</p>
 <div class="math notranslate nohighlight" id="equation-eq6-13">
-<span class="eqno">(387)<a class="headerlink" href="#equation-eq6-13" title="Link to this equation">#</a></span>\[
+<span class="eqno">(390)<a class="headerlink" href="#equation-eq6-13" title="Link to this equation">#</a></span>\[
 \vec{J}_b = \nabla \times  \vec{M} 
 \]</div>
 <p>while the second looks like the potential of a surface current</p>
 <div class="math notranslate nohighlight" id="equation-eq6-14">
-<span class="eqno">(388)<a class="headerlink" href="#equation-eq6-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(391)<a class="headerlink" href="#equation-eq6-14" title="Link to this equation">#</a></span>\[
 \vec{K_b} = \vec{M} \times \hat{n} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is the normal unit vector. With these definitions,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-15">
-<span class="eqno">(389)<a class="headerlink" href="#equation-eq6-15" title="Link to this equation">#</a></span>\[
+<span class="eqno">(392)<a class="headerlink" href="#equation-eq6-15" title="Link to this equation">#</a></span>\[
 \vec{A}(r) = \frac{\mu_0}{4\pi} \int_V \frac{\vec{J_b}(r')}{\Delta r } \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint _S \frac{\vec{K_b}(r')}{\Delta r } \mathrm{d} a' 
 \]</div>
-<p>What this means is that the potential (and hence also the field) of a magnetized object is the same as would be produced by a volume current <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span>  throughout the material, plus a surface current <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span>, on the boundary. Instead of integrating the contributions of all the infinitesimal dipoles, using Eq. 6.11, we first determine the bound currents, and then find the field they produce, in the same way we would calculate the field of any other volume and surface currents. Notice the striking parallel with the electrical case: there the field of a polarized object was the same as that of a bound volume charge <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a bound surface charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>.</p>
+<p>What this means is that the potential (and hence also the field) of a magnetized object is the same as would be produced by a volume current <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span>  throughout the material, plus a surface current <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span>, on the boundary. Instead of integrating the contributions of all the infinitesimal dipoles, using <a class="reference internal" href="#equation-eq6-11">(388)</a>, we first determine the bound currents, and then find the field they produce, in the same way we would calculate the field of any other volume and surface currents. Notice the striking parallel with the electrical case: there the field of a polarized object was the same as that of a bound volume charge <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a bound surface charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>.</p>
 <section id="example-6-1">
 <h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
@@ -534,7 +520,7 @@ Q</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
-<p>Choosing the z axis along the direction of <strong>M</strong> (Fig 6.12), we have</p>
+<p>Choosing the z axis along the direction of <span class="math notranslate nohighlight">\(\vec{M}\)</span> (Fig 6.12), we have</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{J}_b = \nabla \times  \vec{M} = 0, \qquad \vec{K}_b = \vec{M} \times \hat{n} = M \sin \theta \hat{\phi}
@@ -547,7 +533,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 \]</div>
 <p>which we already worked out in Exercise 5.11. So, identifying <span class="math notranslate nohighlight">\( \sigma R \vec{\omega} \rightarrow \vec{M} \)</span>, we can write down</p>
 <div class="math notranslate nohighlight" id="equation-eq6-16">
-<span class="eqno">(390)<a class="headerlink" href="#equation-eq6-16" title="Link to this equation">#</a></span>\[
+<span class="eqno">(393)<a class="headerlink" href="#equation-eq6-16" title="Link to this equation">#</a></span>\[
 \vec{B} = \frac{2}{3} \mu_0 \vec{M} 
 \]</div>
 <p>inside the sphere, and outside the sphere the field is that of a perfect dipole</p>
@@ -559,7 +545,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 \[
 \rightarrow \quad \vec{B} = \frac{4 \mu_0 R^3}{9 r^3} (2 \cos \theta \hat{r} + \sin \theta \hat{\theta} )
 \]</div>
-<p>Notice that the internal field is uniform, like the electric field inside a uniformly polarized sphere (Eq. 4.14), although the actual formulas for the two cases are curiously different ( <span class="math notranslate nohighlight">\( \frac{2}{3} \)</span> in place of <span class="math notranslate nohighlight">\( -\frac{1}{3} \)</span>). The external fields are also analogous: pure dipole in both instances.</p>
+<p>Notice that the internal field is uniform, like the electric field inside a uniformly polarized sphere (<a class="reference internal" href="../chapter04/ch4-2.html#equation-eq4-14">(243)</a>), although the actual formulas for the two cases are curiously different ( <span class="math notranslate nohighlight">\( \frac{2}{3} \)</span> in place of <span class="math notranslate nohighlight">\( -\frac{1}{3} \)</span>). The external fields are also analogous: pure dipole in both instances.</p>
 </div>
 </div>
 </section>
@@ -568,12 +554,12 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 <h2>6.2.2: Physical Interpretation of Bound Currents<a class="headerlink" href="#physical-interpretation-of-bound-currents" title="Link to this heading">#</a></h2>
 <p>In the last section, we found that the field of a magnetized object is identical to the field that would be produced by a certain distribution of “bound” currents, <span class="math notranslate nohighlight">\( \vec{J}_b \)</span> and <span class="math notranslate nohighlight">\( \vec{K}_b \)</span>. I want to show you how these bound currents arise physically. This will be a heuristic argument - the rigorous derivation has already been given. Figure 6.15 depicts a thin slab of uniformly magnetized material, with the dipoles represented by tiny current loops. Notice that all the “internal” currents cancel: every time there is one going to the right, a contiguous one is going to the left. However, at the edge there is no adjacent loop to do the canceling. The whole thing, then, is equivalent to a single ribbon of current I flowing around the boundary (Fig. 6.16).</p>
 <p><img alt="Figure 6.15" src="../../../_images/6.15.png" /></p>
-<p>What is this current, in terms of <strong>M</strong>? Say that each of the tiny loops has area <em>a</em> and thickness <em>t</em> (Fig 6.17). In terms of the magnetization, its dipole moment is <span class="math notranslate nohighlight">\( m = M a t \)</span>. In terms of the circulating current <em>I</em>, however, <span class="math notranslate nohighlight">\( m = I a \)</span>. Therefore <span class="math notranslate nohighlight">\( I = M t \)</span>, so the surface current is <span class="math notranslate nohighlight">\( K_b = I / t = M \)</span>. Using the outward-drawn unit vector <span class="math notranslate nohighlight">\( \hat{n} \)</span> (Fig 6.16), the direction of <span class="math notranslate nohighlight">\( \vec{K_b} \)</span> is conveniently indicated by the cross product:</p>
+<p>What is this current, in terms of <span class="math notranslate nohighlight">\(\vec{M}\)</span>? Say that each of the tiny loops has area <span class="math notranslate nohighlight">\(a\)</span> and thickness <span class="math notranslate nohighlight">\(t\)</span> (Fig 6.17). In terms of the magnetization, its dipole moment is <span class="math notranslate nohighlight">\( m = M a t \)</span>. In terms of the circulating current <span class="math notranslate nohighlight">\(I\)</span>, however, <span class="math notranslate nohighlight">\( m = I a \)</span>. Therefore <span class="math notranslate nohighlight">\( I = M t \)</span>, so the surface current is <span class="math notranslate nohighlight">\( K_b = I / t = M \)</span>. Using the outward-drawn unit vector <span class="math notranslate nohighlight">\( \hat{n} \)</span> (Fig 6.16), the direction of <span class="math notranslate nohighlight">\( \vec{K_b} \)</span> is conveniently indicated by the cross product:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{K_b} = \vec{M} \times \hat{n}
 \]</div>
-<p>(This expression also records the fact that there is no current on the top or bottom surface of the slab; here <strong>M</strong> is parallel to <span class="math notranslate nohighlight">\( \hat{n} \)</span>, so the cross product vanishes.)</p>
+<p>(This expression also records the fact that there is no current on the top or bottom surface of the slab; here <span class="math notranslate nohighlight">\(\vec{M}\)</span> is parallel to <span class="math notranslate nohighlight">\( \hat{n} \)</span>, so the cross product vanishes.)</p>
 <p>This bound surface current is exactly what we obtained in Sect. 6.2.1. It is a peculiar kind of current, in the sense that no single charge makes the whole trip - on the contrary, each charge moves only in a tiny little loop within a single atom. Nevertheless, the net effect is a macroscopic current flowing over the surface of the magnetized object. We call it a “bound” current to remind ourselves that every charge is attached to a particular atom, but it’s a perfectly genuine current, and it produces a magnetic field in the same way any other current does.</p>
 <p>When the magnetization is nonuniform, the internal currents no longer cancel. Figure 6.18(a) shows two adjacent chunks of magnetized material, with a larger arrow on the one to the right suggesting greater magnetization at that point. On the surface where they join, there is a net current in the x direction, given by</p>
 <div class="math notranslate nohighlight">
@@ -606,14 +592,14 @@ I_x = [M_z (y + \mathrm{d} y) - M_z (y)] \mathrm{d} z = \frac{\partial M_z}{\par
 </section>
 <section id="the-magnetic-field-inside-matter">
 <h2>6.2.3: The Magnetic Field Inside Matter<a class="headerlink" href="#the-magnetic-field-inside-matter" title="Link to this heading">#</a></h2>
-<p>Like the electric field, the actual microscopic magnetic field inside matter fluctuates wildly from point to point and instant to instant. When we speak of “the” magnetic field in matter, we mean the macroscopic field: the average over regions large enough to contain many atoms. (The magnetization <strong>M</strong> is “smoothed out” in the same sense.) It is this macroscopic field that one obtains when the methods of Sect. 6.2.1 are applied to points inside magnetized material, as you can prove for yourself in the following problem.</p>
+<p>Like the electric field, the actual microscopic magnetic field inside matter fluctuates wildly from point to point and instant to instant. When we speak of “the” magnetic field in matter, we mean the macroscopic field: the average over regions large enough to contain many atoms. (The magnetization <span class="math notranslate nohighlight">\(\vec{M}\)</span> is “smoothed out” in the same sense.) It is this macroscopic field that one obtains when the methods of Sect. 6.2.1 are applied to points inside magnetized material, as you can prove for yourself in the following problem.</p>
 <section id="problem-6-11">
 <h3>Problem 6.11<a class="headerlink" href="#problem-6-11" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Q</label><div class="sd-tab-content docutils">
-<p>In Sect 6.2.1, we began with the potential of a perfect dipole (Eq. 6.10), whereas in fact we are dealing with physical dipoles. Show, by the method of Section 4.2.3, that we nonetheless get the correct macroscopic field.</p>
+<p>In Sect 6.2.1, we began with the potential of a perfect dipole (<code class="xref eq docutils literal notranslate"><span class="pre">eq6.10</span></code>), whereas in fact we are dealing with physical dipoles. Show, by the method of Section 4.2.3, that we nonetheless get the correct macroscopic field.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
@@ -690,14 +676,16 @@ A</label><div class="sd-tab-content docutils">
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-currents">6.2.1: Bound Currents</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-1">Example 6.1</a></li>
@@ -756,8 +744,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

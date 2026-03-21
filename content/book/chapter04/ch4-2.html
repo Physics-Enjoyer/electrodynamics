@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.1: Polarization" href="ch4-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -476,23 +462,23 @@ document.write(`
 <h1>4.2: The Field of a Polarized Object<a class="headerlink" href="#the-field-of-a-polarized-object" title="Link to this heading">#</a></h1>
 <section id="bound-charges">
 <h2>4.2.1: Bound Charges<a class="headerlink" href="#bound-charges" title="Link to this heading">#</a></h2>
-<p>Suppose we have a piece of polarized material - that is, an object containing a lot of microscopic dipoles lined up. The dipole moment per unit volume <strong>P</strong> is given. <em>Question</em>: What is the field produced by this object (not the field that may have caused the polarization, but the field the polarization itself causes)? Well, we know what the field of an individual dipole looks like, so why not chop the material up into infinitesimal dipoles and integrate to get the total? As usual, it’s easier to work with the potential. For a single dipole <strong>p</strong> (Eq. 3.99)</p>
+<p>Suppose we have a piece of polarized material - that is, an object containing a lot of microscopic dipoles lined up. The dipole moment per unit volume <span class="math notranslate nohighlight">\(\vec{P}\)</span> is given. <em>Question</em>: What is the field produced by this object (not the field that may have caused the polarization, but the field the polarization itself causes)? Well, we know what the field of an individual dipole looks like, so why not chop the material up into infinitesimal dipoles and integrate to get the total? As usual, it’s easier to work with the potential. For a single dipole <span class="math notranslate nohighlight">\(\vec{p}\)</span> (<a class="reference internal" href="../chapter03/ch3-4.html#equation-eq3-99">(227)</a>)</p>
 <div class="math notranslate nohighlight" id="equation-eq4-8">
-<span class="eqno">(235)<a class="headerlink" href="#equation-eq4-8" title="Link to this equation">#</a></span>\[
+<span class="eqno">(237)<a class="headerlink" href="#equation-eq4-8" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{\Delta r }}{\Delta r  ^2} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{\Delta r } \)</span> is the vector from the dipole to the point at which we are evaluating the potential (Fig 4.8). In the present context, we have a dipole moment <span class="math notranslate nohighlight">\( \vec{p} = \vec{P} \mathrm{d} \tau' \)</span> in each volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau' \)</span>, so the total potential is</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq4-9">
+<span class="eqno">(238)<a class="headerlink" href="#equation-eq4-9" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int_{V} \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau'
 \]</div>
-<p><img alt="Figure 4.8" src="../../../_images/4.8.png" />
-That does it, in principle. But a little sleight of hand casts this integral into a much more illuminating form. Observing that</p>
+<p><img alt="Figure 4.8" src="../../../_images/4.8.png" /></p>
+<p>That does it, in principle. But a little sleight of hand casts this integral into a much more illuminating form. Observing that</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla  ' \left( \frac{1}{\Delta r } \right) = \frac{\hat{\Delta r }}{\Delta r  ^2} 
 \]</div>
-<p>where the differentiation is with respect to the <em>source</em> coordinates (r’), we have</p>
+<p>where the differentiation is with respect to the <em>source</em> coordinates (<span class="math notranslate nohighlight">\(r'\)</span>), we have</p>
 <div class="math notranslate nohighlight">
 \[
 V = \frac{1}{4 \pi \epsilon_0} \int _V \vec{P} \cdot \nabla  ' \left( \frac{1}{\Delta r } \right) \mathrm{d} \tau'
@@ -504,22 +490,22 @@ V = \frac{1}{4 \pi \epsilon_0} \left[ \int _V \nabla ' \cdot \left( \frac{\vec{P
 \]</div>
 <p>The left-hand integral is a volume integral of a divergence, so with Gauss’s law</p>
 <div class="math notranslate nohighlight" id="equation-eq4-10">
-<span class="eqno">(236)<a class="headerlink" href="#equation-eq4-10" title="Link to this equation">#</a></span>\[
+<span class="eqno">(239)<a class="headerlink" href="#equation-eq4-10" title="Link to this equation">#</a></span>\[
 V = \frac{1}{4 \pi \epsilon_0 } \oint _S \frac{1}{\Delta r  } \vec{P} \cdot \mathrm{d} \vec{a'} - \frac{1}{4 \pi \epsilon_0} \int _V \frac{1}{\Delta r } ( \nabla ' \cdot \vec{P} ) \mathrm{d} \tau' 
 \]</div>
 <p>The first term looks like the potential of a surface charge</p>
 <div class="math notranslate nohighlight" id="equation-eq4-11">
-<span class="eqno">(237)<a class="headerlink" href="#equation-eq4-11" title="Link to this equation">#</a></span>\[
-\sigma_b \equiv \vec{P} \cdot \hat{n} 
+<span class="eqno">(240)<a class="headerlink" href="#equation-eq4-11" title="Link to this equation">#</a></span>\[\boxed{
+\sigma_b \equiv \vec{P} \cdot \hat{n}}
 \]</div>
 <p>while the second term looks like the potential of a volume charge</p>
 <div class="math notranslate nohighlight" id="equation-eq4-12">
-<span class="eqno">(238)<a class="headerlink" href="#equation-eq4-12" title="Link to this equation">#</a></span>\[
-\rho_b \equiv - \nabla \cdot  \vec{P} 
+<span class="eqno">(241)<a class="headerlink" href="#equation-eq4-12" title="Link to this equation">#</a></span>\[\boxed{
+\rho_b \equiv - \nabla \cdot  \vec{P}}
 \]</div>
-<p>With these definitions, <a class="reference internal" href="#equation-eq4-10">(236)</a> becomes</p>
+<p>With these definitions, <a class="reference internal" href="#equation-eq4-10">(239)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq4-13">
-<span class="eqno">(239)<a class="headerlink" href="#equation-eq4-13" title="Link to this equation">#</a></span>\[
+<span class="eqno">(242)<a class="headerlink" href="#equation-eq4-13" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \oint_S \frac{\sigma_b}{\Delta r } \mathrm{d} a' + \frac{1}{4 \pi \epsilon_0} \int_V \frac{\rho_b}{\Delta r } \mathrm{d} \tau' 
 \]</div>
 <p>What this means is that the potential (and hence also the field) of a polarized object is the same as that produced by a volume charge density <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a surface charge density <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>. Instead of integrating the contributions of all the infinitesimal dipoles, we could just find those <strong>bound charges</strong>, and then calculate the fields they produce, in the same way we calculate the field of any other volume and surface charges.</p>
@@ -529,13 +515,13 @@ V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \oint_S \frac{\sigma_b}{\Delta r } \math
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
-<p>Find the electric field produced by a uniformly polarized sphere of radius R</p>
+<p>Find the electric field produced by a uniformly polarized sphere of radius <span class="math notranslate nohighlight">\(R\)</span></p>
 <p><img alt="Figure 4.9" src="../../../_images/4.9.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
-<p>We may as well choose the z axis to coincide with the direction of polarization (Fig 4.9). The volume bound charge density <span class="math notranslate nohighlight">\( \rho_b \)</span> is zero, since <span class="math notranslate nohighlight">\( \vec{P} \)</span> is uniform. The surface bound charge density is then</p>
+<p>We may as well choose the <span class="math notranslate nohighlight">\(z\)</span> axis to coincide with the direction of polarization (Fig 4.9). The volume bound charge density <span class="math notranslate nohighlight">\( \rho_b \)</span> is zero, since <span class="math notranslate nohighlight">\( \vec{P} \)</span> is uniform. The surface bound charge density is then</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma_b = \vec{P} \cdot \hat{n} = P \cos \theta
@@ -550,18 +536,18 @@ V(r, \theta) = \begin{cases}
 \end{split}\]</div>
 <p>Since <span class="math notranslate nohighlight">\( r \cos \theta = z \)</span>, the field inside the sphere is <em>uniform</em>:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-14">
-<span class="eqno">(240)<a class="headerlink" href="#equation-eq4-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(243)<a class="headerlink" href="#equation-eq4-14" title="Link to this equation">#</a></span>\[
 \vec{E} = - \nabla  V = - \frac{P}{3 \epsilon_0} \hat{z} = - \frac{1}{3 \epsilon_0} \vec{P} , \quad \text{ for } r &lt; R 
 \]</div>
 <p>This is a pretty remarkable result, and will be very useful in what follows. Outside the sphere the potential is the same as that of a perfect dipole at the origin</p>
 <div class="math notranslate nohighlight" id="equation-eq4-15">
-<span class="eqno">(241)<a class="headerlink" href="#equation-eq4-15" title="Link to this equation">#</a></span>\[
+<span class="eqno">(244)<a class="headerlink" href="#equation-eq4-15" title="Link to this equation">#</a></span>\[
 V = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} , \quad \text{ for } r \geq R 
 \]</div>
 <p><img alt="Figure 4.10" src="../../../_images/4.10.png" />
 whose dipole moment is, not surprisingly, equal to the total dipole moment of the sphere:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-16">
-<span class="eqno">(242)<a class="headerlink" href="#equation-eq4-16" title="Link to this equation">#</a></span>\[
+<span class="eqno">(245)<a class="headerlink" href="#equation-eq4-16" title="Link to this equation">#</a></span>\[
 \vec{p} = \frac{4}{3} \pi R^3 \vec{P} 
 \]</div>
 <p>The field of the uniformly polarized sphere is shown in Fig 4.10.</p>
@@ -571,11 +557,11 @@ whose dipole moment is, not surprisingly, equal to the total dipole moment of th
 </section>
 <section id="physical-interpretation-of-bound-charges">
 <h2>4.2.2: Physical Interpretation of Bound Charges<a class="headerlink" href="#physical-interpretation-of-bound-charges" title="Link to this heading">#</a></h2>
-<p>In the last section we found that the field of a polarized object is identical to the field that would be produced by a certain distribution of “bound charges,” <span class="math notranslate nohighlight">\( \sigma_b \)</span> and <span class="math notranslate nohighlight">\( \rho_b \)</span>. But this conclusion emerged in the course of abstract manipulations on the integral in Eq. 4.9, and left us with no clue as to the physical meaning of these bound charges. Indeed, some authors give you the impression that bound charges are in some sense “fictitious” - mere bookkeeping devices used to facilitate the calculation of fields. Nothing could be further from the truth: <span class="math notranslate nohighlight">\( \rho_b \)</span> and <span class="math notranslate nohighlight">\( \sigma_b \)</span> represent perfectly genuine accumulations of charge. In this section I’ll explain how polarization leads to these charge distributions.</p>
+<p>In the last section we found that the field of a polarized object is identical to the field that would be produced by a certain distribution of “bound charges,” <span class="math notranslate nohighlight">\( \sigma_b \)</span> and <span class="math notranslate nohighlight">\( \rho_b \)</span>. But this conclusion emerged in the course of abstract manipulations on the integral in <a class="reference internal" href="#equation-eq4-9">(238)</a>, and left us with no clue as to the physical meaning of these bound charges. Indeed, some authors give you the impression that bound charges are in some sense “fictitious” - mere bookkeeping devices used to facilitate the calculation of fields. Nothing could be further from the truth: <span class="math notranslate nohighlight">\( \rho_b \)</span> and <span class="math notranslate nohighlight">\( \sigma_b \)</span> represent perfectly genuine accumulations of charge. In this section I’ll explain how polarization leads to these charge distributions.</p>
 <p><img alt="Figure 4.11" src="../../../_images/4.11.png" /></p>
 <p>The basic idea is very simple: Suppose we have a long string of dipoles, as shown in Fig. 4.11. Along the line, the head of one effectively cancels the tail of its neighbor, but at the ends there are two charges left over: plus at the right end and minus at the left. It is as if we had peeled off an electron at one end and carried it all the way down to the other end, though in fact no single electron made the whole trip - a lot of tiny displacements add up to one large one. We call the net charge at the ends a bound charge to remind ourselves that it cannot be removed; in a dielectric every electron is attached to a specific atom or molecule. But apart from that, bound charge is no different from any other kind.</p>
 <p><img alt="Figure 4.12" src="../../../_images/4.12.png" /></p>
-<p>To calculate the actual amount of bound charge resulting from a given polarization, examine a “tube” of dielectric parallel to P. The dipole moment of the tiny chunk shown in Fig. 4.12 is <span class="math notranslate nohighlight">\( P(Ad) \)</span>, where A is the cross-sectional area of the tube and dis the length of the chunk. In terms of the charge (q) at the end, this same dipole moment can be written <span class="math notranslate nohighlight">\( qd \)</span>. The bound charge that piles up at the right end of the tube is therefore</p>
+<p>To calculate the actual amount of bound charge resulting from a given polarization, examine a “tube” of dielectric parallel to <span class="math notranslate nohighlight">\(\vec{P}\)</span>. The dipole moment of the tiny chunk shown in Fig. 4.12 is <span class="math notranslate nohighlight">\( P(Ad) \)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the tube and <span class="math notranslate nohighlight">\(d\)</span> is the length of the chunk. In terms of the charge (<span class="math notranslate nohighlight">\(q\)</span>) at the end, this same dipole moment can be written <span class="math notranslate nohighlight">\( qd \)</span>. The bound charge that piles up at the right end of the tube is therefore</p>
 <div class="math notranslate nohighlight">
 \[
 q = PA
@@ -592,7 +578,7 @@ q = PA
 \]</div>
 <p>The effect of the polarization, then, is to paint a bound charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span> over the surface of the material. This is exactly what we found by more rigorous means in Sect. 4.2.1. But now we know where the bound charge comes from.</p>
 <p><img alt="Figure 4.14" src="../../../_images/4.14.png" /></p>
-<p>If the polarization is nonuniform, we get accumulations of bound charge within the material, as well as on the surface. A glance at Fig. 4.14 suggests that a diverging <strong>P</strong> results in a pileup of negative charge. Indeed, the net bound charge <span class="math notranslate nohighlight">\( \int \rho_b \mathrm{d} \tau \)</span> in a given volume is equal and opposite to the amount that has been pushed out through the surface. The latter (by the same reasoning we used before) is <span class="math notranslate nohighlight">\( \vec{P} \cdot \hat{n} \)</span> per unit area, so</p>
+<p>If the polarization is nonuniform, we get accumulations of bound charge within the material, as well as on the surface. A glance at Fig. 4.14 suggests that a diverging <span class="math notranslate nohighlight">\(\vec{P}\)</span> results in a pileup of negative charge. Indeed, the net bound charge <span class="math notranslate nohighlight">\( \int \rho_b \mathrm{d} \tau \)</span> in a given volume is equal and opposite to the amount that has been pushed out through the surface. The latter (by the same reasoning we used before) is <span class="math notranslate nohighlight">\( \vec{P} \cdot \hat{n} \)</span> per unit area, so</p>
 <div class="math notranslate nohighlight">
 \[
 \int_v \rho_b \mathrm{d} \tau = - \oint _S \vec{P} \cdot \mathrm{d} \vec{a} = - \int_V (\nabla \cdot  \vec{P}) \mathrm{d} \tau
@@ -609,7 +595,7 @@ q = PA
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Q</label><div class="sd-tab-content docutils">
-<p>There is another way of analyzing the uniformly polarized sphere, which nicely illustrates the idea of bound charge. What we have, really, is two spheres of charge: a positive sphere and a negative sphere. Without polarization the two are superimposed and cancel completely. But when the material is uniformly polarized, all the plus charges move slightly upward (the z direction) and all the minus charges move slightly downward (Fig 4.15). The two spheres no longer overlap perfectly: at the top there’s a ‘cap’ of leftover positive charge and at the bottom a cap of negative charge. This ‘leftover’ charge is precisely the bound surface charge <span class="math notranslate nohighlight">\( \sigma_b \)</span></p>
+<p>There is another way of analyzing the uniformly polarized sphere, which nicely illustrates the idea of bound charge. What we have, really, is two spheres of charge: a positive sphere and a negative sphere. Without polarization the two are superimposed and cancel completely. But when the material is uniformly polarized, all the plus charges move slightly upward (the <span class="math notranslate nohighlight">\(z\)</span> direction) and all the minus charges move slightly downward (Fig 4.15). The two spheres no longer overlap perfectly: at the top there’s a ‘cap’ of leftover positive charge and at the bottom a cap of negative charge. This ‘leftover’ charge is precisely the bound surface charge <span class="math notranslate nohighlight">\( \sigma_b \)</span></p>
 <p><img alt="Figure 4.15" src="../../../_images/4.15.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
@@ -620,7 +606,7 @@ A</label><div class="sd-tab-content docutils">
 \[
 \vec{E} = - \frac{1}{4 \pi \epsilon_0}  \frac{1 \vec{d}}{R^3} 
 \]</div>
-<p>where <em>q</em> is the total charge of the positive sphere, <strong>d</strong> is the vector from the negative center to the positive center, and R is the radius of the sphere. We can express this in terms of the polarization of the sphere, <span class="math notranslate nohighlight">\( \vec{p} = q \vec{d} = (\frac{4}{3} \pi R^3  )\vec{P} \)</span>, as</p>
+<p>where <span class="math notranslate nohighlight">\(q\)</span> is the total charge of the positive sphere, <span class="math notranslate nohighlight">\(\vec{d}\)</span> is the vector from the negative center to the positive center, and <span class="math notranslate nohighlight">\(R\)</span> is the radius of the sphere. We can express this in terms of the polarization of the sphere, <span class="math notranslate nohighlight">\( \vec{p} = q \vec{d} = (\frac{4}{3} \pi R^3  )\vec{P} \)</span>, as</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E} = - \frac{1}{3 \epsilon_0} \vec{P}
@@ -630,44 +616,42 @@ A</label><div class="sd-tab-content docutils">
 \[
 V = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2} 
 \]</div>
-<p>(Remember that <strong>d</strong> is some small fraction of an atomic radius; Fig 4.15 is grossly exaggerated). These answers agree, of course, with the results from Ex 4.2.</p>
+<p>(Remember that <span class="math notranslate nohighlight">\(\vec{d}\)</span> is some small fraction of an atomic radius; Fig 4.15 is grossly exaggerated). These answers agree, of course, with the results from Ex 4.2.</p>
 </div>
 </div>
 </section>
 </section>
 <section id="the-field-inside-a-dielectric">
 <h2>4.2.3: The Field Inside a Dielectric<a class="headerlink" href="#the-field-inside-a-dielectric" title="Link to this heading">#</a></h2>
-<p>I have been sloppy about the distinction between “pure” dipoles and “physical” dipoles. In developing the theory of bound charges, I assumed we were working with the pure kind - indeed, I stated in Eq 4.8 the formula for the potential of a perfect dipole. And yet an actual polarized dielectric consists of physical dipoles, albeit extremely tiny ones. What is more, I presumed to represent discrete molecular dipoles by a continuous density function <strong>P</strong>. How should I justify this method? Outside the dielectric there is no real problem: here we are far away from the molecules (<span class="math notranslate nohighlight">\( \Delta r  \)</span>  is many times greater than the separation distance between plus and minus charges), so the dipole potential dominates overwhelmingly and the detailed “graininess” of the source is blurred by distance. Inside the dielectric, however, we can hardly pretend to be far from all the dipoles, and the procedure I used in Sect. 4.2.1 is open to serious challenge.</p>
-<p>In fact, when you stop to think about it, the electric field inside matter must
-be fantastically complicated, on the microscopic level. If you happen to be very near an electron, the field is gigantic, whereas a short distance away it may be small or may point in a totally different direction. Moreover, an instant later, as the atoms move about, the field will have altered entirely. This true microscopic field would be utterly impossible to calculate, nor would it be of much interest if you could. Just as, for macroscopic purposes, we regard water as a continuous fluid, ignoring its molecular structure, so also we can ignore the microscopic bumps and wrinkles in the electric field inside matter, and concentrate on the macroscopic field. This is defined as the average field over regions large enough to contain many thousands of atoms (so that the uninteresting microscopic fluctuations are smoothed over), and yet small enough to ensure that we do not wash out any significant large-scale variations in the field. (In practice, this means we must average over regions much smaller than the dimensions of the object itself.) Ordinarily, the macroscopic field is what people mean when they speak of “the” field inside matter.</p>
-<p>It remains to show that the macroscopic field is what we actually obtain when
-we use the methods of Sect. 4.2.1. The argument is subtle, so hang on. Suppose I want to calculate the macroscopic field at some point r within a dielectric. I know I must average the true (microscopic) field over an appropriate volume, so let me draw a small sphere about <em>r</em>, of radius, say, a thousand times the size of a molecule. The macroscopic field at r, then, consists of two parts: the average field over the sphere due to all charges outside, plus the average due to all charges inside:</p>
+<p>I have been sloppy about the distinction between “pure” dipoles and “physical” dipoles. In developing the theory of bound charges, I assumed we were working with the pure kind - indeed, I stated in <a class="reference internal" href="#equation-eq4-8">(237)</a> the formula for the potential of a perfect dipole. And yet an actual polarized dielectric consists of physical dipoles, albeit extremely tiny ones. What is more, I presumed to represent discrete molecular dipoles by a continuous density function <span class="math notranslate nohighlight">\(\vec{P}\)</span>. How should I justify this method? Outside the dielectric there is no real problem: here we are far away from the molecules (<span class="math notranslate nohighlight">\( \Delta r  \)</span>  is many times greater than the separation distance between plus and minus charges), so the dipole potential dominates overwhelmingly and the detailed “graininess” of the source is blurred by distance. Inside the dielectric, however, we can hardly pretend to be far from all the dipoles, and the procedure I used in Sect. 4.2.1 is open to serious challenge.</p>
+<p>In fact, when you stop to think about it, the electric field inside matter must be fantastically complicated, on the microscopic level. If you happen to be very near an electron, the field is gigantic, whereas a short distance away it may be small or may point in a totally different direction. Moreover, an instant later, as the atoms move about, the field will have altered entirely. This true microscopic field would be utterly impossible to calculate, nor would it be of much interest if you could. Just as, for macroscopic purposes, we regard water as a continuous fluid, ignoring its molecular structure, so also we can ignore the microscopic bumps and wrinkles in the electric field inside matter, and concentrate on the macroscopic field. This is defined as the average field over regions large enough to contain many thousands of atoms (so that the uninteresting microscopic fluctuations are smoothed over), and yet small enough to ensure that we do not wash out any significant large-scale variations in the field. (In practice, this means we must average over regions much smaller than the dimensions of the object itself.) Ordinarily, the macroscopic field is what people mean when they speak of “the” field inside matter.</p>
+<p>It remains to show that the macroscopic field is what we actually obtain when we use the methods of Sect. 4.2.1. The argument is subtle, so hang on. Suppose I want to calculate the macroscopic field at some point <span class="math notranslate nohighlight">\(r\)</span> within a dielectric. I know I must average the true (microscopic) field over an appropriate volume, so let me draw a small sphere about <span class="math notranslate nohighlight">\(r\)</span>, of radius, say, a thousand times the size of a molecule. The macroscopic field at <span class="math notranslate nohighlight">\(r\)</span>, then, consists of two parts: the average field over the sphere due to all charges outside, plus the average due to all charges inside:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E} = \vec{E}_{out} + \vec{E}_{in}
 \]</div>
-<p>You proved in problem 3.47 that the average field over a sphere produced by charges outside is equal to the field they produce at the center, so <span class="math notranslate nohighlight">\( \vec{E_{out}} \)</span> is the field at <strong>r</strong> due to the dipoles exterior to the sphere. These are far enough away that we can safely use Eq 4.9</p>
+<p>You proved in problem 3.47 that the average field over a sphere produced by charges outside is equal to the field they produce at the center, so <span class="math notranslate nohighlight">\( \vec{E_{out}} \)</span> is the field at <span class="math notranslate nohighlight">\(\vec{r}\)</span> due to the dipoles exterior to the sphere. These are far enough away that we can safely use <a class="reference internal" href="#equation-eq4-9">(238)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq4-17">
-<span class="eqno">(243)<a class="headerlink" href="#equation-eq4-17" title="Link to this equation">#</a></span>\[
+<span class="eqno">(246)<a class="headerlink" href="#equation-eq4-17" title="Link to this equation">#</a></span>\[
 V_{out} = \frac{1}{4 \pi \epsilon_0} \int_{outside} \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau'
 \]</div>
-<p>The dipoles inside the sphere are too close to treat in this fashion. But fortunately all we need is their average field, which we already know (Eq 3.105)</p>
+<p>The dipoles inside the sphere are too close to treat in this fashion. But fortunately all we need is their average field, which we already know (Problem 3.47 <code class="xref eq docutils literal notranslate"><span class="pre">eq3.105</span></code>)</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{E}_{in} = -\frac{1}{4 \pi \epsilon_0} \frac{\vec{p}}{R^3} 
 \]</div>
 <p>regardless of the details of the charge distribution within the sphere. The only relevant quantity is the total dipole moment, <span class="math notranslate nohighlight">\( \vec{p} = (\frac{4}{3} \pi R^3 )\vec{P} \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-18">
-<span class="eqno">(244)<a class="headerlink" href="#equation-eq4-18" title="Link to this equation">#</a></span>\[
+<span class="eqno">(247)<a class="headerlink" href="#equation-eq4-18" title="Link to this equation">#</a></span>\[
 \vec{E_{in}} = - \frac{1}{3 \epsilon_0} \vec{P} 
 \]</div>
-<p>Now, by assumption, the sphere is small enough that <strong>P</strong> does not vary significantly over its volume, so the term left out of the integral in <a class="reference internal" href="#equation-eq4-17">(243)</a> corresponds to the field at the center of a uniformly polarized sphere, to wit: <span class="math notranslate nohighlight">\( -(1/3\epsilon_0 )\vec{P}\)</span> <a class="reference internal" href="#equation-eq4-14">(240)</a>. But this is precisely what <span class="math notranslate nohighlight">\( \vec{E_{in}} \)</span> puts back in! The macroscopic field, then, is given by the potential</p>
+<p>Now, by assumption, the sphere is small enough that <span class="math notranslate nohighlight">\(\vec{P}\)</span> does not vary significantly over its volume, so the term left out of the integral in <a class="reference internal" href="#equation-eq4-17">(246)</a> corresponds to the field at the center of a uniformly polarized sphere, to wit: <span class="math notranslate nohighlight">\( -(1/3\epsilon_0 )\vec{P}\)</span> <a class="reference internal" href="#equation-eq4-14">(243)</a>. But this is precisely what <span class="math notranslate nohighlight">\( \vec{E_{in}} \)</span> puts back in! The macroscopic field, then, is given by the potential</p>
 <div class="math notranslate nohighlight" id="equation-eq4-19">
-<span class="eqno">(245)<a class="headerlink" href="#equation-eq4-19" title="Link to this equation">#</a></span>\[
+<span class="eqno">(248)<a class="headerlink" href="#equation-eq4-19" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\vec{P}(\vec{r'}) \cdot \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau'
 \]</div>
 <p>where the integral runs over the <em>entire</em> volume of the dielectric. This is, of course, what we used under the assumption of perfect dipoles in Sect 4.2.1; without realizing it, we were correctly calculating the averaged, macroscopic field, for points inside the dielectric.</p>
-<p>Notice that this argument all revolves around the curious fact that the average field over any sphere (due to the charge inside) is the same as the field at the center of a <em>uniformly polarized</em> sphere with the same total dipole moment. This means that no matter how crazy the actual microscopic charge configuration, we can replace it with a nice smooth distribution of perfect dipoles, if all we care about is the macroscopic (average) field. Incidentally, while the argument ostensibly relies on the spherical shape I chose to average over, the macroscopic field is certainly independent of the geometry of the averaging region, and this is reflected in the final answer <a class="reference internal" href="#equation-eq4-19">(245)</a>. Presumably one could reproduce the same argument for a cube or ellipsoid or whatever by performing some more grueling calculations.</p>
+<p>Notice that this argument all revolves around the curious fact that the average field over any sphere (due to the charge inside) is the same as the field at the center of a <em>uniformly polarized</em> sphere with the same total dipole moment. This means that no matter how crazy the actual microscopic charge configuration, we can replace it with a nice smooth distribution of perfect dipoles, if all we care about is the macroscopic (average) field. Incidentally, while the argument ostensibly relies on the spherical shape I chose to average over, the macroscopic field is certainly independent of the geometry of the averaging region, and this is reflected in the final answer <a class="reference internal" href="#equation-eq4-19">(248)</a>. Presumably one could reproduce the same argument for a cube or ellipsoid or whatever by performing some more grueling calculations.</p>
 </section>
 </section>
 
@@ -726,14 +710,16 @@ V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\vec{P}(\vec{r'}) \cdot \hat{
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-charges">4.2.1: Bound Charges</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-2">Example 4.2</a></li>
@@ -792,8 +778,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

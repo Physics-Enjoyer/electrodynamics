@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="2.1: The Electric Field" href="ch2-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -499,7 +485,7 @@ document.write(`
 <p><img alt="Figure 2.15" src="../../../_images/2.15.png" />
 <img alt="Figure 2.16" src="../../../_images/2.16.png" /></p>
 <p>This suggests that the flux through any <em>closed</em> surface is a measure of the total charge inside. For the field lines that originate on a positive charge must either pass out through the surface or else terminate on a negative charge inside (Fig 2.16a). On the other hand, a charge <em>outside</em> the surface will contribute nothing to the total flux, since its field lines pass in one side and out the other (Fig 2.16b). This is the <em>essence</em> of Gauss’s law. Now let’s make it quantitative.</p>
-<p>In the case of a point charge <em>q</em> at the origin, the flux of <span class="math notranslate nohighlight">\(\vec{E}\)</span> through a spherical surface or radius <em>r</em> is</p>
+<p>In the case of a point charge <span class="math notranslate nohighlight">\(q\)</span> at the origin, the flux of <span class="math notranslate nohighlight">\(\vec{E}\)</span> through a spherical surface or radius <span class="math notranslate nohighlight">\(r\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-12">
 <span class="eqno">(98)<a class="headerlink" href="#equation-eq2-12" title="Link to this equation">#</a></span>\[
 \oint \vec{E} \cdot d{\vec{a}} = \int \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{r^2} \hat{r} \right) \cdot \left( r^2 \sin \theta d{\theta} d{\phi} \hat{r} \right) = \frac{1}{\epsilon_0} q
@@ -517,10 +503,10 @@ document.write(`
 \]</div>
 <p>For any closed surface, then</p>
 <div class="math notranslate nohighlight" id="equation-eq2-13">
-<span class="eqno">(99)<a class="headerlink" href="#equation-eq2-13" title="Link to this equation">#</a></span>\[
-\oint \vec{E} \cdot d{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc}
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq2-13" title="Link to this equation">#</a></span>\[\boxed{
+\oint \vec{E} \cdot d{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc}}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( Q_{enc} \)</span> is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. Although it contains no information that was not already present in Coulomb’s law plus the principle of superposition, it is of almost magical power, as you will see in Sect. 2.2.3. Notice that it all hinges on the <span class="math notranslate nohighlight">\( 1/r^2 \)</span> character of Coulomb’s law; without that, the crucial cancellation of the <em>r</em>’s in <a class="reference internal" href="#equation-eq2-12">(98)</a> would not take place, and the total flux of <span class="math notranslate nohighlight">\(\vec{E}\)</span> would depend on the surface chosen, not merely on the total charge enclosed. Other <span class="math notranslate nohighlight">\( 1/r^2 \)</span> forces (I am thinking particularly of Newton’s law of universal gravitation) will obey “Gauss’s laws” of their own, and the applications we develop here carry over directly.</p>
+<p>where <span class="math notranslate nohighlight">\( Q_{enc} \)</span> is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. Although it contains no information that was not already present in Coulomb’s law plus the principle of superposition, it is of almost magical power, as you will see in Sect. 2.2.3. Notice that it all hinges on the <span class="math notranslate nohighlight">\( 1/r^2 \)</span> character of Coulomb’s law; without that, the crucial cancellation of the <span class="math notranslate nohighlight">\(r\)</span>’s in <a class="reference internal" href="#equation-eq2-12">(98)</a> would not take place, and the total flux of <span class="math notranslate nohighlight">\(\vec{E}\)</span> would depend on the surface chosen, not merely on the total charge enclosed. Other <span class="math notranslate nohighlight">\( 1/r^2 \)</span> forces (I am thinking particularly of Newton’s law of universal gravitation) will obey “Gauss’s laws” of their own, and the applications we develop here carry over directly.</p>
 <p>As it stands, Gauss’s law is an <em>integral</em> equation, but we can easily turn it into a differential one by applying the divergence theorem:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -538,8 +524,8 @@ Q_{enc} = \int_{\mathcal{V}} \rho d{\tau}
 \]</div>
 <p>And since this holds for <em>any</em> volume, the integrands must be equal:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-14">
-<span class="eqno">(100)<a class="headerlink" href="#equation-eq2-14" title="Link to this equation">#</a></span>\[
-\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq2-14" title="Link to this equation">#</a></span>\[\boxed{
+\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho}
 \]</div>
 <p>Equation <a class="reference internal" href="#equation-eq2-14">(100)</a> carries the same message as <a class="reference internal" href="#equation-eq2-13">(99)</a>; it is <strong>Gauss’s law in differential form</strong>. The differential version is tidier, but the integral form has the advantage that it accommodates point, line, and surface charges more naturally.</p>
 </section>
@@ -548,17 +534,17 @@ Q_{enc} = \int_{\mathcal{V}} \rho d{\tau}
 <p>Let’s go back now, and calculate the divergence of <span class="math notranslate nohighlight">\( \vec{E} \)</span> directly from <a class="reference internal" href="ch2-1.html#equation-eq2-8">(95)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-15">
 <span class="eqno">(101)<a class="headerlink" href="#equation-eq2-15" title="Link to this equation">#</a></span>\[
-\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int_{\text{all space}} \frac{\hat{\Delta r }}{\Delta r  ^2} \rho(\vec{r}') d{\tau'}
+\vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \int_{\text{all space}} \frac{\hat{\mathcal{R} }}{\mathcal{R}  ^2} \rho(\vec{r}') d{\tau'}
 \]</div>
-<p>(Originally the integration was over the volume occupied by the charge, but I may as well extend it to all space, since <span class="math notranslate nohighlight">\( \rho = 0 \)</span> in the exterior region anyway.) Noting that the r-dependence is contained in <span class="math notranslate nohighlight">\( \Delta r  = r - r' \)</span>, we have</p>
+<p>(Originally the integration was over the volume occupied by the charge, but I may as well extend it to all space, since <span class="math notranslate nohighlight">\( \rho = 0 \)</span> in the exterior region anyway.) Noting that the r-dependence is contained in <span class="math notranslate nohighlight">\( \mathcal{R}  = r - r' \)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla \cdot {\vec{E}} = \frac{1}{4\pi\epsilon_0} \int \vec{\nabla} \cdot \left( \frac{\hat{\Delta r }}{\Delta r ^2}  \right) \rho(\vec{r'}) d{\tau'} 
+\nabla \cdot {\vec{E}} = \frac{1}{4\pi\epsilon_0} \int \vec{\nabla} \cdot \left( \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2}  \right) \rho(\vec{r'}) d{\tau'} 
 \]</div>
 <p>We calculated this divergence in Section 1.5:</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla \cdot {\left( \frac{\hat{\Delta r }}{\Delta r ^2}  \right)} = 4 \pi \delta ^3(\Delta r )
+\nabla \cdot {\left( \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2}  \right)} = 4 \pi \delta ^3(\mathcal{R} )
 \]</div>
 <p>Thus</p>
 <div class="math notranslate nohighlight" id="equation-eq2-16">
@@ -581,7 +567,7 @@ Q_{enc} = \int_{\mathcal{V}} \rho d{\tau}
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
-<p>Find the field outside a uniformly charged solid sphere of radius R and total charge q</p>
+<p>Find the field outside a uniformly charged solid sphere of radius <span class="math notranslate nohighlight">\(R\)</span> and total charge <span class="math notranslate nohighlight">\(q\)</span></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
@@ -591,13 +577,13 @@ A</label><div class="sd-tab-content docutils">
 \[
 \oint_{\mathcal{S}} \vec{E} \cdot d{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc}
 \]</div>
-<p>and in this case <span class="math notranslate nohighlight">\( Q_{enc} = q \)</span>. At first glance this doesn’t seem to get us very far, because the quantity we want (E) is buried inside the surface integral. Luckily, symmetry allows us to extract E from under the integral sign: <span class="math notranslate nohighlight">\(\vec{E}\)</span> certainly points radially outward, as does <span class="math notranslate nohighlight">\( d{\vec{a}} \)</span>, so we can drop the dot product</p>
+<p>and in this case <span class="math notranslate nohighlight">\( Q_{enc} = q \)</span>. At first glance this doesn’t seem to get us very far, because the quantity we want (<span class="math notranslate nohighlight">\(\vec{E}\)</span>) is buried inside the surface integral. Luckily, symmetry allows us to extract <span class="math notranslate nohighlight">\(\vec{E}\)</span> from under the integral sign: <span class="math notranslate nohighlight">\(\vec{E}\)</span> certainly points radially outward, as does <span class="math notranslate nohighlight">\( d{\vec{a}} \)</span>, so we can drop the dot product</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{\mathcal{S}} \vec{E} \cdot d{\vec{a}} = \int_{\mathcal{S}} | \vec{E} | da
 \]</div>
 <p><img alt="Figure 2.18" src="../../../_images/2.18.png" /></p>
-<p>and the magnitude of E is constant over the Gaussian surface, so it comes outside the integral:</p>
+<p>and the magnitude of <span class="math notranslate nohighlight">\(\vec{E}\)</span> is constant over the Gaussian surface, so it comes outside the integral:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_{S} | E | da = |E| \int_{S} da = E 4 \pi r^2
@@ -643,14 +629,9 @@ A</label><div class="sd-tab-content docutils">
 \]</div>
 <p>The enclosed charge is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q_{enc} &amp; = &amp; \int \rho d{\tau} \\
-&amp; = &amp; \int(ks')(s' d{s'} d{\phi} d{z}) \\
-&amp; = &amp; 2 \pi k l \int_{0}^{s} s'^2 d{s'} \\
-&amp; = &amp; \frac{2}{3} \pi k l s^3
-\end{aligned}
-\end{split}\]</div>
+\[
+Q_{enc} = \int \rho d{\tau} = \int(ks')(s' d{s'} d{\phi} d{z}) = 2 \pi k l \int_{0}^{s} s'^2 d{s'} = \frac{2}{3} \pi k l s^3
+\]</div>
 <p>(I used the volume element appropriate to cylindrical coordinates, and integrated <span class="math notranslate nohighlight">\( \phi \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( 2\pi \)</span>, <span class="math notranslate nohighlight">\( d{z} \)</span> from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( l \)</span>. I put a prime on the integration variable <span class="math notranslate nohighlight">\( s' \)</span> to distinguish it from the radius <span class="math notranslate nohighlight">\( s \)</span> of the Gaussian surface.)</p>
 <p>Now, symmetry dictates that <span class="math notranslate nohighlight">\( \vec{E} \)</span> must point radially outward, so for the curved portion of the Gaussian cylinder we have:</p>
 <div class="math notranslate nohighlight">
@@ -752,13 +733,13 @@ A</label><div class="sd-tab-content docutils">
 \end{split}\]</div>
 <p>The integral around a <em>closed</em> path is evidently zero (for then <span class="math notranslate nohighlight">\( r_a = r_b \)</span> ):</p>
 <div class="math notranslate nohighlight" id="equation-eq2-19">
-<span class="eqno">(103)<a class="headerlink" href="#equation-eq2-19" title="Link to this equation">#</a></span>\[
-\oint \vec{E} \cdot d\vec{l} = 0
+<span class="eqno">(103)<a class="headerlink" href="#equation-eq2-19" title="Link to this equation">#</a></span>\[\boxed{
+\oint \vec{E} \cdot d\vec{l} = 0}
 \]</div>
 <p>and hence, applying Stokes’ theorem</p>
 <div class="math notranslate nohighlight" id="equation-eq2-20">
-<span class="eqno">(104)<a class="headerlink" href="#equation-eq2-20" title="Link to this equation">#</a></span>\[
-\nabla \times {\vec{E}} = 0
+<span class="eqno">(104)<a class="headerlink" href="#equation-eq2-20" title="Link to this equation">#</a></span>\[\boxed{
+\nabla \times {\vec{E}} = 0}
 \]</div>
 <p>Now, I proved eqs. <a class="reference internal" href="#equation-eq2-19">(103)</a> and <a class="reference internal" href="#equation-eq2-20">(104)</a> only for the field of a single point charge at the origin, but these results make no reference to what is, after all, a perfectly arbitrary choice of coordinates; they hold no matter where the charge is located. Moreover, if we have many charges, the principle of superposition states that the total field is a vector sum of their individual fields:</p>
 <div class="math notranslate nohighlight">
@@ -829,14 +810,16 @@ A</label><div class="sd-tab-content docutils">
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-lines-flux-and-gauss-law">2.2.1 Field Lines, Flux, and Gauss’ Law</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence-of-e">2.2.2: The Divergence of E</a></li>
@@ -896,8 +879,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

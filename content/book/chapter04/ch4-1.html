@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="Chapter 4: Electric Fields in Matter" href="chapter-intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -478,9 +464,9 @@ document.write(`
 </section>
 <section id="induced-dipoles">
 <h2>4.1.2: Induced Dipoles<a class="headerlink" href="#induced-dipoles" title="Link to this heading">#</a></h2>
-<p>Say we have a totally neutral atom and place it in an electric field <strong>E</strong>? What happens? At first guess, you might think “Nothing at all! The atom is not charged, so the field has no effect on it.” That’s incorrect. Although the atom as a whole is electrically neutral (just like the dipoles we looked at in the last chapter), there <em>is</em> a positively charged core (the nucleus) and negatively charged electron(s) surrounding it. These two regions of charge within the atom are influenced by the field: the nucleus is pushed in the direction of the field, and the electrons the opposite way. In principle, if the field is large enough, it can pull the atom apart completely, “ionizing” it (the substance then becomes a conductor). With less extreme fields, however, an equilibrium is soon established, for if the center of the electron cloud does not coincide with the nucleus, these positive and negative charges attract one another, and that holds the atom together. The two opposing forces - <strong>E</strong> pulling the electrons and nucleus apart, and their mutual attraction drawing them back together - reach a balance, leaving the atom <strong>polarized</strong>, with plus charge shifted slightly one way, and minus the other. The atom now has a tiny dipole moment <strong>p</strong>, which points in the same direction as <strong>E</strong>. Typically, this induced dipole moment is approximately proportional to the field (as long as the latter is not too strong):</p>
+<p>Say we have a totally neutral atom and place it in an electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>? What happens? At first guess, you might think “Nothing at all! The atom is not charged, so the field has no effect on it.” That’s incorrect. Although the atom as a whole is electrically neutral (just like the dipoles we looked at in the last chapter), there <em>is</em> a positively charged core (the nucleus) and negatively charged electron(s) surrounding it. These two regions of charge within the atom are influenced by the field: the nucleus is pushed in the direction of the field, and the electrons the opposite way. In principle, if the field is large enough, it can pull the atom apart completely, “ionizing” it (the substance then becomes a conductor). With less extreme fields, however, an equilibrium is soon established, for if the center of the electron cloud does not coincide with the nucleus, these positive and negative charges attract one another, and that holds the atom together. The two opposing forces - <span class="math notranslate nohighlight">\(\vec{E}\)</span> pulling the electrons and nucleus apart, and their mutual attraction drawing them back together - reach a balance, leaving the atom <strong>polarized</strong>, with plus charge shifted slightly one way, and minus the other. The atom now has a tiny dipole moment <span class="math notranslate nohighlight">\(\vec{p}\)</span>, which points in the same direction as <span class="math notranslate nohighlight">\(\vec{E}\)</span>. Typically, this induced dipole moment is approximately proportional to the field (as long as the latter is not too strong):</p>
 <div class="math notranslate nohighlight" id="equation-eq4-1">
-<span class="eqno">(230)<a class="headerlink" href="#equation-eq4-1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(232)<a class="headerlink" href="#equation-eq4-1" title="Link to this equation">#</a></span>\[
 \vec{p} = \alpha \vec{E} 
 \]</div>
 <p>The constant of proportionality <span class="math notranslate nohighlight">\( \alpha \)</span> is called <strong>atomic polarizability</strong>. Its value depends on the detailed structure of the atom in question. Table 4.1 lists some experimentally determined atomic polarizabilities.</p>
@@ -491,13 +477,13 @@ document.write(`
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
-<p>A primitive model for an atom consists of a point nucleus (+q) surrounded by a uniformly charged spherical cloud (-q) of radius <em>a</em> (Fig 4.1). Calculate the atomic polarizability of such an atom.</p>
+<p>A primitive model for an atom consists of a point nucleus (<span class="math notranslate nohighlight">\(+q\)</span>) surrounded by a uniformly charged spherical cloud (<span class="math notranslate nohighlight">\(-q\)</span>) of radius <span class="math notranslate nohighlight">\(a\)</span> (Fig 4.1). Calculate the atomic polarizability of such an atom.</p>
 <p><img alt="Figure 4.1a" src="../../../_images/4.1a.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 A</label><div class="sd-tab-content docutils">
-<p>In the presence of an external field <strong>E</strong>, the nucleus will be shifted slightly to the right and the electron cloud to the left, as shown in Fig 4.2. (Because the actual displacements involved are extremely small, as you’ll see in Prob 4.1, it is reasonable to assume that the electron cloud retains its spherical shape.) Say that equilibrium occurs when the nucleus is displaced a distance <em>d</em> from the center of the sphere. At that point, the external field pushing the nucleus to the right exactly balances the internal field pulling it to the left: <span class="math notranslate nohighlight">\( E = E_e \)</span>, where <span class="math notranslate nohighlight">\( E_e \)</span> is the field produced by the electron cloud. Now the field at a distance <em>d</em> from the center of a uniformly charged sphere is</p>
+<p>In the presence of an external field <span class="math notranslate nohighlight">\(\vec{E}\)</span>, the nucleus will be shifted slightly to the right and the electron cloud to the left, as shown in Fig 4.2. (Because the actual displacements involved are extremely small, as you’ll see in Prob 4.1, it is reasonable to assume that the electron cloud retains its spherical shape.) Say that equilibrium occurs when the nucleus is displaced a distance <span class="math notranslate nohighlight">\(d\)</span> from the center of the sphere. At that point, the external field pushing the nucleus to the right exactly balances the internal field pulling it to the left: <span class="math notranslate nohighlight">\( E = E_e \)</span>, where <span class="math notranslate nohighlight">\( E_e \)</span> is the field produced by the electron cloud. Now the field at a distance <span class="math notranslate nohighlight">\(d\)</span> from the center of a uniformly charged sphere is</p>
 <div class="math notranslate nohighlight">
 \[
 E_e = \frac{1}{4 \pi \epsilon_0} \frac{qd}{a^3} 
@@ -509,10 +495,10 @@ E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \p
 \]</div>
 <p>The atomic polarizability is therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq4-2">
-<span class="eqno">(231)<a class="headerlink" href="#equation-eq4-2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(233)<a class="headerlink" href="#equation-eq4-2" title="Link to this equation">#</a></span>\[
 \alpha = 4 \pi \epsilon_0 a^3 = 3 \epsilon_0 v 
 \]</div>
-<p>where <em>v</em> is the volume of the atom. Although this atomic model is extremely crude, the result <a class="reference internal" href="#equation-eq4-2">(231)</a> is not too bad - it’s accurate to within a factor of four or so for many simple atoms.</p>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is the volume of the atom. Although this atomic model is extremely crude, the result <a class="reference internal" href="#equation-eq4-2">(233)</a> is not too bad - it’s accurate to within a factor of four or so for many simple atoms.</p>
 </div>
 </div>
 <p>For molecules the situation is not quite so simple, because frequently they polarize more readily in some directions than in others. Carbon dioxide (Fig 4.3), for instance, has a polarizability of <span class="math notranslate nohighlight">\( 4.5 \times 10^{-40} \)</span> when you apply the field along the axis of the molecule, but only <span class="math notranslate nohighlight">\( 2 \times 10^{-40} \)</span> for fields perpendicular to this direction. When the field is at some angle to the axis, you must first resolve it into parallel and perpendicular components, and multiply each component by the pertinent polarizability</p>
@@ -521,9 +507,9 @@ E = \frac{1}{4 \pi \epsilon_0 } \frac{qd}{a^3}, \quad \text{ or } p = qd = (4 \p
 \vec{p} = a_{\perp} E_{\perp} + \alpha_{\parallel} E_{\parallel} 
 \]</div>
 <p><img alt="Figure 4.3" src="../../../_images/4.3.png" /></p>
-<p>In this case, the induced dipole moment may not even be in the same <em>direction</em> as <strong>E</strong>. And <span class="math notranslate nohighlight">\( CO_2 \)</span> is relatively simple, as molecules go, since at least the atoms arrange themselves in a straight line; for a completely asymmetrical molecule, <a class="reference internal" href="#equation-eq4-1">(230)</a> is replaced by the most general linear relation between <strong>E</strong> and <strong>p</strong>:</p>
+<p>In this case, the induced dipole moment may not even be in the same <em>direction</em> as <span class="math notranslate nohighlight">\(\vec{E}\)</span>. And <span class="math notranslate nohighlight">\( CO_2 \)</span> is relatively simple, as molecules go, since at least the atoms arrange themselves in a straight line; for a completely asymmetrical molecule, <a class="reference internal" href="#equation-eq4-1">(232)</a> is replaced by the most general linear relation between <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{p}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-3">
-<span class="eqno">(232)<a class="headerlink" href="#equation-eq4-3" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(234)<a class="headerlink" href="#equation-eq4-3" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 p_x = \alpha_{xx} E_x + \alpha_{xy} E_y + \alpha_{xz} E_z\\
 p_y = \alpha_{yx} E_x + \alpha_{yy} E_y + \alpha_{yz} E_z\\
@@ -535,7 +521,7 @@ p_z = \alpha_{zx} E_x + \alpha_{zy} E_y + \alpha_{zz} E_z
 </section>
 <section id="alignment-of-polar-molecules">
 <h2>4.1.3: Alignment of Polar Molecules<a class="headerlink" href="#alignment-of-polar-molecules" title="Link to this heading">#</a></h2>
-<p>The neutral atom discussed in section 4.1.2 had no dipole moment to start with - <strong>p</strong> was entirely induced by the applied field. Some molecules have built-in, permanent dipole moments. In the water molecule, for example, the electrons tend to cluster around the oxygen atom (Fig 4.4), and since the molecule is bent at <span class="math notranslate nohighlight">\( 105^{\circ} \)</span>, this leaves a negative charge at the vertex and a positive charge on the opposite side. (The dipole moment of water is unusually large: <span class="math notranslate nohighlight">\( 6.1 \times 10^{-30} C \cdot m \)</span>; in fact, this is what accounts for its effectiveness as a solvent.) What happens when such molecules (called <strong>polar molecules</strong>) are placed in an electric field?</p>
+<p>The neutral atom discussed in section 4.1.2 had no dipole moment to start with - <span class="math notranslate nohighlight">\(\vec{p}\)</span> was entirely induced by the applied field. Some molecules have built-in, permanent dipole moments. In the water molecule, for example, the electrons tend to cluster around the oxygen atom (Fig 4.4), and since the molecule is bent at <span class="math notranslate nohighlight">\( 105^{\circ} \)</span>, this leaves a negative charge at the vertex and a positive charge on the opposite side. (The dipole moment of water is unusually large: <span class="math notranslate nohighlight">\( 6.1 \times 10^{-30} C \cdot m \)</span>; in fact, this is what accounts for its effectiveness as a solvent.) What happens when such molecules (called <strong>polar molecules</strong>) are placed in an electric field?</p>
 <p>If the field is uniform, the <em>force</em> on the positive end, <span class="math notranslate nohighlight">\( \vec{F_+} = q \vec{E} \)</span>, exactly cancels the force on the negative end, <span class="math notranslate nohighlight">\( \vec{F_-} = - q \vec{E} \)</span> (Fig 4.5). However, there will be a torque:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -545,26 +531,26 @@ p_z = \alpha_{zx} E_x + \alpha_{zy} E_y + \alpha_{zz} E_z
 <p><img alt="Figure 4.4" src="../../../_images/4.4.png" /></p>
 <p>Thus a dipole <span class="math notranslate nohighlight">\( \vec{p} = q \vec{d} \)</span> in a uniform field <span class="math notranslate nohighlight">\( \vec{E} \)</span> experiences a torque</p>
 <div class="math notranslate nohighlight" id="equation-eq4-4">
-<span class="eqno">(233)<a class="headerlink" href="#equation-eq4-4" title="Link to this equation">#</a></span>\[
-\vec{N} = \vec{p} \times \vec{E} 
+<span class="eqno">(235)<a class="headerlink" href="#equation-eq4-4" title="Link to this equation">#</a></span>\[\boxed{
+\vec{N} = \vec{p} \times \vec{E}}
 \]</div>
-<p>Notice that <strong>N</strong> is in such a direction as to line <strong>p</strong> up <em>parallel</em> to <strong>E</strong>; a polar molecule that is free to rotate will swing around until it points in the direction of the applied field.</p>
-<p>If the field is nonuniform, so that <span class="math notranslate nohighlight">\( \vec{F_{+}} \)</span> does not exactly balance <span class="math notranslate nohighlight">\( \vec{F_-} \)</span>, there will be a net force on the dipole, in addition to the torque. Of course, <strong>E</strong> must change rather abruptly for there to be significant variation in the space of one molecule, so this is not ordinarily a major consideration in discussing the behavior of dielectrics. Nevertheless, the formula for the force on a dipole in a nonuniform field is of some interest:</p>
+<p>Notice that <span class="math notranslate nohighlight">\(\vec{N}\)</span> is in such a direction as to line <span class="math notranslate nohighlight">\(\vec{p}\)</span> up <em>parallel</em> to <span class="math notranslate nohighlight">\(\vec{E}\)</span>; a polar molecule that is free to rotate will swing around until it points in the direction of the applied field.</p>
+<p>If the field is nonuniform, so that <span class="math notranslate nohighlight">\( \vec{F_{+}} \)</span> does not exactly balance <span class="math notranslate nohighlight">\( \vec{F_-} \)</span>, there will be a net force on the dipole, in addition to the torque. Of course, <span class="math notranslate nohighlight">\(\vec{E}\)</span> must change rather abruptly for there to be significant variation in the space of one molecule, so this is not ordinarily a major consideration in discussing the behavior of dielectrics. Nevertheless, the formula for the force on a dipole in a nonuniform field is of some interest:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{F} =  \vec{F_{+}} + \vec{F_-} = q(\vec{E_+} - \vec{E_-}) = q(\Delta \vec{E})
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \Delta \vec{E} \)</span> represents the difference between the field at the plus end and the field at the minus end. Assuming the dipole is very short, we may use Eq 1.35 to approximate the small change in E</p>
+<p>where <span class="math notranslate nohighlight">\( \Delta \vec{E} \)</span> represents the difference between the field at the plus end and the field at the minus end. Assuming the dipole is very short, we may use <a class="reference internal" href="../chapter01/ch1-2.html#equation-eq1-35">(30)</a> to approximate the small change in <span class="math notranslate nohighlight">\(\vec{E}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \Delta \vec{E} = (\vec{d} \cdot \nabla  ) \vec{E}
 \]</div>
 <p>and therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq4-5">
-<span class="eqno">(234)<a class="headerlink" href="#equation-eq4-5" title="Link to this equation">#</a></span>\[
-\vec{F} = ( \vec{p} \cdot \nabla ) \vec{E} 
+<span class="eqno">(236)<a class="headerlink" href="#equation-eq4-5" title="Link to this equation">#</a></span>\[\boxed{
+\vec{F} = ( \vec{p} \cdot \nabla ) \vec{E}}
 \]</div>
-<p>For a “perfect” dipole of infinitesimal length, <a class="reference internal" href="#equation-eq4-4">(233)</a> gives the torque about the center of the dipole even in a nonuniform field; about any other point, <span class="math notranslate nohighlight">\( \vec{N} = ( \vec{p} \times \vec{E}) + (\vec{r} \times \vec{F}) \)</span>.</p>
+<p>For a “perfect” dipole of infinitesimal length, <a class="reference internal" href="#equation-eq4-4">(235)</a> gives the torque about the center of the dipole even in a nonuniform field; about any other point, <span class="math notranslate nohighlight">\( \vec{N} = ( \vec{p} \times \vec{E}) + (\vec{r} \times \vec{F}) \)</span>.</p>
 </section>
 <section id="id1">
 <h2>4.1.4: Polarization<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
@@ -572,9 +558,9 @@ p_z = \alpha_{zx} E_x + \alpha_{zy} E_y + \alpha_{zz} E_z
 <p>Notice that these two mechanisms produce the same basic result: <em>a lot of little dipoles pointing along the direction of the field</em> - the material becomes <strong>polarized</strong>. A convenient measure of this effect is</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{P} = \text{ dipole moment per unit volume }
+\vec{P} \equiv \text{ dipole moment per unit volume }
 \]</div>
-<p>which is called the <strong>polarization</strong>. From now on we shall not worry much about how the polarization got there. Actually, the two mechanisms I described are not as clear-cut as I tried to pretend. Even in polar molecules there will be some polarization by displacement (though generally it is a lot easier to rotate a molecule than to stretch it, so the second mechanism dominates). It’s even possible in some materials to “freeze in” polarization, so that it persists after the field is removed. But let’s forget for a moment about the cause of the polarization, and let’s study the field that a chunk of polarized material itself produces. Then in section 4.3 we’ll put it all together: the original field, which was responsible for <strong>P</strong>, plus the new field, which is due to <strong>P</strong>.</p>
+<p>which is called the <strong>polarization</strong>. From now on we shall not worry much about how the polarization got there. Actually, the two mechanisms I described are not as clear-cut as I tried to pretend. Even in polar molecules there will be some polarization by displacement (though generally it is a lot easier to rotate a molecule than to stretch it, so the second mechanism dominates). It’s even possible in some materials to “freeze in” polarization, so that it persists after the field is removed. But let’s forget for a moment about the cause of the polarization, and let’s study the field that a chunk of polarized material itself produces. Then in section 4.3 we’ll put it all together: the original field, which was <em>responsible</em> for <span class="math notranslate nohighlight">\(\vec{P}\)</span>, plus the new field, which is <em>due</em> to <span class="math notranslate nohighlight">\(\vec{P}\)</span>.</p>
 </section>
 </section>
 
@@ -633,14 +619,16 @@ p_z = \alpha_{zx} E_x + \alpha_{zy} E_y + \alpha_{zz} E_z
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dielectrics">4.1.1: Dielectrics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-dipoles">4.1.2: Induced Dipoles</a><ul class="nav section-nav flex-column">
@@ -697,8 +685,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

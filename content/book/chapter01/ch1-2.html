@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="1.1 Vector Algebra" href="ch1-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -453,19 +439,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-derivatives">1.2.1: “Ordinary” Derivatives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">1.2.2: Gradient</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-3">Example 1.3</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">1.2.2: Gradient</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-del-operator">1.2.3: The Del Operator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence">1.2.4: The Divergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-4">Example 1.4</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl">1.2.5: The Curl</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-5">Example 1.5</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence">1.2.4: The Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl">1.2.5: The Curl</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rules">1.2.6: Product Rules</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-derivatives">1.2.7: Second Derivatives</a></li>
 </ul>
@@ -490,8 +467,8 @@ document.write(`
 <span class="eqno">(28)<a class="headerlink" href="#equation-eq1-33" title="Link to this equation">#</a></span>\[
 \mathrm{d}{f} = \left( \frac{\mathrm{d} f}{\mathrm{d} x} \right) \mathrm{d}{x} 
 \]</div>
-<p>In words: If we increment <em>x</em> by an infinitesimal amount <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span>, then <span class="math notranslate nohighlight">\( f \)</span> changes by an amount <span class="math notranslate nohighlight">\( \mathrm{d}{f} \)</span>; the derivative is the proportionality factor. Foe example, in Fig. 1.17(a), the function varies slowly with <em>x</em>, and the derivative is correspondingly small. In Fig 1.17(b), <em>f</em> increases rapidly with <em>x</em>, and the derivative is large as you move away from <span class="math notranslate nohighlight">\( x = 0 \)</span>.
-<em>Geometrical interpretation</em>: The derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> is the slope of the graph of <em>f</em> versus <em>x</em>.</p>
+<p>In words: If we increment <span class="math notranslate nohighlight">\(x\)</span> by an infinitesimal amount <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span>, then <span class="math notranslate nohighlight">\( f \)</span> changes by an amount <span class="math notranslate nohighlight">\( \mathrm{d}{f} \)</span>; the derivative is the proportionality factor. Foe example, in Fig. 1.17(a), the function varies slowly with <span class="math notranslate nohighlight">\(x\)</span>, and the derivative is correspondingly small. In Fig 1.17(b), <span class="math notranslate nohighlight">\(f\)</span> increases rapidly with <span class="math notranslate nohighlight">\(x\)</span>, and the derivative is large as you move away from <span class="math notranslate nohighlight">\( x = 0 \)</span>.
+<em>Geometrical interpretation</em>: The derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> is the slope of the graph of <span class="math notranslate nohighlight">\(f\)</span> versus <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </section>
 <section id="gradient">
 <h2>1.2.2: Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h2>
@@ -516,7 +493,7 @@ document.write(`
 \nabla {T} \equiv \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} 
 \]</div>
 <p>is the <strong>gradient</strong> of T. Note that <span class="math notranslate nohighlight">\( \nabla {T} \)</span> is a vector quantity, with three components; it is the generalized derivative we have been looking for. <a class="reference internal" href="#equation-eq1-35">(30)</a> is the three-dimensional version of <a class="reference internal" href="#equation-eq1-33">(28)</a>.
-<em>Geometrical interpretation of the Gradient</em>: Like any vector, the gradient has <em>magnitude</em> and <em>direction</em>. To determine its geometrical meaning, let’s rewrite the dot product using Eq. 1.1</p>
+<em>Geometrical interpretation of the Gradient</em>: Like any vector, the gradient has <em>magnitude</em> and <em>direction</em>. To determine its geometrical meaning, let’s rewrite the dot product using <a class="reference internal" href="ch1-1.html#equation-eq1-1">(1)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq1-37">
 <span class="eqno">(32)<a class="headerlink" href="#equation-eq1-37" title="Link to this equation">#</a></span>\[
 \mathrm{d}{T} = \nabla {T} \cdot \mathrm{d}{\vec{l}} = |\nabla {T}| |\mathrm{d}{\vec{l}}| \cos \theta 
@@ -531,19 +508,18 @@ document.write(`
 <p class="admonition-title">Tip</p>
 <p><strong>The magnitude <span class="math notranslate nohighlight">\( | \nabla {T} | \)</span> gives the slope (rate of increase) along this maximal direction</strong></p>
 </div>
-<p>Imagine you are standing on a hillside. Look all around you, and find the direction of steepest ascent. That is the direction of the gradient. Now measure the slope in that direction (rise over run). That is the magnitude of the gradient. (Here the function we’re talking about is the height of the hill, and the coordinates it depends on are positions-latitude and longitude, say. This function depends on only two variables, not three, but the geometrical meaning of the gradient is easier to grasp in two dimensions.) Notice from Eq. 1.37 that the direction of maximum descent is opposite to the direction of maximum ascent, while at right angles <span class="math notranslate nohighlight">\( (\theta = 90^{\circ}) \)</span> the slope is zero (the gradient is perpendicular to the contour lines). You can conceive of surfaces that do not have these properties, but they always have “kinks” in them, and correspond to non-differentiable functions.</p>
+<p>Imagine you are standing on a hillside. Look all around you, and find the direction of steepest ascent. That is the direction of the gradient. Now measure the slope in that direction (rise over run). That is the magnitude of the gradient. (Here the function we’re talking about is the height of the hill, and the coordinates it depends on are positions-latitude and longitude, say. This function depends on only two variables, not three, but the geometrical meaning of the gradient is easier to grasp in two dimensions.) Notice from <a class="reference internal" href="#equation-eq1-37">(32)</a> that the direction of maximum descent is opposite to the direction of maximum ascent, while at right angles <span class="math notranslate nohighlight">\( (\theta = 90^{\circ}) \)</span> the slope is zero (the gradient is perpendicular to the contour lines). You can conceive of surfaces that do not have these properties, but they always have “kinks” in them, and correspond to non-differentiable functions.</p>
 <p>What would it mean for the gradient to vanish? If <span class="math notranslate nohighlight">\( \nabla {T} = 0 \)</span>  at (x, y, z), then <span class="math notranslate nohighlight">\( \mathrm{d}{T} = 0 \)</span>  for small displacements about the point (x, y, z). This is, then, a stationary point of the function T(x, y, z). It could be a maximum (a summit), a minimum (a valley), a saddle point (a pass), or a “shoulder.” This is analogous to the situation for functions of one variable, where a vanishing derivative signals a maximum, a minimum, or an inflection. In particular, if you want to locate the extrema of a function of three variables, set its gradient equal to zero.</p>
-<section id="example-1-3">
-<h3>Example 1.3<a class="headerlink" href="#example-1-3" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
+Example 1.3</label><div class="sd-tab-content docutils">
 <p>Find the gradient of <span class="math notranslate nohighlight">\( r = \sqrt{x^2 + y^2 + z^2} \)</span> (the magnitude of the position vector)</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -556,7 +532,7 @@ A</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="the-del-operator">
 <h2>1.2.3: The Del Operator<a class="headerlink" href="#the-del-operator" title="Link to this heading">#</a></h2>
 <p>The gradient has the formal appearance of a vector, <span class="math notranslate nohighlight">\( \nabla \)</span>, “multiplying” a scalar T:</p>
@@ -573,7 +549,7 @@ A</label><div class="sd-tab-content docutils">
 <p>With this qualification, though, <span class="math notranslate nohighlight">\( \nabla {} \)</span> mimics the behavior of an ordinary vector in virtually every way; almost anything that can be done with other vectors can also be done with <span class="math notranslate nohighlight">\( \nabla {} \)</span>, if we merely translate “multiply” by “act upon.” So by all means take the vector appearance of <span class="math notranslate nohighlight">\( \nabla {} \)</span> seriously: it is a marvelous piece of notational simplification, as you will appreciate if you ever consult Maxwell’s original work on electromagnetism, written without the benefit of <span class="math notranslate nohighlight">\( \nabla {} \)</span>.</p>
 <p>Now, an ordinary vector <span class="math notranslate nohighlight">\( \vec{A} \)</span> can multiply in three ways:</p>
 <ol class="arabic simple">
-<li><p>By a scalar <em>a</em>:  <span class="math notranslate nohighlight">\( \vec{A}a \)</span></p></li>
+<li><p>By a scalar <span class="math notranslate nohighlight">\(a\)</span>:  <span class="math notranslate nohighlight">\( \vec{A}a \)</span></p></li>
 <li><p>By a vector <span class="math notranslate nohighlight">\( \vec{B} \)</span>, via the dot product: <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span></p></li>
 <li><p>By a vector <span class="math notranslate nohighlight">\( \vec{B} \)</span>, via the cross product: <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span></p></li>
 </ol>
@@ -601,17 +577,16 @@ only draw the arrows at a few representative locations.)</p>
 <p>Imagine standing at the edge of a pond. Sprinkle some sawdust or pine needles
 on the surface. If the material spreads out, then you dropped it at a point of positive divergence; if it collects together, you dropped it at a point of negative divergence. (The vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>  in this model is the velocity of the water at the surface - this is a two-dimensional example, but it helps give one a “feel” for what the divergence means. A point of positive divergence is a source, or “faucet”; a point of negative divergence is a sink, or “drain.”)</p>
 <p><img alt="Figure 1.18" src="../../../_images/1.18.png" /></p>
-<section id="example-1-4">
-<h3>Example 1.4<a class="headerlink" href="#example-1-4" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
-Q</label><div class="sd-tab-content docutils">
+Example 1.4</label><div class="sd-tab-content docutils">
 <p>Suppose the functions in Fig 1.18 are <span class="math notranslate nohighlight">\( \vec{v_a} = \vec{r} = x \hat{x} + y \hat{y} + z \hat{z} \)</span>, <span class="math notranslate nohighlight">\( \vec{v_b} = \hat{z} \)</span>, and <span class="math notranslate nohighlight">\( \vec{v_c} = z\hat{z} \)</span>. Calculate their divergences.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot {\vec{v_a}} = \frac{\partial}{\partial x} (x) + \frac{\partial}{\partial y} (x) + \frac{\partial}{\partial z} (z) = 1 + 1 + 1 = 3
@@ -629,7 +604,7 @@ A</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="the-curl">
 <h2>1.2.5: The Curl<a class="headerlink" href="#the-curl" title="Link to this heading">#</a></h2>
 <p>From the definition of <span class="math notranslate nohighlight">\( \nabla {} \)</span> we construct the curl:</p>
@@ -648,17 +623,16 @@ v_x &amp; v_y &amp; v_z
 <p>Notice that the curl of a vector function is, like any cross product, a vector.</p>
 <p><em>Geometrical Interpretation</em>:  The name curl is also well chosen, for <span class="math notranslate nohighlight">\( \nabla \times {\vec{v}} \)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span>  swirls around the point in question. Thus the three functions in Fig. 1.18 all have zero curl (as you can easily check for yourself), whereas the functions in Fig. 1.19 have a substantial curl, pointing in the z direction, as the natural right-hand rule would suggest. Imagine (again) you are standing at the edge of a pond. Float a small paddlewheel (a cork with toothpicks pointing out radially would do); if it starts to rotate, then you placed it at a point
 of nonzero curl. A whirlpool would be a region of large curl.</p>
-<section id="example-1-5">
-<h3>Example 1.5<a class="headerlink" href="#example-1-5" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-4">
-Q</label><div class="sd-tab-content docutils">
+Example 1.5</label><div class="sd-tab-content docutils">
 <p>Suppose the function sketched in Fig 1.19a is <span class="math notranslate nohighlight">\( \vec{v_a} = -y \hat{x} + x \hat{y} \)</span>, and that in Fig 1.19b is <span class="math notranslate nohighlight">\( \vec{v_b} = x \hat{y} \)</span>. Calculate their curls.</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \nabla \times {\vec{v_a}} = \begin{vmatrix}
@@ -680,7 +654,7 @@ A</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="product-rules">
 <h2>1.2.6: Product Rules<a class="headerlink" href="#product-rules" title="Link to this heading">#</a></h2>
 <p>The calculation of ordinary derivatives is facilitated by a number of rules, such as the sum rule</p>
@@ -893,29 +867,22 @@ f \vec{A} \quad \text{(scalar times vector),} \\
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-derivatives">1.2.1: “Ordinary” Derivatives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">1.2.2: Gradient</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-3">Example 1.3</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">1.2.2: Gradient</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-del-operator">1.2.3: The Del Operator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence">1.2.4: The Divergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-4">Example 1.4</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl">1.2.5: The Curl</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-5">Example 1.5</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence">1.2.4: The Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl">1.2.5: The Curl</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rules">1.2.6: Product Rules</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-derivatives">1.2.7: Second Derivatives</a></li>
 </ul>
@@ -968,8 +935,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

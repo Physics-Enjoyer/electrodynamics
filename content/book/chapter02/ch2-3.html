@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="2.2: Divergence and Curl of Electrostatic Fields" href="ch2-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -453,9 +439,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-potential">2.3.1: Introduction to Potential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-on-potential">2.3.2: Comments on Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-on-potential">2.3.2: Comments on Potential</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-7">Example 2.7</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-s-equation-and-laplace-s-equation">2.3.3: Poisson’s Equation and Laplace’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-potential-of-a-localized-charge-distribution">2.3.4: The potential of a Localized Charge Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-potential-of-a-localized-charge-distribution">2.3.4: The potential of a Localized Charge Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-8">Example 2.8</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">2.3.5: Boundary Conditions</a></li>
 </ul>
             </nav>
@@ -476,8 +468,8 @@ document.write(`
 <p><img alt="Figure 2.30" src="../../../_images/2.30.png" /></p>
 <p>Because <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0\)</span> , the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> around any closed loop is zero (that follows from Stokes’ theorem). Because <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot d{\vec{l}} = 0 \)</span>, the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> from point <span class="math notranslate nohighlight">\(a\)</span> to point <span class="math notranslate nohighlight">\(b\)</span> is the same for all paths (otherwise you could go <em>out</em> along path (i) and return along path (ii) - Fig 2.30 - and obtain <span class="math notranslate nohighlight">\( \oint \vec{E} \cdot d{\vec{l}} \neq 0 \)</span> ). Because the line integral is independent of path, we can define a function</p>
 <div class="math notranslate nohighlight" id="equation-eq2-21">
-<span class="eqno">(105)<a class="headerlink" href="#equation-eq2-21" title="Link to this equation">#</a></span>\[
-V(\vec{r}) \equiv - \int _{\mathcal{O}} ^{\vec{r}} \vec{E} \cdot d{\vec{l}}
+<span class="eqno">(105)<a class="headerlink" href="#equation-eq2-21" title="Link to this equation">#</a></span>\[\boxed{
+V(\vec{r}) \equiv - \int _{\mathcal{O}} ^{\vec{r}} \vec{E} \cdot d{\vec{l}}}
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> is some standard reference point on which we have agreed beforehand; <span class="math notranslate nohighlight">\(V\)</span> then depends only on the point <span class="math notranslate nohighlight">\( \vec{r} \)</span>. It is called the <strong>electric potential</strong>.</p>
 <p>The potential <em>difference</em> between two points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is</p>
@@ -501,42 +493,42 @@ V(\vec{b}) - V(\vec{a}) = \int_{\vec{a}} ^{\vec{b}} (\nabla {V}) \cdot d{\vec{l}
 \]</div>
 <p>Since, finally, this is true for <em>any</em> points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, the integrands must be equal:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-23">
-<span class="eqno">(107)<a class="headerlink" href="#equation-eq2-23" title="Link to this equation">#</a></span>\[
-\vec{E} = - \nabla {V}
+<span class="eqno">(107)<a class="headerlink" href="#equation-eq2-23" title="Link to this equation">#</a></span>\[\boxed{
+\vec{E} = - \nabla {V}}
 \]</div>
 <p>Equation <a class="reference internal" href="#equation-eq2-23">(107)</a> is the differential version of <a class="reference internal" href="#equation-eq2-21">(105)</a>; it says that the electric field is the gradient of a scalar potential, which is what we set out to prove.</p>
 <p>Notice the subtle but crucial role played by path independence (or, equivalently, the fact that <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span> ) in this argument. If the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> depended on the path taken, then the “definition” of <span class="math notranslate nohighlight">\(V\)</span> <a class="reference internal" href="#equation-eq2-21">(105)</a> would be nonsense. It simply would not define a function, since changing the path would alter the value of <span class="math notranslate nohighlight">\( V(\vec{r}) \)</span>. By the way, don’t let the minus sign in <a class="reference internal" href="#equation-eq2-23">(107)</a> distract you; it carries over from <a class="reference internal" href="#equation-eq2-21">(105)</a> and is largely a matter of convention.</p>
 </section>
 <section id="comments-on-potential">
 <h2>2.3.2: Comments on Potential<a class="headerlink" href="#comments-on-potential" title="Link to this heading">#</a></h2>
-<p><strong>The name</strong>. The word “potential” is a hideous misnomer because it inevitably reminds you of potential <em>energy</em>. This is particularly insidious, because there <em>is</em> a connection between “potential” and “potential energy,” as you will see in Sect 2.4. I’m sorry that it is impossible to escape this word. The best I can do is to insist once and for all that “potential” and “potential energy” are completely different terms and should, by all rights, have different names. Incidentally, a surface over which the potential is constant is called an <strong>equipotential</strong>.</p>
-<p><strong>Advantage of the potential formulation</strong>. If you know <span class="math notranslate nohighlight">\(V\)</span>, you can easily get <span class="math notranslate nohighlight">\(\vec{E}\)</span> - just take the gradient: <span class="math notranslate nohighlight">\( \vec{E} =- \nabla {V} \)</span>. This is quite extraordinary when you stop to think about it, for <span class="math notranslate nohighlight">\(\vec{E}\)</span> is a <em>vector</em> quantity (three components), but <span class="math notranslate nohighlight">\(V\)</span> is a <strong>scalar</strong> (one component). How can one function possibly contain all the information that three independent functions carry? The answer is that the three components of <span class="math notranslate nohighlight">\(\vec{E}\)</span> are not really as independent as they look; in fact, they are explicitly interrelated by the very condition we started with, <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span>. In terms of components,</p>
+<p><strong>(i) The name</strong>. The word “potential” is a hideous misnomer because it inevitably reminds you of potential <em>energy</em>. This is particularly insidious, because there <em>is</em> a connection between “potential” and “potential energy,” as you will see in Sect 2.4. I’m sorry that it is impossible to escape this word. The best I can do is to insist once and for all that “potential” and “potential energy” are completely different terms and should, by all rights, have different names. Incidentally, a surface over which the potential is constant is called an <strong>equipotential</strong>.</p>
+<p><strong>(ii) Advantage of the potential formulation</strong>. If you know <span class="math notranslate nohighlight">\(V\)</span>, you can easily get <span class="math notranslate nohighlight">\(\vec{E}\)</span> - just take the gradient: <span class="math notranslate nohighlight">\( \vec{E} =- \nabla {V} \)</span>. This is quite extraordinary when you stop to think about it, for <span class="math notranslate nohighlight">\(\vec{E}\)</span> is a <em>vector</em> quantity (three components), but <span class="math notranslate nohighlight">\(V\)</span> is a <strong>scalar</strong> (one component). How can one function possibly contain all the information that three independent functions carry? The answer is that the three components of <span class="math notranslate nohighlight">\(\vec{E}\)</span> are not really as independent as they look; in fact, they are explicitly interrelated by the very condition we started with, <span class="math notranslate nohighlight">\( \nabla \times \vec{E} = 0 \)</span>. In terms of components,</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial E_x}{\partial y} = \frac{\partial E_y}{\partial x}, \qquad \frac{\partial E_z}{\partial y} = \frac{\partial E_y}{\partial z}, \qquad \frac{\partial E_x}{\partial z} = \frac{\partial E_z}{\partial x}
 \]</div>
 <p>This brings us back to my observation at the beginning of Sect 2.3.1: <span class="math notranslate nohighlight">\(\vec{E}\)</span> is a very special kind of vector. What the potential formulation does is to exploit this feature to maximum advantage, reducing a vector problem to a scalar one, in which there is no need to fuss with components.</p>
-<p><strong>The reference point</strong> <span class="math notranslate nohighlight">\( \mathcal{O} \)</span>. There is an essential ambiguity in the definition of potential, since the choice of reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> was arbitrary. Changing reference points amounts to adding a constant K to the potential:</p>
+<p><strong>(iii) The reference point</strong> <span class="math notranslate nohighlight">\( \mathcal{O} \)</span>. There is an essential ambiguity in the definition of potential, since the choice of reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> was arbitrary. Changing reference points amounts to adding a constant <span class="math notranslate nohighlight">\(K\)</span> to the potential:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 V'(r) =  -\int_{\mathcal{O}'}^{\vec{r}} \vec{E} \cdot d{\vec{l}} \\ 
 = - \int_{\mathcal{O}'} ^{\mathcal{O}} \vec{E} \cdot d{\vec{l}} - \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d{\vec{l}} \\
 =  K + V(\vec{r})
 \end{split}\]</div>
-<p>where K is the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> from the old reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> to the new one <span class="math notranslate nohighlight">\( \mathcal{O}' \)</span>. Of course, adding a constant to <span class="math notranslate nohighlight">\(V\)</span> will not affect the potential <em>difference</em> between two points, since the K’s cancel out. Nor does the ambiguity affect the gradient of <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<p>where <span class="math notranslate nohighlight">\(K\)</span> is the line integral of <span class="math notranslate nohighlight">\(\vec{E}\)</span> from the old reference point <span class="math notranslate nohighlight">\( \mathcal{O} \)</span> to the new one <span class="math notranslate nohighlight">\( \mathcal{O}' \)</span>. Of course, adding a constant to <span class="math notranslate nohighlight">\(V\)</span> will not affect the potential <em>difference</em> between two points, since the <span class="math notranslate nohighlight">\(K\)</span>’s cancel out. Nor does the ambiguity affect the gradient of <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla {V'} = \nabla {V} 
 \]</div>
 <p>since the derivative of a constant is zero. That’s why all such <span class="math notranslate nohighlight">\(V\)</span>’s, differing only in their choice of reference point, correspond to the same field <span class="math notranslate nohighlight">\(\vec{E}\)</span></p>
 <p>Potential as such carries no real physical significance, for at any given point we can adjust its value at will by suitable relocation of <span class="math notranslate nohighlight">\( \mathcal{O} \)</span>. In this sense, it is rather like altitude: if I ask you how high Denver is, you will probably tell me its height above sea level, because that is a convenient and traditional reference point. But we could as well agree to measure altitude above Washington, DC, or Greenwich, or wherever. That would add (or rather, subtract) a fixed amount from all our sea-level readings, but it wouldn’t change anything about the real world. The only quantity of interest is the <em>difference</em> in altitude between two points, and that is the same whatever your reference level.</p>
-<p>Having said this, however, there is a “natural” spot to use for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> in electrostatics - analogous to sea level for altitude - and that is a point infinitely far from the charge. Ordinarily, then, we “set the zero of potential at infinity.” (Since <span class="math notranslate nohighlight">\( V(\mathcal{O}) = 0 \)</span>, choosing a reference point is equivalent to selecting a place where <span class="math notranslate nohighlight">\(V\)</span> is to be zero.) But I must warn you that there is one special circumstance in which this convention fails: when the charge distribution itself extends to infinity. The symptom of trouble, in such cases, is that the potential blows up. For instance, the field of a uniformly charged plane is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, as we found in Ex 2.5; if we naively put <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>, then the potential at height <em>z</em> above the plane becomes</p>
+<p>Having said this, however, there is a “natural” spot to use for <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> in electrostatics - analogous to sea level for altitude - and that is a point infinitely far from the charge. Ordinarily, then, we “set the zero of potential at infinity.” (Since <span class="math notranslate nohighlight">\( V(\mathcal{O}) = 0 \)</span>, choosing a reference point is equivalent to selecting a place where <span class="math notranslate nohighlight">\(V\)</span> is to be zero.) But I must warn you that there is one special circumstance in which this convention fails: when the charge distribution itself extends to infinity. The symptom of trouble, in such cases, is that the potential blows up. For instance, the field of a uniformly charged plane is <span class="math notranslate nohighlight">\( (\sigma / 2 \epsilon_0) \hat{n} \)</span>, as we found in Ex 2.5; if we naively put <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>, then the potential at height <span class="math notranslate nohighlight">\(z\)</span> above the plane becomes</p>
 <div class="math notranslate nohighlight">
 \[
 V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma d{z} = - \frac{1}{2\epsilon_0} \sigma(z - \infty)
 \]</div>
 <p>The remedy is simply to choose some other reference point (in this example you might use a point on the plane). Notice that the difficulty occurs only in textbook problems; in “real life” there is no such thing as a charge distribution that goes on forever, and we can <em>always</em> use infinity as our reference point.</p>
-<p><strong>Potential obeys the superposition principle</strong>. The original superposition principle pertains to the force on a test charge Q. It says that the total force on <em>Q</em> is the vector sum of the forces attributable to the source charges individually:</p>
+<p><strong>(iv) Potential obeys the superposition principle</strong>. The original superposition principle pertains to the force on a test charge <span class="math notranslate nohighlight">\(Q\)</span>. It says that the total force on <span class="math notranslate nohighlight">\(Q\)</span> is the vector sum of the forces attributable to the source charges individually:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{F} = \vec{F_1} + \vec{F_2} + \ldots
@@ -552,7 +544,38 @@ V(z) = - \int_{\infty}^{z}\frac{1}{2\epsilon_0} \sigma d{z} = - \frac{1}{2\epsil
 V = V_1 + V_2 + \ldots
 \]</div>
 <p>That is, the potential at any given point is the sum of the potentials due to all the source charges separately. Only this time it is an <em>ordinary</em> sum, not a vector sum, which makes it a lot easier to work with.</p>
-<p><strong>Units of Potential</strong>. In our units, force is measured in newtons and charge in coulombs, so electric fields are in newtons per coulomb. Accordingly, potential is newton-meters per coulomb, or joules per coulomb. A joule per coulomb is a <strong>Volt</strong>.</p>
+<p><strong>(v) Units of Potential</strong>. In our units, force is measured in newtons and charge in coulombs, so electric fields are in newtons per coulomb. Accordingly, potential is newton-meters per coulomb, or joules per coulomb. A joule per coulomb is a <strong>Volt</strong>.</p>
+<hr class="docutils" />
+<section id="example-2-7">
+<h3>Example 2.7<a class="headerlink" href="#example-2-7" title="Link to this heading">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Q</label><div class="sd-tab-content docutils">
+<p>Find the potential inside and outside a spherical shell of radius <span class="math notranslate nohighlight">\(R\)</span></p>
+<p><img alt="Figure 2.31" src="../../../_images/2.31.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+A</label><div class="sd-tab-content docutils">
+<p>From Gauss’s law, the field outside is</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(q\)</span> is the total charge on the sphere. The field inside is zero. For points outside the sphere (<span class="math notranslate nohighlight">\(r\gt R\)</span>),</p>
+<div class="math notranslate nohighlight">
+\[
+V(r) = -\int_\mathcal{O}^r\vec{E}\cdot d\vec{l} = \frac{-1}{4\pi\epsilon_0}\int_\infty^r\frac{q}{{r'}^2}dr' = \frac{1}{4\pi\epsilon_0}\frac{q}{r'}\bigg|_\infty^r = \frac{1}{4\pi\epsilon_0}\frac{q}{r}
+\]</div>
+<p>To find the potential inside the sphere (<span class="math notranslate nohighlight">\(r \lt R\)</span>), we must break the integral into two pieces, using in each region the field that prevails there:</p>
+<p>$<span class="math notranslate nohighlight">\(
+V(r) = \frac{-1}{4\pi\epsilon_0}\int_{-\infty}^R\frac{q}{{r'}^2}dr' - \int_R^r(0)dr' = \frac{1}{4\pi\epsilon_0}\frac{q}{r'}\bigg|_\infty^R+0 = \frac{1}{4\pi\epsilon_0}\frac{q}{R}
+\)</span>$.</p>
+<p>Notice that the potential is <em>not</em> zero inside the shell, even though the field is. <span class="math notranslate nohighlight">\(V\)</span> is a <em>constant</em> in this region, to be sure, so that <span class="math notranslate nohighlight">\(\nabla V = 0\)</span> - That’s what matters. In problems of this type, you must always <em>work your way in from the reference point;</em> that’s where the potential is “nailed down.” It is tempting to suppose that you could figure out the potential inside the sphere on the basis of the field there alone, but this is false: The potential inside the sphere is sensitive to what’s going on outside the sphere as well. If I placed a second uniformly charged shell out att radius <span class="math notranslate nohighlight">\(R' \gt R\)</span>, the potential inside <span class="math notranslate nohighlight">\(R\)</span> would change, even though the field would still be zero. Gauss’s law guarantees that charge exterior to a given point (that is at larger <span class="math notranslate nohighlight">\(r\)</span>) produces no net <em>field</em> at that point, provided it is spherically or cylindrically symmetric, but there is no such rule for <em>potential</em>, when infinity is used as the reference point.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="poisson-s-equation-and-laplace-s-equation">
 <h2>2.3.3: Poisson’s Equation and Laplace’s Equation<a class="headerlink" href="#poisson-s-equation-and-laplace-s-equation" title="Link to this heading">#</a></h2>
@@ -568,10 +591,10 @@ V = V_1 + V_2 + \ldots
 \]</div>
 <p>look like, in terms of <span class="math notranslate nohighlight">\(V\)</span>? Well, <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{E}} = \nabla \cdot (-\nabla {V}) = -\nabla^2{V} \)</span>, so, apart from that persistent minus sign, the divergence of <span class="math notranslate nohighlight">\(\vec{E}\)</span> is the Laplacian of <span class="math notranslate nohighlight">\(V\)</span>. Gauss’s law, then, says</p>
 <div class="math notranslate nohighlight" id="equation-eq2-24">
-<span class="eqno">(108)<a class="headerlink" href="#equation-eq2-24" title="Link to this equation">#</a></span>\[
-\nabla^2{V} = -\frac{\rho}{\epsilon_0}
+<span class="eqno">(108)<a class="headerlink" href="#equation-eq2-24" title="Link to this equation">#</a></span>\[\boxed{
+\nabla^2{V} = -\frac{\rho}{\epsilon_0}}
 \]</div>
-<p>This is known as <strong>Poisson’s equation</strong>. In regions where there is no charge, so <span class="math notranslate nohighlight">\( \rho = 0 \)</span>, Poisson’s equation reduces to Laplace’s equation,</p>
+<p>This is known as <strong>Poisson’s equation</strong>. In regions where there is no charge, so <span class="math notranslate nohighlight">\( \rho = 0 \)</span>, Poisson’s equation reduces to <strong>Laplace’s equation</strong>,</p>
 <div class="math notranslate nohighlight" id="equation-eq2-25">
 <span class="eqno">(109)<a class="headerlink" href="#equation-eq2-25" title="Link to this equation">#</a></span>\[
 \nabla^2{V} = 0
@@ -582,7 +605,7 @@ V = V_1 + V_2 + \ldots
 \[
 \nabla \times {\vec{E}} = \nabla \times (-\nabla {V}) = 0
 \]</div>
-<p>But that’s no condition on <span class="math notranslate nohighlight">\(V\)</span> - curl of gradient is <em>always</em> zero. Of course, we used the curl law to show that <span class="math notranslate nohighlight">\(\vec{E}\)</span> could be expressed as the gradient of a scalar, so it’s not really surprising that this works out: <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span> permits our definition of <span class="math notranslate nohighlight">\(V\)</span>; in return, <span class="math notranslate nohighlight">\( \vec{E} = - \nabla {V} \)</span> guarantees <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span>. It only takes one differential equation (Poisson’s) to determine <span class="math notranslate nohighlight">\(V\)</span>, because <span class="math notranslate nohighlight">\(V\)</span> is a scalar. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> we needed two, the divergence and the curl.</p>
+<p>But that’s no condition on <span class="math notranslate nohighlight">\(V\)</span> - curl of gradient is <em>always</em> zero. Of course, we <em>used</em> the curl law to show that <span class="math notranslate nohighlight">\(\vec{E}\)</span> could be expressed as the gradient of a scalar, so it’s not really surprising that this works out: <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span> <em>permits</em> <span class="math notranslate nohighlight">\( \vec{E} = - \nabla {V} \)</span>; in return, <span class="math notranslate nohighlight">\(\vec{E} = -\nabla V\)</span> <em>guarantees</em> <span class="math notranslate nohighlight">\( \nabla \times {\vec{E}} = 0 \)</span>. It only takes one differential equation (Poisson’s) to determine <span class="math notranslate nohighlight">\(V\)</span>, because <span class="math notranslate nohighlight">\(V\)</span> is a scalar. For <span class="math notranslate nohighlight">\( \vec{E} \)</span> we needed two, the divergence and the curl.</p>
 </section>
 <section id="the-potential-of-a-localized-charge-distribution">
 <h2>2.3.4: The potential of a Localized Charge Distribution<a class="headerlink" href="#the-potential-of-a-localized-charge-distribution" title="Link to this heading">#</a></h2>
@@ -592,7 +615,7 @@ V = V_1 + V_2 + \ldots
 \[
 \vec{E} \cdot d{\vec{l}} = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} d{r} 
 \]</div>
-<p>Setting the reference point at infinity, the potential of a point charge <em>q</em> at the origin is</p>
+<p>Setting the reference point at infinity, the potential of a point charge <span class="math notranslate nohighlight">\(q\)</span> at the origin is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -603,49 +626,108 @@ V(r) &amp;= - \int_{\mathcal{O}} ^r \vec{E} \cdot d{\vec{l}} \\
 \end{split}\]</div>
 <p>(You see here the advantage of using infinity for the reference point: it kills the lower limit on the integral.) Notice the sign of <span class="math notranslate nohighlight">\(V\)</span>; presumably the conventional minus sign in the definition was chosen in order to make the potential of a positive charge come out positive. It is useful to remember that regions of positive charge are potential “hills,” and electric field points “downhill” from plus toward minus.</p>
 <p><img alt="Figure 2.32" src="../../../_images/2.32.png" /></p>
-<p>In general, the potential of a point charge q is</p>
+<p>In general, the potential of a point charge <span class="math notranslate nohighlight">\(q\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-26">
 <span class="eqno">(110)<a class="headerlink" href="#equation-eq2-26" title="Link to this equation">#</a></span>\[
-V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{q}{\Delta r } 
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{q}{\mathcal{R} } 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span>, as always, is the distance from <span class="math notranslate nohighlight">\( q \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> (Fig 2.32). Invoking the superposition principle, then, the potential of a collection of charges is</p>
+<p>where <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span>, as always, is the distance from <span class="math notranslate nohighlight">\( q \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> (Fig 2.32). Invoking the superposition principle, then, the potential of a collection of charges is</p>
 <div class="math notranslate nohighlight" id="equation-eq2-27">
 <span class="eqno">(111)<a class="headerlink" href="#equation-eq2-27" title="Link to this equation">#</a></span>\[
-V(r) = \frac{1}{4\pi \epsilon_0} \sum_{i=1} ^n \frac{q_i}{\Delta r  _i} 
+V(r) = \frac{1}{4\pi \epsilon_0} \sum_{i=1} ^n \frac{q_i}{\mathcal{R}_i} 
 \]</div>
 <p>or, for a continuous distribution,</p>
-<div class="math notranslate nohighlight" id="equation-eq2-29">
-<span class="eqno">(112)<a class="headerlink" href="#equation-eq2-29" title="Link to this equation">#</a></span>\[
-V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\Delta r } d{\tau'}
+<div class="math notranslate nohighlight" id="equation-eq2-28">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq2-28" title="Link to this equation">#</a></span>\[
+V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\int\frac{1}{\mathcal{R}}dq
 \]</div>
-<p>This is the equation we were looking for, telling us how to compute <span class="math notranslate nohighlight">\(V\)</span> when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(112)</a> with the corresponding formula for the electric field in terms of <span class="math notranslate nohighlight">\( \rho \)</span>:</p>
+<p>In particular, for a volume charge, it’s</p>
+<div class="math notranslate nohighlight" id="equation-eq2-29">
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq2-29" title="Link to this equation">#</a></span>\[\boxed{
+V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r}')}{\mathcal{R}} d{\tau'}}
+\]</div>
+<p>This is the equation we were looking for, telling us how to compute <span class="math notranslate nohighlight">\(V\)</span> when we know <span class="math notranslate nohighlight">\( \rho \)</span>; it is, if you like, the “solution” to Poisson’s equation, for a localized charge distribution. Compare <a class="reference internal" href="#equation-eq2-29">(113)</a> with the corresponding formula for the electric <em>field</em> in terms of <span class="math notranslate nohighlight">\( \rho \)</span> <a class="reference internal" href="ch2-1.html#equation-eq2-8">(95)</a>:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\Delta r  ^2} \hat{\Delta r } d{\tau'}
+\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec{r'})}{\mathcal{R}  ^2} \hat{\mathcal{R} } d{\tau'}
 \]</div>
-<p>The main point is that the pesky unit vector <span class="math notranslate nohighlight">\( \hat{\Delta r } \)</span> is gone, so there is no need to fuss with components. The potentials of line and surface charges are</p>
+<p>The main point is that the pesky unit vector <span class="math notranslate nohighlight">\( \hat{\mathcal{R}} \)</span> is gone, so there is no need to fuss with components. The potentials of line and surface charges are</p>
 <div class="math notranslate nohighlight" id="equation-eq2-30">
-<span class="eqno">(113)<a class="headerlink" href="#equation-eq2-30" title="Link to this equation">#</a></span>\[
-V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\Delta r } d{l'} \qquad \text{ and } \qquad V = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\Delta r } d{a'}
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq2-30" title="Link to this equation">#</a></span>\[
+V = \frac{1}{4 \pi \epsilon_0} \int \frac{\lambda(\vec{r'})}{\mathcal{R} } d{l'} \qquad \text{ and } \qquad V = \frac{1}{4 \pi \epsilon_0} \int \frac{\sigma(\vec{r'})}{\mathcal{R} } d{a'}
 \]</div>
-<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(112)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
+<p>I should warn you that everything in this section is predicated on the assumption that the reference point is at infinity. This is hardly apparent in <a class="reference internal" href="#equation-eq2-29">(113)</a>, but remember that we <em>got</em> the equation from the potential of a point charge at the origin, <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) (q / r) \)</span>, which is valid only when <span class="math notranslate nohighlight">\( \mathcal{O} = \infty \)</span>. If you try to apply these formulas to one of those artificial problems in which the charge itself extends to infinity, the integral will diverge.</p>
+<hr class="docutils" />
+<section id="example-2-8">
+<h3>Example 2.8<a class="headerlink" href="#example-2-8" title="Link to this heading">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Q</label><div class="sd-tab-content docutils">
+<p>Find the potential of a uniformly charged spherical shell of radius <span class="math notranslate nohighlight">\(R\)</span> (Fig. 2.33).</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>This is the same problem we solved in Ex. 2.7, but this time let’s do it using <a class="reference internal" href="#equation-eq2-30">(114)</a>:</p>
+<div class="math notranslate nohighlight">
+\[
+V(\vec{r}) = \frac{1}{4\pi\epsilon_0}\int \frac{\sigma}{\mathcal{R}}da'
+\]</div>
+<p>We might as well set the point <span class="math notranslate nohighlight">\(P\)</span> on the <span class="math notranslate nohighlight">\(z\)</span> axis and use the law of cosines to express <span class="math notranslate nohighlight">\(\mathcal{R}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{R}^2 = R^2 + z^2 - 2Rz\cos\theta'
+\]</div>
+<p><img alt="Figure 2.33" src="../../../_images/2.33.png" /></p>
+<p>An element of surface area on the sphere is <span class="math notranslate nohighlight">\(R^2\sin\theta'd\theta'd\phi'\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+4\pi\epsilon_0 V(z) &amp;= \sigma \int \frac{R^2\sin\theta'd\theta'd\phi'}{\sqrt{R^2 + z^2 - 2Rz\cos\theta'}} \\
+&amp;= 2\pi R^2\sigma \left(\frac{1}{Rz}\sqrt{R^2 + z^2 -2Rz\cos\theta'}\right)\bigg|_0^\pi \\
+&amp;= \frac{2\pi R\sigma}{z}\left(\sqrt{R^2 + z^2 + 2Rz} - \sqrt{R^2 + z^2 - 2Rz}\right) \\
+&amp;= \frac{2\pi R\sigma}{z}\left[\sqrt{(R + z)^2} - \sqrt{(R - z)^2}\right]
+\end{aligned}
+\end{split}\]</div>
+<p>At this stage, we must be very careful to take the <em>positive</em> root. For points <em>outside</em> the sphere, $<span class="math notranslate nohighlight">\( is greater than \)</span>R<span class="math notranslate nohighlight">\( and hence \)</span>\sqrt{(R - z)^2} = z-R<span class="math notranslate nohighlight">\(; for points *inside* the sphere, \)</span>\sqrt{(R-z)^2} = R - z$. Thus,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;V(z) = \frac{R\sigma}{2\epsilon_0 z}[(R + z) - (z - R)] = \frac{R^2\sigma}{\epsilon_0z}, \qquad &amp;\text{outside;} \\
+&amp;V(z) = \frac{R\sigma}{2\epsilon_0 z}[(R + z) - (R - z)] = \frac{R\sigma}{\epsilon_0}, \qquad &amp;\text{inside;}
+\end{aligned}
+\end{split}\]</div>
+<p>In terms of <span class="math notranslate nohighlight">\(r\)</span> and the total charge on the shell, <span class="math notranslate nohighlight">\(q = 4\pi R^2\sigma\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+V(r) = \begin{cases}
+\frac{1}{4\pi\epsilon_0}\frac{q}{r} \qquad (r \geq R), \\
+\frac{1}{4\pi\epsilon_0}\frac{q}{R} \qquad (r \leq R).
+\end{cases}
+\end{split}\]</div>
+<p>Of course, in this particular case, it was easier to get <span class="math notranslate nohighlight">\(V\)</span> by using <a class="reference internal" href="#equation-eq2-21">(105)</a> than <a class="reference internal" href="#equation-eq2-30">(114)</a>, because Gauss’s law gave us <span class="math notranslate nohighlight">\(\vec{E}\)</span> with so little effort. But if you compare Ex 2.8 with Prob 2.7, you will appreciate the power of the potential formulation.</p>
+</div>
+</div>
 </section>
+</section>
+<hr class="docutils" />
 <section id="boundary-conditions">
 <h2>2.3.5: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h2>
 <p>In the typical electrostatic problem you are given a source charge distribution <span class="math notranslate nohighlight">\( \rho \)</span>, and you want to find the electric field <span class="math notranslate nohighlight">\( \vec{E} \)</span> it produces. Unless the symmetry of the problem allows a solution by Gauss’s law, it is generally to your advantage to calculate the potential first, as an intermediate step. These are the three fundamental quantities of electrostatics: <span class="math notranslate nohighlight">\( \rho \)</span>, <span class="math notranslate nohighlight">\( \vec{E} \)</span>, and <span class="math notranslate nohighlight">\(V\)</span>. We have, in the course of our discussion, derived all six formulas interrelating them. These equations are neatly summarized in Fig. 2.35. We began with just two experimental observations: (1) the principle of superposition - a broad general rule applying to all electromagnetic forces, and (2) Coulomb’s law - the fundamental law of electrostatics. From these, all else followed.</p>
 <p><img alt="Figure 2.35" src="../../../_images/2.35.png" /></p>
-<p>You may have noticed, in studying the exercises in this chapter, that the electric field always undergoes a discontinuity when you cross a surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. In fact, it is a simple matter to find the <em>amount</em> by which E changes at such a boundary. Suppose we draw a wafer-thin Gaussian pillbox, extending just barely over the edge in each direction (Fig. 2.36). Gauss’s law says that</p>
+<p>You may have noticed, in studying the exercises in this chapter, that the electric field always undergoes a discontinuity when you cross a surface charge <span class="math notranslate nohighlight">\( \sigma \)</span>. In fact, it is a simple matter to find the <em>amount</em> by which <span class="math notranslate nohighlight">\(\vec{E}\)</span> changes at such a boundary. Suppose we draw a wafer-thin Gaussian pillbox, extending just barely over the edge in each direction (Fig. 2.36). Gauss’s law says that</p>
 <div class="math notranslate nohighlight">
 \[
 \oint _{S} \vec{E} \cdot d{\vec{a}} = \frac{1}{\epsilon_0} Q_{enc} = \frac{1}{\epsilon_0} \sigma A
 \]</div>
-<p><img alt="Figure 2.36" src="../../../_images/2.36.png" />
-where A is the area of the pillbox lid. If <span class="math notranslate nohighlight">\( \sigma \)</span>  varies from point to point or the surface is curved, we can simply pick A to be extremely small. Now, the sides of the pillbox contribute nothing to the flux, in the limit as the thickness <span class="math notranslate nohighlight">\( \epsilon \)</span>  goes to zero, so we are left with</p>
+<p><img alt="Figure 2.36" src="../../../_images/2.36.png" /></p>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the area of the pillbox lid. (If <span class="math notranslate nohighlight">\( \sigma \)</span>  varies from point to point or the surface is curved, we can simply pick <span class="math notranslate nohighlight">\(A\)</span> to be extremely small.) Now, the <em>sides</em> of the pillbox contribute nothing to the flux, in the limit as the thickness <span class="math notranslate nohighlight">\( \epsilon \)</span>  goes to zero, so we are left with</p>
 <div class="math notranslate nohighlight" id="equation-eq2-31">
-<span class="eqno">(114)<a class="headerlink" href="#equation-eq2-31" title="Link to this equation">#</a></span>\[
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq2-31" title="Link to this equation">#</a></span>\[
 E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( E_{above}^{\perp} \)</span> denotes the component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> that is perpendicular to the surface immediately above, and <span class="math notranslate nohighlight">\(  E_{below}^{\perp} \)</span> is the same, only just below the surface. For consistency, let “upward” be the positive direction for both. <em>Conclusion: the normal component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> is discontinuous by an amount <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span> at any boundary.</em> In particular, where there is <em>no</em> surface charge, <span class="math notranslate nohighlight">\( \vec{E}^{\perp} \)</span> is continuous, as for instance at the surface of a uniformly charged solid sphere.</p>
+<p>where <span class="math notranslate nohighlight">\( E_{above}^{\perp} \)</span> denotes the component of <span class="math notranslate nohighlight">\( \vec{E} \)</span> that is perpendicular to the surface immediately above, and <span class="math notranslate nohighlight">\(  E_{below}^{\perp} \)</span> is the same, only just below the surface. For consistency, let “upward” be the positive direction for both. <em>Conclusion: the normal component of</em> <span class="math notranslate nohighlight">\( \vec{E} \)</span> <em>is discontinuous by an amount</em> <span class="math notranslate nohighlight">\( \sigma / \epsilon_0 \)</span> <em>at any boundary.</em> In particular, where there is <em>no</em> surface charge, <span class="math notranslate nohighlight">\( \vec{E}^{\perp} \)</span> is continuous, as for instance at the surface of a uniformly charged solid sphere.</p>
 <p>The <em>tangential</em> component of <span class="math notranslate nohighlight">\( \vec{E} \)</span>, by contrast, is always continuous. For if we apply <a class="reference internal" href="ch2-2.html#equation-eq2-19">(103)</a>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -653,14 +735,14 @@ E_{above}^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
 \]</div>
 <p>to the thin rectangular loop of Fig 2.37, the ends give nothing (as <span class="math notranslate nohighlight">\( \epsilon \rightarrow 0 \)</span>), and the sides give <span class="math notranslate nohighlight">\( (E_{above}^{\parallel} l - E_{below}^{\parallel} l) \)</span>, so</p>
 <div class="math notranslate nohighlight" id="equation-eq2-32">
-<span class="eqno">(115)<a class="headerlink" href="#equation-eq2-32" title="Link to this equation">#</a></span>\[
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq2-32" title="Link to this equation">#</a></span>\[
 \vec{E}_{above}^{\parallel} = \vec{E}_{below}^{\parallel}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{E}^{\parallel} \)</span> stands for the components of <span class="math notranslate nohighlight">\( \vec{E} \)</span> parallel to the surface.</p>
 <p><img alt="Figure 2.36" src="../../../_images/2.36.png" /></p>
-<p>The boundary conditions on <span class="math notranslate nohighlight">\( \vec{E} \)</span> (Eqs. <a class="reference internal" href="#equation-eq2-31">(114)</a> and <a class="reference internal" href="#equation-eq2-32">(115)</a>) can be combined into a single formula:</p>
+<p>The boundary conditions on <span class="math notranslate nohighlight">\( \vec{E} \)</span> (Eqs. <a class="reference internal" href="#equation-eq2-31">(115)</a> and <a class="reference internal" href="#equation-eq2-32">(116)</a>) can be combined into a single formula:</p>
 <div class="math notranslate nohighlight" id="equation-eq2-33">
-<span class="eqno">(116)<a class="headerlink" href="#equation-eq2-33" title="Link to this equation">#</a></span>\[
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq2-33" title="Link to this equation">#</a></span>\[
 \vec{E}_{above} - \vec{E}_{below} = \frac{\sigma}{\epsilon_0} \hat{n}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector perpendicular to the surface, pointing from “below” to “above.”</p>
@@ -673,26 +755,26 @@ V_{above} - V_{below} = -\int_{a}^{b} \vec{E} \cdot d{\vec{l}}
 \]</div>
 <p>as the path length shrinks to zero, so too does the integral</p>
 <div class="math notranslate nohighlight" id="equation-eq2-34">
-<span class="eqno">(117)<a class="headerlink" href="#equation-eq2-34" title="Link to this equation">#</a></span>\[
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq2-34" title="Link to this equation">#</a></span>\[
 V_{above} = V_{below}
 \]</div>
-<p>However, the <em>gradient</em> of <span class="math notranslate nohighlight">\(V\)</span> inherits the discontinuity in <span class="math notranslate nohighlight">\( \vec{E} \)</span>, since <span class="math notranslate nohighlight">\( \vec{E} - \nabla {V} \)</span>, so</p>
+<p>However, the <em>gradient</em> of <span class="math notranslate nohighlight">\(V\)</span> inherits the discontinuity in <span class="math notranslate nohighlight">\( \vec{E} \)</span>, since <span class="math notranslate nohighlight">\( \vec{E} = - \nabla V \)</span>, eq <a class="reference internal" href="#equation-eq2-33">(117)</a> implies that</p>
 <div class="math notranslate nohighlight" id="equation-eq2-35">
-<span class="eqno">(118)<a class="headerlink" href="#equation-eq2-35" title="Link to this equation">#</a></span>\[
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq2-35" title="Link to this equation">#</a></span>\[
 \nabla {V}_{above} - \nabla {V}_{below} = - \frac{\sigma}{\epsilon_0} \hat{n}
 \]</div>
 <p>or more conveniently</p>
 <div class="math notranslate nohighlight" id="equation-eq2-36">
-<span class="eqno">(119)<a class="headerlink" href="#equation-eq2-36" title="Link to this equation">#</a></span>\[
+<span class="eqno">(120)<a class="headerlink" href="#equation-eq2-36" title="Link to this equation">#</a></span>\[
 \frac{\partial {V_{above}}}{\partial n} - \frac{\partial {V_{below}}}{\partial n} = - \frac{1}{\epsilon_0} \sigma
 \]</div>
 <p>where</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq2-37">
+<span class="eqno">(121)<a class="headerlink" href="#equation-eq2-37" title="Link to this equation">#</a></span>\[
 \frac{\partial V}{\partial n} = \nabla {V} \cdot \hat{n}
 \]</div>
-<p>denotes the normal derivative of <span class="math notranslate nohighlight">\(V\)</span> (that is, the rate of change in the direction perpendicular to the surface).</p>
-<p>Please note that these boundary conditions relate the fields and potentials <em>just</em> above and <em>just</em> below the surface. For example, the derivatives in <a class="reference internal" href="#equation-eq2-36">(119)</a> are the limiting values as we approach the surface from either side.</p>
+<p>denotes the <strong>normal derivative</strong> of <span class="math notranslate nohighlight">\(V\)</span> (that is, the rate of change in the direction perpendicular to the surface).</p>
+<p>Please note that these boundary conditions relate the fields and potentials <em>just</em> above and <em>just</em> below the surface. For example, the derivatives in <a class="reference internal" href="#equation-eq2-36">(120)</a> are the limiting values as we approach the surface from either side.</p>
 </section>
 </section>
 
@@ -751,19 +833,27 @@ V_{above} = V_{below}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-potential">2.3.1: Introduction to Potential</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-on-potential">2.3.2: Comments on Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments-on-potential">2.3.2: Comments on Potential</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-7">Example 2.7</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-s-equation-and-laplace-s-equation">2.3.3: Poisson’s Equation and Laplace’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-potential-of-a-localized-charge-distribution">2.3.4: The potential of a Localized Charge Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-potential-of-a-localized-charge-distribution">2.3.4: The potential of a Localized Charge Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-8">Example 2.8</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">2.3.5: Boundary Conditions</a></li>
 </ul>
   </nav></div>
@@ -813,8 +903,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

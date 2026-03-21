@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.2: The Field of a Polarized Object" href="ch4-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -452,10 +438,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-s-law-in-the-presence-of-dielectrics">4.3.1: Gauss’s Law in the Presence of Dielectrics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-4">Example 4.4</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-s-law-in-the-presence-of-dielectrics">4.3.1: Gauss’s Law in the Presence of Dielectrics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-deceptive-parallel">4.3.2: A Deceptive Parallel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">4.3.3: Boundary Conditions</a></li>
 </ul>
@@ -475,7 +458,7 @@ document.write(`
 <h2>4.3.1: Gauss’s Law in the Presence of Dielectrics<a class="headerlink" href="#gauss-s-law-in-the-presence-of-dielectrics" title="Link to this heading">#</a></h2>
 <p>In Section 4.2 we found that the effect of polarization is to produce accumulations of (bound) charge, <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> within the dielectric and <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span> on the surface. The field due to polarization of the medium is just the field of this bound charge. We are now ready to put it all together: the field attributable to bound charge plus the field due to everything <em>else</em> (which, for want of a better term, we call <strong>free charge</strong>, <span class="math notranslate nohighlight">\( \rho_f \)</span>). The free charge might consist of electrons on a conductor or ions embedded in the dielectric material or whatever; any charge, in other words, that is <em>not</em> a result of polarization. Within the dielectric, the total charge density can be written</p>
 <div class="math notranslate nohighlight" id="equation-eq4-20">
-<span class="eqno">(246)<a class="headerlink" href="#equation-eq4-20" title="Link to this equation">#</a></span>\[
+<span class="eqno">(249)<a class="headerlink" href="#equation-eq4-20" title="Link to this equation">#</a></span>\[
 \rho = \rho_b + \rho_f 
 \]</div>
 <p>and Gauss’s law reads</p>
@@ -483,48 +466,47 @@ document.write(`
 \[
 \epsilon_0 \nabla \cdot  \vec{E} = \rho = \rho_b + \rho_f = - \nabla \cdot  \vec{P} + \rho_f
 \]</div>
-<p>where <strong>E</strong> is now the total field, not just that portion generated by polarization.</p>
+<p>where <span class="math notranslate nohighlight">\(\vec{E}\)</span> is now the total field, not just that portion generated by polarization.</p>
 <p>It is convenient to combine the two divergence terms:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot  (\epsilon_0 \vec{E} + \vec{P}) = \rho_f
 \]</div>
-<p>The expression in parentheses is known as the <strong>electric displacement</strong> and is designated by the letter <strong>D</strong>:</p>
+<p>The expression in parentheses is known as the <strong>electric displacement</strong> and is designated by the letter <span class="math notranslate nohighlight">\(\vec{D}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-21">
-<span class="eqno">(247)<a class="headerlink" href="#equation-eq4-21" title="Link to this equation">#</a></span>\[
+<span class="eqno">(250)<a class="headerlink" href="#equation-eq4-21" title="Link to this equation">#</a></span>\[
 \vec{D} \equiv \epsilon_0 \vec{E} + \vec{P} 
 \]</div>
-<p>In terms of <strong>D</strong>, Gauss’s law then reads</p>
+<p>In terms of <span class="math notranslate nohighlight">\(\vec{D}\)</span>, Gauss’s law then reads</p>
 <div class="math notranslate nohighlight" id="equation-eq4-22">
-<span class="eqno">(248)<a class="headerlink" href="#equation-eq4-22" title="Link to this equation">#</a></span>\[
+<span class="eqno">(251)<a class="headerlink" href="#equation-eq4-22" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{D} = \rho_f 
 \]</div>
 <p>or in integral form</p>
 <div class="math notranslate nohighlight" id="equation-eq4-23">
-<span class="eqno">(249)<a class="headerlink" href="#equation-eq4-23" title="Link to this equation">#</a></span>\[
+<span class="eqno">(252)<a class="headerlink" href="#equation-eq4-23" title="Link to this equation">#</a></span>\[
 \oint \vec{D} \cdot \mathrm{d} \vec{a} = Q_{f_{enc}} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( Q_{f_{enc}} \)</span> denotes the total free charge enclosed in the volume. This is a particularly useful way to express Gauss’s law, in the context of dielectrics, because it <em>makes reference only to the free charges</em>, and free charge is the stuff we control. Bound charge comes along for the ride: when we put the free charge in place, a certain polarization automatically arises, by the mechanisms of Sect 4.1, and this polarization produces the bound charge. In a typical problem, therefore, we know <span class="math notranslate nohighlight">\( \rho_f \)</span>, but we do not (initially) know <span class="math notranslate nohighlight">\( \rho_b \)</span>; <a class="reference internal" href="#equation-eq4-23">(249)</a> lets us go right to work with the information at hand. In particular, whenever the requisite symmetry is present, we can immediately calculate <span class="math notranslate nohighlight">\(\vec{D}\)</span> by the standard Gauss’s law methods.</p>
-<section id="example-4-4">
-<h3>Example 4.4<a class="headerlink" href="#example-4-4" title="Link to this heading">#</a></h3>
+<p>where <span class="math notranslate nohighlight">\( Q_{f_{enc}} \)</span> denotes the total free charge enclosed in the volume. This is a particularly useful way to express Gauss’s law, in the context of dielectrics, because it <em>makes reference only to the free charges</em>, and free charge is the stuff we control. Bound charge comes along for the ride: when we put the free charge in place, a certain polarization automatically arises, by the mechanisms of Sect 4.1, and this polarization produces the bound charge. In a typical problem, therefore, we know <span class="math notranslate nohighlight">\( \rho_f \)</span>, but we do not (initially) know <span class="math notranslate nohighlight">\( \rho_b \)</span>; <a class="reference internal" href="#equation-eq4-23">(252)</a> lets us go right to work with the information at hand. In particular, whenever the requisite symmetry is present, we can immediately calculate <span class="math notranslate nohighlight">\(\vec{D}\)</span> by the standard Gauss’s law methods.</p>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
-<p>A long straight wire, carrying uniform line charge <span class="math notranslate nohighlight">\( \lambda \)</span>, is surrounded by rubber insulation out to a radius <em>a</em> (Fig 4.17). Find the electric displacement.</p>
+Example 4.4</label><div class="sd-tab-content docutils">
+<p>A long straight wire, carrying uniform line charge <span class="math notranslate nohighlight">\( \lambda \)</span>, is surrounded by rubber insulation out to a radius <span class="math notranslate nohighlight">\(a\)</span> (Fig 4.17). Find the electric displacement.</p>
 <p><img alt="Figure 4.17" src="../../../_images/4.17.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
-<p>Drawing a cylindrical Gaussian surface, of radius <em>s</em> and length <em>L</em>, and applying <a class="reference internal" href="#equation-eq4-23">(249)</a> we find</p>
+Solution</label><div class="sd-tab-content docutils">
+<p>Drawing a cylindrical Gaussian surface, of radius <span class="math notranslate nohighlight">\(s\)</span> and length <span class="math notranslate nohighlight">\(L\)</span>, and applying <a class="reference internal" href="#equation-eq4-23">(252)</a> we find</p>
 <div class="math notranslate nohighlight">
 \[
 D( 2\pi s L) = \lambda L
 \]</div>
 <p>Therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq4-24">
-<span class="eqno">(250)<a class="headerlink" href="#equation-eq4-24" title="Link to this equation">#</a></span>\[
+<span class="eqno">(253)<a class="headerlink" href="#equation-eq4-24" title="Link to this equation">#</a></span>\[
 \vec{D} = \frac{\lambda}{2 \pi s} \hat{s} 
 \]</div>
 <p>Notice that this formula holds both within the insulation and outside it. In the latter region, <span class="math notranslate nohighlight">\( \vec{P} = 0 \)</span> so</p>
@@ -532,47 +514,47 @@ D( 2\pi s L) = \lambda L
 \[
 \vec{E}  =\frac{1}{\epsilon_0} \vec{D} = \frac{\lambda}{2 \pi \epsilon_0 s} \hat{s}, \quad \text{ for } s &gt; a
 \]</div>
-<p>Inside the rubber, the electric field cannot be determined, since we do not know <strong>P</strong>.</p>
+<p>Inside the rubber, the electric field cannot be determined, since we do not know <span class="math notranslate nohighlight">\(\vec{P}\)</span>.</p>
 </div>
 </div>
-<p>Hold on a tick! We got all the way to a field we can calculate by Gauss’s law, but we have left out the surface bound charge <span class="math notranslate nohighlight">\( \sigma_b \)</span>. What happened to it? To be more precise, <a class="reference internal" href="#equation-eq4-22">(248)</a> works within a dielectric, but we cannot apply Gauss’s law precisely <em>at</em> the boundary of the dielectric, because the local <span class="math notranslate nohighlight">\( \rho_b \)</span> blows up there, taking <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{E} \)</span> with it. The polarization drops abruptly to zero outside the material, so its <em>derivative</em> is a delta function. The surface bound charge is precisely this term, so in this sense it is actually included in <span class="math notranslate nohighlight">\( \rho_b \)</span>, but we ordinarily prefer to handle it separately as <span class="math notranslate nohighlight">\( \sigma_b \)</span>. We could even picture the edge of the dielectric as having some finite thickness, within which the polarization drops off to zero (which is probably a more realistic model anyway), in which case there is no <span class="math notranslate nohighlight">\( \sigma_b \)</span>, <span class="math notranslate nohighlight">\( \rho_b \)</span> varies rapidly but smoothly, and Gauss’s law can safely be applied everywhere. In any case, we can use <a class="reference internal" href="#equation-eq4-23">(249)</a> safely without fear of this “defect.”</p>
-</section>
+<hr class="docutils" />
+<p>Hold on a tick! We got all the way to a field we can calculate by Gauss’s law, but we have left out the surface bound charge <span class="math notranslate nohighlight">\( \sigma_b \)</span>. What happened to it? To be more precise, <a class="reference internal" href="#equation-eq4-22">(251)</a> works within a dielectric, but we cannot apply Gauss’s law precisely <em>at</em> the boundary of the dielectric, because the local <span class="math notranslate nohighlight">\( \rho_b \)</span> blows up there, taking <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{E} \)</span> with it. The polarization drops abruptly to zero outside the material, so its <em>derivative</em> is a delta function. The surface bound charge is precisely this term, so in this sense it is actually included in <span class="math notranslate nohighlight">\( \rho_b \)</span>, but we ordinarily prefer to handle it separately as <span class="math notranslate nohighlight">\( \sigma_b \)</span>. We could even picture the edge of the dielectric as having some finite thickness, within which the polarization drops off to zero (which is probably a more realistic model anyway), in which case there is no <span class="math notranslate nohighlight">\( \sigma_b \)</span>, <span class="math notranslate nohighlight">\( \rho_b \)</span> varies rapidly but smoothly, and Gauss’s law can safely be applied everywhere. In any case, we can use <a class="reference internal" href="#equation-eq4-23">(252)</a> safely without fear of this “defect.”</p>
 </section>
 <section id="a-deceptive-parallel">
 <h2>4.3.2: A Deceptive Parallel<a class="headerlink" href="#a-deceptive-parallel" title="Link to this heading">#</a></h2>
-<p>Our expression for the divergence of the displacement looks <em>just</em> like Gauss’s law, only the total charge density <span class="math notranslate nohighlight">\( \rho \)</span> is replaced by the free charge density <span class="math notranslate nohighlight">\( \rho_f \)</span>, and <span class="math notranslate nohighlight">\( \vec{D} \)</span> is substituted for <span class="math notranslate nohighlight">\( \epsilon_0 \vec{E} \)</span>. For this reason, you may be tempted to conclude that <strong>D</strong> is “just like” <strong>E</strong> (apart from the factor <span class="math notranslate nohighlight">\( \epsilon_0 \)</span>), except that its source is <span class="math notranslate nohighlight">\( \rho_f \)</span> instead of <span class="math notranslate nohighlight">\( \rho \)</span>. That is, it’s tempting to say “To solve problems involving dielectrics, you just forget all about the bound charge - calculate the field as you ordinarily would, only call the answer <strong>D</strong> instead of <strong>E</strong>.” This reasoning is seductive, but the conclusion is false; in particular there is no “Coulomb’s law” for <strong>D</strong>:</p>
+<p>Our expression for the divergence of the displacement looks <em>just</em> like Gauss’s law, only the total charge density <span class="math notranslate nohighlight">\( \rho \)</span> is replaced by the free charge density <span class="math notranslate nohighlight">\( \rho_f \)</span>, and <span class="math notranslate nohighlight">\( \vec{D} \)</span> is substituted for <span class="math notranslate nohighlight">\( \epsilon_0 \vec{E} \)</span>. For this reason, you may be tempted to conclude that <span class="math notranslate nohighlight">\(\vec{D}\)</span> is “just like” <span class="math notranslate nohighlight">\(\vec{E}\)</span> (apart from the factor <span class="math notranslate nohighlight">\( \epsilon_0 \)</span>), except that its source is <span class="math notranslate nohighlight">\( \rho_f \)</span> instead of <span class="math notranslate nohighlight">\( \rho \)</span>. That is, it’s tempting to say “To solve problems involving dielectrics, you just forget all about the bound charge - calculate the field as you ordinarily would, only call the answer <span class="math notranslate nohighlight">\(\vec{D}\)</span> instead of <span class="math notranslate nohighlight">\(\vec{E}\)</span>.” This reasoning is seductive, but the conclusion is false; in particular there is no “Coulomb’s law” for <span class="math notranslate nohighlight">\(\vec{D}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{D}(\vec{r}) \neq \frac{1}{4 \pi} \int \frac{\hat{\Delta r }}{\Delta r  ^2} \rho_f(\vec{r'}) \mathrm{d} \tau'
+\vec{D}(\vec{r}) \neq \frac{1}{4 \pi} \int \frac{\hat{\mathcal{R} }}{\mathcal{R}  ^2} \rho_f(\vec{r'}) \mathrm{d} \tau'
 \]</div>
-<p>This is because the divergence alone is insufficient to determine a vector field; you need to know its curl as well. One tends to forget this in the case of electrostatics because we usually don’t care about the curl of <strong>E</strong> anyway. But the curl of <strong>D</strong> is <em>not</em> always zero, even in electrostatics, since there is no reason, in general, to suppose that the curl of <strong>P</strong> vanishes:</p>
+<p>This is because the divergence alone is insufficient to determine a vector field; you need to know its curl as well. One tends to forget this in the case of electrostatics because we usually don’t care about the curl of <span class="math notranslate nohighlight">\(\vec{E}\)</span> anyway. But the curl of <span class="math notranslate nohighlight">\(\vec{D}\)</span> is <em>not</em> always zero, even in electrostatics, since there is no reason, in general, to suppose that the curl of <span class="math notranslate nohighlight">\(\vec{P}\)</span> vanishes:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-25">
-<span class="eqno">(251)<a class="headerlink" href="#equation-eq4-25" title="Link to this equation">#</a></span>\[
+<span class="eqno">(254)<a class="headerlink" href="#equation-eq4-25" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{D} = \epsilon_0 (\nabla \times  \vec{E}) + (\nabla \times  \vec{P}) = \nabla \times  \vec{P} 
 \]</div>
-<p>Sometimes it does, but more often it does not. The bar electret of Prob 4.11 is one example of this: here there is no free charge anywhere, so if you really believe that the only source of <strong>D</strong> is <span class="math notranslate nohighlight">\( \rho_f \)</span> you will be forced to conclude that <span class="math notranslate nohighlight">\( \vec{D} = 0 \)</span> everywhere, and hence that <span class="math notranslate nohighlight">\( \vec{E} = (-1 / \epsilon_0) \vec{P} \)</span> inside and <span class="math notranslate nohighlight">\( \vec{E} = 0 \)</span> outside the electret, which is obviously wrong. And because <span class="math notranslate nohighlight">\( \nabla \times  \vec{D} \neq 0 \)</span> in general, <strong>D</strong> cannot be expressed as the gradient of a scalar - there is no “potential” for <strong>D</strong>.</p>
-<p><em>Advice</em>: When you are asked to compute the electric displacement, first look for symmetry. If the problem exhibits spherical, cylindrical, or plane symmetry, then you can get <strong>D</strong> directly from Eq. 4.23 by the usual Gauss’s law methods. (Evidently in such cases <span class="math notranslate nohighlight">\( \nabla \times  \vec{P} \)</span>  is automatically zero, but since symmetry alone dictates the answer, you’re not really obliged to worry about the curl.) If the requisite symmetry is absent, you’ll have to think of another approach, and, in particular, you must not assume that <strong>D</strong> is determined exclusively by the free charge.</p>
+<p>Sometimes it does, but more often it does not. The bar electret of Prob 4.11 is one example of this: here there is no free charge anywhere, so if you really believe that the only source of <span class="math notranslate nohighlight">\(\vec{D}\)</span> is <span class="math notranslate nohighlight">\( \rho_f \)</span> you will be forced to conclude that <span class="math notranslate nohighlight">\( \vec{D} = 0 \)</span> everywhere, and hence that <span class="math notranslate nohighlight">\( \vec{E} = (-1 / \epsilon_0) \vec{P} \)</span> inside and <span class="math notranslate nohighlight">\( \vec{E} = 0 \)</span> outside the electret, which is obviously wrong. And because <span class="math notranslate nohighlight">\( \nabla \times  \vec{D} \neq 0 \)</span> in general, <span class="math notranslate nohighlight">\(\vec{D}\)</span> cannot be expressed as the gradient of a scalar - there is no “potential” for <span class="math notranslate nohighlight">\(\vec{D}\)</span>.</p>
+<p><em>Advice</em>: When you are asked to compute the electric displacement, first look for symmetry. If the problem exhibits spherical, cylindrical, or plane symmetry, then you can get <span class="math notranslate nohighlight">\(\vec{D}\)</span> directly from <a class="reference internal" href="#equation-eq4-23">(252)</a> by the usual Gauss’s law methods. (Evidently in such cases <span class="math notranslate nohighlight">\( \nabla \times  \vec{P} \)</span>  is automatically zero, but since symmetry alone dictates the answer, you’re not really obliged to worry about the curl.) If the requisite symmetry is absent, you’ll have to think of another approach, and, in particular, you must not assume that <span class="math notranslate nohighlight">\(\vec{D}\)</span> is determined exclusively by the free charge.</p>
 </section>
 <section id="boundary-conditions">
 <h2>4.3.3: Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h2>
-<p>The electrostatic boundary conditions we had in Sect 2.3 can be re-cast in terms of <strong>D</strong>. <a class="reference internal" href="#equation-eq4-23">(249)</a> tells us the discontinuity in the component perpendicular to an interface:</p>
+<p>The electrostatic boundary conditions we had in Sect 2.3 can be re-cast in terms of <span class="math notranslate nohighlight">\(\vec{D}\)</span>. <a class="reference internal" href="#equation-eq4-23">(252)</a> tells us the discontinuity in the component perpendicular to an interface:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-26">
-<span class="eqno">(252)<a class="headerlink" href="#equation-eq4-26" title="Link to this equation">#</a></span>\[
+<span class="eqno">(255)<a class="headerlink" href="#equation-eq4-26" title="Link to this equation">#</a></span>\[
 D_{above} ^{\perp} - D_{below} ^{\perp} = \sigma_f 
 \]</div>
-<p>while <a class="reference internal" href="#equation-eq4-25">(251)</a> gives the discontinuity in parallel components:</p>
+<p>while <a class="reference internal" href="#equation-eq4-25">(254)</a> gives the discontinuity in parallel components:</p>
 <div class="math notranslate nohighlight" id="equation-eq4-27">
-<span class="eqno">(253)<a class="headerlink" href="#equation-eq4-27" title="Link to this equation">#</a></span>\[
+<span class="eqno">(256)<a class="headerlink" href="#equation-eq4-27" title="Link to this equation">#</a></span>\[
 \vec{D}_{above} ^{\parallel} - \vec{D}_{below} ^{\parallel} = \vec{P}_{above} ^{\parallel} - \vec{P}_{below} ^{\parallel} 
 \]</div>
-<p>In the presence of dielectrics, these are sometimes more useful than the corresponding boundary conditions on <strong>E</strong> (Eqs 2.31 and 2.32):</p>
+<p>In the presence of dielectrics, these are sometimes more useful than the corresponding boundary conditions on <span class="math notranslate nohighlight">\(\vec{E}\)</span> (<a class="reference internal" href="../chapter02/ch2-3.html#equation-eq2-31">(115)</a> and <a class="reference internal" href="../chapter02/ch2-3.html#equation-eq2-32">(116)</a>):</p>
 <div class="math notranslate nohighlight" id="equation-eq4-28">
-<span class="eqno">(254)<a class="headerlink" href="#equation-eq4-28" title="Link to this equation">#</a></span>\[
+<span class="eqno">(257)<a class="headerlink" href="#equation-eq4-28" title="Link to this equation">#</a></span>\[
 E_{above} ^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma 
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq4-29">
-<span class="eqno">(255)<a class="headerlink" href="#equation-eq4-29" title="Link to this equation">#</a></span>\[
+<span class="eqno">(258)<a class="headerlink" href="#equation-eq4-29" title="Link to this equation">#</a></span>\[
 \vec{E}_{above} ^{\parallel} - \vec{E}_{below} ^{\parallel} = 0 
 \]</div>
 </section>
@@ -633,19 +615,18 @@ E_{above} ^{\perp} - E_{below} ^{\perp} = \frac{1}{\epsilon_0} \sigma
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-s-law-in-the-presence-of-dielectrics">4.3.1: Gauss’s Law in the Presence of Dielectrics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-4">Example 4.4</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-s-law-in-the-presence-of-dielectrics">4.3.1: Gauss’s Law in the Presence of Dielectrics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-deceptive-parallel">4.3.2: A Deceptive Parallel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">4.3.3: Boundary Conditions</a></li>
 </ul>
@@ -696,8 +677,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

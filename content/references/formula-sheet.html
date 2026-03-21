@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,9 +67,10 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="title: Dipole Radiation weight: 1110" href="../book/chapter11/ch11-1.html" />
+    <link rel="prev" title="11.1 Dipole Radiation" href="../book/chapter11/ch11-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +86,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -102,7 +95,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -110,8 +102,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +119,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -157,15 +150,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -180,156 +169,76 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter01/chapter-intro.html">Chapter 1: Vector Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-1.html">1.1 Vector Algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-2.html">title: Differential Calculus
-weight: 20</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-3.html">title: Integral Calculus
-weight: 30</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-4.html">title: Curvilinear Coordinates
-weight: 40</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-5.html">title: The Dirac Delta Function
-weight: 50</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-6.html">title: The Theory of Vector Fields
-weight: 60</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-2.html">1.2: Differential Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-3.html">1.3: Integral Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-4.html">1.4: Curvilinear Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-5.html">1.5: The Dirac Delta Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter01/ch1-6.html">1.6: The Theory of Vector Fields</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter02/chapter-intro.html">Chapter 2: Electrostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-1.html">title: The Electric Field
-weight: 210</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-2.html">title: Divergence and Curl of Electrostatic Fields
-weight: 220</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-3.html">title: Electric Potential
-weight: 230</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-4.html">title: Work and Energy in Electrostatics
-weight: 240</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-5.html">title: Conductors
-weight: 250</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-1.html">2.1: The Electric Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-2.html">2.2: Divergence and Curl of Electrostatic Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-3.html">2.3: Electric Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-4.html">2.4: Work and Energy in Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter02/ch2-5.html">2.5: Conductors</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter03/chapter-intro.html">Chapter 3: Potentials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-1.html">title: Laplace’s Equation
-weight: 310</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-2.html">title: The Method of Images
-weight: 320</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-3.html">title: Separation of Variables
-weight: 330</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-4.html">title: Multipole Expansion
-weight: 340</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-1.html">3.1: Laplace’s Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-2.html">3.2: The Method of Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-3.html">3.3: Separation of Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter03/ch3-4.html">3.4: Multipole Expansion</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter04/chapter-intro.html">Chapter 4: Electric Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-1.html">title: Polarization
-weight: 410</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-2.html">title: The Field of a Polarized Object
-weight: 420</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-3.html">title: The Electric Displacement
-weight: 430</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-4.html">title: The Linear Dielectrics
-weight: 440</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-1.html">4.1: Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-2.html">4.2: The Field of a Polarized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-3.html">4.3: The Electric Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter04/ch4-4.html">4.4: Linear Dielectrics</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-1.html">title: The Lorentz Force Law
-weight: 510</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-2.html">title: The Biot-Savart Law
-weight: 520</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-3.html">title: The Divergence and Curl of B
-weight: 530</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-4.html">title: Magnetic Vector Potential
-weight: 540</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter06/chapter-intro.html">Chapter 6: Magnetic Fields in Matter</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-1.html">title: Magnetization
-weight: 610</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-2.html">title: The Field of a Magnetized Object
-weight: 620</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-3.html">title: The Auxiliary Field H
-weight: 630</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-4.html">title: Linear and Nonlinear Media
-weight: 640</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-1.html">6.1: Magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-2.html">6.2: The Field of a Magnetized Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-3.html">6.3: The Auxiliary Field H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter06/ch6-4.html">6.4: Linear and Nonlinear Media</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter07/chapter-intro.html">Chapter 7: Electrodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-1.html">title: Electromotive Force
-weight: 710</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-2.html">title: Electromagnetic Induction
-weight: 720</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-3.html">title: Maxwell’s Equations
-weight: 730</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-1.html">7.1 Electromotive Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-2.html">7.2: Electromagnetic Induction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter07/ch7-3.html">7.3: Maxwell’s Equations</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter08/chapter-intro.html">Chapter 8: Conservation Laws</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter08/ch8-1.html">title: Charge and Energy
-weight: 810</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter08/ch8-2.html">title: Momentum
-weight: 820</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter08/ch8-1.html">8.1: Charge and Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter08/ch8-2.html">8.2: Momentum</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-1.html">title: Electromagnetic Waves in One Dimension
-weight: 910</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-2.html">title: Wave Equation for E and B
-weight: 920</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-3.html">title: Electromagnetic Waves in Matter
-weight: 930</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-4.html">title: Electromagnetic Waves in Conductors
-weight: 940</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-5.html">title: Guided Waves
-weight: 950</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-1.html">title: Scalar and Vector Potentials
-weight: 1010</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-2.html">title: Retarded Potentials
-weight: 1020</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-3.html">title: Point Charges
-weight: 1030</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-1.html">10.1  The Potential Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-2.html">10.2 Potentials and Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter10/ch10-3.html">10.3 Point Charges</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../book/chapter11/chapter-intro.html">Chapter 11: Radiation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../book/chapter11/ch11-1.html">title: Dipole Radiation
-weight: 1110</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../book/chapter11/ch11-1.html">11.1 Dipole Radiation</a></li>
 </ul>
 </details></li>
 </ul>
@@ -344,9 +253,14 @@ weight: 1110</a></li>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -476,7 +390,7 @@ weight: 1110</a></li>
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -490,25 +404,17 @@ weight: 1110</a></li>
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -566,30 +472,30 @@ document.write(`
 <section id="cartesian-coordinates">
 <h3>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight" id="equation-dl">
-<span class="eqno">(471)<a class="headerlink" href="#equation-dl" title="Link to this equation">#</a></span>\[
+<span class="eqno">(474)<a class="headerlink" href="#equation-dl" title="Link to this equation">#</a></span>\[
 dl = dx\hat{\textbf{x}} + dy\hat{\textbf{y}} + dz\hat{\textbf{z}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-dtau">
-<span class="eqno">(472)<a class="headerlink" href="#equation-dtau" title="Link to this equation">#</a></span>\[d\tau = dxdydz\]</div>
+<span class="eqno">(475)<a class="headerlink" href="#equation-dtau" title="Link to this equation">#</a></span>\[d\tau = dxdydz\]</div>
 <section id="gradient">
 <h4>Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-grad">
-<span class="eqno">(473)<a class="headerlink" href="#equation-cart-grad" title="Link to this equation">#</a></span>\[
+<span class="eqno">(476)<a class="headerlink" href="#equation-cart-grad" title="Link to this equation">#</a></span>\[
 \nabla t = \frac{\partial t}{\partial x}\hat{\textbf{x}} +\frac{\partial t}{\partial y}\hat{\textbf{y}} + \frac{\partial t}{\partial z}\hat{\textbf{z}}
 \]</div>
 </section>
 <section id="divergence">
 <h4>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-div">
-<span class="eqno">(474)<a class="headerlink" href="#equation-cart-div" title="Link to this equation">#</a></span>\[\nabla \cdot \textbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\]</div>
+<span class="eqno">(477)<a class="headerlink" href="#equation-cart-div" title="Link to this equation">#</a></span>\[\nabla \cdot \textbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\]</div>
 </section>
 <section id="curl">
 <h4>Curl<a class="headerlink" href="#curl" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-curl">
-<span class="eqno">(475)<a class="headerlink" href="#equation-cart-curl" title="Link to this equation">#</a></span>\[\nabla \times \textbf{v} = (\frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z})\hat{\textbf{x}} + (\frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x})\hat{\textbf{y}} + (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y})\hat{\textbf{z}}
+<span class="eqno">(478)<a class="headerlink" href="#equation-cart-curl" title="Link to this equation">#</a></span>\[\nabla \times \textbf{v} = (\frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z})\hat{\textbf{x}} + (\frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x})\hat{\textbf{y}} + (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y})\hat{\textbf{z}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-cart-curl-mat">
-<span class="eqno">(476)<a class="headerlink" href="#equation-cart-curl-mat" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(479)<a class="headerlink" href="#equation-cart-curl-mat" title="Link to this equation">#</a></span>\[\begin{split}
 \nabla \times \textbf{v} = \begin{vmatrix}
 \hat{\textbf{x}} &amp; \hat{\textbf{y}} &amp; \hat{\textbf{z}} \\
 \frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y} &amp; \frac{\partial v}{\partial z} \\
@@ -600,7 +506,7 @@ v_x &amp; v_y &amp; v_z \\
 <section id="laplacian">
 <h4>Laplacian<a class="headerlink" href="#laplacian" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight" id="equation-cart-laplacian">
-<span class="eqno">(477)<a class="headerlink" href="#equation-cart-laplacian" title="Link to this equation">#</a></span>\[
+<span class="eqno">(480)<a class="headerlink" href="#equation-cart-laplacian" title="Link to this equation">#</a></span>\[
 \nabla ^2 T = \nabla \cdot (\nabla T) = \frac{\partial^2T}{\partial x} + \frac{\partial^2T}{\partial y} + \frac{\partial^2T}{\partial z}
 \]</div>
 </section>
@@ -608,7 +514,7 @@ v_x &amp; v_y &amp; v_z \\
 <section id="spherical-coordinates">
 <h3>Spherical Coordinates<a class="headerlink" href="#spherical-coordinates" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight" id="equation-sphere-dl">
-<span class="eqno">(478)<a class="headerlink" href="#equation-sphere-dl" title="Link to this equation">#</a></span>\[
+<span class="eqno">(481)<a class="headerlink" href="#equation-sphere-dl" title="Link to this equation">#</a></span>\[
 dl = dr\hat{\textbf{r}} + rd\theta \hat{\bm{\theta}} + r \sin{\bm{\theta}} d\phi \hat{\bm{\phi}}
 \]</div>
 <section id="id1">
@@ -666,8 +572,7 @@ dl = dr\hat{\textbf{r}} + rd\theta \hat{\bm{\theta}} + r \sin{\bm{\theta}} d\phi
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">title: Dipole Radiation
-weight: 1110</p>
+        <p class="prev-next-title">11.1 Dipole Radiation</p>
       </div>
     </a>
 </div>
@@ -677,14 +582,16 @@ weight: 1110</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cartesian-coordinates">Cartesian Coordinates</a><ul class="nav section-nav flex-column">
@@ -751,8 +658,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

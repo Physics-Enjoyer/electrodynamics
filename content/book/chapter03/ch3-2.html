@@ -16,42 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="3.1: Laplace’s Equation" href="ch3-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,15 +151,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +254,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -397,7 +391,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -411,25 +405,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -474,7 +460,7 @@ document.write(`
 <h1>3.2: The Method of Images<a class="headerlink" href="#the-method-of-images" title="Link to this heading">#</a></h1>
 <section id="the-classic-image-problem">
 <h2>3.2.1: The Classic Image Problem<a class="headerlink" href="#the-classic-image-problem" title="Link to this heading">#</a></h2>
-<p>Suppose a point charge <span class="math notranslate nohighlight">\(q\)</span> is held a distance <span class="math notranslate nohighlight">\(d\)</span> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \Delta r  \)</span>, for <span class="math notranslate nohighlight">\(q\)</span> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <span class="math notranslate nohighlight">\(q\)</span> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
+<p>Suppose a point charge <span class="math notranslate nohighlight">\(q\)</span> is held a distance <span class="math notranslate nohighlight">\(d\)</span> above an infinite grounded conducting plane (Fig. 3.10). <em>Question</em>: what is the potential in the region above the plane? It’s not just <span class="math notranslate nohighlight">\( (1/4 \pi \epsilon_0) q / \mathcal{R}  \)</span>, for <span class="math notranslate nohighlight">\(q\)</span> will induce a certain amount of negative charge on the nearby surface of the conductor; the total potential is due in part to <span class="math notranslate nohighlight">\(q\)</span> directly, and in part to this induced charge. But how can we possibly calculate the potential, when we don’t know how much charge is induced or how it is distributed?</p>
 <p><img alt="Figure 3.10" src="../../../_images/3.10.png" /></p>
 <p>From a mathematical point of view, our problem is to solve Poisson’s equation in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>, with a single point charge <span class="math notranslate nohighlight">\(q\)</span> at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>, subject to the boundary conditions</p>
 <ol class="arabic simple">
@@ -484,7 +470,7 @@ document.write(`
 <p>The first uniqueness theorem (actually, its corollary) guarantees that there is only one function that meets these requirements. If by trick or clever guess we can discover such a function, it’s got to be the answer.
 <em>Trick:</em> Forget about the actual problem; we’re going to study a completely different situation. This new configuration consists of two point charges, <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, -d) \)</span>, and no conducting plane (Fig. 3.11). For this configuration I can easily write down the potential:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-9">
-<span class="eqno">(146)<a class="headerlink" href="#equation-eq3-9" title="Link to this equation">#</a></span>\[
+<span class="eqno">(148)<a class="headerlink" href="#equation-eq3-9" title="Link to this equation">#</a></span>\[
 V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d)^2 }} - \frac{q}{\sqrt{x^2 + y^2 + (z + d)^2}} \right]
 \]</div>
 <p>It follows that</p>
@@ -492,12 +478,12 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 <li><p><span class="math notranslate nohighlight">\( V = 0 \)</span> when <span class="math notranslate nohighlight">\( z = 0 \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( V \rightarrow 0 \)</span> for <span class="math notranslate nohighlight">\( x^2 + y^2 + z^2 \gg d^2 \)</span></p></li>
 </ol>
-<p>and the only charge in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span> is the point charge <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>. But these are precisely the conditions of the original problem! Evidently the second configuration happens to produce exactly the same potential as the first configuration, in the “upper” region <span class="math notranslate nohighlight">\( z \geq 0 \)</span>. (The “lower” region, <span class="math notranslate nohighlight">\( z &lt; 0 \)</span>, is completely different, but who cares? The upper part is all we need.) <em>Conclusion</em>: The potential of a point charge above an infinite grounded conductor is given by <a class="reference internal" href="#equation-eq3-9">(146)</a>, for <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>.</p>
+<p>and the only charge in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span> is the point charge <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>. But these are precisely the conditions of the original problem! Evidently the second configuration happens to produce exactly the same potential as the first configuration, in the “upper” region <span class="math notranslate nohighlight">\( z \geq 0 \)</span>. (The “lower” region, <span class="math notranslate nohighlight">\( z &lt; 0 \)</span>, is completely different, but who cares? The upper part is all we need.) <em>Conclusion</em>: The potential of a point charge above an infinite grounded conductor is given by <a class="reference internal" href="#equation-eq3-9">(148)</a>, for <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>.</p>
 <p>Notice the crucial role played by the uniqueness theorem in this argument: without it, no one would believe this solution, since it was obtained for a completely different charge distribution. But the uniqueness theorem certifies it: If it satisfies Poisson’s equation in the region of interest, and assumes the correct value at the boundaries, then it must be right.</p>
 </section>
 <section id="induced-surface-charge">
 <h2>3.2.2: Induced Surface Charge<a class="headerlink" href="#induced-surface-charge" title="Link to this heading">#</a></h2>
-<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to <a class="reference internal" href="../chapter02/ch2-5.html#equation-eq2-49">(131)</a>,</p>
+<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to <a class="reference internal" href="../chapter02/ch2-5.html#equation-eq2-49">(133)</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma = - \epsilon_0 \frac{\partial V}{\partial n}
@@ -507,14 +493,14 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 \[
 \sigma =  \left. - \epsilon_0 \frac{\partial V}{\partial z} \right|_{z = 0}
 \]</div>
-<p>From <a class="reference internal" href="#equation-eq3-9">(146)</a></p>
+<p>From <a class="reference internal" href="#equation-eq3-9">(148)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial V}{\partial z} = \frac{1}{4 \pi \epsilon_0} \left[ \frac{-q (z - d)}{[x^2 + y^2 + (z - d)^2]^{3/2}} + \frac{q(z + d)}{[x^2 + y^2 + (z + d)^2 ]^{3/2}} \right]
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-eq3-10">
-<span class="eqno">(147)<a class="headerlink" href="#equation-eq3-10" title="Link to this equation">#</a></span>\[
+<span class="eqno">(149)<a class="headerlink" href="#equation-eq3-10" title="Link to this equation">#</a></span>\[
 \sigma(x, y) = \frac{-qd}{2 \pi (x^2 + y^2 + d^2)^{3/2}}
 \]</div>
 <p>As expected, the induced charge is negative (assuming <span class="math notranslate nohighlight">\(q\)</span> is positive) and greatest at <span class="math notranslate nohighlight">\( x = y = 0 \)</span>.</p>
@@ -530,7 +516,7 @@ Q = \int \sigma \mathrm{d}{a}
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq3-11">
-<span class="eqno">(148)<a class="headerlink" href="#equation-eq3-11" title="Link to this equation">#</a></span>\[
+<span class="eqno">(150)<a class="headerlink" href="#equation-eq3-11" title="Link to this equation">#</a></span>\[
 Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \mathrm{d}{r} \mathrm{d}{\phi} = \left. \frac{qd}{\sqrt{r^2 + d^2}} \right|_{0} ^{\infty} = -q
 \]</div>
 <p>The total charge induced on the plane is <span class="math notranslate nohighlight">\( -q \)</span>, as (with benefit of hindsight) you can perhaps convince yourself it <em>had</em> to be.</p>
@@ -539,26 +525,26 @@ Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \
 <h2>3.2.3: Force and Energy<a class="headerlink" href="#force-and-energy" title="Link to this heading">#</a></h2>
 <p>The charge <span class="math notranslate nohighlight">\( q \)</span> is attracted toward the plane, because of the negative induced charge. Let’s calculate the force of attraction. Since the potential in the vicinity of <span class="math notranslate nohighlight">\( q \)</span> is the same as in the analog problem (the one with <span class="math notranslate nohighlight">\( +q \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span> but no conductor), so also is the field and, therefore, the force</p>
 <div class="math notranslate nohighlight" id="equation-eq3-12">
-<span class="eqno">(149)<a class="headerlink" href="#equation-eq3-12" title="Link to this equation">#</a></span>\[
+<span class="eqno">(151)<a class="headerlink" href="#equation-eq3-12" title="Link to this equation">#</a></span>\[
 \vec{F} = -\frac{1}{4 \pi \epsilon_0} \frac{q^2}{(2d)^2} \hat{z}
 \]</div>
-<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, <a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-42">(124)</a> gives</p>
+<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, <a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-42">(126)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{2d} 
 \]</div>
 <p>But for a single charge and conducting plane, the energy is <em>half</em> this</p>
 <div class="math notranslate nohighlight" id="equation-eq3-14">
-<span class="eqno">(150)<a class="headerlink" href="#equation-eq3-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(152)<a class="headerlink" href="#equation-eq3-14" title="Link to this equation">#</a></span>\[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{4d}
 \]</div>
-<p>Why half? Think of the energy stored in the fields (<a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-45">(127)</a>):</p>
+<p>Why half? Think of the energy stored in the fields (<a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-45">(129)</a>):</p>
 <div class="math notranslate nohighlight">
 \[
 W = \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau}
 \]</div>
 <p>In the first case, both the upper region <span class="math notranslate nohighlight">\( (z &gt; 0) \)</span> and the lower region <span class="math notranslate nohighlight">\( (z &lt; 0) \)</span> contribute, and by symmetry they contribute equally. But in the second case, only the upper region contains a nonzero field, and hence the energy is half as great.</p>
-<p>Of course, one could also determine the energy by calculating the work required to bring <span class="math notranslate nohighlight">\( q \)</span> in from infinity. The force required (to oppose the electrical force in <a class="reference internal" href="#equation-eq3-12">(149)</a>) is <span class="math notranslate nohighlight">\( (1 / 4 \pi \epsilon_0)(q^2/4z^2) \hat{z} \)</span>, so</p>
+<p>Of course, one could also determine the energy by calculating the work required to bring <span class="math notranslate nohighlight">\( q \)</span> in from infinity. The force required (to oppose the electrical force in <a class="reference internal" href="#equation-eq3-12">(151)</a>) is <span class="math notranslate nohighlight">\( (1 / 4 \pi \epsilon_0)(q^2/4z^2) \hat{z} \)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -585,23 +571,23 @@ Q</label><div class="sd-tab-content docutils">
 A</label><div class="sd-tab-content docutils">
 <p>Examine the completely different configuration, consisting of the point charge <span class="math notranslate nohighlight">\(q\)</span> together with another point charge</p>
 <div class="math notranslate nohighlight" id="equation-eq3-15">
-<span class="eqno">(151)<a class="headerlink" href="#equation-eq3-15" title="Link to this equation">#</a></span>\[
+<span class="eqno">(153)<a class="headerlink" href="#equation-eq3-15" title="Link to this equation">#</a></span>\[
 q' = - \frac{R}{a} q
 \]</div>
 <p>placed a distance</p>
 <div class="math notranslate nohighlight" id="equation-eq3-16">
-<span class="eqno">(152)<a class="headerlink" href="#equation-eq3-16" title="Link to this equation">#</a></span>\[
+<span class="eqno">(154)<a class="headerlink" href="#equation-eq3-16" title="Link to this equation">#</a></span>\[
 b = \frac{R^2}{a}
 \]</div>
 <p>to the right of the center of the sphere (Fig 3.13). No conductor, now - just the two point charges. The potential of this configuration is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-17">
-<span class="eqno">(153)<a class="headerlink" href="#equation-eq3-17" title="Link to this equation">#</a></span>\[
-V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\Delta r } + \frac{q'}{\Delta r  '}  \right)
+<span class="eqno">(155)<a class="headerlink" href="#equation-eq3-17" title="Link to this equation">#</a></span>\[
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\mathcal{R} } + \frac{q'}{\mathcal{R}  '}  \right)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \Delta r  \)</span> and <span class="math notranslate nohighlight">\( \Delta r ' \)</span> are the distances from <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(q'\)</span>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
-<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(153)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <span class="math notranslate nohighlight">\(b\)</span> is less than <span class="math notranslate nohighlight">\(R\)</span>, so the “image” charge <span class="math notranslate nohighlight">\(q'\)</span> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
+<p>where <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span> and <span class="math notranslate nohighlight">\( \mathcal{R} ' \)</span> are the distances from <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(q'\)</span>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
+<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(155)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <span class="math notranslate nohighlight">\(b\)</span> is less than <span class="math notranslate nohighlight">\(R\)</span>, so the “image” charge <span class="math notranslate nohighlight">\(q'\)</span> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-18">
-<span class="eqno">(154)<a class="headerlink" href="#equation-eq3-18" title="Link to this equation">#</a></span>\[
+<span class="eqno">(156)<a class="headerlink" href="#equation-eq3-18" title="Link to this equation">#</a></span>\[
 F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon_0} \frac{q^2 R a}{(a^2 - R^2)^2}
 \]</div>
 </div>
@@ -666,14 +652,16 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.2.1: The Classic Image Problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-surface-charge">3.2.2: Induced Surface Charge</a></li>
@@ -730,8 +718,8 @@ By Physics Enjoyer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
