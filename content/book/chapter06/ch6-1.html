@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -462,8 +462,8 @@
 </section>
 <section id="torques-and-forces-on-magnetic-dipoles">
 <h2>6.1.2: Torques and Forces on Magnetic Dipoles<a class="headerlink" href="#torques-and-forces-on-magnetic-dipoles" title="Link to this heading">#</a></h2>
-<p>A magnetic dipole experiences a torque in a magnetic field, just as an electric dipole does in an electric field. Let’s calculate the torque on a rectangular current loop in a uniform field <span class="math notranslate nohighlight">\(\vec{B}\)</span>. (Since any current loop could be built up from infinitesimal rectangles, with all the “internal” sides canceling, as indicated in Fig. 6.1, there is no real loss of generality here; but if you prefer to start from scratch with an arbitrary shape, see Prob. 6.2.) Center the loop at the origin, and tilt it an angle <span class="math notranslate nohighlight">\( \theta \)</span> from the z axis towards the y axis (Fig. 6.2). Let <span class="math notranslate nohighlight">\(\vec{B}\)</span> point in the z direction. The forces on the two sloping sides cancel (they tend to stretch the loop, but they don’t rotate it). The forces on the “horizontal” sides are likewise equal and opposite (so the net force on the loop is zero), but they do generate a torque:
-<img alt="Figure 6.1" src="../../../_images/6.1.png" /></p>
+<p>A magnetic dipole experiences a torque in a magnetic field, just as an electric dipole does in an electric field. Let’s calculate the torque on a rectangular current loop in a uniform field <span class="math notranslate nohighlight">\(\vec{B}\)</span>. (Since any current loop could be built up from infinitesimal rectangles, with all the “internal” sides canceling, as indicated in Fig. 6.1, there is no real loss of generality here; but if you prefer to start from scratch with an arbitrary shape, see Prob. 6.2.) Center the loop at the origin, and tilt it an angle <span class="math notranslate nohighlight">\( \theta \)</span> from the <span class="math notranslate nohighlight">\(z\)</span> axis towards the <span class="math notranslate nohighlight">\(y\)</span> axis (Fig. 6.2). Let <span class="math notranslate nohighlight">\(\vec{B}\)</span> point in the <span class="math notranslate nohighlight">\(z\)</span> direction. The forces on the two sloping sides cancel (they tend to stretch the loop, but they don’t rotate it). The forces on the “horizontal” sides are likewise equal and opposite (so the net force on the loop is zero), but they do generate a torque:</p>
+<p><img alt="Figure 6.1" src="../../../_images/6.1.png" /></p>
 <div class="math notranslate nohighlight">
 \[
 \vec{N} = a F \sin \theta \hat{x}
@@ -480,25 +480,25 @@ F = I b B
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq6-1">
-<span class="eqno">(379)<a class="headerlink" href="#equation-eq6-1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(383)<a class="headerlink" href="#equation-eq6-1" title="Link to this equation">#</a></span>\[
 \vec{N} = \vec{m} \times \vec{B} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( m = I a b \)</span> is the magnetic dipole moment of the loop. Equation 6.1 gives the torque on any localized current distribution, in the presence of a uniform field; in a non-uniform field it is the exact torque (about the center) for a perfect dipole of infinitesimal size.
+<p>where <span class="math notranslate nohighlight">\( m = I a b \)</span> is the magnetic dipole moment of the loop. Equation <a class="reference internal" href="#equation-eq6-1">(383)</a> gives the torque on any localized current distribution, in the presence of a uniform field; in a non-uniform field it is the exact torque (about the center) for a perfect dipole of infinitesimal size.
 <img alt="Figure 6.2" src="../../../_images/6.2.png" /></p>
-<p>Notice that <a class="reference internal" href="#equation-eq6-1">(379)</a> is identical in form to the electrical analog, <a class="reference internal" href="../chapter04/ch4-1.html#equation-eq4-4">(235)</a>: <span class="math notranslate nohighlight">\( \vec{N} = \vec{p} \times \vec{E} \)</span>. In particular, the torque is again in such a direction as to line the dipole up parallel to the field. It is this torque that accounts for paramagnetism. Since every electron constitutes a magnetic dipole (picture it, if you wish, as a tiny spinning sphere of charge), you might expect paramagnetism to be a universal phenomenon. Actually, quantum mechanics (specifically, the Pauli exclusion principle) tends to lock the electrons within a given atom together in pairs with opposing spins, and this effectively neutralizes the torque on the combination. As a result, paramagnetism most often occurs in atoms or molecules with an odd number of electrons, where the “extra” unpaired member is subject to the magnetic torque. Even here, the alignment is far from complete, since random thermal collisions tend to destroy the order.</p>
+<p>Notice that <a class="reference internal" href="#equation-eq6-1">(383)</a> is identical in form to the electrical analog, <a class="reference internal" href="../chapter04/ch4-1.html#equation-eq4-4">(238)</a>: <span class="math notranslate nohighlight">\( \vec{N} = \vec{p} \times \vec{E} \)</span>. In particular, the torque is again in such a direction as to line the dipole up parallel to the field. It is this torque that accounts for paramagnetism. Since every electron constitutes a magnetic dipole (picture it, if you wish, as a tiny spinning sphere of charge), you might expect paramagnetism to be a universal phenomenon. Actually, quantum mechanics (specifically, the Pauli exclusion principle) tends to lock the electrons within a given atom together in pairs with opposing spins, and this effectively neutralizes the torque on the combination. As a result, paramagnetism most often occurs in atoms or molecules with an odd number of electrons, where the “extra” unpaired member is subject to the magnetic torque. Even here, the alignment is far from complete, since random thermal collisions tend to destroy the order.</p>
 <p>In a uniform field, the net force on a current loop is zero</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{F} = I \oint ( \mathrm{d} \vec{l} \times \vec{B}) = I \left( \oint \mathrm{d} \vec{l} \right) \times \vec{B} = 0
 \]</div>
-<p>the constant <span class="math notranslate nohighlight">\(\vec{B}\)</span> comes outside the integral, and the net displacement <span class="math notranslate nohighlight">\( \oint \mathrm{d} \vec{l} \)</span> around a closed loop vanishes. In a nonuniform field, this is no longer the case. For example, suppose a circular wire ring of radius R, carrying a current <span class="math notranslate nohighlight">\(I\)</span>, is suspended above a short solenoid in the “fringing” region (Fig 6.3). Here <span class="math notranslate nohighlight">\(\vec{B}\)</span> has a radial component, and there is a net downward force on the loop (Fig 6.4)</p>
+<p>the constant <span class="math notranslate nohighlight">\(\vec{B}\)</span> comes outside the integral, and the net displacement <span class="math notranslate nohighlight">\( \oint \mathrm{d} \vec{l} \)</span> around a closed loop vanishes. In a nonuniform field, this is no longer the case. For example, suppose a circular wire ring of radius <span class="math notranslate nohighlight">\(R\)</span>, carrying a current <span class="math notranslate nohighlight">\(I\)</span>, is suspended above a short solenoid in the “fringing” region (Fig 6.3). Here <span class="math notranslate nohighlight">\(\vec{B}\)</span> has a radial component, and there is a net downward force on the loop (Fig 6.4)</p>
 <div class="math notranslate nohighlight" id="equation-eq6-2">
-<span class="eqno">(380)<a class="headerlink" href="#equation-eq6-2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(384)<a class="headerlink" href="#equation-eq6-2" title="Link to this equation">#</a></span>\[
 F = 2 \pi I R B \cos \theta 
 \]</div>
 <p>For an infinitesimal loop, with dipole moment <span class="math notranslate nohighlight">\(\vec{m}\)</span>, in a field <span class="math notranslate nohighlight">\(\vec{B}\)</span>, the force is</p>
 <div class="math notranslate nohighlight" id="equation-eq6-3">
-<span class="eqno">(381)<a class="headerlink" href="#equation-eq6-3" title="Link to this equation">#</a></span>\[
+<span class="eqno">(385)<a class="headerlink" href="#equation-eq6-3" title="Link to this equation">#</a></span>\[
 \vec{F} = \nabla  (\vec{m} \cdot \vec{B}) 
 \]</div>
 <p><img alt="Figure 6.3" src="../../../_images/6.3.png" /></p>
@@ -515,17 +515,17 @@ I = \frac{-e}{T}  = - \frac{ev}{2 \pi R}
 \]</div>
 <p>(The minus sign accounts for the negative charge of the electron.) Accordingly, the orbital dipole moment <span class="math notranslate nohighlight">\( (I \pi R^2) \)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq6-4">
-<span class="eqno">(382)<a class="headerlink" href="#equation-eq6-4" title="Link to this equation">#</a></span>\[
+<span class="eqno">(386)<a class="headerlink" href="#equation-eq6-4" title="Link to this equation">#</a></span>\[
 \vec{m} = - \frac{1}{2} e v R \hat{z} 
 \]</div>
 <p>Like any other magnetic dipole, this one is subject to a torque <span class="math notranslate nohighlight">\( \vec{m} \times \vec{B} \)</span> when you turn on a magnetic field. But it’s a lot harder to tilt the entire orbit than it is the spin, so the orbital contribution to paramagnetism is small. There is, however, a more significant effect on the orbital motion: The electron speeds up or slows down, depending on the orientation of <span class="math notranslate nohighlight">\(\vec{B}\)</span>. For whereas the centripetal acceleration <span class="math notranslate nohighlight">\( v^2 / R \)</span>  is ordinarily sustained by electrical forces alone,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-5">
-<span class="eqno">(383)<a class="headerlink" href="#equation-eq6-5" title="Link to this equation">#</a></span>\[
+<span class="eqno">(387)<a class="headerlink" href="#equation-eq6-5" title="Link to this equation">#</a></span>\[
 \frac{1}{4 \pi \epsilon_0} \frac{e^2}{R^2}  = m_e \frac{v^2}{R}
 \]</div>
 <p>in the presence of a magnetic field there is an additional force, <span class="math notranslate nohighlight">\( -e (\vec{v} \times \vec{B}) \)</span>. (To avoid confusion with the magnetic dipole moment <span class="math notranslate nohighlight">\(m\)</span>, we write the mass of the electron as <span class="math notranslate nohighlight">\( m_e \)</span>.) For the sake of argument, let’s say that <span class="math notranslate nohighlight">\(\vec{B}\)</span> is perpendicular to the plane of orbit, as shown in Fig 6.10; then</p>
 <div class="math notranslate nohighlight" id="equation-eq6-6">
-<span class="eqno">(384)<a class="headerlink" href="#equation-eq6-6" title="Link to this equation">#</a></span>\[
+<span class="eqno">(388)<a class="headerlink" href="#equation-eq6-6" title="Link to this equation">#</a></span>\[
 \frac{1}{4 \pi \epsilon_0} \frac{e^2}{R^2} + e \overline{v} B = m_e \frac{\overline{v}^2}{R}
 \]</div>
 <p>Under these conditions, the new speed <span class="math notranslate nohighlight">\( \overline{v} \)</span> is greater than <span class="math notranslate nohighlight">\(v\)</span></p>
@@ -537,23 +537,23 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
 <p><img alt="Figure 6.10" src="../../../_images/6.10.png" /></p>
 <p>or, assuming the change in <span class="math notranslate nohighlight">\( \Delta v = \overline{v} - v \)</span> is small,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-7">
-<span class="eqno">(385)<a class="headerlink" href="#equation-eq6-7" title="Link to this equation">#</a></span>\[
+<span class="eqno">(389)<a class="headerlink" href="#equation-eq6-7" title="Link to this equation">#</a></span>\[
 \Delta v = \frac{e R B}{2 m_e}
 \]</div>
 <p>When <span class="math notranslate nohighlight">\(\vec{B}\)</span> is turned on, then, the electron speeds up.</p>
-<p>A change in orbital speed means a change in the dipole moment (<a class="reference internal" href="#equation-eq6-4">(382)</a>):</p>
+<p>A change in orbital speed means a change in the dipole moment (<a class="reference internal" href="#equation-eq6-4">(386)</a>):</p>
 <div class="math notranslate nohighlight" id="equation-eq6-8">
-<span class="eqno">(386)<a class="headerlink" href="#equation-eq6-8" title="Link to this equation">#</a></span>\[
+<span class="eqno">(390)<a class="headerlink" href="#equation-eq6-8" title="Link to this equation">#</a></span>\[
 \Delta \vec{m} = - \frac{1}{2} e (\Delta v) R \hat{z} = - \frac{e^2 R^2}{4 m_e} \vec{B} 
 \]</div>
 <p>Notice that the change in <span class="math notranslate nohighlight">\(\vec{m}\)</span> is opposite to the direction of <span class="math notranslate nohighlight">\(\vec{B}\)</span>. (An electron circling the other way would have a dipole moment pointing upward, but such an orbit would be slowed down by the field, so the change is still opposite to <span class="math notranslate nohighlight">\(\vec{B}\)</span>.) Ordinarily, the electron orbits are randomly oriented, and the orbital dipole moments cancel out. But in the presence of a magnetic field, each atom picks up a little “extra” dipole moment, and these increments are all anti-parallel to the field. This is the mechanism responsible for diamagnetism. It is a universal phenomenon, affecting all atoms. However, it is typically much weaker than paramagnetism, and is therefore observed mainly in atoms with even numbers of electrons, where paramagnetism is usually absent.</p>
-<p>In deriving <a class="reference internal" href="#equation-eq6-8">(386)</a>, I assumed that the orbit remains circular, with its original radius <span class="math notranslate nohighlight">\(R\)</span>. I cannot offer a justification for this at the present stage. If the atom is stationary while the field is turned on, then my assumption can be proved - this is not magnetostatics, however, and the details will have to await Chapter 7 (see Prob. 7.52). If the atom is moved into the field, the situation is enormously more complicated. But never mind - I’m only trying to give you a qualitative account of diamagnetism. Assume, if you prefer, that the velocity remains the same while the radius changes - the formula (<a class="reference internal" href="#equation-eq6-8">(386)</a>) is altered (by a factor of 2), but the qualitative conclusion is unaffected. The truth is that this classical model is fundamentally flawed (diamagnetism is really a quantum phenomenon), so there’s not much point in refining the details. What is important is the empirical fact that in diamagnetic materials the induced dipole moments point opposite to the magnetic field.</p>
+<p>In deriving <a class="reference internal" href="#equation-eq6-8">(390)</a>, I assumed that the orbit remains circular, with its original radius <span class="math notranslate nohighlight">\(R\)</span>. I cannot offer a justification for this at the present stage. If the atom is stationary while the field is turned on, then my assumption can be proved - this is not magnetostatics, however, and the details will have to await Chapter 7 (see Prob. 7.52). If the atom is moved into the field, the situation is enormously more complicated. But never mind - I’m only trying to give you a qualitative account of diamagnetism. Assume, if you prefer, that the velocity remains the same while the radius changes - the formula (<a class="reference internal" href="#equation-eq6-8">(390)</a>) is altered (by a factor of 2), but the qualitative conclusion is unaffected. The truth is that this classical model is fundamentally flawed (diamagnetism is really a quantum phenomenon), so there’s not much point in refining the details. What is important is the empirical fact that in diamagnetic materials the induced dipole moments point opposite to the magnetic field.</p>
 </section>
 <section id="id1">
 <h2>6.1.4: Magnetization<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>In the presence of a magnetic field, matter becomes <em>magnetized</em>; that is, upon microscopic examination, it will be found to contain many tiny dipoles, with a net alignment along some direction. We have discussed two mechanisms that account for this magnetic polarization: (1) paramagnetism (the dipoles associated with the spins of unpaired electrons experience a torque tending to line them up parallel to the field) and (2) diamagnetism (the orbital speed of the electrons is altered in such a way as to change the orbital dipole moment in a direction opposite to the field). Whatever the cause, we describe the state of magnetic polarization by the vector quantity</p>
 <div class="math notranslate nohighlight" id="equation-eq6-9">
-<span class="eqno">(387)<a class="headerlink" href="#equation-eq6-9" title="Link to this equation">#</a></span>\[
+<span class="eqno">(391)<a class="headerlink" href="#equation-eq6-9" title="Link to this equation">#</a></span>\[
 \vec{M} \equiv \text{ magnetic dipole moment per unit volume } 
 \]</div>
 <p><span class="math notranslate nohighlight">\(\vec{M}\)</span> is called the <strong>magnetization</strong>; it plays a role analogous to the polarization <span class="math notranslate nohighlight">\(\vec{P}\)</span> in electrostatics. In the following section, we will not worry about how the magnetization got there - it could be paramagnetism, diamagnetism, or even ferromagnetism - we shall take <span class="math notranslate nohighlight">\(\vec{M}\)</span> as a given, and calculate the field this magnetization itself produces.</p>
@@ -570,16 +570,16 @@ e \overline{v} B = \frac{m_e}{R} (\overline{v} ^2 - v^2) = \frac{m_e}{R} (\overl
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter06"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

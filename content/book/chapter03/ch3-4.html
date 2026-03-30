@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -492,7 +492,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\mathcal{R} _{+}} - \frac{q}{\
 \]</div>
 <p>and hence</p>
 <div class="math notranslate nohighlight" id="equation-eq3-90">
-<span class="eqno">(219)<a class="headerlink" href="#equation-eq3-90" title="Link to this equation">#</a></span>\[
+<span class="eqno">(222)<a class="headerlink" href="#equation-eq3-90" title="Link to this equation">#</a></span>\[
 V(r) \approx \frac{1}{4 \pi \epsilon_0} \frac{qd \cos \theta}{r^2}
 \]</div>
 <p>The potential of a dipole goes like <span class="math notranslate nohighlight">\( 1/r^2 \)</span> at large <span class="math notranslate nohighlight">\(r\)</span>; as we might have anticipated, it falls off more rapidly than the potential of a point charge. If we put together a pair of equal and opposite dipoles to make a <strong>quadrupole</strong>, the potential goes like <span class="math notranslate nohighlight">\( 1/r^3 \)</span>; for back-to-back quadrupoles (an <strong>octopole</strong>), it goes like <span class="math notranslate nohighlight">\( 1/r^4 \)</span>, and so on. Figure 3.27 summarizes the hierarchy; for completeness I have included the electric <strong>monopole</strong> (point charge), whose potential, of course, goes like <span class="math notranslate nohighlight">\( 1/r \)</span></p>
@@ -501,8 +501,8 @@ V(r) \approx \frac{1}{4 \pi \epsilon_0} \frac{qd \cos \theta}{r^2}
 </div>
 <p>Example 3.10 pertains to a very special charge configuration. I propose now to develop a systematic expansion for the potential of <em>any</em> localized charge distribution, in powers of <span class="math notranslate nohighlight">\( 1/r \)</span>. Figure 3.28 defines the relevant variables; the potential at <span class="math notranslate nohighlight">\(r\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq3-91">
-<span class="eqno">(220)<a class="headerlink" href="#equation-eq3-91" title="Link to this equation">#</a></span>\[
-V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\mathcal{R} } \rho(\vec{r'}) \mathrm{d}{\tau'} 
+<span class="eqno">(223)<a class="headerlink" href="#equation-eq3-91" title="Link to this equation">#</a></span>\[
+V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\mathcal{R} } \rho(\vec{r}') \mathrm{d}{\tau'} 
 \]</div>
 <p><img alt="Figure 3.28" src="../../../_images/3.28.png" /></p>
 <p>Using the law of cosines,</p>
@@ -510,9 +510,9 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\mathcal{R} } \rho(\vec{r'}) \ma
 \[
 \mathcal{R}  ^2 = r^2 + (r')^2 - 2r r' \cos \alpha = r^2 \left[ 1 + \left( \frac{r'}{r}  \right)^2 - 2 \left( \frac{r'}{r}  \right)\cos \alpha \right]
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <span class="math notranslate nohighlight">\( \vec{r} \)</span> and <span class="math notranslate nohighlight">\( \vec{r'} \)</span>. Thus,</p>
+<p>where <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <span class="math notranslate nohighlight">\( \vec{r} \)</span> and <span class="math notranslate nohighlight">\( \vec{r}' \)</span>. Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-92">
-<span class="eqno">(221)<a class="headerlink" href="#equation-eq3-92" title="Link to this equation">#</a></span>\[
+<span class="eqno">(224)<a class="headerlink" href="#equation-eq3-92" title="Link to this equation">#</a></span>\[
 \mathcal{R}  = r \sqrt{1 + \epsilon}
 \]</div>
 <p>with</p>
@@ -522,7 +522,7 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\mathcal{R} } \rho(\vec{r'}) \ma
 \]</div>
 <p>For points well outside the charge distribution, <span class="math notranslate nohighlight">\( \epsilon \)</span> is much less than 1, and this invites a binomial expansion:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-93">
-<span class="eqno">(222)<a class="headerlink" href="#equation-eq3-93" title="Link to this equation">#</a></span>\[
+<span class="eqno">(225)<a class="headerlink" href="#equation-eq3-93" title="Link to this equation">#</a></span>\[
 \frac{1}{\mathcal{R} }  = \frac{1}{r} (1 + \epsilon)^{-1/2} = \frac{1}{r} \left( 1 - \frac{1}{2} \epsilon + \frac{3}{8} \epsilon^2 - \frac{5}{16} \epsilon^3 + \ldots \right) 
 \]</div>
 <p>or, in terms of <span class="math notranslate nohighlight">\( r, r' \)</span>, and <span class="math notranslate nohighlight">\( \alpha \)</span>,</p>
@@ -537,22 +537,22 @@ V(r) = \frac{1}{4 \pi \epsilon_0} \int \frac{1}{\mathcal{R} } \rho(\vec{r'}) \ma
 \end{split}\]</div>
 <p>In the last step, I have collected together like powers of <span class="math notranslate nohighlight">\( (r'/r) \)</span>; surprisingly, their coefficients (the terms in parentheses) are Legendre polynomials! The remarkable result is that</p>
 <div class="math notranslate nohighlight" id="equation-eq3-94">
-<span class="eqno">(223)<a class="headerlink" href="#equation-eq3-94" title="Link to this equation">#</a></span>\[
+<span class="eqno">(226)<a class="headerlink" href="#equation-eq3-94" title="Link to this equation">#</a></span>\[
 \frac{1}{\mathcal{R} } = \frac{1}{r} \sum_{n=0}^\infty \left( \frac{r'}{r}  \right)^n P_n (\cos \alpha) 
 \]</div>
-<p>Substituting this back into <a class="reference internal" href="#equation-eq3-91">(220)</a>, and noting that <span class="math notranslate nohighlight">\( r \)</span> is constant, as far as the integration is concerned, I conclude that</p>
+<p>Substituting this back into <a class="reference internal" href="#equation-eq3-91">(223)</a>, and noting that <span class="math notranslate nohighlight">\( r \)</span> is constant, as far as the integration is concerned, I conclude that</p>
 <div class="math notranslate nohighlight" id="equation-eq3-95">
-<span class="eqno">(224)<a class="headerlink" href="#equation-eq3-95" title="Link to this equation">#</a></span>\[
-V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \sum_{n=0} ^\infty \frac{1}{r^{(n+1)}} \int (r') P_n(\cos \alpha) \rho(\vec{r'}) \mathrm{d}{\tau'}
+<span class="eqno">(227)<a class="headerlink" href="#equation-eq3-95" title="Link to this equation">#</a></span>\[
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \sum_{n=0} ^\infty \frac{1}{r^{(n+1)}} \int (r') P_n(\cos \alpha) \rho(\vec{r}') \mathrm{d}{\tau'}
 \]</div>
 <p>or, more explicitly,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-96">
-<span class="eqno">(225)<a class="headerlink" href="#equation-eq3-96" title="Link to this equation">#</a></span>\[\begin{split}
-V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{1}{r} \int \rho(\vec{r'}) \mathrm{d}{\tau'} + \frac{1}{r^2} \int r' \cos \alpha \rho(\vec{r'})\mathrm{d}{\tau'} \right. \\
- + \left. \frac{1}{r^3} \int (r')^2 \left( \frac{3}{2} \cos^2 \alpha - \frac{1}{2}  \right) \rho(\vec{r'}) \mathrm{d}{\tau'} + \ldots \right] 
+<span class="eqno">(228)<a class="headerlink" href="#equation-eq3-96" title="Link to this equation">#</a></span>\[\begin{split}
+V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{1}{r} \int \rho(\vec{r}') \mathrm{d}{\tau'} + \frac{1}{r^2} \int r' \cos \alpha \rho(\vec{r}')\mathrm{d}{\tau'} \right. \\
+ + \left. \frac{1}{r^3} \int (r')^2 \left( \frac{3}{2} \cos^2 \alpha - \frac{1}{2}  \right) \rho(\vec{r}') \mathrm{d}{\tau'} + \ldots \right] 
 \end{split}\]</div>
-<p>This is the desired result - the <strong>multipole expansion</strong> of <span class="math notranslate nohighlight">\( V \)</span> in powers of <span class="math notranslate nohighlight">\( 1/r \)</span>. The first term <span class="math notranslate nohighlight">\( (n=0) \)</span> is the monopole contribution (it goes like <span class="math notranslate nohighlight">\( 1/r \)</span>); the second <span class="math notranslate nohighlight">\( (n=1) \)</span> is the dipole (it goes like <span class="math notranslate nohighlight">\( 1/r^2 \)</span> ); the third is quadrupole; the fourth octopole, and so on. Remember that <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <span class="math notranslate nohighlight">\( \vec{r} \)</span> and <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, so the integrals depend on the direction to the field point. If you are interested in the potential along the <span class="math notranslate nohighlight">\( z' \)</span> axis (or - putting it the other way round - if you orient your <span class="math notranslate nohighlight">\( \vec{r'} \)</span> coordinates so the <span class="math notranslate nohighlight">\( z' \)</span> axis lies along <span class="math notranslate nohighlight">\( \vec{r} \)</span>), then <span class="math notranslate nohighlight">\( \alpha \)</span> is the usual polar angle <span class="math notranslate nohighlight">\( \theta' \)</span>.</p>
-<p>As it stands, <a class="reference internal" href="#equation-eq3-95">(224)</a> is <em>exact</em>, but it is useful primarily as an approximation scheme: the lowest nonzero term in the expansion provides the approximate potential at large <span class="math notranslate nohighlight">\(r\)</span>, and the successive terms tell us how to improve the approximation if greater precision is required.</p>
+<p>This is the desired result - the <strong>multipole expansion</strong> of <span class="math notranslate nohighlight">\( V \)</span> in powers of <span class="math notranslate nohighlight">\( 1/r \)</span>. The first term <span class="math notranslate nohighlight">\( (n=0) \)</span> is the monopole contribution (it goes like <span class="math notranslate nohighlight">\( 1/r \)</span>); the second <span class="math notranslate nohighlight">\( (n=1) \)</span> is the dipole (it goes like <span class="math notranslate nohighlight">\( 1/r^2 \)</span> ); the third is quadrupole; the fourth octopole, and so on. Remember that <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <span class="math notranslate nohighlight">\( \vec{r} \)</span> and <span class="math notranslate nohighlight">\( \vec{r}' \)</span>, so the integrals depend on the direction to the field point. If you are interested in the potential along the <span class="math notranslate nohighlight">\( z' \)</span> axis (or - putting it the other way round - if you orient your <span class="math notranslate nohighlight">\( \vec{r}' \)</span> coordinates so the <span class="math notranslate nohighlight">\( z' \)</span> axis lies along <span class="math notranslate nohighlight">\( \vec{r} \)</span>), then <span class="math notranslate nohighlight">\( \alpha \)</span> is the usual polar angle <span class="math notranslate nohighlight">\( \theta' \)</span>.</p>
+<p>As it stands, <a class="reference internal" href="#equation-eq3-95">(227)</a> is <em>exact</em>, but it is useful primarily as an approximation scheme: the lowest nonzero term in the expansion provides the approximate potential at large <span class="math notranslate nohighlight">\(r\)</span>, and the successive terms tell us how to improve the approximation if greater precision is required.</p>
 </section>
 <section id="the-monopole-and-dipole-terms">
 <h2>3.4.2: The Monopole and Dipole Terms<a class="headerlink" href="#the-monopole-and-dipole-terms" title="Link to this heading">#</a></h2>
@@ -565,42 +565,42 @@ V_{mon} (\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{Q}{r}
 If the total charge is zero, the dominant term in the potential will be the dipole (unless, of course, it also vanishes):</p>
 <div class="math notranslate nohighlight">
 \[
-V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{1}{r^2} \int r' \cos \alpha \rho(\vec{r'}) \mathrm{d}{\tau'} 
+V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{1}{r^2} \int r' \cos \alpha \rho(\vec{r}') \mathrm{d}{\tau'} 
 \]</div>
 <p>Since <span class="math notranslate nohighlight">\( \alpha \)</span> is the angle between <span class="math notranslate nohighlight">\( r' \)</span> and <span class="math notranslate nohighlight">\( r \)</span> (Fig 2.38),</p>
 <div class="math notranslate nohighlight">
 \[
-r' \cos \alpha = \hat{r} \cdot \vec{r'}
+r' \cos \alpha = \hat{r} \cdot \vec{r}'
 \]</div>
 <p>and the dipole potential can be written more succinctly:</p>
 <div class="math notranslate nohighlight">
 \[
-V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{1}{r^2} \hat{r} \cdot \int \vec{r'} \rho(\vec{r'}) \mathrm{d}{\tau'}
+V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{1}{r^2} \hat{r} \cdot \int \vec{r}' \rho(\vec{r}') \mathrm{d}{\tau'}
 \]</div>
 <p>This integral (which does not depend on <span class="math notranslate nohighlight">\( \vec{r} \)</span> ) is called the <strong>dipole moment</strong> of the distribution:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-98">
-<span class="eqno">(226)<a class="headerlink" href="#equation-eq3-98" title="Link to this equation">#</a></span>\[\boxed{
-\vec{p} \equiv \int \vec{r'} \rho(\vec{r'}) \mathrm{d}{\tau'} }
+<span class="eqno">(229)<a class="headerlink" href="#equation-eq3-98" title="Link to this equation">#</a></span>\[\boxed{
+\vec{p} \equiv \int \vec{r}' \rho(\vec{r}') \mathrm{d}{\tau'} }
 \]</div>
 <p>and the dipole contribution to the potential simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-eq3-99">
-<span class="eqno">(227)<a class="headerlink" href="#equation-eq3-99" title="Link to this equation">#</a></span>\[\boxed{
+<span class="eqno">(230)<a class="headerlink" href="#equation-eq3-99" title="Link to this equation">#</a></span>\[\boxed{
 V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}}
 \]</div>
-<p>The dipole moment is determined by the geometry (size, shape, and density) of the charge distribution. <a class="reference internal" href="#equation-eq3-98">(226)</a> translates in the usual way (Sect 2.1.4) for point, line, and surface charges. Thus, the dipole moment for a collection of point charges is</p>
+<p>The dipole moment is determined by the geometry (size, shape, and density) of the charge distribution. <a class="reference internal" href="#equation-eq3-98">(229)</a> translates in the usual way (Sect 2.1.4) for point, line, and surface charges. Thus, the dipole moment for a collection of point charges is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-100">
-<span class="eqno">(228)<a class="headerlink" href="#equation-eq3-100" title="Link to this equation">#</a></span>\[
-\vec{p} = \sum_{i=1} ^n q_i \vec{r'}_i 
+<span class="eqno">(231)<a class="headerlink" href="#equation-eq3-100" title="Link to this equation">#</a></span>\[
+\vec{p} = \sum_{i=1} ^n q_i \vec{r}'_i 
 \]</div>
 <p>For a <strong>physical dipole</strong> (equal and opposite charges <span class="math notranslate nohighlight">\( \pm q \)</span>),</p>
 <div class="math notranslate nohighlight" id="equation-eq3-101">
-<span class="eqno">(229)<a class="headerlink" href="#equation-eq3-101" title="Link to this equation">#</a></span>\[
+<span class="eqno">(232)<a class="headerlink" href="#equation-eq3-101" title="Link to this equation">#</a></span>\[
 \vec{p} = q\vec{r'_+} - q \vec{r_- ' } = q(\vec{r' _+} - \vec{r'_-}) = q \vec{d} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{d} \)</span> is the vector from the negative charge to the positive one (Fig. 3.29).
 <img alt="Figure 3.29" src="../../../_images/3.29.png" /></p>
-<p>Is this consistent with what we got in Example 3.10? Yes: If you put <a class="reference internal" href="#equation-eq3-101">(229)</a> into <a class="reference internal" href="#equation-eq3-99">(227)</a>, you recover <a class="reference internal" href="#equation-eq3-90">(219)</a>. Notice, however, that this is only the <em>approximate</em> potential of the physical dipole - evidently there are higher multipole contributions. Of course, as you go farther and farther away, <span class="math notranslate nohighlight">\( V_{dip} \)</span> becomes a better and better approximation, since the higher terms die off more rapidly with increasing <span class="math notranslate nohighlight">\( r \)</span>. By the same token, at a fixed <span class="math notranslate nohighlight">\( r \)</span> the dipole approximation improves as you shrink the separation distance <span class="math notranslate nohighlight">\( d \)</span>. To construct a <strong>perfect dipole</strong> whose potential is given exactly by <a class="reference internal" href="#equation-eq3-99">(227)</a>, you’d have to let <span class="math notranslate nohighlight">\( d \)</span> approach zero. Unfortunately you then lose the dipole term too, unless you simultaneously arrange for <span class="math notranslate nohighlight">\(q\)</span> to go to infinity! A <em>physical</em> dipole becomes a <em>pure</em> dipole, then, in the rather artificial limit <span class="math notranslate nohighlight">\( d \rightarrow 0. q \rightarrow \infty \)</span>, with the product <span class="math notranslate nohighlight">\( qd = p \)</span> held fixed. When someone uses the word “dipole,” you can’t always tell whether they mean a <em>physical</em> dipole (with finite separation between the charges) or an <em>ideal</em> dipole. If in doubt, assume that <span class="math notranslate nohighlight">\(d\)</span> is small enough that you can safely apply <a class="reference internal" href="#equation-eq3-99">(227)</a>.</p>
-<p>Dipole moments are <em>vectors</em>, and they add accordingly: if you have two dipoles <span class="math notranslate nohighlight">\( \vec{p_1} \)</span> and <span class="math notranslate nohighlight">\( \vec{p_2} \)</span>, the total dipole moment is <span class="math notranslate nohighlight">\( \vec{p_1} + \vec{p_2} \)</span>. For instance, with four charges at the corners of a square, as shown in Fig. 3.30, the net dipole moment is zero. You can see this by combining the charges in pairs or by adding up the four contributions individually using <a class="reference internal" href="#equation-eq3-100">(228)</a>. This is a <em>quadrupole</em>, as I indicated earlier, and its potential is dominated by the quadrupole term in the multipole expansion.
+<p>Is this consistent with what we got in Example 3.10? Yes: If you put <a class="reference internal" href="#equation-eq3-101">(232)</a> into <a class="reference internal" href="#equation-eq3-99">(230)</a>, you recover <a class="reference internal" href="#equation-eq3-90">(222)</a>. Notice, however, that this is only the <em>approximate</em> potential of the physical dipole - evidently there are higher multipole contributions. Of course, as you go farther and farther away, <span class="math notranslate nohighlight">\( V_{dip} \)</span> becomes a better and better approximation, since the higher terms die off more rapidly with increasing <span class="math notranslate nohighlight">\( r \)</span>. By the same token, at a fixed <span class="math notranslate nohighlight">\( r \)</span> the dipole approximation improves as you shrink the separation distance <span class="math notranslate nohighlight">\( d \)</span>. To construct a <strong>perfect dipole</strong> whose potential is given exactly by <a class="reference internal" href="#equation-eq3-99">(230)</a>, you’d have to let <span class="math notranslate nohighlight">\( d \)</span> approach zero. Unfortunately you then lose the dipole term too, unless you simultaneously arrange for <span class="math notranslate nohighlight">\(q\)</span> to go to infinity! A <em>physical</em> dipole becomes a <em>pure</em> dipole, then, in the rather artificial limit <span class="math notranslate nohighlight">\( d \rightarrow 0. q \rightarrow \infty \)</span>, with the product <span class="math notranslate nohighlight">\( qd = p \)</span> held fixed. When someone uses the word “dipole,” you can’t always tell whether they mean a <em>physical</em> dipole (with finite separation between the charges) or an <em>ideal</em> dipole. If in doubt, assume that <span class="math notranslate nohighlight">\(d\)</span> is small enough that you can safely apply <a class="reference internal" href="#equation-eq3-99">(230)</a>.</p>
+<p>Dipole moments are <em>vectors</em>, and they add accordingly: if you have two dipoles <span class="math notranslate nohighlight">\( \vec{p_1} \)</span> and <span class="math notranslate nohighlight">\( \vec{p_2} \)</span>, the total dipole moment is <span class="math notranslate nohighlight">\( \vec{p_1} + \vec{p_2} \)</span>. For instance, with four charges at the corners of a square, as shown in Fig. 3.30, the net dipole moment is zero. You can see this by combining the charges in pairs or by adding up the four contributions individually using <a class="reference internal" href="#equation-eq3-100">(231)</a>. This is a <em>quadrupole</em>, as I indicated earlier, and its potential is dominated by the quadrupole term in the multipole expansion.
 <img alt="Figure 3.30" src="../../../_images/3.30.png" /></p>
 </section>
 <section id="origin-of-coordinates-in-multipole-expansions">
@@ -610,8 +610,8 @@ V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}}
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\vec{p_2} &amp; = \int \vec{r'} \rho(\vec{r'}) \mathrm{d}{\tau'} = \int (\vec{r'} - \vec{a} ) \rho (\vec{r'}) \mathrm{d}{\tau'} \\
-&amp; = \int \vec{r'} \rho(\vec{r'}) \mathrm{d}{\tau'} - \vec{a} \int \rho(\vec{r'}) \mathrm{d}{\tau'} = \vec{p} - Q \vec{a}
+\vec{p_2} &amp; = \int \vec{r}' \rho(\vec{r}') \mathrm{d}{\tau'} = \int (\vec{r}' - \vec{a} ) \rho (\vec{r}') \mathrm{d}{\tau'} \\
+&amp; = \int \vec{r}' \rho(\vec{r}') \mathrm{d}{\tau'} - \vec{a} \int \rho(\vec{r}') \mathrm{d}{\tau'} = \vec{p} - Q \vec{a}
 \end{aligned}
 \end{split}\]</div>
 <p><img alt="Figure 3.32" src="../../../_images/3.32.png" /></p>
@@ -620,9 +620,9 @@ V_{dip}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}}
 </section>
 <section id="the-electric-field-of-a-dipole">
 <h2>3.4.4: The Electric Field of a Dipole<a class="headerlink" href="#the-electric-field-of-a-dipole" title="Link to this heading">#</a></h2>
-<p>So far we have only worked with <em>potentials</em>. Now I would like to calculate the electric field of a (perfect) dipole. If we choose coordinates so that <span class="math notranslate nohighlight">\( \vec{p} \)</span> is at the origin and points in the <span class="math notranslate nohighlight">\(z\)</span> direction (Fig. 3.36), then the potential at <span class="math notranslate nohighlight">\( r, \theta \)</span> is <a class="reference internal" href="#equation-eq3-99">(227)</a>:</p>
+<p>So far we have only worked with <em>potentials</em>. Now I would like to calculate the electric field of a (perfect) dipole. If we choose coordinates so that <span class="math notranslate nohighlight">\( \vec{p} \)</span> is at the origin and points in the <span class="math notranslate nohighlight">\(z\)</span> direction (Fig. 3.36), then the potential at <span class="math notranslate nohighlight">\( r, \theta \)</span> is <a class="reference internal" href="#equation-eq3-99">(230)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-102">
-<span class="eqno">(230)<a class="headerlink" href="#equation-eq3-102" title="Link to this equation">#</a></span>\[
+<span class="eqno">(233)<a class="headerlink" href="#equation-eq3-102" title="Link to this equation">#</a></span>\[
 V_{dip} (r, \theta) = \frac{\hat{r} \cdot \vec{p}}{4 \pi \epsilon_0 r^2} = \frac{p \cos \theta}{4 \pi \epsilon_0 r^2}
 \]</div>
 <p><img alt="Figure 3.36" src="../../../_images/3.36.png" /></p>
@@ -637,13 +637,13 @@ E_\phi &amp; = - \frac{1}{r \sin \theta} \frac{\partial V}{\partial \phi} = 0
 \end{split}\]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq3-103">
-<span class="eqno">(231)<a class="headerlink" href="#equation-eq3-103" title="Link to this equation">#</a></span>\[
+<span class="eqno">(234)<a class="headerlink" href="#equation-eq3-103" title="Link to this equation">#</a></span>\[
 \vec{E_{dip}} (r, \theta) = \frac{p}{4 \pi \epsilon_0 r^3}(2 \cos \theta \hat{r} + \sin \theta \hat{\theta})
 \]</div>
-<p>This formula makes explicit reference to a particular coordinate system (spherical) and assumes a particular orientation for <span class="math notranslate nohighlight">\( \vec{p} \)</span> (along <span class="math notranslate nohighlight">\(z\)</span>). It can be recast in a coordinate-free form, analogous to the potential in <a class="reference internal" href="#equation-eq3-99">(227)</a>  - See problem 3.36.</p>
+<p>This formula makes explicit reference to a particular coordinate system (spherical) and assumes a particular orientation for <span class="math notranslate nohighlight">\( \vec{p} \)</span> (along <span class="math notranslate nohighlight">\(z\)</span>). It can be recast in a coordinate-free form, analogous to the potential in <a class="reference internal" href="#equation-eq3-99">(230)</a>  - See problem 3.36.</p>
 <p>Notice that the dipole falls off as the inverse cube of <span class="math notranslate nohighlight">\(r\)</span>; the monopole field <span class="math notranslate nohighlight">\( (Q / 4 \pi \epsilon_0 r^2) \hat{r} \)</span> goes as the inverse square, of course. Quadrupole fields go like <span class="math notranslate nohighlight">\( 1/r^4 \)</span>, octopole like <span class="math notranslate nohighlight">\( 1/r^5 \)</span>, and so on. (This merely reflects how the respective potentials fall off - the gradient introduces another factor of <span class="math notranslate nohighlight">\( 1/r \)</span> ).</p>
-<p>Figure 3.37(a) shows the field lines of a “pure” dipole <a class="reference internal" href="#equation-eq3-103">(231)</a>. For comparison, I have also sketched the field lines for a “physical” dipole, in Fig 3.37(b). Notice how similar the two pictures become if you blot out the central region; up close, however, they are entirely different. Only for points <span class="math notranslate nohighlight">\( r \gg d \)</span> does <a class="reference internal" href="#equation-eq3-103">(231)</a> represent a valid approximation to the field of a physical dipole. As I mentioned earlier, this regime can be reached either by going to large <span class="math notranslate nohighlight">\( r \)</span> or by squeezing the charges very close together.
-<img alt="Figure 3.37" src="../../../_images/3.37.png" /></p>
+<p>Figure 3.37(a) shows the field lines of a “pure” dipole <a class="reference internal" href="#equation-eq3-103">(234)</a>. For comparison, I have also sketched the field lines for a “physical” dipole, in Fig 3.37(b). Notice how similar the two pictures become if you blot out the central region; up close, however, they are entirely different. Only for points <span class="math notranslate nohighlight">\( r \gg d \)</span> does <a class="reference internal" href="#equation-eq3-103">(234)</a> represent a valid approximation to the field of a physical dipole. As I mentioned earlier, this regime can be reached either by going to large <span class="math notranslate nohighlight">\( r \)</span> or by squeezing the charges very close together.</p>
+<p><img alt="Figure 3.37" src="../../../_images/3.37.png" /></p>
 </section>
 </section>
 
@@ -656,16 +656,16 @@ E_\phi &amp; = - \frac{1}{r \sin \theta} \frac{\partial V}{\partial \phi} = 0
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter03"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

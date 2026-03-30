@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -531,7 +531,7 @@ T_{ij} \equiv \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + 
 <h2>8.2.3 Conservation of Electromagnetic Momentum<a class="headerlink" href="#conservation-of-electromagnetic-momentum" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
-\vec F = \dv{\vec{p}_{mech}}{t} = - \epsilon_0 \mu_0 \dv{}{t} \int_V \vec S \mathrm{d} \tau + \oint \overline{\vec T} \cdot \mathrm{d} \vec a
+\vec F = \dv{\vec{p}_{mech}}{t} = - \epsilon_0 \mu_0 \frac{d}{dt} \int_V \vec S \mathrm{d} \tau + \oint \overline{\vec T} \cdot \mathrm{d} \vec a
 \]</div>
 <p>The first term on the right is related to the momentum stored in the electromagnetic field. The second term is the rate at which momentum flows across the surface, and we describe the left-hand-side as the rate of change of the momentum of charges within the volume.</p>
 <p>We identify another useful term as the first integrand on the right:</p>
@@ -543,7 +543,7 @@ T_{ij} \equiv \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{ij} E^2 \right) + 
 <p>In a charge-free region,</p>
 <div class="math notranslate nohighlight">
 \[
-- \dv{}{t} \int_V \vec g \mathrm{d} \tau + \oint_S \overline{\vec T} \cdot \mathrm{d} \vec a = 0
+- \frac{d}{dt} \int_V \vec g \mathrm{d} \tau + \oint_S \overline{\vec T} \cdot \mathrm{d} \vec a = 0
 \]</div>
 <p>and since the above is true for all regions <span class="math notranslate nohighlight">\( V \)</span>, we have our familiar continuity-type equation</p>
 <div class="math notranslate nohighlight">
@@ -672,7 +672,7 @@ E 2 \pi s l = \frac{Q}{\epsilon_0}
 = - \frac{\mu_0 n I Q }{2 \pi l} \int _V \hat s \times \hat \phi \mathrm{d} \tau = - \frac{\mu_0 n I Q}{2 \pi l} \hat z \pi (R^2 - a^2 ) l = - \frac{\mu_n n I Q}{2} (R^2 - a^2) \hat z
 \]</div>
 <p>So that’s the initial angular momentum. Of course, nothing is moving, so this is just the momentum stored in the EM fields. Assuming nothing like friction complicates the situation, any angular momentum lost by the EM fields will be transferred to the cylinders as rotation.</p>
-<p>As we crank down the current, we know that a time variation in the magnetic field implies an induced EMF <span class="math notranslate nohighlight">\( \mathcal{E} = - \dv{\Phi}{t} \)</span>. <span class="math notranslate nohighlight">\( \vec E \)</span> experienced at radii <span class="math notranslate nohighlight">\( a \)</span> and <span class="math notranslate nohighlight">\( b \)</span> are now different. Use Faraday</p>
+<p>As we crank down the current, we know that a time variation in the magnetic field implies an induced EMF <span class="math notranslate nohighlight">\( \mathcal{E} = - \frac{d\Phi}{dt} \)</span>. <span class="math notranslate nohighlight">\( \vec E \)</span> experienced at radii <span class="math notranslate nohighlight">\( a \)</span> and <span class="math notranslate nohighlight">\( b \)</span> are now different. Use Faraday</p>
 <div class="math notranslate nohighlight">
 \[
 E_a 2 \pi a = - \mu_0 n \frac{\mathrm{d} I}{\mathrm{d} t} \pi a^2 \rightarrow \vec E_a = - \frac{\mu_0 n a}{2} \frac{\mathrm{d} I}{\mathrm{d} t} \hat \phi
@@ -733,16 +733,16 @@ E_a 2 \pi a = - \mu_0 n \frac{\mathrm{d} I}{\mathrm{d} t} \pi a^2 \rightarrow \v
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter08"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

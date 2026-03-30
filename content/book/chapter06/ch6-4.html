@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -438,10 +438,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-susceptibility-and-permeability">6.4.1: Magnetic Susceptibility and Permeability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-3">Example 6.3</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-susceptibility-and-permeability">6.4.1: Magnetic Susceptibility and Permeability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ferromagnetism">6.4.2: Ferromagnetism</a></li>
 </ul>
             </nav>
@@ -458,52 +455,51 @@
 <h1>6.4: Linear and Nonlinear Media<a class="headerlink" href="#linear-and-nonlinear-media" title="Link to this heading">#</a></h1>
 <section id="magnetic-susceptibility-and-permeability">
 <h2>6.4.1: Magnetic Susceptibility and Permeability<a class="headerlink" href="#magnetic-susceptibility-and-permeability" title="Link to this heading">#</a></h2>
-<p>In paramagnetic and diamagnetic materials, the magnetization is sustained by the field; when <span class="math notranslate nohighlight">\(\vec{B}\)</span> is removed, <span class="math notranslate nohighlight">\(\vec{M}\)</span> disappears. In fact, for most substances the magnetization is proportional to the field, provided the field is not too strong. For notational consistency with the electrical case (<a class="reference internal" href="../chapter04/ch4-4.html#equation-eq4-30">(259)</a>), I should express the proportionality thus</p>
+<p>In paramagnetic and diamagnetic materials, the magnetization is sustained by the field; when <span class="math notranslate nohighlight">\(\vec{B}\)</span> is removed, <span class="math notranslate nohighlight">\(\vec{M}\)</span> disappears. In fact, for most substances the magnetization is proportional to the field, provided the field is not too strong. For notational consistency with the electrical case (<a class="reference internal" href="../chapter04/ch4-4.html#equation-eq4-30">(262)</a>), I should express the proportionality thus</p>
 <div class="math notranslate nohighlight" id="equation-eq6-28">
-<span class="eqno">(405)<a class="headerlink" href="#equation-eq6-28" title="Link to this equation">#</a></span>\[
+<span class="eqno">(410)<a class="headerlink" href="#equation-eq6-28" title="Link to this equation">#</a></span>\[
 \vec{M} = \frac{1}{\mu_0} \chi_m \vec{B}
 \]</div>
 <p>but custom dictates that it be written in terms of <span class="math notranslate nohighlight">\(\vec{H}\)</span>, instead of <span class="math notranslate nohighlight">\(\vec{B}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{M} = \chi_m \vec{H}
+<div class="math notranslate nohighlight" id="equation-eq6-29">
+<span class="eqno">(411)<a class="headerlink" href="#equation-eq6-29" title="Link to this equation">#</a></span>\[\boxed{
+\vec{M} = \chi_m \vec{H}}
 \]</div>
 <p>The constant of proportionality <span class="math notranslate nohighlight">\( \chi_m \)</span> is called the <strong>magnetic susceptibility</strong>; it is a dimensionless quantity that varies from one substance to another - positive for paramagnets and negative for diamagnets. Typical values are around <span class="math notranslate nohighlight">\( 10^{-5} \)</span>.</p>
-<p>Materials that obey <code class="xref eq docutils literal notranslate"><span class="pre">eq6.29</span></code> are called <strong>linear media</strong>. In view of <a class="reference internal" href="ch6-3.html#equation-eq6-18">(395)</a>,</p>
+<p>Materials that obey <a class="reference internal" href="#equation-eq6-29">(411)</a> are called <strong>linear media</strong>. In view of <a class="reference internal" href="ch6-3.html#equation-eq6-18">(400)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-30">
-<span class="eqno">(406)<a class="headerlink" href="#equation-eq6-30" title="Link to this equation">#</a></span>\[
+<span class="eqno">(412)<a class="headerlink" href="#equation-eq6-30" title="Link to this equation">#</a></span>\[
 \vec{B} = \mu_0 (\vec{H} + \vec{M}) = \mu_0 (1 + \chi_m) \vec{H} 
 \]</div>
 <p>for linear media. Thus <span class="math notranslate nohighlight">\(\vec{B}\)</span> is also proportional to <span class="math notranslate nohighlight">\(\vec{H}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq6-31">
-<span class="eqno">(407)<a class="headerlink" href="#equation-eq6-31" title="Link to this equation">#</a></span>\[
+<span class="eqno">(413)<a class="headerlink" href="#equation-eq6-31" title="Link to this equation">#</a></span>\[
 \vec{B} = \mu \vec{H} 
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight" id="equation-eq6-32">
-<span class="eqno">(408)<a class="headerlink" href="#equation-eq6-32" title="Link to this equation">#</a></span>\[
+<span class="eqno">(414)<a class="headerlink" href="#equation-eq6-32" title="Link to this equation">#</a></span>\[
 \mu \equiv \mu_0 (1 + \chi_m) 
 \]</div>
 <p><span class="math notranslate nohighlight">\( \mu \)</span> is called the <strong>permeability</strong> of the material. In a vacuum, where there is no matter to magnetize, the susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span> vanishes, and the permeability is <span class="math notranslate nohighlight">\( \mu_0 \)</span>. That’s why <span class="math notranslate nohighlight">\( \mu_0 \)</span> is called the <strong>permeability of free space</strong>.</p>
 <p><img alt="Figure 6.1" src="../../../_images/6.1.png" /></p>
-<section id="example-6-3">
-<h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
-<p>An infinite solenoid (n turns per unit length, current <span class="math notranslate nohighlight">\(I\)</span>), is filled with linear material of susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span>. Find the magnetic field inside the solenoid.</p>
+Example 6.3</label><div class="sd-tab-content docutils">
+<p>An infinite solenoid (<span class="math notranslate nohighlight">\(n\)</span> turns per unit length, current <span class="math notranslate nohighlight">\(I\)</span>), is filled with linear material of susceptibility <span class="math notranslate nohighlight">\( \chi_m \)</span>. Find the magnetic field inside the solenoid.</p>
 <p><img alt="Figure 6.22" src="../../../_images/6.22.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
-<p>Since <span class="math notranslate nohighlight">\(\vec{B}\)</span> is due in part to the bound currents (which we don’t yet know), we cannot compute it directly. However, this is one of those symmetrical cases in which we can get <span class="math notranslate nohighlight">\(\vec{H}\)</span> from the free current alone, using Ampere’s law in the form of <a class="reference internal" href="ch6-3.html#equation-eq6-20">(397)</a></p>
+Solution</label><div class="sd-tab-content docutils">
+<p>Since <span class="math notranslate nohighlight">\(\vec{B}\)</span> is due in part to the bound currents (which we don’t yet know), we cannot compute it directly. However, this is one of those symmetrical cases in which we can get <span class="math notranslate nohighlight">\(\vec{H}\)</span> from the free current alone, using Ampere’s law in the form of <a class="reference internal" href="ch6-3.html#equation-eq6-20">(402)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \vec{H} = n I \hat{z}
 \]</div>
-<p>According to <a class="reference internal" href="#equation-eq6-31">(407)</a>, then</p>
+<p>According to <a class="reference internal" href="#equation-eq6-31">(413)</a>, then</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{B} = \mu_0(1 + \chi_m) n I \hat{z}
@@ -516,28 +512,28 @@ A</label><div class="sd-tab-content docutils">
 <p>is in the same direction as <span class="math notranslate nohighlight">\(I\)</span>, in the former case (<span class="math notranslate nohighlight">\( \chi_m &gt; 0 \)</span>), and opposite in the latter (<span class="math notranslate nohighlight">\( \chi_m &lt; 0 \)</span>).</p>
 </div>
 </div>
+<hr class="docutils" />
 <p>You might suppose that linear media escape the defect in the parallel between <span class="math notranslate nohighlight">\(\vec{B}\)</span> and <span class="math notranslate nohighlight">\(\vec{H}\)</span>: since <span class="math notranslate nohighlight">\(\vec{M}\)</span> and <span class="math notranslate nohighlight">\(\vec{H}\)</span> are now proportional to <span class="math notranslate nohighlight">\(\vec{B}\)</span>, does it not follow that their divergence, like <span class="math notranslate nohighlight">\(\vec{B}\)</span>’s, must always vanish? Unfortunately, it does not; at the boundary between two materials of different permeability, the divergence of <span class="math notranslate nohighlight">\(\vec{M}\)</span> can actually be infinite. For instance, at the end of a cylinder of linear paramagnetic material, <span class="math notranslate nohighlight">\(\vec{M}\)</span> is zero on one side but not on the other. For the “Gaussian pillbox” shown in Fig 6.23, <span class="math notranslate nohighlight">\( \oint \vec{M} \cdot \mathrm{d} \vec{a} \neq 0 \)</span>, and hence, by the divergence theorem, <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{M} \)</span> cannot vanish everywhere within it.</p>
 <p><img alt="Figure 6.23" src="../../../_images/6.23.png" /></p>
 <p>Incidentally, the volume bound current density in a homogeneous linear material is proportional to the <em>free</em> current density:</p>
 <div class="math notranslate nohighlight" id="equation-eq6-33">
-<span class="eqno">(409)<a class="headerlink" href="#equation-eq6-33" title="Link to this equation">#</a></span>\[
+<span class="eqno">(415)<a class="headerlink" href="#equation-eq6-33" title="Link to this equation">#</a></span>\[
 \vec{J}_b = \nabla \times  \vec{M} = \nabla \times  (\chi_m \vec{H}) = \chi_m \vec{J_f} 
 \]</div>
 <p>In particular, unless free current actually flows through the material, all bound current will be at the surface.</p>
-</section>
 </section>
 <section id="ferromagnetism">
 <h2>6.4.2: Ferromagnetism<a class="headerlink" href="#ferromagnetism" title="Link to this heading">#</a></h2>
 <p>In a linear medium, the alignment of atomic dipoles is maintained by a magnetic field imposed from the outside. Ferromagnets - which are emphatically not linear - require no external fields to sustain magnetization; the alignment is “frozen in.” Like paramagnetism, ferromagnetism involves the magnetic dipoles associated with the spins of unpaired electrons. The new feature, which makes ferromagnetism so different from paramagnetism, is the interaction between nearby dipoles: In a ferromagnet, each dipole “likes” to point in the same direction as its neighbors. The reason for this preference is essentially quantum mechanical, and I won’t try to explain it here; it is enough to know that the correlation is so strong as to align virtually 100% of the unpaired electron spins. If you could somehow magnify a piece of iron and “see” the individual dipoles as tiny arrows, it would look something like Fig. 6.25, with all the spins pointing the same way.</p>
 <p>But if that is true, why isn’t every wrench and nail a powerful magnet? The answer is that the alignment occurs in relatively small patches, called <strong>domains</strong>. Each domain contains billions of dipoles, all lined up (these domains are actually visible under a microscope, given suitable etching techniques - see Fig 6.26), but the domains themselves are randomly oriented. The household wrench contains an enormous number of domains, and their magnetic fields cancel, so the wrench as a whole is not magnetized. (Actually, the orientation of domains is not completely random; within a given crystal, there may be some preferential alignment along the crystal axes. But there will be just as many domains pointing one way as the other, so there is still no large-scale magnetization. Moreover, the crystals themselves are randomly oriented within any sizable chunk of metal.)</p>
 <p>How, then, would you produce a permanent magnet, such as they sell in toy stores? If you put a piece of iron into a strong magnetic field, the torque <span class="math notranslate nohighlight">\( \vec{N} = \vec{m} \times \vec{B} \)</span> tends to align the dipoles parallel to the field. Since they like to stay parallel to their neighbors, most of the dipoles will resist this torque. However, at the boundary between two domains, there are competing neighbors, and the torque will throw its weight on the side of the domain most nearly parallel to the field; this domain will win some converts, at the expense of the less favorably oriented one. The net effect of the magnetic field, then, is to move the domain boundaries. Domains parallel to the field grow, and the others shrink. If the field is strong enough, one domain takes over entirely, and the iron is said to be saturated.</p>
-<p><img alt="Figure 6.25" src="../../../_images/6.25.png" />
-<img alt="Figure 6.26" src="../../../_images/6.26.png" /></p>
+<p><img alt="Figure 6.25" src="../../../_images/6.25.png" /></p>
+<p><img alt="Figure 6.26" src="../../../_images/6.26.png" /></p>
 <p>It turns out that this process (the shifting of domain boundaries in response to an external field) is not entirely reversible: When the field is switched off, there will be some return to randomly oriented domains, but it is far from complete; there remains a preponderance of domains in the original direction. You now have a permanent magnet.</p>
-<p>A simple way to accomplish this, in practice, is to wrap a coil of wire around the object to be magnetized (Fig. 6.27). Run a current I through the coil; this provides the external magnetic field (pointing to the left in the diagram). As you increase the current, the field increases, the domain boundaries move, and the magnetization grows. Eventually, you reach the saturation point, with all the dipoles aligned, and a further increase in current has no effect on M (Fig. 6.28, point b).</p>
-<p>Now suppose you <em>reduce</em> the current. Instead of retracing the path back to <span class="math notranslate nohighlight">\( \vec{M} = 0 \)</span>, there is only a partial return to randomly oriented domains; M decreases, but even with the current off there is some residual magnetization (point c). The wrench is now a permanent magnet. If you want to eliminate the remaining magnetization, you’ll have to run a current backwards through the coil (a negative <span class="math notranslate nohighlight">\(I\)</span>). Now the external field points to the right, and as you increase I (negatively), M drops down to zero (point d). If you turn I still higher, you soon reach saturation in the other direction-all the dipoles now pointing to the right (e). At this stage, switching off the current will leave the wrench with a permanent magnetization to the right (point f). To complete the story, turn I on again in the positive sense: M returns to zero (point g), and eventually to the forward saturation point (b).</p>
+<p>A simple way to accomplish this, in practice, is to wrap a coil of wire around the object to be magnetized (Fig. 6.27). Run a current I through the coil; this provides the external magnetic field (pointing to the left in the diagram). As you increase the current, the field increases, the domain boundaries move, and the magnetization grows. Eventually, you reach the saturation point, with all the dipoles aligned, and a further increase in current has no effect on <span class="math notranslate nohighlight">\(\vec{M}\)</span> (Fig. 6.28, point b).</p>
+<p>Now suppose you <em>reduce</em> the current. Instead of retracing the path back to <span class="math notranslate nohighlight">\( \vec{M} = 0 \)</span>, there is only a partial return to randomly oriented domains; <span class="math notranslate nohighlight">\(M\)</span> decreases, but even with the current off there is some residual magnetization (point c). The wrench is now a permanent magnet. If you want to eliminate the remaining magnetization, you’ll have to run a current backwards through the coil (a negative <span class="math notranslate nohighlight">\(I\)</span>). Now the external field points to the right, and as you increase <span class="math notranslate nohighlight">\(I\)</span> (negatively), <span class="math notranslate nohighlight">\(M\)</span> drops down to zero (point d). If you turn I still higher, you soon reach saturation in the other direction-all the dipoles now pointing to the right (e). At this stage, switching off the current will leave the wrench with a permanent magnetization to the right (point f). To complete the story, turn <span class="math notranslate nohighlight">\(I\)</span> on again in the positive sense: <span class="math notranslate nohighlight">\(M\)</span> returns to zero (point g), and eventually to the forward saturation point (b).</p>
 <p><img alt="Figure 6.27" src="../../../_images/6.27.png" /></p>
-<p>The path we have traced out is called a hysteresis loop. Notice that the magnetization of the wrench depends not only on the applied field (that is, on/), but also on its previous magnetic “history.” For instance, at three different times in our experiment the current was zero (a, c, and f), yet the magnetization was different for each of them. Actually, it is customary to draw hysteresis loops as plots of <span class="math notranslate nohighlight">\(\vec{B}\)</span> against <span class="math notranslate nohighlight">\(\vec{H}\)</span>, rather than <span class="math notranslate nohighlight">\(M\)</span> against <span class="math notranslate nohighlight">\(I\)</span>. (If our coil is approximated by a long solenoid, with <span class="math notranslate nohighlight">\(n\)</span> turns per unit length, then <span class="math notranslate nohighlight">\( H = nI \)</span>, so H and I are proportional. Meanwhile, <span class="math notranslate nohighlight">\( \vec{B} = \mu_0 (\vec{H} + \vec{M}) \)</span>, but in practice <span class="math notranslate nohighlight">\(\vec{M}\)</span> is huge compared to <span class="math notranslate nohighlight">\(\vec{H}\)</span>, so to all intents and purposes <span class="math notranslate nohighlight">\(\vec{B}\)</span> is proportional to <span class="math notranslate nohighlight">\(\vec{M}\)</span>.)</p>
+<p>The path we have traced out is called a <strong>hysteresis loop</strong>. Notice that the magnetization of the wrench depends not only on the applied field (that is, on <span class="math notranslate nohighlight">\(I\)</span>), but also on its previous magnetic “history.” For instance, at three different times in our experiment the current was zero (a, c, and f), yet the magnetization was different for each of them. Actually, it is customary to draw hysteresis loops as plots of <span class="math notranslate nohighlight">\(\vec{B}\)</span> against <span class="math notranslate nohighlight">\(\vec{H}\)</span>, rather than <span class="math notranslate nohighlight">\(M\)</span> against <span class="math notranslate nohighlight">\(I\)</span>. (If our coil is approximated by a long solenoid, with <span class="math notranslate nohighlight">\(n\)</span> turns per unit length, then <span class="math notranslate nohighlight">\( H = nI \)</span>, so <span class="math notranslate nohighlight">\(H\)</span> and <span class="math notranslate nohighlight">\(I\)</span> are proportional. Meanwhile, <span class="math notranslate nohighlight">\( \vec{B} = \mu_0 (\vec{H} + \vec{M}) \)</span>, but in practice <span class="math notranslate nohighlight">\(\vec{M}\)</span> is huge compared to <span class="math notranslate nohighlight">\(\vec{H}\)</span>, so to all intents and purposes <span class="math notranslate nohighlight">\(\vec{B}\)</span> is proportional to <span class="math notranslate nohighlight">\(\vec{M}\)</span>.)</p>
 <p><img alt="Figure 6.28" src="../../../_images/6.28.png" /></p>
 <p>To make the units consistent (teslas), I have plotted <span class="math notranslate nohighlight">\( (\mu_0 H) \)</span>  horizontally (Fig. 6.29); notice, however, that the vertical scale is <span class="math notranslate nohighlight">\( 10^4 \)</span> times greater than the horizontal one. Roughly speaking, <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span> is the field our coil would have produced in the absence of any iron; <span class="math notranslate nohighlight">\(\vec{B}\)</span> is what we actually got, and compared to <span class="math notranslate nohighlight">\( \mu_0 \vec{H} \)</span>, it is gigantic. A little current goes a long way, when you have ferromagnetic materials around. That’s why anyone who wants to make a powerful electromagnet will wrap the coil around an iron core. It doesn’t take much of an external field to move the domain boundaries, and when you do that, you have all the dipoles in the iron working with you.</p>
 <p><img alt="Figure 6.29" src="../../../_images/6.29.png" /></p>
@@ -554,16 +550,16 @@ A</label><div class="sd-tab-content docutils">
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter06"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -611,10 +607,7 @@ A</label><div class="sd-tab-content docutils">
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-susceptibility-and-permeability">6.4.1: Magnetic Susceptibility and Permeability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-3">Example 6.3</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-susceptibility-and-permeability">6.4.1: Magnetic Susceptibility and Permeability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ferromagnetism">6.4.2: Ferromagnetism</a></li>
 </ul>
   </nav></div>

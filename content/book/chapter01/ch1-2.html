@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -462,26 +462,26 @@
 <h1>1.2: Differential Calculus<a class="headerlink" href="#differential-calculus" title="Link to this heading">#</a></h1>
 <section id="ordinary-derivatives">
 <h2>1.2.1: “Ordinary” Derivatives<a class="headerlink" href="#ordinary-derivatives" title="Link to this heading">#</a></h2>
-<p>Suppose we have a function of one variable, <span class="math notranslate nohighlight">\( f(x) \)</span>. <em>Question</em>: what does the derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> do for us? <em>Answer</em>: It tells us how rapidly the function <span class="math notranslate nohighlight">\( f(x) \)</span> varies when we change the argument x by a tiny amount, <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span></p>
+<p>Suppose we have a function of one variable, <span class="math notranslate nohighlight">\( f(x) \)</span>. <em>Question</em>: what does the derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> do for us? <em>Answer</em>: It tells us how rapidly the function <span class="math notranslate nohighlight">\( f(x) \)</span> varies when we change the argument <span class="math notranslate nohighlight">\(x\)</span> by a tiny amount, <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq1-33">
 <span class="eqno">(28)<a class="headerlink" href="#equation-eq1-33" title="Link to this equation">#</a></span>\[
 \mathrm{d}{f} = \left( \frac{\mathrm{d} f}{\mathrm{d} x} \right) \mathrm{d}{x} 
 \]</div>
 <p>In words: If we increment <span class="math notranslate nohighlight">\(x\)</span> by an infinitesimal amount <span class="math notranslate nohighlight">\( \mathrm{d}{x} \)</span>, then <span class="math notranslate nohighlight">\( f \)</span> changes by an amount <span class="math notranslate nohighlight">\( \mathrm{d}{f} \)</span>; the derivative is the proportionality factor. Foe example, in Fig. 1.17(a), the function varies slowly with <span class="math notranslate nohighlight">\(x\)</span>, and the derivative is correspondingly small. In Fig 1.17(b), <span class="math notranslate nohighlight">\(f\)</span> increases rapidly with <span class="math notranslate nohighlight">\(x\)</span>, and the derivative is large as you move away from <span class="math notranslate nohighlight">\( x = 0 \)</span>.
 <em>Geometrical interpretation</em>: The derivative <span class="math notranslate nohighlight">\( \frac{\mathrm{d} f}{\mathrm{d} x} \)</span> is the slope of the graph of <span class="math notranslate nohighlight">\(f\)</span> versus <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><img alt="Figure 1.17" src="../../../_images/1.17.png" /></p>
 </section>
 <section id="gradient">
 <h2>1.2.2: Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h2>
-<p>Suppose, now, that we have a function of three variables-say, the temperature T (x, y, z) in this room. (Start out in one comer, and set up a system of axes; then for each point (x, y, z) in the room, T gives the temperature at that spot.) We want to generalize the notion of “derivative” to functions like T, which depend not on one but on three variables.</p>
-<p>A derivative is supposed to tell us how fast the function varies, if we move a little distance. But this time the situation is more complicated, because it depends on what direction we move: If we go straight up, then the temperature will prob- ably increase fairly rapidly, but if we move horizontally, it may not change much at all. In fact, the question “How fast does T vary?” has an infinite number of answers, one for each direction we might choose to explore.</p>
+<p>Suppose, now, that we have a function of three variables-say, the temperature <span class="math notranslate nohighlight">\(T (x, y, z)\)</span> in this room. (Start out in one comer, and set up a system of axes; then for each point <span class="math notranslate nohighlight">\((x, y, z)\)</span> in the room, <span class="math notranslate nohighlight">\(T\)</span> gives the temperature at that spot.) We want to generalize the notion of “derivative” to functions like <span class="math notranslate nohighlight">\(T\)</span>, which depend not on one but on three variables.</p>
+<p>A derivative is supposed to tell us how fast the function varies, if we move a little distance. But this time the situation is more complicated, because it depends on what direction we move: If we go straight up, then the temperature will prob- ably increase fairly rapidly, but if we move horizontally, it may not change much at all. In fact, the question “How fast does <span class="math notranslate nohighlight">\(T\)</span> vary?” has an infinite number of answers, one for each direction we might choose to explore.</p>
 <p>Fortunately, the problem is not as bad as it looks. A theorem on partial derivatives states that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-34">
 <span class="eqno">(29)<a class="headerlink" href="#equation-eq1-34" title="Link to this equation">#</a></span>\[
 \mathrm{d}{T} = \left( \frac{\partial T}{\partial x} \right)\mathrm{d}{x} + \left( \frac{\partial T}{\partial y} \right) \mathrm{d}{y} + \left( \frac{\partial T}{\partial z} \right) \mathrm{d}{z} 
 \]</div>
-<p><img alt="Figure 1.17" src="../../../_images/1.17.png" /></p>
-<p>This tells us how T changes when we alter all three variables by the infinitesimal amounts dx, dy, dz. Notice that we do <em>not</em> require an infinite number of derivatives - three will suffice: the partial derivatives along each of the three coordinate directions.
-<a class="reference internal" href="#equation-eq1-34">(29)</a> is reminiscent of a dot product:</p>
+<p>This tells us how <span class="math notranslate nohighlight">\(T\)</span> changes when we alter all three variables by the infinitesimal amounts <span class="math notranslate nohighlight">\(dx, dy, dz\)</span>. Notice that we do <em>not</em> require an infinite number of derivatives - three will suffice: the partial derivatives along each of the three coordinate directions.</p>
+<p><a class="reference internal" href="#equation-eq1-34">(29)</a> is reminiscent of a dot product:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-35">
 <span class="eqno">(30)<a class="headerlink" href="#equation-eq1-35" title="Link to this equation">#</a></span>\[\begin{split}
 \mathrm{d}{T} = \left( \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} \right)\cdot ( \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} \\
@@ -492,24 +492,16 @@
 <span class="eqno">(31)<a class="headerlink" href="#equation-eq1-36" title="Link to this equation">#</a></span>\[
 \nabla {T} \equiv \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} 
 \]</div>
-<p>is the <strong>gradient</strong> of T. Note that <span class="math notranslate nohighlight">\( \nabla {T} \)</span> is a vector quantity, with three components; it is the generalized derivative we have been looking for. <a class="reference internal" href="#equation-eq1-35">(30)</a> is the three-dimensional version of <a class="reference internal" href="#equation-eq1-33">(28)</a>.
-<em>Geometrical interpretation of the Gradient</em>: Like any vector, the gradient has <em>magnitude</em> and <em>direction</em>. To determine its geometrical meaning, let’s rewrite the dot product using <a class="reference internal" href="ch1-1.html#equation-eq1-1">(1)</a></p>
+<p>is the <strong>gradient</strong> of <span class="math notranslate nohighlight">\(T\)</span>. Note that <span class="math notranslate nohighlight">\( \nabla {T} \)</span> is a vector quantity, with three components; it is the generalized derivative we have been looking for. <a class="reference internal" href="#equation-eq1-35">(30)</a> is the three-dimensional version of <a class="reference internal" href="#equation-eq1-33">(28)</a>.</p>
+<p><em>Geometrical interpretation of the Gradient</em>: Like any vector, the gradient has <em>magnitude</em> and <em>direction</em>. To determine its geometrical meaning, let’s rewrite the dot product using <a class="reference internal" href="ch1-1.html#equation-eq1-1">(1)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq1-37">
 <span class="eqno">(32)<a class="headerlink" href="#equation-eq1-37" title="Link to this equation">#</a></span>\[
 \mathrm{d}{T} = \nabla {T} \cdot \mathrm{d}{\vec{l}} = |\nabla {T}| |\mathrm{d}{\vec{l}}| \cos \theta 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \theta \)</span> is the angle between <span class="math notranslate nohighlight">\( \nabla {T} \)</span> and <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{l}} \)</span>. Now if we fix the magnitude <span class="math notranslate nohighlight">\( |\mathrm{d}{\vec{l}}| \)</span> and search around in various directions, the maximum change in T evidently occurs when <span class="math notranslate nohighlight">\( \theta = 0 \)</span> (for then <span class="math notranslate nohighlight">\( \cos \theta = 1 \)</span>). That is, for a fixed distance, dT is greatest when I move in the same direction as <span class="math notranslate nohighlight">\( \nabla {T} \)</span> . Thus:</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>The gradient <span class="math notranslate nohighlight">\( \nabla {T} \)</span> points in the direction of maximum increase of the function T.</strong></p>
-</div>
 <p>Moreover:</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>The magnitude <span class="math notranslate nohighlight">\( | \nabla {T} | \)</span> gives the slope (rate of increase) along this maximal direction</strong></p>
-</div>
 <p>Imagine you are standing on a hillside. Look all around you, and find the direction of steepest ascent. That is the direction of the gradient. Now measure the slope in that direction (rise over run). That is the magnitude of the gradient. (Here the function we’re talking about is the height of the hill, and the coordinates it depends on are positions-latitude and longitude, say. This function depends on only two variables, not three, but the geometrical meaning of the gradient is easier to grasp in two dimensions.) Notice from <a class="reference internal" href="#equation-eq1-37">(32)</a> that the direction of maximum descent is opposite to the direction of maximum ascent, while at right angles <span class="math notranslate nohighlight">\( (\theta = 90^{\circ}) \)</span> the slope is zero (the gradient is perpendicular to the contour lines). You can conceive of surfaces that do not have these properties, but they always have “kinks” in them, and correspond to non-differentiable functions.</p>
-<p>What would it mean for the gradient to vanish? If <span class="math notranslate nohighlight">\( \nabla {T} = 0 \)</span>  at (x, y, z), then <span class="math notranslate nohighlight">\( \mathrm{d}{T} = 0 \)</span>  for small displacements about the point (x, y, z). This is, then, a stationary point of the function T(x, y, z). It could be a maximum (a summit), a minimum (a valley), a saddle point (a pass), or a “shoulder.” This is analogous to the situation for functions of one variable, where a vanishing derivative signals a maximum, a minimum, or an inflection. In particular, if you want to locate the extrema of a function of three variables, set its gradient equal to zero.</p>
+<p>What would it mean for the gradient to vanish? If <span class="math notranslate nohighlight">\( \nabla {T} = 0 \)</span>  at <span class="math notranslate nohighlight">\((x, y, z)\)</span>, then <span class="math notranslate nohighlight">\( \mathrm{d}{T} = 0 \)</span>  for small displacements about the point <span class="math notranslate nohighlight">\((x, y, z)\)</span>. This is, then, a stationary point of the function <span class="math notranslate nohighlight">\(T(x, y, z)\)</span>. It could be a maximum (a summit), a minimum (a valley), a saddle point (a pass), or a “shoulder.” This is analogous to the situation for functions of one variable, where a vanishing derivative signals a maximum, a minimum, or an inflection. In particular, if you want to locate the extrema of a function of three variables, set its gradient equal to zero.</p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -535,27 +527,27 @@ Solution</label><div class="sd-tab-content docutils">
 <hr class="docutils" />
 <section id="the-del-operator">
 <h2>1.2.3: The Del Operator<a class="headerlink" href="#the-del-operator" title="Link to this heading">#</a></h2>
-<p>The gradient has the formal appearance of a vector, <span class="math notranslate nohighlight">\( \nabla \)</span>, “multiplying” a scalar T:</p>
+<p>The gradient has the formal appearance of a vector, <span class="math notranslate nohighlight">\( \nabla \)</span>, “multiplying” a scalar <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-38">
 <span class="eqno">(33)<a class="headerlink" href="#equation-eq1-38" title="Link to this equation">#</a></span>\[
 \nabla {T} = \left( \hat{x} \frac{\partial}{\partial x} + \hat{y} \frac{\partial}{\partial y} + \hat{z} \frac{\partial}{\partial z} \right) T 
 \]</div>
-<p>(For once, I write the unit vectors to the left, just so no one will think that this means <span class="math notranslate nohighlight">\( \pdv{\hat{x}}{x} \)</span> and so on, which would be zero since the coordinate directions are constant.) The term in parentheses is called <strong>del</strong>:</p>
+<p>(For once, I write the unit vectors to the left, just so no one will think that this means <span class="math notranslate nohighlight">\( \partial{\hat{x}}/\partial x \)</span> and so on, which would be zero since the coordinate directions are constant.) The term in parentheses is called <strong>del</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-39">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq1-39" title="Link to this equation">#</a></span>\[
-\nabla {} = \hat{x} \frac{\partial}{\partial x} + \hat{y} \frac{\partial}{\partial y} + \hat{z} \frac{\partial}{\partial z}  
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq1-39" title="Link to this equation">#</a></span>\[\boxed{
+\nabla = \hat{x} \frac{\partial}{\partial x} + \hat{y} \frac{\partial}{\partial y} + \hat{z} \frac{\partial}{\partial z}}
 \]</div>
-<p>Of course, del is not a vector, in the usual sense. Indeed, it doesn’t mean much until we provide it with a function to act upon. Furthermore, it does not “multiply” T; rather, it is an instruction to differentiate what follows. To be precise, then, we say that <span class="math notranslate nohighlight">\( \nabla {} \)</span> is a vector operator that acts upon T, not a vector that multiplies T.</p>
-<p>With this qualification, though, <span class="math notranslate nohighlight">\( \nabla {} \)</span> mimics the behavior of an ordinary vector in virtually every way; almost anything that can be done with other vectors can also be done with <span class="math notranslate nohighlight">\( \nabla {} \)</span>, if we merely translate “multiply” by “act upon.” So by all means take the vector appearance of <span class="math notranslate nohighlight">\( \nabla {} \)</span> seriously: it is a marvelous piece of notational simplification, as you will appreciate if you ever consult Maxwell’s original work on electromagnetism, written without the benefit of <span class="math notranslate nohighlight">\( \nabla {} \)</span>.</p>
+<p>Of course, del is not a vector, in the usual sense. Indeed, it doesn’t mean much until we provide it with a function to act upon. Furthermore, it does not “multiply” <span class="math notranslate nohighlight">\(T\)</span>; rather, it is an instruction to differentiate what follows. To be precise, then, we say that <span class="math notranslate nohighlight">\(\nabla\)</span> is a vector operator that acts upon <span class="math notranslate nohighlight">\(T\)</span>, not a vector that multiplies <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>With this qualification, though, <span class="math notranslate nohighlight">\( \nabla \)</span> mimics the behavior of an ordinary vector in virtually every way; almost anything that can be done with other vectors can also be done with <span class="math notranslate nohighlight">\( \nabla \)</span>, if we merely translate “multiply” by “act upon.” So by all means take the vector appearance of <span class="math notranslate nohighlight">\( \nabla \)</span> seriously: it is a marvelous piece of notational simplification, as you will appreciate if you ever consult Maxwell’s original work on electromagnetism, written without the benefit of <span class="math notranslate nohighlight">\( \nabla \)</span>.</p>
 <p>Now, an ordinary vector <span class="math notranslate nohighlight">\( \vec{A} \)</span> can multiply in three ways:</p>
 <ol class="arabic simple">
 <li><p>By a scalar <span class="math notranslate nohighlight">\(a\)</span>:  <span class="math notranslate nohighlight">\( \vec{A}a \)</span></p></li>
 <li><p>By a vector <span class="math notranslate nohighlight">\( \vec{B} \)</span>, via the dot product: <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span></p></li>
 <li><p>By a vector <span class="math notranslate nohighlight">\( \vec{B} \)</span>, via the cross product: <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span></p></li>
 </ol>
-<p>Correspondingly, there are three ways the operator <span class="math notranslate nohighlight">\( \nabla {} \)</span> can act:</p>
+<p>Correspondingly, there are three ways the operator <span class="math notranslate nohighlight">\( \nabla \)</span> can act:</p>
 <ol class="arabic simple">
-<li><p>On a scalar function T: <span class="math notranslate nohighlight">\( \nabla {T} \)</span> (the gradient)</p></li>
+<li><p>On a scalar function <span class="math notranslate nohighlight">\(T\)</span>: <span class="math notranslate nohighlight">\( \nabla {T} \)</span> (the gradient)</p></li>
 <li><p>On a vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>, via the dot product: <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{v}} \)</span> (the <strong>divergence</strong>)</p></li>
 <li><p>On a vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>, via the cross product: <span class="math notranslate nohighlight">\( \nabla \times {\vec{v}} \)</span> (the <strong>curl</strong>)</p></li>
 </ol>
@@ -563,19 +555,18 @@ Solution</label><div class="sd-tab-content docutils">
 </section>
 <section id="the-divergence">
 <h2>1.2.4: The Divergence<a class="headerlink" href="#the-divergence" title="Link to this heading">#</a></h2>
-<p>From the definition of <span class="math notranslate nohighlight">\( \nabla {} \)</span> we construct the divergence:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>From the definition of <span class="math notranslate nohighlight">\( \nabla \)</span> we construct the divergence:</p>
+<div class="math notranslate nohighlight" id="equation-eq1-40">
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq1-40" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \cdot {\vec{v}} &amp; = \left(  \hat{x} \frac{\partial}{\partial x} + \hat{y} \frac{\partial}{\partial y} + \hat{z} \frac{\partial}{\partial z}  \right) \cdot (v_x \hat{x} + v_y \hat{y} + v_z \hat{z}) \\
-&amp; = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z} \tag{1.40}
+&amp; = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
 \end{aligned}
 \end{split}\]</div>
 <p>Observe that the divergence of a vector function is itself a scalar.</p>
-<p><em>Geometrical interpretation</em>: The name <strong>divergence</strong> is well chosen, for <span class="math notranslate nohighlight">\( \nabla \cdot {\vec{v}} \)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span> spreads out (diverges) from the point in question. For example, the vector function in Fig. 1.18a has a large (positive) divergence (if the arrows pointed in, it would be a negative divergence), the function in Fig. 1.18b has zero divergence, and the function in Fig. 1.18c again has a positive divergence. (Please understand that <span class="math notranslate nohighlight">\( \vec{v} \)</span>  here is a function - there’s a different vector associated with every point in space. In the diagrams, of course, I can
+<p><em>Geometrical interpretation</em>: The name <strong>divergence</strong> is well chosen, for <span class="math notranslate nohighlight">\(\nabla \cdot \vec{v}\)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span> spreads out (diverges) from the point in question. For example, the vector function in Fig. 1.18a has a large (positive) divergence (if the arrows pointed in, it would be a negative divergence), the function in Fig. 1.18b has zero divergence, and the function in Fig. 1.18c again has a positive divergence. (Please understand that <span class="math notranslate nohighlight">\( \vec{v} \)</span>  here is a function - there’s a different vector associated with every point in space. In the diagrams, of course, I can
 only draw the arrows at a few representative locations.)</p>
-<p>Imagine standing at the edge of a pond. Sprinkle some sawdust or pine needles
-on the surface. If the material spreads out, then you dropped it at a point of positive divergence; if it collects together, you dropped it at a point of negative divergence. (The vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>  in this model is the velocity of the water at the surface - this is a two-dimensional example, but it helps give one a “feel” for what the divergence means. A point of positive divergence is a source, or “faucet”; a point of negative divergence is a sink, or “drain.”)</p>
+<p>Imagine standing at the edge of a pond. Sprinkle some sawdust or pine needles on the surface. If the material spreads out, then you dropped it at a point of positive divergence; if it collects together, you dropped it at a point of negative divergence. (The vector function <span class="math notranslate nohighlight">\( \vec{v} \)</span>  in this model is the velocity of the water at the surface - this is a two-dimensional example, but it helps give one a “feel” for what the divergence means. A point of positive divergence is a source, or “faucet”; a point of negative divergence is a sink, or “drain.”)</p>
 <p><img alt="Figure 1.18" src="../../../_images/1.18.png" /></p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
@@ -607,22 +598,21 @@ Solution</label><div class="sd-tab-content docutils">
 <hr class="docutils" />
 <section id="the-curl">
 <h2>1.2.5: The Curl<a class="headerlink" href="#the-curl" title="Link to this heading">#</a></h2>
-<p>From the definition of <span class="math notranslate nohighlight">\( \nabla {} \)</span> we construct the curl:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>From the definition of <span class="math notranslate nohighlight">\( \nabla \)</span> we construct the curl:</p>
+<div class="math notranslate nohighlight" id="equation-eq1-41">
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq1-41" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \times {\vec{v}} &amp; = \begin{vmatrix}
 \hat{x} &amp; \hat{y} &amp; \hat{z} \\
 \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
 v_x &amp; v_y &amp; v_z
 \end{vmatrix} \\
-&amp; + \hat{x} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) + \hat{y} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) + \hat{z} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) \tag{1.41}
+&amp; + \hat{x} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) + \hat{y} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) + \hat{z} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right)
 \end{aligned}
 \end{split}\]</div>
 <p><img alt="Figure 1.19" src="../../../_images/1.19.png" /></p>
 <p>Notice that the curl of a vector function is, like any cross product, a vector.</p>
-<p><em>Geometrical Interpretation</em>:  The name curl is also well chosen, for <span class="math notranslate nohighlight">\( \nabla \times {\vec{v}} \)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span>  swirls around the point in question. Thus the three functions in Fig. 1.18 all have zero curl (as you can easily check for yourself), whereas the functions in Fig. 1.19 have a substantial curl, pointing in the z direction, as the natural right-hand rule would suggest. Imagine (again) you are standing at the edge of a pond. Float a small paddlewheel (a cork with toothpicks pointing out radially would do); if it starts to rotate, then you placed it at a point
-of nonzero curl. A whirlpool would be a region of large curl.</p>
+<p><em>Geometrical Interpretation</em>:  The name curl is also well chosen, for <span class="math notranslate nohighlight">\( \nabla \times {\vec{v}} \)</span> is a measure of how much the vector <span class="math notranslate nohighlight">\( \vec{v} \)</span>  swirls around the point in question. Thus the three functions in Fig. 1.18 all have zero curl (as you can easily check for yourself), whereas the functions in Fig. 1.19 have a substantial curl, pointing in the <span class="math notranslate nohighlight">\(z\)</span> direction, as the natural right-hand rule would suggest. Imagine (again) you are standing at the edge of a pond. Float a small paddlewheel (a cork with toothpicks pointing out radially would do); if it starts to rotate, then you placed it at a point of nonzero curl. A whirlpool would be a region of large curl.</p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
@@ -650,7 +640,7 @@ Solution</label><div class="sd-tab-content docutils">
 0 &amp; x &amp; 0
 \end{vmatrix} = \hat{z}
 \end{split}\]</div>
-<p>As expected, these curls point in the +z direction. (Incidentally, they both have zero divergence, as you might guess from the pictures: nothing is “spreading out”… it just “swirls around.”)</p>
+<p>As expected, these curls point in the <span class="math notranslate nohighlight">\(+z\)</span> direction. (Incidentally, they both have zero divergence, as you might guess from the pictures: nothing is “spreading out”… it just “swirls around.”)</p>
 </div>
 </div>
 </section>
@@ -660,22 +650,22 @@ Solution</label><div class="sd-tab-content docutils">
 <p>The calculation of ordinary derivatives is facilitated by a number of rules, such as the sum rule</p>
 <div class="math notranslate nohighlight">
 \[
-\dv{}{x} (f + g) = \frac{\mathrm{d} f}{\mathrm{d} x} + \frac{\mathrm{d} g}{\mathrm{d} x}
+\frac{d}{dx} (f + g) = \frac{\mathrm{d} f}{\mathrm{d} x} + \frac{\mathrm{d} g}{\mathrm{d} x}
 \]</div>
 <p>the rule for multiplying a constant:</p>
 <div class="math notranslate nohighlight">
 \[
-\dv{}{x} (kf) = k \frac{\mathrm{d} f}{\mathrm{d} x}
+\frac{d}{dx} (kf) = k \frac{\mathrm{d} f}{\mathrm{d} x}
 \]</div>
 <p>the product rule:</p>
 <div class="math notranslate nohighlight">
 \[
-\dv{}{x}(fg) = f \frac{\mathrm{d} g}{\mathrm{d} x} + g \frac{\mathrm{d} f}{\mathrm{d} x}
+\frac{d}{dx}(fg) = f \frac{\mathrm{d} g}{\mathrm{d} x} + g \frac{\mathrm{d} f}{\mathrm{d} x}
 \]</div>
 <p>and the quotient rule</p>
 <div class="math notranslate nohighlight">
 \[
-\dv{}{x} \left( \frac{f}{g} \right) = \frac{g \frac{\mathrm{d} f}{\mathrm{d} x} - f \frac{\mathrm{d} g}{\mathrm{d} x}}{g^2} 
+\frac{d}{dx} \left( \frac{f}{g} \right) = \frac{g \frac{\mathrm{d} f}{\mathrm{d} x} - f \frac{\mathrm{d} g}{\mathrm{d} x}}{g^2} 
 \]</div>
 <p>Similar relations hold for the vector derivatives. Thus,</p>
 <div class="math notranslate nohighlight">
@@ -710,7 +700,7 @@ f \vec{A} \quad \text{(scalar times vector),} \\
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\nabla ( \vec{A} \cdot \vec{B}) = \vec{A} \times (\nabla \times {\vec{B}}) + \vec{B} \times (\nabla \times {\vec{A}}) + (\vec{A} \cdot \nabla {})\vec{B} + (\vec{B} \cdot \nabla {}) \vec{A} \tag{ii}
+\nabla ( \vec{A} \cdot \vec{B}) = \vec{A} \times (\nabla \times {\vec{B}}) + \vec{B} \times (\nabla \times {\vec{A}}) + (\vec{A} \cdot \nabla)\vec{B} + (\vec{B} \cdot \nabla) \vec{A} \tag{ii}
 \]</div>
 <p>two for divergences:</p>
 <div class="math notranslate nohighlight">
@@ -728,7 +718,7 @@ f \vec{A} \quad \text{(scalar times vector),} \\
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\nabla \times {(\vec{A} \times \vec{B})} = (\vec{B} \cdot \nabla {})\vec{A} - (\vec{A} \cdot \nabla {}) \vec{B} + \vec{A}(\nabla \cdot {\vec{B}}) - \vec{B}(\nabla \cdot {\vec{A}}) \tag{vi}
+\nabla \times {(\vec{A} \times \vec{B})} = (\vec{B} \cdot \nabla)\vec{A} - (\vec{A} \cdot \nabla) \vec{B} + \vec{A}(\nabla \cdot {\vec{B}}) - \vec{B}(\nabla \cdot {\vec{A}}) \tag{vi}
 \]</div>
 <p>If there’s anything in this chapter that’s worth memorizing, it is this set of identities. The proofs come straight from the product rule for ordinary derivatives. For instance,</p>
 <div class="math notranslate nohighlight">
@@ -771,41 +761,41 @@ f \vec{A} \quad \text{(scalar times vector),} \\
 </ol>
 <p>This exhausts the possibilities, and in fact not all of them give anything new. Let’s consider them one at a time:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-42">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq1-42" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq1-42" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \nabla \cdot  (\nabla {T}) &amp; = \left( \hat{x} \frac{\partial}{\partial x} + \hat{y} \frac{\partial}{\partial y} + \hat{z} \frac{\partial}{\partial z} \right) \cdot \left( \frac{\partial T}{\partial x} \hat{x} + \frac{\partial T}{\partial y} \hat{y} + \frac{\partial T}{\partial z} \hat{z} \right) \\
 &amp; = \frac{\partial ^2 T}{\partial x^2} + \frac{\partial ^2 T}{\partial y^2} + \frac{\partial ^2 T}{\partial z^2}
 \end{aligned} 
 \end{split}\]</div>
-<p>This object, which we write as <span class="math notranslate nohighlight">\( \nabla^2 T \)</span> for short, is called the <strong>Laplacian</strong> of T; we shall be studying it in great detail later on. Notice that the Laplacian of a scalar T is a scalar. Occasionally we shall speak of the laplacian of a vector, <span class="math notranslate nohighlight">\( \nabla^2 \vec{v} \)</span>. By this we mean a vector quantity whose x-component is the Laplacian of <span class="math notranslate nohighlight">\( v_x \)</span>, and so in:</p>
+<p>This object, which we write as <span class="math notranslate nohighlight">\( \nabla^2 T \)</span> for short, is called the <strong>Laplacian</strong> of <span class="math notranslate nohighlight">\(T\)</span>; we shall be studying it in great detail later on. Notice that the Laplacian of a scalar <span class="math notranslate nohighlight">\(T\)</span> is a scalar. Occasionally we shall speak of the laplacian of a vector, <span class="math notranslate nohighlight">\( \nabla^2 \vec{v} \)</span>. By this we mean a vector quantity whose x-component is the Laplacian of <span class="math notranslate nohighlight">\( v_x \)</span>, and so in:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-43">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq1-43" title="Link to this equation">#</a></span>\[
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq1-43" title="Link to this equation">#</a></span>\[
 \nabla^2 \vec{v} \equiv (\nabla^2 v_x) \hat{x} + (\nabla^2 v_y) \hat{y}  + (\nabla^2 v_z) \hat{z}  
 \]</div>
 <p>This is nothing more than a convenient extension of the meaning of <span class="math notranslate nohighlight">\( \nabla^2 \)</span>.</p>
 <p><strong>The curl of a gradient is always zero</strong>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-44">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq1-44" title="Link to this equation">#</a></span>\[
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq1-44" title="Link to this equation">#</a></span>\[
 \nabla \times  (\nabla {T}) = 0 
 \]</div>
 <p>This is an important fact, which we shall use repeatedly; you can easily prove it from the definition of <span class="math notranslate nohighlight">\( \nabla  \)</span>, hinging on the equality of cross-derivatives:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-45">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq1-45" title="Link to this equation">#</a></span>\[
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq1-45" title="Link to this equation">#</a></span>\[
 \frac{\partial}{\partial x} \left( \frac{\partial T}{\partial y} \right) = \frac{\partial}{\partial y} \left( \frac{\partial T}{\partial x} \right) 
 \]</div>
 <p><span class="math notranslate nohighlight">\( \nabla (\nabla \cdot {\vec{v}}) \)</span> seldom occurs in physical applications, and it has not been given any special name of its own - it’s just <strong>the gradient of the divergence</strong>. Notice that <span class="math notranslate nohighlight">\( \nabla  (\nabla \cdot  \vec{v}) \)</span> is not the same as the Laplacian of a vector: <span class="math notranslate nohighlight">\( \nabla^2 \vec{v} = (\nabla \cdot  \nabla ) \vec{v} \neq \nabla ( \nabla \cdot  \vec{v}) \)</span>.</p>
 <p>The divergence of a curl, like the curl of a gradient, is always zero:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-46">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq1-46" title="Link to this equation">#</a></span>\[
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq1-46" title="Link to this equation">#</a></span>\[
 \nabla \cdot  (\nabla \times  \vec{v}) = 0 
 \]</div>
 <p>You can prove this for yourself.</p>
 <p>As you can check from the definition of <span class="math notranslate nohighlight">\( \nabla  \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-47">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq1-47" title="Link to this equation">#</a></span>\[
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq1-47" title="Link to this equation">#</a></span>\[
 \nabla \times  (\nabla \times  \vec{v}) = \nabla (\nabla \cdot  \vec{v}) - \nabla^2 \vec{v} 
 \]</div>
-<p>So curl-of-curl gives nothing new; the first term is just gradient of divergence, and the second is the Laplacian (of a vector). (In fact, this is often used to <em>define</em> the Laplacian of a vector, in preference to <a class="reference internal" href="#equation-eq1-43">(36)</a> which makes explicit reference to Cartesian coordinates.)</p>
+<p>So curl-of-curl gives nothing new; the first term is just gradient of divergence, and the second is the Laplacian (of a vector). (In fact, this is often used to <em>define</em> the Laplacian of a vector, in preference to <a class="reference internal" href="#equation-eq1-43">(38)</a> which makes explicit reference to Cartesian coordinates.)</p>
 <p>Really, then, there are just two kinds of second derivatives: the Laplacian (which is of fundamental importance) and the gradient-of-divergence (which we seldom encounter). We could go through a similar ritual to work out third derivatives, but fortunately second derivatives suffice for practically all physical applications.</p>
 <p>A final word on vector differential calculus: It all flows from the operator <span class="math notranslate nohighlight">\( \nabla  \)</span>, and from taking seriously its vectorial character. Even if you remembered only the definition of <span class="math notranslate nohighlight">\( \nabla  \)</span>, you could easily reconstruct all the rest.</p>
 </section>
@@ -821,16 +811,16 @@ f \vec{A} \quad \text{(scalar times vector),} \\
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter01"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

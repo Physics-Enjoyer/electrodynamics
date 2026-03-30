@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -441,10 +441,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.2.1: The Classic Image Problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-surface-charge">3.2.2: Induced Surface Charge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-and-energy">3.2.3: Force and Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-2">Example 3.2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a></li>
 </ul>
             </nav>
         </div>
@@ -470,7 +467,7 @@
 <p>The first uniqueness theorem (actually, its corollary) guarantees that there is only one function that meets these requirements. If by trick or clever guess we can discover such a function, it’s got to be the answer.
 <em>Trick:</em> Forget about the actual problem; we’re going to study a completely different situation. This new configuration consists of two point charges, <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, -d) \)</span>, and no conducting plane (Fig. 3.11). For this configuration I can easily write down the potential:</p>
 <div class="math notranslate nohighlight" id="equation-eq3-9">
-<span class="eqno">(148)<a class="headerlink" href="#equation-eq3-9" title="Link to this equation">#</a></span>\[
+<span class="eqno">(151)<a class="headerlink" href="#equation-eq3-9" title="Link to this equation">#</a></span>\[
 V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d)^2 }} - \frac{q}{\sqrt{x^2 + y^2 + (z + d)^2}} \right]
 \]</div>
 <p>It follows that</p>
@@ -478,12 +475,12 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 <li><p><span class="math notranslate nohighlight">\( V = 0 \)</span> when <span class="math notranslate nohighlight">\( z = 0 \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( V \rightarrow 0 \)</span> for <span class="math notranslate nohighlight">\( x^2 + y^2 + z^2 \gg d^2 \)</span></p></li>
 </ol>
-<p>and the only charge in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span> is the point charge <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>. But these are precisely the conditions of the original problem! Evidently the second configuration happens to produce exactly the same potential as the first configuration, in the “upper” region <span class="math notranslate nohighlight">\( z \geq 0 \)</span>. (The “lower” region, <span class="math notranslate nohighlight">\( z &lt; 0 \)</span>, is completely different, but who cares? The upper part is all we need.) <em>Conclusion</em>: The potential of a point charge above an infinite grounded conductor is given by <a class="reference internal" href="#equation-eq3-9">(148)</a>, for <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>.</p>
+<p>and the only charge in the region <span class="math notranslate nohighlight">\( z &gt; 0 \)</span> is the point charge <span class="math notranslate nohighlight">\( +q \)</span>  at <span class="math notranslate nohighlight">\( (0, 0, d) \)</span>. But these are precisely the conditions of the original problem! Evidently the second configuration happens to produce exactly the same potential as the first configuration, in the “upper” region <span class="math notranslate nohighlight">\( z \geq 0 \)</span>. (The “lower” region, <span class="math notranslate nohighlight">\( z &lt; 0 \)</span>, is completely different, but who cares? The upper part is all we need.) <em>Conclusion</em>: The potential of a point charge above an infinite grounded conductor is given by <a class="reference internal" href="#equation-eq3-9">(151)</a>, for <span class="math notranslate nohighlight">\( z &gt; 0 \)</span>.</p>
 <p>Notice the crucial role played by the uniqueness theorem in this argument: without it, no one would believe this solution, since it was obtained for a completely different charge distribution. But the uniqueness theorem certifies it: If it satisfies Poisson’s equation in the region of interest, and assumes the correct value at the boundaries, then it must be right.</p>
 </section>
 <section id="induced-surface-charge">
 <h2>3.2.2: Induced Surface Charge<a class="headerlink" href="#induced-surface-charge" title="Link to this heading">#</a></h2>
-<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to <a class="reference internal" href="../chapter02/ch2-5.html#equation-eq2-49">(133)</a>,</p>
+<p>Now that we know the potential, it is a straightforward matter to compute the surface charge <span class="math notranslate nohighlight">\( \sigma \)</span> induced on the conductor. According to <a class="reference internal" href="../chapter02/ch2-5.html#equation-eq2-49">(136)</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma = - \epsilon_0 \frac{\partial V}{\partial n}
@@ -493,14 +490,14 @@ V(x, y, z) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q}{\sqrt{x^2 + y^2 + (z - d
 \[
 \sigma =  \left. - \epsilon_0 \frac{\partial V}{\partial z} \right|_{z = 0}
 \]</div>
-<p>From <a class="reference internal" href="#equation-eq3-9">(148)</a></p>
+<p>From <a class="reference internal" href="#equation-eq3-9">(151)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial V}{\partial z} = \frac{1}{4 \pi \epsilon_0} \left[ \frac{-q (z - d)}{[x^2 + y^2 + (z - d)^2]^{3/2}} + \frac{q(z + d)}{[x^2 + y^2 + (z + d)^2 ]^{3/2}} \right]
 \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-eq3-10">
-<span class="eqno">(149)<a class="headerlink" href="#equation-eq3-10" title="Link to this equation">#</a></span>\[
+<span class="eqno">(152)<a class="headerlink" href="#equation-eq3-10" title="Link to this equation">#</a></span>\[
 \sigma(x, y) = \frac{-qd}{2 \pi (x^2 + y^2 + d^2)^{3/2}}
 \]</div>
 <p>As expected, the induced charge is negative (assuming <span class="math notranslate nohighlight">\(q\)</span> is positive) and greatest at <span class="math notranslate nohighlight">\( x = y = 0 \)</span>.</p>
@@ -516,7 +513,7 @@ Q = \int \sigma \mathrm{d}{a}
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq3-11">
-<span class="eqno">(150)<a class="headerlink" href="#equation-eq3-11" title="Link to this equation">#</a></span>\[
+<span class="eqno">(153)<a class="headerlink" href="#equation-eq3-11" title="Link to this equation">#</a></span>\[
 Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \mathrm{d}{r} \mathrm{d}{\phi} = \left. \frac{qd}{\sqrt{r^2 + d^2}} \right|_{0} ^{\infty} = -q
 \]</div>
 <p>The total charge induced on the plane is <span class="math notranslate nohighlight">\( -q \)</span>, as (with benefit of hindsight) you can perhaps convince yourself it <em>had</em> to be.</p>
@@ -525,26 +522,26 @@ Q = \int_{0} ^{2\pi} \int_{0} ^{\infty}  \frac{-qd}{2 \pi (r^2 + d^2)^{3/2}} r \
 <h2>3.2.3: Force and Energy<a class="headerlink" href="#force-and-energy" title="Link to this heading">#</a></h2>
 <p>The charge <span class="math notranslate nohighlight">\( q \)</span> is attracted toward the plane, because of the negative induced charge. Let’s calculate the force of attraction. Since the potential in the vicinity of <span class="math notranslate nohighlight">\( q \)</span> is the same as in the analog problem (the one with <span class="math notranslate nohighlight">\( +q \)</span>  and <span class="math notranslate nohighlight">\( -q \)</span> but no conductor), so also is the field and, therefore, the force</p>
 <div class="math notranslate nohighlight" id="equation-eq3-12">
-<span class="eqno">(151)<a class="headerlink" href="#equation-eq3-12" title="Link to this equation">#</a></span>\[
+<span class="eqno">(154)<a class="headerlink" href="#equation-eq3-12" title="Link to this equation">#</a></span>\[
 \vec{F} = -\frac{1}{4 \pi \epsilon_0} \frac{q^2}{(2d)^2} \hat{z}
 \]</div>
-<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, <a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-42">(126)</a> gives</p>
+<p><em>Beware</em>: It is easy to get carried away, and assume that <em>everything</em> is the same in the two problems. Energy, however, is <em>not</em> the same. With the two point charges and no conductor, <a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-42">(129)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{2d} 
 \]</div>
 <p>But for a single charge and conducting plane, the energy is <em>half</em> this</p>
 <div class="math notranslate nohighlight" id="equation-eq3-14">
-<span class="eqno">(152)<a class="headerlink" href="#equation-eq3-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(155)<a class="headerlink" href="#equation-eq3-14" title="Link to this equation">#</a></span>\[
 W = - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{4d}
 \]</div>
-<p>Why half? Think of the energy stored in the fields (<a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-45">(129)</a>):</p>
+<p>Why half? Think of the energy stored in the fields (<a class="reference internal" href="../chapter02/ch2-4.html#equation-eq2-45">(132)</a>):</p>
 <div class="math notranslate nohighlight">
 \[
 W = \frac{\epsilon_0}{2} \int E^2 \mathrm{d}{\tau}
 \]</div>
 <p>In the first case, both the upper region <span class="math notranslate nohighlight">\( (z &gt; 0) \)</span> and the lower region <span class="math notranslate nohighlight">\( (z &lt; 0) \)</span> contribute, and by symmetry they contribute equally. But in the second case, only the upper region contains a nonzero field, and hence the energy is half as great.</p>
-<p>Of course, one could also determine the energy by calculating the work required to bring <span class="math notranslate nohighlight">\( q \)</span> in from infinity. The force required (to oppose the electrical force in <a class="reference internal" href="#equation-eq3-12">(151)</a>) is <span class="math notranslate nohighlight">\( (1 / 4 \pi \epsilon_0)(q^2/4z^2) \hat{z} \)</span>, so</p>
+<p>Of course, one could also determine the energy by calculating the work required to bring <span class="math notranslate nohighlight">\( q \)</span> in from infinity. The force required (to oppose the electrical force in <a class="reference internal" href="#equation-eq3-12">(154)</a>) is <span class="math notranslate nohighlight">\( (1 / 4 \pi \epsilon_0)(q^2/4z^2) \hat{z} \)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -557,43 +554,42 @@ W &amp; = &amp; \int _{\infty} ^{d} \vec{F} \cdot \mathrm{d}{\vec{l}} = \frac{1}
 <section id="other-image-problems">
 <h2>3.2.4: Other Image Problems<a class="headerlink" href="#other-image-problems" title="Link to this heading">#</a></h2>
 <p>The method just described is not limited to a single point charge; any stationary charge distribution near a grounded conducting plane can be treated in the same way, by introducing its mirror image - hence the name method of images. (Remember that the image charges have the <em>opposite</em> sign; this is what guarantees that the <span class="math notranslate nohighlight">\(xy\)</span> plane will be at potential zero.) There are also some exotic problems that can be handled in similar fashion; the nicest of these is the following.</p>
-<section id="example-3-2">
-<h3>Example 3.2<a class="headerlink" href="#example-3-2" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
+Example 3.2</label><div class="sd-tab-content docutils">
 <p>A point charge <span class="math notranslate nohighlight">\(q\)</span> is situated a distance <span class="math notranslate nohighlight">\(a\)</span> from the center of a grounded conducting sphere of radius <span class="math notranslate nohighlight">\(R\)</span> (Fig. 3.12). Find the potential outside the sphere</p>
 <p><img alt="Figure 3.12" src="../../../_images/3.12.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>Examine the completely different configuration, consisting of the point charge <span class="math notranslate nohighlight">\(q\)</span> together with another point charge</p>
 <div class="math notranslate nohighlight" id="equation-eq3-15">
-<span class="eqno">(153)<a class="headerlink" href="#equation-eq3-15" title="Link to this equation">#</a></span>\[
+<span class="eqno">(156)<a class="headerlink" href="#equation-eq3-15" title="Link to this equation">#</a></span>\[
 q' = - \frac{R}{a} q
 \]</div>
 <p>placed a distance</p>
 <div class="math notranslate nohighlight" id="equation-eq3-16">
-<span class="eqno">(154)<a class="headerlink" href="#equation-eq3-16" title="Link to this equation">#</a></span>\[
+<span class="eqno">(157)<a class="headerlink" href="#equation-eq3-16" title="Link to this equation">#</a></span>\[
 b = \frac{R^2}{a}
 \]</div>
 <p>to the right of the center of the sphere (Fig 3.13). No conductor, now - just the two point charges. The potential of this configuration is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-17">
-<span class="eqno">(155)<a class="headerlink" href="#equation-eq3-17" title="Link to this equation">#</a></span>\[
+<span class="eqno">(158)<a class="headerlink" href="#equation-eq3-17" title="Link to this equation">#</a></span>\[
 V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{q}{\mathcal{R} } + \frac{q'}{\mathcal{R}  '}  \right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span> and <span class="math notranslate nohighlight">\( \mathcal{R} ' \)</span> are the distances from <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(q'\)</span>, respectively. Now, it happens (see Prob. 3.8) that this potential vanishes at all points on the sphere, and therefore fits the boundary conditions for our original problem, in the exterior region.</p>
-<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(155)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <span class="math notranslate nohighlight">\(b\)</span> is less than <span class="math notranslate nohighlight">\(R\)</span>, so the “image” charge <span class="math notranslate nohighlight">\(q'\)</span> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
+<p><em>Conclusion</em>: <a class="reference internal" href="#equation-eq3-17">(158)</a> is the potential of a point charge near a grounded conducting sphere. (Notice that <span class="math notranslate nohighlight">\(b\)</span> is less than <span class="math notranslate nohighlight">\(R\)</span>, so the “image” charge <span class="math notranslate nohighlight">\(q'\)</span> is safely inside the sphere - <em>you cannot put image charges in the region where you are calculating</em> <span class="math notranslate nohighlight">\(V\)</span>; that would change <span class="math notranslate nohighlight">\( \rho \)</span>, and you’d be solving Poisson’s equation with the wrong source.) In particular, the force of attraction between the charge and the sphere is</p>
 <div class="math notranslate nohighlight" id="equation-eq3-18">
-<span class="eqno">(156)<a class="headerlink" href="#equation-eq3-18" title="Link to this equation">#</a></span>\[
+<span class="eqno">(159)<a class="headerlink" href="#equation-eq3-18" title="Link to this equation">#</a></span>\[
 F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon_0} \frac{q^2 R a}{(a^2 - R^2)^2}
 \]</div>
 </div>
 </div>
+<hr class="docutils" />
 <p>The method of images is delightfully simple… when it works. But it is as much an art as a science, for you must somehow think up just the right “auxiliary” configuration, and for most shapes this is forbiddingly complicated, if not impossible.</p>
-</section>
 </section>
 </section>
 
@@ -606,16 +602,16 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter03"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -666,10 +662,7 @@ F = \frac{1}{4\pi \epsilon_0} \frac{q q'}{(a - b)^2} = - \frac{1}{4 \pi \epsilon
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-classic-image-problem">3.2.1: The Classic Image Problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#induced-surface-charge">3.2.2: Induced Surface Charge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-and-energy">3.2.3: Force and Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-2">Example 3.2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-image-problems">3.2.4: Other Image Problems</a></li>
 </ul>
   </nav></div>
 

@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -463,7 +463,7 @@
 <p>Say we have some charge distribution <span class="math notranslate nohighlight">\( \rho(\vec{r}, t) \)</span> over a region <span class="math notranslate nohighlight">\(S\)</span>, and we have some current defined over the boundary <span class="math notranslate nohighlight">\( \vec{J}(\vec{r}, t) \)</span>. The relation between <span class="math notranslate nohighlight">\( \rho \)</span> and <span class="math notranslate nohighlight">\( \vec{J} \)</span> gives the equation of continuity. The change of charge within the entire volume must be compensated for by an amount of charge flowing in/out of the system:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{\mathrm{d} Q}{\mathrm{d} t} = \dv{}{t} \int_{V} \rho \mathrm{d} \tau = - \oint \vec{J} \cdot \mathrm{d} a
+\frac{\mathrm{d} Q}{\mathrm{d} t} = \frac{d}{dt} \int_{V} \rho \mathrm{d} \tau = - \oint \vec{J} \cdot \mathrm{d} a
 \]</div>
 <p>We get a negative sign because by convention the normal to the surface points outward. We can take the time integral inside, and use Gauss’s theorem (divergence theorem) on the right-side</p>
 <div class="math notranslate nohighlight">
@@ -472,7 +472,7 @@
 \]</div>
 <p>Since we chose an arbitrary volume, it must be the case that the integrands are equal, over all space.</p>
 <div class="math notranslate nohighlight" id="equation-eq8-1">
-<span class="eqno">(472)<a class="headerlink" href="#equation-eq8-1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(478)<a class="headerlink" href="#equation-eq8-1" title="Link to this equation">#</a></span>\[
 \frac{\partial \rho}{\partial t} = - \nabla \cdot  \vec{J} 
 \]</div>
 <p>Let’s check that this is consistent with our Maxwell equations. Ampere law:</p>
@@ -531,15 +531,15 @@
 \[
 \vec{S} = \frac{\vec{E} \times \vec{B}}{\mu_0}
 \]</div>
-<p>Let’s take a look at the quantity <span class="math notranslate nohighlight">\( \dv{}{t} (\vec{E} ^2) \)</span></p>
+<p>Let’s take a look at the quantity <span class="math notranslate nohighlight">\( \frac{d}{dt} (\vec{E} ^2) \)</span></p>
 <div class="math notranslate nohighlight">
 \[
-\dv{}{t} \left( \vec{E}^2 \right) = \vec{E} \cdot \pdv{\vec{E}}{t} + \pdv{\vec{E}}{t} \cdot \vec E \quad \rightarrow \quad \vec E \cdot \frac{\partial \vec E}{\partial t} = \frac{1}{2} \dv{}{t} \left( \vec E ^2 \right)
+\frac{d}{dt} \left( \vec{E}^2 \right) = \vec{E} \cdot \pdv{\vec{E}}{t} + \pdv{\vec{E}}{t} \cdot \vec E \quad \rightarrow \quad \vec E \cdot \frac{\partial \vec E}{\partial t} = \frac{1}{2} \frac{d}{dt} \left( \vec E ^2 \right)
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \frac{\mathrm{d} W}{\mathrm{d} t} = \int_V  \left( - \frac{1}{2 \mu_0} \frac{\partial}{\partial t} \left( \vec{B} ^2 \right) - \frac{\epsilon_0}{2} \frac{\partial}{\partial t} \left( \vec E ^2 \right) - \nabla \cdot  \vec{S} \right) \mathrm{d} \tau \\
- = - \dv{}{t} \left[ \int_V \frac{\vec B ^2}{2 \mu_0} \mathrm{d} \tau + \int_V \frac{\epsilon_0 \vec E ^2}{2} \mathrm{d} \tau \right] - \int_V \nabla \cdot  \vec{S} \mathrm{d} \tau
+ = - \frac{d}{dt} \left[ \int_V \frac{\vec B ^2}{2 \mu_0} \mathrm{d} \tau + \int_V \frac{\epsilon_0 \vec E ^2}{2} \mathrm{d} \tau \right] - \int_V \nabla \cdot  \vec{S} \mathrm{d} \tau
 \end{split}\]</div>
 <p>The integrands in the middle are just the energy densities of the electric and magnetic fields</p>
 <div class="math notranslate nohighlight">
@@ -547,14 +547,14 @@
 \frac{\vec B ^2}{2 \mu_0} = u_m \qquad \frac{\epsilon_0 \vec E ^2}{2}  = u_e \qquad u_{em} \equiv u_e + u_m = u
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq8-2">
-<span class="eqno">(473)<a class="headerlink" href="#equation-eq8-2" title="Link to this equation">#</a></span>\[
-\frac{\mathrm{d} W}{\mathrm{d} t} = - \dv{}{t} \int_V u_{em} \mathrm{d} \tau - \oint _S \vec{S} \cdot \mathrm{d} \vec a 
+<span class="eqno">(479)<a class="headerlink" href="#equation-eq8-2" title="Link to this equation">#</a></span>\[
+\frac{\mathrm{d} W}{\mathrm{d} t} = - \frac{d}{dt} \int_V u_{em} \mathrm{d} \tau - \oint _S \vec{S} \cdot \mathrm{d} \vec a 
 \]</div>
-<p>So what does this tell us? The left hand side reads “the change in energy in a region <span class="math notranslate nohighlight">\(V\)</span>”. The first part of the r.h.s is the change in the local energy stored in the E and B fields, and the second part is an acknowledgment that our region is part of a larger space, and energy may be flowing in/out of the region. The flow of energy is therefore given by the Poynting vector, so we call <a class="reference internal" href="#equation-eq8-1">(472)</a> <strong>“Poynting’s Theorem”</strong></p>
+<p>So what does this tell us? The left hand side reads “the change in energy in a region <span class="math notranslate nohighlight">\(V\)</span>”. The first part of the r.h.s is the change in the local energy stored in the E and B fields, and the second part is an acknowledgment that our region is part of a larger space, and energy may be flowing in/out of the region. The flow of energy is therefore given by the Poynting vector, so we call <a class="reference internal" href="#equation-eq8-1">(478)</a> <strong>“Poynting’s Theorem”</strong></p>
 <p>In a charge-free region:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-0 = - \dv{}{t} \int_V u_{em} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S ) \cdot \mathrm{d} \tau \\
+0 = - \frac{d}{dt} \int_V u_{em} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S ) \cdot \mathrm{d} \tau \\
 0 = - \int_V \pdv{u_{em}}{t} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S) \mathrm{d} \tau
 \end{split}\]</div>
 <p>Since this is true for any arbitrary <span class="math notranslate nohighlight">\(V\)</span>, we have</p>
@@ -569,7 +569,7 @@
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Q</label><div class="sd-tab-content docutils">
-<p>Consider the charging capacitor from problem 7.34. (a) Find the electric and magnetic fields in the gap, as functions of the distance s from the axis at time t (assume the charge is zero at t = 0). (b) Find the energy density <span class="math notranslate nohighlight">\( u_{em} \)</span> and the Poynting vector <span class="math notranslate nohighlight">\( \vec S \)</span> in the gap. Note especially the direction of <span class="math notranslate nohighlight">\( \vec S \)</span>. Check that <a class="reference internal" href="#equation-eq8-2">(473)</a> is satisfied. (c) Determine the total energy in the gap, as a function of time. Calculate the total power flowing into the gap, by integrating the Poynting vector over the appropriate surface. Check that the power input is equal to the rate of increase of energy in the gap.</p>
+<p>Consider the charging capacitor from problem 7.34. (a) Find the electric and magnetic fields in the gap, as functions of the distance s from the axis at time t (assume the charge is zero at t = 0). (b) Find the energy density <span class="math notranslate nohighlight">\( u_{em} \)</span> and the Poynting vector <span class="math notranslate nohighlight">\( \vec S \)</span> in the gap. Note especially the direction of <span class="math notranslate nohighlight">\( \vec S \)</span>. Check that <a class="reference internal" href="#equation-eq8-2">(479)</a> is satisfied. (c) Determine the total energy in the gap, as a function of time. Calculate the total power flowing into the gap, by integrating the Poynting vector over the appropriate surface. Check that the power input is equal to the rate of increase of energy in the gap.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
@@ -618,7 +618,7 @@ u_{em} = \frac{1}{2} \frac{I^2}{\pi ^2 a^4} \left[ \frac{t^2}{\epsilon_0} + \fra
 <p>The rate of increase of energy in the gap would be the time integral of the volume integral of the energy density <span class="math notranslate nohighlight">\( u_{em} \)</span> in the gap. Again, the area of the cylinder is <span class="math notranslate nohighlight">\( \pi a^2 w \)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\dv{}{t} \left[ \int u_{em} \mathrm{d} \tau \right] = \dv{}{t} \frac{I^2}{2 \pi^2 a^4} \frac{t^2}{\epsilon_0} \cdot \pi a^2 w \\ 
+\frac{d}{dt} \left[ \int u_{em} \mathrm{d} \tau \right] = \frac{d}{dt} \frac{I^2}{2 \pi^2 a^4} \frac{t^2}{\epsilon_0} \cdot \pi a^2 w \\ 
 = \frac{I^2 t}{\epsilon_0 \pi a^2 } = - \oint \vec S \cdot \mathrm{d} \vec a \quad \checkmark
 \end{split}\]</div>
 </div>
@@ -636,16 +636,16 @@ u_{em} = \frac{1}{2} \frac{I^2}{\pi ^2 a^4} \left[ \frac{t^2}{\epsilon_0} + \fra
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter08"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

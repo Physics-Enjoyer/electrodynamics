@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -469,12 +469,12 @@ q(t) = q_0 \cos (\omega t)
 <p>The retarded potential of this oscillating dipole is the superposition of the two point charges:</p>
 <div class="math notranslate nohighlight">
 \[
-V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q_0 \cos [\omega(t - \Delta r _+ / c)]}{\Delta r _+} - \frac{q_0 \cos[\omega(t - \Delta r _- / c)]}{\Delta r _-} \right]
+V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \left[ \frac{q_0 \cos [\omega(t - \mathcal{R} _+ / c)]}{\mathcal{R} _+} - \frac{q_0 \cos[\omega(t - \mathcal{R} _- / c)]}{\mathcal{R} _-} \right]
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta r _{\pm} = \sqrt{ r^2 \mp r d \cos \theta + (d/2)^2}
+\mathcal{R} _{\pm} = \sqrt{ r^2 \mp r d \cos \theta + (d/2)^2}
 \]</div>
 <p>To take this physical dipole towards a perfect dipole, we want</p>
 <div class="math notranslate nohighlight">
@@ -484,18 +484,18 @@ d \ll r \quad \text{ while } \quad q_0 d = \text{const.}
 <p>This approximation gives us</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta r _{\pm} \approx r \left( 1 \mp \frac{d}{2r} \cos \theta \right)
+\mathcal{R} _{\pm} \approx r \left( 1 \mp \frac{d}{2r} \cos \theta \right)
 \]</div>
 <p>so that</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{\Delta r _{\pm}} \approx \frac{1}{r} \left( 1 \pm \frac{d}{2r} \cos \theta \right)
+\frac{1}{\mathcal{R} _{\pm}} \approx \frac{1}{r} \left( 1 \pm \frac{d}{2r} \cos \theta \right)
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\cos[\omega(t - \Delta r _{\pm} / c)] &amp; \approx \cos \left[ \omega(t - r/c) \pm \frac{\omega d}{2c} \cos \theta \right] \\
+\cos[\omega(t - \mathcal{R} _{\pm} / c)] &amp; \approx \cos \left[ \omega(t - r/c) \pm \frac{\omega d}{2c} \cos \theta \right] \\
 &amp; = \cos [ \omega(t - r/c)] \cos \left( \frac{\omega d}{2c} \cos \theta \right) \\
 &amp; \quad \pm \sin[\omega(t - r/c)] \sin \left( \frac{\omega d}{2c} \cos \theta \right)
 \end{aligned}
@@ -508,7 +508,7 @@ d \ll \frac{c}{\omega}
 <p>Under that condition,</p>
 <div class="math notranslate nohighlight">
 \[
-\cos [ \omega(t - \Delta r _{\pm}/c)] \approx \cos [\omega(t - r/c)] \mp \frac{\omega d}{2c} \cos \theta \sin [\omega(t - r/c)]
+\cos [ \omega(t - \mathcal{R} _{\pm}/c)] \approx \cos [\omega(t - r/c)] \mp \frac{\omega d}{2c} \cos \theta \sin [\omega(t - r/c)]
 \]</div>
 <p>Finally, we do not really care what happens near the origin. Rather, we are looking for the <strong>far-field</strong> behavior of the radiation, so we must consider fields that survive at large distances from the source:</p>
 <div class="math notranslate nohighlight">
@@ -529,8 +529,8 @@ V(r, \theta, t) = - \frac{p_0 \omega}{4 \pi \epsilon_0 c} \left( \frac{\cos \the
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\vec A &amp; = &amp; \frac{\mu_0}{4 \pi} \int \frac{ \vec J(\vec r', t_r)}{\Delta r } \mathrm{d} \tau' \\
-&amp; = &amp; \frac{\mu_0}{4 \pi} \int_{-d/2} ^{d/2} \frac{- q_0 \omega \sin [ \omega(t - \Delta r  / c)]\hat z}{\Delta r } \mathrm{d} z
+\vec A &amp; = &amp; \frac{\mu_0}{4 \pi} \int \frac{ \vec J(\vec r', t_r)}{\mathcal{R} } \mathrm{d} \tau' \\
+&amp; = &amp; \frac{\mu_0}{4 \pi} \int_{-d/2} ^{d/2} \frac{- q_0 \omega \sin [ \omega(t - \mathcal{R}  / c)]\hat z}{\mathcal{R} } \mathrm{d} z
 \end{aligned}
 \end{split}\]</div>
 <p>Given our previous approximations, since the integration itself happens over the assumed short distance <span class="math notranslate nohighlight">\( d \)</span>, we can replace the integrand by its value at the center and introduce a factor of <span class="math notranslate nohighlight">\( d \)</span></p>
@@ -598,16 +598,16 @@ I = \langle \vec S \rangle = \left( \frac{\mu_0 p_0 ^2 \omega^4}{32 \pi^2 c} \ri
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter11"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

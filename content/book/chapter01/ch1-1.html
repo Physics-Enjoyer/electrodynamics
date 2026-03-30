@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -508,12 +508,12 @@ a(\vec{A} + \vec{B}) = a \vec{A} + a \vec{B}
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq1-2" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C} 
 \]</div>
-<p>Geometrically, <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is the product of A times the projection of B along A (or the product of B times the projection of A along B). If the two vectors are parallel, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = AB \)</span>. In particular, for any vector A</p>
+<p>Geometrically, <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} \)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> times the projection of <span class="math notranslate nohighlight">\(B\)</span> along <span class="math notranslate nohighlight">\(A\)</span> (or the product of <span class="math notranslate nohighlight">\(B\)</span> times the projection of <span class="math notranslate nohighlight">\(A\)</span> along <span class="math notranslate nohighlight">\(B\)</span>). If the two vectors are parallel, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = AB \)</span>. In particular, for any vector <span class="math notranslate nohighlight">\(A\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq1-3">
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq1-3" title="Link to this equation">#</a></span>\[
 \vec{A} \cdot \vec{A} = A^2 
 \]</div>
-<p>If A and B are perpendicular, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = 0 \)</span></p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are perpendicular, then <span class="math notranslate nohighlight">\( \vec{A} \cdot \vec{B} = 0 \)</span></p>
 <p><img alt="Figure 1.5" src="../../../_images/1.5.png" /></p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
@@ -542,8 +542,7 @@ C^2 = A^2 + B^2 - 2AB\cos \theta
 <span class="eqno">(4)<a class="headerlink" href="#equation-eq1-4" title="Link to this equation">#</a></span>\[
 \vec{A} \times \vec{B} = AB \sin \theta \hat{n} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector (vector of magnitude 1) pointing perpendicular to the plane of A and B. (I shall use a hat <span class="math notranslate nohighlight">\( \hat{} \)</span> to denote unit vectors.) Of course, there are two directions perpendicular to any plane: “in” and “out.” The ambiguity is resolved by the right-hand rule: let your fingers point in the direction of the first vector and curl around (via the smaller angle) toward the second; then your thumb indicates the direction of <span class="math notranslate nohighlight">\( \hat{n} \)</span>. (In Fig. 1.8, <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span> points into the page; <span class="math notranslate nohighlight">\( \vec{B} \times \vec{A} \)</span>  points out of the page.) Note that <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span>  is itself a vector (hence the alternative name
-vector product). The cross product is distributive</p>
+<p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is a unit vector (vector of magnitude 1) pointing perpendicular to the plane of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. (I shall use a hat <span class="math notranslate nohighlight">\( \hat{} \)</span> to denote unit vectors.) Of course, there are two directions perpendicular to any plane: “in” and “out.” The ambiguity is resolved by the right-hand rule: let your fingers point in the direction of the first vector and curl around (via the smaller angle) toward the second; then your thumb indicates the direction of <span class="math notranslate nohighlight">\( \hat{n} \)</span>. (In Fig. 1.8, <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span> points into the page; <span class="math notranslate nohighlight">\( \vec{B} \times \vec{A} \)</span>  points out of the page.) Note that <span class="math notranslate nohighlight">\( \vec{A} \times \vec{B} \)</span>  is itself a vector (hence the alternative name vector product). The cross product is distributive</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A} \times ( \vec{B} + \vec{C}) = ( \vec{A} \times \vec{B}) + (\vec{A} \times \vec{C})
@@ -556,13 +555,13 @@ vector product). The cross product is distributive</p>
 <p>Geometrically, <span class="math notranslate nohighlight">\( | \vec{A} \times \vec{B} | \)</span> is the area of the parallelogram generated by <span class="math notranslate nohighlight">\( \vec{A} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> (Fig 1.8). If two vectors are parallel, their cross product is zero. In particular,</p>
 <div class="math notranslate nohighlight">
 \[
- \vec{A} \times \vec{A} = 0
- \]</div>
-<p>for any vector A.</p>
+\vec{A} \times \vec{A} = 0
+\]</div>
+<p>for any vector <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
 <section id="vector-algebra-component-form">
 <h2>1.1.2: Vector Algebra: Component Form<a class="headerlink" href="#vector-algebra-component-form" title="Link to this heading">#</a></h2>
-<p>In the previous section, I defined the four vector operations (addition, scalar multiplication, dot product, and cross product) in “abstract” form-that is, without reference to any particular coordinate system. In practice, it is often easier to set up Cartesian coordinates x, y, z and work with vector components. Let <span class="math notranslate nohighlight">\( \hat{x} \)</span>, <span class="math notranslate nohighlight">\( \hat{y} \)</span> , and <span class="math notranslate nohighlight">\( \hat{z} \)</span> be unit vectors parallel to the x, y, and z axes, respectively (Fig. 1.9(a)). An arbitrary vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> can be expanded in terms of these basis vectors (Fig. 1.9(b)):</p>
+<p>In the previous section, I defined the four vector operations (addition, scalar multiplication, dot product, and cross product) in “abstract” form-that is, without reference to any particular coordinate system. In practice, it is often easier to set up Cartesian coordinates <span class="math notranslate nohighlight">\(x, y, z\)</span> and work with vector components. Let <span class="math notranslate nohighlight">\( \hat{x} \)</span>, <span class="math notranslate nohighlight">\( \hat{y} \)</span> , and <span class="math notranslate nohighlight">\( \hat{z} \)</span> be unit vectors parallel to the <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> axes, respectively (Fig. 1.9(a)). An arbitrary vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> can be expanded in terms of these basis vectors (Fig. 1.9(b)):</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}
@@ -625,7 +624,7 @@ A_x &amp; A_y &amp; A_z \\
 B_x &amp; B_y &amp; B_z
 \end{vmatrix}
 \end{split}\]</div>
-<p><strong>Rule (iv):</strong> To calculate the cross product, form the determinant whose first row is <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span>, whose second row is A, and whose third row is B.</p>
+<p><strong>Rule (iv):</strong> To calculate the cross product, form the determinant whose first row is <span class="math notranslate nohighlight">\( \hat{x}, \hat{y}, \hat{z} \)</span>, whose second row is <span class="math notranslate nohighlight">\(A\)</span>, and whose third row is <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
@@ -714,7 +713,7 @@ C_x &amp; C_y &amp; C_z
 </section>
 <section id="position-displacement-and-separation-vectors">
 <h2>1.1.4: Position, Displacement, and Separation Vectors<a class="headerlink" href="#position-displacement-and-separation-vectors" title="Link to this heading">#</a></h2>
-<p>The location of a point in three dimensions can be described by listing its Cartesian coordinates (x, y, z). The vector to that point from the origin (<span class="math notranslate nohighlight">\( \mathscr{O} \)</span>) is called the <em>position vector</em> (Fig 1.13):</p>
+<p>The location of a point in three dimensions can be described by listing its Cartesian coordinates <span class="math notranslate nohighlight">\((x, y, z)\)</span>. The vector to that point from the origin (<span class="math notranslate nohighlight">\( \mathcal{O} \)</span>) is called the <em>position vector</em> (Fig 1.13):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-19">
 <span class="eqno">(16)<a class="headerlink" href="#equation-eq1-19" title="Link to this equation">#</a></span>\[
 \vec{r} \equiv x \hat{x} + y \hat{y} + z \hat{z} 
@@ -736,20 +735,20 @@ r = \sqrt{x^2 + y^2 + z^2}
 \mathrm{d}{\vec{l}} = \mathrm{d}{x} \hat{x} + \mathrm{d}{y} \hat{y} + \mathrm{d}{z} \hat{z} 
 \]</div>
 <p>(We could call this <span class="math notranslate nohighlight">\( \mathrm{d}{\vec{r}} \)</span>, since that’s what it is, but it is useful to have a special notation for infinitesimal displacements.)</p>
-<p>In electrodynamics, one frequently encounters problems involving <em>two</em> points - typically a <strong>source point</strong>, <span class="math notranslate nohighlight">\( \vec{r'} \)</span>, where an electric charge is located, and a <strong>field point</strong> <span class="math notranslate nohighlight">\( \vec{r} \)</span> at which you are calculating the electric or magnetic field (Fig 1.14). It pays to adopt right from the start some short-hand notation for the <strong>separation vector</strong> from the source point to the field point. I shall use for this purpose the letter <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span>:</p>
+<p>In electrodynamics, one frequently encounters problems involving <em>two</em> points - typically a <strong>source point</strong>, <span class="math notranslate nohighlight">\( \vec{r}' \)</span>, where an electric charge is located, and a <strong>field point</strong> <span class="math notranslate nohighlight">\( \vec{r} \)</span> at which you are calculating the electric or magnetic field (Fig 1.14). It pays to adopt right from the start some short-hand notation for the <strong>separation vector</strong> from the source point to the field point. I shall use for this purpose the letter <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-23">
 <span class="eqno">(20)<a class="headerlink" href="#equation-eq1-23" title="Link to this equation">#</a></span>\[
-\vec{\mathcal{R} } \equiv \vec{r} - \vec{r'} 
+\vec{\mathcal{R} } \equiv \vec{r} - \vec{r}' 
 \]</div>
 <p>Its magnitude is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-24">
 <span class="eqno">(21)<a class="headerlink" href="#equation-eq1-24" title="Link to this equation">#</a></span>\[
 |\mathcal{R} | = | \hat{r} - \hat{r'} | 
 \]</div>
-<p>and a unit vector in the direction from <span class="math notranslate nohighlight">\( \vec{r'}  \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> is</p>
+<p>and a unit vector in the direction from <span class="math notranslate nohighlight">\( \vec{r}'  \)</span> to <span class="math notranslate nohighlight">\( \vec{r} \)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-\hat{\mathcal{R} } = \frac{\vec{\mathcal{R}} }{|\mathcal{R} |} = \frac{\vec{r} - \vec{r'}}{|\vec{r} - \vec{r'}|} \tag{1.25}  
+\hat{\mathcal{R} } = \frac{\vec{\mathcal{R}} }{|\mathcal{R} |} = \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|} \tag{1.25}  
 \]</div>
 <p>In Cartesian coordinates,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-26">
@@ -758,7 +757,7 @@ r = \sqrt{x^2 + y^2 + z^2}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq1-27">
 <span class="eqno">(23)<a class="headerlink" href="#equation-eq1-27" title="Link to this equation">#</a></span>\[
-|\mathcal{R} | = \sqrt{(x - x')^2 + (y-y')^2 + (z-z')^2  } 
+|\mathcal{R}| = \sqrt{(x - x')^2 + (y-y')^2 + (z-z')^2  } 
 \]</div>
 <div class="math notranslate nohighlight">
 \[
@@ -790,12 +789,12 @@ A_y = A \cos \theta, \qquad A_z = A \sin \theta
 <div class="math notranslate nohighlight" id="equation-eq1-29">
 <span class="eqno">(24)<a class="headerlink" href="#equation-eq1-29" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
- \overline{A_y} \\
- \overline{A_z}
+\overline{A_y} \\
+\overline{A_z}
 \end{pmatrix} = 
 \begin{pmatrix}
- \cos \phi &amp; \sin \phi \\
- - \sin \phi &amp; \cos \phi
+\cos \phi &amp; \sin \phi \\
+- \sin \phi &amp; \cos \phi
 \end{pmatrix}
 \begin{pmatrix}
 A_y \\
@@ -806,14 +805,14 @@ A_z
 <div class="math notranslate nohighlight" id="equation-eq1-30">
 <span class="eqno">(25)<a class="headerlink" href="#equation-eq1-30" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
- \overline{A_x} \\
- \overline{A_y} \\
- \overline{A_z}
+\overline{A_x} \\
+\overline{A_y} \\
+\overline{A_z}
 \end{pmatrix} = 
 \begin{pmatrix}
- R_{xx} &amp; R_{xy} &amp; R_{xz} \\
- R_{yx} &amp; R_{yy} &amp; R_{yz} \\
- R_{zx} &amp; R_{zy} &amp; R_{zz}
+R_{xx} &amp; R_{xy} &amp; R_{xz} \\
+R_{yx} &amp; R_{yy} &amp; R_{yz} \\
+R_{zx} &amp; R_{zy} &amp; R_{zz}
 \end{pmatrix}
 \begin{pmatrix}
 A_x \\
@@ -826,15 +825,15 @@ A_z
 <span class="eqno">(26)<a class="headerlink" href="#equation-eq1-31" title="Link to this equation">#</a></span>\[
 \overline{A_i} = \sum_{j=1}^3 R_{ij} A_j 
 \]</div>
-<p>where index 1 stands for x, 2 for y, and 3 for z. The elements of the matrix R can be ascertained, for a given rotation, by the same sort of trigonometric arguments as we used for a rotation about the x axis.
+<p>where index 1 stands for <span class="math notranslate nohighlight">\(x\)</span>, 2 for <span class="math notranslate nohighlight">\(y\)</span>, and 3 for <span class="math notranslate nohighlight">\(z\)</span>. The elements of the matrix <span class="math notranslate nohighlight">\(R\)</span> can be ascertained, for a given rotation, by the same sort of trigonometric arguments as we used for a rotation about the <span class="math notranslate nohighlight">\(x\)</span> axis.
 Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} \)</span> transform this way? Of course not - it doesn’t matter what coordinates you use to represent positions in space; there are still just as many apples in the barrel. You can’t convert a pear into a banana by choosing a different set of axes, but you can turn in <span class="math notranslate nohighlight">\( A_x \)</span> into <span class="math notranslate nohighlight">\( \overline{A_y} \)</span>. Formally, then, <em>a vector is any set of three components that transforms in the same manner as a displacement when you change coordinates</em>. As always, displacement is the <em>model</em> for the behavior of vectors.</p>
 <p>By the way, a (second-rank) <strong>tensor</strong> is a quantity with nine components, <span class="math notranslate nohighlight">\( T_{xx}, T_{xy}, T_{xz}, T_{yx}, \ldots T_{zz} \)</span>  which transform with two factors of <span class="math notranslate nohighlight">\( R \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
 \overline{T}_{xx} &amp; = R_{xx}(R_{xx} T_{xx} + R_{xy} T_{xy} + R_{xz} T_{xz}) \\
- &amp; + R_{xy}(R_{xx} T_{yx} + R_{xy} T_{yy} + R_{xz} T_{yz}) \\
- &amp; + R_{xz}(R_{xx} T_{zx} + R_{xy} T_{zy} + R_{xz} T_{zz}), \ldots
+&amp; + R_{xy}(R_{xx} T_{yx} + R_{xy} T_{yy} + R_{xz} T_{yz}) \\
+&amp; + R_{xz}(R_{xx} T_{zx} + R_{xy} T_{zy} + R_{xz} T_{zz}), \ldots
 \end{aligned}
 \end{split}\]</div>
 <p>or, more compactly,</p>
@@ -855,16 +854,16 @@ Now: Do the components of <span class="math notranslate nohighlight">\( \vec{N} 
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter01"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

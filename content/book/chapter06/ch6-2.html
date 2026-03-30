@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -462,53 +462,53 @@
 <h1>6.2: The Field of a Magnetized Object<a class="headerlink" href="#the-field-of-a-magnetized-object" title="Link to this heading">#</a></h1>
 <section id="bound-currents">
 <h2>6.2.1: Bound Currents<a class="headerlink" href="#bound-currents" title="Link to this heading">#</a></h2>
-<p>Suppose we have a piece of magnetized material; the magnetic dipole moment per unit volume, <span class="math notranslate nohighlight">\(\vec{M}\)</span>, is given. What field does this object produce? Well, the vector potential of a single dipole <span class="math notranslate nohighlight">\(\vec{m}\)</span> is given by <a class="reference internal" href="../chapter05/ch5-4.html#equation-eq5-85">(375)</a></p>
-<div class="math notranslate nohighlight">
-\[
+<p>Suppose we have a piece of magnetized material; the magnetic dipole moment per unit volume, <span class="math notranslate nohighlight">\(\vec{M}\)</span>, is given. What field does this object produce? Well, the vector potential of a single dipole <span class="math notranslate nohighlight">\(\vec{m}\)</span> is given by <a class="reference internal" href="../chapter05/ch5-4.html#equation-eq5-85">(379)</a></p>
+<div class="math notranslate nohighlight" id="equation-eq6-10">
+<span class="eqno">(392)<a class="headerlink" href="#equation-eq6-10" title="Link to this equation">#</a></span>\[
 \vec{A}_{dip} (r) = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \hat{r}}{r^2}
 \]</div>
 <p>In the magnetized object, each volume element <span class="math notranslate nohighlight">\( \mathrm{d} \tau' \)</span> carries a dipole moment <span class="math notranslate nohighlight">\( M \mathrm{d} \tau' \)</span>, so the total vector potential is (Fig 6.11)</p>
 <div class="math notranslate nohighlight" id="equation-eq6-11">
-<span class="eqno">(388)<a class="headerlink" href="#equation-eq6-11" title="Link to this equation">#</a></span>\[
-\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{M}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau' 
+<span class="eqno">(393)<a class="headerlink" href="#equation-eq6-11" title="Link to this equation">#</a></span>\[
+\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec{M}(r') \times \hat{\mathcal{R} }}{\mathcal{R}  ^2} \mathrm{d} \tau' 
 \]</div>
 <p>That does it, in principle. But, as in the electrical case, the integral can be cast in a more illuminating form by exploiting the identity</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla  ' \frac{1}{\Delta r }  = \frac{\hat{\Delta r }}{\Delta r ^2} 
+\nabla  ' \frac{1}{\mathcal{R} }  = \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} 
 \]</div>
 <p>With this,</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \left[ \vec{M}(r') \times \left( \nabla  ' \frac{1}{\Delta r } \right) \right] \mathrm{d} \tau'
+\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \left[ \vec{M}(r') \times \left( \nabla  ' \frac{1}{\mathcal{R} } \right) \right] \mathrm{d} \tau'
 \]</div>
 <p>Integrating by parts gives</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{A}(r) = \frac{\mu_0}{4 \pi} \left( \int \frac{1}{\Delta r } [ \nabla  ' \times \vec{M}(r') ] \mathrm{d} \tau' - \int \nabla ' \times \left[ \frac{\vec{M}(r')}{\Delta r } \right] \mathrm{d} \tau' \right)
+\vec{A}(r) = \frac{\mu_0}{4 \pi} \left( \int \frac{1}{\mathcal{R} } [ \nabla  ' \times \vec{M}(r') ] \mathrm{d} \tau' - \int \nabla ' \times \left[ \frac{\vec{M}(r')}{\mathcal{R} } \right] \mathrm{d} \tau' \right)
 \]</div>
-<p><img alt="Figure 6.11" src="../../../_images/6.11.png" />
-Problem 1.61 invites us to express the latter as a surface integral</p>
+<p><img alt="Figure 6.11" src="../../../_images/6.11.png" /></p>
+<p>Problem 1.61 invites us to express the latter as a surface integral</p>
 <div class="math notranslate nohighlight" id="equation-eq6-12">
-<span class="eqno">(389)<a class="headerlink" href="#equation-eq6-12" title="Link to this equation">#</a></span>\[
-\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{1}{\Delta r } [ \nabla ' \times \vec{M}(r')] \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint \frac{1}{\Delta r } [ \vec{M}(r') \times \mathrm{d} \vec{a'} ] 
+<span class="eqno">(394)<a class="headerlink" href="#equation-eq6-12" title="Link to this equation">#</a></span>\[
+\vec{A}(r) = \frac{\mu_0}{4 \pi} \int \frac{1}{\mathcal{R} } [ \nabla ' \times \vec{M}(r')] \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint \frac{1}{\mathcal{R} } [ \vec{M}(r') \times \mathrm{d} \vec{a'} ] 
 \]</div>
 <p>The first term looks just like the potential of a volume current</p>
 <div class="math notranslate nohighlight" id="equation-eq6-13">
-<span class="eqno">(390)<a class="headerlink" href="#equation-eq6-13" title="Link to this equation">#</a></span>\[
+<span class="eqno">(395)<a class="headerlink" href="#equation-eq6-13" title="Link to this equation">#</a></span>\[
 \vec{J}_b = \nabla \times  \vec{M} 
 \]</div>
 <p>while the second looks like the potential of a surface current</p>
 <div class="math notranslate nohighlight" id="equation-eq6-14">
-<span class="eqno">(391)<a class="headerlink" href="#equation-eq6-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(396)<a class="headerlink" href="#equation-eq6-14" title="Link to this equation">#</a></span>\[
 \vec{K_b} = \vec{M} \times \hat{n} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( \hat{n} \)</span> is the normal unit vector. With these definitions,</p>
 <div class="math notranslate nohighlight" id="equation-eq6-15">
-<span class="eqno">(392)<a class="headerlink" href="#equation-eq6-15" title="Link to this equation">#</a></span>\[
-\vec{A}(r) = \frac{\mu_0}{4\pi} \int_V \frac{\vec{J_b}(r')}{\Delta r } \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint _S \frac{\vec{K_b}(r')}{\Delta r } \mathrm{d} a' 
+<span class="eqno">(397)<a class="headerlink" href="#equation-eq6-15" title="Link to this equation">#</a></span>\[
+\vec{A}(r) = \frac{\mu_0}{4\pi} \int_V \frac{\vec{J_b}(r')}{\mathcal{R} } \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint _S \frac{\vec{K_b}(r')}{\mathcal{R} } \mathrm{d} a' 
 \]</div>
-<p>What this means is that the potential (and hence also the field) of a magnetized object is the same as would be produced by a volume current <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span>  throughout the material, plus a surface current <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span>, on the boundary. Instead of integrating the contributions of all the infinitesimal dipoles, using <a class="reference internal" href="#equation-eq6-11">(388)</a>, we first determine the bound currents, and then find the field they produce, in the same way we would calculate the field of any other volume and surface currents. Notice the striking parallel with the electrical case: there the field of a polarized object was the same as that of a bound volume charge <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a bound surface charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>.</p>
+<p>What this means is that the potential (and hence also the field) of a magnetized object is the same as would be produced by a volume current <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span>  throughout the material, plus a surface current <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span>, on the boundary. Instead of integrating the contributions of all the infinitesimal dipoles, using <a class="reference internal" href="#equation-eq6-11">(393)</a>, we first determine the bound currents, and then find the field they produce, in the same way we would calculate the field of any other volume and surface currents. Notice the striking parallel with the electrical case: there the field of a polarized object was the same as that of a bound volume charge <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a bound surface charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>.</p>
 <section id="example-6-1">
 <h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
@@ -533,7 +533,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 \]</div>
 <p>which we already worked out in Exercise 5.11. So, identifying <span class="math notranslate nohighlight">\( \sigma R \vec{\omega} \rightarrow \vec{M} \)</span>, we can write down</p>
 <div class="math notranslate nohighlight" id="equation-eq6-16">
-<span class="eqno">(393)<a class="headerlink" href="#equation-eq6-16" title="Link to this equation">#</a></span>\[
+<span class="eqno">(398)<a class="headerlink" href="#equation-eq6-16" title="Link to this equation">#</a></span>\[
 \vec{B} = \frac{2}{3} \mu_0 \vec{M} 
 \]</div>
 <p>inside the sphere, and outside the sphere the field is that of a perfect dipole</p>
@@ -545,7 +545,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 \[
 \rightarrow \quad \vec{B} = \frac{4 \mu_0 R^3}{9 r^3} (2 \cos \theta \hat{r} + \sin \theta \hat{\theta} )
 \]</div>
-<p>Notice that the internal field is uniform, like the electric field inside a uniformly polarized sphere (<a class="reference internal" href="../chapter04/ch4-2.html#equation-eq4-14">(243)</a>), although the actual formulas for the two cases are curiously different ( <span class="math notranslate nohighlight">\( \frac{2}{3} \)</span> in place of <span class="math notranslate nohighlight">\( -\frac{1}{3} \)</span>). The external fields are also analogous: pure dipole in both instances.</p>
+<p>Notice that the internal field is uniform, like the electric field inside a uniformly polarized sphere (<a class="reference internal" href="../chapter04/ch4-2.html#equation-eq4-14">(246)</a>), although the actual formulas for the two cases are curiously different ( <span class="math notranslate nohighlight">\( \frac{2}{3} \)</span> in place of <span class="math notranslate nohighlight">\( -\frac{1}{3} \)</span>). The external fields are also analogous: pure dipole in both instances.</p>
 </div>
 </div>
 </section>
@@ -561,7 +561,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 \]</div>
 <p>(This expression also records the fact that there is no current on the top or bottom surface of the slab; here <span class="math notranslate nohighlight">\(\vec{M}\)</span> is parallel to <span class="math notranslate nohighlight">\( \hat{n} \)</span>, so the cross product vanishes.)</p>
 <p>This bound surface current is exactly what we obtained in Sect. 6.2.1. It is a peculiar kind of current, in the sense that no single charge makes the whole trip - on the contrary, each charge moves only in a tiny little loop within a single atom. Nevertheless, the net effect is a macroscopic current flowing over the surface of the magnetized object. We call it a “bound” current to remind ourselves that every charge is attached to a particular atom, but it’s a perfectly genuine current, and it produces a magnetic field in the same way any other current does.</p>
-<p>When the magnetization is nonuniform, the internal currents no longer cancel. Figure 6.18(a) shows two adjacent chunks of magnetized material, with a larger arrow on the one to the right suggesting greater magnetization at that point. On the surface where they join, there is a net current in the x direction, given by</p>
+<p>When the magnetization is nonuniform, the internal currents no longer cancel. Figure 6.18(a) shows two adjacent chunks of magnetized material, with a larger arrow on the one to the right suggesting greater magnetization at that point. On the surface where they join, there is a net current in the <span class="math notranslate nohighlight">\(x\)</span> direction, given by</p>
 <div class="math notranslate nohighlight">
 \[
 I_x = [M_z (y + \mathrm{d} y) - M_z (y)] \mathrm{d} z = \frac{\partial M_z}{\partial y} \mathrm{d} y \mathrm{d} z
@@ -572,7 +572,7 @@ I_x = [M_z (y + \mathrm{d} y) - M_z (y)] \mathrm{d} z = \frac{\partial M_z}{\par
 (J_b)_x = \frac{\partial M_z}{\partial y}
 \]</div>
 <p><img alt="Figure 6.18" src="../../../_images/6.18.png" /></p>
-<p>By the same token, a nonuniform magnetization in the y direction would contribute an amount</p>
+<p>By the same token, a nonuniform magnetization in the <span class="math notranslate nohighlight">\(y\)</span> direction would contribute an amount</p>
 <div class="math notranslate nohighlight">
 \[
 (J_b)_x = \frac{\partial M_z}{\partial y} - \frac{\partial M_y}{\partial z}
@@ -583,7 +583,7 @@ I_x = [M_z (y + \mathrm{d} y) - M_z (y)] \mathrm{d} z = \frac{\partial M_z}{\par
 \vec{J_b} = \nabla \times  \vec{M}
 \]</div>
 <p>consistent, again, with the result of Section 6.2.1.</p>
-<p>Incidentally, like any other steady current, <span class="math notranslate nohighlight">\( \vec{J_b} \)</span> should obey the conservation law 5.33</p>
+<p>Incidentally, like any other steady current, <span class="math notranslate nohighlight">\( \vec{J_b} \)</span> should obey the conservation law <a class="reference internal" href="../chapter05/ch5-2.html#equation-eq5-33">(329)</a></p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot  \vec{J_b} = 0
@@ -598,25 +598,26 @@ I_x = [M_z (y + \mathrm{d} y) - M_z (y)] \mathrm{d} z = \frac{\partial M_z}{\par
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
-Q</label><div class="sd-tab-content docutils">
-<p>In Sect 6.2.1, we began with the potential of a perfect dipole (<code class="xref eq docutils literal notranslate"><span class="pre">eq6.10</span></code>), whereas in fact we are dealing with physical dipoles. Show, by the method of Section 4.2.3, that we nonetheless get the correct macroscopic field.</p>
+Problem 6.11</label><div class="sd-tab-content docutils">
+<p>In Sect 6.2.1, we began with the potential of a perfect dipole (<a class="reference internal" href="#equation-eq6-10">(392)</a>), whereas in fact we are dealing with physical dipoles. Show, by the method of Section 4.2.3, that we nonetheless get the correct macroscopic field.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>As in Section 4.2.3, we want the average of</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{B} = \vec{B} _{out} + \vec{B}_{in}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( \vec{B} _ {out} \)</span> is due to molecules outside a small sphere around point P, and <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is due to molecules inside the sphere. The average of <span class="math notranslate nohighlight">\( \vec{B} _ {out} \)</span> is the same as the field at the center, and for this it is OK to use Equation 6.10, since the center is “far” from all the molecules in question:</p>
+<p>where <span class="math notranslate nohighlight">\( \vec{B} _ {out} \)</span> is due to molecules outside a small sphere around point <span class="math notranslate nohighlight">\(P\)</span>, and <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is due to molecules inside the sphere. The average of <span class="math notranslate nohighlight">\( \vec{B} _ {out} \)</span> is the same as the field at the center, and for this it is OK to use Equation <a class="reference internal" href="#equation-eq6-10">(392)</a>, since the center is “far” from all the molecules in question:</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{A}_{out} = \frac{\mu_0}{4 \pi} \int_{outside} \frac{\vec{M} \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau 
+\vec{A}_{out} = \frac{\mu_0}{4 \pi} \int_{outside} \frac{\vec{M} \times \hat{\mathcal{R} }}{\mathcal{R}  ^2} \mathrm{d} \tau 
 \]</div>
-<p>The average of <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is <span class="math notranslate nohighlight">\( \frac{\mu_0}{4 \pi} \frac{2 \vec{m}}{R^3} \)</span> - Equation 5.93 - where <span class="math notranslate nohighlight">\( \vec{m} = \frac{4}{3} \pi R^3 \vec{M} \)</span>. Thus the average <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is <span class="math notranslate nohighlight">\( 2 \mu_0 \vec{M}/3 \)</span>. But what is left out of the integral <span class="math notranslate nohighlight">\( \vec{A} _ {out} \)</span> is the contribution of a uniformly magnetized sphere, to wit <span class="math notranslate nohighlight">\( 2 \mu_0 \vec{M} / 3 \)</span> (Equation 6.16), and this is precisely what <span class="math notranslate nohighlight">\( \vec{B}_{in} \)</span> puts back in. So we’ll get the correct macroscopic field using Equation 6.10.</p>
+<p>The average of <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is <span class="math notranslate nohighlight">\( \frac{\mu_0}{4 \pi} \frac{2 \vec{m}}{R^3} \)</span> - Equation <code class="xref eq docutils literal notranslate"><span class="pre">eq5.93</span></code> - where <span class="math notranslate nohighlight">\( \vec{m} = \frac{4}{3} \pi R^3 \vec{M} \)</span>. Thus the average <span class="math notranslate nohighlight">\( \vec{B} _ {in} \)</span> is <span class="math notranslate nohighlight">\( 2 \mu_0 \vec{M}/3 \)</span>. But what is left out of the integral <span class="math notranslate nohighlight">\( \vec{A} _ {out} \)</span> is the contribution of a uniformly magnetized sphere, to wit <span class="math notranslate nohighlight">\( 2 \mu_0 \vec{M} / 3 \)</span> (Equation <a class="reference internal" href="#equation-eq6-16">(398)</a>), and this is precisely what <span class="math notranslate nohighlight">\( \vec{B}_{in} \)</span> puts back in. So we’ll get the correct macroscopic field using Equation <a class="reference internal" href="#equation-eq6-10">(392)</a>.</p>
 </div>
 </div>
+<hr class="docutils" />
 </section>
 </section>
 </section>
@@ -630,16 +631,16 @@ A</label><div class="sd-tab-content docutils">
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter06"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

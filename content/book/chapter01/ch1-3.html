@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -469,23 +469,23 @@
 <h3>Line Integrals<a class="headerlink" href="#line-integrals" title="Link to this heading">#</a></h3>
 <p>A line integral is an expression of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq1-48">
-<span class="eqno">(41)<a class="headerlink" href="#equation-eq1-48" title="Link to this equation">#</a></span>\[
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq1-48" title="Link to this equation">#</a></span>\[
 \int_a ^b \vec{v} \cdot \mathrm{d}{\vec{l}} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\vec{v}\)</span> is a vector function, <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l} \)</span> is the infinitesimal displacement vector and the integral is to be carried out along a prescribed path P from point <span class="math notranslate nohighlight">\(\vec{a}\)</span> to point <span class="math notranslate nohighlight">\(\vec{b}\)</span>. If the path in question forms a closed loop (that is, if <span class="math notranslate nohighlight">\( \vec{b} = \vec{a} \)</span>, then put a circle on the integral sign:</p>
+<p>where <span class="math notranslate nohighlight">\(\vec{v}\)</span> is a vector function, <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l} \)</span> is the infinitesimal displacement vector and the integral is to be carried out along a prescribed path <span class="math notranslate nohighlight">\(P\)</span> from point <span class="math notranslate nohighlight">\(\vec{a}\)</span> to point <span class="math notranslate nohighlight">\(\vec{b}\)</span>. If the path in question forms a closed loop (that is, if <span class="math notranslate nohighlight">\( \vec{b} = \vec{a} \)</span>), then put a circle on the integral sign:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-49">
-<span class="eqno">(42)<a class="headerlink" href="#equation-eq1-49" title="Link to this equation">#</a></span>\[
+<span class="eqno">(44)<a class="headerlink" href="#equation-eq1-49" title="Link to this equation">#</a></span>\[
 \oint \vec{v} \cdot \mathrm{d} \vec{l} 
 \]</div>
 <p>At each point on the path, we take the dot product of <span class="math notranslate nohighlight">\(\vec{v}\)</span> (evaluated at that point) with the displacement to the next point on the pat. To a physicist, the most familiar example of a line integral is the work done by a force <span class="math notranslate nohighlight">\( \vec{F} \)</span>: <span class="math notranslate nohighlight">\( W = \int \vec{F} \cdot \mathrm{d} \vec{l} \)</span></p>
-<p>Ordinarily, the value of a line integral depends critically on the path taken from a to b, but there is an important special class of vector functions for which the line integral is independent of path and is determined entirely by the end points. It will be our business in due course to characterize this special class of vectors. (A force that has this property is called <strong>conservative.</strong>)</p>
+<p>Ordinarily, the value of a line integral depends critically on the path taken from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span>, but there is an important special class of vector functions for which the line integral is independent of path and is determined entirely by the end points. It will be our business in due course to characterize this special class of vectors. (A force that has this property is called <strong>conservative.</strong>)</p>
 <p><img alt="Figure 1.20" src="../../../_images/1.20.png" /></p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Example 1.6</label><div class="sd-tab-content docutils">
-<p>Calculate the line integral of the function <span class="math notranslate nohighlight">\( \vec{v} = y^2 \hat{x} + 2x (y+1) \hat{y} \)</span> from the point a = (1, 1, 0) to the point b = (2, 2, 0), along the paths (1) and (2) in Fig 1.21. What is <span class="math notranslate nohighlight">\( \oint \vec{v} \cdot \mathrm{d} \vec{l} \)</span> for the loop that goes from a to b along (1) and returns to a along (2)?</p>
+<p>Calculate the line integral of the function <span class="math notranslate nohighlight">\( \vec{v} = y^2 \hat{x} + 2x (y+1) \hat{y} \)</span> from the point <span class="math notranslate nohighlight">\(\vec{a} = (1, 1, 0)\)</span> to the point <span class="math notranslate nohighlight">\(\vec{b} = (2, 2, 0)\)</span>, along the paths (1) and (2) in Fig 1.21. What is <span class="math notranslate nohighlight">\( \oint \vec{v} \cdot \mathrm{d} \vec{l} \)</span> for the loop that goes from <span class="math notranslate nohighlight">\(\vec{a}\)</span> to <span class="math notranslate nohighlight">\(\vec{b}\)</span> along (1) and returns to a along (2)?</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
@@ -495,7 +495,7 @@ Solution</label><div class="sd-tab-content docutils">
 \[
 \mathrm{d} \vec{l} = \mathrm{d} x \hat{x} , y = 1, \vec{v} \cdot \mathrm{d}{\vec{l}} = y^2 \mathrm{d} x = \mathrm{d} x, \text{ so } \int \vec{v} \cdot \mathrm{d} \vec{l} = \int_1 ^2 \mathrm{d} x = 1 \tag{i}
 \]</div>
-<p>On the “vertical” stretch, dx = dz = 0, so</p>
+<p>On the “vertical” stretch, <span class="math notranslate nohighlight">\(dx = dz = 0\)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[
 \mathrm{d} \vec{l} = \mathrm{d} y \hat{y}, x = 2, \vec{v} \cdot \mathrm{d} \vec{l} = 2x(y+1) \mathrm{d} y = 4(y+1) \mathrm{d} y, \text{ so } \tag{ii}
@@ -519,7 +519,7 @@ Solution</label><div class="sd-tab-content docutils">
 \[
 \int_{\vec{a}} ^{\vec{b}} \vec{v} \cdot \mathrm{d} \vec{l} = \int_1 ^2 (3x^2 + 2x) \mathrm{d} x = \left. (x^3 + x^2)\right|_{1} ^2 = 10
 \]</div>
-<p>(The strategy here is to get everything in terms of one variable; I could just as well have eliminated x in favor of y.)</p>
+<p>(The strategy here is to get everything in terms of one variable; I could just as well have eliminated <span class="math notranslate nohighlight">\(x\)</span> in favor of <span class="math notranslate nohighlight">\(y\)</span>.)</p>
 <p>For the loop that goes out (1) and back (2), then</p>
 <div class="math notranslate nohighlight">
 \[
@@ -533,10 +533,10 @@ Solution</label><div class="sd-tab-content docutils">
 <h3>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Link to this heading">#</a></h3>
 <p>A surface integral is an expression of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq1-50">
-<span class="eqno">(43)<a class="headerlink" href="#equation-eq1-50" title="Link to this equation">#</a></span>\[
-\int_{\mathscr{S}} \vec{v} \cdot \mathrm{d} \vec{a} 
+<span class="eqno">(45)<a class="headerlink" href="#equation-eq1-50" title="Link to this equation">#</a></span>\[
+\int_{\mathcal{S}} \vec{v} \cdot \mathrm{d} \vec{a} 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\vec{v}\)</span> is again some vector function, and the integral is over a specified surface <span class="math notranslate nohighlight">\( \mathscr{S} \)</span>. Here <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> is an infinitesimal patch of area, with direction perpendicular to the surface (Fig 1.22). There are, of course, two directions perpendicular to any surface, so the sign of a surface integral is intrinsically ambiguous. If the surface is closed (forming a “balloon”), in which case I again put a circle on the integral sign</p>
+<p>where <span class="math notranslate nohighlight">\(\vec{v}\)</span> is again some vector function, and the integral is over a specified surface <span class="math notranslate nohighlight">\( \mathcal{S} \)</span>. Here <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> is an infinitesimal patch of area, with direction perpendicular to the surface (Fig 1.22). There are, of course, two directions perpendicular to any surface, so the sign of a surface integral is intrinsically ambiguous. If the surface is closed (forming a “balloon”), in which case I again put a circle on the integral sign</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{v} \cdot \mathrm{d} \vec{a}
@@ -593,17 +593,17 @@ Solution</label><div class="sd-tab-content docutils">
 <h3>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Link to this heading">#</a></h3>
 <p>A volume integral is an expression of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq1-51">
-<span class="eqno">(44)<a class="headerlink" href="#equation-eq1-51" title="Link to this equation">#</a></span>\[
+<span class="eqno">(46)<a class="headerlink" href="#equation-eq1-51" title="Link to this equation">#</a></span>\[
 \int_{V} T \mathrm{d} \tau 
 \]</div>
-<p>where T is a scalar function and <span class="math notranslate nohighlight">\( \mathrm{d} \tau \)</span> is an infinitesimal volume element. In Cartesian coordinates,</p>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is a scalar function and <span class="math notranslate nohighlight">\( \mathrm{d} \tau \)</span> is an infinitesimal volume element. In Cartesian coordinates,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-52">
-<span class="eqno">(45)<a class="headerlink" href="#equation-eq1-52" title="Link to this equation">#</a></span>\[
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq1-52" title="Link to this equation">#</a></span>\[
 \mathrm{d} \tau = \mathrm{d} x \, \mathrm{d} y \, \mathrm{d} z 
 \]</div>
-<p>For example, if T is the density of a substance (which might vary from point to point), then the volume integral would give the total mass. Occasionally we shall encounter volume integrals of vector functions:</p>
+<p>For example, if <span class="math notranslate nohighlight">\(T\)</span> is the density of a substance (which might vary from point to point), then the volume integral would give the total mass. Occasionally we shall encounter volume integrals of vector functions:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-53">
-<span class="eqno">(46)<a class="headerlink" href="#equation-eq1-53" title="Link to this equation">#</a></span>\[
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq1-53" title="Link to this equation">#</a></span>\[
 \int \vec{v} \mathrm{d} \tau = \int (v_x \hat{x} + v_y \hat{y} + v_z \hat{z}) \mathrm{d} \tau = \hat{x} \int v_x \mathrm{d} \tau + \hat{y} \int v_y \mathrm{d} \tau + \hat{z} \int v_z \mathrm{d} \tau 
 \]</div>
 <p>Because the unit vectors are constants, they come outside the integral.</p>
@@ -634,7 +634,7 @@ Solution</label><div class="sd-tab-content docutils">
 <h2>1.3.2: The Fundamental Theorem of Calculus<a class="headerlink" href="#the-fundamental-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <p>Suppose <span class="math notranslate nohighlight">\( f(x) \)</span> is a function in one variable. The fundamental theorem of calculus says</p>
 <div class="math notranslate nohighlight" id="equation-eq1-54">
-<span class="eqno">(47)<a class="headerlink" href="#equation-eq1-54" title="Link to this equation">#</a></span>\[
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq1-54" title="Link to this equation">#</a></span>\[
 \int_a ^b \left( \frac{\mathrm{d} f}{\mathrm{d} x} \right) \mathrm{d} x = f(b) - f(a) 
 \]</div>
 <p>In case this doesn’t look familiar, I’ll write it another way:</p>
@@ -642,29 +642,29 @@ Solution</label><div class="sd-tab-content docutils">
 \[
 \int_a ^b F(x) \mathrm{d} x = f(b) - f(a)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\( df / dx = F(x) \)</span>. The fundamental theorem tells you how to integrate <span class="math notranslate nohighlight">\( F(x) \)</span>: you think up a function <span class="math notranslate nohighlight">\( f(x) \)</span> whose derivative is equal to F.</p>
-<p><em>Geometrical interpretation</em>:  According to <a class="reference internal" href="ch1-2.html#equation-eq1-33">(28)</a>, <span class="math notranslate nohighlight">\( df = (df / dx) dx \)</span>  is the infinitesimal change in f when you go from (x) to (x + dx). The fundamental theorem (<a class="reference internal" href="#equation-eq1-54">(47)</a>) says that if you chop the interval from a to b (Fig. 1.25) into many tiny pieces, dx, and add up the increments df from each little piece, the result is (not surprisingly) equal to the total change in f: <span class="math notranslate nohighlight">\( f(b) - f(a) \)</span>. In other words, there are two ways to determine the total change in the function: either subtract the values at the ends or go step-by-step, adding up all the tiny increments as you go. You’ll get the same answer either way.</p>
+<p>where <span class="math notranslate nohighlight">\( df / dx = F(x) \)</span>. The fundamental theorem tells you how to integrate <span class="math notranslate nohighlight">\( F(x) \)</span>: you think up a function <span class="math notranslate nohighlight">\( f(x) \)</span> whose derivative is equal to <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<p><em>Geometrical interpretation</em>:  According to <a class="reference internal" href="ch1-2.html#equation-eq1-33">(28)</a>, <span class="math notranslate nohighlight">\( df = (df / dx) dx \)</span>  is the infinitesimal change in <span class="math notranslate nohighlight">\(f\)</span> when you go from <span class="math notranslate nohighlight">\((x)\)</span> to <span class="math notranslate nohighlight">\((x + dx)\)</span>. The fundamental theorem (<a class="reference internal" href="#equation-eq1-54">(49)</a>) says that if you chop the interval from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span> (Fig. 1.25) into many tiny pieces, dx, and add up the increments df from each little piece, the result is (not surprisingly) equal to the total change in <span class="math notranslate nohighlight">\(f\)</span>: <span class="math notranslate nohighlight">\( f(b) - f(a) \)</span>. In other words, there are two ways to determine the total change in the function: either subtract the values at the ends or go step-by-step, adding up all the tiny increments as you go. You’ll get the same answer either way.</p>
 <p>Notice the basic format of the fundamental theorem: the integral of a derivative over some region is given by the value of the function at the end points (boundaries). In vector calculus there are three species of derivative (gradient, divergence, and curl), and each has its own “fundamental theorem,” with essentially the same format. I don’t plan to prove these theorems here; rather, I will explain what they mean, and try to make them plausible.</p>
 </section>
 <section id="the-fundamental-theorem-for-gradients">
 <h2>1.3.3: The Fundamental Theorem for Gradients<a class="headerlink" href="#the-fundamental-theorem-for-gradients" title="Link to this heading">#</a></h2>
-<p>Suppose we have a scalar function of three variables T(x, y, z). Starting at point <span class="math notranslate nohighlight">\(\vec{a}\)</span>, we move a small distance <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l}_1 \)</span> (Fig 1.26). According to <a class="reference internal" href="ch1-2.html#equation-eq1-37">(32)</a>, the function T will change by an amount</p>
+<p>Suppose we have a scalar function of three variables <span class="math notranslate nohighlight">\(T(x, y, z)\)</span>. Starting at point <span class="math notranslate nohighlight">\(\vec{a}\)</span>, we move a small distance <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l}_1 \)</span> (Fig 1.26). According to <a class="reference internal" href="ch1-2.html#equation-eq1-37">(32)</a>, the function <span class="math notranslate nohighlight">\(T\)</span> will change by an amount</p>
 <div class="math notranslate nohighlight">
 \[
 \mathrm{d} T = (\nabla  T) \cdot \mathrm{d} \vec{l}_1
 \]</div>
 <p><img alt="Figure 1.25" src="../../../_images/1.25.png" /></p>
-<p>Now we move a little further, by an additional small displacement <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l}_2 \)</span>; the incremental change in T will be <span class="math notranslate nohighlight">\( (\nabla  T) \cdot \mathrm{d} \vec{l}_2 \)</span>. In this manner, proceeding by infinitesimal steps, we make the journey to point b. At each step we compute the gradient of T (at that point) and dot it into the displacement dl… this gives us the change in T. Evidently the total change in Tin going from a to b (along the path selected) is</p>
+<p>Now we move a little further, by an additional small displacement <span class="math notranslate nohighlight">\( \mathrm{d} \vec{l}_2 \)</span>; the incremental change in <span class="math notranslate nohighlight">\(T\)</span> will be <span class="math notranslate nohighlight">\( (\nabla  T) \cdot \mathrm{d} \vec{l}_2 \)</span>. In this manner, proceeding by infinitesimal steps, we make the journey to point <span class="math notranslate nohighlight">\(b\)</span>. At each step we compute the gradient of <span class="math notranslate nohighlight">\(T\)</span> (at that point) and dot it into the displacement <span class="math notranslate nohighlight">\(dl\)</span>… this gives us the change in <span class="math notranslate nohighlight">\(T\)</span>. Evidently the total change in <span class="math notranslate nohighlight">\(T\)</span> in going from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span> (along the path selected) is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-55">
-<span class="eqno">(48)<a class="headerlink" href="#equation-eq1-55" title="Link to this equation">#</a></span>\[
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq1-55" title="Link to this equation">#</a></span>\[
 \int_{\vec{a}} ^{\vec{b}} (\nabla  T) \cdot \mathrm{d} \vec{l} = T(\vec{b}) - T(\vec{a}) 
 \]</div>
-<p>This is the fundamental theorem for gradients; like the “ordinary” fundamental theorem, it says that the integral (here a line integral) of a derivative (here the gradient) is given by the value of the function at the boundaries (a and b).</p>
-<p><em>Geometrical Interpretation:</em> Suppose you wanted to determine the height of the Eiffel Tower. You could climb the stairs, using a ruler to measure the rise at each step, and adding them all up (that’s the left side of <a class="reference internal" href="#equation-eq1-55">(48)</a>), or you could place altimeters at the top and the bottom, and subtract the two readings (that’s the right side); you should get the same answer either way (that’s the fundamental theorem).</p>
-<p>Incidentally, as we found in Ex. 1.6, line integrals ordinarily depend on the path taken from a to b. But the right side of <a class="reference internal" href="#equation-eq1-55">(48)</a> makes no reference to the path - only to the end points. Evidently, gradients have the special property that their line integrals are path independent:</p>
+<p>This is the fundamental theorem for gradients; like the “ordinary” fundamental theorem, it says that the integral (here a line integral) of a derivative (here the gradient) is given by the value of the function at the boundaries (<span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>).</p>
+<p><em>Geometrical Interpretation:</em> Suppose you wanted to determine the height of the Eiffel Tower. You could climb the stairs, using a ruler to measure the rise at each step, and adding them all up (that’s the left side of <a class="reference internal" href="#equation-eq1-55">(50)</a>), or you could place altimeters at the top and the bottom, and subtract the two readings (that’s the right side); you should get the same answer either way (that’s the fundamental theorem).</p>
+<p>Incidentally, as we found in Ex. 1.6, line integrals ordinarily depend on the path taken from a to b. But the right side of <a class="reference internal" href="#equation-eq1-55">(50)</a> makes no reference to the path - only to the end points. Evidently, gradients have the special property that their line integrals are path independent:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong><strong>Corollary 1:</strong> <span class="math notranslate nohighlight">\( \int_a ^b (\nabla  T) \cdot \mathrm{d} \vec{l} \)</span> is independent of the path taken from a to b.</strong></p>
+<p><strong><strong>Corollary 1:</strong> <span class="math notranslate nohighlight">\( \int_a ^b (\nabla  T) \cdot \mathrm{d} \vec{l} \)</span> is independent of the path taken from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span>.</strong></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -675,7 +675,7 @@ Solution</label><div class="sd-tab-content docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-6">
 Example 1.9</label><div class="sd-tab-content docutils">
-<p>Let <span class="math notranslate nohighlight">\( T = xy^2 \)</span>, and take point <span class="math notranslate nohighlight">\(\vec{a}\)</span> to be the origin (0, 0, 0) and <span class="math notranslate nohighlight">\(\vec{b}\)</span> to be the point (2, 1, 0). Check the fundamental theorem for gradients.</p>
+<p>Let <span class="math notranslate nohighlight">\( T = xy^2 \)</span>, and take point <span class="math notranslate nohighlight">\(\vec{a}\)</span> to be the origin <span class="math notranslate nohighlight">\((0, 0, 0)\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> to be the point <span class="math notranslate nohighlight">\((2, 1, 0)\)</span>. Check the fundamental theorem for gradients.</p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-7">
@@ -699,11 +699,11 @@ The total line integral is 2. So is this consistent with what we expect from the
 <h2>1.3.4: The Fundamental Theorem for Divergences<a class="headerlink" href="#the-fundamental-theorem-for-divergences" title="Link to this heading">#</a></h2>
 <p>The fundamental theorem for divergences states that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-56">
-<span class="eqno">(49)<a class="headerlink" href="#equation-eq1-56" title="Link to this equation">#</a></span>\[
-\int _{\mathscr{V}} (\nabla \cdot  \vec{v} ) \mathrm{d} \tau = \oint_{\mathscr{S}} \vec{v} \cdot \mathrm{d} \vec{a} 
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq1-56" title="Link to this equation">#</a></span>\[
+\int _{\mathcal{V}} (\nabla \cdot  \vec{v} ) \mathrm{d} \tau = \oint_{\mathcal{S}} \vec{v} \cdot \mathrm{d} \vec{a} 
 \]</div>
-<p>In honor, I suppose, of its great importance, this theorem has at least three special names: <strong>Gauss’s theorem</strong>, <strong>Green’s theorem</strong>, or simply the <strong>divergence theorem</strong>. Like the other “fundamental theorems,” it says that the integral of a derivative (in this case the divergence) over a region (in this case a volume, V) is equal to the value of the function at the boundary (in this case the surface S that bounds the volume). Notice that the boundary term is itself an integral (specifically, a surface integral). This is reasonable: the “boundary” of a line is just two end points, but the boundary of a volume is a (closed) surface.</p>
-<p>Geometrical Interpretation: If v represents the flow of an incompressible fluid, then the flux of v (the right side of <a class="reference internal" href="#equation-eq1-56">(49)</a>) is the total amount of fluid passing out through the surface, per unit time. Now, the divergence measures the “spreading out” of the vectors from a point-a place of high divergence is like a “faucet,” pouring out liquid. If we have a bunch of faucets in a region filled with incompressible fluid, an equal amount of liquid will be forced out through the boundaries of the region. In fact, there are two ways we could determine how much is being produced: (a) we could count up all the faucets, recording how much each puts out, or (b) we could go around the boundary, measuring the flow at each point, and add it all up. You get the same answer either way:</p>
+<p>In honor, I suppose, of its great importance, this theorem has at least three special names: <strong>Gauss’s theorem</strong>, <strong>Green’s theorem</strong>, or simply the <strong>divergence theorem</strong>. Like the other “fundamental theorems,” it says that the integral of a derivative (in this case the divergence) over a region (in this case a volume, <span class="math notranslate nohighlight">\(V\)</span>) is equal to the value of the function at the boundary (in this case the surface <span class="math notranslate nohighlight">\(S\)</span> that bounds the volume). Notice that the boundary term is itself an integral (specifically, a surface integral). This is reasonable: the “boundary” of a line is just two end points, but the boundary of a volume is a (closed) surface.</p>
+<p>Geometrical Interpretation: If <span class="math notranslate nohighlight">\(v\)</span> represents the flow of an incompressible fluid, then the flux of <span class="math notranslate nohighlight">\(v\)</span> (the right side of <a class="reference internal" href="#equation-eq1-56">(51)</a>) is the total amount of fluid passing out through the surface, per unit time. Now, the divergence measures the “spreading out” of the vectors from a point-a place of high divergence is like a “faucet,” pouring out liquid. If we have a bunch of faucets in a region filled with incompressible fluid, an equal amount of liquid will be forced out through the boundaries of the region. In fact, there are two ways we could determine how much is being produced: (a) we could count up all the faucets, recording how much each puts out, or (b) we could go around the boundary, measuring the flow at each point, and add it all up. You get the same answer either way:</p>
 <div class="math notranslate nohighlight">
 \[
 \int (\text{faucets within the volume}) = \oint (\text{flow out through the surface})
@@ -781,11 +781,11 @@ Solution</label><div class="sd-tab-content docutils">
 <h2>1.3.5: The Fundamental Theorem for Curls<a class="headerlink" href="#the-fundamental-theorem-for-curls" title="Link to this heading">#</a></h2>
 <p>The fundamental theorem for curls, which goes by the name <strong>Stokes’ Theorem</strong>, states that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-57">
-<span class="eqno">(50)<a class="headerlink" href="#equation-eq1-57" title="Link to this equation">#</a></span>\[
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq1-57" title="Link to this equation">#</a></span>\[
 \int _S(\nabla \times  \vec{V}) \cdot \mathrm{d} \vec{a} = \oint _P \vec{v} \cdot \mathrm{d} \vec{l} 
 \]</div>
-<p>As always, the integral of a derivative (here, the curl) over a region (here, a patch of surface, S) is equal to the value of the function at the boundary (here, the perimeter of the patch, P). As in the case of the divergence theorem, the boundary term is itself an integral-specifically, a closed line integral.</p>
-<p>Geometrical Interpretation: Recall that the curl measures the “twist” of the vectors <span class="math notranslate nohighlight">\(\vec{v}\)</span>; a region of high curl is a whirlpool - if you put a tiny paddle wheel there, it will rotate. Now, the integral of the curl over some surface (or, more precisely, the flux of the curl through that surface) represents the “total amount of swirl,” and we can determine that just as well by going around the edge and finding how much the flow is following the boundary (Fig. 1.31). Indeed, <span class="math notranslate nohighlight">\( \oint \vec{v} \cdot \mathrm{d} \vec{l} \)</span>  is sometimes called the <em>circulation</em> of v.</p>
+<p>As always, the integral of a derivative (here, the curl) over a region (here, a patch of surface, <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>) is equal to the value of the function at the boundary (here, the perimeter of the patch, <span class="math notranslate nohighlight">\(P\)</span>). As in the case of the divergence theorem, the boundary term is itself an integral-specifically, a closed line integral.</p>
+<p>Geometrical Interpretation: Recall that the curl measures the “twist” of the vectors <span class="math notranslate nohighlight">\(\vec{v}\)</span>; a region of high curl is a whirlpool - if you put a tiny paddle wheel there, it will rotate. Now, the integral of the curl over some surface (or, more precisely, the flux of the curl through that surface) represents the “total amount of swirl,” and we can determine that just as well by going around the edge and finding how much the flow is following the boundary (Fig. 1.31). Indeed, <span class="math notranslate nohighlight">\( \oint \vec{v} \cdot \mathrm{d} \vec{l} \)</span>  is sometimes called the <em>circulation</em> of <span class="math notranslate nohighlight">\(v\)</span>.</p>
 <p><img alt="Figure 1.31" src="../../../_images/1.31.png" /></p>
 <p>You may have noticed an apparent ambiguity in Stokes’ theorem: concerning the boundary line integral, which way are we supposed to go around (clockwise or counterclockwise)? If we go the “wrong” way, we’ll pick up an overall sign error. The answer is that it doesn’t matter which way you go as long as you are consistent, for there is a compensating sign ambiguity in the surface integral: Which way does <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> point? For a closed surface (as in the divergence theorem), <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> points in the direction of the outward normal; but for an open surface, which way is “out”? Consistency in Stokes’ theorem (as in all such matters) is given by the right-hand rule: if your fingers point in the direction of the line integral, then your thumb fixes the direction of <span class="math notranslate nohighlight">\( \mathrm{d} \vec{a} \)</span> (Fig. 1.32).</p>
 <p>Now, there are plenty of surfaces (infinitely many) that share any given boundary line. Twist a paper clip into a loop, and dip it in soapy water. The soap film constitutes a surface, with the wire loop as its boundary. If you blow on it, the soap film will expand, making a larger surface, with the same boundary. Ordinarily, a flux integral depends critically on what surface you integrate over, but evidently this is not the case with curls. For Stokes’ theorem says that <span class="math notranslate nohighlight">\( \int (\nabla \times  \vec{v}) \cdot \mathrm{d} \vec{a} \)</span>  is equal to the line integral of <span class="math notranslate nohighlight">\( \vec{v}\ \)</span>  around the boundary, and the latter makes no reference to the specific surface you choose.</p>
@@ -795,7 +795,7 @@ Solution</label><div class="sd-tab-content docutils">
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong>Corollary 2: <span class="math notranslate nohighlight">\( \oint (\nabla \times  \vec{v}) \cdot \mathrm{d} \vec{a} = 0 \)</span> for any closed surface, since the boundary line, like the mouth of a balloon, shrinks down to a point, and hence the right side of <a class="reference internal" href="#equation-eq1-57">(50)</a> vanishes.</strong></p>
+<p><strong>Corollary 2: <span class="math notranslate nohighlight">\( \oint (\nabla \times  \vec{v}) \cdot \mathrm{d} \vec{a} = 0 \)</span> for any closed surface, since the boundary line, like the mouth of a balloon, shrinks down to a point, and hence the right side of <a class="reference internal" href="#equation-eq1-57">(52)</a> vanishes.</strong></p>
 </div>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
@@ -859,10 +859,10 @@ Solution</label><div class="sd-tab-content docutils">
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq1-58">
-<span class="eqno">(51)<a class="headerlink" href="#equation-eq1-58" title="Link to this equation">#</a></span>\[
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq1-58" title="Link to this equation">#</a></span>\[
 \int_a ^b f \left( \frac{\mathrm{d} g}{\mathrm{d} x}  \right) \mathrm{d} x = - \int_a ^b  \left( \frac{\mathrm{d} f}{\mathrm{d} x} \right) \mathrm{d} x +  \left. fg \right| ^b _a 
 \]</div>
-<p>That’s “integration by parts.” It applies to the situation in which you are called upon to integrate the product of one function (f) and the derivative of another (g); it says you can transfer the derivative from g to f, at the cost of a minus sign and a boundary term.</p>
+<p>That’s “integration by parts.” It applies to the situation in which you are called upon to integrate the product of one function (<span class="math notranslate nohighlight">\(f\)</span>) and the derivative of another (<span class="math notranslate nohighlight">\(g\)</span>); it says you can transfer the derivative from <span class="math notranslate nohighlight">\(g\)</span> to <span class="math notranslate nohighlight">\(f\)</span>, at the cost of a minus sign and a boundary term.</p>
 <hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
@@ -902,7 +902,7 @@ e^{-x} = \frac{d}{dx} \left( - e^{-x} \right)
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq1-59">
-<span class="eqno">(52)<a class="headerlink" href="#equation-eq1-59" title="Link to this equation">#</a></span>\[
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq1-59" title="Link to this equation">#</a></span>\[
 \int _V f(\nabla \cdot  \vec{A}) \mathrm{d} \tau = - \int _V \vec{A} \cdot (\nabla  f) \mathrm{d} \tau + \oint _S f \vec{A} \cdot \mathrm{d} \vec{a} 
 \]</div>
 <p>Here again the integrand is the product of one function (f) and the derivative (in this case the divergence) of another (<span class="math notranslate nohighlight">\(\vec{A}\)</span>), and integration by parts licenses us to transfer the derivative from <span class="math notranslate nohighlight">\(\vec{A}\)</span> to f (where it becomes a gradient), at the cost of a minus sign and a boundary term (in this case a surface integral).</p>
@@ -919,16 +919,16 @@ e^{-x} = \frac{d}{dx} \left( - e^{-x} \right)
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter01"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

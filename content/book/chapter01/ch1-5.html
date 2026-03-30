@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -439,15 +439,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence-of-hat-r-r-2">1.5.1: The Divergence of <span class="math notranslate nohighlight">\( \hat{r} / r^2 \)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-dirac-delta-function">1.5.2: The One-Dimensional Dirac Delta Function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-14">Example 1.14</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-15">Example 1.15</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-dimensional-delta-function">The Three-Dimensional Delta Function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-16">Example 1.16</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-dirac-delta-function">1.5.2: The One-Dimensional Dirac Delta Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-dimensional-delta-function">The Three-Dimensional Delta Function</a></li>
 </ul>
             </nav>
         </div>
@@ -465,31 +458,31 @@
 <h2>1.5.1: The Divergence of <span class="math notranslate nohighlight">\( \hat{r} / r^2 \)</span><a class="headerlink" href="#the-divergence-of-hat-r-r-2" title="Link to this heading">#</a></h2>
 <p>Consider the vector function</p>
 <div class="math notranslate nohighlight" id="equation-eq1-83">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq1-83" title="Link to this equation">#</a></span>\[
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq1-83" title="Link to this equation">#</a></span>\[
 \vec{v} = \frac{1}{r^2} \hat{r} 
 \]</div>
 <p><img alt="Figure 1.44" src="../../../_images/1.44.png" /></p>
-<p>At every location, <span class="math notranslate nohighlight">\(\vec{v}\)</span> is directed radially outward (Fig. 1.44); if ever there was a function that ought to have a large positive divergence, this is it. And yet, when you actually calculate the divergence (using <code class="xref eq docutils literal notranslate"><span class="pre">eq1.71</span></code>), you get precisely zero:</p>
+<p>At every location, <span class="math notranslate nohighlight">\(\vec{v}\)</span> is directed radially outward (Fig. 1.44); if ever there was a function that ought to have a large positive divergence, this is it. And yet, when you actually calculate the divergence (using <a class="reference internal" href="ch1-4.html#equation-eq1-71">(64)</a>), you get precisely zero:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-84">
-<span class="eqno">(70)<a class="headerlink" href="#equation-eq1-84" title="Link to this equation">#</a></span>\[
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq1-84" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{v} = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{1}{r^2} \right) = \frac{1}{r^2} \frac{\partial}{\partial r} (1) = 0 
 \]</div>
-<p>(You will have encountered this paradox already, if you worked Prob. 1.16.) The plot thickens when we apply the divergence theorem to this function. Suppose we integrate over a sphere of radius R, centered at the origin (Prob. 1.38b); the surface integral is</p>
+<p>(You will have encountered this paradox already, if you worked Prob. 1.16.) The plot thickens when we apply the divergence theorem to this function. Suppose we integrate over a sphere of radius <span class="math notranslate nohighlight">\(R\)</span>, centered at the origin (Prob. 1.38b); the surface integral is</p>
 <div class="math notranslate nohighlight" id="equation-eq1-85">
-<span class="eqno">(71)<a class="headerlink" href="#equation-eq1-85" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq1-85" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \oint \vec{v} \cdot \mathrm{d} \vec{a} &amp; = \int \left( \frac{1}{R^2} \hat{r} \right) \cdot (R^2 \sin \theta \mathrm{d} \theta \mathrm{d} \phi \hat{r}) \\
 &amp; = \left( \int_0 ^\pi \sin \theta \mathrm{d} \theta \right) \left( \int_0 ^{2 \pi} \mathrm{d} \phi \right) = 4 \pi 
 \end{aligned} 
 \end{split}\]</div>
-<p>But if we really believe <a class="reference internal" href="#equation-eq1-84">(70)</a>, then the volume integral <span class="math notranslate nohighlight">\( \int \nabla \cdot  \vec{v} \mathrm{d} \tau \)</span> must be zero. What the heck is going on here??</p>
-<p>The source of the problem is obviously the point <span class="math notranslate nohighlight">\( r = 0 \)</span> , where <span class="math notranslate nohighlight">\(\vec{v}\)</span> blows up (and where, in <a class="reference internal" href="#equation-eq1-84">(70)</a>, we have unwittingly divided by zero). It is quite true that <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{v} = 0 \)</span>  everywhere except the origin, but right at the origin the situation is more complicated. Notice that the surface integral (<a class="reference internal" href="#equation-eq1-85">(71)</a>) is independent of R; if the divergence theorem is right (and it is), we should get <span class="math notranslate nohighlight">\( \int (\nabla \cdot  \vec{v}) \mathrm{d} \tau = 4 \pi \)</span>  for any sphere centered at the origin, no matter how small. Evidently the entire contribution must be coming from the point <span class="math notranslate nohighlight">\( r = 0 \)</span> ! Thus, <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{v} \)</span>  has the bizarre property that it vanishes everywhere except at one point, and yet its integral (over any volume containing that point) is <span class="math notranslate nohighlight">\( 4 \pi \)</span> . No ordinary function behaves like that. (On the other hand, a physical example does come to mind: the density (mass per unit volume) of a point particle. It’s zero except at the exact location of the particle, and yet its integral is finite-namely, the mass of the particle.) What we have stumbled on is a mathematical object known to physicists as the Dirac delta function. It arises in many branches of theoretical physics. Moreover, the specific problem at hand (the divergence of the function <span class="math notranslate nohighlight">\( \hat{r} / r^2 \)</span> ) is not just some arcane curiosity - it is, in fact, central to the whole theory of electrodynamics. So it is worthwhile to pause here and study the Dirac delta function with some care.</p>
+<p>But if we really believe <a class="reference internal" href="#equation-eq1-84">(73)</a>, then the volume integral <span class="math notranslate nohighlight">\( \int \nabla \cdot  \vec{v} \mathrm{d} \tau \)</span> must be zero. What the heck is going on here??</p>
+<p>The source of the problem is obviously the point <span class="math notranslate nohighlight">\( r = 0 \)</span> , where <span class="math notranslate nohighlight">\(\vec{v}\)</span> blows up (and where, in <a class="reference internal" href="#equation-eq1-84">(73)</a>, we have unwittingly divided by zero). It is quite true that <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{v} = 0 \)</span>  everywhere except the origin, but right at the origin the situation is more complicated. Notice that the surface integral (<a class="reference internal" href="#equation-eq1-85">(74)</a>) is independent of R; if the divergence theorem is right (and it is), we should get <span class="math notranslate nohighlight">\( \int (\nabla \cdot  \vec{v}) \mathrm{d} \tau = 4 \pi \)</span>  for any sphere centered at the origin, no matter how small. Evidently the entire contribution must be coming from the point <span class="math notranslate nohighlight">\( r = 0 \)</span> ! Thus, <span class="math notranslate nohighlight">\( \nabla \cdot  \vec{v} \)</span>  has the bizarre property that it vanishes everywhere except at one point, and yet its integral (over any volume containing that point) is <span class="math notranslate nohighlight">\( 4 \pi \)</span> . No ordinary function behaves like that. (On the other hand, a physical example does come to mind: the density (mass per unit volume) of a point particle. It’s zero except at the exact location of the particle, and yet its integral is finite-namely, the mass of the particle.) What we have stumbled on is a mathematical object known to physicists as the Dirac delta function. It arises in many branches of theoretical physics. Moreover, the specific problem at hand (the divergence of the function <span class="math notranslate nohighlight">\( \hat{r} / r^2 \)</span> ) is not just some arcane curiosity - it is, in fact, central to the whole theory of electrodynamics. So it is worthwhile to pause here and study the Dirac delta function with some care.</p>
 </section>
 <section id="the-one-dimensional-dirac-delta-function">
 <h2>1.5.2: The One-Dimensional Dirac Delta Function<a class="headerlink" href="#the-one-dimensional-dirac-delta-function" title="Link to this heading">#</a></h2>
 <p>The one-dimensional Dirac delta function, <span class="math notranslate nohighlight">\( \delta(x) \)</span>, can be pictured as an infinitely high, infinitesimally narrow “spike,” with area 1 (Fig 1.45). That is to say:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-86">
-<span class="eqno">(72)<a class="headerlink" href="#equation-eq1-86" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq1-86" title="Link to this equation">#</a></span>\[\begin{split}
 \delta(x) = \begin{cases}
 0, &amp; \qquad \text{ if } x \neq 0 \\
 \infty , &amp; \qquad \text{ if } x = 0
@@ -497,7 +490,7 @@
 \end{split}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq1-87">
-<span class="eqno">(73)<a class="headerlink" href="#equation-eq1-87" title="Link to this equation">#</a></span>\[
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq1-87" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} \delta(x) \mathrm{d} x = 1 
 \]</div>
 <p><img alt="Figure 1.45" src="../../../_images/1.45.png" /></p>
@@ -505,39 +498,38 @@
 <p><img alt="Figure 1.46" src="../../../_images/1.46.png" /></p>
 <p>If <span class="math notranslate nohighlight">\( f(x) \)</span> is some “ordinary” function (let’s just say continuous, just to be safe), then the product <span class="math notranslate nohighlight">\( f(x) \delta(x) \)</span> is zero everywhere except at x = 0. It follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-88">
-<span class="eqno">(74)<a class="headerlink" href="#equation-eq1-88" title="Link to this equation">#</a></span>\[
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq1-88" title="Link to this equation">#</a></span>\[
 f(x) \delta(x) = f(0) \delta(x) 
 \]</div>
 <p>This is probably the most important fact about the delta function! Since the product is zero anyway except at x = 0, we may as well replace f(x) by the value it assumes at the origin. In particular,</p>
 <div class="math notranslate nohighlight" id="equation-eq1-89">
-<span class="eqno">(75)<a class="headerlink" href="#equation-eq1-89" title="Link to this equation">#</a></span>\[
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq1-89" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} f(x) \delta(x) \mathrm{d} x = f(0) \int_{-\infty} ^{\infty} \delta(x) \mathrm{d} x  = f(0) 
 \]</div>
 <p>Under an integral, then, the delta function “picks out” the value of f(x) at a particular point. Of course, the limits of integration need not be all space, as long as the origin is included. We can also shift the spike from x = 0 to some other point, x = a, as well (Fig 1.47)</p>
 <p><img alt="Figure 1.47" src="../../../_images/1.47.png" /></p>
 <div class="math notranslate nohighlight" id="equation-eq1-90">
-<span class="eqno">(76)<a class="headerlink" href="#equation-eq1-90" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq1-90" title="Link to this equation">#</a></span>\[\begin{split}
 \delta(x - a) = \begin{cases}
 0, &amp; \text{ if } x \neq a \\
 \infty , &amp; \text{ if } x = a
 \end{cases} \quad  \text{ with } \quad \int_{-\infty} ^{\infty} \delta(x - a) \mathrm{d} x = 1 
 \end{split}\]</div>
-<p>Equation <a class="reference internal" href="#equation-eq1-88">(74)</a> becomes</p>
+<p>Equation <a class="reference internal" href="#equation-eq1-88">(77)</a> becomes</p>
 <div class="math notranslate nohighlight">
 \[
 f(x) \delta(x - a) = f(a) \delta(x - a)
 \]</div>
-<p>and <a class="reference internal" href="#equation-eq1-89">(75)</a> generalizes to</p>
+<p>and <a class="reference internal" href="#equation-eq1-89">(78)</a> generalizes to</p>
 <div class="math notranslate nohighlight" id="equation-eq1-92">
-<span class="eqno">(77)<a class="headerlink" href="#equation-eq1-92" title="Link to this equation">#</a></span>\[
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1-92" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} f(x) \delta(x - a) \mathrm{d} x = f(a) 
 \]</div>
-<section id="example-1-14">
-<h3>Example 1.14<a class="headerlink" href="#example-1-14" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
+Example 1.14</label><div class="sd-tab-content docutils">
 <p>Evaluate the integral</p>
 <div class="math notranslate nohighlight">
 \[
@@ -546,23 +538,22 @@ Q</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
-<p>The delta function picks out the value of <span class="math notranslate nohighlight">\( x^3 \)</span> at the point x = 2, so the integral is <span class="math notranslate nohighlight">\( 2^3 = 8 \)</span>. Notice that if the limits of integration had not included x = 2, then the answer would be 0.</p>
+Solution</label><div class="sd-tab-content docutils">
+<p>The delta function picks out the value of <span class="math notranslate nohighlight">\( x^3 \)</span> at the point <span class="math notranslate nohighlight">\(x = 2\)</span>, so the integral is <span class="math notranslate nohighlight">\( 2^3 = 8 \)</span>. Notice that if the limits of integration had not included x = 2, then the answer would be 0.</p>
 </div>
 </div>
+<hr class="docutils" />
 <p>Although <span class="math notranslate nohighlight">\( \delta(x) \)</span> itself is not a legitimate function, integrals over <span class="math notranslate nohighlight">\( \delta \)</span> are perfectly acceptable. In fact, it’s best to think of the delta function as something that is <em>always intended for use under an integral sign</em>. In particular, two expressions involving delta functions are considered equal if</p>
 <div class="math notranslate nohighlight" id="equation-eq1-93">
-<span class="eqno">(78)<a class="headerlink" href="#equation-eq1-93" title="Link to this equation">#</a></span>\[
+<span class="eqno">(81)<a class="headerlink" href="#equation-eq1-93" title="Link to this equation">#</a></span>\[
 \int_{-\infty} ^{\infty} f(x) D_1 (x) \mathrm{d} x = \int_{-\infty} ^{\infty} f(x) D_2 (x) \mathrm{d} x 
 \]</div>
-<p>for all (“ordinary”) functions f(x).</p>
-</section>
-<section id="example-1-15">
-<h3>Example 1.15<a class="headerlink" href="#example-1-15" title="Link to this heading">#</a></h3>
+<p>for all (“ordinary”) functions <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
-Q</label><div class="sd-tab-content docutils">
+Example 1.15</label><div class="sd-tab-content docutils">
 <p>Show that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -572,7 +563,7 @@ Q</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>For an arbitrary test function f(x), consider the integral</p>
 <div class="math notranslate nohighlight">
 \[
@@ -588,56 +579,55 @@ A</label><div class="sd-tab-content docutils">
 \[
 \int_{-\infty} ^{\infty} f(x) \delta(kx) \mathrm{d} x = \int_{-\infty} ^{\infty} f(x) \left[ \frac{1}{|k|} \delta(x) \right] \mathrm{d} x
 \]</div>
-<p>According to our criterion <a class="reference internal" href="#equation-eq1-93">(78)</a>, therefore, <span class="math notranslate nohighlight">\( \delta(kx) \)</span> and <span class="math notranslate nohighlight">\( (1/|k|)\delta(x) \)</span> are equal.</p>
+<p>According to our criterion <a class="reference internal" href="#equation-eq1-93">(81)</a>, therefore, <span class="math notranslate nohighlight">\( \delta(kx) \)</span> and <span class="math notranslate nohighlight">\( (1/|k|)\delta(x) \)</span> are equal.</p>
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="the-three-dimensional-delta-function">
 <h2>The Three-Dimensional Delta Function<a class="headerlink" href="#the-three-dimensional-delta-function" title="Link to this heading">#</a></h2>
 <p>It is easy to generalize the delta function to three dimensions:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-96">
-<span class="eqno">(79)<a class="headerlink" href="#equation-eq1-96" title="Link to this equation">#</a></span>\[
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq1-96" title="Link to this equation">#</a></span>\[
 \delta ^3 (\vec{r}) = \delta(x) \delta(y) \delta(z) 
 \]</div>
 <p>This three-dimensional delta function is zero everywhere except at (0, 0, 0), where it blows up. Its volume integral is 1.</p>
 <div class="math notranslate nohighlight" id="equation-eq1-97">
-<span class="eqno">(80)<a class="headerlink" href="#equation-eq1-97" title="Link to this equation">#</a></span>\[
+<span class="eqno">(83)<a class="headerlink" href="#equation-eq1-97" title="Link to this equation">#</a></span>\[
 \int_{\text{all space}} \delta ^3 (\vec{r}) \mathrm{d} \tau = \int_{-\infty} ^{\infty} \mathrm{d} x \int_{-\infty} ^{\infty} \mathrm{d} y \int_{-\infty} ^{\infty} \mathrm{d} z \delta(x) \delta(y) \delta(z) = 1 
 \]</div>
-<p>And, generalizing <a class="reference internal" href="#equation-eq1-92">(77)</a></p>
+<p>And, generalizing <a class="reference internal" href="#equation-eq1-92">(80)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq1-98">
-<span class="eqno">(81)<a class="headerlink" href="#equation-eq1-98" title="Link to this equation">#</a></span>\[
+<span class="eqno">(84)<a class="headerlink" href="#equation-eq1-98" title="Link to this equation">#</a></span>\[
 \int_{\text{all space}} f(\vec{r}) \delta^3(\vec{r} - \vec{a}) \mathrm{d} \tau = f(\vec{a}) 
 \]</div>
 <p>As in the one-dimensional case, integration with <span class="math notranslate nohighlight">\( \delta \)</span>  picks out the value of the function f at the location of the spike.</p>
 <p>We are now in a position to resolve the paradox introduced in Sect. 1.5.1. As you will recall, we found that the divergence of <span class="math notranslate nohighlight">\( \hat{r}/r^2 \)</span>  is zero everywhere except at the origin, and yet its integral over any volume containing the origin is a constant (to wit: <span class="math notranslate nohighlight">\( 4\pi \)</span> ). These are precisely the defining conditions for the Dirac delta function; evidently</p>
 <div class="math notranslate nohighlight" id="equation-eq1-99">
-<span class="eqno">(82)<a class="headerlink" href="#equation-eq1-99" title="Link to this equation">#</a></span>\[
+<span class="eqno">(85)<a class="headerlink" href="#equation-eq1-99" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \left( \frac{\hat{r}}{r^2} \right) = 4 \pi \delta^3(\vec{r}) 
 \]</div>
 <p>More generally,</p>
 <!-- TODO: Figure out how to add the cursive r  -->
 <div class="math notranslate nohighlight" id="equation-eq1-100">
-<span class="eqno">(83)<a class="headerlink" href="#equation-eq1-100" title="Link to this equation">#</a></span>\[
+<span class="eqno">(86)<a class="headerlink" href="#equation-eq1-100" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \left( \frac{\hat{\rcurs }}{\rcurs ^2} \right) = 4 \pi \delta^3(\rcurs ) 
 \]</div>
-<p>where, as always, <span class="math notranslate nohighlight">\( \vec{\rcurs } \)</span> is the separation vector <span class="math notranslate nohighlight">\( \vec{\rcurs } \equiv \vec{r} - \vec{r'} \)</span>. Note that differentiation here is with respect to <span class="math notranslate nohighlight">\( \vec{r} \)</span>, while <span class="math notranslate nohighlight">\( \vec{r'} \)</span> is held constant. Incidentally, since</p>
+<p>where, as always, <span class="math notranslate nohighlight">\( \vec{\rcurs } \)</span> is the separation vector <span class="math notranslate nohighlight">\( \vec{\rcurs } \equiv \vec{r} - \vec{r}' \)</span>. Note that differentiation here is with respect to <span class="math notranslate nohighlight">\( \vec{r} \)</span>, while <span class="math notranslate nohighlight">\( \vec{r}' \)</span> is held constant. Incidentally, since</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla  \left( \frac{1}{\rcurs } \right) = - \frac{\hat{\rcurs }}{\rcurs  ^2} 
 \]</div>
 <p>(from Problem 1.13), it follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq1-102">
-<span class="eqno">(84)<a class="headerlink" href="#equation-eq1-102" title="Link to this equation">#</a></span>\[
+<span class="eqno">(87)<a class="headerlink" href="#equation-eq1-102" title="Link to this equation">#</a></span>\[
 \nabla^2 \frac{1}{\rcurs } = - 4 \pi \delta^3 (\vec{\rcurs }) 
 \]</div>
-<section id="example-1-16">
-<h3>Example 1.16<a class="headerlink" href="#example-1-16" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-4">
-Q</label><div class="sd-tab-content docutils">
+Example 1.16</label><div class="sd-tab-content docutils">
 <p>Evaluate the integral</p>
 <div class="math notranslate nohighlight">
 \[
@@ -647,16 +637,18 @@ J = \int_V (r^2 + 2) \nabla \cdot  \left( \frac{\hat{r}}{r^2} \right) \mathrm{d}
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
-A</label><div class="sd-tab-content docutils">
-<p><strong>Solution 1</strong>
-Use <a class="reference internal" href="#equation-eq1-99">(82)</a> to rewrite the divergence, and <a class="reference internal" href="#equation-eq1-98">(81)</a> to do the integral:</p>
+Solution 1</label><div class="sd-tab-content docutils">
+<p>Use <a class="reference internal" href="#equation-eq1-99">(85)</a> to rewrite the divergence, and <a class="reference internal" href="#equation-eq1-98">(84)</a> to do the integral:</p>
 <div class="math notranslate nohighlight">
 \[
 J = \int_V (r^2 + 2) 4 \pi \delta ^3(\vec{r}) \mathrm{d} \tau = 4 \pi (0 + 2) = 8 \pi
 \]</div>
 <p>This one-line solution demonstrates something of the power and beauty of the delta function, but I would like to show you a second method, which is much more cumbersome but serves to illustrate the method of integration by parts (Sect. 1.3.6).</p>
-<p><strong>Solution 2</strong></p>
-<p>Using Eq 1.59, we transfer the derivative from <span class="math notranslate nohighlight">\( \hat{r}/r^2 \)</span> to <span class="math notranslate nohighlight">\( (r^2 + 2) \)</span></p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+Solution 2</label><div class="sd-tab-content docutils">
+<p>Using <a class="reference internal" href="ch1-3.html#equation-eq1-59">(54)</a>, we transfer the derivative from <span class="math notranslate nohighlight">\( \hat{r}/r^2 \)</span> to <span class="math notranslate nohighlight">\( (r^2 + 2) \)</span></p>
 <div class="math notranslate nohighlight">
 \[
 J = - \int_V \frac{\hat{r}}{r^2} \cdot [\nabla (r^2 + 2)] \mathrm{d} \tau + \oint_S (r^2 + 2) \frac{\hat{r}}{r^2} \cdot \mathrm{d} \vec{a}
@@ -691,7 +683,7 @@ J = -4 \pi R^2 + r \pi (R^2 + 2) = 8 \pi
 </div></blockquote>
 </div>
 </div>
-</section>
+<hr class="docutils" />
 </section>
 </section>
 
@@ -704,16 +696,16 @@ J = -4 \pi R^2 + r \pi (R^2 + 2) = 8 \pi
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter01"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -762,15 +754,8 @@ J = -4 \pi R^2 + r \pi (R^2 + 2) = 8 \pi
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence-of-hat-r-r-2">1.5.1: The Divergence of <span class="math notranslate nohighlight">\( \hat{r} / r^2 \)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-dirac-delta-function">1.5.2: The One-Dimensional Dirac Delta Function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-14">Example 1.14</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-15">Example 1.15</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-dimensional-delta-function">The Three-Dimensional Delta Function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-16">Example 1.16</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-dirac-delta-function">1.5.2: The One-Dimensional Dirac Delta Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-dimensional-delta-function">The Three-Dimensional Delta Function</a></li>
 </ul>
   </nav></div>
 

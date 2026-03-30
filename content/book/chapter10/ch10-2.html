@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -471,27 +471,27 @@
 <p>and we know how to solve these</p>
 <div class="math notranslate nohighlight">
 \[
-V(\vec r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r')}{\Delta r } \mathrm{d} \tau' 
+V(\vec r) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r')}{\mathcal{R} } \mathrm{d} \tau' 
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\vec A(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec J (\vec r')}{\Delta r } \mathrm{d} \tau' 
+\vec A(r) = \frac{\mu_0}{4 \pi} \int \frac{\vec J (\vec r')}{\mathcal{R} } \mathrm{d} \tau' 
 \]</div>
-<p>We know that electromagnetic disturbances travel at the speed of light (at least in vacuum). So for general distributions of sources that may be changing in time, it’s not what the source is doing <em>right now</em> that matters - it’s what was happening at some earlier time (called the <strong>retarded time</strong>) when the “message” left. The information has traveled a distance <span class="math notranslate nohighlight">\( \Delta r  \)</span>, so the delay is <span class="math notranslate nohighlight">\( \Delta r  / c \)</span>, so the retarded time is</p>
+<p>We know that electromagnetic disturbances travel at the speed of light (at least in vacuum). So for general distributions of sources that may be changing in time, it’s not what the source is doing <em>right now</em> that matters - it’s what was happening at some earlier time (called the <strong>retarded time</strong>) when the “message” left. The information has traveled a distance <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span>, so the delay is <span class="math notranslate nohighlight">\( \mathcal{R}  / c \)</span>, so the retarded time is</p>
 <div class="math notranslate nohighlight">
 \[
-t_r \equiv t - \frac{\Delta r  }{c}
+t_r \equiv t - \frac{\mathcal{R}  }{c}
 \]</div>
 <p>So we can immediately generalize our solutions for the potentials of static sources to the <strong>retarded potentials</strong></p>
 <div class="math notranslate nohighlight">
 \[
-V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r', t_r)}{\Delta r } \mathrm{d} \tau'
+V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r', t_r)}{\mathcal{R} } \mathrm{d} \tau'
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\vec A(\vec r, t) = \frac{\mu_0}{4 \pi} \int \frac{\vec J(\vec r ', t_r)}{\Delta r } \mathrm{d} \tau '
+\vec A(\vec r, t) = \frac{\mu_0}{4 \pi} \int \frac{\vec J(\vec r ', t_r)}{\mathcal{R} } \mathrm{d} \tau '
 \]</div>
-<p>That wasn’t so bad! It can be shown that the retarded potentials satisfy the inhomogeneous wave equations and the Lorenz gauge condition, giving some much-needed credibility to our argument that EM “messages” travel at the speed of light. While the math involved might be quite nasty (remember that <span class="math notranslate nohighlight">\( \Delta r  \)</span> depends on <span class="math notranslate nohighlight">\( | \vec r - \vec r' | \)</span>), in principle it’s straightforward to determine the fields directly by</p>
+<p>That wasn’t so bad! It can be shown that the retarded potentials satisfy the inhomogeneous wave equations and the Lorenz gauge condition, giving some much-needed credibility to our argument that EM “messages” travel at the speed of light. While the math involved might be quite nasty (remember that <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span> depends on <span class="math notranslate nohighlight">\( | \vec r - \vec r' | \)</span>), in principle it’s straightforward to determine the fields directly by</p>
 <div class="math notranslate nohighlight">
 \[
 \vec E = - \nabla  V - \frac{\partial \vec A}{\partial t} \qquad \vec B = \nabla \times  \vec A
@@ -509,16 +509,16 @@ V(\vec r, t) = \frac{1}{4 \pi \epsilon_0} \int \frac{\rho(\vec r', t_r)}{\Delta 
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter10"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -531,16 +531,16 @@ E_z(x, y) = X(x) Y(y)
 <p>So plugging in:</p>
 <div class="math notranslate nohighlight">
 \[
-Y \dv{^2 X}{x^2} + X \dv{^2 Y}{y^2} + \left[(\omega / x)^2 - k^2 \right]XY = 0
+Y \frac{d^2 X}{dx^2} + X \frac{d^2 Y}{dy^2} + \left[(\omega / x)^2 - k^2 \right]XY = 0
 \]</div>
 <p>Separate out the X and Y terms</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{X} \dv{^2X}{x^2} = -k_x ^2
+\frac{1}{X} \frac{d^2X}{dx^2} = -k_x ^2
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{Y} \dv{^2Y}{y^2} = -k_y ^2
+\frac{1}{Y} \frac{d^2Y}{dy^2} = -k_y ^2
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
@@ -596,8 +596,8 @@ k = \sqrt{ \left( \frac{\omega}{c} \right) ^2 - \left( \frac{m \pi}{a} \right) ^
 \end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-v_g = \dv{\omega}{k} \\
- = \frac{1}{\dv{k}{\omega}}
+v_g = \frac{d\omega}{dk} \\
+ = \frac{1}{\frac{dk}{d\omega}}
  = \frac{1}{\frac{1}{c} \frac{2 \omega}{2 \sqrt{\omega^2 - \omega_{mn}^2}}} \\
  = \frac{c \sqrt{\omega^2 - \omega_{mn}^2}}{\omega} \\
  v_g = c \sqrt{1 - \frac{\omega_{mn}^2}{\omega^2}}
@@ -609,7 +609,7 @@ B_z(x, y) = X(x) Y(y)
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\frac{1}{x} \dv{^2 X}{x^2} = - k_x ^2 \\
+\frac{1}{x} \frac{d^2 X}{dx^2} = - k_x ^2 \\
 \rightarrow X(x) = A \sin k_x x + B \cos k_x x
 \end{split}\]</div>
 <p>Now, the boundary conditions say that</p>
@@ -702,16 +702,16 @@ v = \frac{c}{\sqrt{\epsilon / \epsilon_0}} = \frac{c}{\sqrt{2}}\\
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter09"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.3: The Divergence and Curl of B &#8212; Electrodynamics</title>
+    <title>5.3: The Divergence and Curl of \(\vec{B}\) &#8212; Electrodynamics</title>
   
   
   
@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 5: Magnetostatics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -428,7 +428,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>5.3: The Divergence and Curl of B</h1>
+    <h1>5.3: The Divergence and Curl of \vec{B}</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -439,14 +439,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#straight-line-currents">5.3.1: Straight-Line Currents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.2: The Divergence and Curl of B</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampere-s-law">5.3.3: Ampere’s Law</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-7">Example 5.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-8">Example 5.8</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-9">Example 5.9</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-10">Example 5.10</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.2: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampere-s-law">5.3.3: Ampere’s Law</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-magnetostatics-and-electrostatics">5.3.4: Comparison of Magnetostatics and Electrostatics</a></li>
 </ul>
             </nav>
@@ -459,13 +453,13 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="the-divergence-and-curl-of-b">
-<h1>5.3: The Divergence and Curl of B<a class="headerlink" href="#the-divergence-and-curl-of-b" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-divergence-and-curl-of-vec-b">
+<h1>5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span><a class="headerlink" href="#the-divergence-and-curl-of-vec-b" title="Link to this heading">#</a></h1>
 <section id="straight-line-currents">
 <h2>5.3.1: Straight-Line Currents<a class="headerlink" href="#straight-line-currents" title="Link to this heading">#</a></h2>
 <p>The magnetic field of an infinite straight wire is shown in Fig 5.27 (the current is coming out of the page). At a glance, it is clear that this field has a nonzero curl (something you’ll never see in an electrostatic field); let’s calculate it.</p>
 <p><img alt="Figure 5.27" src="../../../_images/5.27.png" /></p>
-<p>According to <a class="reference internal" href="ch5-2.html#equation-eq5-38">(331)</a>, the integral of <span class="math notranslate nohighlight">\(\vec{B}\)</span> around a circular path of radius <span class="math notranslate nohighlight">\(s\)</span>, centered at the wire, is</p>
+<p>According to <a class="reference internal" href="ch5-2.html#equation-eq5-38">(334)</a>, the integral of <span class="math notranslate nohighlight">\(\vec{B}\)</span> around a circular path of radius <span class="math notranslate nohighlight">\(s\)</span>, centered at the wire, is</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{B} \cdot \mathrm{d} l = \oint \frac{\mu_0 I}{2 \pi s}  = \frac{\mu_0 I}{2 \pi s } \oint \mathrm{d} l = \mu_0 I
@@ -478,12 +472,12 @@
 <p>This assumes that the loop encircles the wire exactly once; if it went around twice, then <span class="math notranslate nohighlight">\( \phi \)</span> would go from <span class="math notranslate nohighlight">\( 0 \)</span> to <span class="math notranslate nohighlight">\( 4 \pi \)</span>, and if it didn’t enclose the wire at all, then <span class="math notranslate nohighlight">\( \phi \)</span> would go from <span class="math notranslate nohighlight">\( \phi_1  \)</span> to <span class="math notranslate nohighlight">\( \phi_2 \)</span> and back again, with <span class="math notranslate nohighlight">\( \int \mathrm{d} \phi = 0 \)</span>  (Fig 5.28).</p>
 <p>Now suppose we have a bundle of straight wires. Each wire that passes through our loop contributes <span class="math notranslate nohighlight">\( \mu_0 I \)</span>, and those outside contribute nothing (Fig 5.29). The line integral will then be</p>
 <div class="math notranslate nohighlight" id="equation-eq5-44">
-<span class="eqno">(336)<a class="headerlink" href="#equation-eq5-44" title="Link to this equation">#</a></span>\[
+<span class="eqno">(339)<a class="headerlink" href="#equation-eq5-44" title="Link to this equation">#</a></span>\[
 \oint \vec{B} \cdot \mathrm{d} l = \mu_0 I_{enc} 
 \]</div>
 <p>where <span class="math notranslate nohighlight">\( I_{enc} \)</span> stands for the total current enclosed by the integration path. If the flow of charge is represented by a volume current density <span class="math notranslate nohighlight">\(\vec{J}\)</span>, the enclosed current is</p>
 <div class="math notranslate nohighlight" id="equation-eq5-45">
-<span class="eqno">(337)<a class="headerlink" href="#equation-eq5-45" title="Link to this equation">#</a></span>\[
+<span class="eqno">(340)<a class="headerlink" href="#equation-eq5-45" title="Link to this equation">#</a></span>\[
 I_{enc} = \int \vec{J} \cdot \mathrm{d} \vec{a} 
 \]</div>
 <p><img alt="Figure 5.28" src="../../../_images/5.28.png" /></p>
@@ -493,93 +487,93 @@ I_{enc} = \int \vec{J} \cdot \mathrm{d} \vec{a}
 \int (\nabla \times  \vec{B}) \cdot \mathrm{d} \vec{a} = \mu_0 \int \vec{J} \cdot \mathrm{d} \vec{a}
 \]</div>
 <p>and hence</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq5-46">
+<span class="eqno">(341)<a class="headerlink" href="#equation-eq5-46" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{B} = \mu_0 \vec{J}
 \]</div>
-<p>With minimal labor, we have actually obtained the general formula for the curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span>. But our derivation is seriously flawed by the restriction to infinite straight line currents (and combinations thereof). Most current configurations cannot be constructed out of infinite straight wires, and we have no right to assume that <code class="xref eq docutils literal notranslate"><span class="pre">eq5.46</span></code> applies to them. So the next section is devoted to the formal derivation of the divergence and curl of B, starting from the Biot-Savart law itself.</p>
+<p>With minimal labor, we have actually obtained the general formula for the curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span>. But our derivation is seriously flawed by the restriction to infinite straight line currents (and combinations thereof). Most current configurations cannot be constructed out of infinite straight wires, and we have no right to assume that <a class="reference internal" href="#equation-eq5-46">(341)</a> applies to them. So the next section is devoted to the formal derivation of the divergence and curl of B, starting from the Biot-Savart law itself.</p>
 </section>
 <section id="id1">
-<h2>5.3.2: The Divergence and Curl of B<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2>5.3.2: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>The Biot-Savart law for the general case of a volume current reads</p>
 <div class="math notranslate nohighlight" id="equation-eq5-47">
-<span class="eqno">(338)<a class="headerlink" href="#equation-eq5-47" title="Link to this equation">#</a></span>\[
-\vec{B}(\vec{r}) = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(r') \times \hat{\Delta r }}{\Delta r  ^2} \mathrm{d} \tau
+<span class="eqno">(342)<a class="headerlink" href="#equation-eq5-47" title="Link to this equation">#</a></span>\[
+\vec{B}(\vec{r}) = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(r') \times \hat{\mathcal{R} }}{\mathcal{R}  ^2} \mathrm{d} \tau
 \]</div>
-<p>This formula gives the magnetic field at a point r = (x, y, z) in terms of an integral over the current distribution <span class="math notranslate nohighlight">\( \vec{J} (x', y', z') \)</span> (Fig 5.30). It is best to be absolutely explicit at this stage:</p>
+<p>This formula gives the magnetic field at a point <span class="math notranslate nohighlight">\(\vec{r} = (x, y, z)\)</span> in terms of an integral over the current distribution <span class="math notranslate nohighlight">\( \vec{J} (x', y', z') \)</span> (Fig 5.30). It is best to be absolutely explicit at this stage:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\vec{B}\)</span> is a function of (x, y, z)</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{J}\)</span> is a function of (x’, y’, z’)</p></li>
-<li><p><span class="math notranslate nohighlight">\( \hat{\Delta r } = (x - x') \hat{x} + (y - y') \hat{y} + (z - z') \hat{z} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{B}\)</span> is a function of <span class="math notranslate nohighlight">\((x, y, z)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{J}\)</span> is a function of <span class="math notranslate nohighlight">\((x', y', z')\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( \hat{\mathcal{R} } = (x - x') \hat{x} + (y - y') \hat{y} + (z - z') \hat{z} \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( \mathrm{d} \tau' = dx' dy' dz' \)</span></p></li>
 </ul>
 <p>The integration is over the primed coordinates; the divergence and the curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span> are with respect to the unprimed coordinates.</p>
 <p><img alt="Figure 5.30" src="../../../_images/5.30.png" /></p>
-<p>Applying the divergence to <a class="reference internal" href="#equation-eq5-47">(338)</a> we obtain</p>
+<p>Applying the divergence to <a class="reference internal" href="#equation-eq5-47">(342)</a> we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq5-48">
-<span class="eqno">(339)<a class="headerlink" href="#equation-eq5-48" title="Link to this equation">#</a></span>\[
-\nabla \cdot  \vec{B} = \frac{\mu_0 }{4 \pi } \int \nabla \cdot  \left( \vec{J} \times \frac{\hat{\Delta r }}{\Delta r ^2} \right)\mathrm{d} \tau' 
+<span class="eqno">(343)<a class="headerlink" href="#equation-eq5-48" title="Link to this equation">#</a></span>\[
+\nabla \cdot  \vec{B} = \frac{\mu_0 }{4 \pi } \int \nabla \cdot  \left( \vec{J} \times \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \right)\mathrm{d} \tau' 
 \]</div>
 <p>With one of our product rules for divergences</p>
 <div class="math notranslate nohighlight" id="equation-eq5-49">
-<span class="eqno">(340)<a class="headerlink" href="#equation-eq5-49" title="Link to this equation">#</a></span>\[
-\nabla \cdot  \left( \vec{J} \times \frac{\hat{\Delta r }}{\Delta r ^2} \right) = \frac{\hat{\Delta r }}{\Delta r ^2} \cdot (\nabla \times  \vec{J}) - \vec{J} \cdot \left( \nabla \times  \frac{ \hat{\Delta r }}{\Delta r  ^2} \right) 
+<span class="eqno">(344)<a class="headerlink" href="#equation-eq5-49" title="Link to this equation">#</a></span>\[
+\nabla \cdot  \left( \vec{J} \times \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \right) = \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \cdot (\nabla \times  \vec{J}) - \vec{J} \cdot \left( \nabla \times  \frac{ \hat{\mathcal{R} }}{\mathcal{R}  ^2} \right) 
 \]</div>
-<p>But <span class="math notranslate nohighlight">\( \nabla \times  \vec{J} = 0 \)</span> because <span class="math notranslate nohighlight">\(\vec{J}\)</span> doesn’t depend on the unprimed variables, while <span class="math notranslate nohighlight">\( \nabla \times  ( \hat{\Delta r } / \Delta r  ^2) = 0 \)</span> (we’ve already explicitly worked that in Chapter 1), so</p>
+<p>But <span class="math notranslate nohighlight">\( \nabla \times  \vec{J} = 0 \)</span> because <span class="math notranslate nohighlight">\(\vec{J}\)</span> doesn’t depend on the unprimed variables, while <span class="math notranslate nohighlight">\( \nabla \times  ( \hat{\mathcal{R} } / \mathcal{R}  ^2) = 0 \)</span> (we’ve already explicitly worked that in Chapter 1), so</p>
 <div class="math notranslate nohighlight" id="equation-eq5-50">
-<span class="eqno">(341)<a class="headerlink" href="#equation-eq5-50" title="Link to this equation">#</a></span>\[
+<span class="eqno">(345)<a class="headerlink" href="#equation-eq5-50" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{B} = 0 
 \]</div>
 <p>Evidently, the <em>divergence</em> of the magnetic field is zero.</p>
-<p>Applying the curl to Eq 5.47, we obtain</p>
+<p>Applying the curl to <a class="reference internal" href="#equation-eq5-47">(342)</a>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq5-51">
-<span class="eqno">(342)<a class="headerlink" href="#equation-eq5-51" title="Link to this equation">#</a></span>\[
-\nabla \times  \vec{B} = \frac{\mu_0}{4 \pi} \int \nabla \times  \left( \vec{J} \times \frac{\hat{\Delta r }}{\Delta r  ^2} \right) \mathrm{d} \tau' 
+<span class="eqno">(346)<a class="headerlink" href="#equation-eq5-51" title="Link to this equation">#</a></span>\[
+\nabla \times  \vec{B} = \frac{\mu_0}{4 \pi} \int \nabla \times  \left( \vec{J} \times \frac{\hat{\mathcal{R} }}{\mathcal{R}  ^2} \right) \mathrm{d} \tau' 
 \]</div>
 <p>Again, our strategy is to expand the integrand, using the appropriate product rule - in this case one of those for curls</p>
 <div class="math notranslate nohighlight" id="equation-eq5-52">
-<span class="eqno">(343)<a class="headerlink" href="#equation-eq5-52" title="Link to this equation">#</a></span>\[
-\nabla \times  \left( \vec{J} \times \frac{\hat{\Delta r }}{\Delta r ^2} \right) = \vec{J} \left( \nabla \cdot  \frac{\hat{\Delta r }}{\Delta r  ^2} \right) - ( \vec{J} \cdot \nabla ) \frac{\hat{\Delta r }}{\Delta r ^2}
+<span class="eqno">(347)<a class="headerlink" href="#equation-eq5-52" title="Link to this equation">#</a></span>\[
+\nabla \times  \left( \vec{J} \times \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \right) = \vec{J} \left( \nabla \cdot  \frac{\hat{\mathcal{R} }}{\mathcal{R}  ^2} \right) - ( \vec{J} \cdot \nabla ) \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2}
 \]</div>
-<p>(I have dropped terms involving derivatives of <span class="math notranslate nohighlight">\(\vec{J}\)</span>, because <span class="math notranslate nohighlight">\(\vec{J}\)</span> does not depend on x, y, z.) The second term integrates to zero, as we’ll see in the next paragraph. The first term involves the divergence we were at pains to calculate in Chapter 1 (<a class="reference internal" href="../chapter01/ch1-5.html#equation-eq1-100">(83)</a>):</p>
+<p>(I have dropped terms involving derivatives of <span class="math notranslate nohighlight">\(\vec{J}\)</span>, because <span class="math notranslate nohighlight">\(\vec{J}\)</span> does not depend on <span class="math notranslate nohighlight">\(x, y, z\)</span>.) The second term integrates to zero, as we’ll see in the next paragraph. The first term involves the divergence we were at pains to calculate in Chapter 1 (<a class="reference internal" href="../chapter01/ch1-5.html#equation-eq1-100">(86)</a>):</p>
 <div class="math notranslate nohighlight" id="equation-eq5-53">
-<span class="eqno">(344)<a class="headerlink" href="#equation-eq5-53" title="Link to this equation">#</a></span>\[
-\nabla \cdot  \left( \frac{\hat{\Delta r }}{\Delta r ^2} \right) = 4 \pi \delta ^2(\Delta r ) 
+<span class="eqno">(348)<a class="headerlink" href="#equation-eq5-53" title="Link to this equation">#</a></span>\[
+\nabla \cdot  \left( \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \right) = 4 \pi \delta ^2(\mathcal{R} ) 
 \]</div>
 <p>Thus</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla \times  \vec{B} = \frac{\mu_0}{4 \pi} \int \vec{J}(r') 4 \pi \delta ^3 (\vec{r} - \vec{r'} \mathrm{d} \tau' = \mu_0 \vec{J} (\vec{r})
+\nabla \times  \vec{B} = \frac{\mu_0}{4 \pi} \int \vec{J}(r') 4 \pi \delta ^3 (\vec{r} - \vec{r}' \mathrm{d} \tau' = \mu_0 \vec{J} (\vec{r})
 \]</div>
-<p>which confirms that <code class="xref eq docutils literal notranslate"><span class="pre">eq5.46</span></code> is not restricted to straight-line currents, but holds quite generally in magnetostatics.</p>
-<p>To complete the argument, however, we must check that the second term in Eq 5.52 integrates to zero. Because the derivative acts only on <span class="math notranslate nohighlight">\( \hat{\Delta r } / \Delta r  ^2 \)</span>, we can switch from <span class="math notranslate nohighlight">\( \nabla  \)</span> to <span class="math notranslate nohighlight">\( \nabla ' \)</span> at the cost of a minus sign</p>
+<p>which confirms that <a class="reference internal" href="#equation-eq5-46">(341)</a> is not restricted to straight-line currents, but holds quite generally in magnetostatics.</p>
+<p>To complete the argument, however, we must check that the second term in <a class="reference internal" href="#equation-eq5-52">(347)</a> integrates to zero. Because the derivative acts only on <span class="math notranslate nohighlight">\( \hat{\mathcal{R} } / \mathcal{R}  ^2 \)</span>, we can switch from <span class="math notranslate nohighlight">\( \nabla  \)</span> to <span class="math notranslate nohighlight">\( \nabla ' \)</span> at the cost of a minus sign</p>
 <div class="math notranslate nohighlight" id="equation-eq5-54">
-<span class="eqno">(345)<a class="headerlink" href="#equation-eq5-54" title="Link to this equation">#</a></span>\[
--(\vec{J} \cdot \nabla ) \frac{\hat{\Delta r }}{\Delta r ^2} = (\vec{J} \cdot \nabla ' ) \frac{\hat{\Delta r }}{\Delta r ^2}  
+<span class="eqno">(349)<a class="headerlink" href="#equation-eq5-54" title="Link to this equation">#</a></span>\[
+-(\vec{J} \cdot \nabla ) \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} = (\vec{J} \cdot \nabla ' ) \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2}  
 \]</div>
 <p>The x component, in particular, is</p>
 <div class="math notranslate nohighlight">
 \[
-(\vec{J} \cdot \nabla ') \left( \frac{x - x' }{\Delta r  ^3}  \right) = \nabla ' \cdot \left( \frac{(x - x')}{\Delta r  ^3} \vec{J} \right) - \left( x - x' \Delta r  ^3  \right)(\nabla ' \cdot \vec{J})
+(\vec{J} \cdot \nabla ') \left( \frac{x - x' }{\mathcal{R}  ^3}  \right) = \nabla ' \cdot \left( \frac{(x - x')}{\mathcal{R}  ^3} \vec{J} \right) - \left( x - x' \mathcal{R}  ^3  \right)(\nabla ' \cdot \vec{J})
 \]</div>
 <p>Now, for steady currents the divergence of <span class="math notranslate nohighlight">\(\vec{J}\)</span> is zero, so</p>
 <div class="math notranslate nohighlight">
 \[
-\left( - (\vec{J} \cdot \nabla ) \frac{\hat{\Delta r }}{\Delta r ^2} \right)_{x} = \nabla ' \cdot \left( \frac{(x - x')}{\Delta r  ^3} \vec{J} \right)
+\left( - (\vec{J} \cdot \nabla ) \frac{\hat{\mathcal{R} }}{\mathcal{R} ^2} \right)_{x} = \nabla ' \cdot \left( \frac{(x - x')}{\mathcal{R}  ^3} \vec{J} \right)
 \]</div>
 <p>and therefore this contribution to the integral can be written</p>
 <div class="math notranslate nohighlight" id="equation-eq5-55">
-<span class="eqno">(346)<a class="headerlink" href="#equation-eq5-55" title="Link to this equation">#</a></span>\[
-\int_{V} \nabla ' \cdot \left( \frac{(x - x')}{\Delta r  ^3} \vec{J} \right) \mathrm{d} \tau' = \oint_S \frac{(x - x')}{\Delta r ^3} \vec{J} \cdot \mathrm{d} \vec{a'} 
+<span class="eqno">(350)<a class="headerlink" href="#equation-eq5-55" title="Link to this equation">#</a></span>\[
+\int_{V} \nabla ' \cdot \left( \frac{(x - x')}{\mathcal{R}  ^3} \vec{J} \right) \mathrm{d} \tau' = \oint_S \frac{(x - x')}{\mathcal{R} ^3} \vec{J} \cdot \mathrm{d} \vec{a'} 
 \]</div>
 <p>(The reason for switching from <span class="math notranslate nohighlight">\( \nabla  \)</span> to <span class="math notranslate nohighlight">\( \nabla ' \)</span> was to allow this integration by parts).</p>
-<p>But what region are we integrating over? Well, it’s the volume that appears in the Biot-Savart law (<a class="reference internal" href="#equation-eq5-47">(338)</a>) - large enough, that is, to include all the current. You can make it bigger than that, if you like; <span class="math notranslate nohighlight">\( \vec{J} = 0 \)</span> out there anyway, so it will add nothing to the integral. The essential point is that on the boundary the current is zero (all current is safely inside) and hence the surface integral (<a class="reference internal" href="#equation-eq5-55">(346)</a>) vanishes.</p>
+<p>But what region are we integrating over? Well, it’s the volume that appears in the Biot-Savart law (<a class="reference internal" href="#equation-eq5-47">(342)</a>) - large enough, that is, to include all the current. You can make it bigger than that, if you like; <span class="math notranslate nohighlight">\( \vec{J} = 0 \)</span> out there anyway, so it will add nothing to the integral. The essential point is that on the boundary the current is zero (all current is safely inside) and hence the surface integral (<a class="reference internal" href="#equation-eq5-55">(350)</a>) vanishes.</p>
 </section>
 <section id="ampere-s-law">
 <h2>5.3.3: Ampere’s Law<a class="headerlink" href="#ampere-s-law" title="Link to this heading">#</a></h2>
 <p>The equation for the curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq5-56">
-<span class="eqno">(347)<a class="headerlink" href="#equation-eq5-56" title="Link to this equation">#</a></span>\[
+<span class="eqno">(351)<a class="headerlink" href="#equation-eq5-56" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{B} = \mu_0 \vec{J} 
 \]</div>
 <p>is called <em>Ampere’s Law</em> (in differential form). It can be converted to integral form by the usual device of applying one of the fundamental theorems - in this case Stokes’ theorem:</p>
@@ -589,24 +583,23 @@ I_{enc} = \int \vec{J} \cdot \mathrm{d} \vec{a}
 \]</div>
 <p>Now, <span class="math notranslate nohighlight">\( \int \vec{J} \cdot \mathrm{d} \vec{a} \)</span> is the total current passing through the surface (Fig. 5.31), which we call <span class="math notranslate nohighlight">\( I_{enc} \)</span> (the current enclosed by the Amperian loop). Thus</p>
 <div class="math notranslate nohighlight" id="equation-eq5-57">
-<span class="eqno">(348)<a class="headerlink" href="#equation-eq5-57" title="Link to this equation">#</a></span>\[
+<span class="eqno">(352)<a class="headerlink" href="#equation-eq5-57" title="Link to this equation">#</a></span>\[
 \oint \vec{B} \cdot \mathrm{d} \vec{l} = \mu_0 I_{enc} 
 \]</div>
 <p><img alt="Figure 5.31" src="../../../_images/5.31.png" /></p>
-<p>This is the integral version of Ampere’s law; it generalizes Eq 5.44 to arbitrary steady currents. Notice that Eq 5.57 inherits the sign ambiguity of Stokes’ theorem: which <em>way</em> around the loop am I supposed to go? And which direction through the surface corresponds to a “positive” current? The resolution, as always, is the right-hand rule: If the fingers of your right hand indicate the direction of integration around the boundary, then your thumb defines the direction of a positive current.</p>
+<p>This is the integral version of Ampere’s law; it generalizes <a class="reference internal" href="#equation-eq5-44">(339)</a> to arbitrary steady currents. Notice that <a class="reference internal" href="#equation-eq5-57">(352)</a> inherits the sign ambiguity of Stokes’ theorem: which <em>way</em> around the loop am I supposed to go? And which direction through the surface corresponds to a “positive” current? The resolution, as always, is the right-hand rule: If the fingers of your right hand indicate the direction of integration around the boundary, then your thumb defines the direction of a positive current.</p>
 <p>Just as the Biot-Savart law plays a role in magnetostatics that Coulomb’s law assumed in electrostatics, so Ampere’s plays the part of Gauss’s. In particular, for currents with appropriate symmetry, Ampere’s law in integral form offers a lovely and extraordinarily efficient way of calculating the magnetic field.</p>
 <p><img alt="Figure 5.32" src="../../../_images/5.32.png" /></p>
-<section id="example-5-7">
-<h3>Example 5.7<a class="headerlink" href="#example-5-7" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
-<p>Find the magnetic field a distance s from a long straight wire (Fig 5.32), carrying a steady current I (the same problem from the previous section, in which we used the Biot-Savart law)</p>
+Example 5.7</label><div class="sd-tab-content docutils">
+<p>Find the magnetic field a distance <span class="math notranslate nohighlight">\(s\)</span> from a long straight wire (Fig 5.32), carrying a steady current <span class="math notranslate nohighlight">\(I\)</span> (the same problem from the previous section, in which we used the Biot-Savart law)</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>We know the direction of <span class="math notranslate nohighlight">\(\vec{B}\)</span> is “circumferential,” circling around the wire as indicated by the right-hand rule. By symmetry, the magnitude of <span class="math notranslate nohighlight">\(\vec{B}\)</span> is constant around an Amperian loop of radius <span class="math notranslate nohighlight">\(s\)</span>, centered on the wire. So Ampere’s law gives</p>
 <div class="math notranslate nohighlight">
 \[
@@ -617,30 +610,29 @@ A</label><div class="sd-tab-content docutils">
 \[
 B = \frac{\mu_0 I}{2 \pi s} 
 \]</div>
-<p>This is the same answer we got before (<a class="reference internal" href="ch5-2.html#equation-eq5-38">(331)</a>), but it was way easier to obtain this time.</p>
+<p>This is the same answer we got before (<a class="reference internal" href="ch5-2.html#equation-eq5-38">(334)</a>), but it was way easier to obtain this time.</p>
 </div>
 </div>
-</section>
-<section id="example-5-8">
-<h3>Example 5.8<a class="headerlink" href="#example-5-8" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
-Q</label><div class="sd-tab-content docutils">
-<p>Find the magnetic field of an infinite uniform surface current <span class="math notranslate nohighlight">\( \vec{K} = K \hat{x} \)</span>, flowing over the xy plane (Fig 5.33)</p>
+Example 5.8</label><div class="sd-tab-content docutils">
+<p>Find the magnetic field of an infinite uniform surface current <span class="math notranslate nohighlight">\( \vec{K} = K \hat{x} \)</span>, flowing over the <span class="math notranslate nohighlight">\(xy\)</span> plane (Fig 5.33)</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
-A</label><div class="sd-tab-content docutils">
-<p>First of all, what is the direction of B? Could it have any x component? No: A glance at the Biot-Savart law (<a class="reference internal" href="ch5-2.html#equation-eq5-42">(335)</a>) reveals that B is perpendicular to K. Could it have a z component? No again. You could confirm this by noting that any vertical contribution from a filament at +y is canceled by the corresponding filament at - y. But there is a nicer argument: Suppose the field pointed away from the plane. By reversing the direction of the current, I could make it point toward the plane (in the Biot-Savart law, changing the sign of the current switches the sign of the field). But the z component of B cannot possibly depend on the direction of the current in the xy plane. (Think about it!) So B can only have a y component, and a quick check with your right hand should convince you that it points to the left above the plane and to the right below it.</p>
-<p>With this in mind, we draw a rectangular Amperian loop as shown in Fig. 5.33, parallel to the yz plane and extending an equal distance above and below the surface. Applying Ampere’s law,</p>
+Solution</label><div class="sd-tab-content docutils">
+<p>First of all, what is the direction of <span class="math notranslate nohighlight">\(\vec{B}\)</span>? Could it have any <span class="math notranslate nohighlight">\(x\)</span> component? No: A glance at the Biot-Savart law (<a class="reference internal" href="ch5-2.html#equation-eq5-42">(338)</a>) reveals that <span class="math notranslate nohighlight">\(\vec{B}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\vec{K}\)</span>. Could it have a <span class="math notranslate nohighlight">\(z\)</span> component? No again. You could confirm this by noting that any vertical contribution from a filament at <span class="math notranslate nohighlight">\(+y\)</span> is canceled by the corresponding filament at <span class="math notranslate nohighlight">\(-y\)</span>. But there is a nicer argument: Suppose the field pointed away from the plane. By reversing the direction of the current, I could make it point toward the plane (in the Biot-Savart law, changing the sign of the current switches the sign of the field). But the <span class="math notranslate nohighlight">\(z\)</span> component of <span class="math notranslate nohighlight">\(\vec{B}\)</span> cannot possibly depend on the direction of the current in the <span class="math notranslate nohighlight">\(xy\)</span> plane. (Think about it!) So <span class="math notranslate nohighlight">\(\vec{B}\)</span> can only have a <span class="math notranslate nohighlight">\(y\)</span> component, and a quick check with your right hand should convince you that it points to the left above the plane and to the right below it.</p>
+<p>With this in mind, we draw a rectangular Amperian loop as shown in Fig. 5.33, parallel to the <span class="math notranslate nohighlight">\(yz\)</span> plane and extending an equal distance above and below the surface. Applying Ampere’s law,</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{B} \cdot \mathrm{d} \vec{l} = 2 B l = \mu_0 I_{enc} = \mu_0 K l
 \]</div>
-<p>(One Bl comes from the top segment and the other from the bottom), so <span class="math notranslate nohighlight">\( B = (\mu_0 / 2) K \)</span>, or, more precisely</p>
+<p>(One <span class="math notranslate nohighlight">\(Bl\)</span> comes from the top segment and the other from the bottom), so <span class="math notranslate nohighlight">\( B = (\mu_0 / 2) K \)</span>, or, more precisely</p>
 <div class="math notranslate nohighlight" id="equation-eq5-58">
-<span class="eqno">(349)<a class="headerlink" href="#equation-eq5-58" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(353)<a class="headerlink" href="#equation-eq5-58" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{B} = \begin{cases}
 +(\mu_0 / 2) K \hat{y} \quad &amp; \text{ for } z &lt; 0 \\
 - (\mu_0 / 2) K \hat{y} \quad &amp; \text{ for } z &gt; 0
@@ -649,27 +641,26 @@ A</label><div class="sd-tab-content docutils">
 <p>Notice that the field is independent of the distance from the plane, just like the electric field of a uniform surface charge.</p>
 </div>
 </div>
-</section>
-<section id="example-5-9">
-<h3>Example 5.9<a class="headerlink" href="#example-5-9" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-4">
-Q</label><div class="sd-tab-content docutils">
-<p>Find the magnetic field of a very long solenoid, consisting of n closely wound turns per unit length on a cylinder of radius R, each carrying a steady current I (Fig 5.34). [The point of making the windings so close is that one can then pretend each turn is circular. If this troubles you (after all, there is a net current I in the direction of the solenoid’s axis, no matter how tight the winding), picture instead a sheet of aluminum foil wrapped around the cylinder, carrying the equivalent of a uniform surface current K = nI (Fig 5.35). Or make a double winding, going up to one end and then - always in the same sense - going back down again, thereby eliminating the net longitudinal current. But, in truth, this is all unnecessary fastidiousness, for the field inside a solenoid is huge (relatively speaking), and the field of the longitudinal current is at most a tiny refinement.</p>
+Example 5.9</label><div class="sd-tab-content docutils">
+<p>Find the magnetic field of a very long solenoid, consisting of <span class="math notranslate nohighlight">\(n\)</span> closely wound turns per unit length on a cylinder of radius <span class="math notranslate nohighlight">\(R\)</span>, each carrying a steady current <span class="math notranslate nohighlight">\(I\)</span> (Fig 5.34). [The point of making the windings so close is that one can then pretend each turn is circular. If this troubles you (after all, there is a net current <span class="math notranslate nohighlight">\(I\)</span> in the direction of the solenoid’s axis, no matter how tight the winding), picture instead a sheet of aluminum foil wrapped around the cylinder, carrying the equivalent of a uniform surface current <span class="math notranslate nohighlight">\(K = nI\)</span> (Fig 5.35). Or make a double winding, going up to one end and then - always in the same sense - going back down again, thereby eliminating the net longitudinal current. But, in truth, this is all unnecessary fastidiousness, for the field inside a solenoid is huge (relatively speaking), and the field of the longitudinal current is at most a tiny refinement.]</p>
 <p><img alt="Figure 5.34" src="../../../_images/5.34.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
-A</label><div class="sd-tab-content docutils">
-<p>First of all, what is the direction of <span class="math notranslate nohighlight">\(\vec{B}\)</span>? Could it have a radial component? No. For suppose <span class="math notranslate nohighlight">\( B_s \)</span> were positive; if we reversed the direction of the current, <span class="math notranslate nohighlight">\( B_s \)</span> would then be negative. But switching I is physically equivalent to turning the solenoid upside down, and that certainly should not alter the radial field. How about a “circumferential” component? No. For <span class="math notranslate nohighlight">\( B_{\phi} \)</span>  would be constant around an Amperian loop concentric with the solenoid (Fig. 5.36), and hence</p>
+Solution</label><div class="sd-tab-content docutils">
+<p>First of all, what is the direction of <span class="math notranslate nohighlight">\(\vec{B}\)</span>? Could it have a radial component? No. For suppose <span class="math notranslate nohighlight">\( B_s \)</span> were positive; if we reversed the direction of the current, <span class="math notranslate nohighlight">\( B_s \)</span> would then be negative. But switching <span class="math notranslate nohighlight">\(I\)</span> is physically equivalent to turning the solenoid upside down, and that certainly should not alter the radial field. How about a “circumferential” component? No. For <span class="math notranslate nohighlight">\( B_{\phi} \)</span>  would be constant around an Amperian loop concentric with the solenoid (Fig. 5.36), and hence</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{B} \cdot \mathrm{d} \vec{l} = B_{\phi} (2 \pi s) = \mu_0 I_{enc} = 0
 \]</div>
 <p>since the loop encloses no current.</p>
 <p><img alt="Figure 5.36" src="../../../_images/5.36.png" /></p>
-<p>So, the magnetic field of an infinite, closely wound solenoid runs parallel to the axis. From the right-hand rule, we expect that it points inside the solenoid and downward outside. Moreover, it certainly approaches zero as you go very far away. With this in mind, let’s apply Ampere’s law to the two rectangular loops in Fig 5.37. Loop 1 lies entirely outside the solenoid, with its sides at distances a and b from the axis:</p>
+<p>So, the magnetic field of an infinite, closely wound solenoid runs parallel to the axis. From the right-hand rule, we expect that it points inside the solenoid and downward outside. Moreover, it certainly approaches zero as you go very far away. With this in mind, let’s apply Ampere’s law to the two rectangular loops in Fig 5.37. Loop 1 lies entirely outside the solenoid, with its sides at distances <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> from the axis:</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{B} \cdot \mathrm{d} \vec{l} = [ B(a) - B(b)] L = \mu_0 I_{enc} = 0
@@ -679,23 +670,24 @@ A</label><div class="sd-tab-content docutils">
 \[
 B(a) = B(b)
 \]</div>
-<p>Evidently the field outside does not depend on the distance from the axis. But we agreed that it goes to zero for large s. It must therefore be zero everywhere! (This astonishing result can also be derived from the Biot-Savart law, of course, but it’s much more difficult. See Prob. 5.46.)</p>
+<p>Evidently the field outside does not depend on the distance from the axis. But we agreed that it goes to zero for large <span class="math notranslate nohighlight">\(s\)</span>. It must therefore be zero everywhere! (This astonishing result can also be derived from the Biot-Savart law, of course, but it’s much more difficult. See Prob. 5.46.)</p>
 <p>As for loop 2, which is half inside and half outside, Ampere’s law gives</p>
 <div class="math notranslate nohighlight">
 \[
 \oint \vec{B} \cdot \mathrm{d} \vec{l} = B L = \mu_0 I_{enc} = \mu_0 n I L
 \]</div>
-<p>where B is the field inside the solenoid. (The right side of the loop contributes nothing, since B = 0 out there.) Conclusion:</p>
+<p>where <span class="math notranslate nohighlight">\(B\)</span> is the field inside the solenoid. (The right side of the loop contributes nothing, since <span class="math notranslate nohighlight">\(B = 0\)</span> out there.) Conclusion:</p>
 <div class="math notranslate nohighlight" id="equation-eq5-59">
-<span class="eqno">(350)<a class="headerlink" href="#equation-eq5-59" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(354)<a class="headerlink" href="#equation-eq5-59" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{B} = 
 \begin{cases}
 \mu_0 n I \hat{z} &amp; \quad \text{ inside the solenoid } \\
 0 &amp; \quad \text{ outside the solenoid }
 \end{cases}\end{split}\]</div>
-<p>Notice that the field inside is uniform - it doesn’t depend on the distance from the axis. In this sense the solenoid is to magnetostatics what the parallel-plate capacitor is to electrostatics: a simple device for producing strong uniform fields.</p>
+<p>Notice that the field inside is <em>uniform</em> - it doesn’t depend on the distance from the axis. In this sense the solenoid is to magnetostatics what the parallel-plate capacitor is to electrostatics: a simple device for producing strong uniform fields.</p>
 </div>
 </div>
+<hr class="docutils" />
 <p>Like Gauss’s law, Ampere’s law is always true (for steady currents), but it is not always useful. Only when the symmetry of the problem enables you to pull <span class="math notranslate nohighlight">\(\vec{B}\)</span> outside the integral <span class="math notranslate nohighlight">\( \oint \vec{B} \cdot \mathrm{d} \vec{l} \)</span>  can you calculate the magnetic field from Ampere’s law. When it does work, it’s by far the fastest method; when it doesn’t, you have to fall back on the Biot-Savart law. The current configurations that can be handled by Ampere’s law are</p>
 <ol class="arabic simple">
 <li><p>Infinite straight lines (Ex 5.7)</p></li>
@@ -704,34 +696,32 @@ B(a) = B(b)
 <li><p>Toroids (Ex 5.10)</p></li>
 </ol>
 <p>The last of these is a surprising and elegant application of Ampere’s law. As in Exs. 5.8 and 5.9, the hard part is figuring out the direction of the field (which we will now have done, once and for all, for each of the four geometries); the actual application of Ampere’s law takes only one line.</p>
-</section>
-<section id="example-5-10">
-<h3>Example 5.10<a class="headerlink" href="#example-5-10" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-6">
-Q</label><div class="sd-tab-content docutils">
+Example 5.10</label><div class="sd-tab-content docutils">
 <p>A toroidal coil consists of a circular ring, or ‘donut,’ around which a long wire is wrapped (Fig 5.38). The winding is uniform and tight enough so that each turn can be considered a plane closed loop. The cross-sectional shape of the coil is immaterial; I made it rectangular in Fig 5.38 for the sake of simplicity, but it could just as well be circular or even some weird asymmetrical form, as in Fig 5.39, as long as the shape remains the same all the way around the ring. In that case, it follows that the magnetic field of the toroid is circumferential at all points, both inside and outside the coil.</p>
 <p><img alt="Figure 5.38" src="../../../_images/5.38.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-7">
-A</label><div class="sd-tab-content docutils">
-<p>According to the Biot-Savart law, the field at <span class="math notranslate nohighlight">\(\vec{r}\)</span> due to the current element at <strong>r’</strong> is</p>
+Solution</label><div class="sd-tab-content docutils">
+<p>According to the Biot-Savart law, the field at <span class="math notranslate nohighlight">\(\vec{r}\)</span> due to the current element at <span class="math notranslate nohighlight">\(\vec{r'}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{d} \vec{B} = \frac{\mu_0 }{4 \pi} \frac{\vec{I} \times \hat{\Delta r }}{\Delta r  ^3} \mathrm{d} l'
+\mathrm{d} \vec{B} = \frac{\mu_0 }{4 \pi} \frac{\vec{I} \times \hat{\mathcal{R} }}{\mathcal{R}  ^3} \mathrm{d} l'
 \]</div>
-<p>We may as well put <span class="math notranslate nohighlight">\(\vec{r}\)</span> in the xz plane (Fig 5.39), so its Cartesian components are (x, 0, z), while the source coordinates are</p>
+<p>We may as well put <span class="math notranslate nohighlight">\(\vec{r}\)</span> in the <span class="math notranslate nohighlight">\(xz\)</span> plane (Fig 5.39), so its Cartesian components are <span class="math notranslate nohighlight">\((x, 0, z)\)</span>, while the source coordinates are</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{r'} = (s' \cos \phi', s' \sin \phi', z')
+\vec{r}' = (s' \cos \phi', s' \sin \phi', z')
 \]</div>
-<p><img alt="Figure 5.39" src="../../../_images/5.39.png" />
-Then</p>
+<p><img alt="Figure 5.39" src="../../../_images/5.39.png" /></p>
+<p>Then</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta r  = (x - s' \cos \phi', -s' \sin \phi', z - z')
+\mathcal{R}  = (x - s' \cos \phi', -s' \sin \phi', z - z')
 \]</div>
 <p>Since the current has no <span class="math notranslate nohighlight">\( \phi \)</span>  component, <span class="math notranslate nohighlight">\( \vec{I} = I_s \hat{x} + I_z \hat{z} \)</span>, or (in Cartesian coordinates)</p>
 <div class="math notranslate nohighlight">
@@ -741,14 +731,14 @@ Then</p>
 <p>Accordingly,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\vec{I} \times \vec{\Delta r } = \begin{bmatrix}
+\vec{I} \times \vec{\mathcal{R} } = \begin{bmatrix}
 \hat{x} &amp; \hat{y} &amp; \hat{z} \\
 I_s \cos \phi' &amp; I_s \sin \phi' &amp; I_z \\
 (x - s' \cos \phi') &amp; (- s' \sin \phi') &amp; (z - z')
 \end{bmatrix} \\
 = [ \sin \phi' (I_s (z - z') + s' I_z)] \hat{x} + [I_z (x - s' \cos \phi') - I_s \cos \phi' (z - z')] \hat{y} + [-I_s x \sin \phi']\hat{z}
 \end{split}\]</div>
-<p>But there is a symmetrically situated current element at <strong>r’’</strong>, with the same <span class="math notranslate nohighlight">\( s' \)</span> , the same <span class="math notranslate nohighlight">\( \Delta r  \)</span>, the same <span class="math notranslate nohighlight">\( dl' \)</span>, the same <span class="math notranslate nohighlight">\( I_s \)</span>, and the same <span class="math notranslate nohighlight">\( I_z \)</span>, but <em>negative</em> <span class="math notranslate nohighlight">\( \phi' \)</span> (Fig 5.39). Because <span class="math notranslate nohighlight">\( \sin \phi' \)</span> changes sign, the <span class="math notranslate nohighlight">\( \hat{x} \)</span> and <span class="math notranslate nohighlight">\( \hat{z} \)</span> contributions from <span class="math notranslate nohighlight">\( \hat{r'} \)</span> and <span class="math notranslate nohighlight">\( \hat{r''} \)</span> cancel each other, leaving only a <span class="math notranslate nohighlight">\( \hat{y} \)</span> term. Thus the field at <span class="math notranslate nohighlight">\( \hat{r} \)</span> is in the <span class="math notranslate nohighlight">\( \hat{y} \)</span> direction, and in general the field points in the <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> direction.</p>
+<p>But there is a symmetrically situated current element at <span class="math notranslate nohighlight">\(\vec{r}''\)</span>, with the same <span class="math notranslate nohighlight">\( s' \)</span> , the same <span class="math notranslate nohighlight">\( \mathcal{R}  \)</span>, the same <span class="math notranslate nohighlight">\( dl' \)</span>, the same <span class="math notranslate nohighlight">\( I_s \)</span>, and the same <span class="math notranslate nohighlight">\( I_z \)</span>, but <em>negative</em> <span class="math notranslate nohighlight">\( \phi' \)</span> (Fig 5.39). Because <span class="math notranslate nohighlight">\( \sin \phi' \)</span> changes sign, the <span class="math notranslate nohighlight">\( \hat{x} \)</span> and <span class="math notranslate nohighlight">\( \hat{z} \)</span> contributions from <span class="math notranslate nohighlight">\( \hat{r'} \)</span> and <span class="math notranslate nohighlight">\( \hat{r''} \)</span> cancel each other, leaving only a <span class="math notranslate nohighlight">\( \hat{y} \)</span> term. Thus the field at <span class="math notranslate nohighlight">\( \hat{r} \)</span> is in the <span class="math notranslate nohighlight">\( \hat{y} \)</span> direction, and in general the field points in the <span class="math notranslate nohighlight">\( \hat{\phi} \)</span> direction.</p>
 <p>Now that we know the field is circumferential, determining its magnitude is simple: just apply Ampere’s law to a circle of radius s about the axis of the toroid</p>
 <div class="math notranslate nohighlight">
 \[
@@ -756,17 +746,17 @@ B 2 \pi s = \mu_0 I_{enc}
 \]</div>
 <p>and hence</p>
 <div class="math notranslate nohighlight" id="equation-eq5-60">
-<span class="eqno">(351)<a class="headerlink" href="#equation-eq5-60" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(355)<a class="headerlink" href="#equation-eq5-60" title="Link to this equation">#</a></span>\[\begin{split}
 \vec{B}(\vec{r}) = \begin{cases}
 \frac{\mu_0 N I}{2 \pi s} \hat{\phi} \quad &amp; \text{ for points inside the coil} \\
 0 \quad &amp; \text{ for points outside the coil}
 \end{cases} 
 \end{split}\]</div>
-<p>where N is the total number of turns.</p>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the total number of turns.</p>
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="comparison-of-magnetostatics-and-electrostatics">
 <h2>5.3.4: Comparison of Magnetostatics and Electrostatics<a class="headerlink" href="#comparison-of-magnetostatics-and-electrostatics" title="Link to this heading">#</a></h2>
 <p>The divergence and curl of the electrostatic field are</p>
@@ -805,16 +795,16 @@ B 2 \pi s = \mu_0 I_{enc}
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter05"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -863,14 +853,8 @@ B 2 \pi s = \mu_0 I_{enc}
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#straight-line-currents">5.3.1: Straight-Line Currents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.2: The Divergence and Curl of B</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampere-s-law">5.3.3: Ampere’s Law</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-7">Example 5.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-8">Example 5.8</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-9">Example 5.9</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-10">Example 5.10</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.2: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampere-s-law">5.3.3: Ampere’s Law</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-magnetostatics-and-electrostatics">5.3.4: Comparison of Magnetostatics and Electrostatics</a></li>
 </ul>
   </nav></div>

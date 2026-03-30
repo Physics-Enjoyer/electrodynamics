@@ -54,7 +54,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -456,7 +456,7 @@
 <section id="the-helmholtz-theorem">
 <h2>1.6.1: The Helmholtz Theorem<a class="headerlink" href="#the-helmholtz-theorem" title="Link to this heading">#</a></h2>
 <p>Ever since Faraday, the laws of electricity and magnetism have been expressed in terms of <em>electric</em> and <em>magnetic</em> fields, <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>. Like many physical laws, these are most compactly expressed as differential equations. Since <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span> are vectors, the differential equations naturally involve vector derivatives: divergence and curl. Indeed, Maxwell reduced the entire theory to four equations, specifying respectively the divergence and the curl of <span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
-<p>Maxwell’s formulation raises an important mathematical question: To what extent is a vector function determined by its divergence and curl? In other words, if I tell you that the divergence of <span class="math notranslate nohighlight">\(\vec{F}\)</span> (which stands for <span class="math notranslate nohighlight">\(\vec{E}\)</span> or <span class="math notranslate nohighlight">\(\vec{B}\)</span>, as the case may be) is a specified (scalar) function D,</p>
+<p>Maxwell’s formulation raises an important mathematical question: To what extent is a vector function determined by its divergence and curl? In other words, if I tell you that the divergence of <span class="math notranslate nohighlight">\(\vec{F}\)</span> (which stands for <span class="math notranslate nohighlight">\(\vec{E}\)</span> or <span class="math notranslate nohighlight">\(\vec{B}\)</span>, as the case may be) is a specified (scalar) function <span class="math notranslate nohighlight">\(D\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot  \vec{F} = D
@@ -471,9 +471,9 @@
 </section>
 <section id="potentials">
 <h2>1.6.2: Potentials<a class="headerlink" href="#potentials" title="Link to this heading">#</a></h2>
-<p>If the curl of a vector field (<span class="math notranslate nohighlight">\(\vec{F}\)</span>) vanishes (everywhere), then <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be written as the gradient of a <strong>scalar potential</strong> (V):</p>
+<p>If the curl of a vector field (<span class="math notranslate nohighlight">\(\vec{F}\)</span>) vanishes (everywhere), then <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be written as the gradient of a <strong>scalar potential</strong> (<span class="math notranslate nohighlight">\(V\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-103">
-<span class="eqno">(85)<a class="headerlink" href="#equation-eq1-103" title="Link to this equation">#</a></span>\[
+<span class="eqno">(88)<a class="headerlink" href="#equation-eq1-103" title="Link to this equation">#</a></span>\[
 \nabla \times  \vec{F} = 0 \Longleftrightarrow \vec{F} = - \nabla  V 
 \]</div>
 <p>(The minus sign is purely conventional.) That’s the essential burden of the following theorem:</p>
@@ -500,7 +500,7 @@
 <p>The potential is not unique, and any constant can be added to V with impunity, since this will not affect its gradient.</p>
 <p>If the divergence of a vector field (<span class="math notranslate nohighlight">\(\vec{F}\)</span>) vanishes (everywhere), then <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be expressed as the curl of a <strong>vector potential</strong> (<span class="math notranslate nohighlight">\(\vec{A}\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq1-104">
-<span class="eqno">(86)<a class="headerlink" href="#equation-eq1-104" title="Link to this equation">#</a></span>\[
+<span class="eqno">(89)<a class="headerlink" href="#equation-eq1-104" title="Link to this equation">#</a></span>\[
 \nabla \cdot  \vec{F} = 0 \Longleftrightarrow \vec{F} = \nabla \times  \vec{A} 
 \]</div>
 <p>That’s the main conclusion of the following theorem:</p>
@@ -527,11 +527,11 @@
 <p>The vector potential is not unique - the gradient of any scalar function can be added to <span class="math notranslate nohighlight">\(\vec{A}\)</span> without affecting the curl, since the curl of a gradient is zero.</p>
 <p>Incidentally, in <em>all</em> cases (whatever its curl and divergence may be), a vector field <span class="math notranslate nohighlight">\(\vec{F}\)</span> can be written as the gradient of a scalar plus the curl of a vector:</p>
 <div class="math notranslate nohighlight" id="equation-eq1-105">
-<span class="eqno">(87)<a class="headerlink" href="#equation-eq1-105" title="Link to this equation">#</a></span>\[
+<span class="eqno">(90)<a class="headerlink" href="#equation-eq1-105" title="Link to this equation">#</a></span>\[
 \vec{F} = - \nabla  V + \nabla \times  \vec{A} \quad \text{(always)} 
 \]</div>
 <blockquote>
-<div><p>In physics, the word field denotes generically any function of position (x, y, z) and time (t). But in electrodynamics two particular fields (<span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>) are of such paramount importance as to preempt the term. Thus technically the potentials are also “fields,” but we never call them that.</p>
+<div><p>In physics, the word field denotes generically any function of position <span class="math notranslate nohighlight">\((x, y, z)\)</span> and time <span class="math notranslate nohighlight">\((t)\)</span>. But in electrodynamics two particular fields (<span class="math notranslate nohighlight">\(\vec{E}\)</span> and <span class="math notranslate nohighlight">\(\vec{B}\)</span>) are of such paramount importance as to preempt the term. Thus technically the potentials are also “fields,” but we never call them that.</p>
 </div></blockquote>
 </section>
 </section>
@@ -545,16 +545,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jbenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jbenv",
+            name: "python3",
             path: "./content/book/chapter01"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jbenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
