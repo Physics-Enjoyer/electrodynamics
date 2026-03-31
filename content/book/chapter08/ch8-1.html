@@ -225,11 +225,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1 Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2 Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3 Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4 Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5 Guided Waves</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -472,18 +472,18 @@
 \]</div>
 <p>Since we chose an arbitrary volume, it must be the case that the integrands are equal, over all space.</p>
 <div class="math notranslate nohighlight" id="equation-eq8-1">
-<span class="eqno">(478)<a class="headerlink" href="#equation-eq8-1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(480)<a class="headerlink" href="#equation-eq8-1" title="Link to this equation">#</a></span>\[
 \frac{\partial \rho}{\partial t} = - \nabla \cdot  \vec{J} 
 \]</div>
 <p>Let’s check that this is consistent with our Maxwell equations. Ampere law:</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla \times  \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \pdv{\vec{E}}{t}
+\nabla \times  \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
 \]</div>
 <p>Take divergence of both sides</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\nabla \cdot ( \nabla \times  \vec{B} ) = \mu_0 \nabla \cdot ( \vec{J} ) + \mu_0 \epsilon_0 \nabla \cdot  \left( \pdv{\vec{E}}{t} \right) \\
+\nabla \cdot ( \nabla \times  \vec{B} ) = \mu_0 \nabla \cdot ( \vec{J} ) + \mu_0 \epsilon_0 \nabla \cdot  \left( \frac{\partial \vec{E}}{\partial t} \right) \\
 0 = \mu_0 \nabla \cdot ( \vec{J} ) + \mu_0 \epsilon_0 \frac{\partial}{\partial t} \left( \nabla \cdot  \vec{E} \right) \\
 0 = \mu_0 \nabla \cdot ( \vec{J} ) + \mu_0 \epsilon_0 \frac{\partial \rho}{\partial t} \frac{1}{\epsilon_0} \\
 \rightarrow \frac{\partial \rho}{\partial t} + \nabla \cdot  \vec{J} = 0
@@ -510,11 +510,11 @@
 <p>Can we get an expression for <span class="math notranslate nohighlight">\( \mathrm{d} W \)</span> in terms of the fields only? Let’s try and eliminate <span class="math notranslate nohighlight">\( \vec{F} \)</span> in terms of <span class="math notranslate nohighlight">\( \vec{E} \)</span> and <span class="math notranslate nohighlight">\( \vec{B} \)</span> using Maxwell’s equations.</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{J} = \frac{\nabla \times  \vec{B}}{\mu_0} - \epsilon_0 \pdv{\vec{E}}{t}
+\vec{J} = \frac{\nabla \times  \vec{B}}{\mu_0} - \epsilon_0 \frac{\partial \vec{E}}{\partial t}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\frac{\mathrm{d} W}{\mathrm{d} t} = \int_V \left( \frac{\vec{E} \cdot (\nabla \times  \vec{B}) }{\mu_0} - \epsilon_0 \vec{E} \cdot \pdv{\vec{E}}{t} \right) \mathrm{d} \tau
+\frac{\mathrm{d} W}{\mathrm{d} t} = \int_V \left( \frac{\vec{E} \cdot (\nabla \times  \vec{B}) }{\mu_0} - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} \right) \mathrm{d} \tau
 \]</div>
 <p>Using vector identity</p>
 <div class="math notranslate nohighlight">
@@ -523,8 +523,8 @@
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\frac{\mathrm{d} W}{\mathrm{d} t} = \int_V \left( \frac{1}{\mu_0} \left( \vec{B} \cdot (\nabla \times  \vec{E}) - \nabla \cdot  (\vec{E} \times \vec{B}) \right) - \epsilon_0 \vec{E} \cdot \pdv{\vec{E}}{t} \right) \mathrm{d} \tau \\
-= \int_V \left( - \frac{\vec{B}}{\mu_0} \cdot \pdv{\vec{B}}{t} - \nabla \cdot  \vec{S} - \epsilon_0 \vec{E} \cdot \pdv{\vec{E}}{t} \right) \mathrm{d} \tau
+\frac{\mathrm{d} W}{\mathrm{d} t} = \int_V \left( \frac{1}{\mu_0} \left( \vec{B} \cdot (\nabla \times  \vec{E}) - \nabla \cdot  (\vec{E} \times \vec{B}) \right) - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} \right) \mathrm{d} \tau \\
+= \int_V \left( - \frac{\vec{B}}{\mu_0} \cdot \frac{\partial \vec{B}}{\partial t} - \nabla \cdot  \vec{S} - \epsilon_0 \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} \right) \mathrm{d} \tau
 \end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\( \vec{S} \)</span> is the so-called <strong>Poynting vector</strong> defined as</p>
 <div class="math notranslate nohighlight">
@@ -534,7 +534,7 @@
 <p>Let’s take a look at the quantity <span class="math notranslate nohighlight">\( \frac{d}{dt} (\vec{E} ^2) \)</span></p>
 <div class="math notranslate nohighlight">
 \[
-\frac{d}{dt} \left( \vec{E}^2 \right) = \vec{E} \cdot \pdv{\vec{E}}{t} + \pdv{\vec{E}}{t} \cdot \vec E \quad \rightarrow \quad \vec E \cdot \frac{\partial \vec E}{\partial t} = \frac{1}{2} \frac{d}{dt} \left( \vec E ^2 \right)
+\frac{d}{dt} \left( \vec{E}^2 \right) = \vec{E} \cdot \frac{\partial \vec{E}}{\partial t} + \frac{\partial \vec{E}}{\partial t} \cdot \vec E \quad \rightarrow \quad \vec E \cdot \frac{\partial \vec E}{\partial t} = \frac{1}{2} \frac{d}{dt} \left( \vec E ^2 \right)
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -547,20 +547,20 @@
 \frac{\vec B ^2}{2 \mu_0} = u_m \qquad \frac{\epsilon_0 \vec E ^2}{2}  = u_e \qquad u_{em} \equiv u_e + u_m = u
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq8-2">
-<span class="eqno">(479)<a class="headerlink" href="#equation-eq8-2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(481)<a class="headerlink" href="#equation-eq8-2" title="Link to this equation">#</a></span>\[
 \frac{\mathrm{d} W}{\mathrm{d} t} = - \frac{d}{dt} \int_V u_{em} \mathrm{d} \tau - \oint _S \vec{S} \cdot \mathrm{d} \vec a 
 \]</div>
-<p>So what does this tell us? The left hand side reads “the change in energy in a region <span class="math notranslate nohighlight">\(V\)</span>”. The first part of the r.h.s is the change in the local energy stored in the E and B fields, and the second part is an acknowledgment that our region is part of a larger space, and energy may be flowing in/out of the region. The flow of energy is therefore given by the Poynting vector, so we call <a class="reference internal" href="#equation-eq8-1">(478)</a> <strong>“Poynting’s Theorem”</strong></p>
+<p>So what does this tell us? The left hand side reads “the change in energy in a region <span class="math notranslate nohighlight">\(V\)</span>”. The first part of the r.h.s is the change in the local energy stored in the E and B fields, and the second part is an acknowledgment that our region is part of a larger space, and energy may be flowing in/out of the region. The flow of energy is therefore given by the Poynting vector, so we call <a class="reference internal" href="#equation-eq8-1">(480)</a> <strong>“Poynting’s Theorem”</strong></p>
 <p>In a charge-free region:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 0 = - \frac{d}{dt} \int_V u_{em} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S ) \cdot \mathrm{d} \tau \\
-0 = - \int_V \pdv{u_{em}}{t} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S) \mathrm{d} \tau
+0 = - \int_V \frac{\partial u_{em}}{\partial t} \mathrm{d} \tau - \int_V ( \nabla \cdot  \vec S) \mathrm{d} \tau
 \end{split}\]</div>
 <p>Since this is true for any arbitrary <span class="math notranslate nohighlight">\(V\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[
-\rightarrow \pdv{u_{em}}{t} + \nabla \cdot  \vec{S} = 0 \quad \text{(in charge-free region)}
+\rightarrow \frac{\partial u_{em}}{\partial t} + \nabla \cdot  \vec{S} = 0 \quad \text{(in charge-free region)}
 \]</div>
 <p>Let’s look at an example of the application of this statement of conservation of energy.</p>
 <section id="problem-8-2">
@@ -568,12 +568,12 @@
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
-<p>Consider the charging capacitor from problem 7.34. (a) Find the electric and magnetic fields in the gap, as functions of the distance s from the axis at time t (assume the charge is zero at t = 0). (b) Find the energy density <span class="math notranslate nohighlight">\( u_{em} \)</span> and the Poynting vector <span class="math notranslate nohighlight">\( \vec S \)</span> in the gap. Note especially the direction of <span class="math notranslate nohighlight">\( \vec S \)</span>. Check that <a class="reference internal" href="#equation-eq8-2">(479)</a> is satisfied. (c) Determine the total energy in the gap, as a function of time. Calculate the total power flowing into the gap, by integrating the Poynting vector over the appropriate surface. Check that the power input is equal to the rate of increase of energy in the gap.</p>
+Problem 8.2</label><div class="sd-tab-content docutils">
+<p>Consider the charging capacitor from problem 7.34. (a) Find the electric and magnetic fields in the gap, as functions of the distance s from the axis at time t (assume the charge is zero at t = 0). (b) Find the energy density <span class="math notranslate nohighlight">\( u_{em} \)</span> and the Poynting vector <span class="math notranslate nohighlight">\( \vec S \)</span> in the gap. Note especially the direction of <span class="math notranslate nohighlight">\( \vec S \)</span>. Check that <a class="reference internal" href="#equation-eq8-2">(481)</a> is satisfied. (c) Determine the total energy in the gap, as a function of time. Calculate the total power flowing into the gap, by integrating the Poynting vector over the appropriate surface. Check that the power input is equal to the rate of increase of energy in the gap.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>(a) From the ch. 7 problems, we know</p>
 <div class="math notranslate nohighlight">
 \[
@@ -603,7 +603,7 @@ u_{em} = \frac{1}{2} \frac{I^2}{\pi ^2 a^4} \left[ \frac{t^2}{\epsilon_0} + \fra
 <p>Checking Poynting’s theorem…</p>
 <div class="math notranslate nohighlight">
 \[
-\pdv{u_{em}}{t} = \frac{I^2 t}{\pi^2 a^4 \epsilon_0} 
+\frac{\partial u_{em}}{\partial t} = \frac{I^2 t}{\pi^2 a^4 \epsilon_0} 
 \]</div>
 <div class="math notranslate nohighlight">
 \[

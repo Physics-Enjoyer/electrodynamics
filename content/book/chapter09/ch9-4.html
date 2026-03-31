@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -225,11 +225,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em>9.4</em> Absorption and Dispersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-5.html"><em>9.5</em> Guided Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-1.html">9.1 Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-2.html">9.2 Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-3.html">9.3 Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.4 Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-5.html">9.5 Guided Waves</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -453,7 +453,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="absorption-and-dispersion">
-<h1><em>9.4</em> Absorption and Dispersion<a class="headerlink" href="#absorption-and-dispersion" title="Link to this heading">#</a></h1>
+<h1>9.4 Absorption and Dispersion<a class="headerlink" href="#absorption-and-dispersion" title="Link to this heading">#</a></h1>
 <section id="electromagnetic-waves-in-conductors">
 <h2>9.4.1 Electromagnetic Waves in Conductors<a class="headerlink" href="#electromagnetic-waves-in-conductors" title="Link to this heading">#</a></h2>
 <p>When we formulated our description of how electromagnetic waves move through linear media, we relied on the stipulation that the free charge density <span class="math notranslate nohighlight">\( \rho_f \)</span>  and free current density <span class="math notranslate nohighlight">\( \vec J _f \)</span> were zero. In the case of conductors, we’re going to need to re-visit that assumption.</p>
@@ -712,7 +712,7 @@ x \equiv \text{Re}\left[ \tilde{x} \right]
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\frac{d^2 \tilde{x}}{dt^2} + \gamma \dv{\tilde{x}}{t} + m \omega_0 ^2 \tilde{x} = \frac{q E_0}{m} e^{-i \omega t}
+\frac{d^2 \tilde{x}}{dt^2} + \gamma \frac{d\tilde{x}}{dt} + m \omega_0 ^2 \tilde{x} = \frac{q E_0}{m} e^{-i \omega t}
 \]</div>
 <p>Plugging in the form for <span class="math notranslate nohighlight">\( \tilde{x} \)</span> we know we’re going to get (a response with the same frequency as the driving field)</p>
 <div class="math notranslate nohighlight">
@@ -836,7 +836,7 @@ n = \tilde{n} = 1 + \frac{Nq^2}{2m\epsilon_0} \sum_j \frac{f_j}{(\omega _j ^2 - 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em>9.3</em> Electromagnetic Waves in Matter</p>
+        <p class="prev-next-title">9.3 Electromagnetic Waves in Matter</p>
       </div>
     </a>
     <a class="right-next"
@@ -844,7 +844,7 @@ n = \tilde{n} = 1 + \frac{Nq^2}{2m\epsilon_0} \sum_j \frac{f_j}{(\omega _j ^2 - 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><em>9.5</em> Guided Waves</p>
+        <p class="prev-next-title">9.5 Guided Waves</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

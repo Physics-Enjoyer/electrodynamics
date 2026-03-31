@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -202,7 +202,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter-intro.html">Chapter 5: Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-1.html">5.1: The Lorentz Force Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-2.html">5.2: The Biot-Savart Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-3.html">5.3: The Divergence and Curl of <span class="math notranslate nohighlight">\(\vec{B}\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/ch5-4.html">5.4: Magnetic Vector Potential</a></li>
 </ul>
 </details></li>
@@ -225,11 +225,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em>9.5</em> Guided Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-1.html">9.1 Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-2.html">9.2 Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-3.html">9.3 Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch9-4.html">9.4 Absorption and Dispersion</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.5 Guided Waves</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -439,10 +439,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-guides">9.5.1 Wave Guides</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rectangular-wave-guide">9.5.2 Rectangular Wave Guide</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9-1">Example 9.1</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rectangular-wave-guide">9.5.2 Rectangular Wave Guide</a></li>
 </ul>
             </nav>
         </div>
@@ -455,7 +452,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="guided-waves">
-<h1><em>9.5</em> Guided Waves<a class="headerlink" href="#guided-waves" title="Link to this heading">#</a></h1>
+<h1>9.5 Guided Waves<a class="headerlink" href="#guided-waves" title="Link to this heading">#</a></h1>
 <section id="wave-guides">
 <h2>9.5.1 Wave Guides<a class="headerlink" href="#wave-guides" title="Link to this heading">#</a></h2>
 <p>Moving beyond plane waves with infinite extent, now we consider waves confined to the interior to some sort of pipe, or wave guide. To make things simple, the overall geometry of the pipe should be large compared with the wavelength, and we’ll assume it’s made of a perfect conductor so there’s no loss (perfect reflection).</p>
@@ -476,7 +473,7 @@
 E^\parallel &amp; = &amp; 0 \\
 B_\perp &amp; = &amp; 0 \\
 \nabla \cdot  \vec E &amp; = &amp; 0 \\
-\nabla \times  \vec E &amp; = &amp; - \pdv{\vec{B}}{t} \\
+\nabla \times  \vec E &amp; = &amp; - \frac{\partial \vec{B}}{\partial t} \\
 \nabla \cdot  \vec B &amp; = &amp; 0 \\
 \nabla \times  \vec B &amp; = &amp; \frac{1}{c^2} \frac{\partial \vec E}{\partial t}
 \end{aligned}
@@ -650,19 +647,18 @@ k = \sqrt{(\omega / c)^2 - \pi ^2[(m / a)^2 + (n / b)^2] }
 \[
 \omega_{1,0} = c \pi / a
 \]</div>
-<section id="example-9-1">
-<h3>Example 9.1<a class="headerlink" href="#example-9-1" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
+Example 9.1</label><div class="sd-tab-content docutils">
 <p>Suppose we have a rectangular waveguide of dimensions 1cm by 2cm.</p>
 <p>(a) What is the lowest mode? Find the cutoff frequency.</p>
 <p>(b) If the waveguide were filled with lossless plastic with <span class="math notranslate nohighlight">\( \epsilon_r = 2\)</span>, how would the cutoff frequency change?</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>(a) What is the lowest allowed mode? We should check the lowest TE and TM modes to find out!</p>
 <p>The lowest TM mode is</p>
 <div class="math notranslate nohighlight">
@@ -689,7 +685,7 @@ v = \frac{c}{\sqrt{\epsilon / \epsilon_0}} = \frac{c}{\sqrt{2}}\\
 \end{split}\]</div>
 </div>
 </div>
-</section>
+<hr class="docutils" />
 </section>
 </section>
 
@@ -729,7 +725,7 @@ v = \frac{c}{\sqrt{\epsilon / \epsilon_0}} = \frac{c}{\sqrt{2}}\\
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em>9.4</em> Absorption and Dispersion</p>
+        <p class="prev-next-title">9.4 Absorption and Dispersion</p>
       </div>
     </a>
     <a class="right-next"
@@ -760,10 +756,7 @@ v = \frac{c}{\sqrt{\epsilon / \epsilon_0}} = \frac{c}{\sqrt{2}}\\
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-guides">9.5.1 Wave Guides</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rectangular-wave-guide">9.5.2 Rectangular Wave Guide</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9-1">Example 9.1</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rectangular-wave-guide">9.5.2 Rectangular Wave Guide</a></li>
 </ul>
   </nav></div>
 

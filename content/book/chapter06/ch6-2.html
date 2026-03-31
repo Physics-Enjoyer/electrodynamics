@@ -225,11 +225,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter-intro.html">Chapter 9: Electromagnetic Waves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html"><em>9.1</em> Electromagnetic Waves in One Dimension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html"><em>9.2</em> Electromagnetic Waves in a Vacuum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html"><em>9.3</em> Electromagnetic Waves in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html"><em>9.4</em> Absorption and Dispersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html"><em>9.5</em> Guided Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-1.html">9.1 Electromagnetic Waves in One Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-2.html">9.2 Electromagnetic Waves in a Vacuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-3.html">9.3 Electromagnetic Waves in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-4.html">9.4 Absorption and Dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/ch9-5.html">9.5 Guided Waves</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter-intro.html">Chapter 10: Potentials and Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -438,10 +438,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-currents">6.2.1: Bound Currents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-1">Example 6.1</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-currents">6.2.1: Bound Currents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-bound-currents">6.2.2: Physical Interpretation of Bound Currents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnetic-field-inside-matter">6.2.3: The Magnetic Field Inside Matter</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-11">Problem 6.11</a></li>
@@ -509,17 +506,16 @@
 \vec{A}(r) = \frac{\mu_0}{4\pi} \int_V \frac{\vec{J_b}(r')}{\mathcal{R} } \mathrm{d} \tau' + \frac{\mu_0}{4 \pi} \oint _S \frac{\vec{K_b}(r')}{\mathcal{R} } \mathrm{d} a' 
 \]</div>
 <p>What this means is that the potential (and hence also the field) of a magnetized object is the same as would be produced by a volume current <span class="math notranslate nohighlight">\( \vec{J_b} = \nabla \times  \vec{M} \)</span>  throughout the material, plus a surface current <span class="math notranslate nohighlight">\( \vec{K_b} = \vec{M} \times \hat{n} \)</span>, on the boundary. Instead of integrating the contributions of all the infinitesimal dipoles, using <a class="reference internal" href="#equation-eq6-11">(393)</a>, we first determine the bound currents, and then find the field they produce, in the same way we would calculate the field of any other volume and surface currents. Notice the striking parallel with the electrical case: there the field of a polarized object was the same as that of a bound volume charge <span class="math notranslate nohighlight">\( \rho_b = - \nabla \cdot  \vec{P} \)</span> plus a bound surface charge <span class="math notranslate nohighlight">\( \sigma_b = \vec{P} \cdot \hat{n} \)</span>.</p>
-<section id="example-6-1">
-<h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
-Q</label><div class="sd-tab-content docutils">
+Example 6.1</label><div class="sd-tab-content docutils">
 <p>Find the magnetic field of a uniformly magnetized sphere</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
-A</label><div class="sd-tab-content docutils">
+Solution</label><div class="sd-tab-content docutils">
 <p>Choosing the z axis along the direction of <span class="math notranslate nohighlight">\(\vec{M}\)</span> (Fig 6.12), we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -549,7 +545,7 @@ With no bound current density, we can replace our magnetized sphere by a spinnin
 </div>
 </div>
 </section>
-</section>
+<hr class="docutils" />
 <section id="physical-interpretation-of-bound-currents">
 <h2>6.2.2: Physical Interpretation of Bound Currents<a class="headerlink" href="#physical-interpretation-of-bound-currents" title="Link to this heading">#</a></h2>
 <p>In the last section, we found that the field of a magnetized object is identical to the field that would be produced by a certain distribution of “bound” currents, <span class="math notranslate nohighlight">\( \vec{J}_b \)</span> and <span class="math notranslate nohighlight">\( \vec{K}_b \)</span>. I want to show you how these bound currents arise physically. This will be a heuristic argument - the rigorous derivation has already been given. Figure 6.15 depicts a thin slab of uniformly magnetized material, with the dipoles represented by tiny current loops. Notice that all the “internal” currents cancel: every time there is one going to the right, a contiguous one is going to the left. However, at the edge there is no adjacent loop to do the canceling. The whole thing, then, is equivalent to a single ribbon of current I flowing around the boundary (Fig. 6.16).</p>
@@ -688,10 +684,7 @@ Solution</label><div class="sd-tab-content docutils">
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-currents">6.2.1: Bound Currents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-1">Example 6.1</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-currents">6.2.1: Bound Currents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-bound-currents">6.2.2: Physical Interpretation of Bound Currents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-magnetic-field-inside-matter">6.2.3: The Magnetic Field Inside Matter</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-11">Problem 6.11</a></li>
