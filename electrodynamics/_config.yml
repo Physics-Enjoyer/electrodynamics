@@ -62,4 +62,5 @@ sphinx:
       tex:
         macros:
           "rcurs": "\\Delta r"
-  extra_extensions: sphinx_proof
+  extra_extensions: 
+    - sphinx_proof
